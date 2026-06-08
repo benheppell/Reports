@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA — Venue Deep Dive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style></head><body><div><a class="back" href="../../index.html">← All reports</a>
+<h1 style="margin-top:8px">Venue Deep Dive — Aqua NYC · Hutong NYC · Hutong Miami
+<span class="pill" style="background:#fee2e2;color:#991b1b;vertical-align:middle;margin-left:8px">BELOW PLAN WEEK</span></h1>
+<div class="sub">Week of 1–7 June 2026 (Mon–Sun) · USD · full USA portfolio · WoW vs 25–31 May 2026 · YoY vs 2–8 June 2025</div></div>
+<div class="tabs"><div class="tab active" onclick="show(0)">Performance</div><div class="tab" onclick="show(1)">Weekly Trends</div></div>
+<div class="panel active" id="p0">
+<div class="cards">
+<div class="card"><div class="lab">Combined Bookings</div><div class="big">500</div><div class="meta">Target 969 · <span class="neg">-48.4%</span> · WoW <span class="pos">▲ 9.4%</span></div></div>
+<div class="card"><div class="lab">Combined Ad Spend</div><div class="big">$9,835</div><div class="meta">Cost per booking $19.7</div></div>
+<div class="card"><div class="lab">Combined Users</div><div class="big">13,742</div><div class="meta">Blended User CVR 3.6%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">-29.0%</div><div class="meta">500 vs 704 (2–8 June 2025)</div></div>
+</div>
+<div class="sec blue"><h2>Meta Ads — schedules (offsite_conversion.fb_pixel_custom)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead><tbody><tr><td>Aqua NYC</td><td class="num">$5,073.6</td><td class="num">159</td><td class="num"><span class="">$31.9</span></td><td class="num"><span class="pos">▲ +49</span></td></tr><tr><td>Hutong NYC</td><td class="num">$156.3</td><td class="num">6</td><td class="num"><span class="">$26.0</span></td><td class="num"><span class="neg">▼ -2</span></td></tr><tr><td>Hutong Miami</td><td class="num">$1,757.0</td><td class="num">13</td><td class="num"><span class="neg">$135.2</span></td><td class="num"><span class="pos">▲ +12</span></td></tr><tr class="total"><td>Total</td><td class="num">$6,986.8</td><td class="num">178</td><td class="num">$39.3</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Aqua NYC scaled Meta hard, 159 schedules (up from 110) at ~$32 each on $5,074 spend, the bulk of USA Meta activity.</li>
+<li>Hutong Miami lifted schedules 1 to 13 but at the worst efficiency, ~$135 each.</li>
+<li>Hutong NYC runs minimal Meta ($156, 6 schedules); its paid mix is Google-led.</li>
+</ul></div></div>
+<div class="sec green"><h2>Google Ads — booking conversions (sevenrooms_booking_complete action)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead><tbody><tr><td>Aqua NYC</td><td class="num">$866.6</td><td class="num">40.0</td><td class="num"><span class="">$21.7</span></td><td class="num"><span class="pos">▲ +6</span></td></tr><tr><td>Hutong NYC</td><td class="num">$1,392.4</td><td class="num">39.0</td><td class="num"><span class="neg">$35.7</span></td><td class="num"><span class="neg">▼ -28</span></td></tr><tr><td>Hutong Miami</td><td class="num">$589.6</td><td class="num">4.0</td><td class="num"><span class="neg">$147.4</span></td><td class="num"><span class="neg">▼ -3</span></td></tr><tr class="total"><td>Total</td><td class="num">$2,848.6</td><td class="num">83.0</td><td class="num">$34.3</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Aqua NYC is the most efficient Google account at ~$22 per booking conversion, up 34 to 40 WoW.</li>
+<li>Hutong NYC conversions fell 67 to 39 on the heaviest Google spend ($1,392), the main efficiency concern this week.</li>
+<li>Hutong Miami stays thin at 4 conversions, ~$147 each.</li>
+</ul></div></div>
+<div class="sec amber"><h2>GA4 — site engagement and conversion</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead><tbody><tr><td>Aqua NYC</td><td class="num">13,005</td><td class="num">10,566</td><td class="num">1:53</td><td class="num"><span class="neg">58.5%</span></td><td class="num">345</td><td class="num"><span class="neg">3.3%</span></td><td class="num">2.7%</td></tr><tr><td>Hutong NYC</td><td class="num">2,626</td><td class="num">1,967</td><td class="num">2:58</td><td class="num"><span class="">40.4%</span></td><td class="num">121</td><td class="num"><span class="pos">6.2%</span></td><td class="num">4.6%</td></tr><tr><td>Hutong Miami</td><td class="num">1,450</td><td class="num">1,209</td><td class="num">2:29</td><td class="num"><span class="">37.2%</span></td><td class="num">34</td><td class="num"><span class="neg">2.8%</span></td><td class="num">2.3%</td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Aqua NYC draws huge traffic (10,566 users) but converts at only 3.3% with a 58% bounce rate; on-site conversion is the single biggest opportunity in the portfolio.</li>
+<li>Hutong NYC converts best at 6.2% but on thin traffic, so its growth needs more reach rather than better conversion.</li>
+<li>Hutong Miami is the weakest converter at 2.8% on 1,209 users.</li>
+</ul></div></div></div>
+<div class="panel" id="p1">
+<p class="sub" style="margin:6px 0 0">8-week trend (w/c 13 Apr to 1 Jun) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chartbox"><h3>GA4 Bookings (Weekly)</h3><canvas id="cBook"></canvas></div>
+<div class="chartbox"><h3>User Conversion Rate (%)</h3><canvas id="cCvr"></canvas></div>
+<div class="chartbox"><h3>Users (Weekly)</h3><canvas id="cUsers"></canvas></div>
+<div class="chartbox"><h3>Bookings vs Weekly Target</h3><canvas id="cTgt"></canvas></div>
+</div><table style="margin-top:18px"><thead><tr><th>Venue</th><th>Metric</th><th>13 Apr</th><th>20 Apr</th><th>27 Apr</th><th>4 May</th><th>11 May</th><th>18 May</th><th>25 May</th><th>1 Jun</th><th>Trend</th></tr></thead><tbody><tr><td>Aqua NYC</td><td>Bookings</td><td class="num">225</td><td class="num">236</td><td class="num">298</td><td class="num">293</td><td class="num">238</td><td class="num">222</td><td class="num">296</td><td class="num">345</td><td class="num"><span class="pos">+53%</span></td></tr><tr><td></td><td>User CVR</td><td class="num">4.9%</td><td class="num">4.9%</td><td class="num">4.3%</td><td class="num">4.0%</td><td class="num">3.3%</td><td class="num">3.6%</td><td class="num">3.0%</td><td class="num">3.1%</td><td class="num"><span class="neg">-1.8pp</span></td></tr><tr><td>Hutong NYC</td><td>Bookings</td><td class="num">109</td><td class="num">140</td><td class="num">146</td><td class="num">155</td><td class="num">168</td><td class="num">124</td><td class="num">124</td><td class="num">121</td><td class="num"><span class="pos">+11%</span></td></tr><tr><td></td><td>User CVR</td><td class="num">4.1%</td><td class="num">5.1%</td><td class="num">4.6%</td><td class="num">5.0%</td><td class="num">6.0%</td><td class="num">5.1%</td><td class="num">5.4%</td><td class="num">5.4%</td><td class="num"><span class="pos">+1.3pp</span></td></tr><tr><td>Hutong Miami</td><td>Bookings</td><td class="num">100</td><td class="num">89</td><td class="num">69</td><td class="num">72</td><td class="num">52</td><td class="num">33</td><td class="num">37</td><td class="num">34</td><td class="num"><span class="neg">-66%</span></td></tr><tr><td></td><td>User CVR</td><td class="num">4.3%</td><td class="num">4.0%</td><td class="num">3.0%</td><td class="num">3.3%</td><td class="num">2.5%</td><td class="num">2.6%</td><td class="num">3.2%</td><td class="num">2.6%</td><td class="num"><span class="neg">-1.7pp</span></td></tr></tbody></table></div><footer>Trend window w/c 13 Apr – 1 Jun 2026. Trend users are daily-summed visits; the GA4 card uses deduplicated weekly users. Generated 8 June 2026.</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+var LAB=["13 Apr", "20 Apr", "27 Apr", "4 May", "11 May", "18 May", "25 May", "1 Jun"],COL={"Aqua NYC": "#EF4444", "Hutong NYC": "#F59E0B", "Hutong Miami": "#3B82F6"},BOOK={"Aqua NYC": [225, 236, 298, 293, 238, 222, 296, 345], "Hutong NYC": [109, 140, 146, 155, 168, 124, 124, 121], "Hutong Miami": [100, 89, 69, 72, 52, 33, 37, 34]},CVR={"Aqua NYC": [4.86, 4.94, 4.28, 4.04, 3.27, 3.63, 3.01, 3.09], "Hutong NYC": [4.13, 5.07, 4.6, 4.98, 6.02, 5.12, 5.4, 5.42], "Hutong Miami": [4.33, 4.04, 2.95, 3.28, 2.49, 2.65, 3.22, 2.6]},USERS={"Aqua NYC": [4630, 4780, 6967, 7245, 7283, 6120, 9825, 11153], "Hutong NYC": [2637, 2761, 3173, 3113, 2791, 2420, 2295, 2232], "Hutong Miami": [2310, 2201, 2342, 2196, 2090, 1245, 1148, 1309]},TGT={"Aqua NYC": 408, "Hutong NYC": 449, "Hutong Miami": 112};
+var drawn=false;
+function ds(m){return Object.keys(m).map(function(n){return {label:n,data:m[n],borderColor:COL[n],backgroundColor:COL[n],tension:.3,fill:false};});}
+function show(i){document.querySelectorAll('.tab').forEach(function(t,j){t.classList.toggle('active',j==i);});document.querySelectorAll('.panel').forEach(function(p,j){p.classList.toggle('active',j==i);});if(i==1&&!drawn){drawn=true;render();}}
+function render(){var o={responsive:true,plugins:{legend:{labels:{boxWidth:12,font:{size:11}}}},scales:{x:{grid:{display:false}}}};
+new Chart(cBook,{type:'line',data:{labels:LAB,datasets:ds(BOOK)},options:o});
+new Chart(cCvr,{type:'line',data:{labels:LAB,datasets:ds(CVR)},options:Object.assign({},o,{scales:{y:{ticks:{callback:function(v){return v+'%';}}}}})});
+new Chart(cUsers,{type:'line',data:{labels:LAB,datasets:ds(USERS)},options:o});
+var names=Object.keys(BOOK);
+new Chart(cTgt,{type:'bar',data:{labels:names,datasets:[{label:'Last Wk Bookings',data:names.map(function(n){return BOOK[n][BOOK[n].length-1];}),backgroundColor:names.map(function(n){return COL[n];})},{label:'Weekly Target',type:'line',data:names.map(function(n){return TGT[n];}),borderColor:'#0f172a',borderDash:[5,4],pointStyle:'rectRot',pointRadius:6,fill:false}]},options:o});}
+</script></body></html>

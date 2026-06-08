@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA — SLT Weekly Dashboard</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style></head><body><div><a class="back" href="../../index.html">← All reports</a>
+<h1 style="margin-top:8px">Aqua USA — SLT Weekly Dashboard</h1>
+<div class="sub">Week of 1–7 June 2026 (Mon–Sun) · Currency USD · WoW vs 25–31 May 2026 · YoY vs 2–8 June 2025</div></div>
+<div class="cards">
+<div class="card"><div class="lab">Weekly Bookings</div><div class="big">500</div>
+<div class="meta">Target 969 · <span class="neg">-48.4%</span> · WoW <span class="pos">▲ 9.4%</span> · YoY <span class="neg">▼ 29.0%</span></div></div>
+<div class="card"><div class="lab">YTD Bookings (calendar 2026)</div><div class="big">11,970</div>
+<div class="meta">Target 23,346 · <span class="neg">-48.7%</span></div></div>
+<div class="card"><div class="lab">Total Ad Spend</div><div class="big">$9,835</div>
+<div class="meta">Cost per booking $19.7 · Meta $6,987 + Google $2,849</div></div>
+<div class="card"><div class="lab">Venues vs Target</div><div class="big">0 / 3</div>
+<div class="meta">3 below: Aqua NYC (-16%), Hutong NYC (-73%), Hutong Miami (-70%). Targets are FY26 strategic goals (aggressive).</div></div>
+</div>
+<table><thead><tr><th>Venue</th><th>Actual</th><th>Target</th><th>Variance</th><th>WoW</th><th>YoY</th><th>YTD Actual</th><th>YTD vs Target</th><th>Ad Spend</th><th>Cost/Book</th></tr></thead><tbody><tr><td>Aqua NYC</td><td class="num">345</td><td class="num">408</td>
+<td class="num"><span class="neg">-63 (-15.5%)</span></td>
+<td class="num"><span class="pos">▲ 16.6%</span></td><td class="num"><span class="pos">▲ 50.0%</span></td>
+<td class="num">5,678</td><td class="num"><span class="neg">-4,492 (-44.2%)</span></td>
+<td class="num">$5,940</td><td class="num">$17.2</td></tr><tr><td>Hutong NYC</td><td class="num">121</td><td class="num">449</td>
+<td class="num"><span class="neg">-328 (-73.1%)</span></td>
+<td class="num"><span class="neg">▼ 2.4%</span></td><td class="num"><span class="neg">▼ 68.1%</span></td>
+<td class="num">3,857</td><td class="num"><span class="neg">-6,040 (-61.0%)</span></td>
+<td class="num">$1,549</td><td class="num">$12.8</td></tr><tr><td>Hutong Miami</td><td class="num">34</td><td class="num">112</td>
+<td class="num"><span class="neg">-78 (-69.6%)</span></td>
+<td class="num"><span class="neg">▼ 8.1%</span></td><td class="num"><span class="neg">▼ 64.2%</span></td>
+<td class="num">2,435</td><td class="num"><span class="neg">-843 (-25.7%)</span></td>
+<td class="num">$2,347</td><td class="num">$69.0</td></tr><tr class="total"><td>Portfolio</td><td class="num">500</td><td class="num">969</td>
+<td class="num"><span class="neg">-469 (-48.4%)</span></td>
+<td class="num"><span class="pos">▲ 9.4%</span></td><td class="num"><span class="neg">▼ 29.0%</span></td><td class="num">11,970</td>
+<td class="num"><span class="neg">-11,376 (-48.7%)</span></td>
+<td class="num">$9,835</td><td class="num">$19.7</td></tr></tbody></table>
+<footer>GA4 bookings = sevenrooms_booking_complete. USD. Targets are FY26 (calendar-year) strategic goals; Hutong NYC's is explicitly aggressive (assumes website CVR rising toward 6.5%). Hutong Miami's weekly GA4 target is derived by scaling its Meta-attributed plan to the $6,738 annual GA4 goal. Large negative variances partly reflect ambitious goal-setting; the YoY declines at Hutong NYC and Miami are the more material concern. Generated 8 June 2026.</footer></body></html>
