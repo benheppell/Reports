@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua HK — SLT Weekly Dashboard W18</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style></head><body><div><h1>Aqua Hong Kong — SLT Weekly Dashboard</h1>
+<div class="sub">W18 · 1–7 June 2026 (Mon–Sun) · Currency HKD · WoW vs 25–31 May 2026 · YoY vs 2–8 June 2025</div></div>
+<div class="cards">
+<div class="card"><div class="lab">Weekly Bookings</div><div class="big">945</div>
+<div class="meta">Target 871 · <span class="pos">+8.5%</span> · WoW <span class="pos">▲ 2.4%</span> · YoY <span class="pos">▲ 18.6%</span></div></div>
+<div class="card"><div class="lab">YTD Bookings (FY from Feb)</div><div class="big">18,953</div>
+<div class="meta">Target 17,599 · <span class="pos">+7.7%</span></div></div>
+<div class="card"><div class="lab">Total Ad Spend</div><div class="big">$60,365</div>
+<div class="meta">Cost per booking $63.9 · Meta $31,562 + Google $28,803</div></div>
+<div class="card"><div class="lab">Venues vs Target</div><div class="big">4 / 6</div>
+<div class="meta">4 on track, 2 below: Aqua HK (-4%), Dim Sum Library (-21%). Vesu closed for June (target 0).</div></div>
+</div>
+<table><thead><tr><th>Venue</th><th>Actual</th><th>Target</th><th>Variance</th><th>WoW</th><th>YoY</th><th>YTD Actual</th><th>YTD vs Target</th><th>Ad Spend</th><th>Cost/Book</th></tr></thead><tbody><tr><td>Aqua HK</td><td class="num">184</td><td class="num">192</td>
+<td class="num"><span class="neg">-8 (-4.2%)</span></td><td class="num"><span class="pos">▲ 7.0%</span></td><td class="num"><span class="pos">▲ 6.4%</span></td>
+<td class="num">3,634</td><td class="num"><span class="neg">-276 (-7.1%)</span></td>
+<td class="num">$13,513</td><td class="num">$73.4</td></tr><tr><td>Hutong HK</td><td class="num">270</td><td class="num">237</td>
+<td class="num"><span class="pos">+33 (+14.1%)</span></td><td class="num"><span class="pos">▲ 1.1%</span></td><td class="num"><span class="pos">▲ 25.6%</span></td>
+<td class="num">5,443</td><td class="num"><span class="pos">+770 (+16.5%)</span></td>
+<td class="num">$9,489</td><td class="num">$35.1</td></tr><tr><td>The Chinese Library</td><td class="num">110</td><td class="num">93</td>
+<td class="num"><span class="pos">+17 (+18.4%)</span></td><td class="num"><span class="neg">▼ 1.8%</span></td><td class="num"><span class="pos">▲ 29.4%</span></td>
+<td class="num">2,268</td><td class="num"><span class="pos">+407 (+21.9%)</span></td>
+<td class="num">$7,747</td><td class="num">$70.4</td></tr><tr><td>Cantina</td><td class="num">95</td><td class="num">47</td>
+<td class="num"><span class="pos">+48 (+102.6%)</span></td><td class="num"><span class="pos">▲ 18.8%</span></td><td class="num"><span class="pos">▲ 53.2%</span></td>
+<td class="num">981</td><td class="num"><span class="neg">-63 (-6.0%)</span></td>
+<td class="num">$9,946</td><td class="num">$104.7</td></tr><tr><td>Dim Sum Library</td><td class="num">139</td><td class="num">176</td>
+<td class="num"><span class="neg">-37 (-21.1%)</span></td><td class="num"><span class="neg">▼ 9.7%</span></td><td class="num"><span class="pos">▲ 8.6%</span></td>
+<td class="num">3,032</td><td class="num"><span class="neg">-10 (-0.3%)</span></td>
+<td class="num">$2,985</td><td class="num">$21.5</td></tr><tr><td>Shiro (PP & TK)</td><td class="num">147</td><td class="num">126</td>
+<td class="num"><span class="pos">+21 (+16.2%)</span></td><td class="num"><span class="pos">▲ 6.5%</span></td><td class="num"><span class="pos">▲ 104.2%</span></td>
+<td class="num">2,678</td><td class="num"><span class="pos">+539 (+25.2%)</span></td>
+<td class="num">$12,813</td><td class="num">$87.2</td></tr><tr><td>Vesu</td><td class="num">0</td><td class="num">0</td>
+<td class="num">—</td><td class="num">—</td><td class="num"><span class="neg">▼ 100.0%</span></td>
+<td class="num">917</td><td class="num"><span class="neg">-13 (-1.4%)</span></td>
+<td class="num">$3,872</td><td class="num">—</td></tr><tr class="total"><td>Portfolio</td><td class="num">945</td><td class="num">871</td>
+<td class="num"><span class="pos">+74 (+8.5%)</span></td>
+<td class="num"><span class="pos">▲ 2.4%</span></td><td class="num"><span class="pos">▲ 18.6%</span></td>
+<td class="num">18,953</td><td class="num"><span class="pos">+1,354 (+7.7%)</span></td>
+<td class="num">$60,365</td><td class="num">$63.9</td></tr></tbody></table>
+<footer>GA4 bookings = sevenrooms_booking_complete. Meta schedules = offsite_conversion.fb_pixel_custom. Google = booking conversion action per venue. Weekly target = June monthly GA4 target prorated to 7/30. Vista excluded (no FY26 target, property inactive). Generated 8 June 2026.</footer>
+</body></html>
