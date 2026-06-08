@@ -1,0 +1,14 @@
+{
+  "generated": "8 June 2026",
+  "markets": [
+    {"name":"Hong Kong","slug":"hk","ccy":"HKD",
+     "weekly":[{"label":"Week 18","dates":"1–7 Jun 2026","folder":"w18"}],
+     "monthly":[{"label":"May 2026","folder":"m2026-05"}]},
+    {"name":"London","slug":"london","ccy":"GBP",
+     "weekly":[{"label":"Week 19","dates":"1–7 Jun 2026","folder":"w19"}],
+     "monthly":[{"label":"May 2026","folder":"m2026-05"}]},
+    {"name":"USA","slug":"usa","ccy":"USD",
+     "weekly":[{"label":"Week of 1 Jun","dates":"1–7 Jun 2026","folder":"w1jun"}],
+     "monthly":[{"label":"May 2026","folder":"m2026-05"}]}
+  ]
+}
