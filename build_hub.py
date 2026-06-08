@@ -12,29 +12,37 @@ h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size
 .tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
 .tab.active{color:#0f172a;border-bottom-color:#2563eb}
 .market{display:none}.market.active{display:block}
-.pick{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:620px}
+.pick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;max-width:940px}
 .pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
 .note{font-size:12px;color:#94a3b8;margin-top:16px}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
-@media(max-width:560px){.pick{grid-template-columns:1fr}}'''
+@media(max-width:760px){.pick{grid-template-columns:1fr}}'''
 
 def selects(mk, prefix):
     wopts='<option value="" selected disabled>Select a week…</option>'
+    aopts='<option value="" selected disabled>Select a week…</option>'
+    has_ads=False
     for w in mk['weekly']:
         wopts+=f'<option value="{prefix}{w["folder"]}/dashboard.html">{w["dates"]} — Dashboard</option>'
         if w.get("deepdive"):
             wopts+=f'<option value="{prefix}{w["folder"]}/deep-dive.html">{w["dates"]} — Deep dive</option>'
         if w.get("ads"):
-            wopts+=f'<option value="{prefix}{w["folder"]}/ads.html">{w["dates"]} — Ads report</option>'
+            has_ads=True
+            aopts+=f'<option value="{prefix}{w["folder"]}/ads.html">{w["dates"]}</option>'
     mopts='<option value="" selected disabled>Select a month…</option>'
     for m in mk.get('monthly',[]):
         mopts+=f'<option value="{prefix}{m["folder"]}/dashboard.html">{m["label"]} — Dashboard</option>'
+    adis=''
+    if not has_ads:
+        aopts='<option value="" selected disabled>None yet</option>'
+        adis=' disabled style="opacity:.5"'
     return f'''<div class="pick">
 <div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value">{wopts}</select></div>
 <div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value">{mopts}</select></div>
+<div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"{adis}>{aopts}</select></div>
 </div>'''
 
 # ---- global hub ----
