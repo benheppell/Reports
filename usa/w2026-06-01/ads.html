@@ -83,9 +83,33 @@ a.back{color:#fff;font-size:13px;text-decoration:none;opacity:.85}</style></head
   <select id="platformFilter"><option value="all">Meta + Google</option><option value="meta">Meta only</option><option value="google">Google only</option></select>
 </div>
 <main>
+  
   <div class="kpi-grid" id="kpiGrid"></div>
   <div class="section-title">Bookings vs Weekly Target & Spend vs Budget</div>
   <table class="detail" id="targetsTable" style="margin-bottom:16px"></table>
+  
+  <div class="section-title">Total Ad-Driven Covers (Google Ads)</div>
+  <p style="font-size:13px;color:#4B5563;margin:-4px 0 12px;line-height:1.5">Headline GA4 bookings count online Sevenrooms bookings only. Google's Store Visits and Local Actions are tracked as primary goals but excluded from the headline metric. The fuller picture below combines online Google-attributed bookings with estimated store visits.</p>
+  <table class="detail">
+    <thead><tr><th>Property</th><th>Online Bookings</th><th>Est. Store Visits</th><th>Total Ad-Driven Covers</th></tr></thead>
+    <tbody>
+      <tr><td>Aqua New York</td><td>41</td><td>123</td><td><strong>164</strong></td></tr>
+      <tr><td>Hutong New York</td><td>39</td><td>53</td><td><strong>92</strong></td></tr>
+      <tr><td>Hutong Miami</td><td>4</td><td>36</td><td><strong>40</strong></td></tr>
+      <tr style="background:#FEF3C7;font-weight:700"><td>TOTAL</td><td>84</td><td>212</td><td>296</td></tr>
+    </tbody>
+  </table>
+  <div class="section-title">Google Maps Intent Signals (walk-in indicators)</div>
+  <table class="detail">
+    <thead><tr><th>Action</th><th>Aqua NY</th><th>Hutong NY</th><th>Hutong Miami</th><th>Total</th></tr></thead>
+    <tbody>
+      <tr><td>Directions requests</td><td>129</td><td>196</td><td>29</td><td><strong>354</strong></td></tr>
+      <tr><td>Menu views</td><td>136</td><td>137</td><td>75</td><td><strong>348</strong></td></tr>
+      <tr><td>Clicks to Call</td><td>12</td><td>21</td><td>5</td><td><strong>38</strong></td></tr>
+      <tr><td>Click "Book Now"</td><td>—</td><td>170</td><td>47</td><td><strong>217</strong></td></tr>
+      <tr><td>Other engagements</td><td>1,066</td><td>1,846</td><td>661</td><td><strong>3,573</strong></td></tr>
+    </tbody>
+  </table>
   <div class="section-title">Spend & Performance by Property</div>
   <div class="charts-grid">
     <div class="chart-card"><h3>Spend by Property</h3><div class="chart-wrap" id="spendChart"></div></div>
@@ -98,7 +122,7 @@ a.back{color:#fff;font-size:13px;text-decoration:none;opacity:.85}</style></head
   <p class="footnote">GA4 bookings = sevenrooms_booking_complete. Meta schedules = offsite_conversion.fb_pixel_custom. Google booking conversions = the venue's sevenrooms booking action (+ its conversion value). Weekly target = month GA4 target prorated to 7 days; budget prorated likewise. Generated 8 June 2026.</p>
 </main>
 <script>
-const META={"Aqua New York": {"cur": {"spend": 5075.54, "impressions": 283922, "reach": 154786, "clicks": 9728, "ctr": 3.426, "cpm": 17.877, "cpc": 0.5217, "frequency": 1.834, "link_clicks": 4815, "schedule_total": 159, "purchases": 158}, "prior": {"spend": 3977.79, "impressions": 242381, "reach": 140670, "clicks": 8170, "ctr": 3.371, "cpm": 16.411, "cpc": 0.4869, "frequency": 1.723, "link_clicks": 4120, "schedule_total": 110, "purchases": 113}, "yoy": {"spend": 927.71, "impressions": 199388, "reach": 166323, "clicks": 4007, "ctr": 2.01, "cpm": 4.653, "cpc": 0.2315, "frequency": 1.199, "link_clicks": 2950, "schedule_total": 44, "purchases": 48}}, "Hutong New York": {"cur": {"spend": 156.44, "impressions": 11561, "reach": 7156, "clicks": 167, "ctr": 1.445, "cpm": 13.532, "cpc": 0.9368, "frequency": 1.616, "link_clicks": 61, "schedule_total": 6, "purchases": 5}, "prior": {"spend": 372.9, "impressions": 37097, "reach": 25436, "clicks": 694, "ctr": 1.871, "cpm": 10.052, "cpc": 0.5373, "frequency": 1.458, "link_clicks": 273, "schedule_total": 8, "purchases": 8}, "yoy": {"spend": 811.01, "impressions": 941342, "reach": 474807, "clicks": 14964, "ctr": 1.59, "cpm": 0.862, "cpc": 0.0542, "frequency": 1.983, "link_clicks": 5592, "schedule_total": 14, "purchases": 0}}, "Hutong Miami": {"cur": {"spend": 1756.95, "impressions": 71621, "reach": 34283, "clicks": 2215, "ctr": 3.093, "cpm": 24.531, "cpc": 0.7932, "frequency": 2.089, "link_clicks": 1002, "schedule_total": 13, "purchases": 14}, "prior": {"spend": 964.38, "impressions": 33338, "reach": 18749, "clicks": 1014, "ctr": 3.042, "cpm": 28.927, "cpc": 0.9511, "frequency": 1.778, "link_clicks": 487, "schedule_total": 1, "purchases": 1}, "yoy": {"spend": 1063.26, "impressions": 384993, "reach": 320855, "clicks": 4831, "ctr": 1.255, "cpm": 2.762, "cpc": 0.2201, "frequency": 1.2, "link_clicks": 2609, "schedule_total": 34, "purchases": 32}}};
+const META={"Aqua New York": {"cur": {"spend": 5075.54, "impressions": 283922, "reach": 154786, "clicks": 9728, "ctr": 3.426, "cpm": 17.877, "cpc": 0.5217, "frequency": 1.834, "link_clicks": 4815, "schedule_total": 159, "purchases": 158}, "yoy": {"spend": 927.71, "impressions": 199388, "reach": 166323, "clicks": 4007, "ctr": 2.01, "cpm": 4.653, "cpc": 0.2315, "frequency": 1.199, "link_clicks": 2950, "schedule_total": 44, "purchases": 48}, "wow": {"spend": 3977.79, "impressions": 242381, "reach": 140670, "clicks": 8170, "ctr": 3.371, "cpm": 16.411, "cpc": 0.4869, "frequency": 1.723, "link_clicks": 4120, "schedule_total": 110, "purchases": 113}}, "Hutong New York": {"cur": {"spend": 156.44, "impressions": 11561, "reach": 7156, "clicks": 167, "ctr": 1.445, "cpm": 13.532, "cpc": 0.9368, "frequency": 1.616, "link_clicks": 61, "schedule_total": 6, "purchases": 5}, "yoy": {"spend": 811.01, "impressions": 941342, "reach": 474807, "clicks": 14964, "ctr": 1.59, "cpm": 0.862, "cpc": 0.0542, "frequency": 1.983, "link_clicks": 5592, "schedule_total": 14, "purchases": 0}, "wow": {"spend": 372.9, "impressions": 37097, "reach": 25436, "clicks": 694, "ctr": 1.871, "cpm": 10.052, "cpc": 0.5373, "frequency": 1.458, "link_clicks": 273, "schedule_total": 8, "purchases": 8}}, "Hutong Miami": {"cur": {"spend": 1756.95, "impressions": 71621, "reach": 34283, "clicks": 2215, "ctr": 3.093, "cpm": 24.531, "cpc": 0.7932, "frequency": 2.089, "link_clicks": 1002, "schedule_total": 13, "purchases": 14}, "yoy": {"spend": 1063.26, "impressions": 384993, "reach": 320855, "clicks": 4831, "ctr": 1.255, "cpm": 2.762, "cpc": 0.2201, "frequency": 1.2, "link_clicks": 2609, "schedule_total": 34, "purchases": 32}, "wow": {"spend": 964.38, "impressions": 33338, "reach": 18749, "clicks": 1014, "ctr": 3.042, "cpm": 28.927, "cpc": 0.9511, "frequency": 1.778, "link_clicks": 487, "schedule_total": 1, "purchases": 1}}};
 const GOOGLE={"Aqua New York": {"cur": {"cost": 866.6, "impressions": 52757, "clicks": 1672, "cpc": 0.518, "ctr": 3.17, "conversions": 41.0, "conv_value": 6691}, "wow": {"cost": 478.75, "impressions": 46278, "clicks": 1406, "cpc": 0.34, "ctr": 3.04, "conversions": 33.96, "conv_value": 671.93}, "yoy": {"cost": 952.83, "impressions": 65892, "clicks": 1777, "cpc": 0.536, "ctr": 2.7, "conversions": 41.5, "conv_value": 44}}, "Hutong New York": {"cur": {"cost": 1393.78, "impressions": 157473, "clicks": 3086, "cpc": 0.452, "ctr": 1.96, "conversions": 39.49, "conv_value": 5331.24}, "wow": {"cost": 1317.41, "impressions": 117615, "clicks": 2944, "cpc": 0.447, "ctr": 2.5, "conversions": 66.77, "conv_value": 9013.72}, "yoy": {"cost": 711.88, "impressions": 43100, "clicks": 1144, "cpc": 0.622, "ctr": 2.65, "conversions": 49.0, "conv_value": 6615}}, "Hutong Miami": {"cur": {"cost": 589.58, "impressions": 24741, "clicks": 830, "cpc": 0.71, "ctr": 3.35, "conversions": 4.0, "conv_value": 508}, "wow": {"cost": 596.3, "impressions": 33044, "clicks": 1047, "cpc": 0.57, "ctr": 3.17, "conversions": 6.0, "conv_value": 762}, "yoy": {"cost": 730.46, "impressions": 31069, "clicks": 724, "cpc": 1.009, "ctr": 2.33, "conversions": 7.0, "conv_value": 889}}};
 const GA4={"Aqua New York": {"cur": 345, "wow": 296, "yoy": 230}, "Hutong New York": {"cur": 121, "wow": 124, "yoy": 379}, "Hutong Miami": {"cur": 34, "wow": 37, "yoy": 95}};
 const BUDGET={"Aqua New York": {"meta": 1663, "google": 554, "total": 2217, "booking_target": 408}, "Hutong New York": {"meta": 988, "google": 1482, "total": 2470, "booking_target": 449}, "Hutong Miami": {"meta": 1540, "google": 560, "total": 2100, "booking_target": 112}};
