@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>USA Ads Report · 1–7 Jun 2026</title>
+<meta name="viewport" content="width=device-width,initial-scale=1"><style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, "SF Pro Display", "Segoe UI", Arial, sans-serif; background: #F9FAFB; color: #111827; }
+  header { padding: 32px 40px 16px; background: linear-gradient(180deg, #111827, #1F2937); color: #fff; }
+  header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.02em; }
+  header .sub { color: #9CA3AF; font-size: 14px; }
+  .controls { padding: 16px 40px; background: #fff; border-bottom: 1px solid #E5E7EB; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+  .controls label { font-size: 13px; color: #6B7280; font-weight: 600; }
+  select, button { font-family: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid #D1D5DB; border-radius: 6px; background: #fff; cursor: pointer; }
+  button.active { background: #111827; color: #fff; border-color: #111827; }
+  .toggle-group { display: inline-flex; gap: 0; border: 1px solid #D1D5DB; border-radius: 6px; overflow: hidden; }
+  .toggle-group button { border: none; border-radius: 0; padding: 8px 16px; }
+  .toggle-group button + button { border-left: 1px solid #D1D5DB; }
+  main { padding: 24px 40px 60px; }
+  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 28px; }
+  .kpi { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px; }
+  .kpi .label { font-size: 12px; color: #6B7280; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+  .kpi .value { font-size: 26px; font-weight: 700; margin: 6px 0 4px; letter-spacing: -0.02em; }
+  .kpi .delta { font-size: 13px; font-weight: 600; }
+  .delta.pos { color: #047857; }
+  .delta.neg { color: #B91C1C; }
+  .delta.flat { color: #6B7280; }
+  .section-title { font-size: 13px; color: #6B7280; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 28px 0 12px; }
+  .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .chart-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px; }
+  .chart-card h3 { margin: 0 0 12px; font-size: 15px; font-weight: 600; }
+  .chart-wrap { position: relative; width: 100%; height: 300px; }
+  .chart-wrap svg { width: 100%; height: 100%; display: block; }
+  .bar-label { font-size: 11px; fill: #6B7280; font-family: inherit; }
+  .bar-value { font-size: 11px; fill: #111827; font-family: inherit; font-weight: 600; }
+  .bar-legend { display: flex; gap: 16px; margin-top: 8px; justify-content: center; font-size: 12px; color: #6B7280; }
+  .bar-legend .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
+  table.detail { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; overflow: hidden; }
+  table.detail th, table.detail td { padding: 10px 14px; text-align: right; border-bottom: 1px solid #F3F4F6; }
+  table.detail th { background: #F9FAFB; font-weight: 600; color: #374151; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  table.detail th:first-child, table.detail td:first-child { text-align: left; }
+  table.detail tr.group-head td { background: #111827; color: #fff; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
+  table.detail tr.platform-row td { background: #F3F4F6; font-weight: 600; color: #4B5563; }
+  .footnote { color: #6B7280; font-size: 12px; padding: 16px 0; }
+  .summary-card { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1px solid #F59E0B; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; }
+  .summary-card h2 { margin: 0 0 8px; font-size: 18px; color: #92400E; }
+  .summary-card p { margin: 6px 0; color: #78350F; font-size: 14px; line-height: 1.6; }
+  .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
+  .impact-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 16px; }
+  .impact-card .lbl { font-size: 11px; color: #6B7280; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
+  .impact-card .num { font-size: 22px; font-weight: 700; color: #111827; margin: 4px 0; letter-spacing: -0.02em; }
+  .impact-card .sub { font-size: 12px; color: #6B7280; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .content-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px; }
+  .content-card h3 { margin: 0 0 12px; font-size: 15px; font-weight: 600; }
+  .post-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F3F4F6; align-items: center; font-size: 13px; }
+  .post-row:last-child { border-bottom: none; }
+  .post-row .rank { color: #9CA3AF; font-weight: 700; font-size: 12px; }
+  .post-row .meta { color: #6B7280; font-size: 11px; }
+  .post-row .stats { text-align: right; font-weight: 600; font-size: 12px; color: #374151; }
+  .pill { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  .pill.reel { background: #DBEAFE; color: #1E3A8A; }
+  .pill.image { background: #F3F4F6; color: #374151; }
+  .pill.carousel { background: #FCE7F3; color: #831843; }
+  .print-only { display: none; }
+  @media (max-width: 900px) { .charts-grid, .two-col { grid-template-columns: 1fr; } header, .controls, main { padding-left: 20px; padding-right: 20px; } }
+  @media print {
+    body { background: #fff; }
+    .controls { display: none; }
+    .chart-card, .content-card, .kpi, .impact-card, .summary-card, table.detail { break-inside: avoid; page-break-inside: avoid; }
+    main { padding: 16px 24px; }
+  }
+
+a.back{color:#fff;font-size:13px;text-decoration:none;opacity:.85}</style></head><body>
+<header><a class="back" href="index.html">← USA reports</a>
+<h1 style="margin-top:8px">USA Ads Report · Weekly</h1>
+<div class="sub">1–7 Jun 2026 · Aqua New York · Hutong New York · Hutong Miami · Meta + Google Ads · GA4 Bookings</div></header>
+<div class="controls">
+  <label>Compare to:</label>
+  <div class="toggle-group" id="compareToggle">
+    <button data-compare="wow" class="active">Prior week</button>
+    <button data-compare="yoy">YoY (2–8 Jun 2025)</button>
+  </div>
+  <label style="margin-left:24px">Property:</label>
+  <select id="propertyFilter"><option value="all">All 3 properties</option><option value="Aqua New York">Aqua New York</option><option value="Hutong New York">Hutong New York</option><option value="Hutong Miami">Hutong Miami</option></select>
+  <label style="margin-left:24px">Platform:</label>
+  <select id="platformFilter"><option value="all">Meta + Google</option><option value="meta">Meta only</option><option value="google">Google only</option></select>
+</div>
+<main>
+  <div class="kpi-grid" id="kpiGrid"></div>
+  <div class="section-title">Bookings vs Weekly Target & Spend vs Budget</div>
+  <table class="detail" id="targetsTable" style="margin-bottom:16px"></table>
+  <div class="section-title">Spend & Performance by Property</div>
+  <div class="charts-grid">
+    <div class="chart-card"><h3>Spend by Property</h3><div class="chart-wrap" id="spendChart"></div></div>
+    <div class="chart-card"><h3>Impressions by Property</h3><div class="chart-wrap" id="impChart"></div></div>
+    <div class="chart-card"><h3>GA4 Bookings by Property</h3><div class="chart-wrap" id="convChart"></div></div>
+    <div class="chart-card"><h3>CPM by Property</h3><div class="chart-wrap" id="cpmChart"></div></div>
+  </div>
+  <div class="section-title">Full Detail · Meta + Google + GA4</div>
+  <table class="detail" id="detailTable"></table>
+  <p class="footnote">GA4 bookings = sevenrooms_booking_complete. Meta schedules = offsite_conversion.fb_pixel_custom. Google booking conversions = the venue's sevenrooms booking action (+ its conversion value). Weekly target = month GA4 target prorated to 7 days; budget prorated likewise. Generated 8 June 2026.</p>
+</main>
+<script>
+const META={"Aqua New York": {"cur": {"spend": 5075.54, "impressions": 283922, "reach": 154786, "clicks": 9728, "ctr": 3.426, "cpm": 17.877, "cpc": 0.5217, "frequency": 1.834, "link_clicks": 4815, "schedule_total": 159, "purchases": 158}, "prior": {"spend": 3977.79, "impressions": 242381, "reach": 140670, "clicks": 8170, "ctr": 3.371, "cpm": 16.411, "cpc": 0.4869, "frequency": 1.723, "link_clicks": 4120, "schedule_total": 110, "purchases": 113}, "yoy": {"spend": 927.71, "impressions": 199388, "reach": 166323, "clicks": 4007, "ctr": 2.01, "cpm": 4.653, "cpc": 0.2315, "frequency": 1.199, "link_clicks": 2950, "schedule_total": 44, "purchases": 48}}, "Hutong New York": {"cur": {"spend": 156.44, "impressions": 11561, "reach": 7156, "clicks": 167, "ctr": 1.445, "cpm": 13.532, "cpc": 0.9368, "frequency": 1.616, "link_clicks": 61, "schedule_total": 6, "purchases": 5}, "prior": {"spend": 372.9, "impressions": 37097, "reach": 25436, "clicks": 694, "ctr": 1.871, "cpm": 10.052, "cpc": 0.5373, "frequency": 1.458, "link_clicks": 273, "schedule_total": 8, "purchases": 8}, "yoy": {"spend": 811.01, "impressions": 941342, "reach": 474807, "clicks": 14964, "ctr": 1.59, "cpm": 0.862, "cpc": 0.0542, "frequency": 1.983, "link_clicks": 5592, "schedule_total": 14, "purchases": 0}}, "Hutong Miami": {"cur": {"spend": 1756.95, "impressions": 71621, "reach": 34283, "clicks": 2215, "ctr": 3.093, "cpm": 24.531, "cpc": 0.7932, "frequency": 2.089, "link_clicks": 1002, "schedule_total": 13, "purchases": 14}, "prior": {"spend": 964.38, "impressions": 33338, "reach": 18749, "clicks": 1014, "ctr": 3.042, "cpm": 28.927, "cpc": 0.9511, "frequency": 1.778, "link_clicks": 487, "schedule_total": 1, "purchases": 1}, "yoy": {"spend": 1063.26, "impressions": 384993, "reach": 320855, "clicks": 4831, "ctr": 1.255, "cpm": 2.762, "cpc": 0.2201, "frequency": 1.2, "link_clicks": 2609, "schedule_total": 34, "purchases": 32}}};
+const GOOGLE={"Aqua New York": {"cur": {"cost": 866.6, "impressions": 52757, "clicks": 1672, "cpc": 0.518, "ctr": 3.17, "conversions": 41.0, "conv_value": 6691}, "wow": {"cost": 478.75, "impressions": 46278, "clicks": 1406, "cpc": 0.34, "ctr": 3.04, "conversions": 33.96, "conv_value": 671.93}, "yoy": {"cost": 952.83, "impressions": 65892, "clicks": 1777, "cpc": 0.536, "ctr": 2.7, "conversions": 41.5, "conv_value": 44}}, "Hutong New York": {"cur": {"cost": 1393.78, "impressions": 157473, "clicks": 3086, "cpc": 0.452, "ctr": 1.96, "conversions": 39.49, "conv_value": 5331.24}, "wow": {"cost": 1317.41, "impressions": 117615, "clicks": 2944, "cpc": 0.447, "ctr": 2.5, "conversions": 66.77, "conv_value": 9013.72}, "yoy": {"cost": 711.88, "impressions": 43100, "clicks": 1144, "cpc": 0.622, "ctr": 2.65, "conversions": 49.0, "conv_value": 6615}}, "Hutong Miami": {"cur": {"cost": 589.58, "impressions": 24741, "clicks": 830, "cpc": 0.71, "ctr": 3.35, "conversions": 4.0, "conv_value": 508}, "wow": {"cost": 596.3, "impressions": 33044, "clicks": 1047, "cpc": 0.57, "ctr": 3.17, "conversions": 6.0, "conv_value": 762}, "yoy": {"cost": 730.46, "impressions": 31069, "clicks": 724, "cpc": 1.009, "ctr": 2.33, "conversions": 7.0, "conv_value": 889}}};
+const GA4={"Aqua New York": {"cur": 345, "wow": 296, "yoy": 230}, "Hutong New York": {"cur": 121, "wow": 124, "yoy": 379}, "Hutong Miami": {"cur": 34, "wow": 37, "yoy": 95}};
+const BUDGET={"Aqua New York": {"meta": 1663, "google": 554, "total": 2217, "booking_target": 408}, "Hutong New York": {"meta": 988, "google": 1482, "total": 2470, "booking_target": 449}, "Hutong Miami": {"meta": 1540, "google": 560, "total": 2100, "booking_target": 112}};
+
+const PERIODS = {cur:"1–7 Jun 2026", wow:"25–31 May 2026", yoy:"2–8 Jun 2025"};
+const SYM = "$";
+let compare = "wow";
+let propertyFilter = "all";
+let platformFilter = "all";
+const PROPS = Object.keys(GA4);
+
+const fmt = {
+  money: v => SYM + (v||0).toLocaleString(undefined,{maximumFractionDigits:0}),
+  money2: v => SYM + (v||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}),
+  num: v => (v||0).toLocaleString(undefined,{maximumFractionDigits:0}),
+  pct: v => (v||0).toFixed(2)+"%",
+  delta: v => { if(v===null||isNaN(v)||!isFinite(v)) return "—"; const s=v>=0?"+":""; return s+(v*100).toFixed(1)+"%"; }
+};
+function agg(period, prop, plat){
+  let spend=0,imp=0,clicks=0,reach=0,conv=0,ga4=0,val=0;
+  const props = prop==="all"?PROPS:[prop];
+  for(const p of props){
+    if(plat==="all"||plat==="meta"){const m=META[p][period]; spend+=m.spend;imp+=m.impressions;clicks+=m.clicks;reach+=m.reach;conv+=m.schedule_total;}
+    if(plat==="all"||plat==="google"){const g=GOOGLE[p][period]; spend+=g.cost;imp+=g.impressions;clicks+=g.clicks;conv+=g.conversions;val+=g.conv_value;}
+    ga4+=GA4[p][period];
+  }
+  return {spend,imp,clicks,reach,conv,ga4,val, ctr:imp?clicks/imp*100:0, cpm:imp?spend/imp*1000:0, cpc:clicks?spend/clicks:0, cpb:ga4?spend/ga4:0};
+}
+const dp=(a,b)=> b?(a-b)/b:null;
+function dcls(v,inv=false){ if(v===null||!isFinite(v))return"flat"; if(Math.abs(v)<0.005)return"flat"; return (inv?v<0:v>0)?"pos":"neg"; }
+const cmpKey=()=> compare==="wow"?"wow":"yoy";
+const cmpLbl=()=> compare==="wow"?"vs prior week":"vs "+PERIODS.yoy;
+
+function renderKPIs(){
+  const cur=agg("cur",propertyFilter,platformFilter), cmp=agg(cmpKey(),propertyFilter,platformFilter);
+  const k=[
+   {l:"Total Spend",v:fmt.money(cur.spend),d:dp(cur.spend,cmp.spend),i:true},
+   {l:"GA4 Bookings",v:fmt.num(cur.ga4),d:dp(cur.ga4,cmp.ga4),i:false},
+   {l:"Cost / Booking",v:fmt.money2(cur.cpb),d:dp(cur.cpb,cmp.cpb),i:true},
+   {l:"Impressions",v:fmt.num(cur.imp),d:dp(cur.imp,cmp.imp),i:false},
+   {l:"Clicks",v:fmt.num(cur.clicks),d:dp(cur.clicks,cmp.clicks),i:false},
+   {l:"CTR",v:fmt.pct(cur.ctr),d:dp(cur.ctr,cmp.ctr),i:false},
+   {l:"CPM",v:fmt.money2(cur.cpm),d:dp(cur.cpm,cmp.cpm),i:true},
+   {l:"CPC",v:fmt.money2(cur.cpc),d:dp(cur.cpc,cmp.cpc),i:true},
+   {l:"Meta Reach",v:fmt.num(cur.reach),d:dp(cur.reach,cmp.reach),i:false}
+  ];
+  document.getElementById("kpiGrid").innerHTML=k.map(x=>`<div class="kpi"><div class="label">${x.l}</div><div class="value">${x.v}</div><div class="delta ${dcls(x.d,x.i)}">${fmt.delta(x.d)} <span style="color:#9CA3AF;font-weight:500">${cmpLbl()}</span></div></div>`).join("");
+}
+function renderTargets(){
+  const props=propertyFilter==="all"?PROPS:[propertyFilter];
+  let rows=`<thead><tr><th>Property</th><th>GA4 Bookings</th><th>Weekly Target</th><th>vs Target</th><th>Spend</th><th>Weekly Budget</th><th>Cost/Book</th></tr></thead><tbody>`;
+  let tb=0,tt=0,ts=0,tbud=0;
+  for(const p of props){
+    const g=agg("cur",p,platformFilter); const B=BUDGET[p];
+    const budget = platformFilter==="meta"?B.meta:platformFilter==="google"?B.google:B.total;
+    const vt=B.booking_target?(g.ga4-B.booking_target)/B.booking_target:null;
+    tb+=g.ga4; tt+=B.booking_target; ts+=g.spend; tbud+=budget;
+    rows+=`<tr><td>${p}</td><td>${fmt.num(g.ga4)}</td><td>${fmt.num(B.booking_target)}</td><td class="delta ${dcls(vt)}">${fmt.delta(vt)}</td><td>${fmt.money(g.spend)}</td><td>${fmt.money(budget)}</td><td>${fmt.money2(g.cpb)}</td></tr>`;
+  }
+  const vt=tt?(tb-tt)/tt:null;
+  rows+=`<tr style="background:#FEF3C7;font-weight:700"><td>TOTAL</td><td>${fmt.num(tb)}</td><td>${fmt.num(tt)}</td><td class="delta ${dcls(vt)}">${fmt.delta(vt)}</td><td>${fmt.money(ts)}</td><td>${fmt.money(tbud)}</td><td>${fmt.money2(tb?ts/tb:0)}</td></tr></tbody>`;
+  document.getElementById("targetsTable").innerHTML=rows;
+}
+function chart(id,metric,fmtFn){
+  const labels=propertyFilter==="all"?PROPS:[propertyFilter];
+  const cur=labels.map(p=>agg("cur",p,platformFilter)[metric]);
+  const prev=labels.map(p=>agg(cmpKey(),p,platformFilter)[metric]);
+  const max=Math.max(...cur,...prev,1);
+  const W=480,H=280,padL=56,padR=12,padT=18,padB=56,innerW=W-padL-padR,innerH=H-padT-padB,groupW=innerW/labels.length,barW=Math.min(28,groupW*0.32),gap=4;
+  let grid="";
+  for(let i=0;i<=4;i++){const y=padT+innerH*(1-i/4);grid+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#F3F4F6"/><text x="${padL-6}" y="${y+3}" text-anchor="end" class="bar-label">${fmtFn(max*i/4)}</text>`;}
+  let bars="";
+  labels.forEach((lbl,i)=>{const gx=padL+groupW*i+groupW/2;const h1=cur[i]/max*innerH,h2=prev[i]/max*innerH;const x1=gx-barW-gap/2,x2=gx+gap/2;const y1=padT+innerH-h1,y2=padT+innerH-h2;
+    bars+=`<rect x="${x1}" y="${y1}" width="${barW}" height="${h1}" fill="#111827" rx="3"/><rect x="${x2}" y="${y2}" width="${barW}" height="${h2}" fill="#9CA3AF" rx="3"/>`;
+    bars+=`<text x="${x1+barW/2}" y="${y1-4}" text-anchor="middle" class="bar-value">${fmtFn(cur[i])}</text><text x="${x2+barW/2}" y="${y2-4}" text-anchor="middle" class="bar-value">${fmtFn(prev[i])}</text>`;
+    const parts=lbl.split(" ");
+    if(parts.length>1&&lbl.length>10){bars+=`<text x="${gx}" y="${padT+innerH+18}" text-anchor="middle" class="bar-label">${parts[0]}</text><text x="${gx}" y="${padT+innerH+32}" text-anchor="middle" class="bar-label">${parts.slice(1).join(" ")}</text>`;}
+    else bars+=`<text x="${gx}" y="${padT+innerH+18}" text-anchor="middle" class="bar-label">${lbl}</text>`;});
+  document.getElementById(id).innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">${grid}<line x1="${padL}" y1="${padT+innerH}" x2="${W-padR}" y2="${padT+innerH}" stroke="#D1D5DB"/>${bars}</svg><div class="bar-legend"><span><span class="swatch" style="background:#111827"></span>${PERIODS.cur}</span><span><span class="swatch" style="background:#9CA3AF"></span>${compare==="wow"?PERIODS.wow:PERIODS.yoy}</span></div>`;
+}
+function renderTable(){
+  const props=propertyFilter==="all"?PROPS:[propertyFilter];
+  const ck=cmpKey(), cl=compare==="wow"?"Prior wk":PERIODS.yoy;
+  let r=`<thead><tr><th>Property / Metric</th><th>${PERIODS.cur}</th><th>${cl}</th><th>Δ</th></tr></thead><tbody>`;
+  for(const p of props){
+    r+=`<tr class="group-head"><td colspan="4">${p}</td></tr>`;
+    if(platformFilter!=="google"){
+      r+=`<tr class="platform-row"><td colspan="4">Meta</td></tr>`;
+      const m=per=>META[p][per];
+      const ml=[["Spend","spend",fmt.money],["Impressions","impressions",fmt.num],["Reach","reach",fmt.num],["Clicks","clicks",fmt.num],["CTR","ctr",v=>v.toFixed(2)+"%"],["CPM","cpm",fmt.money2],["CPC","cpc",fmt.money2],["Schedules","schedule_total",fmt.num]];
+      for(const [lb,k,f] of ml){const cur=m("cur")[k],cmp=m(ck)[k];const d=dp(cur,cmp);r+=`<tr><td>${lb}</td><td>${f(cur)}</td><td>${f(cmp)}</td><td class="delta ${dcls(d,["spend","cpm","cpc"].includes(k))}">${fmt.delta(d)}</td></tr>`;}
+    }
+    if(platformFilter!=="meta"){
+      r+=`<tr class="platform-row"><td colspan="4">Google</td></tr>`;
+      const g=per=>GOOGLE[p][per];
+      const gl=[["Cost","cost",fmt.money],["Impressions","impressions",fmt.num],["Clicks","clicks",fmt.num],["CTR","ctr",v=>v.toFixed(2)+"%"],["CPC","cpc",fmt.money2],["Booking Conv.","conversions",v=>v.toFixed(1)],["Conv. Value","conv_value",fmt.money]];
+      for(const [lb,k,f] of gl){const cur=g("cur")[k],cmp=g(ck)[k];const d=dp(cur,cmp);r+=`<tr><td>${lb}</td><td>${f(cur)}</td><td>${f(cmp)}</td><td class="delta ${dcls(d,["cost","cpc"].includes(k))}">${fmt.delta(d)}</td></tr>`;}
+    }
+    r+=`<tr class="platform-row"><td colspan="4">GA4</td></tr><tr><td>Bookings</td><td>${fmt.num(GA4[p].cur)}</td><td>${fmt.num(GA4[p][ck])}</td><td class="delta ${dcls(dp(GA4[p].cur,GA4[p][ck]))}">${fmt.delta(dp(GA4[p].cur,GA4[p][ck]))}</td></tr>`;
+  }
+  r+="</tbody>";
+  document.getElementById("detailTable").innerHTML=r;
+}
+function renderAll(){renderKPIs();renderTargets();chart("spendChart","spend",v=>SYM+(v>=1000?(v/1000).toFixed(1)+"k":v.toFixed(0)));chart("impChart","imp",v=>v>=1000?(v/1000).toFixed(0)+"k":v.toFixed(0));chart("convChart","ga4",v=>v.toFixed(0));chart("cpmChart","cpm",v=>SYM+v.toFixed(1));renderTable();}
+document.getElementById("compareToggle").addEventListener("click",e=>{if(e.target.dataset.compare){compare=e.target.dataset.compare;document.querySelectorAll("#compareToggle button").forEach(b=>b.classList.toggle("active",b.dataset.compare===compare));renderAll();}});
+document.getElementById("propertyFilter").addEventListener("change",e=>{propertyFilter=e.target.value;renderAll();});
+document.getElementById("platformFilter").addEventListener("change",e=>{platformFilter=e.target.value;renderAll();});
+renderAll();
+
+</script></body></html>

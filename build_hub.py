@@ -27,6 +27,8 @@ def selects(mk, prefix):
         wopts+=f'<option value="{prefix}{w["folder"]}/dashboard.html">{w["dates"]} — Dashboard</option>'
         if w.get("deepdive"):
             wopts+=f'<option value="{prefix}{w["folder"]}/deep-dive.html">{w["dates"]} — Deep dive</option>'
+        if w.get("ads"):
+            wopts+=f'<option value="{prefix}{w["folder"]}/ads.html">{w["dates"]} — Ads report</option>'
     mopts='<option value="" selected disabled>Select a month…</option>'
     for m in mk.get('monthly',[]):
         mopts+=f'<option value="{prefix}{m["folder"]}/dashboard.html">{m["label"]} — Dashboard</option>'
