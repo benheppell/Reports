@@ -1,25 +1,27 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aqua London — Performance Reports</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:920px;margin:0 auto}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:1040px;margin:0 auto}
 h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size:14px}
 .tabs{display:flex;gap:6px;border-bottom:1px solid #e2e8f0;margin-bottom:24px;flex-wrap:wrap}
 .tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
 .tab.active{color:#0f172a;border-bottom-color:#2563eb}
 .market{display:none}.market.active{display:block}
-.pick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;max-width:940px}
+.pick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1040px}
 .pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
 .note{font-size:12px;color:#94a3b8;margin-top:16px}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
-@media(max-width:760px){.pick{grid-template-columns:1fr}}</style></head><body>
+@media(max-width:900px){.pick{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pick{grid-template-columns:1fr}}</style></head><body>
 <h1>Aqua London — Performance Reports</h1>
 <div class="sub">GA4 booking performance vs targets · GBP. Pick a report.</div>
 <div class="pick">
 <div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value"><option value="" selected disabled>Select a week…</option><option value="w2026-06-01/dashboard.html">1–7 Jun 2026 — Dashboard</option><option value="w2026-06-01/deep-dive.html">1–7 Jun 2026 — Deep dive</option><option value="w2026-05-25/dashboard.html">25–31 May 2026 — Dashboard</option><option value="w2026-05-18/dashboard.html">18–24 May 2026 — Dashboard</option><option value="w2026-05-11/dashboard.html">11–17 May 2026 — Dashboard</option><option value="w2026-05-04/dashboard.html">4–10 May 2026 — Dashboard</option><option value="w2026-04-27/dashboard.html">27 Apr–3 May 2026 — Dashboard</option><option value="w2026-04-20/dashboard.html">20–26 Apr 2026 — Dashboard</option><option value="w2026-04-13/dashboard.html">13–19 Apr 2026 — Dashboard</option><option value="w2026-04-06/dashboard.html">6–12 Apr 2026 — Dashboard</option><option value="w2026-03-30/dashboard.html">30 Mar–5 Apr 2026 — Dashboard</option><option value="w2026-03-23/dashboard.html">23–29 Mar 2026 — Dashboard</option><option value="w2026-03-16/dashboard.html">16–22 Mar 2026 — Dashboard</option><option value="w2026-03-09/dashboard.html">9–15 Mar 2026 — Dashboard</option><option value="w2026-03-02/dashboard.html">2–8 Mar 2026 — Dashboard</option><option value="w2026-02-23/dashboard.html">23 Feb–1 Mar 2026 — Dashboard</option><option value="w2026-02-16/dashboard.html">16–22 Feb 2026 — Dashboard</option><option value="w2026-02-09/dashboard.html">9–15 Feb 2026 — Dashboard</option><option value="w2026-02-02/dashboard.html">2–8 Feb 2026 — Dashboard</option></select></div>
 <div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value"><option value="" selected disabled>Select a month…</option><option value="m2026-05/dashboard.html">May 2026 — Dashboard</option><option value="m2026-04/dashboard.html">Apr 2026 — Dashboard</option><option value="m2026-03/dashboard.html">Mar 2026 — Dashboard</option><option value="m2026-02/dashboard.html">Feb 2026 — Dashboard</option></select></div>
 <div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value" disabled style="opacity:.5"><option value="" selected disabled>None yet</option></select></div>
+<div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value" disabled style="opacity:.5"><option value="" selected disabled>None yet</option></select></div>
 </div>
-<footer>Generated 8 June 2026. GA4 bookings = sevenrooms_booking_complete.</footer></body></html>
+<footer>Generated 9 June 2026. GA4 bookings = sevenrooms_booking_complete.</footer></body></html>

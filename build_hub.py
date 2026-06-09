@@ -6,20 +6,21 @@ HERE=os.path.dirname(os.path.abspath(__file__))
 M=json.load(open(os.path.join(HERE,"manifest.json")))
 CSS='''@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:920px;margin:0 auto}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:1040px;margin:0 auto}
 h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size:14px}
 .tabs{display:flex;gap:6px;border-bottom:1px solid #e2e8f0;margin-bottom:24px;flex-wrap:wrap}
 .tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
 .tab.active{color:#0f172a;border-bottom-color:#2563eb}
 .market{display:none}.market.active{display:block}
-.pick{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;max-width:940px}
+.pick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1040px}
 .pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
 .note{font-size:12px;color:#94a3b8;margin-top:16px}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
-@media(max-width:760px){.pick{grid-template-columns:1fr}}'''
+@media(max-width:900px){.pick{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pick{grid-template-columns:1fr}}'''
 
 def selects(mk, prefix):
     wopts='<option value="" selected disabled>Select a week…</option>'
@@ -39,10 +40,20 @@ def selects(mk, prefix):
     if not has_ads:
         aopts='<option value="" selected disabled>None yet</option>'
         adis=' disabled style="opacity:.5"'
+    topts='<option value="" selected disabled>Select a week…</option>'
+    tdis=''
+    trd=mk.get('trends',[])
+    if trd:
+        for t in trd:
+            topts+=f'<option value="{prefix}{t["folder"]}/trends.html">{t["dates"]}</option>'
+    else:
+        topts='<option value="" selected disabled>None yet</option>'
+        tdis=' disabled style="opacity:.5"'
     return f'''<div class="pick">
 <div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value">{wopts}</select></div>
 <div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value">{mopts}</select></div>
 <div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"{adis}>{aopts}</select></div>
+<div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"{tdis}>{topts}</select></div>
 </div>'''
 
 # ---- global hub ----
