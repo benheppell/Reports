@@ -1,0 +1,27 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua Paris — Performance Reports</title><style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:1040px;margin:0 auto}
+h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size:14px}
+.tabs{display:flex;gap:6px;border-bottom:1px solid #e2e8f0;margin-bottom:24px;flex-wrap:wrap}
+.tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
+.tab.active{color:#0f172a;border-bottom-color:#2563eb}
+.market{display:none}.market.active{display:block}
+.pick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1040px}
+.pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
+select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+select:hover{border-color:#2563eb}
+.note{font-size:12px;color:#94a3b8;margin-top:16px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+@media(max-width:900px){.pick{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.pick{grid-template-columns:1fr}}</style></head><body>
+<h1>Aqua Paris — Performance Reports</h1>
+<div class="sub">GA4 booking performance vs targets · EUR. Pick a report.</div>
+<div class="pick">
+<div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value" disabled style="opacity:.5"><option value="" selected disabled>None yet</option></select></div>
+<div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value" disabled style="opacity:.5"><option value="" selected disabled>None yet</option></select></div>
+<div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"><option value="" selected disabled>Select a week…</option><option value="w2026-06-01/ads.html">1–7 Jun 2026</option></select></div>
+<div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"><option value="" selected disabled>Select a week…</option><option value="w2026-06-01/trends.html">1–7 Jun 2026</option></select></div>
+</div>
+<footer>Generated 9 June 2026. GA4 bookings = sevenrooms_booking_complete.</footer></body></html>
