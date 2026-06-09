@@ -1,235 +1,181 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>USA Ads Report · 1–7 Jun 2026</title>
-<meta name="viewport" content="width=device-width,initial-scale=1"><style>
-  * { box-sizing: border-box; }
-  body { margin: 0; font-family: -apple-system, "SF Pro Display", "Segoe UI", Arial, sans-serif; background: #F9FAFB; color: #111827; }
-  header { padding: 32px 40px 16px; background: linear-gradient(180deg, #111827, #1F2937); color: #fff; }
-  header h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.02em; }
-  header .sub { color: #9CA3AF; font-size: 14px; }
-  .controls { padding: 16px 40px; background: #fff; border-bottom: 1px solid #E5E7EB; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
-  .controls label { font-size: 13px; color: #6B7280; font-weight: 600; }
-  select, button { font-family: inherit; font-size: 14px; padding: 8px 12px; border: 1px solid #D1D5DB; border-radius: 6px; background: #fff; cursor: pointer; }
-  button.active { background: #111827; color: #fff; border-color: #111827; }
-  .toggle-group { display: inline-flex; gap: 0; border: 1px solid #D1D5DB; border-radius: 6px; overflow: hidden; }
-  .toggle-group button { border: none; border-radius: 0; padding: 8px 16px; }
-  .toggle-group button + button { border-left: 1px solid #D1D5DB; }
-  main { padding: 24px 40px 60px; }
-  .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 28px; }
-  .kpi { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px; }
-  .kpi .label { font-size: 12px; color: #6B7280; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
-  .kpi .value { font-size: 26px; font-weight: 700; margin: 6px 0 4px; letter-spacing: -0.02em; }
-  .kpi .delta { font-size: 13px; font-weight: 600; }
-  .delta.pos { color: #047857; }
-  .delta.neg { color: #B91C1C; }
-  .delta.flat { color: #6B7280; }
-  .section-title { font-size: 13px; color: #6B7280; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; margin: 28px 0 12px; }
-  .charts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .chart-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px; }
-  .chart-card h3 { margin: 0 0 12px; font-size: 15px; font-weight: 600; }
-  .chart-wrap { position: relative; width: 100%; height: 300px; }
-  .chart-wrap svg { width: 100%; height: 100%; display: block; }
-  .bar-label { font-size: 11px; fill: #6B7280; font-family: inherit; }
-  .bar-value { font-size: 11px; fill: #111827; font-family: inherit; font-weight: 600; }
-  .bar-legend { display: flex; gap: 16px; margin-top: 8px; justify-content: center; font-size: 12px; color: #6B7280; }
-  .bar-legend .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; vertical-align: middle; }
-  table.detail { width: 100%; border-collapse: collapse; font-size: 13px; background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; overflow: hidden; }
-  table.detail th, table.detail td { padding: 10px 14px; text-align: right; border-bottom: 1px solid #F3F4F6; }
-  table.detail th { background: #F9FAFB; font-weight: 600; color: #374151; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
-  table.detail th:first-child, table.detail td:first-child { text-align: left; }
-  table.detail tr.group-head td { background: #111827; color: #fff; font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; }
-  table.detail tr.platform-row td { background: #F3F4F6; font-weight: 600; color: #4B5563; }
-  .footnote { color: #6B7280; font-size: 12px; padding: 16px 0; }
-  .summary-card { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); border: 1px solid #F59E0B; border-radius: 10px; padding: 20px 24px; margin-bottom: 24px; }
-  .summary-card h2 { margin: 0 0 8px; font-size: 18px; color: #92400E; }
-  .summary-card p { margin: 6px 0; color: #78350F; font-size: 14px; line-height: 1.6; }
-  .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 16px 0; }
-  .impact-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 16px; }
-  .impact-card .lbl { font-size: 11px; color: #6B7280; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 600; }
-  .impact-card .num { font-size: 22px; font-weight: 700; color: #111827; margin: 4px 0; letter-spacing: -0.02em; }
-  .impact-card .sub { font-size: 12px; color: #6B7280; }
-  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .content-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 10px; padding: 18px; }
-  .content-card h3 { margin: 0 0 12px; font-size: 15px; font-weight: 600; }
-  .post-row { display: grid; grid-template-columns: 24px 1fr auto; gap: 12px; padding: 10px 0; border-bottom: 1px solid #F3F4F6; align-items: center; font-size: 13px; }
-  .post-row:last-child { border-bottom: none; }
-  .post-row .rank { color: #9CA3AF; font-weight: 700; font-size: 12px; }
-  .post-row .meta { color: #6B7280; font-size: 11px; }
-  .post-row .stats { text-align: right; font-weight: 600; font-size: 12px; color: #374151; }
-  .pill { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
-  .pill.reel { background: #DBEAFE; color: #1E3A8A; }
-  .pill.image { background: #F3F4F6; color: #374151; }
-  .pill.carousel { background: #FCE7F3; color: #831843; }
-  .print-only { display: none; }
-  @media (max-width: 900px) { .charts-grid, .two-col { grid-template-columns: 1fr; } header, .controls, main { padding-left: 20px; padding-right: 20px; } }
-  @media print {
-    body { background: #fff; }
-    .controls { display: none; }
-    .chart-card, .content-card, .kpi, .impact-card, .summary-card, table.detail { break-inside: avoid; page-break-inside: avoid; }
-    main { padding: 16px 24px; }
-  }
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA — Ads & Website Snapshot</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:30px;max-width:1080px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:23px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:5px 0 16px;font-size:13px}
+.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:14px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.seclab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;margin:18px 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:#f8fafc;border-radius:10px;padding:13px 15px}
+.kpi .l{font-size:12.5px;color:#64748b}.kpi .v{font-size:22px;font-weight:600;font-family:'JetBrains Mono',monospace;margin-top:1px}
+.kpi .d{font-size:11px;margin-top:4px}
+.up{color:#059669}.dn{color:#dc2626}.fl{color:#94a3b8}
+.ins{display:flex;flex-direction:column;gap:7px;margin:14px 0 4px}
+.ins div{background:#f8fafc;border-radius:9px;padding:9px 12px;font-size:13px;line-height:1.5;border-left:3px solid #cbd5e1}
+.ins div.g{border-left-color:#10b981}.ins div.a{border-left-color:#f59e0b}.ins div.r{border-left-color:#ef4444}.ins div.b{border-left-color:#2563eb}
+table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+th{text-align:left;font-weight:600;color:#64748b;padding:6px 4px;border-bottom:1px solid #e2e8f0;font-size:12px}
+td{padding:6px 4px;border-bottom:1px solid #f1f5f9}
+.r2{text-align:right}.mono{font-family:'JetBrains Mono',monospace}
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:720px){.cards2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e7ecf2;border-radius:12px;padding:14px 16px}
+.pf{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-weight:600}
+.pf .dot{width:10px;height:10px;border-radius:2px}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:13px}
+.g4 .s{color:#64748b}
+.bars{display:flex;flex-direction:column;gap:7px;font-size:13px}
+.track{height:6px;background:#eef2f6;border-radius:3px}.fillb{height:6px;border-radius:3px}
+.fn{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fn .b{background:#f8fafc;border-radius:9px;padding:10px;text-align:center}
+.fn .b .v{font-size:17px;font-weight:600}.fn .b .l{font-size:12px;color:#64748b}
+footer{margin-top:26px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+.legend{display:flex;gap:16px;font-size:12px;color:#64748b;margin:2px 0 4px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+.legend i.ln{height:0;width:16px;border-top:2px solid #0F6E56;border-radius:0}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All USA reports</a>
+<h1>USA &middot; ads &amp; website snapshot</h1>
+<div class="sub" id="sub"></div>
+<div class="bar"><select id="vsel"></select><span style="font-size:12.5px;color:#64748b">Each metric shows <b>WoW</b> (vs last week) and <b>YoY</b> (vs same week last year). Conversion rate = bookings ÷ users.</span></div>
 
-a.back{color:#fff;font-size:13px;text-decoration:none;opacity:.85}</style></head><body>
-<header><a class="back" href="index.html">← USA reports</a>
-<h1 style="margin-top:8px">USA Ads Report · Weekly</h1>
-<div class="sub">1–7 Jun 2026 · Aqua New York · Hutong New York · Hutong Miami · Meta + Google Ads · GA4 Bookings</div></header>
-<div class="controls">
-  <label>Compare to:</label>
-  <div class="toggle-group" id="compareToggle">
-    <button data-compare="wow" class="active">Prior week</button>
-    <button data-compare="yoy">YoY (2–8 Jun 2025)</button>
-  </div>
-  <label style="margin-left:24px">Property:</label>
-  <select id="propertyFilter"><option value="all">All 3 properties</option><option value="Aqua New York">Aqua New York</option><option value="Hutong New York">Hutong New York</option><option value="Hutong Miami">Hutong Miami</option></select>
-  <label style="margin-left:24px">Platform:</label>
-  <select id="platformFilter"><option value="all">Meta + Google</option><option value="meta">Meta only</option><option value="google">Google only</option></select>
+<div class="seclab">Website</div>
+<div class="kpis" id="kweb"></div>
+<div class="seclab">Advertising</div>
+<div class="kpis" id="kads"></div>
+<div class="ins" id="ins"></div>
+
+<div class="seclab">Traffic &amp; bookings by channel</div>
+<table id="chan"><thead><tr><th>Channel</th><th class="r2">Sessions</th><th class="r2">Bookings</th><th class="r2">Conv</th><th class="r2">WoW</th><th class="r2">YoY</th></tr></thead><tbody></tbody></table>
+
+<div class="cards2" style="margin-top:16px">
+  <div class="card"><div class="seclab" style="margin:0 0 8px">Devices</div><div class="bars" id="dev"></div></div>
+  <div class="card"><div class="seclab" style="margin:0 0 8px">Engagement</div><div class="g4" id="eng"></div></div>
 </div>
-<main>
-  
-  <div class="kpi-grid" id="kpiGrid"></div>
-  <div class="section-title">Bookings vs Weekly Target & Spend vs Budget</div>
-  <table class="detail" id="targetsTable" style="margin-bottom:16px"></table>
-  
-  <div class="section-title">Total Ad-Driven Covers (Google Ads)</div>
-  <p style="font-size:13px;color:#4B5563;margin:-4px 0 12px;line-height:1.5">Headline GA4 bookings count online Sevenrooms bookings only. Google's Store Visits and Local Actions are tracked as primary goals but excluded from the headline metric. The fuller picture below combines online Google-attributed bookings with estimated store visits.</p>
-  <table class="detail">
-    <thead><tr><th>Property</th><th>Online Bookings</th><th>Est. Store Visits</th><th>Total Ad-Driven Covers</th></tr></thead>
-    <tbody>
-      <tr><td>Aqua New York</td><td>41</td><td>123</td><td><strong>164</strong></td></tr>
-      <tr><td>Hutong New York</td><td>39</td><td>53</td><td><strong>92</strong></td></tr>
-      <tr><td>Hutong Miami</td><td>4</td><td>36</td><td><strong>40</strong></td></tr>
-      <tr style="background:#FEF3C7;font-weight:700"><td>TOTAL</td><td>84</td><td>212</td><td>296</td></tr>
-    </tbody>
-  </table>
-  <div class="section-title">Google Maps Intent Signals (walk-in indicators)</div>
-  <table class="detail">
-    <thead><tr><th>Action</th><th>Aqua NY</th><th>Hutong NY</th><th>Hutong Miami</th><th>Total</th></tr></thead>
-    <tbody>
-      <tr><td>Directions requests</td><td>129</td><td>196</td><td>29</td><td><strong>354</strong></td></tr>
-      <tr><td>Menu views</td><td>136</td><td>137</td><td>75</td><td><strong>348</strong></td></tr>
-      <tr><td>Clicks to Call</td><td>12</td><td>21</td><td>5</td><td><strong>38</strong></td></tr>
-      <tr><td>Click "Book Now"</td><td>—</td><td>170</td><td>47</td><td><strong>217</strong></td></tr>
-      <tr><td>Other engagements</td><td>1,066</td><td>1,846</td><td>661</td><td><strong>3,573</strong></td></tr>
-    </tbody>
-  </table>
-  <div class="section-title">Spend & Performance by Property</div>
-  <div class="charts-grid">
-    <div class="chart-card"><h3>Spend by Property</h3><div class="chart-wrap" id="spendChart"></div></div>
-    <div class="chart-card"><h3>Impressions by Property</h3><div class="chart-wrap" id="impChart"></div></div>
-    <div class="chart-card"><h3>GA4 Bookings by Property</h3><div class="chart-wrap" id="convChart"></div></div>
-    <div class="chart-card"><h3>CPM by Property</h3><div class="chart-wrap" id="cpmChart"></div></div>
-  </div>
-  <div class="section-title">Full Detail · Meta + Google + GA4</div>
-  <table class="detail" id="detailTable"></table>
-  <p class="footnote">GA4 bookings = sevenrooms_booking_complete. Meta schedules = offsite_conversion.fb_pixel_custom. Google booking conversions = the venue's sevenrooms booking action (+ its conversion value). Weekly target = month GA4 target prorated to 7 days; budget prorated likewise. Generated 8 June 2026.</p>
-</main>
+
+<div class="seclab">Top landing pages</div>
+<table id="land"><thead><tr><th>Landing page</th><th class="r2">Sessions</th><th class="r2">Bookings</th><th class="r2">Conv</th></tr></thead><tbody></tbody></table>
+
+<div class="seclab" style="border-top:1px solid #e2e8f0;padding-top:16px">Advertising detail</div>
+<div class="cards2" id="plat"></div>
+
+<div class="seclab">Ad spend vs ad-driven bookings — last 8 weeks</div>
+<div class="legend"><span><i style="background:#85B7EB"></i>Spend</span><span><i class="ln"></i>Bookings</span></div>
+<div id="trend"></div>
+
+<div class="seclab">Paid funnel — this week</div>
+<div class="fn" id="fn"></div>
+
+<div class="seclab">Top campaigns by bookings</div>
+<table id="camp"><thead><tr><th>Campaign</th><th>Plat.</th><th class="r2">Spend</th><th class="r2">Bk</th><th class="r2">CPA</th><th class="r2">WoW</th></tr></thead><tbody></tbody></table>
+
+<footer id="foot"></footer>
 <script>
-const META={"Aqua New York": {"cur": {"spend": 5075.54, "impressions": 283922, "reach": 154786, "clicks": 9728, "ctr": 3.426, "cpm": 17.877, "cpc": 0.5217, "frequency": 1.834, "link_clicks": 4815, "schedule_total": 159, "purchases": 158}, "yoy": {"spend": 927.71, "impressions": 199388, "reach": 166323, "clicks": 4007, "ctr": 2.01, "cpm": 4.653, "cpc": 0.2315, "frequency": 1.199, "link_clicks": 2950, "schedule_total": 44, "purchases": 48}, "wow": {"spend": 3977.79, "impressions": 242381, "reach": 140670, "clicks": 8170, "ctr": 3.371, "cpm": 16.411, "cpc": 0.4869, "frequency": 1.723, "link_clicks": 4120, "schedule_total": 110, "purchases": 113}}, "Hutong New York": {"cur": {"spend": 156.44, "impressions": 11561, "reach": 7156, "clicks": 167, "ctr": 1.445, "cpm": 13.532, "cpc": 0.9368, "frequency": 1.616, "link_clicks": 61, "schedule_total": 6, "purchases": 5}, "yoy": {"spend": 811.01, "impressions": 941342, "reach": 474807, "clicks": 14964, "ctr": 1.59, "cpm": 0.862, "cpc": 0.0542, "frequency": 1.983, "link_clicks": 5592, "schedule_total": 14, "purchases": 0}, "wow": {"spend": 372.9, "impressions": 37097, "reach": 25436, "clicks": 694, "ctr": 1.871, "cpm": 10.052, "cpc": 0.5373, "frequency": 1.458, "link_clicks": 273, "schedule_total": 8, "purchases": 8}}, "Hutong Miami": {"cur": {"spend": 1756.95, "impressions": 71621, "reach": 34283, "clicks": 2215, "ctr": 3.093, "cpm": 24.531, "cpc": 0.7932, "frequency": 2.089, "link_clicks": 1002, "schedule_total": 13, "purchases": 14}, "yoy": {"spend": 1063.26, "impressions": 384993, "reach": 320855, "clicks": 4831, "ctr": 1.255, "cpm": 2.762, "cpc": 0.2201, "frequency": 1.2, "link_clicks": 2609, "schedule_total": 34, "purchases": 32}, "wow": {"spend": 964.38, "impressions": 33338, "reach": 18749, "clicks": 1014, "ctr": 3.042, "cpm": 28.927, "cpc": 0.9511, "frequency": 1.778, "link_clicks": 487, "schedule_total": 1, "purchases": 1}}};
-const GOOGLE={"Aqua New York": {"cur": {"cost": 866.6, "impressions": 52757, "clicks": 1672, "cpc": 0.518, "ctr": 3.17, "conversions": 41.0, "conv_value": 6691}, "wow": {"cost": 478.75, "impressions": 46278, "clicks": 1406, "cpc": 0.34, "ctr": 3.04, "conversions": 33.96, "conv_value": 671.93}, "yoy": {"cost": 952.83, "impressions": 65892, "clicks": 1777, "cpc": 0.536, "ctr": 2.7, "conversions": 41.5, "conv_value": 44}}, "Hutong New York": {"cur": {"cost": 1393.78, "impressions": 157473, "clicks": 3086, "cpc": 0.452, "ctr": 1.96, "conversions": 39.49, "conv_value": 5331.24}, "wow": {"cost": 1317.41, "impressions": 117615, "clicks": 2944, "cpc": 0.447, "ctr": 2.5, "conversions": 66.77, "conv_value": 9013.72}, "yoy": {"cost": 711.88, "impressions": 43100, "clicks": 1144, "cpc": 0.622, "ctr": 2.65, "conversions": 49.0, "conv_value": 6615}}, "Hutong Miami": {"cur": {"cost": 589.58, "impressions": 24741, "clicks": 830, "cpc": 0.71, "ctr": 3.35, "conversions": 4.0, "conv_value": 508}, "wow": {"cost": 596.3, "impressions": 33044, "clicks": 1047, "cpc": 0.57, "ctr": 3.17, "conversions": 6.0, "conv_value": 762}, "yoy": {"cost": 730.46, "impressions": 31069, "clicks": 724, "cpc": 1.009, "ctr": 2.33, "conversions": 7.0, "conv_value": 889}}};
-const GA4={"Aqua New York": {"cur": 345, "wow": 296, "yoy": 230}, "Hutong New York": {"cur": 121, "wow": 124, "yoy": 379}, "Hutong Miami": {"cur": 34, "wow": 37, "yoy": 95}};
-const BUDGET={"Aqua New York": {"meta": 1663, "google": 554, "total": 2217, "booking_target": 408}, "Hutong New York": {"meta": 988, "google": 1482, "total": 2470, "booking_target": 449}, "Hutong Miami": {"meta": 1540, "google": 560, "total": 2100, "booking_target": 112}};
-
-const PERIODS = {cur:"1–7 Jun 2026", wow:"25–31 May 2026", yoy:"2–8 Jun 2025"};
-const SYM = "$";
-let compare = "wow";
-let propertyFilter = "all";
-let platformFilter = "all";
-const PROPS = Object.keys(GA4);
-
-const fmt = {
-  money: v => SYM + (v||0).toLocaleString(undefined,{maximumFractionDigits:0}),
-  money2: v => SYM + (v||0).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2}),
-  num: v => (v||0).toLocaleString(undefined,{maximumFractionDigits:0}),
-  pct: v => (v||0).toFixed(2)+"%",
-  delta: v => { if(v===null||isNaN(v)||!isFinite(v)) return "—"; const s=v>=0?"+":""; return s+(v*100).toFixed(1)+"%"; }
-};
-function agg(period, prop, plat){
-  let spend=0,imp=0,clicks=0,reach=0,conv=0,ga4=0,val=0;
-  const props = prop==="all"?PROPS:[prop];
-  for(const p of props){
-    if(plat==="all"||plat==="meta"){const m=META[p][period]; spend+=m.spend;imp+=m.impressions;clicks+=m.clicks;reach+=m.reach;conv+=m.schedule_total;}
-    if(plat==="all"||plat==="google"){const g=GOOGLE[p][period]; spend+=g.cost;imp+=g.impressions;clicks+=g.clicks;conv+=g.conversions;val+=g.conv_value;}
-    ga4+=GA4[p][period];
-  }
-  return {spend,imp,clicks,reach,conv,ga4,val, ctr:imp?clicks/imp*100:0, cpm:imp?spend/imp*1000:0, cpc:clicks?spend/clicks:0, cpb:ga4?spend/ga4:0};
+var PAY={"market":"USA","sym":"$","week":"W22 \u00b7 1\u20137 Jun 2026","fy":"FY26 week 22","venues":["All","Aqua New York","Hutong NYC","Hutong Miami"],"data":{"All":{"web":{"cur":{"users":13797,"sessions":16875,"bookings":506,"pps":2.36,"avgsec":121,"engrate":52.7,"newpct":87.4},"prior":{"users":12400,"sessions":14581,"bookings":457},"yoy":{"users":13947,"sessions":16900,"bookings":704}},"channels":[{"name":"Paid social","s":[6401,6401,6401],"b":[74,53,13]},{"name":"Organic search","s":[3474,3474,3474],"b":[157,146,123]},{"name":"Direct","s":[3002,3002,3002],"b":[111,107,188]},{"name":"Paid search","s":[1242,1242,1242],"b":[61,61,90]},{"name":"Other paid/unassigned","s":[1141,1141,1141],"b":[34,38,107]},{"name":"Organic social","s":[994,994,994],"b":[37,25,43]}],"devices":{"Mobile":85,"Desktop":15,"Tablet":0},"landing":[{"path":"/aqua-roma","s":7746,"b":114},{"path":"/","s":3881,"b":105},{"path":"/explore/aquanyc/reservations/create/search","s":528,"b":51},{"path":"/aqua-kyoto","s":526,"b":10},{"path":"/explore/aquanyc/reservations/manage","s":352,"b":25},{"path":"/menus","s":330,"b":5}],"ads":{"meta":{"cur":{"spend":6989.28,"bookings":178,"impr":367121,"clicks":12110},"prior":{"spend":5315.07,"bookings":119,"impr":312816,"clicks":9878},"yoy":{"spend":2801.98,"bookings":92,"impr":1525723,"clicks":23802}},"google":{"cur":{"spend":2849.98,"bookings":85,"impr":234968,"clicks":5588},"prior":{"spend":2392.45,"bookings":109,"impr":196937,"clicks":5397},"yoy":{"spend":2395.17,"bookings":97,"impr":140061,"clicks":3645}}},"trend":{"labels":["W15","W16","W17","W18","W19","W20","W21","W22"],"spend":[7526.62,7947.27,9279.91,7596.16,6787.79,4595.66,7707.52,9839.26],"bookings":[253,210,249,289,185,134,228,263]},"campaigns":[{"name":"Meta Campaign B (Aqua New York)","platform":"Meta","spend":3805.45,"bookings":116,"wow":"up"},{"name":"Meta Campaign A (Aqua New York)","platform":"Meta","spend":1270.3,"bookings":43,"wow":"up"},{"name":"PMax > Generic (Aqua New York)","platform":"Google","spend":436.51,"bookings":22,"wow":"up"},{"name":"Search > Brand (Hutong NYC)","platform":"Google","spend":369.08,"bookings":21,"wow":"down"},{"name":"Meta (all) (Hutong Miami)","platform":"Meta","spend":1757.09,"bookings":13,"wow":"up"},{"name":"Search > Brand (Aqua New York)","platform":"Google","spend":151.36,"bookings":12,"wow":"up"}],"funnel":{"impr":602089,"clicks":17698,"bookings":263,"landing":7643}},"Aqua New York":{"web":{"cur":{"users":10619,"sessions":12792,"bookings":348,"pps":2.38,"avgsec":109,"engrate":47.8,"newpct":89.2},"prior":{"users":9278,"sessions":10632,"bookings":296},"yoy":{"users":4675,"sessions":5869,"bookings":230}},"channels":[{"name":"Paid social","s":[6387,6387,6387],"b":[74,53,6]},{"name":"Organic search","s":[2271,2271,2271],"b":[120,108,36]},{"name":"Direct","s":[2009,2009,2009],"b":[73,73,75]},{"name":"Other paid/unassigned","s":[795,795,795],"b":[27,30,70]},{"name":"Paid search","s":[575,575,575],"b":[25,14,34]},{"name":"Organic social","s":[504,504,504],"b":[26,17,6]}],"devices":{"Mobile":89,"Desktop":11,"Tablet":0},"landing":[{"path":"/aqua-roma","s":7746,"b":114},{"path":"/","s":1406,"b":40},{"path":"/explore/aquanyc/reservations/create/search","s":528,"b":51},{"path":"/aqua-kyoto","s":526,"b":10},{"path":"/explore/aquanyc/reservations/manage","s":352,"b":25},{"path":"/menus/roma-a-la-carte","s":265,"b":4}],"ads":{"meta":{"cur":{"spend":5075.75,"bookings":159,"impr":283935,"clicks":9728},"prior":{"spend":3977.79,"bookings":110,"impr":242381,"clicks":8170},"yoy":{"spend":927.71,"bookings":44,"impr":199388,"clicks":4007}},"google":{"cur":{"spend":866.6,"bookings":41,"impr":52757,"clicks":1672},"prior":{"spend":478.75,"bookings":35,"impr":46278,"clicks":1406},"yoy":{"spend":952.83,"bookings":42,"impr":65892,"clicks":1777}}},"trend":{"labels":["W15","W16","W17","W18","W19","W20","W21","W22"],"spend":[3430.73,3898.39,3919.36,3776.33,3212.92,2224.77,4456.54,5942.35],"bookings":[121,95,129,172,81,81,145,200]},"campaigns":[{"name":"Meta Campaign B","platform":"Meta","spend":3805.45,"bookings":116,"wow":"up"},{"name":"Meta Campaign A","platform":"Meta","spend":1270.3,"bookings":43,"wow":"up"},{"name":"PMax > Generic","platform":"Google","spend":436.51,"bookings":22,"wow":"up"},{"name":"Search > Brand","platform":"Google","spend":151.36,"bookings":12,"wow":"up"},{"name":"Search > Italian Restaurant - Manhattan","platform":"Google","spend":193.03,"bookings":6,"wow":"up"}],"funnel":{"impr":336692,"clicks":11400,"bookings":200,"landing":6962}},"Hutong NYC":{"web":{"cur":{"users":1969,"sessions":2632,"bookings":124,"pps":2.11,"avgsec":171,"engrate":66.8,"newpct":79.4},"prior":{"users":2066,"sessions":2642,"bookings":124},"yoy":{"users":6580,"sessions":8058,"bookings":379}},"channels":[{"name":"Organic search","s":[789,789,789],"b":[29,26,67]},{"name":"Direct","s":[686,686,686],"b":[27,20,81]},{"name":"Paid search","s":[508,508,508],"b":[34,42,52]},{"name":"Referral & email","s":[315,315,315],"b":[28,24,137]},{"name":"Other paid/unassigned","s":[250,250,250],"b":[4,6,32]},{"name":"Organic social","s":[42,42,42],"b":[1,4,3]}],"devices":{"Mobile":64,"Desktop":35,"Tablet":1},"landing":[{"path":"/","s":1532,"b":49},{"path":"/menus","s":204,"b":5},{"path":"/explore/hutongnewyork/reservations/manage","s":138,"b":12},{"path":"/reservations/hutongnewyork","s":131,"b":24},{"path":"/reservations/hutongnewyork/website","s":70,"b":12},{"path":"/menus/dinner","s":63,"b":0}],"ads":{"meta":{"cur":{"spend":156.44,"bookings":6,"impr":11562,"clicks":167},"prior":{"spend":372.9,"bookings":8,"impr":37097,"clicks":694},"yoy":{"spend":811.01,"bookings":14,"impr":941342,"clicks":14964}},"google":{"cur":{"spend":1393.79,"bookings":39,"impr":157471,"clicks":3086},"prior":{"spend":1317.4,"bookings":67,"impr":117615,"clicks":2944},"yoy":{"spend":711.88,"bookings":49,"impr":43100,"clicks":1144}}},"trend":{"labels":["W15","W16","W17","W18","W19","W20","W21","W22"],"spend":[1988.48,1961.86,2900.18,2022.03,1643.32,1053.25,1690.3,1550.23],"bookings":[61,51,76,81,70,36,75,45]},"campaigns":[{"name":"Search > Brand","platform":"Google","spend":369.08,"bookings":21,"wow":"down"},{"name":"P. Max > Generic","platform":"Google","spend":479.65,"bookings":12,"wow":"up"},{"name":"Meta (all)","platform":"Meta","spend":156.44,"bookings":6,"wow":"down"},{"name":"Search >  Restaurant Type","platform":"Google","spend":295.56,"bookings":5,"wow":"down"},{"name":"Search > Manhattan","platform":"Google","spend":249.49,"bookings":1,"wow":"down"}],"funnel":{"impr":169033,"clicks":3253,"bookings":45,"landing":508}},"Hutong Miami":{"web":{"cur":{"users":1209,"sessions":1451,"bookings":34,"pps":2.59,"avgsec":140,"engrate":70.4,"newpct":86.2},"prior":{"users":1056,"sessions":1307,"bookings":37},"yoy":{"users":2692,"sessions":2973,"bookings":95}},"channels":[{"name":"Organic social","s":[448,448,448],"b":[10,4,34]},{"name":"Organic search","s":[414,414,414],"b":[8,12,20]},{"name":"Direct","s":[307,307,307],"b":[11,14,32]},{"name":"Paid search","s":[159,159,159],"b":[2,5,4]},{"name":"Other paid/unassigned","s":[96,96,96],"b":[3,2,5]},{"name":"Referral & email","s":[32,32,32],"b":[0,0,0]}],"devices":{"Mobile":85,"Desktop":14,"Tablet":1},"landing":[{"path":"/","s":943,"b":16},{"path":"/menus","s":126,"b":0},{"path":"/explore/hutongmiami/reservations/create/search","s":125,"b":13},{"path":"/menus/dinner","s":57,"b":0},{"path":"/explore/hutongmiami/reservations/manage","s":26,"b":2},{"path":"/menus/brunch","s":15,"b":0}],"ads":{"meta":{"cur":{"spend":1757.09,"bookings":13,"impr":71624,"clicks":2215},"prior":{"spend":964.38,"bookings":1,"impr":33338,"clicks":1014},"yoy":{"spend":1063.26,"bookings":34,"impr":384993,"clicks":4831}},"google":{"cur":{"spend":589.59,"bookings":5,"impr":24740,"clicks":830},"prior":{"spend":596.3,"bookings":7,"impr":33044,"clicks":1047},"yoy":{"spend":730.46,"bookings":6,"impr":31069,"clicks":724}}},"trend":{"labels":["W15","W16","W17","W18","W19","W20","W21","W22"],"spend":[2107.41,2087.02,2460.37,1797.8,1931.55,1317.64,1560.68,2346.68],"bookings":[71,64,44,36,34,17,8,18]},"campaigns":[{"name":"Meta (all)","platform":"Meta","spend":1757.09,"bookings":13,"wow":"up"},{"name":"P. Max > Generic","platform":"Google","spend":146.92,"bookings":2,"wow":"up"},{"name":"Search > Brand","platform":"Google","spend":95.75,"bookings":2,"wow":"down"},{"name":"Search > Chinese Cuisine","platform":"Google","spend":119.23,"bookings":1,"wow":"flat"},{"name":"Search > Special Events","platform":"Google","spend":116.34,"bookings":0,"wow":"flat"}],"funnel":{"impr":96364,"clicks":3045,"bookings":18,"landing":159}}}}, SYM=PAY.sym;
+function nf(n){return Math.round(n).toLocaleString();}
+function money(n){return SYM+Math.round(n).toLocaleString();}
+function pct(c,b){return b?(c-b)/b*100:0;}
+function dchip(c,b,inv){var p=pct(c,b);var cls=Math.abs(p)<1.5?'fl':((p>0)!=!!inv?'up':'dn');
+ var ar=Math.abs(p)<1.5?'▬':(p>0?'▲':'▼');return '<span class="'+cls+'">'+ar+Math.abs(p).toFixed(0)+'%</span>';}
+function wy(c,pr,yo,inv){return '<span class="d">WoW '+dchip(c,pr,inv)+' &nbsp; YoY '+dchip(c,yo,inv)+'</span>';}
+function kcard(l,v,c,pr,yo,inv){return '<div class="kpi"><div class="l">'+l+'</div><div class="v">'+v+'</div>'+wy(c,pr,yo,inv)+'</div>';}
+function cvr(d){return d.users? d.bookings/d.users*100:0;}
+function spark(spend,book){
+ var W=760,H=150,PL=4,PR=4,PT=10,PB=22,n=spend.length;
+ var smx=Math.max.apply(null,spend),bmx=Math.max.apply(null,book),bmn=Math.min.apply(null,book);
+ var bw=(W-PL-PR)/n*0.62;
+ var bars='',line='',dots='';
+ for(var i=0;i<n;i++){
+  var cx=PL+(i+0.5)/n*(W-PL-PR);
+  var bh=(H-PT-PB)*spend[i]/smx; var by=H-PB-bh;
+  bars+='<rect x="'+(cx-bw/2).toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+bh.toFixed(1)+'" fill="#85B7EB" rx="2"/>';
+  var ly=H-PB-(H-PT-PB)*(book[i]-bmn)/((bmx-bmn)||1)*0.92-4;
+  line+=cx.toFixed(1)+','+ly.toFixed(1)+' '; dots+='<circle cx="'+cx.toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="2.6" fill="#0F6E56"/>';
+ }
+ var labs='';for(var i=0;i<n;i++){var cx=PL+(i+0.5)/n*(W-PL-PR);labs+='<text x="'+cx.toFixed(1)+'" y="'+(H-7)+'" font-size="9" fill="#94a3b8" text-anchor="middle" font-family="JetBrains Mono,monospace">'+PAY.data[cur].trend.labels[i]+'</text>';}
+ return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:150px;display:block">'+bars+'<polyline fill="none" stroke="#0F6E56" stroke-width="2.2" points="'+line+'"/>'+dots+labs+'</svg>';
 }
-const dp=(a,b)=> b?(a-b)/b:null;
-function dcls(v,inv=false){ if(v===null||!isFinite(v))return"flat"; if(Math.abs(v)<0.005)return"flat"; return (inv?v<0:v>0)?"pos":"neg"; }
-const cmpKey=()=> compare==="wow"?"wow":"yoy";
-const cmpLbl=()=> compare==="wow"?"vs prior week":"vs "+PERIODS.yoy;
-
-function renderKPIs(){
-  const cur=agg("cur",propertyFilter,platformFilter), cmp=agg(cmpKey(),propertyFilter,platformFilter);
-  const k=[
-   {l:"Total Spend",v:fmt.money(cur.spend),d:dp(cur.spend,cmp.spend),i:true},
-   {l:"GA4 Bookings",v:fmt.num(cur.ga4),d:dp(cur.ga4,cmp.ga4),i:false},
-   {l:"Cost / Booking",v:fmt.money2(cur.cpb),d:dp(cur.cpb,cmp.cpb),i:true},
-   {l:"Impressions",v:fmt.num(cur.imp),d:dp(cur.imp,cmp.imp),i:false},
-   {l:"Clicks",v:fmt.num(cur.clicks),d:dp(cur.clicks,cmp.clicks),i:false},
-   {l:"CTR",v:fmt.pct(cur.ctr),d:dp(cur.ctr,cmp.ctr),i:false},
-   {l:"CPM",v:fmt.money2(cur.cpm),d:dp(cur.cpm,cmp.cpm),i:true},
-   {l:"CPC",v:fmt.money2(cur.cpc),d:dp(cur.cpc,cmp.cpc),i:true},
-   {l:"Meta Reach",v:fmt.num(cur.reach),d:dp(cur.reach,cmp.reach),i:false}
-  ];
-  document.getElementById("kpiGrid").innerHTML=k.map(x=>`<div class="kpi"><div class="label">${x.l}</div><div class="value">${x.v}</div><div class="delta ${dcls(x.d,x.i)}">${fmt.delta(x.d)} <span style="color:#9CA3AF;font-weight:500">${cmpLbl()}</span></div></div>`).join("");
+var cur='All';
+function render(v){
+ cur=v; var d=PAY.data[v];
+ document.getElementById('sub').innerHTML=PAY.week+' (Mon–Sun) · '+SYM+' · '+PAY.fy;
+ var w=d.web;
+ var cw=cvr(w.cur),pw=cvr(w.prior),yw=cvr(w.yoy);
+ document.getElementById('kweb').innerHTML=
+   kcard('GA4 bookings',nf(w.cur.bookings),w.cur.bookings,w.prior.bookings,w.yoy.bookings)+
+   kcard('Users',nf(w.cur.users),w.cur.users,w.prior.users,w.yoy.users)+
+   kcard('Sessions',nf(w.cur.sessions),w.cur.sessions,w.prior.sessions,w.yoy.sessions)+
+   kcard('Conversion rate',cw.toFixed(1)+'%',cw,pw,yw);
+ var m=d.ads.meta,g=d.ads.google;
+ var spend=m.cur.spend+g.cur.spend, spendP=m.prior.spend+g.prior.spend, spendY=m.yoy.spend+g.yoy.spend;
+ var abk=m.cur.bookings+g.cur.bookings, abkP=m.prior.bookings+g.prior.bookings, abkY=m.yoy.bookings+g.yoy.bookings;
+ var cpa=abk?spend/abk:0, cpaP=abkP?spendP/abkP:0, cpaY=abkY?spendY/abkY:0;
+ var share=w.cur.bookings?abk/w.cur.bookings*100:0, shareP=w.prior.bookings?abkP/w.prior.bookings*100:0, shareY=w.yoy.bookings?abkY/w.yoy.bookings*100:0;
+ document.getElementById('kads').innerHTML=
+   kcard('Ad spend',money(spend),spend,spendP,spendY)+
+   kcard('Ad-driven bookings',nf(abk),abk,abkP,abkY)+
+   kcard('Blended CPA',money(cpa),cpa,cpaP,cpaY,true)+
+   kcard('Paid share of bookings',share.toFixed(0)+'%',share,shareP,shareY);
+ // insights
+ var ins='';
+ var mcpa=m.cur.bookings?m.cur.spend/m.cur.bookings:0, gcpa=g.cur.bookings?g.cur.spend/g.cur.bookings:0;
+ var eff=gcpa&&mcpa?(gcpa<mcpa?'Google':'Meta'):'';
+ if(eff) ins+='<div class="g">Paid drives '+share.toFixed(0)+'% of bookings; '+eff+' is the more efficient platform ('+money(Math.min(gcpa,mcpa))+' CPA vs '+money(Math.max(gcpa,mcpa))+').</div>';
+ if(pct(cw,yw)<-3 && pct(w.cur.users,w.yoy.users)>3) ins+='<div class="a">Conversion rate is down '+Math.abs(pct(cw,yw)).toFixed(0)+'% YoY while users are up — traffic growing faster than bookings, worth a funnel / tracking check.</div>';
+ else if(pct(cw,yw)>3) ins+='<div class="g">Conversion rate is up '+pct(cw,yw).toFixed(0)+'% YoY at '+cw.toFixed(1)+'%.</div>';
+ if(pct(cpa,cpaP)<-3) ins+='<div class="b">Blended CPA improved '+Math.abs(pct(cpa,cpaP)).toFixed(0)+'% week on week to '+money(cpa)+'.</div>';
+ else if(pct(cpa,cpaP)>5) ins+='<div class="a">Blended CPA rose '+pct(cpa,cpaP).toFixed(0)+'% week on week to '+money(cpa)+'.</div>';
+ document.getElementById('ins').innerHTML=ins;
+ // channels
+ var cb='';d.channels.forEach(function(c){var cv=c.s[0]?c.b[0]/c.s[0]*100:0;
+   cb+='<tr><td>'+c.name+'</td><td class="r2 mono">'+nf(c.s[0])+'</td><td class="r2 mono">'+nf(c.b[0])+'</td><td class="r2 mono">'+cv.toFixed(1)+'%</td><td class="r2">'+dchip(c.b[0],c.b[1])+'</td><td class="r2">'+dchip(c.b[0],c.b[2])+'</td></tr>';});
+ document.querySelector('#chan tbody').innerHTML=cb;
+ // devices
+ var cols={Mobile:'#378ADD',Desktop:'#85B7EB',Tablet:'#B5D4F4'};var db='';
+ Object.keys(d.devices).forEach(function(k){var p=d.devices[k];
+   db+='<div><div style="display:flex;justify-content:space-between"><span>'+k+'</span><span style="font-weight:600">'+p+'%</span></div><div class="track"><div class="fillb" style="width:'+p+'%;background:'+(cols[k]||'#85B7EB')+'"></div></div></div>';});
+ document.getElementById('dev').innerHTML=db;
+ // engagement
+ var e=w.cur;var mm=Math.floor(e.avgsec/60),ss=Math.round(e.avgsec%60);
+ document.getElementById('eng').innerHTML=
+   '<div><div class="s">Avg session</div><div style="font-weight:600">'+mm+'m '+ss+'s</div></div>'+
+   '<div><div class="s">Engagement rate</div><div style="font-weight:600">'+e.engrate.toFixed(0)+'%</div></div>'+
+   '<div><div class="s">Pages / session</div><div style="font-weight:600">'+e.pps.toFixed(1)+'</div></div>'+
+   '<div><div class="s">New / returning</div><div style="font-weight:600">'+e.newpct.toFixed(0)+'% / '+(100-e.newpct).toFixed(0)+'%</div></div>';
+ // landing
+ var lb='';d.landing.forEach(function(p){var cv=p.s?p.b/p.s*100:0;
+   lb+='<tr><td style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+p.path+'</td><td class="r2 mono">'+nf(p.s)+'</td><td class="r2 mono">'+nf(p.b)+'</td><td class="r2 mono">'+cv.toFixed(1)+'%</td></tr>';});
+ document.querySelector('#land tbody').innerHTML=lb;
+ // platform cards
+ function pcard(name,col,x,tot){var c=x.cur;var cp=c.bookings?c.spend/c.bookings:0;var ct=c.impr?c.clicks/c.impr*100:0;var sh=tot?c.spend/tot*100:0;var cpp=x.prior.bookings?x.prior.spend/x.prior.bookings:0;
+   return '<div class="card"><div class="pf"><span class="dot" style="background:'+col+'"></span>'+name+'<span style="margin-left:auto;font-size:12px;color:#64748b;font-weight:400">'+sh.toFixed(0)+'% of spend</span></div><div class="g4">'+
+   '<div><div class="s">Spend</div><div style="font-weight:600">'+money(c.spend)+'</div></div>'+
+   '<div><div class="s">Bookings</div><div style="font-weight:600">'+nf(c.bookings)+'</div></div>'+
+   '<div><div class="s">CPA</div><div style="font-weight:600">'+money(cp)+' '+dchip(cp,cpp,true)+'</div></div>'+
+   '<div><div class="s">CTR</div><div style="font-weight:600">'+ct.toFixed(1)+'%</div></div></div></div>';}
+ document.getElementById('plat').innerHTML=pcard('Meta','#378ADD',m,spend)+pcard('Google','#1D9E75',g,spend);
+ // trend
+ document.getElementById('trend').innerHTML=spark(d.trend.spend,d.trend.bookings);
+ // funnel
+ var f=d.funnel;
+ document.getElementById('fn').innerHTML=
+   '<div class="b"><div class="v">'+(f.impr>=1e6?(f.impr/1e6).toFixed(2)+'M':nf(f.impr))+'</div><div class="l">Impressions</div></div>'+
+   '<div class="b"><div class="v">'+nf(f.clicks)+'</div><div class="l">Clicks · '+(f.impr?(f.clicks/f.impr*100).toFixed(1):0)+'%</div></div>'+
+   '<div class="b"><div class="v">'+nf(f.landing)+'</div><div class="l">Landing · '+(f.clicks?(f.landing/f.clicks*100).toFixed(0):0)+'%</div></div>'+
+   '<div class="b"><div class="v">'+nf(f.bookings)+'</div><div class="l">Bookings · '+(f.landing?(f.bookings/f.landing*100).toFixed(1):0)+'%</div></div>';
+ // campaigns
+ var cmb='';d.campaigns.forEach(function(c){var cp=c.bookings?c.spend/c.bookings:0;var ar=c.wow=='up'?'<span class="up">▲</span>':(c.wow=='down'?'<span class="dn">▼</span>':'<span class="fl">▬</span>');
+   cmb+='<tr><td style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+c.name+'</td><td>'+c.platform+'</td><td class="r2 mono">'+money(c.spend)+'</td><td class="r2 mono">'+nf(c.bookings)+'</td><td class="r2 mono">'+money(cp)+'</td><td class="r2">'+ar+'</td></tr>';});
+ document.querySelector('#camp tbody').innerHTML=cmb;
+ document.getElementById('foot').innerHTML='GA4 bookings = sevenrooms_booking_complete · conversion rate = bookings ÷ users · ad-driven bookings = Meta schedules + Google booking conversions · CPA = spend ÷ platform bookings · WoW vs prior week, YoY vs same week last year (364-day offset).';
 }
-function renderTargets(){
-  const props=propertyFilter==="all"?PROPS:[propertyFilter];
-  let rows=`<thead><tr><th>Property</th><th>GA4 Bookings</th><th>Weekly Target</th><th>vs Target</th><th>Spend</th><th>Weekly Budget</th><th>Cost/Book</th></tr></thead><tbody>`;
-  let tb=0,tt=0,ts=0,tbud=0;
-  for(const p of props){
-    const g=agg("cur",p,platformFilter); const B=BUDGET[p];
-    const budget = platformFilter==="meta"?B.meta:platformFilter==="google"?B.google:B.total;
-    const vt=B.booking_target?(g.ga4-B.booking_target)/B.booking_target:null;
-    tb+=g.ga4; tt+=B.booking_target; ts+=g.spend; tbud+=budget;
-    rows+=`<tr><td>${p}</td><td>${fmt.num(g.ga4)}</td><td>${fmt.num(B.booking_target)}</td><td class="delta ${dcls(vt)}">${fmt.delta(vt)}</td><td>${fmt.money(g.spend)}</td><td>${fmt.money(budget)}</td><td>${fmt.money2(g.cpb)}</td></tr>`;
-  }
-  const vt=tt?(tb-tt)/tt:null;
-  rows+=`<tr style="background:#FEF3C7;font-weight:700"><td>TOTAL</td><td>${fmt.num(tb)}</td><td>${fmt.num(tt)}</td><td class="delta ${dcls(vt)}">${fmt.delta(vt)}</td><td>${fmt.money(ts)}</td><td>${fmt.money(tbud)}</td><td>${fmt.money2(tb?ts/tb:0)}</td></tr></tbody>`;
-  document.getElementById("targetsTable").innerHTML=rows;
-}
-function chart(id,metric,fmtFn){
-  const labels=propertyFilter==="all"?PROPS:[propertyFilter];
-  const cur=labels.map(p=>agg("cur",p,platformFilter)[metric]);
-  const prev=labels.map(p=>agg(cmpKey(),p,platformFilter)[metric]);
-  const max=Math.max(...cur,...prev,1);
-  const W=480,H=280,padL=56,padR=12,padT=18,padB=56,innerW=W-padL-padR,innerH=H-padT-padB,groupW=innerW/labels.length,barW=Math.min(28,groupW*0.32),gap=4;
-  let grid="";
-  for(let i=0;i<=4;i++){const y=padT+innerH*(1-i/4);grid+=`<line x1="${padL}" y1="${y}" x2="${W-padR}" y2="${y}" stroke="#F3F4F6"/><text x="${padL-6}" y="${y+3}" text-anchor="end" class="bar-label">${fmtFn(max*i/4)}</text>`;}
-  let bars="";
-  labels.forEach((lbl,i)=>{const gx=padL+groupW*i+groupW/2;const h1=cur[i]/max*innerH,h2=prev[i]/max*innerH;const x1=gx-barW-gap/2,x2=gx+gap/2;const y1=padT+innerH-h1,y2=padT+innerH-h2;
-    bars+=`<rect x="${x1}" y="${y1}" width="${barW}" height="${h1}" fill="#111827" rx="3"/><rect x="${x2}" y="${y2}" width="${barW}" height="${h2}" fill="#9CA3AF" rx="3"/>`;
-    bars+=`<text x="${x1+barW/2}" y="${y1-4}" text-anchor="middle" class="bar-value">${fmtFn(cur[i])}</text><text x="${x2+barW/2}" y="${y2-4}" text-anchor="middle" class="bar-value">${fmtFn(prev[i])}</text>`;
-    const parts=lbl.split(" ");
-    if(parts.length>1&&lbl.length>10){bars+=`<text x="${gx}" y="${padT+innerH+18}" text-anchor="middle" class="bar-label">${parts[0]}</text><text x="${gx}" y="${padT+innerH+32}" text-anchor="middle" class="bar-label">${parts.slice(1).join(" ")}</text>`;}
-    else bars+=`<text x="${gx}" y="${padT+innerH+18}" text-anchor="middle" class="bar-label">${lbl}</text>`;});
-  document.getElementById(id).innerHTML=`<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">${grid}<line x1="${padL}" y1="${padT+innerH}" x2="${W-padR}" y2="${padT+innerH}" stroke="#D1D5DB"/>${bars}</svg><div class="bar-legend"><span><span class="swatch" style="background:#111827"></span>${PERIODS.cur}</span><span><span class="swatch" style="background:#9CA3AF"></span>${compare==="wow"?PERIODS.wow:PERIODS.yoy}</span></div>`;
-}
-function renderTable(){
-  const props=propertyFilter==="all"?PROPS:[propertyFilter];
-  const ck=cmpKey(), cl=compare==="wow"?"Prior wk":PERIODS.yoy;
-  let r=`<thead><tr><th>Property / Metric</th><th>${PERIODS.cur}</th><th>${cl}</th><th>Δ</th></tr></thead><tbody>`;
-  for(const p of props){
-    r+=`<tr class="group-head"><td colspan="4">${p}</td></tr>`;
-    if(platformFilter!=="google"){
-      r+=`<tr class="platform-row"><td colspan="4">Meta</td></tr>`;
-      const m=per=>META[p][per];
-      const ml=[["Spend","spend",fmt.money],["Impressions","impressions",fmt.num],["Reach","reach",fmt.num],["Clicks","clicks",fmt.num],["CTR","ctr",v=>v.toFixed(2)+"%"],["CPM","cpm",fmt.money2],["CPC","cpc",fmt.money2],["Schedules","schedule_total",fmt.num]];
-      for(const [lb,k,f] of ml){const cur=m("cur")[k],cmp=m(ck)[k];const d=dp(cur,cmp);r+=`<tr><td>${lb}</td><td>${f(cur)}</td><td>${f(cmp)}</td><td class="delta ${dcls(d,["spend","cpm","cpc"].includes(k))}">${fmt.delta(d)}</td></tr>`;}
-    }
-    if(platformFilter!=="meta"){
-      r+=`<tr class="platform-row"><td colspan="4">Google</td></tr>`;
-      const g=per=>GOOGLE[p][per];
-      const gl=[["Cost","cost",fmt.money],["Impressions","impressions",fmt.num],["Clicks","clicks",fmt.num],["CTR","ctr",v=>v.toFixed(2)+"%"],["CPC","cpc",fmt.money2],["Booking Conv.","conversions",v=>v.toFixed(1)],["Conv. Value","conv_value",fmt.money]];
-      for(const [lb,k,f] of gl){const cur=g("cur")[k],cmp=g(ck)[k];const d=dp(cur,cmp);r+=`<tr><td>${lb}</td><td>${f(cur)}</td><td>${f(cmp)}</td><td class="delta ${dcls(d,["cost","cpc"].includes(k))}">${fmt.delta(d)}</td></tr>`;}
-    }
-    r+=`<tr class="platform-row"><td colspan="4">GA4</td></tr><tr><td>Bookings</td><td>${fmt.num(GA4[p].cur)}</td><td>${fmt.num(GA4[p][ck])}</td><td class="delta ${dcls(dp(GA4[p].cur,GA4[p][ck]))}">${fmt.delta(dp(GA4[p].cur,GA4[p][ck]))}</td></tr>`;
-  }
-  r+="</tbody>";
-  document.getElementById("detailTable").innerHTML=r;
-}
-function renderAll(){renderKPIs();renderTargets();chart("spendChart","spend",v=>SYM+(v>=1000?(v/1000).toFixed(1)+"k":v.toFixed(0)));chart("impChart","imp",v=>v>=1000?(v/1000).toFixed(0)+"k":v.toFixed(0));chart("convChart","ga4",v=>v.toFixed(0));chart("cpmChart","cpm",v=>SYM+v.toFixed(1));renderTable();}
-document.getElementById("compareToggle").addEventListener("click",e=>{if(e.target.dataset.compare){compare=e.target.dataset.compare;document.querySelectorAll("#compareToggle button").forEach(b=>b.classList.toggle("active",b.dataset.compare===compare));renderAll();}});
-document.getElementById("propertyFilter").addEventListener("change",e=>{propertyFilter=e.target.value;renderAll();});
-document.getElementById("platformFilter").addEventListener("change",e=>{platformFilter=e.target.value;renderAll();});
-renderAll();
-
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
 </script></body></html>
