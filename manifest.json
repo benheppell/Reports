@@ -1,481 +1,491 @@
 {
- "generated": "9 June 2026",
- "markets": [
-  {
-   "name": "Hong Kong",
-   "slug": "hk",
-   "ccy": "HKD",
-   "weekly": [
+  "generated": "9 June 2026",
+  "markets": [
     {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "deepdive": true,
-     "ads": true
+      "name": "Hong Kong",
+      "slug": "hk",
+      "ccy": "HKD",
+      "weekly": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "25–31 May 2026",
+          "folder": "w2026-05-25",
+          "deepdive": false
+        },
+        {
+          "dates": "18–24 May 2026",
+          "folder": "w2026-05-18",
+          "deepdive": false
+        },
+        {
+          "dates": "11–17 May 2026",
+          "folder": "w2026-05-11",
+          "deepdive": false
+        },
+        {
+          "dates": "4–10 May 2026",
+          "folder": "w2026-05-04",
+          "deepdive": false
+        },
+        {
+          "dates": "27 Apr–3 May 2026",
+          "folder": "w2026-04-27",
+          "deepdive": false
+        },
+        {
+          "dates": "20–26 Apr 2026",
+          "folder": "w2026-04-20",
+          "deepdive": false
+        },
+        {
+          "dates": "13–19 Apr 2026",
+          "folder": "w2026-04-13",
+          "deepdive": false
+        },
+        {
+          "dates": "6–12 Apr 2026",
+          "folder": "w2026-04-06",
+          "deepdive": false
+        },
+        {
+          "dates": "30 Mar–5 Apr 2026",
+          "folder": "w2026-03-30",
+          "deepdive": false
+        },
+        {
+          "dates": "23–29 Mar 2026",
+          "folder": "w2026-03-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Mar 2026",
+          "folder": "w2026-03-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Mar 2026",
+          "folder": "w2026-03-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02",
+          "deepdive": false
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "deepdive": false
+        }
+      ],
+      "monthly": [
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "Apr 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "Mar 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "Feb 2026",
+          "folder": "m2026-02"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        }
+      ]
     },
     {
-     "dates": "25–31 May 2026",
-     "folder": "w2026-05-25",
-     "deepdive": false
+      "name": "London",
+      "slug": "london",
+      "ccy": "GBP",
+      "weekly": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "25–31 May 2026",
+          "folder": "w2026-05-25",
+          "deepdive": false
+        },
+        {
+          "dates": "18–24 May 2026",
+          "folder": "w2026-05-18",
+          "deepdive": false
+        },
+        {
+          "dates": "11–17 May 2026",
+          "folder": "w2026-05-11",
+          "deepdive": false
+        },
+        {
+          "dates": "4–10 May 2026",
+          "folder": "w2026-05-04",
+          "deepdive": false
+        },
+        {
+          "dates": "27 Apr–3 May 2026",
+          "folder": "w2026-04-27",
+          "deepdive": false
+        },
+        {
+          "dates": "20–26 Apr 2026",
+          "folder": "w2026-04-20",
+          "deepdive": false
+        },
+        {
+          "dates": "13–19 Apr 2026",
+          "folder": "w2026-04-13",
+          "deepdive": false
+        },
+        {
+          "dates": "6–12 Apr 2026",
+          "folder": "w2026-04-06",
+          "deepdive": false
+        },
+        {
+          "dates": "30 Mar–5 Apr 2026",
+          "folder": "w2026-03-30",
+          "deepdive": false
+        },
+        {
+          "dates": "23–29 Mar 2026",
+          "folder": "w2026-03-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Mar 2026",
+          "folder": "w2026-03-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Mar 2026",
+          "folder": "w2026-03-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02",
+          "deepdive": false
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "deepdive": false
+        }
+      ],
+      "monthly": [
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "Apr 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "Mar 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "Feb 2026",
+          "folder": "m2026-02"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        }
+      ]
     },
     {
-     "dates": "18–24 May 2026",
-     "folder": "w2026-05-18",
-     "deepdive": false
+      "name": "USA",
+      "slug": "usa",
+      "ccy": "USD",
+      "weekly": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "25–31 May 2026",
+          "folder": "w2026-05-25",
+          "deepdive": false
+        },
+        {
+          "dates": "18–24 May 2026",
+          "folder": "w2026-05-18",
+          "deepdive": false
+        },
+        {
+          "dates": "11–17 May 2026",
+          "folder": "w2026-05-11",
+          "deepdive": false
+        },
+        {
+          "dates": "4–10 May 2026",
+          "folder": "w2026-05-04",
+          "deepdive": false
+        },
+        {
+          "dates": "27 Apr–3 May 2026",
+          "folder": "w2026-04-27",
+          "deepdive": false
+        },
+        {
+          "dates": "20–26 Apr 2026",
+          "folder": "w2026-04-20",
+          "deepdive": false
+        },
+        {
+          "dates": "13–19 Apr 2026",
+          "folder": "w2026-04-13",
+          "deepdive": false
+        },
+        {
+          "dates": "6–12 Apr 2026",
+          "folder": "w2026-04-06",
+          "deepdive": false
+        },
+        {
+          "dates": "30 Mar–5 Apr 2026",
+          "folder": "w2026-03-30",
+          "deepdive": false
+        },
+        {
+          "dates": "23–29 Mar 2026",
+          "folder": "w2026-03-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Mar 2026",
+          "folder": "w2026-03-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Mar 2026",
+          "folder": "w2026-03-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02",
+          "deepdive": false
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "deepdive": false
+        },
+        {
+          "dates": "26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26",
+          "deepdive": false
+        },
+        {
+          "dates": "19–25 Jan 2026",
+          "folder": "w2026-01-19",
+          "deepdive": false
+        },
+        {
+          "dates": "12–18 Jan 2026",
+          "folder": "w2026-01-12",
+          "deepdive": false,
+          "ads": true
+        },
+        {
+          "dates": "5–11 Jan 2026",
+          "folder": "w2026-01-05",
+          "deepdive": true,
+          "ads": true
+        }
+      ],
+      "monthly": [
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "Apr 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "Mar 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "Feb 2026",
+          "folder": "m2026-02"
+        },
+        {
+          "label": "Jan 2026",
+          "folder": "m2026-01"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "5–11 Jan 2026",
+          "folder": "w2026-01-05"
+        }
+      ]
     },
     {
-     "dates": "11–17 May 2026",
-     "folder": "w2026-05-11",
-     "deepdive": false
+      "name": "Dubai",
+      "slug": "dubai",
+      "ccy": "AED",
+      "weekly": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "ads": true,
+          "dash": false
+        }
+      ],
+      "monthly": [],
+      "trends": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        }
+      ]
     },
     {
-     "dates": "4–10 May 2026",
-     "folder": "w2026-05-04",
-     "deepdive": false
-    },
-    {
-     "dates": "27 Apr–3 May 2026",
-     "folder": "w2026-04-27",
-     "deepdive": false
-    },
-    {
-     "dates": "20–26 Apr 2026",
-     "folder": "w2026-04-20",
-     "deepdive": false
-    },
-    {
-     "dates": "13–19 Apr 2026",
-     "folder": "w2026-04-13",
-     "deepdive": false
-    },
-    {
-     "dates": "6–12 Apr 2026",
-     "folder": "w2026-04-06",
-     "deepdive": false
-    },
-    {
-     "dates": "30 Mar–5 Apr 2026",
-     "folder": "w2026-03-30",
-     "deepdive": false
-    },
-    {
-     "dates": "23–29 Mar 2026",
-     "folder": "w2026-03-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Mar 2026",
-     "folder": "w2026-03-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Mar 2026",
-     "folder": "w2026-03-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02",
-     "deepdive": false
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "deepdive": false
+      "name": "Paris",
+      "slug": "paris",
+      "ccy": "EUR",
+      "weekly": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W35 · 29 Sep–5 Oct 2025",
+          "folder": "w2025-09-29",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W34 · 22–28 Sep 2025",
+          "folder": "w2025-09-22",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W33 · 15–21 Sep 2025",
+          "folder": "w2025-09-15",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W32 · 8–14 Sep 2025",
+          "folder": "w2025-09-08",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W31 · 1–7 Sep 2025",
+          "folder": "w2025-09-01",
+          "ads": true,
+          "dash": false
+        }
+      ],
+      "monthly": [],
+      "trends": [
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "W35 · 29 Sep–5 Oct 2025",
+          "folder": "w2025-09-29"
+        },
+        {
+          "dates": "W34 · 22–28 Sep 2025",
+          "folder": "w2025-09-22"
+        },
+        {
+          "dates": "W33 · 15–21 Sep 2025",
+          "folder": "w2025-09-15"
+        },
+        {
+          "dates": "W32 · 8–14 Sep 2025",
+          "folder": "w2025-09-08"
+        },
+        {
+          "dates": "W31 · 1–7 Sep 2025",
+          "folder": "w2025-09-01"
+        }
+      ]
     }
-   ],
-   "monthly": [
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "Apr 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "Mar 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "Feb 2026",
-     "folder": "m2026-02"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    }
-   ]
-  },
-  {
-   "name": "London",
-   "slug": "london",
-   "ccy": "GBP",
-   "weekly": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "25–31 May 2026",
-     "folder": "w2026-05-25",
-     "deepdive": false
-    },
-    {
-     "dates": "18–24 May 2026",
-     "folder": "w2026-05-18",
-     "deepdive": false
-    },
-    {
-     "dates": "11–17 May 2026",
-     "folder": "w2026-05-11",
-     "deepdive": false
-    },
-    {
-     "dates": "4–10 May 2026",
-     "folder": "w2026-05-04",
-     "deepdive": false
-    },
-    {
-     "dates": "27 Apr–3 May 2026",
-     "folder": "w2026-04-27",
-     "deepdive": false
-    },
-    {
-     "dates": "20–26 Apr 2026",
-     "folder": "w2026-04-20",
-     "deepdive": false
-    },
-    {
-     "dates": "13–19 Apr 2026",
-     "folder": "w2026-04-13",
-     "deepdive": false
-    },
-    {
-     "dates": "6–12 Apr 2026",
-     "folder": "w2026-04-06",
-     "deepdive": false
-    },
-    {
-     "dates": "30 Mar–5 Apr 2026",
-     "folder": "w2026-03-30",
-     "deepdive": false
-    },
-    {
-     "dates": "23–29 Mar 2026",
-     "folder": "w2026-03-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Mar 2026",
-     "folder": "w2026-03-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Mar 2026",
-     "folder": "w2026-03-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02",
-     "deepdive": false
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "deepdive": false
-    }
-   ],
-   "monthly": [
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "Apr 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "Mar 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "Feb 2026",
-     "folder": "m2026-02"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    }
-   ]
-  },
-  {
-   "name": "USA",
-   "slug": "usa",
-   "ccy": "USD",
-   "weekly": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "25–31 May 2026",
-     "folder": "w2026-05-25",
-     "deepdive": false
-    },
-    {
-     "dates": "18–24 May 2026",
-     "folder": "w2026-05-18",
-     "deepdive": false
-    },
-    {
-     "dates": "11–17 May 2026",
-     "folder": "w2026-05-11",
-     "deepdive": false
-    },
-    {
-     "dates": "4–10 May 2026",
-     "folder": "w2026-05-04",
-     "deepdive": false
-    },
-    {
-     "dates": "27 Apr–3 May 2026",
-     "folder": "w2026-04-27",
-     "deepdive": false
-    },
-    {
-     "dates": "20–26 Apr 2026",
-     "folder": "w2026-04-20",
-     "deepdive": false
-    },
-    {
-     "dates": "13–19 Apr 2026",
-     "folder": "w2026-04-13",
-     "deepdive": false
-    },
-    {
-     "dates": "6–12 Apr 2026",
-     "folder": "w2026-04-06",
-     "deepdive": false
-    },
-    {
-     "dates": "30 Mar–5 Apr 2026",
-     "folder": "w2026-03-30",
-     "deepdive": false
-    },
-    {
-     "dates": "23–29 Mar 2026",
-     "folder": "w2026-03-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Mar 2026",
-     "folder": "w2026-03-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Mar 2026",
-     "folder": "w2026-03-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02",
-     "deepdive": false
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "deepdive": false
-    },
-    {
-     "dates": "26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26",
-     "deepdive": false
-    },
-    {
-     "dates": "19–25 Jan 2026",
-     "folder": "w2026-01-19",
-     "deepdive": false
-    },
-    {
-     "dates": "12–18 Jan 2026",
-     "folder": "w2026-01-12",
-     "deepdive": false,
-     "ads": true
-    },
-    {
-     "dates": "5–11 Jan 2026",
-     "folder": "w2026-01-05",
-     "deepdive": true,
-     "ads": true
-    }
-   ],
-   "monthly": [
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "Apr 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "Mar 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "Feb 2026",
-     "folder": "m2026-02"
-    },
-    {
-     "label": "Jan 2026",
-     "folder": "m2026-01"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "5–11 Jan 2026",
-     "folder": "w2026-01-05"
-    }
-   ]
-  },
-  {
-   "name": "Dubai",
-   "slug": "dubai",
-   "ccy": "AED",
-   "weekly": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "ads": true,
-     "dash": false
-    }
-   ],
-   "monthly": [],
-   "trends": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    }
-   ]
-  },
-  {
-   "name": "Paris",
-   "slug": "paris",
-   "ccy": "EUR",
-   "weekly": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W34 · 22–28 Sep 2025",
-     "folder": "w2025-09-22",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W33 · 15–21 Sep 2025",
-     "folder": "w2025-09-15",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W32 · 8–14 Sep 2025",
-     "folder": "w2025-09-08",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W31 · 1–7 Sep 2025",
-     "folder": "w2025-09-01",
-     "ads": true,
-     "dash": false
-    }
-   ],
-   "monthly": [],
-   "trends": [
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "W34 · 22–28 Sep 2025",
-     "folder": "w2025-09-22"
-    },
-    {
-     "dates": "W33 · 15–21 Sep 2025",
-     "folder": "w2025-09-15"
-    },
-    {
-     "dates": "W32 · 8–14 Sep 2025",
-     "folder": "w2025-09-08"
-    },
-    {
-     "dates": "W31 · 1–7 Sep 2025",
-     "folder": "w2025-09-01"
-    }
-   ]
-  }
- ]
+  ]
 }
