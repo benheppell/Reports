@@ -25,17 +25,28 @@ footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 def selects(mk, prefix):
     wopts='<option value="" selected disabled>Select a week…</option>'
     aopts='<option value="" selected disabled>Select a week…</option>'
-    has_ads=False
+    has_ads=False; has_dash=False
     for w in mk['weekly']:
-        wopts+=f'<option value="{prefix}{w["folder"]}/dashboard.html">{w["dates"]} — Dashboard</option>'
+        if w.get("dash",True):
+            has_dash=True
+            wopts+=f'<option value="{prefix}{w["folder"]}/dashboard.html">{w["dates"]} — Dashboard</option>'
         if w.get("deepdive"):
             wopts+=f'<option value="{prefix}{w["folder"]}/deep-dive.html">{w["dates"]} — Deep dive</option>'
         if w.get("ads"):
             has_ads=True
             aopts+=f'<option value="{prefix}{w["folder"]}/ads.html">{w["dates"]}</option>'
+    wdis=''
+    if not has_dash:
+        wopts='<option value="" selected disabled>None yet</option>'
+        wdis=' disabled style="opacity:.5"'
     mopts='<option value="" selected disabled>Select a month…</option>'
-    for m in mk.get('monthly',[]):
-        mopts+=f'<option value="{prefix}{m["folder"]}/dashboard.html">{m["label"]} — Dashboard</option>'
+    mdis=''
+    if mk.get('monthly',[]):
+        for m in mk['monthly']:
+            mopts+=f'<option value="{prefix}{m["folder"]}/dashboard.html">{m["label"]} — Dashboard</option>'
+    else:
+        mopts='<option value="" selected disabled>None yet</option>'
+        mdis=' disabled style="opacity:.5"'
     adis=''
     if not has_ads:
         aopts='<option value="" selected disabled>None yet</option>'
@@ -50,8 +61,8 @@ def selects(mk, prefix):
         topts='<option value="" selected disabled>None yet</option>'
         tdis=' disabled style="opacity:.5"'
     return f'''<div class="pick">
-<div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value">{wopts}</select></div>
-<div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value">{mopts}</select></div>
+<div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value"{wdis}>{wopts}</select></div>
+<div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value"{mdis}>{mopts}</select></div>
 <div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"{adis}>{aopts}</select></div>
 <div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"{tdis}>{topts}</select></div>
 </div>'''
