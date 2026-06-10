@@ -344,7 +344,8 @@
     {
      "dates": "26 Jan–1 Feb 2026",
      "folder": "w2026-01-26",
-     "deepdive": false
+     "deepdive": true,
+     "ads": true
     },
     {
      "dates": "19–25 Jan 2026",
@@ -391,6 +392,10 @@
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
+    },
+    {
+     "dates": "26 Jan–1 Feb 2026",
+     "folder": "w2026-01-26"
     },
     {
      "dates": "19–25 Jan 2026",
