@@ -222,7 +222,8 @@
     {
      "dates": "2–8 Feb 2026",
      "folder": "w2026-02-02",
-     "deepdive": false
+     "deepdive": true,
+     "ads": true
     }
    ],
    "monthly": [
@@ -247,6 +248,10 @@
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
+    },
+    {
+     "dates": "2–8 Feb 2026",
+     "folder": "w2026-02-02"
     }
    ]
   },
