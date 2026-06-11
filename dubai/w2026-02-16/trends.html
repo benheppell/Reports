@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua Dubai — Venue Trends</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:32px;max-width:1120px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:24px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 18px;font-size:13.5px;line-height:1.5}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:15px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.fy{font-size:12px;font-weight:700;color:#475569;background:#f1f5f9;padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+.chip.green{background:#ecfdf5;color:#047857}.chip.green .dot{background:#10b981}
+.chip.amber{background:#fffbeb;color:#b45309}.chip.amber .dot{background:#f59e0b}
+.chip.red{background:#fef2f2;color:#b91c1c}.chip.red .dot{background:#ef4444}
+.chip.blue{background:#eff6ff;color:#1d4ed8}.chip.blue .dot{background:#3b82f6}
+.narr{background:#f8fafc;border:1px solid #eef2f6;border-left:3px solid #2563eb;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.55;color:#1e293b;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid #e7ecf2;border-radius:12px;padding:13px 14px 11px}
+.card .lab{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b}
+.card .lab .sh{font-weight:600;color:#b6c0cc;letter-spacing:0;text-transform:none}
+.snote{font-size:12px;color:#94a3b8;font-style:italic;margin:-8px 0 16px;line-height:1.45}
+.card .row{display:flex;align-items:baseline;justify-content:space-between;margin:5px 0 9px}
+.card .val{font-family:'JetBrains Mono',monospace;font-size:21px;font-weight:600;color:#0f172a}
+.badge{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:7px;white-space:nowrap}
+.badge.up{background:#ecfdf5;color:#047857}.badge.down{background:#fef2f2;color:#b91c1c}.badge.flat{background:#f1f5f9;color:#475569}
+.cv{position:relative}
+.cv svg{display:block;width:100%;height:60px}
+.ticks{position:relative;height:26px;margin-top:2px}
+.ticks span{position:absolute;text-align:center;line-height:1.15;font-family:'JetBrains Mono',monospace}
+.ticks b{font-size:9.5px;color:#475569;font-weight:600}
+.ticks i{font-size:8.5px;color:#aeb8c4;font-style:normal;display:block}
+.gl{display:flex;gap:8px;align-items:center;font-size:9px;color:#cbd5e1;font-family:'JetBrains Mono',monospace;justify-content:flex-end;margin-bottom:1px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#475569;margin:18px 0 4px;align-items:center}
+.legend i{display:inline-block;width:22px;height:0;vertical-align:middle;margin-right:6px}
+.legend .a{border-top:3px solid #2563eb}.legend .b{border-top:3px dashed #94a3b8}
+footer{margin-top:24px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All Dubai reports</a>
+<h1>Dubai &middot; Venue Trends</h1>
+<div class="sub">Direction of travel &mdash; the last 4 weeks (Mon&ndash;Sun) vs the same 4 weeks last year. Built to spot whether users and conversion rate are in line, so a site or tracking change shows up early. Solid blue = this year, dashed grey = last year. Weeks are numbered by financial year.</div>
+<div class="bar"><select id="vsel"></select><span class="fy" id="fy"></span><span id="alert"></span></div>
+<div class="narr" id="narr"></div>
+<div class="snote" id="snote"></div>
+<div class="grid" id="grid"></div>
+<div class="legend"><span><i class="a"></i>This year</span><span><i class="b"></i>Same FY weeks last year</span><span>CPA: lower is better (green badge = down)</span></div>
+<footer>GA4 bookings = sevenrooms_booking_complete &middot; Meta bookings = schedules (offsite pixel) &middot; Google bookings = Sevenrooms booking conversions &middot; Walk-in signals = Google local actions (store visits + directions + menu views + Book&nbsp;Now + calls). CPA = ad spend &divide; bookings on that platform. Badge compares the latest FY week to the same FY week last year. FY week 1 = first Monday of the year; users are summed daily users over each Mon&ndash;Sun week.</footer>
+<script>
+var PAY={"venues":["Hutong Dubai"],"labels":["W-3","W-2","W-1","Latest"],"dateTY":["26 Jan","2 Feb","9 Feb","16 Feb"],"dateLY":["27 Jan","3 Feb","10 Feb","17 Feb"],"weekno":["W4","W5","W6","W7"],"fyrange":"FY26 weeks 4\u20137","sym":"AED ","data":{"Hutong Dubai":[["Website users",[1411,1611,1811,2138],[1753,1473,1721,1513],false,"n"],["Conversion rate",[8.43,7.95,9.5,8.98],[8.61,7.13,8.72,8.46],false,"%"],["GA4 bookings",[119,128,172,192],[151,105,150,128],false,"n"],["Google walk-in signals",[0,0,0,815],[305,275,315,377],false,"n"],["Meta bookings",[20,21,28,31],[19,16,23,22],false,"n"],["Meta CPA",[227.1,236.0,173.8,162.1],[117.7,141.2,138.7,103.9],true,"$"],["Google bookings",[0,0,0,41],[22,26,30,25],false,"n"],["Google CPA",[0,0,0,156.5],[68.4,70.2,90.3,90.8],true,"$"]]},"narr":{"Hutong Dubai":"Website users rose 18% week-on-week to 2,138 and are up 41% on the same week last year (2,138 vs 1,513), with GA4 bookings up 12% WoW and 50% YoY (192 vs 128) \u2014 the strongest week of the four on both measures. Conversion rate held at 9.0% of users, ahead of 8.5% LY. The big change: Google Ads relaunched after three dark weeks, spending AED 6,418 across P.Max and Search and delivering 41 bookings (CPA AED 157, vs AED 91 LY) \u2014 Search > Brand took 30 of the 41 \u2014 and Google walk-in signals returned at 815, more than double the 377 LY. Meta delivered 31 bookings on AED 5,025 spend (CPA AED 162, its best of the period and ahead of pace WoW)."},"alert":{"Hutong Dubai":["green","On track","Users +41% and bookings +50% YoY; Google Ads back on after three dark weeks (41 bookings, 815 walk-in signals) \u2014 watch relaunch CPAs settle vs LY"]}};
+var W=200,H=58,PADX=4,PADY=6,N=PAY.labels.length;
+function xpos(i){return PADX + i/(N-1)*(W-2*PADX);}      // svg units
+function xpct(i){return xpos(i)/W*100;}                  // percent for ticks
+var SYM=PAY.sym||'$';
+function fmt(v,f){if(f=='%')return v.toFixed(2)+'%';if(f=='$')return SYM+v.toFixed(1);return Math.round(v).toLocaleString();}
+function badge(ty,ly,inv){var t=ty[ty.length-1],l=ly[ly.length-1];if(!l)return ['flat','n/a'];
+ var p=(t-l)/l*100;var good=inv? p<0 : p>0;var cls=Math.abs(p)<2?'flat':(good?'up':'down');
+ return [cls,(p>=0?'+':'')+p.toFixed(0)+'% YoY'];}
+function poly(a,mn,mx){return a.map(function(v,i){
+   var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);return xpos(i).toFixed(1)+','+y.toFixed(1);}).join(' ');}
+function spark(ty,ly){
+ var all=ty.concat(ly);var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);if(mx==mn)mx=mn+1;
+ var lx=xpos(ty.length-1),lyv=H-PADY-(ty[ty.length-1]-mn)/(mx-mn)*(H-2*PADY);
+ var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none">';
+ for(var i=0;i<N;i++){var x=xpos(i).toFixed(1);svg+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="'+H+'" stroke="#f1f5f9" stroke-width="1"/>';}
+ svg+='<polyline fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ly,mn,mx)+'"/>'
+   +'<polyline fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ty,mn,mx)+'"/>'
+   +'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/></svg>';
+ return svg;
+}
+function ticks(){
+ var h='<div class="ticks">';
+ for(var i=0;i<N;i++){
+   var p=xpct(i);var tf=(i==0?'translateX(0)':(i==N-1?'translateX(-100%)':'translateX(-50%)'));
+   h+='<span style="left:'+p.toFixed(1)+'%;transform:'+tf+'"><b>'+PAY.weekno[i]+'</b><i>'+PAY.dateTY[i]+'</i></span>';
+ }
+ return h+'</div>';
+}
+function render(v){
+ var d=PAY.data[v];
+ document.getElementById('fy').textContent=PAY.fyrange;
+ document.getElementById('narr').textContent=PAY.narr[v];
+ var sn=document.getElementById('snote'); if(sn){sn.textContent=(PAY.sharednote&&PAY.sharednote[v])?PAY.sharednote[v]:'';}
+ var a=PAY.alert[v];
+ document.getElementById('alert').innerHTML='<span class="chip '+a[0]+'" title="'+a[2]+'"><span class="dot"></span>'+a[1]+'</span>';
+ var g=document.getElementById('grid');g.innerHTML='';
+ d.forEach(function(p){
+   var lab=p[0],ty=p[1],ly=p[2],inv=p[3],f=p[4];var b=badge(ty,ly,inv);
+   var card=document.createElement('div');card.className='card';
+   card.innerHTML='<div class="lab">'+lab+(p[5]==='shared'?' <span class="sh">· shared</span>':'')+'</div>'
+     +'<div class="row"><span class="val">'+fmt(ty[ty.length-1],f)+'</span><span class="badge '+b[0]+'">'+b[1]+'</span></div>'
+     +'<div class="cv">'+spark(ty,ly)+'</div>'+ticks();
+   g.appendChild(card);
+ });
+}
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
+</script>
+</body></html>
