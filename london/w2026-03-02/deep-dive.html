@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua London — Venue Deep Dive — 2–8 Mar 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style></head><body><div><a class="back" href="../index.html">← All reports</a>
+<h1 style="margin-top:8px">Venue Deep Dive — Regent St · Azzurra · Shiro Sushi
+<span class="pill" style="background:#fef3c7;color:#92400e;vertical-align:middle;margin-left:8px">BELOW TARGET</span></h1>
+<div class="sub">2–8 Mar 2026 (Mon–Sun) · GBP · below-YTD-target venues · WoW vs 23 Feb–1 Mar 2026 · YoY vs 3–9 Mar 2025</div></div>
+<div class="tabs"><div class="tab active" onclick="show(0)">Performance</div><div class="tab" onclick="show(1)">Weekly Trends</div></div>
+<div class="panel active" id="p0">
+<div class="cards">
+<div class="card"><div class="lab">Combined Bookings</div><div class="big">459</div><div class="meta">Target 702 · <span class="neg">-34.6%</span> · WoW <span class="pos">▲ 2.0%</span></div></div>
+<div class="card"><div class="lab">Combined Ad Spend</div><div class="big">£5,501</div><div class="meta">Cost per booking £12.0</div></div>
+<div class="card"><div class="lab">Combined Users</div><div class="big">9,070</div><div class="meta">Blended User CVR 5.1%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">-12.6%</div><div class="meta">459 vs 525 (3–9 Mar 2025)</div></div>
+</div>
+<div class="sec blue"><h2>Meta Ads — schedules (offsite_conversion.fb_pixel_custom)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead><tbody><tr><td>Regent St</td><td class="num">£1,091.0</td><td class="num">96</td><td class="num"><span class="pos">£11.4</span></td><td class="num"><span class="pos">▲ +10</span></td></tr><tr><td>Azzurra</td><td class="num">£1,199.9</td><td class="num">63</td><td class="num"><span class="">£19.0</span></td><td class="num"><span class="neg">▼ -14</span></td></tr><tr><td>Shiro Sushi</td><td class="num">£562.7</td><td class="num">46</td><td class="num"><span class="pos">£12.2</span></td><td class="num"><span class="pos">▲ +2</span></td></tr><tr class="total"><td>Total</td><td class="num">£2,853.6</td><td class="num">205</td><td class="num">£13.9</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Regent St is the most efficient Meta account at £11.4 per schedule (96, up from 86), yet bookings fell again — the schedule signal is overstating real demand for a fourth week.</li>
+<li>Azzurra spend rose £1,017 → £1,200 while schedules dropped 77 → 63; £19 per schedule is drifting toward the £25 flag.</li>
+<li>Shiro Sushi held steady at 46 schedules and £12.2 each, inside the £15 good threshold.</li>
+</ul></div></div>
+<div class="sec green"><h2>Google Ads — booking conversions (sevenrooms_booking_complete action)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead><tbody><tr><td>Regent St</td><td class="num">£984.9</td><td class="num">58.5</td><td class="num"><span class="pos">£16.8</span></td><td class="num"><span class="pos">▲ +2</span></td></tr><tr><td>Azzurra</td><td class="num">£1,030.7</td><td class="num">25.0</td><td class="num"><span class="neg">£41.2</span></td><td class="num"><span class="neg">▼ -6</span></td></tr><tr><td>Shiro Sushi</td><td class="num">£631.9</td><td class="num">64.5</td><td class="num"><span class="pos">£9.8</span></td><td class="num"><span class="neg">▼ -9</span></td></tr><tr class="total"><td>Total</td><td class="num">£2,647.5</td><td class="num">148.0</td><td class="num">£17.9</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Shiro Sushi is the most efficient Google account at ~£10 per booking conversion, though conversions slipped 74 to 64 WoW.</li>
+<li>Azzurra's CPA jumped to £41 (from £31): spend up £963 → £1,031 while conversions fell 31 to 25 — well above the £30 flag.</li>
+<li>Regent St conversions held at ~58 despite the booking slide; note Shiro sums three booking actions (SST, UK sevenrooms, Booking Complete) and Regent St sums Kyoto + Nueva.</li>
+</ul></div></div>
+<div class="sec amber"><h2>GA4 — site engagement and conversion</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead><tbody><tr><td>Regent St</td><td class="num">6,220</td><td class="num">4,869</td><td class="num">2:33</td><td class="num"><span class="">33.8%</span></td><td class="num">229</td><td class="num"><span class="">4.7%</span></td><td class="num">3.7%</td></tr><tr><td>Azzurra</td><td class="num">2,633</td><td class="num">2,048</td><td class="num">2:39</td><td class="num"><span class="">33.7%</span></td><td class="num">130</td><td class="num"><span class="pos">6.3%</span></td><td class="num">4.9%</td></tr><tr><td>Shiro Sushi</td><td class="num">2,574</td><td class="num">2,153</td><td class="num">2:53</td><td class="num"><span class="neg">48.1%</span></td><td class="num">100</td><td class="num"><span class="">4.6%</span></td><td class="num">3.9%</td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Regent St is the headline drag: weekly users have nearly halved from the 9 Feb peak (9,373 → 4,869, four straight down weeks) and bookings 373 → 229 — a traffic-led decline, as user CVR actually improved to 4.7%.</li>
+<li>Shiro Sushi's bounce rate (48.1%) breaches the 45% flag and sits far above the other two (~34%); its Meta mix skews to traffic-style campaigns, which fits.</li>
+<li>Azzurra converts users best (6.3%) and is up 9.2% YoY — its weekly miss is more a target gap than a demand problem.</li>
+</ul></div></div></div>
+<div class="panel" id="p1">
+<p class="sub" style="margin:6px 0 0">8-week trend (W50 to W5) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chartbox"><h3>GA4 Bookings (Weekly)</h3><canvas id="cBook"></canvas></div>
+<div class="chartbox"><h3>User Conversion Rate (%)</h3><canvas id="cCvr"></canvas></div>
+<div class="chartbox"><h3>Users (Weekly)</h3><canvas id="cUsers"></canvas></div>
+<div class="chartbox"><h3>Bookings vs Weekly Target</h3><canvas id="cTgt"></canvas></div>
+</div><table style="margin-top:18px"><thead><tr><th>Venue</th><th>Metric</th><th>W50</th><th>W51</th><th>W52</th><th>W1</th><th>W2</th><th>W3</th><th>W4</th><th>W5</th><th>Trend</th></tr></thead><tbody><tr><td>Regent St</td><td>Bookings</td><td class="num">224</td><td class="num">270</td><td class="num">318</td><td class="num">373</td><td class="num">342</td><td class="num">249</td><td class="num">231</td><td class="num">229</td><td class="num"><span class="pos">+2%</span></td></tr><tr><td></td><td>User CVR</td><td class="num">3.3%</td><td class="num">3.6%</td><td class="num">3.8%</td><td class="num">4.0%</td><td class="num">3.8%</td><td class="num">4.0%</td><td class="num">4.2%</td><td class="num">4.7%</td><td class="num"><span class="pos">+1.4pp</span></td></tr><tr><td>Azzurra</td><td>Bookings</td><td class="num">119</td><td class="num">165</td><td class="num">154</td><td class="num">207</td><td class="num">186</td><td class="num">134</td><td class="num">120</td><td class="num">130</td><td class="num"><span class="pos">+9%</span></td></tr><tr><td></td><td>User CVR</td><td class="num">5.8%</td><td class="num">7.0%</td><td class="num">4.0%</td><td class="num">5.5%</td><td class="num">5.0%</td><td class="num">6.1%</td><td class="num">6.1%</td><td class="num">6.3%</td><td class="num"><span class="pos">+0.6pp</span></td></tr><tr><td>Shiro Sushi</td><td>Bookings</td><td class="num">112</td><td class="num">115</td><td class="num">116</td><td class="num">129</td><td class="num">141</td><td class="num">100</td><td class="num">99</td><td class="num">100</td><td class="num"><span class="neg">-11%</span></td></tr><tr><td></td><td>User CVR</td><td class="num">5.0%</td><td class="num">4.7%</td><td class="num">4.1%</td><td class="num">4.8%</td><td class="num">5.3%</td><td class="num">3.9%</td><td class="num">4.0%</td><td class="num">4.6%</td><td class="num"><span class="neg">-0.3pp</span></td></tr></tbody></table></div><footer>Trend window W50–W5 (12 Jan – 8 Mar 2026). Users/CVR are deduplicated weekly users (matching the Trends report and the GA4 card). Generated 11 June 2026 (backfill).</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+var LAB=["W50", "W51", "W52", "W1", "W2", "W3", "W4", "W5"],COL={"Regent St": "#3B82F6", "Azzurra": "#F59E0B", "Shiro Sushi": "#EF4444"},BOOK={"Regent St": [224, 270, 318, 373, 342, 249, 231, 229], "Azzurra": [119, 165, 154, 207, 186, 134, 120, 130], "Shiro Sushi": [112, 115, 116, 129, 141, 100, 99, 100]},CVR={"Regent St": [3.34, 3.64, 3.77, 3.98, 3.83, 4.04, 4.18, 4.7], "Azzurra": [5.77, 7.02, 4.0, 5.49, 5.04, 6.06, 6.09, 6.35], "Shiro Sushi": [4.98, 4.72, 4.09, 4.77, 5.28, 3.92, 4.03, 4.64]},USERS={"Regent St": [6698, 7424, 8434, 9373, 8929, 6158, 5525, 4869], "Azzurra": [2064, 2351, 3854, 3769, 3688, 2210, 1972, 2048], "Shiro Sushi": [2248, 2434, 2838, 2702, 2669, 2552, 2457, 2153]},TGT={"Regent St": 345, "Azzurra": 191, "Shiro Sushi": 166};
+var drawn=false;
+function ds(m){return Object.keys(m).map(function(n){return {label:n,data:m[n],borderColor:COL[n],backgroundColor:COL[n],tension:.3,fill:false};});}
+function show(i){document.querySelectorAll('.tab').forEach(function(t,j){t.classList.toggle('active',j==i);});document.querySelectorAll('.panel').forEach(function(p,j){p.classList.toggle('active',j==i);});if(i==1&&!drawn){drawn=true;render();}}
+function render(){var o={responsive:true,plugins:{legend:{labels:{boxWidth:12,font:{size:11}}}},scales:{x:{grid:{display:false}}}};
+new Chart(cBook,{type:'line',data:{labels:LAB,datasets:ds(BOOK)},options:o});
+new Chart(cCvr,{type:'line',data:{labels:LAB,datasets:ds(CVR)},options:Object.assign({},o,{scales:{y:{ticks:{callback:function(v){return v+'%';}}}}})});
+new Chart(cUsers,{type:'line',data:{labels:LAB,datasets:ds(USERS)},options:o});
+var names=Object.keys(BOOK);
+new Chart(cTgt,{type:'bar',data:{labels:names,datasets:[{label:'W5 Bookings',data:names.map(function(n){return BOOK[n][BOOK[n].length-1];}),backgroundColor:names.map(function(n){return COL[n];})},{label:'Weekly Target',type:'line',data:names.map(function(n){return TGT[n];}),borderColor:'#0f172a',borderDash:[5,4],pointStyle:'rectRot',pointRadius:6,fill:false}]},options:o});}
+</script></body></html>
