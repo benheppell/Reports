@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua HK — Venue Deep Dive — 16–22 Feb 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style>
+</head><body>
+<a href="../index.html" style="font-size:13px;color:#64748b;text-decoration:none">&larr; All reports</a>
+<h1 style="margin-top:10px">Venue Deep Dive — Aqua HK · Hutong HK · Cantina · Vesu
+<span class="pill" style="background:#fee2e2;color:#b91c1c;vertical-align:middle;margin-left:8px">BELOW-TARGET WEEK</span></h1>
+<div class="sub">16–22 February 2026 (Mon–Sun) · HKD · below-target venues · WoW vs 9–15 Feb 2026 · YoY vs 17–23 Feb 2025</div>
+<div class="tabs"><div class="tab active" onclick="show(0)">Performance</div><div class="tab" onclick="show(1)">Weekly Trends</div></div>
+<div class="panel active" id="p0">
+<div class="cards">
+<div class="card"><div class="lab">Combined Bookings</div><div class="big">538</div><div class="meta">Target 586 · <span class="neg">-8.2%</span> · WoW <span class="neg">▼ 19.0%</span></div></div>
+<div class="card"><div class="lab">Combined Ad Spend</div><div class="big">$39,781</div><div class="meta">Cost per booking $73.9 · Meta $20,889 + Google $18,892</div></div>
+<div class="card"><div class="lab">Combined Users</div><div class="big">9,735</div><div class="meta">Blended User CVR 5.5%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">+34.8%</div><div class="meta">538 vs 399 (17–23 Feb 2025)</div></div>
+</div>
+<div class="sec blue"><h2>Meta Ads — schedules (offsite_conversion.fb_pixel_custom)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead><tbody>
+<tr><td>Aqua HK</td><td class="num">$7,277.5</td><td class="num">17</td><td class="num">$428.1</td><td class="num"><span class="pos">▲ +3</span></td></tr>
+<tr><td>Hutong HK</td><td class="num">$7,206.7</td><td class="num">9</td><td class="num">$800.7</td><td class="num"><span class="neg">▼ -5</span></td></tr>
+<tr><td>Cantina</td><td class="num">$4,111.3</td><td class="num">4</td><td class="num">$1,027.8</td><td class="num"><span class="neg">▼ -3</span></td></tr>
+<tr><td>Vesu</td><td class="num">$2,293.7</td><td class="num">15</td><td class="num">$152.9</td><td class="num"><span class="neg">▼ -3</span></td></tr>
+<tr class="total"><td>Total</td><td class="num">$20,889.2</td><td class="num">45</td><td class="num">$464.2</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Combined schedules edged down WoW (53 → 45) on spend of HKD 20,889 (+8% WoW), with Hutong HK the weak spot (14 → 9 schedules despite higher spend).</li>
+<li>Schedules remain far below GA4 bookings (45 vs 538), so treat the pixel as a directional demand signal rather than a booking count.</li>
+</ul></div></div>
+<div class="sec green"><h2>Google Ads — booking conversions (sevenrooms_booking_complete action)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead><tbody>
+<tr><td>Aqua HK</td><td class="num">$6,600.2</td><td class="num">52.5</td><td class="num"><span class="pos">$125.7</span></td><td class="num"><span class="neg">▼ -22.7</span></td></tr>
+<tr><td>Hutong HK</td><td class="num">$4,843.9</td><td class="num">26.9</td><td class="num"><span class="">$180.1</span></td><td class="num"><span class="pos">▲ +0.1</span></td></tr>
+<tr><td>Cantina</td><td class="num">$4,924.3</td><td class="num">16.0</td><td class="num"><span class="neg">$307.8</span></td><td class="num"><span class="pos">▲ +2.0</span></td></tr>
+<tr><td>Vesu</td><td class="num">$2,523.3</td><td class="num">29.5</td><td class="num"><span class="pos">$85.5</span></td><td class="num"><span class="neg">▼ -4.5</span></td></tr>
+<tr class="total"><td>Total</td><td class="num">$18,891.7</td><td class="num">124.9</td><td class="num">$151.3</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Google booking conversions fell 17% WoW (150.0 → 124.9) with spend down only 1%, so the dip is demand-side rather than budget-side — Aqua HK was the biggest mover (75.2 → 52.5).</li>
+<li>Cost per conversion: Aqua HK $126, Hutong HK $180 and Vesu $86 sit near or inside the HKD 150 "good" threshold; Cantina ($308) is the efficiency outlier.</li>
+</ul></div></div>
+<div class="sec amber"><h2>GA4 — site engagement and conversion</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead><tbody>
+<tr><td>Aqua HK</td><td class="num">5,057</td><td class="num">4,008</td><td class="num">2:57</td><td class="num">39.1%</td><td class="num">187</td><td class="num">4.7%</td><td class="num">3.7%</td></tr>
+<tr><td>Hutong HK</td><td class="num">4,709</td><td class="num">3,506</td><td class="num">3:22</td><td class="num">36.9%</td><td class="num">237</td><td class="num">6.8%</td><td class="num">5.0%</td></tr>
+<tr><td>Cantina</td><td class="num">1,500</td><td class="num">1,273</td><td class="num">2:11</td><td class="num">40.2%</td><td class="num">32</td><td class="num">2.5%</td><td class="num">2.1%</td></tr>
+<tr><td>Vesu</td><td class="num">1,239</td><td class="num">948</td><td class="num">3:15</td><td class="num">29.1%</td><td class="num">82</td><td class="num">8.6%</td><td class="num">6.6%</td></tr>
+</tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Three of the four venues hit 8-week booking lows or near-lows this week (Aqua HK 187 vs a 305 peak, Hutong HK 237 vs 350, Cantina 32 vs 73); Vesu was the only one up WoW (78 → 82).</li>
+<li>The misses are small for Aqua HK (-2.6%) and Hutong HK (-1.2%) but Cantina landed 30% under target with conversion at 2.5% of users — its weakest of the window.</li>
+<li>All four venues are still well ahead of the same week last year (combined +35%), and engagement is broadly healthy (average sessions 2:11–3:22, bounce under 41%), pointing at demand softness rather than site issues.</li>
+</ul></div></div></div>
+<div class="panel" id="p1">
+<p class="sub" style="margin:6px 0 0">8-week trend (W48 to W3) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chartbox"><h3>GA4 Bookings (Weekly)</h3><canvas id="cBook"></canvas></div>
+<div class="chartbox"><h3>User Conversion Rate (%)</h3><canvas id="cCvr"></canvas></div>
+<div class="chartbox"><h3>Users (Weekly)</h3><canvas id="cUsers"></canvas></div>
+<div class="chartbox"><h3>Bookings vs Weekly Target</h3><canvas id="cTgt"></canvas></div>
+</div><table style="margin-top:18px"><thead><tr><th>Venue</th><th>Metric</th><th>W48</th><th>W49</th><th>W50</th><th>W51</th><th>W52</th><th>W1</th><th>W2</th><th>W3</th><th>Trend</th></tr></thead><tbody>
+<tr><td>Aqua HK</td><td>Bookings</td><td class="num">234</td><td class="num">263</td><td class="num">267</td><td class="num">256</td><td class="num">263</td><td class="num">305</td><td class="num">226</td><td class="num">187</td><td class="num"><span class="neg">-20%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">4.8%</td><td class="num">5.8%</td><td class="num">5.2%</td><td class="num">5.0%</td><td class="num">5.0%</td><td class="num">6.0%</td><td class="num">4.6%</td><td class="num">4.7%</td><td class="num"><span class="neg">-0.2pp</span></td></tr>
+<tr><td>Hutong HK</td><td>Bookings</td><td class="num">292</td><td class="num">350</td><td class="num">292</td><td class="num">315</td><td class="num">313</td><td class="num">344</td><td class="num">311</td><td class="num">237</td><td class="num"><span class="neg">-19%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">8.3%</td><td class="num">10.3%</td><td class="num">8.8%</td><td class="num">7.4%</td><td class="num">7.1%</td><td class="num">7.7%</td><td class="num">7.4%</td><td class="num">6.8%</td><td class="num"><span class="neg">-1.5pp</span></td></tr>
+<tr><td>Cantina</td><td>Bookings</td><td class="num">57</td><td class="num">61</td><td class="num">73</td><td class="num">64</td><td class="num">60</td><td class="num">61</td><td class="num">49</td><td class="num">32</td><td class="num"><span class="neg">-44%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">4.4%</td><td class="num">4.0%</td><td class="num">4.7%</td><td class="num">4.0%</td><td class="num">3.8%</td><td class="num">2.9%</td><td class="num">2.8%</td><td class="num">2.5%</td><td class="num"><span class="neg">-1.9pp</span></td></tr>
+<tr><td>Vesu</td><td>Bookings</td><td class="num">68</td><td class="num">93</td><td class="num">122</td><td class="num">96</td><td class="num">103</td><td class="num">118</td><td class="num">78</td><td class="num">82</td><td class="num"><span class="pos">+21%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">6.3%</td><td class="num">9.6%</td><td class="num">10.2%</td><td class="num">9.2%</td><td class="num">8.9%</td><td class="num">9.5%</td><td class="num">6.9%</td><td class="num">8.6%</td><td class="num"><span class="pos">+2.3pp</span></td></tr>
+</tbody></table><footer>Trend window W48–W3 (29 Dec 2025 – 22 Feb 2026). User CVR = bookings ÷ users. Weekly target = month GA4 target prorated to days of week. Generated as part of the report backfill, 11 June 2026.</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+var LAB=["W48", "W49", "W50", "W51", "W52", "W1", "W2", "W3"];
+var COL={"Aqua HK": "#EF4444", "Hutong HK": "#8B5CF6", "Cantina": "#F59E0B", "Vesu": "#10B981"};
+var BOOK={"Aqua HK": [234, 263, 267, 256, 263, 305, 226, 187], "Hutong HK": [292, 350, 292, 315, 313, 344, 311, 237], "Cantina": [57, 61, 73, 64, 60, 61, 49, 32], "Vesu": [68, 93, 122, 96, 103, 118, 78, 82]};
+var CVR={"Aqua HK": [4.84, 5.78, 5.22, 4.98, 4.95, 5.99, 4.56, 4.67], "Hutong HK": [8.3, 10.33, 8.84, 7.38, 7.08, 7.73, 7.42, 6.76], "Cantina": [4.38, 4.03, 4.72, 3.96, 3.84, 2.91, 2.75, 2.51], "Vesu": [6.35, 9.59, 10.23, 9.2, 8.88, 9.54, 6.87, 8.65]};
+var USERS={"Aqua HK": [4837, 4547, 5118, 5137, 5308, 5094, 4958, 4008], "Hutong HK": [3519, 3387, 3302, 4268, 4423, 4450, 4194, 3506], "Cantina": [1300, 1515, 1545, 1618, 1563, 2093, 1780, 1273], "Vesu": [1071, 970, 1192, 1043, 1160, 1237, 1135, 948]};
+var TGT={"Aqua HK": 192, "Hutong HK": 240, "Cantina": 46, "Vesu": 108};
+var drawn=false;
+function ds(map,fill){return Object.keys(map).map(function(n){return {label:n,data:map[n],borderColor:COL[n],backgroundColor:COL[n],tension:.3,fill:false};});}
+function show(i){
+ document.querySelectorAll('.tab').forEach(function(t,j){t.classList.toggle('active',j==i);});
+ document.querySelectorAll('.panel').forEach(function(p,j){p.classList.toggle('active',j==i);});
+ if(i==1&&!drawn){drawn=true;render();}
+}
+function render(){
+ var o={responsive:true,plugins:{legend:{labels:{boxWidth:12,font:{size:11}}}},scales:{x:{grid:{display:false}}}};
+ new Chart(cBook,{type:'line',data:{labels:LAB,datasets:ds(BOOK)},options:o});
+ new Chart(cCvr,{type:'line',data:{labels:LAB,datasets:ds(CVR)},options:Object.assign({},o,{scales:{y:{ticks:{callback:function(v){return v+'%';}}}}})});
+ new Chart(cUsers,{type:'line',data:{labels:LAB,datasets:ds(USERS)},options:o});
+ var names=Object.keys(BOOK);
+ new Chart(cTgt,{type:'bar',data:{labels:names,datasets:[
+   {label:'W3 Bookings',data:names.map(function(n){return BOOK[n][BOOK[n].length-1];}),backgroundColor:names.map(function(n){return COL[n];})},
+   {label:'Weekly Target',type:'line',data:names.map(function(n){return TGT[n];}),borderColor:'#0f172a',borderDash:[5,4],pointStyle:'rectRot',pointRadius:6,fill:false}
+ ]},options:o});
+}
+</script></body></html>
