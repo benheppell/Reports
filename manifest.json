@@ -364,7 +364,8 @@
     {
      "dates": "23 Feb\u20131 Mar 2026",
      "folder": "w2026-02-23",
-     "deepdive": false
+     "deepdive": true,
+     "ads": true
     },
     {
      "dates": "16\u201322 Feb 2026",
@@ -435,6 +436,10 @@
     {
      "dates": "1\u20137 Jun 2026",
      "folder": "w2026-06-01"
+    },
+    {
+     "dates": "23 Feb\u20131 Mar 2026",
+     "folder": "w2026-02-23"
     },
     {
      "dates": "16\u201322 Feb 2026",
