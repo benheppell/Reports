@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua HK — Venue Deep Dive — 23 Feb – 1 Mar 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+</style>
+</head><body>
+<a href="../index.html" style="font-size:13px;color:#64748b;text-decoration:none">&larr; All reports</a>
+<h1 style="margin-top:10px">Venue Deep Dive — Vesu
+<span class="pill" style="background:#fee2e2;color:#b91c1c;vertical-align:middle;margin-left:8px">BELOW-TARGET WEEK</span></h1>
+<div class="sub">23 February – 1 March 2026 (Mon–Sun) · HKD · below-target venues · WoW vs 16–22 Feb 2026 · YoY vs 24 Feb – 2 Mar 2025</div>
+<div class="tabs"><div class="tab active" onclick="show(0)">Performance</div><div class="tab" onclick="show(1)">Weekly Trends</div></div>
+<div class="panel active" id="p0">
+<div class="cards">
+<div class="card"><div class="lab">Bookings</div><div class="big">66</div><div class="meta">Target 109 · <span class="neg">-39.4%</span> · WoW <span class="neg">▼ 19.5%</span></div></div>
+<div class="card"><div class="lab">Ad Spend</div><div class="big">$4,704</div><div class="meta">Cost per booking $71.3 · Meta $2,400 + Google $2,304</div></div>
+<div class="card"><div class="lab">Users</div><div class="big">796</div><div class="meta">User CVR 8.3%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">+32.0%</div><div class="meta">66 vs 50 (24 Feb – 2 Mar 2025)</div></div>
+</div>
+<div class="sec blue"><h2>Meta Ads — schedules (offsite_conversion.fb_pixel_custom)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead><tbody>
+<tr><td>Vesu</td><td class="num">$2,399.8</td><td class="num">12</td><td class="num">$200.0</td><td class="num"><span class="neg">▼ -3</span></td></tr>
+<tr class="total"><td>Total</td><td class="num">$2,399.8</td><td class="num">12</td><td class="num">$200.0</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Schedules eased 15 → 12 WoW on broadly flat spend (HKD 2,400), leaving cost per schedule at HKD 200 — still well inside the HKD 350 "good" threshold.</li>
+<li>Schedules remain well below GA4 bookings (12 vs 66), so treat the pixel as a directional demand signal rather than a booking count.</li>
+</ul></div></div>
+<div class="sec green"><h2>Google Ads — booking conversions (sevenrooms_booking_complete action)</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead><tbody>
+<tr><td>Vesu</td><td class="num">$2,303.8</td><td class="num">21.2</td><td class="num"><span class="pos">$108.7</span></td><td class="num"><span class="neg">▼ -8.3</span></td></tr>
+<tr class="total"><td>Total</td><td class="num">$2,303.8</td><td class="num">21.2</td><td class="num">$108.7</td><td class="num"></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Booking conversions slipped 29.5 → 21.2 WoW with spend down 9% (HKD 2,304), so the dip is demand-side rather than budget-side.</li>
+<li>Cost per conversion of HKD 109 is still inside the HKD 150 "good" threshold, so efficiency is holding even as volume softens.</li>
+</ul></div></div>
+<div class="sec amber"><h2>GA4 — site engagement and conversion</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead><tbody>
+<tr><td>Vesu</td><td class="num">1,015</td><td class="num">796</td><td class="num">2:38</td><td class="num">30.3%</td><td class="num">66</td><td class="num">8.3%</td><td class="num">6.5%</td></tr>
+</tbody></table></div>
+<div class="obs"><b>Observations</b><ul>
+<li>Vesu landed 39% under its 109 target with 66 bookings — its lowest week of the 8-week window (peak 122 in W50) — and users hit an 8-week low at 796.</li>
+<li>Engagement is still healthy (avg session 2:38, bounce 30%) and user conversion of 8.3% remains the portfolio's strongest, pointing at a traffic/demand dip rather than a site issue.</li>
+<li>The week is still +32% on the same week last year (66 vs 50), and the venue closes for its Apr–Jun seasonal break shortly.</li>
+</ul></div></div></div>
+<div class="panel" id="p1">
+<p class="sub" style="margin:6px 0 0">8-week trend (W49 to W4) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chartbox"><h3>GA4 Bookings (Weekly)</h3><canvas id="cBook"></canvas></div>
+<div class="chartbox"><h3>User Conversion Rate (%)</h3><canvas id="cCvr"></canvas></div>
+<div class="chartbox"><h3>Users (Weekly)</h3><canvas id="cUsers"></canvas></div>
+<div class="chartbox"><h3>Bookings vs Weekly Target</h3><canvas id="cTgt"></canvas></div>
+</div><table style="margin-top:18px"><thead><tr><th>Venue</th><th>Metric</th><th>W49</th><th>W50</th><th>W51</th><th>W52</th><th>W1</th><th>W2</th><th>W3</th><th>W4</th><th>Trend</th></tr></thead><tbody>
+<tr><td>Vesu</td><td>Bookings</td><td class="num">93</td><td class="num">122</td><td class="num">96</td><td class="num">103</td><td class="num">118</td><td class="num">78</td><td class="num">82</td><td class="num">66</td><td class="num"><span class="neg">-29%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">9.6%</td><td class="num">10.2%</td><td class="num">9.2%</td><td class="num">8.9%</td><td class="num">9.5%</td><td class="num">6.9%</td><td class="num">8.7%</td><td class="num">8.3%</td><td class="num"><span class="neg">-1.3pp</span></td></tr>
+</tbody></table><footer>Trend window W49–W4 (5 Jan – 1 Mar 2026). User CVR = bookings ÷ users. Weekly target = month GA4 target prorated to days of week. Generated as part of the report backfill, 11 June 2026.</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+var LAB=["W49", "W50", "W51", "W52", "W1", "W2", "W3", "W4"];
+var COL={"Vesu": "#10B981"};
+var BOOK={"Vesu": [93, 122, 96, 103, 118, 78, 82, 66]};
+var CVR={"Vesu": [9.59, 10.23, 9.2, 8.88, 9.54, 6.87, 8.65, 8.29]};
+var USERS={"Vesu": [970, 1192, 1043, 1160, 1237, 1135, 948, 796]};
+var TGT={"Vesu": 109};
+var drawn=false;
+function ds(map,fill){return Object.keys(map).map(function(n){return {label:n,data:map[n],borderColor:COL[n],backgroundColor:COL[n],tension:.3,fill:false};});}
+function show(i){
+ document.querySelectorAll('.tab').forEach(function(t,j){t.classList.toggle('active',j==i);});
+ document.querySelectorAll('.panel').forEach(function(p,j){p.classList.toggle('active',j==i);});
+ if(i==1&&!drawn){drawn=true;render();}
+}
+function render(){
+ var o={responsive:true,plugins:{legend:{labels:{boxWidth:12,font:{size:11}}}},scales:{x:{grid:{display:false}}}};
+ new Chart(cBook,{type:'line',data:{labels:LAB,datasets:ds(BOOK)},options:o});
+ new Chart(cCvr,{type:'line',data:{labels:LAB,datasets:ds(CVR)},options:Object.assign({},o,{scales:{y:{ticks:{callback:function(v){return v+'%';}}}}})});
+ new Chart(cUsers,{type:'line',data:{labels:LAB,datasets:ds(USERS)},options:o});
+ var names=Object.keys(BOOK);
+ new Chart(cTgt,{type:'bar',data:{labels:names,datasets:[
+   {label:'W4 Bookings',data:names.map(function(n){return BOOK[n][BOOK[n].length-1];}),backgroundColor:names.map(function(n){return COL[n];})},
+   {label:'Weekly Target',type:'line',data:names.map(function(n){return TGT[n];}),borderColor:'#0f172a',borderDash:[5,4],pointStyle:'rectRot',pointRadius:6,fill:false}
+ ]},options:o});
+}
+</script></body></html>
