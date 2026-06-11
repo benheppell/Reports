@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua London — Ads & Website Snapshot</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:30px;max-width:1080px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:23px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:5px 0 16px;font-size:13px}
+.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:14px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.seclab{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;margin:18px 0 8px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
+.kpi{background:#f8fafc;border-radius:10px;padding:13px 15px}
+.kpi .l{font-size:12.5px;color:#64748b}.kpi .v{font-size:22px;font-weight:600;font-family:'JetBrains Mono',monospace;margin-top:1px}
+.kpi .d{font-size:11px;margin-top:4px}
+.up{color:#059669}.dn{color:#dc2626}.fl{color:#94a3b8}
+.ins{display:flex;flex-direction:column;gap:7px;margin:14px 0 4px}
+.ins div{background:#f8fafc;border-radius:9px;padding:9px 12px;font-size:13px;line-height:1.5;border-left:3px solid #cbd5e1}
+.ins div.g{border-left-color:#10b981}.ins div.a{border-left-color:#f59e0b}.ins div.r{border-left-color:#ef4444}.ins div.b{border-left-color:#2563eb}
+table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
+th{text-align:left;font-weight:600;color:#64748b;padding:6px 4px;border-bottom:1px solid #e2e8f0;font-size:12px}
+td{padding:6px 4px;border-bottom:1px solid #f1f5f9}
+.r2{text-align:right}.mono{font-family:'JetBrains Mono',monospace}
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:720px){.cards2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid #e7ecf2;border-radius:12px;padding:14px 16px}
+.pf{display:flex;align-items:center;gap:8px;margin-bottom:10px;font-weight:600}
+.pf .dot{width:10px;height:10px;border-radius:2px}
+.g4{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:13px}
+.g4 .s{color:#64748b}
+.bars{display:flex;flex-direction:column;gap:7px;font-size:13px}
+.track{height:6px;background:#eef2f6;border-radius:3px}.fillb{height:6px;border-radius:3px}
+.fn{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.fn .b{background:#f8fafc;border-radius:9px;padding:10px;text-align:center}
+.fn .b .v{font-size:17px;font-weight:600}.fn .b .l{font-size:12px;color:#64748b}
+footer{margin-top:26px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+.legend{display:flex;gap:16px;font-size:12px;color:#64748b;margin:2px 0 4px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+.legend i.ln{height:0;width:16px;border-top:2px solid #0F6E56;border-radius:0}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All London reports</a>
+<h1>London &middot; ads &amp; website snapshot</h1>
+<div class="sub" id="sub"></div>
+<div class="bar"><select id="vsel"></select><span style="font-size:12.5px;color:#64748b">Each metric shows <b>WoW</b> (vs last week) and <b>YoY</b> (vs same week last year). Conversion rate = bookings ÷ users.</span></div>
+
+<div class="seclab">Website</div>
+<div class="kpis" id="kweb"></div>
+<div class="seclab">Advertising</div>
+<div class="kpis" id="kads"></div>
+<div class="ins" id="ins"></div>
+
+<div class="seclab">Traffic &amp; bookings by channel</div>
+<table id="chan"><thead><tr><th>Channel</th><th class="r2">Sessions</th><th class="r2">Bookings</th><th class="r2">Conv</th><th class="r2">WoW</th><th class="r2">YoY</th></tr></thead><tbody></tbody></table>
+
+<div class="cards2" style="margin-top:16px">
+  <div class="card"><div class="seclab" style="margin:0 0 8px">Devices</div><div class="bars" id="dev"></div></div>
+  <div class="card"><div class="seclab" style="margin:0 0 8px">Engagement</div><div class="g4" id="eng"></div></div>
+</div>
+
+<div class="seclab">Top landing pages</div>
+<table id="land"><thead><tr><th>Landing page</th><th class="r2">Sessions</th><th class="r2">Bookings</th><th class="r2">Conv</th></tr></thead><tbody></tbody></table>
+
+<div class="seclab" style="border-top:1px solid #e2e8f0;padding-top:16px">Advertising detail</div>
+<div class="cards2" id="plat"></div>
+
+<div class="seclab">Ad spend vs ad-driven bookings — last 8 weeks</div>
+<div class="legend"><span><i style="background:#85B7EB"></i>Spend</span><span><i class="ln"></i>Bookings</span></div>
+<div id="trend"></div>
+
+<div class="seclab">Paid funnel — this week</div>
+<div class="fn" id="fn"></div>
+
+<div class="seclab">Top campaigns by bookings</div>
+<table id="camp"><thead><tr><th>Campaign</th><th>Plat.</th><th class="r2">Spend</th><th class="r2">Bk</th><th class="r2">CPA</th><th class="r2">WoW</th></tr></thead><tbody></tbody></table>
+
+<footer id="foot"></footer>
+<script>
+var PAY={"market":"London","sym":"\u00a3","week":"W4 \u00b7 23 Feb\u20131 Mar 2026","fy":"FY26 week 4","venues":["All","Aqua Shard","Hutong","Regent St","Azzurra","Shiro Sushi","DSL"],"data":{"All":{"web":{"cur":{"users":61620,"sessions":79954,"bookings":3491,"pps":2.84,"avgsec":174.8,"engrate":64.0,"newpct":83.4},"prior":{"users":65984,"sessions":86625,"bookings":3693},"yoy":{"users":44570,"sessions":80233,"bookings":2137}},"channels":[{"name":"Paid search","s":[15922,16903,6800],"b":[759,695,146]},{"name":"Organic search","s":[19409,22894,34384],"b":[904,1091,719]},{"name":"Referral & email","s":[8749,10519,17285],"b":[441,489,277]},{"name":"Direct","s":[13113,13477,11279],"b":[933,929,819]},{"name":"Paid social","s":[14783,14617,5637],"b":[113,122,37]},{"name":"Other paid/unassigned","s":[7705,8215,4848],"b":[341,367,139]}],"devices":{"Mobile":78.7,"Desktop":20.3,"Tablet":1.0},"landing":[{"path":"/","s":36004,"b":1342},{"path":"/menus","s":5952,"b":67},{"path":"/explore/hutonglondon/reservations/create/search","s":5589,"b":280},{"path":"/peter-pan-afternoon-tea","s":4173,"b":59},{"path":"(not set)","s":3470,"b":16},{"path":"/menus/brunch","s":2654,"b":27}],"ads":{"meta":{"cur":{"spend":7201.63,"bookings":576,"impr":1536687,"clicks":60513},"prior":{"spend":7280.58,"bookings":545,"impr":1803515,"clicks":68391},"yoy":{"spend":2694.31,"bookings":131,"impr":973932,"clicks":12894}},"google":{"cur":{"spend":6603.37,"bookings":1361,"impr":758501,"clicks":20157},"prior":{"spend":7005.53,"bookings":1424,"impr":813963,"clicks":22578},"yoy":{"spend":2780.76,"bookings":404,"impr":407295,"clicks":9041}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[13759.97,11926.0,11355.88,15675.5,16490.34,14458.75,14286.11,13805.0],"bookings":[1560,1603,1852,1853,1965,1904,1970,1936]},"campaigns":[{"name":"Aqua Shard \u2014 CRKLR | Prospecting Campaign","platform":"meta","spend":1109.67,"bookings":107,"wow":"down"},{"name":"DSL \u2014 CRKLR - DSL Prospecting Campaign","platform":"meta","spend":1028.56,"bookings":90,"wow":"up"},{"name":"DSL \u2014 PMax > Generic","platform":"google","spend":745.93,"bookings":15,"wow":"down"},{"name":"Aqua Shard \u2014 Search > Afternoon Tea","platform":"google","spend":712.31,"bookings":232,"wow":"down"},{"name":"Aqua Shard \u2014 Search > Shard","platform":"google","spend":690.41,"bookings":463,"wow":"up"}],"funnel":{"impr":2295188,"clicks":80670,"bookings":1937,"landing":30705}},"Aqua Shard":{"web":{"cur":{"users":27280,"sessions":36617,"bookings":1522,"pps":2.98,"avgsec":188.0,"engrate":66.6,"newpct":83.2},"prior":{"users":28984,"sessions":38346,"bookings":1489},"yoy":{"users":20040,"sessions":41237,"bookings":948}},"channels":[{"name":"Paid search","s":[12663,13172,3740],"b":[603,537,77]},{"name":"Organic search","s":[6312,7074,18046],"b":[234,281,301]},{"name":"Referral & email","s":[4418,5471,11004],"b":[176,203,189]},{"name":"Direct","s":[5152,4740,4301],"b":[322,286,339]},{"name":"Paid social","s":[4173,4516,2591],"b":[14,22,15]},{"name":"Other paid/unassigned","s":[3296,3373,1555],"b":[173,160,27]}],"devices":{"Mobile":76.2,"Desktop":22.5,"Tablet":1.3},"landing":[{"path":"/","s":18915,"b":723},{"path":"/peter-pan-afternoon-tea","s":4173,"b":59},{"path":"/explore/aquashard/reservations/create/search","s":2636,"b":376},{"path":"/menus","s":2552,"b":23},{"path":"/explore/aquashard/reservations/manage","s":1702,"b":100},{"path":"(not set)","s":1651,"b":11}],"ads":{"meta":{"cur":{"spend":1531.44,"bookings":129,"impr":425520,"clicks":11379},"prior":{"spend":1559.98,"bookings":132,"impr":449236,"clicks":11943},"yoy":{"spend":518.89,"bookings":46,"impr":171774,"clicks":3799}},"google":{"cur":{"spend":2055.77,"bookings":941,"impr":120017,"clicks":11923},"prior":{"spend":2075.71,"bookings":944,"impr":110678,"clicks":12542},"yoy":{"spend":93.98,"bookings":191,"impr":97998,"clicks":3086}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[5427.11,3077.88,2744.38,4944.0,3654.4,3038.0,3635.69,3587.21],"bookings":[954,828,953,972,927,917,1076,1070]},"campaigns":[{"name":"CRKLR | Prospecting Campaign","platform":"meta","spend":1109.67,"bookings":107,"wow":"down"},{"name":"Search > Afternoon Tea","platform":"google","spend":712.31,"bookings":232,"wow":"down"},{"name":"Search > Shard","platform":"google","spend":690.41,"bookings":463,"wow":"up"},{"name":"P. Max > Generic","platform":"google","spend":404.06,"bookings":174,"wow":"down"},{"name":"CRKLR | Retargeting","platform":"meta","spend":175.52,"bookings":20,"wow":"down"}],"funnel":{"impr":545537,"clicks":23302,"bookings":1070,"landing":16836}},"Hutong":{"web":{"cur":{"users":18279,"sessions":22855,"bookings":815,"pps":2.77,"avgsec":180.2,"engrate":61.6,"newpct":80.5},"prior":{"users":18626,"sessions":24480,"bookings":867},"yoy":{"users":11130,"sessions":22050,"bookings":580}},"channels":[{"name":"Paid search","s":[1619,1827,1165],"b":[61,78,10]},{"name":"Organic search","s":[6571,8211,9434],"b":[259,305,180]},{"name":"Referral & email","s":[2471,2412,5442],"b":[77,79,72]},{"name":"Direct","s":[3930,3899,3233],"b":[257,239,289]},{"name":"Paid social","s":[6401,5933,1137],"b":[73,84,7]},{"name":"Other paid/unassigned","s":[2253,2198,1639],"b":[88,82,22]}],"devices":{"Mobile":81.0,"Desktop":18.3,"Tablet":0.7},"landing":[{"path":"/","s":8879,"b":272},{"path":"/explore/hutonglondon/reservations/create/search","s":5589,"b":280},{"path":"/menus/brunch","s":2424,"b":24},{"path":"/menus","s":1275,"b":24},{"path":"/explore/hutonglondon/reservations/manage","s":970,"b":55},{"path":"(not set)","s":931,"b":2}],"ads":{"meta":{"cur":{"spend":1390.71,"bookings":146,"impr":319716,"clicks":10444},"prior":{"spend":1411.22,"bookings":154,"impr":345284,"clicks":11605},"yoy":{"spend":425.18,"bookings":19,"impr":135762,"clicks":2295}},"google":{"cur":{"spend":1092.99,"bookings":216,"impr":44461,"clicks":3058},"prior":{"spend":1227.1,"bookings":248,"impr":54238,"clicks":3707},"yoy":{"spend":728.55,"bookings":50,"impr":138563,"clicks":2868}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[1819.21,1812.52,1985.8,2758.16,3048.28,2812.35,2638.32,2483.7],"bookings":[345,377,466,451,505,479,402,362]},"campaigns":[{"name":"CRKLR - Prospecting Campaign","platform":"meta","spend":684.62,"bookings":83,"wow":"down"},{"name":"P. Max > Hutong","platform":"google","spend":489.13,"bookings":113,"wow":"down"},{"name":"CRKLR - Remarketing Campaign","platform":"meta","spend":348.87,"bookings":39,"wow":"down"},{"name":"Search > Restaurant","platform":"google","spend":332.78,"bookings":20,"wow":"down"},{"name":"Search > Shard","platform":"google","spend":138.69,"bookings":20,"wow":"up"}],"funnel":{"impr":364177,"clicks":13502,"bookings":362,"landing":8020}},"Regent St":{"web":{"cur":{"users":5525,"sessions":7044,"bookings":231,"pps":2.64,"avgsec":145.9,"engrate":67.8,"newpct":88.2},"prior":{"users":6158,"sessions":7781,"bookings":249},"yoy":{"users":6146,"sessions":7957,"bookings":240}},"channels":[{"name":"Paid search","s":[868,1042,970],"b":[35,27,24]},{"name":"Organic search","s":[2485,2944,3728],"b":[86,110,111]},{"name":"Referral & email","s":[150,231,360],"b":[4,4,5]},{"name":"Direct","s":[1366,1513,1663],"b":[86,80,79]},{"name":"Paid social","s":[1471,1301,712],"b":[4,4,4]},{"name":"Other paid/unassigned","s":[686,750,524],"b":[16,24,17]}],"devices":{"Mobile":80.6,"Desktop":18.8,"Tablet":0.6},"landing":[{"path":"/","s":2375,"b":75},{"path":"/explore/aquakyoto/reservations/create/search","s":690,"b":49},{"path":"/menus","s":606,"b":6},{"path":"/experiences/aquakyoto/kyoto-sunday-brunch-5913546592583680","s":381,"b":4},{"path":"/weekend-brunch","s":326,"b":3},{"path":"(not set)","s":285,"b":2}],"ads":{"meta":{"cur":{"spend":1159.41,"bookings":86,"impr":202857,"clicks":5810},"prior":{"spend":1187.91,"bookings":103,"impr":215309,"clicks":5968},"yoy":{"spend":792.75,"bookings":22,"impr":155480,"clicks":1964}},"google":{"cur":{"spend":927.91,"bookings":56,"impr":67331,"clicks":2050},"prior":{"spend":978.85,"bookings":64,"impr":90304,"clicks":2409},"yoy":{"spend":881.52,"bookings":35,"impr":14974,"clicks":1108}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[1786.19,2138.57,2093.36,3002.66,3492.24,2800.22,2166.76,2087.32],"bookings":[94,118,163,190,214,194,166,142]},"campaigns":[{"name":"Kyoto \u2014 CRKLR - Prospecting Campaign","platform":"meta","spend":278.84,"bookings":16,"wow":"down"},{"name":"Nueva \u2014 CRKLR - Prospecting Campaign","platform":"meta","spend":276.57,"bookings":30,"wow":"down"},{"name":"Search > Kyoto > Restaurant Type","platform":"google","spend":264.87,"bookings":11,"wow":"down"},{"name":"PMax > Aqua Nueva","platform":"google","spend":229.13,"bookings":8,"wow":"down"},{"name":"Search > Kyoto > Brunch and Sushi Extravaganza","platform":"google","spend":161.15,"bookings":18,"wow":"down"}],"funnel":{"impr":270188,"clicks":7860,"bookings":142,"landing":2339}},"Azzurra":{"web":{"cur":{"users":1972,"sessions":2496,"bookings":120,"pps":2.92,"avgsec":148.6,"engrate":66.1,"newpct":90.5},"prior":{"users":2210,"sessions":2782,"bookings":134},"yoy":{"users":2242,"sessions":2703,"bookings":89}},"channels":[{"name":"Paid search","s":[339,439,221],"b":[20,21,8]},{"name":"Organic search","s":[674,661,1075],"b":[39,45,35]},{"name":"Referral & email","s":[59,51,156],"b":[2,0,1]},{"name":"Direct","s":[728,794,623],"b":[48,51,29]},{"name":"Paid social","s":[344,326,380],"b":[0,1,0]},{"name":"Other paid/unassigned","s":[352,511,248],"b":[11,16,16]}],"devices":{"Mobile":78.8,"Desktop":20.0,"Tablet":1.2},"landing":[{"path":"/","s":1168,"b":51},{"path":"/menus","s":602,"b":4},{"path":"/explore/azzurra/reservations/create/search","s":151,"b":21},{"path":"/explore/azzurra/reservations/manage","s":118,"b":5},{"path":"/menus/a-la-carte","s":107,"b":1},{"path":"(not set)","s":93,"b":0}],"ads":{"meta":{"cur":{"spend":1016.59,"bookings":77,"impr":182326,"clicks":4046},"prior":{"spend":1048.55,"bookings":74,"impr":246085,"clicks":4754},"yoy":{"spend":346.37,"bookings":10,"impr":42378,"clicks":1710}},"google":{"cur":{"spend":962.7,"bookings":31,"impr":207320,"clicks":921},"prior":{"spend":1074.7,"bookings":37,"impr":236193,"clicks":1418},"yoy":{"spend":478.44,"bookings":17,"impr":35009,"clicks":620}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[1181.14,1106.96,1089.26,2394.05,2548.84,1942.08,2123.25,1979.29],"bookings":[72,72,75,86,88,97,111,108]},"campaigns":[{"name":"CRKLR - Prospecting Campaign","platform":"meta","spend":590.76,"bookings":48,"wow":"down"},{"name":"P. Max > Generic","platform":"google","spend":518.52,"bookings":9,"wow":"down"},{"name":"CRKLR - Remarketing Campaign","platform":"meta","spend":355.95,"bookings":17,"wow":"down"},{"name":"Search > Restaurant","platform":"google","spend":320.13,"bookings":8,"wow":"down"},{"name":"Search > Brand","platform":"google","spend":124.05,"bookings":14,"wow":"down"}],"funnel":{"impr":389646,"clicks":4967,"bookings":108,"landing":683}},"Shiro Sushi":{"web":{"cur":{"users":2457,"sessions":3019,"bookings":99,"pps":1.96,"avgsec":113.9,"engrate":53.4,"newpct":86.6},"prior":{"users":2552,"sessions":3147,"bookings":100},"yoy":{"users":1936,"sessions":2512,"bookings":138}},"channels":[{"name":"Paid search","s":[172,161,133],"b":[16,18,2]},{"name":"Organic search","s":[1005,987,814],"b":[48,43,48]},{"name":"Referral & email","s":[86,65,92],"b":[0,1,2]},{"name":"Direct","s":[605,599,606],"b":[24,25,41]},{"name":"Paid social","s":[932,1093,284],"b":[1,3,0]},{"name":"Other paid/unassigned","s":[210,242,583],"b":[10,10,45]}],"devices":{"Mobile":80.3,"Desktop":18.8,"Tablet":0.9},"landing":[{"path":"/","s":981,"b":43},{"path":"/explore/shiro/reservations/create/search","s":971,"b":22},{"path":"/unlimited-sushi-brunch","s":216,"b":8},{"path":"/explore/shiro/reservations/manage","s":210,"b":9},{"path":"/menus","s":209,"b":4},{"path":"(not set)","s":115,"b":1}],"ads":{"meta":{"cur":{"spend":686.74,"bookings":44,"impr":187526,"clicks":17183},"prior":{"spend":686.07,"bookings":44,"impr":202054,"clicks":18726},"yoy":{"spend":312.91,"bookings":5,"impr":337138,"clicks":889}},"google":{"cur":{"spend":613.15,"bookings":74,"impr":295415,"clicks":1096},"prior":{"spend":638.24,"bookings":53,"impr":304485,"clicks":1262},"yoy":{"spend":598.27,"bookings":111,"impr":120751,"clicks":1359}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[665.74,1221.89,1221.69,1441.47,1249.22,1348.46,1324.31,1299.89],"bookings":[26,78,99,88,123,121,97,118]},"campaigns":[{"name":"CRKLR - Leads Campaign \u2013 Consolidated","platform":"meta","spend":488.99,"bookings":44,"wow":"down"},{"name":"Pmax > Generic","platform":"google","spend":384.0,"bookings":18,"wow":"down"},{"name":"CRKLR - Reach","platform":"meta","spend":197.75,"bookings":0,"wow":"up"},{"name":"Search > Brand","platform":"google","spend":147.24,"bookings":39,"wow":"up"},{"name":"Search > Restaurant","platform":"google","spend":81.92,"bookings":16,"wow":"up"}],"funnel":{"impr":482941,"clicks":18279,"bookings":118,"landing":1104}},"DSL":{"web":{"cur":{"users":6107,"sessions":7923,"bookings":704,"pps":2.88,"avgsec":155.5,"engrate":58.4,"newpct":84.7},"prior":{"users":7454,"sessions":10089,"bookings":854},"yoy":{"users":3076,"sessions":3774,"bookings":142}},"channels":[{"name":"Paid search","s":[261,262,571],"b":[24,14,25]},{"name":"Organic search","s":[2362,3017,1287],"b":[238,307,44]},{"name":"Referral & email","s":[1565,2289,231],"b":[182,202,8]},{"name":"Direct","s":[1332,1932,853],"b":[196,248,42]},{"name":"Paid social","s":[1462,1448,533],"b":[21,8,11]},{"name":"Other paid/unassigned","s":[908,1141,299],"b":[43,75,12]}],"devices":{"Mobile":81.6,"Desktop":17.6,"Tablet":0.8},"landing":[{"path":"/","s":3686,"b":178},{"path":"/explore/dimsumlibrary/reservations/create/search","s":1294,"b":183},{"path":"/menus","s":708,"b":6},{"path":"/explore/dimsumlibrary/reservations/manage","s":699,"b":43},{"path":"/menus/a-la-carte","s":396,"b":4},{"path":"(not set)","s":395,"b":0}],"ads":{"meta":{"cur":{"spend":1416.74,"bookings":94,"impr":218742,"clicks":11651},"prior":{"spend":1386.85,"bookings":38,"impr":345547,"clicks":15395},"yoy":{"spend":298.21,"bookings":29,"impr":131400,"clicks":2237}},"google":{"cur":{"spend":950.85,"bookings":43,"impr":23957,"clicks":1109},"prior":{"spend":1010.93,"bookings":80,"impr":18065,"clicks":1240},"yoy":{"spend":0,"bookings":0,"impr":0,"clicks":0}}},"trend":{"labels":["W49","W50","W51","W52","W1","W2","W3","W4"],"spend":[2880.58,2568.18,2221.39,1135.16,2497.36,2517.64,2397.78,2367.59],"bookings":[68,130,96,66,108,96,118,137]},"campaigns":[{"name":"CRKLR - DSL Prospecting Campaign","platform":"meta","spend":1028.56,"bookings":90,"wow":"up"},{"name":"PMax > Generic","platform":"google","spend":745.93,"bookings":15,"wow":"down"},{"name":"CRKLR|DSL|Traffic","platform":"meta","spend":388.18,"bookings":4,"wow":"down"},{"name":"Search > Brand","platform":"google","spend":169.08,"bookings":24,"wow":"up"},{"name":"Search > Restaurant","platform":"google","spend":35.84,"bookings":4,"wow":"down"}],"funnel":{"impr":242699,"clicks":12760,"bookings":137,"landing":1723}}}}, SYM=PAY.sym;
+function nf(n){return Math.round(n).toLocaleString();}
+function money(n){return SYM+Math.round(n).toLocaleString();}
+function pct(c,b){return b?(c-b)/b*100:0;}
+function dchip(c,b,inv){var p=pct(c,b);var cls=Math.abs(p)<1.5?'fl':((p>0)!=!!inv?'up':'dn');
+ var ar=Math.abs(p)<1.5?'▬':(p>0?'▲':'▼');return '<span class="'+cls+'">'+ar+Math.abs(p).toFixed(0)+'%</span>';}
+function wy(c,pr,yo,inv){return '<span class="d">WoW '+dchip(c,pr,inv)+' &nbsp; YoY '+dchip(c,yo,inv)+'</span>';}
+function kcard(l,v,c,pr,yo,inv){return '<div class="kpi"><div class="l">'+l+'</div><div class="v">'+v+'</div>'+wy(c,pr,yo,inv)+'</div>';}
+function cvr(d){return d.users? d.bookings/d.users*100:0;}
+function spark(spend,book){
+ var W=760,H=150,PL=4,PR=4,PT=10,PB=22,n=spend.length;
+ var smx=Math.max.apply(null,spend),bmx=Math.max.apply(null,book),bmn=Math.min.apply(null,book);
+ var bw=(W-PL-PR)/n*0.62;
+ var bars='',line='',dots='';
+ for(var i=0;i<n;i++){
+  var cx=PL+(i+0.5)/n*(W-PL-PR);
+  var bh=(H-PT-PB)*spend[i]/smx; var by=H-PB-bh;
+  bars+='<rect x="'+(cx-bw/2).toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+bw.toFixed(1)+'" height="'+bh.toFixed(1)+'" fill="#85B7EB" rx="2"/>';
+  var ly=H-PB-(H-PT-PB)*(book[i]-bmn)/((bmx-bmn)||1)*0.92-4;
+  line+=cx.toFixed(1)+','+ly.toFixed(1)+' '; dots+='<circle cx="'+cx.toFixed(1)+'" cy="'+ly.toFixed(1)+'" r="2.6" fill="#0F6E56"/>';
+ }
+ var labs='';for(var i=0;i<n;i++){var cx=PL+(i+0.5)/n*(W-PL-PR);labs+='<text x="'+cx.toFixed(1)+'" y="'+(H-7)+'" font-size="9" fill="#94a3b8" text-anchor="middle" font-family="JetBrains Mono,monospace">'+PAY.data[cur].trend.labels[i]+'</text>';}
+ return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:150px;display:block">'+bars+'<polyline fill="none" stroke="#0F6E56" stroke-width="2.2" points="'+line+'"/>'+dots+labs+'</svg>';
+}
+var cur='All';
+function render(v){
+ cur=v; var d=PAY.data[v];
+ document.getElementById('sub').innerHTML=PAY.week+' (Mon–Sun) · '+SYM+' · '+PAY.fy;
+ var w=d.web;
+ var cw=cvr(w.cur),pw=cvr(w.prior),yw=cvr(w.yoy);
+ document.getElementById('kweb').innerHTML=
+   kcard('GA4 bookings',nf(w.cur.bookings),w.cur.bookings,w.prior.bookings,w.yoy.bookings)+
+   kcard('Users',nf(w.cur.users),w.cur.users,w.prior.users,w.yoy.users)+
+   kcard('Sessions',nf(w.cur.sessions),w.cur.sessions,w.prior.sessions,w.yoy.sessions)+
+   kcard('Conversion rate',cw.toFixed(1)+'%',cw,pw,yw);
+ var m=d.ads.meta,g=d.ads.google;
+ var spend=m.cur.spend+g.cur.spend, spendP=m.prior.spend+g.prior.spend, spendY=m.yoy.spend+g.yoy.spend;
+ var abk=m.cur.bookings+g.cur.bookings, abkP=m.prior.bookings+g.prior.bookings, abkY=m.yoy.bookings+g.yoy.bookings;
+ var cpa=abk?spend/abk:0, cpaP=abkP?spendP/abkP:0, cpaY=abkY?spendY/abkY:0;
+ var share=w.cur.bookings?abk/w.cur.bookings*100:0, shareP=w.prior.bookings?abkP/w.prior.bookings*100:0, shareY=w.yoy.bookings?abkY/w.yoy.bookings*100:0;
+ document.getElementById('kads').innerHTML=
+   kcard('Ad spend',money(spend),spend,spendP,spendY)+
+   kcard('Ad-driven bookings',nf(abk),abk,abkP,abkY)+
+   kcard('Blended CPA',money(cpa),cpa,cpaP,cpaY,true)+
+   kcard('Paid share of bookings',share.toFixed(0)+'%',share,shareP,shareY);
+ // insights
+ var ins='';
+ var mcpa=m.cur.bookings?m.cur.spend/m.cur.bookings:0, gcpa=g.cur.bookings?g.cur.spend/g.cur.bookings:0;
+ var eff=gcpa&&mcpa?(gcpa<mcpa?'Google':'Meta'):'';
+ if(eff) ins+='<div class="g">Paid drives '+share.toFixed(0)+'% of bookings; '+eff+' is the more efficient platform ('+money(Math.min(gcpa,mcpa))+' CPA vs '+money(Math.max(gcpa,mcpa))+').</div>';
+ if(pct(cw,yw)<-3 && pct(w.cur.users,w.yoy.users)>3) ins+='<div class="a">Conversion rate is down '+Math.abs(pct(cw,yw)).toFixed(0)+'% YoY while users are up — traffic growing faster than bookings, worth a funnel / tracking check.</div>';
+ else if(pct(cw,yw)>3) ins+='<div class="g">Conversion rate is up '+pct(cw,yw).toFixed(0)+'% YoY at '+cw.toFixed(1)+'%.</div>';
+ if(pct(cpa,cpaP)<-3) ins+='<div class="b">Blended CPA improved '+Math.abs(pct(cpa,cpaP)).toFixed(0)+'% week on week to '+money(cpa)+'.</div>';
+ else if(pct(cpa,cpaP)>5) ins+='<div class="a">Blended CPA rose '+pct(cpa,cpaP).toFixed(0)+'% week on week to '+money(cpa)+'.</div>';
+
+ if(d.budget){var wb=(d.budget.meta||0)+(d.budget.google||0);var pace=wb?spend/wb*100:0;
+   ins+='<div class="b">Spend is pacing at '+pace.toFixed(0)+'% of this week\'s '+money(wb)+' budget (Meta '+money(d.budget.meta)+' + Google '+money(d.budget.google)+', from the FY26 plan).</div>';}
+ document.getElementById('ins').innerHTML=ins;
+ // channels
+ var cb='';d.channels.forEach(function(c){var cv=c.s[0]?c.b[0]/c.s[0]*100:0;
+   cb+='<tr><td>'+c.name+'</td><td class="r2 mono">'+nf(c.s[0])+'</td><td class="r2 mono">'+nf(c.b[0])+'</td><td class="r2 mono">'+cv.toFixed(1)+'%</td><td class="r2">'+dchip(c.b[0],c.b[1])+'</td><td class="r2">'+dchip(c.b[0],c.b[2])+'</td></tr>';});
+ document.querySelector('#chan tbody').innerHTML=cb;
+ // devices
+ var cols={Mobile:'#378ADD',Desktop:'#85B7EB',Tablet:'#B5D4F4'};var db='';
+ Object.keys(d.devices).forEach(function(k){var p=d.devices[k];
+   db+='<div><div style="display:flex;justify-content:space-between"><span>'+k+'</span><span style="font-weight:600">'+p+'%</span></div><div class="track"><div class="fillb" style="width:'+p+'%;background:'+(cols[k]||'#85B7EB')+'"></div></div></div>';});
+ document.getElementById('dev').innerHTML=db;
+ // engagement
+ var e=w.cur;var mm=Math.floor(e.avgsec/60),ss=Math.round(e.avgsec%60);
+ document.getElementById('eng').innerHTML=
+   '<div><div class="s">Avg session</div><div style="font-weight:600">'+mm+'m '+ss+'s</div></div>'+
+   '<div><div class="s">Engagement rate</div><div style="font-weight:600">'+e.engrate.toFixed(0)+'%</div></div>'+
+   '<div><div class="s">Pages / session</div><div style="font-weight:600">'+e.pps.toFixed(1)+'</div></div>'+
+   '<div><div class="s">New / returning</div><div style="font-weight:600">'+e.newpct.toFixed(0)+'% / '+(100-e.newpct).toFixed(0)+'%</div></div>';
+ // landing
+ var lb='';d.landing.forEach(function(p){var cv=p.s?p.b/p.s*100:0;
+   lb+='<tr><td style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+p.path+'</td><td class="r2 mono">'+nf(p.s)+'</td><td class="r2 mono">'+nf(p.b)+'</td><td class="r2 mono">'+cv.toFixed(1)+'%</td></tr>';});
+ document.querySelector('#land tbody').innerHTML=lb;
+ // platform cards
+ function pcard(name,col,x,tot){var c=x.cur;var cp=c.bookings?c.spend/c.bookings:0;var ct=c.impr?c.clicks/c.impr*100:0;var sh=tot?c.spend/tot*100:0;var cpp=x.prior.bookings?x.prior.spend/x.prior.bookings:0;
+   return '<div class="card"><div class="pf"><span class="dot" style="background:'+col+'"></span>'+name+'<span style="margin-left:auto;font-size:12px;color:#64748b;font-weight:400">'+sh.toFixed(0)+'% of spend</span></div><div class="g4">'+
+   '<div><div class="s">Spend</div><div style="font-weight:600">'+money(c.spend)+'</div></div>'+
+   '<div><div class="s">Bookings</div><div style="font-weight:600">'+nf(c.bookings)+'</div></div>'+
+   '<div><div class="s">CPA</div><div style="font-weight:600">'+money(cp)+' '+dchip(cp,cpp,true)+'</div></div>'+
+   '<div><div class="s">CTR</div><div style="font-weight:600">'+ct.toFixed(1)+'%</div></div></div></div>';}
+ document.getElementById('plat').innerHTML=pcard('Meta','#378ADD',m,spend)+pcard('Google','#1D9E75',g,spend);
+ // trend
+ document.getElementById('trend').innerHTML=spark(d.trend.spend,d.trend.bookings);
+ // funnel
+ var f=d.funnel;
+ document.getElementById('fn').innerHTML=
+   '<div class="b"><div class="v">'+(f.impr>=1e6?(f.impr/1e6).toFixed(2)+'M':nf(f.impr))+'</div><div class="l">Impressions</div></div>'+
+   '<div class="b"><div class="v">'+nf(f.clicks)+'</div><div class="l">Clicks · '+(f.impr?(f.clicks/f.impr*100).toFixed(1):0)+'%</div></div>'+
+   '<div class="b"><div class="v">'+nf(f.landing)+'</div><div class="l">Landing · '+(f.clicks?(f.landing/f.clicks*100).toFixed(0):0)+'%</div></div>'+
+   '<div class="b"><div class="v">'+nf(f.bookings)+'</div><div class="l">Bookings · '+(f.landing?(f.bookings/f.landing*100).toFixed(1):0)+'%</div></div>';
+ // campaigns
+ var cmb='';d.campaigns.forEach(function(c){var cp=c.bookings?c.spend/c.bookings:0;var ar=c.wow=='up'?'<span class="up">▲</span>':(c.wow=='down'?'<span class="dn">▼</span>':'<span class="fl">▬</span>');
+   cmb+='<tr><td style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+c.name+'</td><td>'+c.platform+'</td><td class="r2 mono">'+money(c.spend)+'</td><td class="r2 mono">'+nf(c.bookings)+'</td><td class="r2 mono">'+money(cp)+'</td><td class="r2">'+ar+'</td></tr>';});
+ document.querySelector('#camp tbody').innerHTML=cmb;
+ document.getElementById('foot').innerHTML='GA4 bookings = sevenrooms_booking_complete · conversion rate = bookings ÷ users · ad-driven bookings = Meta schedules + Google booking conversions · CPA = spend ÷ platform bookings · WoW vs prior week, YoY vs same week last year (364-day offset).';
+}
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
+</script></body></html>
