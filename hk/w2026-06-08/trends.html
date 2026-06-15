@@ -96,8 +96,9 @@ function render(v){
  });
 }
 var sel=document.getElementById('vsel');
-PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+var venues=PAY.venues||Object.keys(PAY.data);
+venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
 sel.onchange=function(){render(this.value);};
-render(PAY.venues[0]);
+render(venues[0]);
 </script>
 </body></html>
