@@ -1,11 +1,17 @@
 {
- "generated": "9 June 2026",
+ "generated": "15 June 2026",
  "markets": [
   {
    "name": "Hong Kong",
    "slug": "hk",
    "ccy": "HKD",
    "weekly": [
+    {
+     "dates": "W19 · 8–14 Jun 2026",
+     "folder": "w2026-06-08",
+     "deepdive": true,
+     "ads": true
+    },
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01",
@@ -122,6 +128,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "8–14 Jun 2026",
+     "folder": "w2026-06-08"
+    },
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
@@ -154,6 +164,12 @@
    "ccy": "GBP",
    "weekly": [
     {
+     "dates": "W19 · 8–14 Jun 2026",
+     "folder": "w2026-06-08",
+     "deepdive": true,
+     "ads": true
+    },
+    {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01",
      "deepdive": true,
@@ -270,6 +286,10 @@
    ],
    "trends": [
     {
+     "dates": "8–14 Jun 2026",
+     "folder": "w2026-06-08"
+    },
+    {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
     },
@@ -296,6 +316,12 @@
    "slug": "usa",
    "ccy": "USD",
    "weekly": [
+    {
+     "dates": "W23 · 8–14 Jun 2026",
+     "folder": "w2026-06-08",
+     "deepdive": true,
+     "ads": true
+    },
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01",
@@ -440,6 +466,10 @@
    ],
    "trends": [
     {
+     "dates": "8–14 Jun 2026",
+     "folder": "w2026-06-08"
+    },
+    {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
     },
@@ -482,6 +512,12 @@
    "slug": "dubai",
    "ccy": "AED",
    "weekly": [
+    {
+     "dates": "W23 · 8–14 Jun 2026",
+     "folder": "w2026-06-08",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01",
@@ -540,6 +576,10 @@
    "monthly": [],
    "trends": [
     {
+     "dates": "8–14 Jun 2026",
+     "folder": "w2026-06-08"
+    },
+    {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
     },
@@ -582,6 +622,12 @@
    "slug": "paris",
    "ccy": "EUR",
    "weekly": [
+    {
+     "dates": "W19 · 8–14 Jun 2026",
+     "folder": "w2026-06-08",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01",
@@ -747,6 +793,10 @@
    ],
    "monthly": [],
    "trends": [
+    {
+     "dates": "8–14 Jun 2026",
+     "folder": "w2026-06-08"
+    },
     {
      "dates": "1–7 Jun 2026",
      "folder": "w2026-06-01"
