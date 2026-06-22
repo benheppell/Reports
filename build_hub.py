@@ -12,7 +12,7 @@ h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size
 .tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
 .tab.active{color:#0f172a;border-bottom-color:#2563eb}
 .market{display:none}.market.active{display:block}
-.pick{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;max-width:1040px}
+.pick{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1100px}
 .pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
@@ -62,11 +62,23 @@ def selects(mk, prefix):
     else:
         topts='<option value="" selected disabled>None yet</option>'
         tdis=' disabled style="opacity:.5"'
+    # covers column (covers reports flagged per weekly entry)
+    copts='<option value="" selected disabled>Select a week…</option>'
+    has_cov=False
+    for w in mk['weekly']:
+        if w.get("covers"):
+            has_cov=True
+            copts+=f'<option value="{prefix}{w["folder"]}/covers.html">{w["dates"]}</option>'
+    cdis=''
+    if not has_cov:
+        copts='<option value="" selected disabled>None yet</option>'
+        cdis=' disabled style="opacity:.5"'
     return f'''<div class="pick">
 <div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value"{wdis}>{wopts}</select></div>
 <div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value"{mdis}>{mopts}</select></div>
 <div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"{adis}>{aopts}</select></div>
 <div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"{tdis}>{topts}</select></div>
+<div class="col"><label>Covers report</label><select onchange="if(this.value)location.href=this.value"{cdis}>{copts}</select></div>
 </div>'''
 
 # ---- global hub ----
