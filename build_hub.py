@@ -32,6 +32,8 @@ def selects(mk, prefix):
             wopts+=f'<option value="{prefix}{w["folder"]}/dashboard.html">{w["dates"]} — Dashboard</option>'
         if w.get("deepdive"):
             wopts+=f'<option value="{prefix}{w["folder"]}/deep-dive.html">{w["dates"]} — Deep dive</option>'
+        if w.get("covers"):
+            wopts+=f'<option value="{prefix}{w["folder"]}/covers.html">{w["dates"]} — Covers</option>'
         if w.get("ads"):
             has_ads=True
             aopts+=f'<option value="{prefix}{w["folder"]}/ads.html">{w["dates"]}</option>'

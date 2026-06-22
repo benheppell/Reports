@@ -115,4 +115,23 @@ a.back{font-size:12px;color:#2563eb;text-decoration:none}
 <li>Aqua Shard (+7.5%) and Hutong (+8.5%) remain YTD positive, but a third consecutive below-target week is eroding the buffer.</li>
 </ul></div>
 
+<div class="obs" style="margin:26px 0 0;border-left-color:#2563eb;background:#eff6ff">
+<b>SevenRooms covers &amp; booking channels &#8212; reading past the GA4 gap</b>
+<ul>
+<li>GA4 <code>sevenrooms_booking_complete</code> (the headline above) only fires for <b>website widget</b> bookings. It does <b>not</b> capture <b>OpenTable</b> and only partly captures <b>Google Reserve</b>. So GA4 bookings &#8722;5.9% YoY understates true demand.</li>
+<li>Total SevenRooms covers created this week were <b>13,636</b>, <span class="pos">&#9650; 43%</span> YoY and <span class="pos">&#9650; 11%</span> WoW. <b>OpenTable covers reached 1,613</b>, up from 296 the same week last year (<span class="pos">+445%</span>) &#8212; a channel that is invisible to GA4 and now ~12% of covers.</li>
+<li>Full breakdown: <a href="covers.html">covers.html</a>.</li>
+</ul>
+</div>
+<table style="margin-top:14px"><thead><tr><th>Venue</th><th>Covers</th><th>WoW</th><th>YoY</th><th>OpenTable</th><th>OT YoY</th><th>GA4 bk</th></tr></thead><tbody>
+<tr><td>Aqua Shard</td><td class="num">3,586</td><td class="num"><span class="pos">&#9650; 1%</span></td><td class="num"><span class="neg">&#9660; 2%</span></td><td class="num">253</td><td class="num"><span class="pos">+224%</span></td><td class="num" style="color:#94a3b8">1,068</td></tr>
+<tr><td>Hutong</td><td class="num">2,942</td><td class="num"><span class="pos">&#9650; 13%</span></td><td class="num"><span class="pos">&#9650; 40%</span></td><td class="num">216</td><td class="num"><span class="pos">+260%</span></td><td class="num" style="color:#94a3b8">614</td></tr>
+<tr><td>Regent St</td><td class="num">2,227</td><td class="num"><span class="pos">&#9650; 36%</span></td><td class="num"><span class="pos">&#9650; 60%</span></td><td class="num">239</td><td class="num"><span class="pos">+257%</span></td><td class="num" style="color:#94a3b8">343</td></tr>
+<tr><td>Azzurra</td><td class="num">880</td><td class="num"><span class="pos">&#9650; 18%</span></td><td class="num"><span class="pos">&#9650; 22%</span></td><td class="num">162</td><td class="num"><span class="pos">+231%</span></td><td class="num" style="color:#94a3b8">83</td></tr>
+<tr><td>Shiro Sushi</td><td class="num">1,023</td><td class="num"><span class="pos">&#9650; 24%</span></td><td class="num"><span class="pos">&#9650; 27%</span></td><td class="num">139</td><td class="num"><span class="pos">+1,290%</span></td><td class="num" style="color:#94a3b8">118</td></tr>
+<tr><td>DSL</td><td class="num">2,978</td><td class="num"><span class="pos">&#9650; 3%</span></td><td class="num"><span class="pos">&#9650; 241%</span></td><td class="num">604</td><td class="num"><span class="pos">+1,788%</span></td><td class="num" style="color:#94a3b8">442</td></tr>
+<tr class="total"><td>London portfolio</td><td class="num">13,636</td><td class="num"><span class="pos">&#9650; 11%</span></td><td class="num"><span class="pos">&#9650; 43%</span></td><td class="num">1,613</td><td class="num"><span class="pos">+445%</span></td><td class="num" style="color:#94a3b8">2,668</td></tr>
+</tbody></table>
+<div style="font-size:11px;color:#94a3b8;margin:6px 2px 0">Covers = SevenRooms covers by booking-created date (Europe/London), net of cancellations and deleted, bar areas excluded, PDR &amp; afternoon tea included. GA4 bk shown for context (widget only, not directly comparable). Source: SevenRooms via Supabase.</div>
+
 <footer>GA4 bookings = sevenrooms_booking_complete. Regent St = Aqua Kyoto + Aqua Nueva (combined GA4 properties &amp; Meta accounts; shared Google account 3511646647). Meta schedules = offsite_conversion.fb_pixel_custom. Google conversions = booking-specific actions only (see header for action names per venue). &#8224;&#8224; DSL Meta account returns under &#8220;Luci&#8221; &#8212; confirmed mapping; DSL is far above its pre-rebrand target, so YoY and target variance are flagged not comparable. Generated 22 June 2026.</footer></body></html>
