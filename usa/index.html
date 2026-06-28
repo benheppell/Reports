@@ -12,6 +12,10 @@ h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
 .note{font-size:12px;color:#94a3b8;margin-top:16px}
+.live{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+a.livelink{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#2563eb;text-decoration:none;border:1px solid #bfdbfe;background:#eff6ff;padding:9px 14px;border-radius:10px}
+a.livelink:hover{background:#dbeafe;border-color:#2563eb}
+a.livelink .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;display:inline-block}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
 @media(max-width:900px){.pick{grid-template-columns:1fr 1fr}}
@@ -25,4 +29,5 @@ footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 <div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"><option value="" selected disabled>Select a week…</option><option value="w2026-06-15/trends.html">15–21 Jun 2026</option><option value="w2026-06-08/trends.html">8–14 Jun 2026</option><option value="w2026-06-01/trends.html">1–7 Jun 2026</option><option value="w2026-02-23/trends.html">23 Feb–1 Mar 2026</option><option value="w2026-02-16/trends.html">16–22 Feb 2026</option><option value="w2026-02-09/trends.html">9–15 Feb 2026</option><option value="w2026-02-02/trends.html">2–8 Feb 2026</option><option value="w2026-01-26/trends.html">26 Jan–1 Feb 2026</option><option value="w2026-01-19/trends.html">19–25 Jan 2026</option><option value="w2026-01-12/trends.html">12–18 Jan 2026</option><option value="w2026-01-05/trends.html">5–11 Jan 2026</option></select></div>
 <div class="col"><label>Covers report</label><select onchange="if(this.value)location.href=this.value" disabled style="opacity:.5"><option value="" selected disabled>None yet</option></select></div>
 </div>
+
 <footer>Generated 22 June 2026. GA4 bookings = sevenrooms_booking_complete.</footer></body></html>

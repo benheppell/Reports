@@ -1,3 +1,7 @@
-# Netlify config — static site, no build step.
+# Netlify config — static site + serverless functions (no build step).
 [build]
   publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"

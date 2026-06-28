@@ -17,6 +17,10 @@ h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
 .note{font-size:12px;color:#94a3b8;margin-top:16px}
+.live{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+a.livelink{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#2563eb;text-decoration:none;border:1px solid #bfdbfe;background:#eff6ff;padding:9px 14px;border-radius:10px}
+a.livelink:hover{background:#dbeafe;border-color:#2563eb}
+a.livelink .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;display:inline-block}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
 @media(max-width:900px){.pick{grid-template-columns:1fr 1fr}}
@@ -81,6 +85,12 @@ def selects(mk, prefix):
 <div class="col"><label>Covers report</label><select onchange="if(this.value)location.href=this.value"{cdis}>{copts}</select></div>
 </div>'''
 
+def livelinks(mk):
+    lv=mk.get('live',[])
+    if not lv: return ''
+    items=''.join(f'<a class="livelink" href="{x["href"]}"><span class="dot"></span>{x["label"]}</a>' for x in lv)
+    return f'<div class="live">{items}</div>'
+
 # ---- global hub ----
 tabs=''.join(f'<div class="tab{" active" if i==0 else ""}" onclick="sel({i})">{mk["name"]}</div>' for i,mk in enumerate(M['markets']))
 body=''
@@ -88,7 +98,7 @@ for i,mk in enumerate(M['markets']):
     body+=f'<div class="market{" active" if i==0 else ""}" id="m{i}">{selects(mk, mk["slug"]+"/")}'
     body+=f'<div class="note">{mk["ccy"]} · weekly bookings vs target with WoW / YoY / YTD; monthly bookings vs target with MoM / YoY.'
     if mk['slug']=='usa': body+=' USA targets are FY26 strategic goals (aggressive); see report footnotes.'
-    body+='</div></div>'
+    body+='</div>'+livelinks(mk)+'</div>'
 g=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aqua — Global Performance Reports</title><style>{CSS}</style></head><body>
 <h1>Aqua — Global Performance Reports</h1>
@@ -106,6 +116,7 @@ for mk in M['markets']:
 <h1>Aqua {mk['name']} — Performance Reports</h1>
 <div class="sub">GA4 booking performance vs targets · {mk['ccy']}. Pick a report.</div>
 {selects(mk,'')}
+{livelinks(mk)}
 <footer>Generated {M['generated']}. GA4 bookings = sevenrooms_booking_complete.</footer></body></html>'''
     open(os.path.join(HERE,mk['slug'],"index.html"),"w").write(p)
 print("Rebuilt hub + landings with dropdowns.")
