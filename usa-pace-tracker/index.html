@@ -75,15 +75,15 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
   <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
   <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
   <em>Forecast</em> = LY final + (now − LY same point), a conservative guide — months still fill materially in-month, so early months read low.
-  Aqua Kyoto NYC opened ~Sep 2025 so it has no like-for-like last year: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
+  Aqua Kyoto NYC opened ~Sep 2025 so it has no like-for-like last year: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a. Events = single bookings of 30+ covers, split out so large functions don’t distort dining or channel pace.
 </div>
 
 <footer id="footer">Covers = SevenRooms reservations (Supabase). Venues: Hutong New York, Hutong Miami, Aqua Roma, Aqua Kyoto NYC.</footer>
 
 <script>
 const VENUE_ORDER = ["GROUP (ex-AK NYC)","Aqua Roma","Hutong Miami","Hutong New York","Aqua Kyoto NYC"];
-const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
-const CHAN_ORDER = ["Website","OpenTable","Google Reserve","Resy","Other"];
+const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner","Events"];
+const CHAN_ORDER = ["Website","OpenTable","Google Reserve","Resy","Other","Events"];
 const NEW = "Aqua Kyoto NYC";
 const GROUP = "GROUP (ex-AK NYC)";
 
