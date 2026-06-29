@@ -29,6 +29,9 @@ V=P['venues']
 # portfolio totals
 keys=['covers_cur','covers_prior','covers_yoy','widget','gr','ot','ot_prior','ot_yoy','other','ga4']
 tot={k:sum(v[k] for v in V) for k in keys}
+MKT=P.get('market','London')
+PLAT=P.get('platform','OpenTable')
+TZ=P.get('tz','Europe/London')
 
 def mixbar(v):
     c=v['covers_cur'] or 1
@@ -81,14 +84,23 @@ ot_wow=pct(tot['ot'],tot['ot_prior']); ot_yoy=pct(tot['ot'],tot['ot_yoy'])
 w_wow=pct(tot['widget'],ptot('widget_prior')); w_yoy=pct(tot['widget'],ptot('widget_yoy'))
 g_wow=pct(tot['gr'],ptot('gr_prior')); g_yoy=pct(tot['gr'],ptot('gr_yoy'))
 cards=(kpi('Covers created',f"{tot['covers_cur']:,}",f"WoW {dchip(cov_wow)} · YoY {dchip(cov_yoy)}")+
-       kpi('OpenTable covers',f"{tot['ot']:,}",f"WoW {dchip(ot_wow)} · YoY {dchip(ot_yoy)} · <b>not in GA4</b>")+
+       kpi(f'{PLAT} covers',f"{tot['ot']:,}",f"WoW {dchip(ot_wow)} · YoY {dchip(ot_yoy)} · <b>not in GA4</b>")+
        kpi('Booking Widget covers',f"{tot['widget']:,}",f"WoW {dchip(w_wow)} · YoY {dchip(w_yoy)}")+
        kpi('Google Reserve covers',f"{tot['gr']:,}",f"WoW {dchip(g_wow)} · YoY {dchip(g_yoy)}")+
        kpi('GA4 bookings (widget)',f"{tot['ga4']:,}",P['ga4_meta']))
 
 ot_mult=tot['ot']/(tot['ot_yoy'] or 1)
+default_callout=(f'<b>Why this sits alongside the GA4 dashboard.</b> The weekly dashboard counts '
+ f'<b>GA4 <code>sevenrooms_booking_complete</code></b>, which only fires for bookings made through our own website widget. '
+ f'It does <b>not</b> see <b>{PLAT}</b> bookings, and only partially captures <b>Google Reserve</b>. '
+ f'{PLAT} covers are <b>{tot["ot"]:,}</b> this week (from <b>{tot["ot_yoy"]:,}</b> the same week last year, roughly {ot_mult:.1f}×). '
+ f'So while GA4 widget bookings read <b>{P["ga4_yoy"]}</b>, total covers created are <b>{dchip(cov_yoy)} YoY</b>. '
+ f'The apparent GA4 decline is largely a measurement gap, not a demand problem.')
+CALLOUT=P.get('callout',default_callout)
+PLATFOOT=P.get('platform_foot','<b>OpenTable</b> = OT Guestcenter + OpenTable sources')
+COMBNOTE=P.get('combined_note','<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. ')
 HTML=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aqua London — Covers &amp; Booking Channels — {P['week']}</title>
+<title>Aqua {MKT} — Covers &amp; Booking Channels — {P['week']}</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 *{{box-sizing:border-box;margin:0;padding:0}}
 body{{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1180px;margin:0 auto}}
@@ -121,12 +133,12 @@ tr.total{{font-weight:700;background:#f1f5f9}} tr.total td{{border-top:2px solid
 footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.55}}
 @media(max-width:1000px){{.cards{{grid-template-columns:repeat(2,1fr)}}}}
 </style></head><body>
-<a class="back" href="../index.html">← All London reports</a>
-<h1>Aqua London — Covers &amp; Booking Channels</h1>
+<a class="back" href="../index.html">← All {MKT} reports</a>
+<h1>Aqua {MKT} — Covers &amp; Booking Channels</h1>
 <div class="sub">{P['week']} (Mon–Sun) · SevenRooms covers by booking-created date · WoW vs {P['wow']} · YoY vs {P['yoy']}</div>
 
 <div class="callout">
-<b>Why this sits alongside the GA4 dashboard.</b> The weekly dashboard counts <b>GA4 <code>sevenrooms_booking_complete</code></b>, which only fires for bookings made through our own website widget. It does <b>not</b> see <b>OpenTable</b> bookings, and only partially captures <b>Google Reserve</b>. OpenTable covers are <b>{tot['ot']:,}</b> this week (from <b>{tot['ot_yoy']:,}</b> the same week last year, roughly {ot_mult:.1f}×). So while GA4 widget bookings read <b>{P['ga4_yoy']}</b>, total covers created are <b>{dchip(cov_yoy)} YoY</b>. The apparent GA4 decline is largely a measurement gap, not a demand problem.
+{CALLOUT}
 </div>
 
 <div class="cards">{cards}</div>
@@ -134,19 +146,19 @@ footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f
 <div class="sec">Covers by venue &amp; booking channel</div>
 <table><thead><tr>
 <th>Venue</th><th>Covers</th><th>WoW</th><th>YoY</th>
-<th>Widget</th><th>Google Reserve</th><th>OpenTable</th><th>Other</th><th>GA4 bk</th><th>Channel mix</th>
+<th>Widget</th><th>Google Reserve</th><th>{PLAT}</th><th>Other</th><th>GA4 bk</th><th>Channel mix</th>
 </tr></thead><tbody>{rows}</tbody></table>
 <div class="legend">
 <span><i class="s-w"></i>Booking Widget</span><span><i class="s-g"></i>Google Reserve</span>
-<span><i class="s-o"></i>OpenTable</span><span><i class="s-x"></i>Other (walk-in, reception, landing pages, TheFork, concierge)</span>
+<span><i class="s-o"></i>{PLAT}</span><span><i class="s-x"></i>Other (walk-in, reception, landing pages, third-party, concierge)</span>
 </div>
 
-<div class="sec">OpenTable covers vs total covers — last 8 weeks</div>
-<div class="legend"><span><i class="s-x" style="background:#c7dbf2"></i>Total covers (bars)</span><span><i class="s-o"></i>OpenTable covers (line)</span></div>
+<div class="sec">{PLAT} covers vs total covers — last 8 weeks</div>
+<div class="legend"><span><i class="s-x" style="background:#c7dbf2"></i>Total covers (bars)</span><span><i class="s-o"></i>{PLAT} covers (line)</span></div>
 {svg}
 
 <footer>
-<b>Covers</b> = SevenRooms covers by booking-created date (<code>sr_created_at</code>, Europe/London), net of cancellations and deleted bookings. Bar seating areas excluded; private dining and afternoon tea included. <b>OpenTable</b> = OT Guestcenter + OpenTable sources; <b>Google Reserve</b> = Google Reserve Integration; <b>Booking Widget</b> = on-site widget; <b>Other</b> = walk-ins, reservations/reception teams, landing pages, TheFork, concierge and named hosts. <b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. <b>GA4 bk</b> = website <code>sevenrooms_booking_complete</code> events (widget only, shown for context — not directly comparable to covers). Generated {P['generated']}. Source: SevenRooms via Supabase.
+<b>Covers</b> = SevenRooms covers by booking-created date (<code>sr_created_at</code>, {TZ}), net of cancellations and deleted bookings. Bar seating areas excluded; private dining and afternoon tea included. {PLATFOOT}; <b>Google Reserve</b> = Google Reserve Integration; <b>Booking Widget</b> = on-site widget; <b>Other</b> = walk-ins, reservations/reception teams, landing pages, third-party apps, concierge and named hosts. {COMBNOTE}<b>GA4 bk</b> = website <code>sevenrooms_booking_complete</code> events (widget only, shown for context — not directly comparable to covers). Generated {P['generated']}. Source: SevenRooms via Supabase.
 </footer>
 </body></html>'''
 open(OUT,'w').write(HTML)
