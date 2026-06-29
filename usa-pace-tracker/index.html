@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA — Covers Pace Tracker</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:1180px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+a.back:hover{text-decoration:underline}
+h1{font-size:26px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 4px;font-size:14px}
+.topbar{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.stamp{font-size:12px;color:#94a3b8;margin-top:6px}
+button.refresh{font-family:inherit;font-size:13px;font-weight:600;color:#fff;background:#2563eb;border:none;padding:10px 16px;border-radius:10px;cursor:pointer}
+button.refresh:hover{background:#1d4ed8}
+button.refresh:disabled{opacity:.55;cursor:default}
+.tabs{display:flex;gap:6px;border-bottom:1px solid #e2e8f0;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:9px 18px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab.active{color:#0f172a;border-bottom-color:#2563eb}
+.viewtoggle{display:inline-flex;gap:4px;background:#f1f5f9;border-radius:10px;padding:4px;margin-bottom:18px}
+.viewtoggle button{font-family:inherit;font-size:13px;font-weight:600;color:#64748b;background:none;border:none;padding:8px 16px;border-radius:8px;cursor:pointer}
+.viewtoggle button.on{background:#fff;color:#0f172a;box-shadow:0 1px 2px rgba(15,23,42,.08)}
+.kpis{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.kpi{flex:1;min-width:150px;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px}
+.kpi .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700}
+.kpi .val{font-size:22px;font-weight:700;margin-top:6px}
+.kpi .meta{font-size:12px;color:#64748b;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:8px}
+th,td{text-align:right;padding:9px 10px;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;font-weight:700;border-bottom:1px solid #e2e8f0}
+th:first-child,td:first-child{text-align:left}
+tr.group td{font-weight:700;background:#f8fafc}
+tr.venue td{font-weight:600}
+td.seg{padding-left:26px;color:#475569;font-weight:400}
+.pace{font-weight:600}
+.up{color:#16a34a}.down{color:#dc2626}.flat{color:#64748b}
+.na{color:#cbd5e1}
+.cell .n{font-weight:600;display:block}
+.cell .p{font-size:11px;font-weight:600;display:block;margin-top:1px}
+.dsl td{color:#94a3b8}
+.dsl td:first-child{color:#475569}
+.tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#b45309;background:#fef3c7;border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.note{font-size:12px;color:#94a3b8;margin-top:14px;line-height:1.6}
+.err{background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.5}
+.loading{color:#94a3b8;font-size:14px;padding:30px 0}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+@media(max-width:680px){body{padding:22px}.kpi{min-width:120px}}
+</style>
+</head>
+<body>
+<a class="back" href="/">← All Aqua reports</a>
+<div class="topbar">
+  <div>
+    <h1>Aqua USA — Covers Pace Tracker</h1>
+    <div class="sub">Live covers on the books vs the same point last year. Net of cancellations; bar, private dining &amp; events excluded. US Eastern.</div>
+    <div class="stamp" id="stamp">Loading…</div>
+  </div>
+  <button class="refresh" id="refresh">↻ Refresh</button>
+</div>
+
+<div class="tabs" id="monthTabs"></div>
+<div class="viewtoggle" id="viewToggle">
+  <button data-view="shift" class="on">Pace by shift</button>
+  <button data-view="channel">Booking channel</button>
+</div>
+
+<div id="content"><div class="loading">Fetching live booking data…</div></div>
+
+<div class="note">
+  <strong>How to read this.</strong>
+  <em>On books now</em> = covers currently held for that service month.
+  <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
+  <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
+  <em>Forecast</em> = LY final + (now − LY same point), a conservative guide — months still fill materially in-month, so early months read low.
+  Aqua Kyoto NYC opened ~Sep 2025 so it has no like-for-like last year: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
+</div>
+
+<footer id="footer">Covers = SevenRooms reservations (Supabase). Venues: Hutong New York, Hutong Miami, Aqua Roma, Aqua Kyoto NYC.</footer>
+
+<script>
+const VENUE_ORDER = ["GROUP (ex-AK NYC)","Aqua Roma","Hutong Miami","Hutong New York","Aqua Kyoto NYC"];
+const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
+const CHAN_ORDER = ["Website","OpenTable","Google Reserve","Resy","Other"];
+const NEW = "Aqua Kyoto NYC";
+const GROUP = "GROUP (ex-AK NYC)";
+
+let RAW = [], MONTHS = [], curMonth = 0, curView = "shift";
+
+const n = v => v == null ? 0 : Number(v);
+const fmt = v => n(v).toLocaleString("en-US");
+function paceStr(now, lyp){
+  if(lyp == null || n(lyp) === 0) return {txt:"n/a", cls:"flat"};
+  const p = n(now)/n(lyp) - 1;
+  const cls = p > 0.0005 ? "up" : (p < -0.0005 ? "down" : "flat");
+  const s = (p>=0?"+":"") + (p*100).toFixed(1) + "%";
+  return {txt:s, cls};
+}
+
+function rowsFor(view, monthIdx){ return RAW.filter(r => r.view === view && r.month_idx === monthIdx); }
+function get(view, monthIdx, venue, segment){
+  return rowsFor(view, monthIdx).find(r => r.venue === venue && r.segment === segment);
+}
+
+function renderShift(monthIdx){
+  const rows = rowsFor("shift", monthIdx);
+  const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue === v));
+  let html = `<table><thead><tr>
+    <th>Venue / shift</th><th>On books now</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th>
+  </tr></thead><tbody>`;
+  for(const v of venues){
+    const isNew = v === NEW;
+    const segs = SHIFT_ORDER.filter(s => rows.some(r => r.venue===v && r.segment===s && (n(r.on_books_now)>0 || n(r.ly_at_point)>0 || n(r.ly_final)>0)));
+    let tNow=0, tLyp=0, tLyf=0;
+    for(const s of segs){ const r=get("shift",monthIdx,v,s); tNow+=n(r&&r.on_books_now); tLyp+=n(r&&r.ly_at_point); tLyf+=n(r&&r.ly_final); }
+    const cls = v===GROUP ? "group" : (isNew ? "venue dsl" : "venue");
+    const vp = isNew ? {txt:"n/a",cls:"na"} : paceStr(tNow, tLyp);
+    const vf = isNew ? '<span class="na">n/a</span>' : fmt(tLyf + (tNow - tLyp));
+    const tag = isNew ? '<span class="tag">not LFL</span>' : '';
+    html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${fmt(tLyp)}</td>
+      <td class="pace ${vp.cls}">${vp.txt}</td><td>${fmt(tLyf)}</td><td>${vf}</td></tr>`;
+    for(const s of segs){
+      const r = get("shift",monthIdx,v,s);
+      const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point), lyf=n(r&&r.ly_final);
+      const p = isNew ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
+      const f = isNew ? '<span class="na">n/a</span>' : fmt(lyf + (now - lyp));
+      html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${fmt(lyp)}</td>
+        <td class="pace ${p.cls}">${p.txt}</td><td>${fmt(lyf)}</td><td>${f}</td></tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+
+  const g = {now:0,lyp:0,lyf:0};
+  for(const s of SHIFT_ORDER){ const r=get("shift",monthIdx,GROUP,s); g.now+=n(r&&r.on_books_now); g.lyp+=n(r&&r.ly_at_point); g.lyf+=n(r&&r.ly_final); }
+  const gp = paceStr(g.now,g.lyp);
+  const kpis = `<div class="kpis">
+    <div class="kpi"><div class="lab">Group on books (ex-AK NYC)</div><div class="val">${fmt(g.now)}</div><div class="meta">${MONTHS[monthIdx].label}</div></div>
+    <div class="kpi"><div class="lab">Pace vs LY same point</div><div class="val ${gp.cls}">${gp.txt}</div><div class="meta">${fmt(g.lyp)} held LY at this lead</div></div>
+    <div class="kpi"><div class="lab">Conservative forecast</div><div class="val">${fmt(g.lyf + (g.now - g.lyp))}</div><div class="meta">LY final ${fmt(g.lyf)}</div></div>
+  </div>`;
+  return kpis + html;
+}
+
+function renderChannel(monthIdx){
+  const rows = rowsFor("channel", monthIdx);
+  const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue === v));
+  let html = `<table><thead><tr><th>Venue</th>`;
+  for(const c of CHAN_ORDER) html += `<th>${c}</th>`;
+  html += `<th>Total</th></tr></thead><tbody>`;
+  for(const v of venues){
+    const isNew = v === NEW;
+    const cls = v===GROUP ? "group" : (isNew ? "venue dsl" : "venue");
+    const tag = isNew ? '<span class="tag">not LFL</span>' : '';
+    let rowNow=0, rowLyp=0, cells="";
+    for(const c of CHAN_ORDER){
+      const r = get("channel",monthIdx,v,c);
+      const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point);
+      rowNow+=now; rowLyp+=lyp;
+      const p = isNew ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
+      cells += `<td class="cell"><span class="n">${fmt(now)}</span><span class="p ${p.cls}">${p.txt}</span></td>`;
+    }
+    const tp = isNew ? {txt:"n/a",cls:"na"} : paceStr(rowNow,rowLyp);
+    html += `<tr class="${cls}"><td>${v}${tag}</td>${cells}<td class="cell"><span class="n">${fmt(rowNow)}</span><span class="p ${tp.cls}">${tp.txt}</span></td></tr>`;
+  }
+  html += `</tbody></table>`;
+
+  const web = get("channel",monthIdx,GROUP,"Website");
+  let gNow=0; for(const c of CHAN_ORDER){ const r=get("channel",monthIdx,GROUP,c); gNow+=n(r&&r.on_books_now); }
+  const ota = ["OpenTable","Resy","Google Reserve"].reduce((a,c)=>{const r=get("channel",monthIdx,GROUP,c);return a+n(r&&r.on_books_now);},0);
+  const webNow=n(web&&web.on_books_now), webLyp=n(web&&web.ly_at_point);
+  const wp = paceStr(webNow,webLyp);
+  const kpis = `<div class="kpis">
+    <div class="kpi"><div class="lab">Website (owned) share</div><div class="val">${gNow?((webNow/gNow*100).toFixed(0)+"%"):"–"}</div><div class="meta">${fmt(webNow)} of ${fmt(gNow)} group covers</div></div>
+    <div class="kpi"><div class="lab">Website pace vs LY</div><div class="val ${wp.cls}">${wp.txt}</div><div class="meta">direct booking widget &amp; website</div></div>
+    <div class="kpi"><div class="lab">Agency share (OT / Resy / Google)</div><div class="val">${gNow?((ota/gNow*100).toFixed(0)+"%"):"–"}</div><div class="meta">${fmt(ota)} group covers via platforms</div></div>
+  </div>`;
+  return kpis + html;
+}
+
+function render(){
+  const el = document.getElementById("content");
+  if(!RAW.length){ el.innerHTML = `<div class="err">No data returned.</div>`; return; }
+  el.innerHTML = curView === "shift" ? renderShift(curMonth) : renderChannel(curMonth);
+}
+
+function buildMonthTabs(){
+  const t = document.getElementById("monthTabs");
+  t.innerHTML = "";
+  MONTHS.forEach((m,i)=>{
+    const b = document.createElement("button");
+    b.className = "tab" + (i===curMonth?" active":"");
+    b.textContent = m.label + (i===0?" · current":"");
+    b.onclick = ()=>{ curMonth=i; [...t.children].forEach((c,j)=>c.classList.toggle("active",j===i)); render(); };
+    t.appendChild(b);
+  });
+}
+
+async function load(force){
+  const btn = document.getElementById("refresh");
+  btn.disabled = true; btn.textContent = "↻ Loading…";
+  document.getElementById("content").innerHTML = `<div class="loading">Fetching live booking data…</div>`;
+  try{
+    const res = await fetch("/.netlify/functions/usa-pace" + (force?("?ts="+Date.now()):""), {cache: force?"no-store":"default"});
+    const json = await res.json();
+    if(json.error){ throw new Error(json.error + (json.detail?(" — "+json.detail):"")); }
+    RAW = (json.rows||[]).map(r=>({...r, month_idx:Number(r.month_idx)}));
+    const seen = {};
+    MONTHS = [];
+    RAW.forEach(r=>{ if(!(r.month_idx in seen)){ seen[r.month_idx]=1; MONTHS.push({idx:r.month_idx,label:r.month_label}); }});
+    MONTHS.sort((a,b)=>a.idx-b.idx);
+    if(curMonth >= MONTHS.length) curMonth = 0;
+    const d = json.generated_at ? new Date(json.generated_at) : new Date();
+    const ds = d.toLocaleString("en-US",{timeZone:"America/New_York",day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
+    document.getElementById("stamp").textContent = "As of " + ds + " (New York) · refreshes live each load";
+    buildMonthTabs();
+    render();
+  }catch(e){
+    document.getElementById("content").innerHTML = `<div class="err"><strong>Could not load live data.</strong><br>${e.message}<br><br>If this persists, check that <code>SUPABASE_URL</code> and <code>SUPABASE_SERVICE_ROLE_KEY</code> are set in the Netlify site environment variables.</div>`;
+    document.getElementById("stamp").textContent = "Data unavailable";
+  }finally{
+    btn.disabled = false; btn.textContent = "↻ Refresh";
+  }
+}
+
+document.getElementById("refresh").onclick = ()=>load(true);
+document.querySelectorAll("#viewToggle button").forEach(b=>{
+  b.onclick = ()=>{ curView=b.dataset.view; document.querySelectorAll("#viewToggle button").forEach(x=>x.classList.toggle("on",x===b)); render(); };
+});
+load(false);
+</script>
+</body>
+</html>
