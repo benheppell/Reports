@@ -75,15 +75,15 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
   <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
   <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
   <em>Forecast</em> = LY final + (now − LY same point), a conservative guide — months still fill materially in-month, so early months read low.
-  Dim Sum Library opened ~Dec 2025 so its year-on-year is not like-for-like: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a. Events = single bookings of 30+ covers, split out so large functions don’t distort dining or channel pace.
+  Dim Sum Library opened ~Dec 2025 so its year-on-year is not like-for-like: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
 </div>
 
 <footer id="footer">GA4-independent · source: SevenRooms reservations (Supabase). Covers = reservations.covers.</footer>
 
 <script>
 const VENUE_ORDER = ["GROUP (ex-DSL)","Aqua Kyoto","Aqua Nueva","Aqua Shard","Azzurra","Hutong London","Shiro","Dim Sum Library"];
-const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner","Events"];
-const CHAN_ORDER = ["Website","OpenTable","Google Reserve","TheFork","Other","Events"];
+const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
+const CHAN_ORDER = ["Website","OpenTable","Google Reserve","TheFork","Other"];
 const DSL = "Dim Sum Library";
 
 let RAW = [], MONTHS = [], curMonth = 0, curView = "shift";

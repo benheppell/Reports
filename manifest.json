@@ -575,12 +575,6 @@
      "dates": "5–11 Jan 2026",
      "folder": "w2026-01-05"
     }
-   ],
-   "live": [
-    {
-     "label": "Covers Pace Tracker (live)",
-     "href": "/usa-pace-tracker"
-    }
    ]
   },
   {
@@ -708,6 +702,12 @@
    "slug": "paris",
    "ccy": "EUR",
    "weekly": [
+    {
+     "dates": "W21 · 22–28 Jun 2026",
+     "folder": "w2026-06-22",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "W20 · 15–21 Jun 2026",
      "folder": "w2026-06-15",
@@ -885,6 +885,10 @@
    ],
    "monthly": [],
    "trends": [
+    {
+     "dates": "22–28 Jun 2026",
+     "folder": "w2026-06-22"
+    },
     {
      "dates": "15–21 Jun 2026",
      "folder": "w2026-06-15"
