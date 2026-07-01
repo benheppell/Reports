@@ -595,6 +595,12 @@
    "ccy": "AED",
    "weekly": [
     {
+     "dates": "W25 · 22–28 Jun 2026",
+     "folder": "w2026-06-22",
+     "ads": true,
+     "dash": false
+    },
+    {
      "dates": "W24 · 15–21 Jun 2026",
      "folder": "w2026-06-15",
      "ads": true,
@@ -663,6 +669,10 @@
    ],
    "monthly": [],
    "trends": [
+    {
+     "dates": "22–28 Jun 2026",
+     "folder": "w2026-06-22"
+    },
     {
      "dates": "15–21 Jun 2026",
      "folder": "w2026-06-15"
