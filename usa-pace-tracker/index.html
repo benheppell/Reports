@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA &mdash; Covers Pace Tracker</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:1180px;margin:0 auto}
+a.back{font-size:12px;color:#7a1f2b;text-decoration:none}
+a.back:hover{text-decoration:underline}
+h1{font-size:26px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 4px;font-size:14px}
+.topbar{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.stamp{font-size:12px;color:#94a3b8;margin-top:6px}
+button.refresh{font-family:inherit;font-size:13px;font-weight:600;color:#fff;background:#7a1f2b;border:none;padding:10px 16px;border-radius:10px;cursor:pointer}
+button.refresh:hover{background:#5c1620}
+.refnote{font-size:12px;color:#7a1f2b;background:#fbeef0;border:1px solid #f3d6db;border-radius:8px;padding:8px 12px;margin-bottom:14px;display:none}
+.tabs{display:flex;gap:6px;border-bottom:1px solid #e2e8f0;margin-bottom:16px;flex-wrap:wrap}
+.tab{padding:9px 18px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px;background:none;border-top:none;border-left:none;border-right:none;font-family:inherit}
+.tab.active{color:#0f172a;border-bottom-color:#7a1f2b}
+.viewtoggle{display:inline-flex;gap:4px;background:#f1f5f9;border-radius:10px;padding:4px;margin-bottom:18px}
+.viewtoggle button{font-family:inherit;font-size:13px;font-weight:600;color:#64748b;background:none;border:none;padding:8px 16px;border-radius:8px;cursor:pointer}
+.viewtoggle button.on{background:#fff;color:#0f172a;box-shadow:0 1px 2px rgba(15,23,42,.08)}
+.kpis{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.kpi{flex:1;min-width:150px;border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px}
+.kpi .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700}
+.kpi .val{font-size:22px;font-weight:700;margin-top:6px}
+.kpi .meta{font-size:12px;color:#64748b;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:8px}
+th,td{text-align:right;padding:9px 10px;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;font-weight:700;border-bottom:1px solid #e2e8f0}
+th:first-child,td:first-child{text-align:left}
+tr.group td{font-weight:700;background:#fbeef0}
+tr.venue td{font-weight:600}
+td.seg{padding-left:26px;color:#475569;font-weight:400}
+.pace{font-weight:600}
+.up{color:#16a34a}.down{color:#dc2626}.flat{color:#64748b}
+.na{color:#cbd5e1}
+.cell .n{font-weight:600;display:block}
+.cell .p{font-size:11px;font-weight:600;display:block;margin-top:1px}
+.dsl td{color:#94a3b8}
+.dsl td:first-child{color:#475569}
+.tag{display:inline-block;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#b45309;background:#fef3c7;border-radius:5px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.note{font-size:12px;color:#94a3b8;margin-top:14px;line-height:1.6}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+@media(max-width:680px){body{padding:22px}.kpi{min-width:120px}}
+</style>
+</head>
+<body>
+<a class="back" href="/">&larr; All Aqua reports</a>
+<div class="topbar">
+  <div>
+    <h1>Aqua USA &mdash; Covers Pace Tracker</h1>
+    <div class="sub">Covers on the books vs the same point last year. Net of cancellations; bar, private dining &amp; events excluded. US Eastern.</div>
+    <div class="stamp" id="stamp">Snapshot as of 1 Jul 2026 (US Eastern) &middot; static &mdash; regenerate to refresh</div>
+  </div>
+  <button class="refresh" id="refresh">&#8635; Refresh</button>
+</div>
+<div class="refnote" id="refnote">This page is a static snapshot of the numbers as of 1 Jul 2026. To pull fresh bookings, ask for the tracker to be regenerated (it re-queries SevenRooms and rebuilds the page).</div>
+
+<div class="tabs" id="monthTabs"></div>
+<div class="viewtoggle" id="viewToggle">
+  <button data-view="shift" class="on">Pace by shift</button>
+  <button data-view="channel">Booking channel</button>
+</div>
+
+<div id="content"></div>
+
+<div class="note">
+  <strong>How to read this.</strong>
+  <em>On books now</em> = covers currently held for that service month.
+  <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
+  <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
+  <em>Forecast</em> = LY final + (now &minus; LY same point), a conservative guide &mdash; months still fill materially in-month, so early months read low.
+  Aqua Kyoto NYC opened in 2025, so its year-on-year is not like-for-like: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
+</div>
+
+<footer>GA4-independent &middot; source: SevenRooms reservations (Supabase). Covers = reservations.covers. Shift split by seating time; booking-channel view excludes walk-ins.</footer>
+
+<script>
+const RAW = [{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"OpenTable","on_books_now":10,"ly_at_point":null,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"Reception/Other","on_books_now":2,"ly_at_point":null,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"Resy","on_books_now":23,"ly_at_point":null,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"Website","on_books_now":38,"ly_at_point":null,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Roma","segment":"Google Reserve","on_books_now":141,"ly_at_point":null,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Roma","segment":"OpenTable","on_books_now":98,"ly_at_point":90,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Roma","segment":"Reception/Other","on_books_now":557,"ly_at_point":294,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Roma","segment":"Resy","on_books_now":19,"ly_at_point":87,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Aqua Roma","segment":"Website","on_books_now":422,"ly_at_point":483,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Google Reserve","on_books_now":267,"ly_at_point":204,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"OpenTable","on_books_now":414,"ly_at_point":210,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Reception/Other","on_books_now":1441,"ly_at_point":857,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Resy","on_books_now":125,"ly_at_point":220,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Website","on_books_now":890,"ly_at_point":959,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong Miami","segment":"Google Reserve","on_books_now":8,"ly_at_point":2,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong Miami","segment":"OpenTable","on_books_now":81,"ly_at_point":26,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong Miami","segment":"Reception/Other","on_books_now":48,"ly_at_point":78,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong Miami","segment":"Resy","on_books_now":38,"ly_at_point":14,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong Miami","segment":"Website","on_books_now":106,"ly_at_point":80,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong New York","segment":"Google Reserve","on_books_now":118,"ly_at_point":202,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong New York","segment":"OpenTable","on_books_now":235,"ly_at_point":94,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong New York","segment":"Reception/Other","on_books_now":836,"ly_at_point":485,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong New York","segment":"Resy","on_books_now":68,"ly_at_point":119,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"channel","venue":"Hutong New York","segment":"Website","on_books_now":362,"ly_at_point":396,"ly_final":0},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Aqua Kyoto NYC","segment":"Dinner","on_books_now":60,"ly_at_point":null,"ly_final":null},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Aqua Kyoto NYC","segment":"Lunch","on_books_now":13,"ly_at_point":null,"ly_final":null},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Aqua Roma","segment":"Dinner","on_books_now":1178,"ly_at_point":953,"ly_final":5776},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Aqua Roma","segment":"Lunch","on_books_now":120,"ly_at_point":189,"ly_final":1153},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"GROUP (ex-Aqua Kyoto)","segment":"Dinner","on_books_now":2618,"ly_at_point":2168,"ly_final":12413},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"GROUP (ex-Aqua Kyoto)","segment":"Lunch","on_books_now":689,"ly_at_point":637,"ly_final":3647},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Hutong Miami","segment":"Dinner","on_books_now":240,"ly_at_point":185,"ly_final":1485},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Hutong Miami","segment":"Lunch","on_books_now":77,"ly_at_point":63,"ly_final":664},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Hutong New York","segment":"Dinner","on_books_now":1200,"ly_at_point":1030,"ly_final":5152},{"month_idx":0,"month_label":"Jul 2026","view":"shift","venue":"Hutong New York","segment":"Lunch","on_books_now":492,"ly_at_point":385,"ly_final":1830},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"OpenTable","on_books_now":2,"ly_at_point":null,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"Resy","on_books_now":2,"ly_at_point":null,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"Website","on_books_now":14,"ly_at_point":null,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Roma","segment":"Google Reserve","on_books_now":4,"ly_at_point":null,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Roma","segment":"OpenTable","on_books_now":8,"ly_at_point":null,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Roma","segment":"Reception/Other","on_books_now":9,"ly_at_point":5,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Roma","segment":"Resy","on_books_now":9,"ly_at_point":7,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Aqua Roma","segment":"Website","on_books_now":30,"ly_at_point":35,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Google Reserve","on_books_now":11,"ly_at_point":2,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"OpenTable","on_books_now":24,"ly_at_point":10,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Reception/Other","on_books_now":82,"ly_at_point":150,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Resy","on_books_now":35,"ly_at_point":20,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Website","on_books_now":72,"ly_at_point":60,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong Miami","segment":"Reception/Other","on_books_now":12,"ly_at_point":13,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong Miami","segment":"Resy","on_books_now":6,"ly_at_point":5,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong Miami","segment":"Website","on_books_now":20,"ly_at_point":2,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong New York","segment":"Google Reserve","on_books_now":7,"ly_at_point":2,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong New York","segment":"OpenTable","on_books_now":16,"ly_at_point":10,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong New York","segment":"Reception/Other","on_books_now":61,"ly_at_point":132,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong New York","segment":"Resy","on_books_now":20,"ly_at_point":8,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"channel","venue":"Hutong New York","segment":"Website","on_books_now":22,"ly_at_point":23,"ly_final":0},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Aqua Kyoto NYC","segment":"Dinner","on_books_now":18,"ly_at_point":null,"ly_final":null},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Aqua Roma","segment":"Dinner","on_books_now":47,"ly_at_point":37,"ly_final":6826},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Aqua Roma","segment":"Lunch","on_books_now":13,"ly_at_point":10,"ly_final":1302},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"GROUP (ex-Aqua Kyoto)","segment":"Dinner","on_books_now":198,"ly_at_point":196,"ly_final":14708},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"GROUP (ex-Aqua Kyoto)","segment":"Lunch","on_books_now":29,"ly_at_point":46,"ly_final":4660},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Hutong Miami","segment":"Dinner","on_books_now":41,"ly_at_point":10,"ly_final":2042},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Hutong Miami","segment":"Lunch","on_books_now":null,"ly_at_point":10,"ly_final":1135},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Hutong New York","segment":"Dinner","on_books_now":110,"ly_at_point":149,"ly_final":5840},{"month_idx":1,"month_label":"Aug 2026","view":"shift","venue":"Hutong New York","segment":"Lunch","on_books_now":16,"ly_at_point":26,"ly_final":2223},{"month_idx":2,"month_label":"Sep 2026","view":"channel","venue":"Aqua Kyoto NYC","segment":"Website","on_books_now":3,"ly_at_point":null,"ly_final":0},{"month_idx":2,"month_label":"Sep 2026","view":"channel","venue":"Aqua Roma","segment":"Website","on_books_now":12,"ly_at_point":8,"ly_final":0},{"month_idx":2,"month_label":"Sep 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Reception/Other","on_books_now":442,"ly_at_point":173,"ly_final":0},{"month_idx":2,"month_label":"Sep 2026","view":"channel","venue":"GROUP (ex-Aqua Kyoto)","segment":"Website","on_books_now":12,"ly_at_point":8,"ly_final":0},{"month_idx":2,"month_label":"Sep 2026","view":"channel","venue":"Hutong New York","segment":"Reception/Other","on_books_now":442,"ly_at_point":173,"ly_final":0},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Aqua Kyoto NYC","segment":"Dinner","on_books_now":3,"ly_at_point":null,"ly_final":581},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Aqua Kyoto NYC","segment":"Lunch","on_books_now":null,"ly_at_point":null,"ly_final":72},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Aqua Roma","segment":"Dinner","on_books_now":12,"ly_at_point":6,"ly_final":6833},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Aqua Roma","segment":"Lunch","on_books_now":null,"ly_at_point":2,"ly_final":1258},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"GROUP (ex-Aqua Kyoto)","segment":"Dinner","on_books_now":454,"ly_at_point":179,"ly_final":14744},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"GROUP (ex-Aqua Kyoto)","segment":"Lunch","on_books_now":null,"ly_at_point":2,"ly_final":3793},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Hutong Miami","segment":"Dinner","on_books_now":null,"ly_at_point":null,"ly_final":1617},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Hutong Miami","segment":"Lunch","on_books_now":null,"ly_at_point":null,"ly_final":1049},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Hutong New York","segment":"Dinner","on_books_now":442,"ly_at_point":173,"ly_final":6294},{"month_idx":2,"month_label":"Sep 2026","view":"shift","venue":"Hutong New York","segment":"Lunch","on_books_now":null,"ly_at_point":null,"ly_final":1486}];
+const VENUE_ORDER = ["GROUP (ex-Aqua Kyoto)", "Hutong New York", "Aqua Roma", "Hutong Miami", "Aqua Kyoto NYC"];
+const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
+const CHAN_ORDER = ["Website", "OpenTable", "Resy", "Google Reserve", "Reception/Other"];
+const OTA_CHANS = ["OpenTable", "Resy", "Google Reserve"];
+const NA_VENUES = ["Aqua Kyoto NYC"];
+const GROUP_NAME = "GROUP (ex-Aqua Kyoto)";
+
+let MONTHS = [], curMonth = 0, curView = "shift";
+const n = v => v == null ? 0 : Number(v);
+const fmt = v => n(v).toLocaleString("en-US");
+function paceStr(now, lyp){
+  if(lyp == null || n(lyp) === 0) return {txt:"n/a", cls:"flat"};
+  const p = n(now)/n(lyp) - 1;
+  const cls = p > 0.0005 ? "up" : (p < -0.0005 ? "down" : "flat");
+  return {txt:(p>=0?"+":"") + (p*100).toFixed(1) + "%", cls};
+}
+const isNA = v => NA_VENUES.includes(v);
+function rowsFor(view, mi){ return RAW.filter(r => r.view===view && r.month_idx===mi); }
+function get(view, mi, venue, seg){ return rowsFor(view,mi).find(r => r.venue===venue && r.segment===seg); }
+
+function renderShift(mi){
+  const rows = rowsFor("shift", mi);
+  const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue===v));
+  let html = `<table><thead><tr>
+    <th>Venue / shift</th><th>On books now</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th>
+  </tr></thead><tbody>`;
+  for(const v of venues){
+    const na = isNA(v);
+    const segs = SHIFT_ORDER.filter(s => rows.some(r => r.venue===v && r.segment===s && (n(r.on_books_now)>0||n(r.ly_at_point)>0||n(r.ly_final)>0)));
+    let tNow=0,tLyp=0,tLyf=0;
+    for(const s of segs){ const r=get("shift",mi,v,s); tNow+=n(r&&r.on_books_now); tLyp+=n(r&&r.ly_at_point); tLyf+=n(r&&r.ly_final); }
+    const cls = v===GROUP_NAME ? "group" : (na ? "venue dsl" : "venue");
+    const vp = na ? {txt:"n/a",cls:"na"} : paceStr(tNow,tLyp);
+    const vf = na ? '<span class="na">n/a</span>' : fmt(tLyf + (tNow - tLyp));
+    const tag = na ? '<span class="tag">new</span>' : '';
+    html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${na?'<span class="na">n/a</span>':fmt(tLyp)}</td>
+      <td class="pace ${vp.cls}">${vp.txt}</td><td>${na?'<span class="na">n/a</span>':fmt(tLyf)}</td><td>${vf}</td></tr>`;
+    for(const s of segs){
+      const r=get("shift",mi,v,s);
+      const now=n(r&&r.on_books_now),lyp=n(r&&r.ly_at_point),lyf=n(r&&r.ly_final);
+      const p = na ? {txt:"n/a",cls:"na"} : paceStr(now,lyp);
+      const f = na ? '<span class="na">n/a</span>' : fmt(lyf + (now - lyp));
+      html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${na?'<span class="na">n/a</span>':fmt(lyp)}</td>
+        <td class="pace ${p.cls}">${p.txt}</td><td>${na?'<span class="na">n/a</span>':fmt(lyf)}</td><td>${f}</td></tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  const g={now:0,lyp:0,lyf:0};
+  for(const s of SHIFT_ORDER){ const r=get("shift",mi,GROUP_NAME,s); g.now+=n(r&&r.on_books_now); g.lyp+=n(r&&r.ly_at_point); g.lyf+=n(r&&r.ly_final); }
+  const gp=paceStr(g.now,g.lyp);
+  const kpis=`<div class="kpis">
+    <div class="kpi"><div class="lab">Group on books (comparable)</div><div class="val">${fmt(g.now)}</div><div class="meta">${MONTHS[mi].label}</div></div>
+    <div class="kpi"><div class="lab">Pace vs LY same point</div><div class="val ${gp.cls}">${gp.txt}</div><div class="meta">${fmt(g.lyp)} held LY at this lead</div></div>
+    <div class="kpi"><div class="lab">Conservative forecast</div><div class="val">${fmt(g.lyf + (g.now - g.lyp))}</div><div class="meta">LY final ${fmt(g.lyf)}</div></div>
+  </div>`;
+  return kpis + html;
+}
+
+function renderChannel(mi){
+  const rows = rowsFor("channel", mi);
+  const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue===v));
+  let html = `<table><thead><tr><th>Venue</th>`;
+  for(const c of CHAN_ORDER) html += `<th>${c}</th>`;
+  html += `<th>Total</th></tr></thead><tbody>`;
+  for(const v of venues){
+    const na=isNA(v);
+    const cls = v===GROUP_NAME ? "group" : (na ? "venue dsl" : "venue");
+    const tag = na ? '<span class="tag">new</span>' : '';
+    let rowNow=0,rowLyp=0,cells="";
+    for(const c of CHAN_ORDER){
+      const r=get("channel",mi,v,c);
+      const now=n(r&&r.on_books_now),lyp=n(r&&r.ly_at_point);
+      rowNow+=now; rowLyp+=lyp;
+      const p = na ? {txt:"n/a",cls:"na"} : paceStr(now,lyp);
+      cells += `<td class="cell"><span class="n">${fmt(now)}</span><span class="p ${p.cls}">${p.txt}</span></td>`;
+    }
+    const tp = na ? {txt:"n/a",cls:"na"} : paceStr(rowNow,rowLyp);
+    html += `<tr class="${cls}"><td>${v}${tag}</td>${cells}<td class="cell"><span class="n">${fmt(rowNow)}</span><span class="p ${tp.cls}">${tp.txt}</span></td></tr>`;
+  }
+  html += `</tbody></table>`;
+  const web=get("channel",mi,GROUP_NAME,"Website");
+  let gNow=0; for(const c of CHAN_ORDER){ const r=get("channel",mi,GROUP_NAME,c); gNow+=n(r&&r.on_books_now); }
+  const ota=OTA_CHANS.reduce((a,c)=>{const r=get("channel",mi,GROUP_NAME,c);return a+n(r&&r.on_books_now);},0);
+  const webNow=n(web&&web.on_books_now),webLyp=n(web&&web.ly_at_point);
+  const wp=paceStr(webNow,webLyp);
+  const kpis=`<div class="kpis">
+    <div class="kpi"><div class="lab">Website (owned) share</div><div class="val">${gNow?((webNow/gNow*100).toFixed(0)+"%"):"&ndash;"}</div><div class="meta">${fmt(webNow)} of ${fmt(gNow)} advance covers</div></div>
+    <div class="kpi"><div class="lab">Website pace vs LY</div><div class="val ${wp.cls}">${wp.txt}</div><div class="meta">direct booking widget &amp; landing pages</div></div>
+    <div class="kpi"><div class="lab">Third-party share</div><div class="val">${gNow?((ota/gNow*100).toFixed(0)+"%"):"&ndash;"}</div><div class="meta">${fmt(ota)} advance covers via OpenTable / Resy / Google</div></div>
+  </div>`;
+  return kpis + html;
+}
+
+function render(){
+  document.getElementById("content").innerHTML = curView==="shift" ? renderShift(curMonth) : renderChannel(curMonth);
+}
+function buildMonthTabs(){
+  const t=document.getElementById("monthTabs"); t.innerHTML="";
+  MONTHS.forEach((m,i)=>{
+    const b=document.createElement("button");
+    b.className="tab"+(i===curMonth?" active":"");
+    b.textContent=m.label+(i===0?" · current":"");
+    b.onclick=()=>{ curMonth=i; [...t.children].forEach((c,j)=>c.classList.toggle("active",j===i)); render(); };
+    t.appendChild(b);
+  });
+}
+(function init(){
+  const seen={};
+  RAW.forEach(r=>{ r.month_idx=Number(r.month_idx); if(!(r.month_idx in seen)){ seen[r.month_idx]=1; MONTHS.push({idx:r.month_idx,label:r.month_label}); }});
+  MONTHS.sort((a,b)=>a.idx-b.idx);
+  buildMonthTabs(); render();
+})();
+document.getElementById("refresh").onclick = ()=>{ const el=document.getElementById("refnote"); el.style.display = el.style.display==="block"?"none":"block"; };
+document.querySelectorAll("#viewToggle button").forEach(b=>{
+  b.onclick=()=>{ curView=b.dataset.view; document.querySelectorAll("#viewToggle button").forEach(x=>x.classList.toggle("on",x===b)); render(); };
+});
+</script>
+</body>
+</html>

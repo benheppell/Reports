@@ -1,0 +1,171 @@
+{
+  "venue": "Shiro Sushi",
+  "ga4": {
+    "totalUsers": {
+      "202606": 5710,
+      "202605": 4750,
+      "202506": 8397
+    },
+    "bookings": {
+      "202606": 538,
+      "202605": 409,
+      "202506": 462
+    }
+  },
+  "meta": {
+    "totals": {
+      "202606": {
+        "spend": 1729.3,
+        "bk": 121
+      },
+      "202605": {
+        "spend": 1785.19,
+        "bk": 111
+      },
+      "202506": {
+        "spend": 1920.19,
+        "bk": 89
+      }
+    },
+    "ads": [
+      [
+        "Unlimited Brunch 03.02.2025",
+        "pro",
+        918.05,
+        182077,
+        2972,
+        1.63,
+        69,
+        "931621f4-ae7a-427c-ab84-c1eb2351ae88.jpg",
+        "931621f4-ae7a-427c-ab84-c1eb2351ae88.jpg"
+      ],
+      [
+        "Brunch, but make it extra fun - Post 18.3.2026",
+        "pro",
+        26.09,
+        4569,
+        23,
+        0.5,
+        2,
+        "246d4064-a5cd-4cb3-ad63-1cc55c0171fb.jpg",
+        "246d4064-a5cd-4cb3-ad63-1cc55c0171fb.jpg"
+      ],
+      [
+        "Lunch Sets V1 07.04.2026",
+        "pro",
+        62.89,
+        13089,
+        157,
+        1.2,
+        1,
+        "3f80bc61-f8a9-48c6-a1cc-7e7b5a7873a4.jpg",
+        "3f80bc61-f8a9-48c6-a1cc-7e7b5a7873a4.jpg"
+      ],
+      [
+        "Lunch Sets V3 07.04.2026",
+        "pro",
+        68.71,
+        13413,
+        158,
+        1.18,
+        5,
+        "bacae419-64d6-497d-b3a5-6e9dd24c3967.jpg",
+        "bacae419-64d6-497d-b3a5-6e9dd24c3967.jpg"
+      ],
+      [
+        "Lunch Sets V4 07.04.2026",
+        "pro",
+        23.92,
+        4488,
+        61,
+        1.36,
+        0,
+        "168bcbb7-55fb-43bd-b4d1-c001384c5468.jpg",
+        "168bcbb7-55fb-43bd-b4d1-c001384c5468.jpg"
+      ],
+      [
+        "Dinner Video 19.06.2026",
+        "pro",
+        166.67,
+        30176,
+        557,
+        1.85,
+        11,
+        "3575a95a-dafc-4425-a77d-6b61750e800a.mp4",
+        "3575a95a-dafc-4425-a77d-6b61750e800a_0f03ebba-579f-41a4-a4e3-b02184cf620e.jpg"
+      ],
+      [
+        "Ramen Fridays at Shiro Sushi - 22.06.2026",
+        "pro",
+        462.97,
+        100835,
+        1752,
+        1.74,
+        33,
+        "fa7eaf49-3dba-4e01-8a68-764ba6a6ad4b.mp4",
+        "fa7eaf49-3dba-4e01-8a68-764ba6a6ad4b_20d81a1e-bfca-4863-8c7a-0a8a82985adc.jpg"
+      ]
+    ]
+  },
+  "google": {
+    "totals": {
+      "202606": {
+        "cost": 2225.69,
+        "conv": 532.067277
+      },
+      "202605": {
+        "cost": 2438.43,
+        "conv": 464.743092
+      },
+      "202506": {
+        "cost": 2968.32,
+        "conv": 887.442101
+      }
+    },
+    "ads": [
+      [
+        "Search > Brand · Brand",
+        399.54,
+        1698,
+        523,
+        38.619294
+      ],
+      [
+        "Search > Restaurant · Sushi Restaurant",
+        252.77,
+        16866,
+        716,
+        33.333333
+      ],
+      [
+        "Search > Private Events · Private Events",
+        231.72,
+        10248,
+        189,
+        10
+      ],
+      [
+        "Search > Restaurant · Sushi > Location",
+        157.79,
+        4951,
+        273,
+        15.033399
+      ],
+      [
+        "Search > Private Events · Private Events",
+        151.11,
+        1892,
+        47,
+        4
+      ],
+      [
+        "Search > Restaurant · Generic and Special Occasion",
+        86.24,
+        16001,
+        224,
+        15.5
+      ]
+    ],
+    "conv_basis": "Google conversions in June combine SevenRooms/website booking actions (Aqua Shiro UK sevenrooms_booking_complete ~33.1, Aqua Shiro - SST booking_complete ~3) with Store visits (~487.9), which dominate the total."
+  }
+}
