@@ -58,7 +58,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
     <div class="sub">Live covers on the books vs the same point last year. Net of cancellations; bar, private dining &amp; large groups (30+) excluded. Asia/Hong Kong.</div>
     <div class="stamp" id="stamp">Loading&hellip;</div>
   </div>
-  <button class="refresh" id="refresh">&#8635; Refresh</button>
+  <button class="refresh" id="refresh">↻ Refresh</button>
 </div>
 
 <div class="tabs" id="monthTabs"></div>
@@ -193,7 +193,7 @@ function buildMonthTabs(){
 }
 async function load(force){
   const btn=document.getElementById("refresh");
-  btn.disabled=true; btn.textContent="&#8635; Loading…";
+  btn.disabled=true; btn.textContent="↻ Loading…";
   document.getElementById("content").innerHTML=`<div class="loading">Fetching live booking data…</div>`;
   try{
     const res=await fetch(ENDPOINT + (force?("&ts="+Date.now()):""), {cache: force?"no-store":"default"});
@@ -211,7 +211,7 @@ async function load(force){
   }catch(e){
     document.getElementById("content").innerHTML=`<div class="err"><strong>Could not load live data.</strong><br>${e.message}<br><br>If this persists, check that <code>SUPABASE_URL</code> and <code>SUPABASE_SERVICE_ROLE_KEY</code> are set in the Netlify site environment variables.</div>`;
     document.getElementById("stamp").textContent="Data unavailable";
-  }finally{ btn.disabled=false; btn.textContent="&#8635; Refresh"; }
+  }finally{ btn.disabled=false; btn.textContent="↻ Refresh"; }
 }
 document.getElementById("refresh").onclick=()=>load(true);
 document.querySelectorAll("#viewToggle button").forEach(b=>{
