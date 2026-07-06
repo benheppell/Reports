@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA - Venue Deep Dive - W26 2026</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9}
+tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600}
+.neg{color:#dc2626;font-weight:600}
+.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706} .red h2{background:#dc2626}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 0 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.tabs{display:flex;gap:6px;margin:18px 0 0}
+.tab{padding:9px 18px;border:1px solid #e2e8f0;border-bottom:none;border-radius:10px 10px 0 0;cursor:pointer;font-weight:600;font-size:13px;color:#64748b;background:#f8fafc}
+.tab.active{color:#0f172a;background:#fff;border-color:#cbd5e1}
+.panel{display:none;border-top:1px solid #cbd5e1;padding-top:10px} .panel.active{display:block}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:14px}
+.chartbox{border:1px solid #e2e8f0;border-radius:12px;padding:14px}
+.chartbox h3{font-size:13px;margin-bottom:8px;color:#334155}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+.venue-block{margin-top:24px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.venue-block .vh{padding:12px 16px;font-weight:700;font-size:14px;color:#fff}
+.venue-block .vb{padding:12px 16px}
+.vh.red{background:#dc2626} .vh.orange{background:#ea580c} .vh.amber{background:#d97706}
+.kgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0}
+.kitem{background:#f8fafc;border-radius:8px;padding:10px 12px}
+.kitem .kl{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.4px}
+.kitem .kv{font-size:18px;font-weight:700;font-family:'JetBrains Mono',monospace;margin-top:2px}
+.kitem .km{font-size:11px;color:#94a3b8;margin-top:2px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}.kgrid{grid-template-columns:repeat(2,1fr)}}
+</style></head><body>
+<div><a class="back" href="../index.html">&larr; All reports</a>
+<h1 style="margin-top:8px">Venue Deep Dive &mdash; Hutong NYC &middot; Aqua NYC &middot; Hutong Miami
+<span class="pill" style="background:#fee2e2;color:#991b1b;vertical-align:middle;margin-left:8px">NEGATIVE YTD VARIANCE &mdash; W26</span></h1>
+<div class="sub">29 Jun&ndash;5 Jul 2026 (Mon&ndash;Sun) &middot; USD &middot; venues with negative YTD variance &middot; WoW vs 22&ndash;28 Jun 2026 &middot; YoY vs 30 Jun&ndash;6 Jul 2025</div></div>
+
+<div class="tabs"><div class="tab active" onclick="show(0)">Performance</div><div class="tab" onclick="show(1)">Weekly Trends</div></div>
+
+<div class="panel active" id="p0">
+<div class="cards">
+<div class="card"><div class="lab">Deep-dive Bookings</div><div class="big">393</div><div class="meta">Aqua NYC 211 + Hutong NYC 88 + Miami 94 &middot; WoW <span class="neg">&#9660; 22.2%</span></div></div>
+<div class="card"><div class="lab">Deep-dive Ad Spend</div><div class="big">$13,230</div><div class="meta">Cost per booking $33.7</div></div>
+<div class="card"><div class="lab">Deep-dive Users</div><div class="big">10,588</div><div class="meta">Blended User CVR 3.7%</div></div>
+<div class="card"><div class="lab">YTD vs Target</div><div class="big">-50.0%</div><div class="meta">Aqua -44.1% &middot; Hutong NYC -63.0% &middot; Miami -28.2%</div></div>
+</div>
+
+<!-- Hutong NYC deep dive -->
+<div class="venue-block">
+<div class="vh red">Hutong NYC &mdash; CRITICAL: -70.6% YoY, -40.5% WoW &mdash; 88 bookings vs 405 target</div>
+<div class="vb">
+<div class="kgrid">
+<div class="kitem"><div class="kl">GA4 Bookings</div><div class="kv">88</div><div class="km">Target 405 &middot; -78.3%</div></div>
+<div class="kitem"><div class="kl">YoY Bookings</div><div class="kv neg">-70.6%</div><div class="km">88 vs 299 (Jun 2025)</div></div>
+<div class="kitem"><div class="kl">WoW Bookings</div><div class="kv neg">-40.5%</div><div class="km">88 vs 148 W25</div></div>
+<div class="kitem"><div class="kl">Users</div><div class="kv">1,703</div><div class="km">Sessions 2,197</div></div>
+<div class="kitem"><div class="kl">User CVR</div><div class="kv">5.17%</div><div class="km">Sess CVR 4.01%</div></div>
+<div class="kitem"><div class="kl">Avg Session</div><div class="kv">3:22</div><div class="km">Bounce 41.7%</div></div>
+</div>
+<div class="obs"><b>Meta Ads</b><ul>
+<li>Spend $2,201.59 &middot; Schedules (pixel custom) 8 &middot; CPA <span class="neg">$275.2</span> (far above the $50 poor threshold &mdash; worst in the portfolio)</li>
+<li>WoW: spend eased $3,034 &rarr; $2,202 but schedules fell 13 &rarr; 8 &mdash; efficiency deteriorated further; the account is spending heavily for almost no measured bookings</li>
+<li>YoY: last year drove far more volume at a fraction of the spend &mdash; the Meta engine here is structurally broken and should be paused/rebuilt</li>
+</ul></div>
+<div class="obs"><b>Google Ads</b><ul>
+<li>Spend $664.41 &middot; Conversions 23.9 &middot; CPA <span class="pos">$27.8</span> (below the $30 poor line &mdash; the only efficient channel at this venue, improved from $72.8 W25)</li>
+<li>Google was scaled down sharply from $2,394 W25 and efficiency recovered to $27.8 &mdash; this is the engine to protect and grow</li>
+<li>Brand / Restaurant Type Search remain the productive lines; PMax was reined in relative to last week</li>
+</ul></div>
+<div class="obs"><b>Diagnosis</b><ul>
+<li>The deepest concern in the portfolio: bookings fell 40.5% WoW and are down 70.6% YoY on just 1,703 users into the July 4th holiday. Users nearly halved from W25's 3,457.</li>
+<li>Meta at $275/schedule is indefensible &mdash; pause the broad reach push immediately and reallocate to the efficient Google Brand/Restaurant Type Search, which is running at $27.8/conv.</li>
+<li>The structural gap to LY is now the largest in the portfolio and widening &mdash; organic search recovery and tracking integrity remain the priority alongside the paid reset.</li>
+</ul></div>
+</div></div>
+
+<!-- Aqua NYC deep dive -->
+<div class="venue-block">
+<div class="vh amber">Aqua NYC &mdash; BELOW TARGET but +14.7% YoY, -28.5% WoW &mdash; 211 bookings vs 424 target</div>
+<div class="vb">
+<div class="kgrid">
+<div class="kitem"><div class="kl">Combined Bk</div><div class="kv">211</div><div class="km">Roma + Kyoto NYC (new 2026) &middot; Target 424 &middot; -50.2%</div></div>
+<div class="kitem"><div class="kl">YoY Bookings</div><div class="kv pos">+14.7%</div><div class="km">211 vs 184 (Jun 2025)</div></div>
+<div class="kitem"><div class="kl">WoW Bookings</div><div class="kv neg">-28.5%</div><div class="km">211 vs 295 W25</div></div>
+<div class="kitem"><div class="kl">Users</div><div class="kv">6,584</div><div class="km">Sessions 7,698</div></div>
+<div class="kitem"><div class="kl">User CVR</div><div class="kv">3.20%</div><div class="km">Sess CVR 2.74%</div></div>
+<div class="kitem"><div class="kl">Avg Session</div><div class="kv">2:06</div><div class="km">Bounce 56.2%</div></div>
+</div>
+<div class="obs"><b>Meta Ads</b><ul>
+<li>Spend $3,041.35 &middot; Schedules (pixel custom) 103 &middot; CPA $29.5 (within the $25&ndash;$50 band &mdash; the healthiest Meta account in the portfolio)</li>
+<li>WoW: spend normalised $4,105 &rarr; $3,041 and still delivered 103 schedules at $29.5 &mdash; efficiency held well through the holiday week</li>
+<li>The Aqua NYC Meta account is fully reconnected, so schedules and CPA are measured directly</li>
+</ul></div>
+<div class="obs"><b>Google Ads</b><ul>
+<li>Spend $811.27 &middot; Conversions 24.0 &middot; CPA <span class="neg">$33.8</span> (above the $15 good line but on modest spend &mdash; scaled back sharply from $3,394 W25)</li>
+<li>Google spend was normalised after last week's 10x summer-Search push; CPA improved from $44.1 as the budget was reined in</li>
+<li>Blended CPB of $18.3 is the best in the portfolio &mdash; the efficient paid engine of USA</li>
+</ul></div>
+<div class="obs"><b>Action items</b><ul>
+<li>Still ahead of LY (+14.7%) but softened 28.5% WoW off last week's 295 peak into the July 4th holiday &mdash; a seasonal dip rather than a structural problem. Users eased to 6,584 from 8,065.</li>
+<li>Keep the efficient Meta level ($3,041 / 103 sched / $29.5) and the trimmed Google budget; re-scale the summer Search lines once holiday demand normalises.</li>
+<li>56% bounce on 7,698 sessions remains the CVR ceiling &mdash; A/B test landing pages, prioritising Paid Social and Paid Search segments.</li>
+</ul></div>
+</div></div>
+
+<!-- Hutong Miami deep dive -->
+<div class="venue-block">
+<div class="vh amber">Hutong Miami &mdash; BELOW TARGET but +10.6% YoY, +51.6% WoW &mdash; 94 bookings vs 117 target</div>
+<div class="vb">
+<div class="kgrid">
+<div class="kitem"><div class="kl">GA4 Bookings</div><div class="kv">94</div><div class="km">Target 117 (derived) &middot; -19.7%</div></div>
+<div class="kitem"><div class="kl">YoY Bookings</div><div class="kv pos">+10.6%</div><div class="km">94 vs 85 (Jun 2025)</div></div>
+<div class="kitem"><div class="kl">WoW Bookings</div><div class="kv pos">+51.6%</div><div class="km">94 vs 62 W25</div></div>
+<div class="kitem"><div class="kl">Users</div><div class="kv">2,301</div><div class="km">Sessions 2,766</div></div>
+<div class="kitem"><div class="kl">User CVR</div><div class="kv">4.09%</div><div class="km">Sess CVR 3.40%</div></div>
+<div class="kitem"><div class="kl">Avg Session</div><div class="kv">2:06</div><div class="km">Bounce 47.3%</div></div>
+</div>
+<div class="obs"><b>Meta Ads</b><ul>
+<li>Spend $6,002.85 &middot; Schedules 54 &middot; CPA <span class="neg">$111.2</span> (well above the $50 poor threshold &mdash; the step-up came at poor unit economics)</li>
+<li>WoW: spend was scaled hard $1,034 &rarr; $6,003 and schedules rose 18 &rarr; 54 &mdash; this drove the +52% booking lift but at a much higher CPA</li>
+<li>YoY: bookings ahead of last year (+11%), but the paid cost to get there is high &mdash; review sustainability of the spend level</li>
+</ul></div>
+<div class="obs"><b>Google Ads</b><ul>
+<li>Spend $508.19 &middot; Conversions 8.0 &middot; CPA <span class="neg">$63.5</span> (above the $30 poor threshold)</li>
+<li>Spend essentially flat WoW ($535 &rarr; $508); conversions eased 10 &rarr; 8 &mdash; Google is the smaller lever here</li>
+<li>Local actions (directions, menu views, Book Now) continue to drive healthy walk-in intent &mdash; see trends walk-in signal panel</li>
+</ul></div>
+<div class="obs"><b>Diagnosis</b><ul>
+<li>The standout this week: +52% WoW and +11% YoY, with users up strongly to 2,301 (from 1,286) &mdash; the aggressive Meta reach push clearly lifted volume.</li>
+<li>The caveat is efficiency: Meta $111/sched and Google $63.5/conv are both well above threshold, and blended CPB rose to $69.3. Confirm whether the spend step-up is a sustainable strategy or a one-week holiday push.</li>
+<li>CVR of 4.1% remains healthy; the venue's growth lever is reach, and this week proved it responds &mdash; but at a cost worth managing.</li>
+</ul></div>
+</div></div>
+</div>
+
+<div class="panel" id="p1">
+<p class="sub" style="margin:6px 0 14px">8-week trend (w/c 11 May to 29 Jun, FY weeks W19&ndash;W26) across GA4 bookings, user CVR, and users for the negative-YTD venues.</p>
+<div class="grid2">
+<div class="chartbox"><h3>GA4 Bookings (Weekly)</h3><canvas id="cBook"></canvas></div>
+<div class="chartbox"><h3>User Conversion Rate (%)</h3><canvas id="cCvr"></canvas></div>
+<div class="chartbox"><h3>Users (Weekly)</h3><canvas id="cUsers"></canvas></div>
+<div class="chartbox"><h3>Bookings vs Weekly Target</h3><canvas id="cTgt"></canvas></div>
+</div>
+<table style="margin-top:18px"><thead><tr><th>Venue</th><th>Metric</th><th>11 May</th><th>18 May</th><th>25 May</th><th>1 Jun</th><th>8 Jun</th><th>15 Jun</th><th>22 Jun</th><th>29 Jun</th><th>Trend</th></tr></thead>
+<tbody>
+<tr><td>Aqua NYC</td><td>Bookings</td><td class="num">238</td><td class="num">222</td><td class="num">296</td><td class="num">348</td><td class="num">225</td><td class="num">206</td><td class="num">295</td><td class="num">211</td><td class="num"><span class="neg">-11%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">3.3%</td><td class="num">3.6%</td><td class="num">3.0%</td><td class="num">3.1%</td><td class="num">4.5%</td><td class="num">4.9%</td><td class="num">3.5%</td><td class="num">3.0%</td><td class="num"><span class="neg">-0.3pp</span></td></tr>
+<tr><td>Hutong NYC</td><td>Bookings</td><td class="num">168</td><td class="num">124</td><td class="num">124</td><td class="num">124</td><td class="num">95</td><td class="num">130</td><td class="num">148</td><td class="num">88</td><td class="num"><span class="neg">-48%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">6.0%</td><td class="num">5.1%</td><td class="num">5.4%</td><td class="num">5.6%</td><td class="num">4.5%</td><td class="num">5.7%</td><td class="num">3.9%</td><td class="num">4.6%</td><td class="num"><span class="neg">-1.4pp</span></td></tr>
+<tr><td>Hutong Miami</td><td>Bookings</td><td class="num">52</td><td class="num">33</td><td class="num">37</td><td class="num">34</td><td class="num">34</td><td class="num">54</td><td class="num">62</td><td class="num">94</td><td class="num"><span class="pos">+81%</span></td></tr>
+<tr><td></td><td>User CVR</td><td class="num">2.5%</td><td class="num">2.7%</td><td class="num">3.2%</td><td class="num">2.6%</td><td class="num">2.8%</td><td class="num">4.3%</td><td class="num">4.4%</td><td class="num">3.8%</td><td class="num"><span class="pos">+1.3pp</span></td></tr>
+</tbody></table>
+</div>
+
+<footer>Trend window w/c 11 May - 29 Jun 2026 (FY weeks W19-W26). Deep-dive venues = those with negative YTD variance (Aqua NYC, Hutong NYC, Hutong Miami &mdash; all three negative vs the targets.json strategic plan). Trend users are summed from daily GA4 totalUsers; the W26 KPI cards use the de-duplicated weekly aggregate (Aqua 6,584 / Hutong 1,703 / Miami 2,301). W26 bookings reconcile exactly (211 / 88 / 94). Aqua NYC CVR shown is combined Roma+Kyoto. Aqua NYC Meta ad account reconnected; Meta figures are actual. Weekly targets time-phased (2 June days + 5 July days). Generated 6 July 2026.</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+var LAB=["11 May","18 May","25 May","1 Jun","8 Jun","15 Jun","22 Jun","29 Jun"],
+COL={"Aqua NYC":"#EF4444","Hutong NYC":"#F59E0B","Hutong Miami":"#3B82F6"},
+BOOK={"Aqua NYC":[238,222,296,348,225,206,295,211],"Hutong NYC":[168,124,124,124,95,130,148,88],"Hutong Miami":[52,33,37,34,34,54,62,94]},
+CVR={"Aqua NYC":[3.27,3.63,3.01,3.10,4.45,4.93,3.45,3.01],"Hutong NYC":[6.02,5.12,5.40,5.55,4.53,5.72,3.86,4.64],"Hutong Miami":[2.49,2.65,3.22,2.60,2.84,4.26,4.44,3.80]},
+USERS={"Aqua NYC":[7283,6120,9825,11215,5051,4181,8544,7000],"Hutong NYC":[2791,2420,2295,2236,2096,2274,3837,1896],"Hutong Miami":[2090,1245,1148,1309,1196,1267,1395,2474]},
+TGT={"Aqua NYC":424,"Hutong NYC":405,"Hutong Miami":117};
+var drawn=false;
+function ds(m){return Object.keys(m).map(function(n){return{label:n,data:m[n],borderColor:COL[n],backgroundColor:COL[n],tension:.3,fill:false};});}
+function show(i){document.querySelectorAll('.tab').forEach(function(t,j){t.classList.toggle('active',j==i);});document.querySelectorAll('.panel').forEach(function(p,j){p.classList.toggle('active',j==i);});if(i==1&&!drawn){drawn=true;render();}}
+function render(){var o={responsive:true,plugins:{legend:{labels:{boxWidth:12,font:{size:11}}}},scales:{x:{grid:{display:false}}}};
+new Chart(cBook,{type:'line',data:{labels:LAB,datasets:ds(BOOK)},options:o});
+new Chart(cCvr,{type:'line',data:{labels:LAB,datasets:ds(CVR)},options:Object.assign({},o,{scales:{y:{ticks:{callback:function(v){return v+'%';}}}}})});
+new Chart(cUsers,{type:'line',data:{labels:LAB,datasets:ds(USERS)},options:o});
+var names=Object.keys(BOOK);
+new Chart(cTgt,{type:'bar',data:{labels:names,datasets:[{label:'W26 Bookings',data:names.map(function(n){return BOOK[n][BOOK[n].length-1];}),backgroundColor:names.map(function(n){return COL[n];})},{label:'Weekly Target',type:'line',data:names.map(function(n){return TGT[n];}),borderColor:'#0f172a',borderDash:[5,4],pointStyle:'rectRot',pointRadius:6,fill:false}]},options:o});}
+</script>
+</body></html>

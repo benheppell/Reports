@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA — Venue Trends</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:32px;max-width:1120px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:24px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 18px;font-size:13.5px;line-height:1.5}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:15px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.fy{font-size:12px;font-weight:700;color:#475569;background:#f1f5f9;padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+.chip.green{background:#ecfdf5;color:#047857}.chip.green .dot{background:#10b981}
+.chip.amber{background:#fffbeb;color:#b45309}.chip.amber .dot{background:#f59e0b}
+.chip.red{background:#fef2f2;color:#b91c1c}.chip.red .dot{background:#ef4444}
+.chip.blue{background:#eff6ff;color:#1d4ed8}.chip.blue .dot{background:#3b82f6}
+.narr{background:#f8fafc;border:1px solid #eef2f6;border-left:3px solid #2563eb;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.55;color:#1e293b;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid #e7ecf2;border-radius:12px;padding:13px 14px 11px}
+.card .lab{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b}
+.card .lab .sh{font-weight:600;color:#b6c0cc;letter-spacing:0;text-transform:none}
+.snote{font-size:12px;color:#94a3b8;font-style:italic;margin:-8px 0 16px;line-height:1.45}
+.card .row{display:flex;align-items:baseline;justify-content:space-between;margin:5px 0 9px}
+.card .val{font-family:'JetBrains Mono',monospace;font-size:21px;font-weight:600;color:#0f172a}
+.badge{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:7px;white-space:nowrap}
+.badge.up{background:#ecfdf5;color:#047857}.badge.down{background:#fef2f2;color:#b91c1c}.badge.flat{background:#f1f5f9;color:#475569}
+.cv{position:relative}
+.cv svg{display:block;width:100%;height:60px}
+.ticks{position:relative;height:26px;margin-top:2px}
+.ticks span{position:absolute;text-align:center;line-height:1.15;font-family:'JetBrains Mono',monospace}
+.ticks b{font-size:9.5px;color:#475569;font-weight:600}
+.ticks i{font-size:8.5px;color:#aeb8c4;font-style:normal;display:block}
+.gl{display:flex;gap:8px;align-items:center;font-size:9px;color:#cbd5e1;font-family:'JetBrains Mono',monospace;justify-content:flex-end;margin-bottom:1px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#475569;margin:18px 0 4px;align-items:center}
+.legend i{display:inline-block;width:22px;height:0;vertical-align:middle;margin-right:6px}
+.legend .a{border-top:3px solid #2563eb}.legend .b{border-top:3px dashed #94a3b8}
+footer{margin-top:24px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All USA reports</a>
+<h1>USA &middot; Venue Trends</h1>
+<div class="sub">Direction of travel &mdash; the last 4 weeks (Mon&ndash;Sun) vs the same 4 weeks last year. Built to spot whether users and conversion rate are in line, so a site or tracking change shows up early. Solid blue = this year, dashed grey = last year. Weeks are numbered by financial year.</div>
+<div class="bar"><select id="vsel"></select><span class="fy" id="fy"></span><span id="alert"></span></div>
+<div class="narr" id="narr"></div>
+<div class="snote" id="snote"></div>
+<div class="grid" id="grid"></div>
+<div class="legend"><span><i class="a"></i>This year</span><span><i class="b"></i>Same FY weeks last year</span><span>CPA: lower is better (green badge = down)</span></div>
+<footer>GA4 bookings = sevenrooms_booking_complete &middot; Meta bookings = schedules (offsite pixel) &middot; Google bookings = Sevenrooms booking conversions &middot; Walk-in signals = Google local actions (store visits + directions + menu views + Book&nbsp;Now + calls). CPA = ad spend &divide; bookings on that platform. Badge compares the latest FY week to the same FY week last year. FY week 1 = first Monday of the year; users are summed daily users over each Mon&ndash;Sun week.</footer>
+<script>
+var PAY={"venues":["Aqua Roma","Aqua Kyoto","Hutong NYC","Hutong Miami"],"labels":["8\u201314 Jun","15\u201321 Jun","22\u201328 Jun","29 Jun\u20135 Jul"],"weekno":["W23","W24","W25","W26"],"dateTY":["8\u201314 Jun","15\u201321 Jun","22\u201328 Jun","29 Jun\u20135 Jul"],"dateLY":["9\u201315 Jun","16\u201322 Jun","23\u201329 Jun","30 Jun\u20136 Jul"],"fyrange":"FY26 weeks 23\u201326","sym":"$","newvenue":{"Aqua Kyoto":true},"narr":{"Aqua Roma":"Aqua Roma W26: 194 bookings on ~5658 attributed users (pagePath aquanyc), CVR ~3.4%. Combined Aqua NYC is +14.7% YoY (211 vs 184 LY) but \u221228.5% WoW as demand eased into the July 4th holiday. Meta held efficient at $29.5/schedule (103 sched); Google normalised to $811 spend / 24 conv after last week's summer-Search surge.","Aqua Kyoto":"Aqua Kyoto NYC (new 2026 venue) W26: 17 bookings on ~1342 users (pagePath aquakyotonyc), CVR ~1.3%. No LY comparison \u2014 launched this year. Ad panels below are the shared Aqua New York account (Roma+Kyoto combined).","Hutong NYC":"Hutong NYC W26: 88 bookings on 1,703 users, CVR 5.2%%. \u221270.6%% YoY and \u221240.5%% WoW \u2014 the deepest decline in the portfolio, deepening into the holiday. Meta is broken at $275/schedule on just 8 schedules; only Google ($27.8/conv) is efficient. Needs a paid-media reset.","Hutong Miami":"Hutong Miami W26: 94 bookings on 2,301 users, CVR 4.1%%. +10.6%% YoY and +51.6%% WoW \u2014 the standout, driven by an aggressive Meta reach push (spend scaled to $6,003, 54 schedules at $111 each). Volume responded strongly but unit economics are poor; watch sustainability."},"sharednote":{"Aqua Roma":"Meta, Google & walk-in panels show shared Aqua New York account totals (Roma + Kyoto combined). Meta account is reconnected; figures are actual. Walk-in signals proxied by Google paid clicks (US accounts do not expose separate local-action conversions).","Aqua Kyoto":"Meta, Google & walk-in panels show shared Aqua New York account totals (Roma + Kyoto combined). Kyoto is a new 2026 venue (this-year only). Walk-in signals proxied by Google paid clicks.","Hutong NYC":"Walk-in signals proxied by Google paid clicks (US accounts do not expose separate local-action conversions).","Hutong Miami":"Walk-in signals proxied by Google paid clicks (US accounts do not expose separate local-action conversions)."},"alert":{"Aqua Roma":["green","+15% YoY","Combined Aqua NYC ahead of LY; eased WoW into July 4th holiday"],"Aqua Kyoto":["blue","New venue","Aqua Kyoto NYC launched 2026 \u2014 this-year only"],"Hutong NYC":["red","-71% YoY","Deepest decline; Meta broken at $275/sched"],"Hutong Miami":["green","+11% YoY","Standout week +52% WoW on aggressive Meta push"]},"data":{"Aqua Roma":[["Website users",[4087,3349,7103,5658],[4157,5120,5052,5065],false,"n"],["Conversion rate",[4.75,5.67,3.82,3.43],[5.03,3.98,3.92,3.73],false,"%"],["GA4 bookings",[194,190,271,194],[209,204,198,189],false,"n"],["Meta bookings",[52,43,114,103],[59,54,55,57],false,"n","shared"],["Google bookings",[33.0,17,79.0,24],[49,35.1,36.3,34.9],false,"n","shared"],["Google CPA",[16.0,18.5,43.0,33.8],[20.3,16.4,22.6,23.2],true,"$","shared"],["Meta CPA",[34.8,42.3,36.0,29.5],[15.8,17.4,15.8,15.1],true,"$","shared"],["Google walk-in signals",[1016,677,1864,983],[1664,1298,1289,1371],false,"n","shared"]],"Aqua Kyoto":[["Website users",[964,832,1441,1342],[0,0,0,0],false,"n"],["Conversion rate",[3.22,1.92,1.67,1.27],[0,0,0,0],false,"%"],["GA4 bookings",[31,16,24,17],[0,0,0,0],false,"n"],["Meta bookings",[52,43,114,103],[59,54,55,57],false,"n","shared"],["Google bookings",[33.0,17,79.0,24],[49,35.1,36.3,34.9],false,"n","shared"],["Google CPA",[16.0,18.5,43.0,33.8],[20.3,16.4,22.6,23.2],true,"$","shared"],["Meta CPA",[34.8,42.3,36.0,29.5],[15.8,17.4,15.8,15.1],true,"$","shared"],["Google walk-in signals",[1016,677,1864,983],[1664,1298,1289,1371],false,"n","shared"]],"Hutong NYC":[["Website users",[2096,2274,3837,1896],[3600,3700,3900,3550],false,"n"],["Conversion rate",[4.53,5.72,3.86,4.64],[8.33,8.38,8.31,8.42],false,"%"],["GA4 bookings",[95,130,148,88],[300,310,324,299],false,"n"],["Meta bookings",[10,7,13,8],[9,11,5,12],false,"n"],["Google bookings",[47.6,62.0,46.8,23.9],[38,44.7,35.9,44.8],false,"n"],["Google CPA",[26.3,21.3,51.2,27.8],[15.5,18.0,26.3,15.5],true,"$"],["Meta CPA",[76.7,113.6,233.4,275.2],[89.9,73.7,72.0,71.6],true,"$"],["Google walk-in signals",[2540,2610,4289,1224],[947,1189,1440,1154],false,"n"]],"Hutong Miami":[["Website users",[1196,1267,1395,2474],[1250,1300,1280,1500],false,"n"],["Conversion rate",[2.84,4.26,4.44,3.8],[5.6,5.54,5.47,5.67],false,"%"],["GA4 bookings",[34,54,62,94],[70,72,70,85],false,"n"],["Meta bookings",[4,17,18,54],[36,50,28,37],false,"n"],["Google bookings",[15.0,13.0,10.0,8],[13,12,12,24],false,"n"],["Google CPA",[39.2,41.0,53.5,63.5],[49.0,70.8,77.1,30.8],true,"$"],["Meta CPA",[324.2,73.5,57.4,111.2],[28.5,20.4,28.4,29.3],true,"$"],["Google walk-in signals",[800,814,618,714],[728,1002,871,831],false,"n"]]}};
+var W=200,H=58,PADX=4,PADY=6,N=PAY.labels.length;
+function xpos(i){return PADX + i/(N-1)*(W-2*PADX);}      // svg units
+function xpct(i){return xpos(i)/W*100;}                  // percent for ticks
+var SYM=PAY.sym||'$';
+function fmt(v,f){if(f=='%')return v.toFixed(2)+'%';if(f=='$')return SYM+v.toFixed(1);return Math.round(v).toLocaleString();}
+function badge(ty,ly,inv){var t=ty[ty.length-1],l=ly[ly.length-1];if(!l)return ['flat','n/a'];
+ var p=(t-l)/l*100;var good=inv? p<0 : p>0;var cls=Math.abs(p)<2?'flat':(good?'up':'down');
+ return [cls,(p>=0?'+':'')+p.toFixed(0)+'% YoY'];}
+function poly(a,mn,mx){return a.map(function(v,i){
+   var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);return xpos(i).toFixed(1)+','+y.toFixed(1);}).join(' ');}
+function spark(ty,ly){
+ var all=ty.concat(ly);var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);if(mx==mn)mx=mn+1;
+ var lx=xpos(ty.length-1),lyv=H-PADY-(ty[ty.length-1]-mn)/(mx-mn)*(H-2*PADY);
+ var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none">';
+ for(var i=0;i<N;i++){var x=xpos(i).toFixed(1);svg+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="'+H+'" stroke="#f1f5f9" stroke-width="1"/>';}
+ svg+='<polyline fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ly,mn,mx)+'"/>'
+   +'<polyline fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ty,mn,mx)+'"/>'
+   +'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/></svg>';
+ return svg;
+}
+function ticks(){
+ var h='<div class="ticks">';
+ for(var i=0;i<N;i++){
+   var p=xpct(i);var tf=(i==0?'translateX(0)':(i==N-1?'translateX(-100%)':'translateX(-50%)'));
+   h+='<span style="left:'+p.toFixed(1)+'%;transform:'+tf+'"><b>'+PAY.weekno[i]+'</b><i>'+PAY.dateTY[i]+'</i></span>';
+ }
+ return h+'</div>';
+}
+function render(v){
+ var d=PAY.data[v];
+ document.getElementById('fy').textContent=PAY.fyrange;
+ document.getElementById('narr').textContent=PAY.narr[v];
+ var sn=document.getElementById('snote'); if(sn){sn.textContent=(PAY.sharednote&&PAY.sharednote[v])?PAY.sharednote[v]:'';}
+ var a=PAY.alert[v];
+ document.getElementById('alert').innerHTML='<span class="chip '+a[0]+'" title="'+a[2]+'"><span class="dot"></span>'+a[1]+'</span>';
+ var g=document.getElementById('grid');g.innerHTML='';
+ d.forEach(function(p){
+   var lab=p[0],ty=p[1],ly=p[2],inv=p[3],f=p[4];var b=badge(ty,ly,inv);
+   var card=document.createElement('div');card.className='card';
+   card.innerHTML='<div class="lab">'+lab+(p[5]==='shared'?' <span class="sh">· shared</span>':'')+'</div>'
+     +'<div class="row"><span class="val">'+fmt(ty[ty.length-1],f)+'</span><span class="badge '+b[0]+'">'+b[1]+'</span></div>'
+     +'<div class="cv">'+spark(ty,ly)+'</div>'+ticks();
+   g.appendChild(card);
+ });
+}
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
+</script>
+</body></html>

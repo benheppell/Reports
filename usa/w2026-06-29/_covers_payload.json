@@ -1,0 +1,99 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "week": "29 Jun\u20135 Jul 2026",
+ "wow": "22\u201328 Jun 2026",
+ "yoy": "30 Jun\u20136 Jul 2025",
+ "generated": "6 July 2026",
+ "ga4_meta": "393 this week \u00b7 -22% WoW \u00b7 -31% YoY",
+ "ga4_yoy": "-31% YoY (568 \u2192 393)",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "covers_cur": 1304,
+   "covers_prior": 1846,
+   "covers_yoy": 1513,
+   "widget": 302,
+   "gr": 139,
+   "ot": 169,
+   "other": 694,
+   "widget_prior": 575,
+   "gr_prior": 172,
+   "ot_prior": 141,
+   "widget_yoy": 220,
+   "gr_yoy": 0,
+   "ot_yoy": 146,
+   "ga4": 211
+  },
+  {
+   "name": "Hutong NYC",
+   "covers_cur": 1190,
+   "covers_prior": 1929,
+   "covers_yoy": 1364,
+   "widget": 145,
+   "gr": 132,
+   "ot": 303,
+   "other": 610,
+   "widget_prior": 125,
+   "gr_prior": 75,
+   "ot_prior": 528,
+   "widget_yoy": 183,
+   "gr_yoy": 211,
+   "ot_yoy": 277,
+   "ga4": 88
+  },
+  {
+   "name": "Hutong Miami",
+   "covers_cur": 523,
+   "covers_prior": 691,
+   "covers_yoy": 570,
+   "widget": 163,
+   "gr": 18,
+   "ot": 89,
+   "other": 253,
+   "widget_prior": 112,
+   "gr_prior": 9,
+   "ot_prior": 192,
+   "widget_yoy": 132,
+   "gr_yoy": 2,
+   "ot_yoy": 140,
+   "ga4": 94
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W19",
+   "W20",
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26"
+  ],
+  "total": [
+   4462,
+   4319,
+   3947,
+   5910,
+   4380,
+   3893,
+   4466,
+   3017
+  ],
+  "ot": [
+   928,
+   912,
+   563,
+   1818,
+   990,
+   888,
+   861,
+   561
+  ]
+ },
+ "platform_foot": "<b>OpenTable + Resy</b> = OpenTable (OT Guestcenter + OpenTable/OTGC sources) and Resy",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> The weekly dashboard counts <b>GA4 <code>sevenrooms_booking_complete</code></b>, which only fires for bookings made through our own website widget. It does <b>not</b> see <b>OpenTable + Resy</b> bookings, and only partially captures <b>Google Reserve</b>. This week is the <b>July 4th holiday</b>, so both GA4 widget bookings (<b>393, -22% WoW / -31% YoY</b>) and total covers created (<b>3,017, -32% WoW / -12% YoY</b>) are down &mdash; a genuine seasonal demand dip, not just a measurement gap. OpenTable + Resy covers held broadly flat YoY (<b>561 vs 563</b>), while the widget/other channels drove the softer week. The much steeper GA4 decline vs total covers still reflects the measurement gap: a large share of demand books through channels GA4 never sees."
+}
