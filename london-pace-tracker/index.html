@@ -87,7 +87,7 @@ const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
 const CHAN_ORDER = ["Website","OpenTable","Google Reserve","TheFork","Other"];
 const DSL = "Dim Sum Library";
 
-let RAW = [], REF = [], MONTHS = [], curMonth = 0, curView = "shift";
+let RAW = [], REF = [], MONTHS = [], curMonth = 0, curView = "shift", refView = "shift";
 
 const n = v => v == null ? 0 : Number(v);
 const fmt = v => n(v).toLocaleString("en-GB");
@@ -181,27 +181,46 @@ function renderChannel(monthIdx){
   return kpis + html;
 }
 
-function renderReference(){
-  const rows = REF.filter(r => r.view === "shift");
+function refMatrix(view){
+  const rows = REF.filter(r => r.view === view);
   if(!rows.length) return `<div class="err">No reference data available.</div>`;
   const months = [...new Set(rows.map(r=>r.month_start))].sort();
   const mlabel = {}; rows.forEach(r=>{ mlabel[r.month_start]=r.month_label; });
   const venues = VENUE_ORDER.filter(v => rows.some(r=>r.venue===v));
-  const tot = {};
-  rows.forEach(r=>{ (tot[r.venue]=tot[r.venue]||{}); tot[r.venue][r.month_start]=(tot[r.venue][r.month_start]||0)+n(r.covers); });
-  let html = `<p class="note" style="margin:0 0 14px">Final settled covers by service month, pinned reference. Net of cancellations; bar, private dining &amp; events excluded. These are fixed historical values and do not change between refreshes. Used as the "LY final" anchor in the pace views.</p>`;
-  html += `<table><thead><tr><th>Venue</th>`;
+  const segOrder = (view==="shift" ? SHIFT_ORDER : CHAN_ORDER).concat("Events");
+  const map = {};
+  rows.forEach(r=>{ (map[r.venue]=map[r.venue]||{}); (map[r.venue][r.segment]=map[r.venue][r.segment]||{}); map[r.venue][r.segment][r.month_start]=n(r.covers); });
+  let html = `<table><thead><tr><th>Venue / ${view==="shift"?"shift":"channel"}</th>`;
   for(const m of months) html += `<th>${mlabel[m]}</th>`;
   html += `</tr></thead><tbody>`;
   for(const v of venues){
-    const cls = v==="GROUP (ex-DSL)" ? "group" : (v===DSL ? "venue dsl" : "venue");
-    const tag = v===DSL ? '<span class="tag">not LFL</span>' : '';
+    const isDsl = v===DSL;
+    const cls = v==="GROUP (ex-DSL)" ? "group" : (isDsl ? "venue dsl" : "venue");
+    const tag = isDsl ? '<span class="tag">not LFL</span>' : '';
+    const segs = segOrder.filter(s => map[v] && map[v][s] && months.some(m=>map[v][s][m]!=null));
     html += `<tr class="${cls}"><td>${v}${tag}</td>`;
-    for(const m of months){ const val = tot[v] && tot[v][m]; html += `<td>${val!=null ? fmt(val) : '<span class="na">–</span>'}</td>`; }
+    for(const m of months){ let t=0, has=false; for(const s of segs){ const val=map[v][s] && map[v][s][m]; if(val!=null){ t+=val; has=true; } } html += `<td>${has ? fmt(t) : '<span class="na">–</span>'}</td>`; }
     html += `</tr>`;
+    for(const s of segs){
+      html += `<tr><td class="seg">${s}</td>`;
+      for(const m of months){ const val = map[v][s] && map[v][s][m]; html += `<td>${val!=null ? fmt(val) : '<span class="na">–</span>'}</td>`; }
+      html += `</tr>`;
+    }
   }
   html += `</tbody></table>`;
   return html;
+}
+
+function setRefView(v){ refView = v; render(); }
+
+function renderReference(){
+  if(!REF.length) return `<div class="err">No reference data available.</div>`;
+  const note = `<p class="note" style="margin:0 0 14px">Final settled covers by service month, pinned reference. Net of cancellations; bar, private dining &amp; events excluded. These are fixed historical values and do not change between refreshes. This is the "LY final" anchor used in the pace views.</p>`;
+  const toggle = `<div class="viewtoggle" style="margin-bottom:16px">
+    <button class="${refView==='shift'?'on':''}" onclick="setRefView('shift')">By shift</button>
+    <button class="${refView==='channel'?'on':''}" onclick="setRefView('channel')">By channel</button>
+  </div>`;
+  return note + toggle + refMatrix(refView);
 }
 
 function render(){
