@@ -65,6 +65,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 <div class="viewtoggle" id="viewToggle">
   <button data-view="shift" class="on">Pace by shift</button>
   <button data-view="channel">Booking channel</button>
+  <button data-view="reference">2025 finals (reference)</button>
 </div>
 
 <div id="content"><div class="loading">Fetching live booking data&hellip;</div></div>
@@ -90,7 +91,7 @@ const NA_VENUES = ["Shiro Tai Kwun"];
 const GROUP_NAME = "GROUP (ex-Shiro TK)";
 const TZ = "Asia/Hong_Kong";
 
-let RAW = [], MONTHS = [], curMonth = 0, curView = "shift";
+let RAW = [], REF = [], MONTHS = [], curMonth = 0, curView = "shift", refView = "shift";
 const n = v => v == null ? 0 : Number(v);
 const fmt = v => n(v).toLocaleString("en-US");
 function paceStr(now, lyp){
@@ -176,8 +177,48 @@ function renderChannel(mi){
   return kpis + html;
 }
 
+function refMatrix(view){
+  const rows = REF.filter(r => r.view === view);
+  if(!rows.length) return `<div class="err">No reference data available.</div>`;
+  const months = [...new Set(rows.map(r=>r.month_start))].sort();
+  const mlabel = {}; rows.forEach(r=>{ mlabel[r.month_start]=r.month_label; });
+  const venues = VENUE_ORDER.filter(v => rows.some(r=>r.venue===v));
+  const segOrder = view==="shift" ? SHIFT_ORDER : CHAN_ORDER;
+  const map = {};
+  rows.forEach(r=>{ (map[r.venue]=map[r.venue]||{}); (map[r.venue][r.segment]=map[r.venue][r.segment]||{}); map[r.venue][r.segment][r.month_start]=n(r.covers); });
+  let html = `<table><thead><tr><th>Venue / ${view==="shift"?"shift":"channel"}</th>`;
+  for(const m of months) html += `<th>${mlabel[m]}</th>`;
+  html += `</tr></thead><tbody>`;
+  for(const v of venues){
+    const na = isNA(v);
+    const cls = v===GROUP_NAME ? "group" : (na ? "venue dsl" : "venue");
+    const tag = na ? '<span class="tag">new</span>' : '';
+    const segs = segOrder.filter(s => map[v] && map[v][s] && months.some(m=>map[v][s][m]!=null));
+    html += `<tr class="${cls}"><td>${v}${tag}</td>`;
+    for(const m of months){ let t=0,has=false; for(const s of segs){ const val=map[v][s]&&map[v][s][m]; if(val!=null){t+=val;has=true;} } html += `<td>${has?fmt(t):'<span class="na">–</span>'}</td>`; }
+    html += `</tr>`;
+    for(const s of segs){
+      html += `<tr><td class="seg">${s}</td>`;
+      for(const m of months){ const val=map[v][s]&&map[v][s][m]; html += `<td>${val!=null?fmt(val):'<span class="na">–</span>'}</td>`; }
+      html += `</tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  return html;
+}
+function setRefView(v){ refView=v; render(); }
+function renderReference(){
+  if(!REF.length) return `<div class="err">No reference data available.</div>`;
+  const note = `<p class="note" style="margin:0 0 14px">Final settled covers by service month, pinned reference. Net of cancellations and no-shows; bar, private dining &amp; groups of 30+ excluded. Fixed historical values that do not change between refreshes. This is the "LY final" anchor used in the pace views.</p>`;
+  const toggle = `<div class="viewtoggle" style="margin-bottom:16px">
+    <button class="${refView==='shift'?'on':''}" onclick="setRefView('shift')">By shift</button>
+    <button class="${refView==='channel'?'on':''}" onclick="setRefView('channel')">By channel</button>
+  </div>`;
+  return note + toggle + refMatrix(refView);
+}
 function render(){
   const el=document.getElementById("content");
+  if(curView==="reference"){ el.innerHTML=renderReference(); return; }
   if(!RAW.length){ el.innerHTML=`<div class="err">No data returned.</div>`; return; }
   el.innerHTML = curView==="shift" ? renderShift(curMonth) : renderChannel(curMonth);
 }
@@ -200,13 +241,16 @@ async function load(force){
     const json=await res.json();
     if(json.error){ throw new Error(json.error + (json.detail?(" — "+json.detail):"")); }
     RAW=(json.rows||[]).map(r=>({...r, month_idx:Number(r.month_idx)}));
+    REF=json.reference||[];
     const seen={}; MONTHS=[];
     RAW.forEach(r=>{ if(!(r.month_idx in seen)){ seen[r.month_idx]=1; MONTHS.push({idx:r.month_idx,label:r.month_label}); }});
     MONTHS.sort((a,b)=>a.idx-b.idx);
     if(curMonth>=MONTHS.length) curMonth=0;
     const d=json.generated_at?new Date(json.generated_at):new Date();
     const ds=d.toLocaleString("en-US",{timeZone:TZ,day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
-    document.getElementById("stamp").textContent="As of "+ds+" · refreshes live each load";
+    const asofRaw=RAW.length&&RAW[0].as_of?RAW[0].as_of:null;
+    const asof=asofRaw?new Date(asofRaw+"T00:00:00").toLocaleDateString("en-US",{day:"numeric",month:"short",year:"numeric"}):null;
+    document.getElementById("stamp").textContent="As of "+ds+(asof?" · booking data current to "+asof:"")+" · refreshes each load";
     buildMonthTabs(); render();
   }catch(e){
     document.getElementById("content").innerHTML=`<div class="err"><strong>Could not load live data.</strong><br>${e.message}<br><br>If this persists, check that <code>SUPABASE_URL</code> and <code>SUPABASE_SERVICE_ROLE_KEY</code> are set in the Netlify site environment variables.</div>`;
