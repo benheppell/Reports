@@ -1,5 +1,6 @@
 // Live data endpoint for the London Covers Pace Tracker.
-// Calls the Supabase RPC public.pace_tracker() server-side so the DB key never reaches the browser.
+// Calls the Supabase RPCs public.pace_tracker() (live pace) and
+// public.pace_ly_final_reference() (pinned 2025 finals) server-side so the DB key never reaches the browser.
 // Requires Netlify env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
 // Endpoint: /.netlify/functions/pace
 
@@ -22,8 +23,8 @@ export default async () => {
     );
   }
 
-  try {
-    const r = await fetch(`${url.replace(/\/$/, "")}/rest/v1/rpc/pace_tracker`, {
+  const callRpc = async (rpc) => {
+    const r = await fetch(`${url.replace(/\/$/, "")}/rest/v1/rpc/${rpc}`, {
       method: "POST",
       headers: {
         apikey: key,
@@ -33,12 +34,18 @@ export default async () => {
       body: "{}",
     });
     const text = await r.text();
-    if (!r.ok) {
-      return json({ error: "Supabase RPC failed", status: r.status, detail: text.slice(0, 500) }, 502);
-    }
-    const rows = JSON.parse(text);
-    return json({ generated_at: new Date().toISOString(), rows }, 200);
+    if (!r.ok) throw new Error(`${rpc} failed (${r.status}): ${text.slice(0, 300)}`);
+    return JSON.parse(text);
+  };
+
+  try {
+    // Reference is optional; never let it fail the main pace payload.
+    const [rows, reference] = await Promise.all([
+      callRpc("pace_tracker"),
+      callRpc("pace_ly_final_reference").catch(() => []),
+    ]);
+    return json({ generated_at: new Date().toISOString(), rows, reference }, 200);
   } catch (e) {
-    return json({ error: "Function error", detail: String(e) }, 500);
+    return json({ error: "Supabase RPC failed", detail: String(e) }, 502);
   }
 };

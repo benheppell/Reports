@@ -65,6 +65,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 <div class="viewtoggle" id="viewToggle">
   <button data-view="shift" class="on">Pace by shift</button>
   <button data-view="channel">Booking channel</button>
+  <button data-view="reference">2025 finals (reference)</button>
 </div>
 
 <div id="content"><div class="loading">Fetching live booking data…</div></div>
@@ -86,7 +87,7 @@ const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
 const CHAN_ORDER = ["Website","OpenTable","Google Reserve","TheFork","Other"];
 const DSL = "Dim Sum Library";
 
-let RAW = [], MONTHS = [], curMonth = 0, curView = "shift";
+let RAW = [], REF = [], MONTHS = [], curMonth = 0, curView = "shift";
 
 const n = v => v == null ? 0 : Number(v);
 const fmt = v => n(v).toLocaleString("en-GB");
@@ -180,8 +181,32 @@ function renderChannel(monthIdx){
   return kpis + html;
 }
 
+function renderReference(){
+  const rows = REF.filter(r => r.view === "shift");
+  if(!rows.length) return `<div class="err">No reference data available.</div>`;
+  const months = [...new Set(rows.map(r=>r.month_start))].sort();
+  const mlabel = {}; rows.forEach(r=>{ mlabel[r.month_start]=r.month_label; });
+  const venues = VENUE_ORDER.filter(v => rows.some(r=>r.venue===v));
+  const tot = {};
+  rows.forEach(r=>{ (tot[r.venue]=tot[r.venue]||{}); tot[r.venue][r.month_start]=(tot[r.venue][r.month_start]||0)+n(r.covers); });
+  let html = `<p class="note" style="margin:0 0 14px">Final settled covers by service month, pinned reference. Net of cancellations; bar, private dining &amp; events excluded. These are fixed historical values and do not change between refreshes. Used as the "LY final" anchor in the pace views.</p>`;
+  html += `<table><thead><tr><th>Venue</th>`;
+  for(const m of months) html += `<th>${mlabel[m]}</th>`;
+  html += `</tr></thead><tbody>`;
+  for(const v of venues){
+    const cls = v==="GROUP (ex-DSL)" ? "group" : (v===DSL ? "venue dsl" : "venue");
+    const tag = v===DSL ? '<span class="tag">not LFL</span>' : '';
+    html += `<tr class="${cls}"><td>${v}${tag}</td>`;
+    for(const m of months){ const val = tot[v] && tot[v][m]; html += `<td>${val!=null ? fmt(val) : '<span class="na">–</span>'}</td>`; }
+    html += `</tr>`;
+  }
+  html += `</tbody></table>`;
+  return html;
+}
+
 function render(){
   const el = document.getElementById("content");
+  if(curView === "reference"){ el.innerHTML = renderReference(); return; }
   if(!RAW.length){ el.innerHTML = `<div class="err">No data returned.</div>`; return; }
   el.innerHTML = curView === "shift" ? renderShift(curMonth) : renderChannel(curMonth);
 }
@@ -207,6 +232,7 @@ async function load(force){
     const json = await res.json();
     if(json.error){ throw new Error(json.error + (json.detail?(" — "+json.detail):"")); }
     RAW = (json.rows||[]).map(r=>({...r, month_idx:Number(r.month_idx)}));
+    REF = json.reference || [];
     const seen = {};
     MONTHS = [];
     RAW.forEach(r=>{ if(!(r.month_idx in seen)){ seen[r.month_idx]=1; MONTHS.push({idx:r.month_idx,label:r.month_label}); }});
