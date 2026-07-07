@@ -214,7 +214,9 @@ async function load(force){
     if(curMonth >= MONTHS.length) curMonth = 0;
     const d = json.generated_at ? new Date(json.generated_at) : new Date();
     const ds = d.toLocaleString("en-GB",{timeZone:"Europe/London",day:"numeric",month:"short",year:"numeric",hour:"2-digit",minute:"2-digit"});
-    document.getElementById("stamp").textContent = "As of " + ds + " (London) · refreshes live each load";
+    const asofRaw = RAW.length && RAW[0].as_of ? RAW[0].as_of : null;
+    const asof = asofRaw ? new Date(asofRaw+"T00:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}) : null;
+    document.getElementById("stamp").textContent = "As of " + ds + " (London)" + (asof ? " · booking data current to " + asof : "") + " · refreshes each load";
     buildMonthTabs();
     render();
   }catch(e){
