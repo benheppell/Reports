@@ -161,10 +161,10 @@ function renderChannel(monthIdx){
       const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point);
       rowNow+=now; rowLyp+=lyp;
       const p = isDsl ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
-      cells += `<td class="cell"><span class="n">${fmt(now)}</span><span class="p ${p.cls}">${p.txt}</span></td>`;
+      cells += `<td class="cell"><span class="n">${fmt(now)}</span><span class="p ${p.cls}">${isDsl?'n/a':('LY '+fmt(lyp)+' · '+p.txt)}</span></td>`;
     }
     const tp = isDsl ? {txt:"n/a",cls:"na"} : paceStr(rowNow,rowLyp);
-    html += `<tr class="${cls}"><td>${v}${tag}</td>${cells}<td class="cell"><span class="n">${fmt(rowNow)}</span><span class="p ${tp.cls}">${tp.txt}</span></td></tr>`;
+    html += `<tr class="${cls}"><td>${v}${tag}</td>${cells}<td class="cell"><span class="n">${fmt(rowNow)}</span><span class="p ${tp.cls}">${isDsl?'n/a':('LY '+fmt(rowLyp)+' · '+tp.txt)}</span></td></tr>`;
   }
   html += `</tbody></table>`;
 
