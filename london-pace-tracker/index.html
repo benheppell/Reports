@@ -55,7 +55,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 <div class="topbar">
   <div>
     <h1>Aqua London — Covers Pace Tracker</h1>
-    <div class="sub">Live covers on the books vs the same point last year, plus estimated served covers (net of no-shows). Cancellations already excluded; bar, private dining &amp; events excluded. Europe/London.</div>
+    <div class="sub">Live covers on the books vs the same point last year. Cancellations already excluded; bar, private dining &amp; events excluded. See the Reliability tab for covers net of further cancellations and no-shows. Europe/London.</div>
     <div class="stamp" id="stamp">Loading…</div>
   </div>
   <button class="refresh" id="refresh">↻ Refresh</button>
@@ -65,6 +65,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 <div class="viewtoggle" id="viewToggle">
   <button data-view="shift" class="on">Pace by shift</button>
   <button data-view="channel">Booking channel</button>
+  <button data-view="reliability">Reliability</button>
   <button data-view="reference">2025 finals (reference)</button>
 </div>
 
@@ -75,8 +76,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
   <em>On books now</em> = covers currently held for that service month.
   <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
   <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
-  <em>Net now (est.)</em> = on-books × the recent survival rate (after no-shows) — covers expected to actually be seated.
-  <em>No-show</em> = trailing settled no-show rate for that shift/channel; OTA channels (OpenTable, Google Reserve) run far higher than the website booking widget.
+  <em>No-show</em> = trailing settled no-show rate for that shift/channel; OTA channels (OpenTable, Google Reserve) run far higher than the website booking widget. The <em>Reliability</em> tab splits on-books into expected cancellations, expected no-shows and net expected covers.
   <em>Forecast</em> = LY final + (now − LY same point), a conservative guide — months still fill materially in-month, so early months read low.
   Dim Sum Library opened ~Dec 2025 so its year-on-year is not like-for-like: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
 </div>
@@ -89,7 +89,7 @@ const SHIFT_ORDER = ["Lunch","Afternoon Tea","Dinner"];
 const CHAN_ORDER = ["Website","OpenTable","Google Reserve","TheFork","Other"];
 const DSL = "Dim Sum Library";
 
-let RAW = [], REF = [], MONTHS = [], curMonth = 0, curView = "shift", refView = "shift";
+let RAW = [], REF = [], REL = [], MONTHS = [], curMonth = 0, curView = "shift", refView = "shift";
 
 const n = v => v == null ? 0 : Number(v);
 const fmt = v => n(v).toLocaleString("en-GB");
@@ -112,7 +112,7 @@ function renderShift(monthIdx){
   const rows = rowsFor("shift", monthIdx);
   const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue === v));
   let html = `<table><thead><tr>
-    <th>Venue / shift</th><th>On books now</th><th>Net now (est.)</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th><th>No-show</th>
+    <th>Venue / shift</th><th>On books now</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th><th>No-show</th>
   </tr></thead><tbody>`;
   for(const v of venues){
     const isDsl = v === DSL;
@@ -124,15 +124,15 @@ function renderShift(monthIdx){
     const vf = isDsl ? '<span class="na">n/a</span>' : fmt(tLyf + (tNow - tLyp));
     const tag = isDsl ? '<span class="tag">not LFL</span>' : '';
     const tns = isDsl ? '<span class="na">n/a</span>' : ((tNow>0 && tNet<tNow) ? ((1 - tNet/tNow)*100).toFixed(1)+'%' : '–');
-    html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${fmt(tNet)}</td><td>${fmt(tLyp)}</td>
+    html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${fmt(tLyp)}</td>
       <td class="pace ${vp.cls}">${vp.txt}</td><td>${fmt(tLyf)}</td><td>${vf}</td><td>${tns}</td></tr>`;
     for(const s of segs){
       const r = get("shift",monthIdx,v,s);
       const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point), lyf=n(r&&r.ly_final);
       const p = isDsl ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
       const f = isDsl ? '<span class="na">n/a</span>' : fmt(lyf + (now - lyp));
-      const net=n(r&&r.net_now); const ns=(r&&r.noshow_pct!=null)?Number(r.noshow_pct).toFixed(1)+'%':'–';
-      html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${fmt(net)}</td><td>${fmt(lyp)}</td>
+      const ns=(r&&r.noshow_pct!=null)?Number(r.noshow_pct).toFixed(1)+'%':'–';
+      html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${fmt(lyp)}</td>
         <td class="pace ${p.cls}">${p.txt}</td><td>${fmt(lyf)}</td><td>${f}</td><td>${ns}</td></tr>`;
     }
   }
@@ -144,7 +144,6 @@ function renderShift(monthIdx){
   const gns = (g.now>0 && g.net<g.now) ? ((1-g.net/g.now)*100).toFixed(1)+'%' : '–';
   const kpis = `<div class="kpis">
     <div class="kpi"><div class="lab">Group on books (ex-DSL)</div><div class="val">${fmt(g.now)}</div><div class="meta">${MONTHS[monthIdx].label}</div></div>
-    <div class="kpi"><div class="lab">Net on books (est. served)</div><div class="val">${fmt(g.net)}</div><div class="meta">after no-shows</div></div>
     <div class="kpi"><div class="lab">Pace vs LY same point</div><div class="val ${gp.cls}">${gp.txt}</div><div class="meta">${fmt(g.lyp)} held LY at this lead</div></div>
     <div class="kpi"><div class="lab">Group no-show rate</div><div class="val">${gns}</div><div class="meta">trailing settled, weighted</div></div>
     <div class="kpi"><div class="lab">Conservative forecast</div><div class="val">${fmt(g.lyf + (g.now - g.lyp))}</div><div class="meta">LY final ${fmt(g.lyf)}</div></div>
@@ -235,9 +234,42 @@ function renderReference(){
   return note + toggle + refMatrix(refView);
 }
 
+function relRows(monthIdx){ return REL.filter(r => r.month_idx === monthIdx); }
+function renderReliability(monthIdx){
+  const rows = relRows(monthIdx);
+  if(!rows.length) return `<div class="err">No reliability data available.</div>`;
+  const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue === v));
+  const grp = rows.filter(r => r.venue === "GROUP (ex-DSL)");
+  let gOn=0,gC=0,gN=0,gNet=0; for(const r of grp){ gOn+=n(r.on_books); gC+=n(r.exp_cancel); gN+=n(r.exp_noshow); gNet+=n(r.net_served); }
+  const kpis = `<div class="kpis">
+    <div class="kpi"><div class="lab">Group on books (ex-DSL)</div><div class="val">${fmt(gOn)}</div><div class="meta">${MONTHS[monthIdx].label}</div></div>
+    <div class="kpi"><div class="lab">Est. cancellations to come</div><div class="val down">-${fmt(gC)}</div><div class="meta">${gOn?(gC/gOn*100).toFixed(1)+'%':'–'} of on-books</div></div>
+    <div class="kpi"><div class="lab">Est. no-shows</div><div class="val down">-${fmt(gN)}</div><div class="meta">${(gOn-gC)>0?(gN/(gOn-gC)*100).toFixed(1)+'%':'–'} of kept book</div></div>
+    <div class="kpi"><div class="lab">Net expected covers</div><div class="val">${fmt(gNet)}</div><div class="meta">after cancellations &amp; no-shows</div></div>
+  </div>`;
+  const note = `<p class="note" style="margin:0 0 14px">Cancellations and no-shows are modelled as two separate steps. <em>Est. cancellations</em> = the share of the current book still expected to cancel before service, from a lead-time survival curve (a booking weeks out cancels more than one tomorrow), so forward months read light. <em>Est. no-shows</em> = of the kept book, the share that historically don't turn up — far higher on OpenTable / Google Reserve than the website. <em>Net expected</em> = covers likely to actually be seated. Rates are trailing settled history.</p>`;
+  let html = `<table><thead><tr><th>Venue / shift</th><th>On books</th><th>Est. cancellations</th><th>Est. no-shows</th><th>Net expected</th><th>Cancel %</th><th>No-show %</th></tr></thead><tbody>`;
+  for(const v of venues){
+    const segs = SHIFT_ORDER.filter(s => rows.some(r => r.venue===v && r.segment===s && n(r.on_books)>0));
+    if(!segs.length) continue;
+    let tOn=0,tC=0,tN=0,tNet=0;
+    for(const s of segs){ const r=rows.find(x=>x.venue===v&&x.segment===s); tOn+=n(r&&r.on_books); tC+=n(r&&r.exp_cancel); tN+=n(r&&r.exp_noshow); tNet+=n(r&&r.net_served); }
+    const cls = v==="GROUP (ex-DSL)" ? "group" : "venue";
+    const cpct = tOn ? (tC/tOn*100).toFixed(1)+'%' : '–';
+    const npct = (tOn-tC)>0 ? (tN/(tOn-tC)*100).toFixed(1)+'%' : '–';
+    html += `<tr class="${cls}"><td>${v}</td><td>${fmt(tOn)}</td><td class="down">${fmt(tC)}</td><td class="down">${fmt(tN)}</td><td>${fmt(tNet)}</td><td>${cpct}</td><td>${npct}</td></tr>`;
+    for(const s of segs){ const r=rows.find(x=>x.venue===v&&x.segment===s);
+      html += `<tr><td class="seg">${s}</td><td>${fmt(r.on_books)}</td><td class="down">${fmt(r.exp_cancel)}</td><td class="down">${fmt(r.exp_noshow)}</td><td>${fmt(r.net_served)}</td><td>${r.cancel_pct!=null?Number(r.cancel_pct).toFixed(1)+'%':'–'}</td><td>${r.noshow_pct!=null?Number(r.noshow_pct).toFixed(1)+'%':'–'}</td></tr>`;
+    }
+  }
+  html += `</tbody></table>`;
+  return kpis + note + html;
+}
+
 function render(){
   const el = document.getElementById("content");
   if(curView === "reference"){ el.innerHTML = renderReference(); return; }
+  if(curView === "reliability"){ el.innerHTML = renderReliability(curMonth); return; }
   if(!RAW.length){ el.innerHTML = `<div class="err">No data returned.</div>`; return; }
   el.innerHTML = curView === "shift" ? renderShift(curMonth) : renderChannel(curMonth);
 }
@@ -264,6 +296,7 @@ async function load(force){
     if(json.error){ throw new Error(json.error + (json.detail?(" — "+json.detail):"")); }
     RAW = (json.rows||[]).map(r=>({...r, month_idx:Number(r.month_idx)}));
     REF = json.reference || [];
+    REL = (json.reliability||[]).map(r=>({...r, month_idx:Number(r.month_idx)}));
     const seen = {};
     MONTHS = [];
     RAW.forEach(r=>{ if(!(r.month_idx in seen)){ seen[r.month_idx]=1; MONTHS.push({idx:r.month_idx,label:r.month_label}); }});
