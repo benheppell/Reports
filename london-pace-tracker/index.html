@@ -55,7 +55,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
 <div class="topbar">
   <div>
     <h1>Aqua London — Covers Pace Tracker</h1>
-    <div class="sub">Live covers on the books vs the same point last year. Net of cancellations; bar, private dining &amp; events excluded. Europe/London.</div>
+    <div class="sub">Live covers on the books vs the same point last year, plus estimated served covers (net of no-shows). Cancellations already excluded; bar, private dining &amp; events excluded. Europe/London.</div>
     <div class="stamp" id="stamp">Loading…</div>
   </div>
   <button class="refresh" id="refresh">↻ Refresh</button>
@@ -75,6 +75,8 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
   <em>On books now</em> = covers currently held for that service month.
   <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
   <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
+  <em>Net now (est.)</em> = on-books × the recent survival rate (after no-shows) — covers expected to actually be seated.
+  <em>No-show</em> = trailing settled no-show rate for that shift/channel; OTA channels (OpenTable, Google Reserve) run far higher than the website booking widget.
   <em>Forecast</em> = LY final + (now − LY same point), a conservative guide — months still fill materially in-month, so early months read low.
   Dim Sum Library opened ~Dec 2025 so its year-on-year is not like-for-like: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
 </div>
@@ -110,36 +112,41 @@ function renderShift(monthIdx){
   const rows = rowsFor("shift", monthIdx);
   const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue === v));
   let html = `<table><thead><tr>
-    <th>Venue / shift</th><th>On books now</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th>
+    <th>Venue / shift</th><th>On books now</th><th>Net now (est.)</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th><th>No-show</th>
   </tr></thead><tbody>`;
   for(const v of venues){
     const isDsl = v === DSL;
     const segs = SHIFT_ORDER.filter(s => rows.some(r => r.venue===v && r.segment===s && (n(r.on_books_now)>0 || n(r.ly_at_point)>0 || n(r.ly_final)>0)));
-    let tNow=0, tLyp=0, tLyf=0;
-    for(const s of segs){ const r=get("shift",monthIdx,v,s); tNow+=n(r&&r.on_books_now); tLyp+=n(r&&r.ly_at_point); tLyf+=n(r&&r.ly_final); }
+    let tNow=0, tLyp=0, tLyf=0, tNet=0;
+    for(const s of segs){ const r=get("shift",monthIdx,v,s); tNow+=n(r&&r.on_books_now); tLyp+=n(r&&r.ly_at_point); tLyf+=n(r&&r.ly_final); tNet+=n(r&&r.net_now); }
     const cls = v==="GROUP (ex-DSL)" ? "group" : (isDsl ? "venue dsl" : "venue");
     const vp = isDsl ? {txt:"n/a",cls:"na"} : paceStr(tNow, tLyp);
     const vf = isDsl ? '<span class="na">n/a</span>' : fmt(tLyf + (tNow - tLyp));
     const tag = isDsl ? '<span class="tag">not LFL</span>' : '';
-    html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${fmt(tLyp)}</td>
-      <td class="pace ${vp.cls}">${vp.txt}</td><td>${fmt(tLyf)}</td><td>${vf}</td></tr>`;
+    const tns = isDsl ? '<span class="na">n/a</span>' : ((tNow>0 && tNet<tNow) ? ((1 - tNet/tNow)*100).toFixed(1)+'%' : '–');
+    html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${fmt(tNet)}</td><td>${fmt(tLyp)}</td>
+      <td class="pace ${vp.cls}">${vp.txt}</td><td>${fmt(tLyf)}</td><td>${vf}</td><td>${tns}</td></tr>`;
     for(const s of segs){
       const r = get("shift",monthIdx,v,s);
       const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point), lyf=n(r&&r.ly_final);
       const p = isDsl ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
       const f = isDsl ? '<span class="na">n/a</span>' : fmt(lyf + (now - lyp));
-      html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${fmt(lyp)}</td>
-        <td class="pace ${p.cls}">${p.txt}</td><td>${fmt(lyf)}</td><td>${f}</td></tr>`;
+      const net=n(r&&r.net_now); const ns=(r&&r.noshow_pct!=null)?Number(r.noshow_pct).toFixed(1)+'%':'–';
+      html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${fmt(net)}</td><td>${fmt(lyp)}</td>
+        <td class="pace ${p.cls}">${p.txt}</td><td>${fmt(lyf)}</td><td>${f}</td><td>${ns}</td></tr>`;
     }
   }
   html += `</tbody></table>`;
 
-  const g = {now:0,lyp:0,lyf:0};
-  for(const s of SHIFT_ORDER){ const r=get("shift",monthIdx,"GROUP (ex-DSL)",s); g.now+=n(r&&r.on_books_now); g.lyp+=n(r&&r.ly_at_point); g.lyf+=n(r&&r.ly_final); }
+  const g = {now:0,lyp:0,lyf:0,net:0};
+  for(const s of SHIFT_ORDER){ const r=get("shift",monthIdx,"GROUP (ex-DSL)",s); g.now+=n(r&&r.on_books_now); g.lyp+=n(r&&r.ly_at_point); g.lyf+=n(r&&r.ly_final); g.net+=n(r&&r.net_now); }
   const gp = paceStr(g.now,g.lyp);
+  const gns = (g.now>0 && g.net<g.now) ? ((1-g.net/g.now)*100).toFixed(1)+'%' : '–';
   const kpis = `<div class="kpis">
     <div class="kpi"><div class="lab">Group on books (ex-DSL)</div><div class="val">${fmt(g.now)}</div><div class="meta">${MONTHS[monthIdx].label}</div></div>
+    <div class="kpi"><div class="lab">Net on books (est. served)</div><div class="val">${fmt(g.net)}</div><div class="meta">after no-shows</div></div>
     <div class="kpi"><div class="lab">Pace vs LY same point</div><div class="val ${gp.cls}">${gp.txt}</div><div class="meta">${fmt(g.lyp)} held LY at this lead</div></div>
+    <div class="kpi"><div class="lab">Group no-show rate</div><div class="val">${gns}</div><div class="meta">trailing settled, weighted</div></div>
     <div class="kpi"><div class="lab">Conservative forecast</div><div class="val">${fmt(g.lyf + (g.now - g.lyp))}</div><div class="meta">LY final ${fmt(g.lyf)}</div></div>
   </div>`;
   return kpis + html;
@@ -161,7 +168,8 @@ function renderChannel(monthIdx){
       const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point);
       rowNow+=now; rowLyp+=lyp;
       const p = isDsl ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
-      cells += `<td class="cell"><span class="n">${fmt(now)}</span><span class="p ${p.cls}">${isDsl?'n/a':('LY '+fmt(lyp)+' · '+p.txt)}</span></td>`;
+      const cns=(r&&r.noshow_pct!=null)?('ns '+Number(r.noshow_pct).toFixed(0)+'%'):'';
+      cells += `<td class="cell"><span class="n">${fmt(now)}</span><span class="p ${p.cls}">${isDsl?'n/a':('LY '+fmt(lyp)+' · '+p.txt)}</span>${cns?('<span class="p" style="color:#94a3b8">'+cns+'</span>'):''}</td>`;
     }
     const tp = isDsl ? {txt:"n/a",cls:"na"} : paceStr(rowNow,rowLyp);
     html += `<tr class="${cls}"><td>${v}${tag}</td>${cells}<td class="cell"><span class="n">${fmt(rowNow)}</span><span class="p ${tp.cls}">${isDsl?'n/a':('LY '+fmt(rowLyp)+' · '+tp.txt)}</span></td></tr>`;
@@ -173,10 +181,14 @@ function renderChannel(monthIdx){
   const ota = ["OpenTable","TheFork","Google Reserve"].reduce((a,c)=>{const r=get("channel",monthIdx,"GROUP (ex-DSL)",c);return a+n(r&&r.on_books_now);},0);
   const webNow=n(web&&web.on_books_now), webLyp=n(web&&web.ly_at_point);
   const wp = paceStr(webNow,webLyp);
+  const webNs = web && web.noshow_pct!=null ? Number(web.noshow_pct) : null;
+  let otaNow2=0, otaNet2=0; for(const c of ["OpenTable","Google Reserve","TheFork"]){ const r=get("channel",monthIdx,"GROUP (ex-DSL)",c); const nw=n(r&&r.on_books_now); otaNow2+=nw; otaNet2+= nw*((r&&r.noshow_pct!=null)?(1-Number(r.noshow_pct)/100):1); }
+  const otaNs = otaNow2>0 ? ((1-otaNet2/otaNow2)*100).toFixed(0)+"%" : "–";
   const kpis = `<div class="kpis">
     <div class="kpi"><div class="lab">Website (owned) share</div><div class="val">${gNow?((webNow/gNow*100).toFixed(0)+"%"):"–"}</div><div class="meta">${fmt(webNow)} of ${fmt(gNow)} group covers</div></div>
     <div class="kpi"><div class="lab">Website pace vs LY</div><div class="val ${wp.cls}">${wp.txt}</div><div class="meta">direct booking widget &amp; landing pages</div></div>
     <div class="kpi"><div class="lab">OTA share (OT / Fork / Google)</div><div class="val">${gNow?((ota/gNow*100).toFixed(0)+"%"):"–"}</div><div class="meta">${fmt(ota)} group covers via agencies</div></div>
+    <div class="kpi"><div class="lab">OTA no-show rate</div><div class="val">${otaNs}</div><div class="meta">vs website ${webNs!=null?webNs.toFixed(0)+'%':'–'}</div></div>
   </div>`;
   return kpis + html;
 }
