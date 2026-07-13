@@ -13,123 +13,249 @@
  "venues": [
   {
    "name": "Aqua HK",
-   "covers_cur": 1168,
-   "covers_prior": 991,
-   "covers_yoy": 805,
-   "widget": 529,
-   "widget_prior": 417,
-   "widget_yoy": 398,
-   "gr": 206,
-   "gr_prior": 131,
-   "gr_yoy": 0,
-   "ot": 291,
-   "ot_prior": 277,
-   "ot_yoy": 271,
-   "walk": 92,
-   "recep": 50,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 204
+   "ga4": 204,
+   "ch": {
+    "web": {
+     "c": 529,
+     "p": 417,
+     "y": 398
+    },
+    "gr": {
+     "c": 206,
+     "p": 131,
+     "y": 0
+    },
+    "ot": {
+     "c": 291,
+     "p": 277,
+     "y": 271
+    },
+    "walk": {
+     "c": 92,
+     "p": 83,
+     "y": 58
+    },
+    "recep": {
+     "c": 50,
+     "p": 83,
+     "y": 78
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
   },
   {
    "name": "Hutong HK",
-   "covers_cur": 1074,
-   "covers_prior": 1162,
-   "covers_yoy": 1018,
-   "widget": 402,
-   "widget_prior": 425,
-   "widget_yoy": 513,
-   "gr": 277,
-   "gr_prior": 308,
-   "gr_yoy": 85,
-   "ot": 227,
-   "ot_prior": 228,
-   "ot_yoy": 253,
-   "walk": 125,
-   "recep": 43,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 219
+   "ga4": 219,
+   "ch": {
+    "web": {
+     "c": 402,
+     "p": 425,
+     "y": 513
+    },
+    "gr": {
+     "c": 277,
+     "p": 308,
+     "y": 85
+    },
+    "ot": {
+     "c": 227,
+     "p": 228,
+     "y": 253
+    },
+    "walk": {
+     "c": 125,
+     "p": 102,
+     "y": 99
+    },
+    "recep": {
+     "c": 43,
+     "p": 99,
+     "y": 66
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 2
+    }
+   }
   },
   {
    "name": "The Chinese Library",
-   "covers_cur": 597,
-   "covers_prior": 331,
-   "covers_yoy": 760,
-   "widget": 133,
-   "widget_prior": 95,
-   "widget_yoy": 298,
-   "gr": 91,
-   "gr_prior": 55,
-   "gr_yoy": 51,
-   "ot": 232,
-   "ot_prior": 103,
-   "ot_yoy": 177,
-   "walk": 64,
-   "recep": 77,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 75
+   "ga4": 75,
+   "ch": {
+    "web": {
+     "c": 133,
+     "p": 95,
+     "y": 298
+    },
+    "gr": {
+     "c": 91,
+     "p": 55,
+     "y": 51
+    },
+    "ot": {
+     "c": 232,
+     "p": 103,
+     "y": 177
+    },
+    "walk": {
+     "c": 64,
+     "p": 38,
+     "y": 84
+    },
+    "recep": {
+     "c": 77,
+     "p": 40,
+     "y": 150
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
   },
   {
    "name": "Cantina",
-   "covers_cur": 501,
-   "covers_prior": 307,
-   "covers_yoy": 491,
-   "widget": 179,
-   "widget_prior": 97,
-   "widget_yoy": 130,
-   "gr": 43,
-   "gr_prior": 53,
-   "gr_yoy": 6,
-   "ot": 208,
-   "ot_prior": 101,
-   "ot_yoy": 238,
-   "walk": 49,
-   "recep": 22,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 75
+   "ga4": 75,
+   "ch": {
+    "web": {
+     "c": 179,
+     "p": 97,
+     "y": 130
+    },
+    "gr": {
+     "c": 43,
+     "p": 53,
+     "y": 6
+    },
+    "ot": {
+     "c": 208,
+     "p": 101,
+     "y": 238
+    },
+    "walk": {
+     "c": 49,
+     "p": 37,
+     "y": 59
+    },
+    "recep": {
+     "c": 22,
+     "p": 19,
+     "y": 58
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
   },
   {
    "name": "Dim Sum Library",
-   "covers_cur": 2077,
-   "covers_prior": 2177,
-   "covers_yoy": 2160,
-   "widget": 354,
-   "widget_prior": 331,
-   "widget_yoy": 391,
-   "gr": 203,
-   "gr_prior": 275,
-   "gr_yoy": 156,
-   "ot": 404,
-   "ot_prior": 407,
-   "ot_yoy": 384,
-   "walk": 965,
-   "recep": 151,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 137
+   "ga4": 137,
+   "ch": {
+    "web": {
+     "c": 354,
+     "p": 331,
+     "y": 391
+    },
+    "gr": {
+     "c": 203,
+     "p": 275,
+     "y": 156
+    },
+    "ot": {
+     "c": 404,
+     "p": 407,
+     "y": 384
+    },
+    "walk": {
+     "c": 965,
+     "p": 978,
+     "y": 1116
+    },
+    "recep": {
+     "c": 151,
+     "p": 186,
+     "y": 113
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
   },
   {
    "name": "Shiro",
-   "covers_cur": 2977,
-   "covers_prior": 2481,
-   "covers_yoy": 1870,
-   "widget": 280,
-   "widget_prior": 245,
-   "widget_yoy": 197,
-   "gr": 137,
-   "gr_prior": 127,
-   "gr_yoy": 0,
-   "ot": 462,
-   "ot_prior": 373,
-   "ot_yoy": 357,
-   "walk": 1754,
-   "recep": 344,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 129
+   "ga4": 129,
+   "ch": {
+    "web": {
+     "c": 280,
+     "p": 245,
+     "y": 197
+    },
+    "gr": {
+     "c": 137,
+     "p": 127,
+     "y": 0
+    },
+    "ot": {
+     "c": 462,
+     "p": 373,
+     "y": 357
+    },
+    "walk": {
+     "c": 1754,
+     "p": 1399,
+     "y": 947
+    },
+    "recep": {
+     "c": 344,
+     "p": 337,
+     "y": 369
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
   }
  ],
  "trend": {
@@ -164,5 +290,5 @@
    1824
   ]
  },
- "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 is becoming steadily less reliable as cookie consent and privacy tracking cut what it can see, so treat it as a guide to overall website performance rather than a count of bookings. It only fires for bookings made on our own website, so it cannot see <b>OpenRice</b>, only partly captures <b>Google Reserve</b>, and never sees walk-ins or the reception desks, which together are over a third of Hong Kong covers. GA4 reads <b>\u25b27.3% YoY</b> while total covers created are <b>\u25b221% YoY</b>. Read this as the fuller demand and channel picture, not as a contradiction of GA4."
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 is becoming steadily less reliable as cookie consent and privacy tracking cut what it can see, so treat it as a guide to overall website performance rather than a count of bookings. It only fires for bookings made on our own website, so it cannot see <b>OpenRice</b>, only partly captures <b>Google Reserve</b>, and never sees walk-ins or the reception desks, which together are over 40% of Hong Kong covers. GA4 reads <b>\u25b27.3% YoY</b> while total covers created are <b>+18% YoY</b>. Read this as the fuller demand and channel picture, not as a contradiction of GA4."
 }

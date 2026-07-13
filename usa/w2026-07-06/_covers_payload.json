@@ -13,63 +13,126 @@
  "venues": [
   {
    "name": "Aqua NYC",
-   "covers_cur": 1802,
-   "covers_prior": 1300,
-   "covers_yoy": 1416,
-   "widget": 551,
-   "widget_prior": 355,
-   "widget_yoy": 319,
-   "gr": 244,
-   "gr_prior": 143,
-   "gr_yoy": 0,
-   "ot": 279,
-   "ot_prior": 154,
-   "ot_yoy": 98,
-   "walk": 501,
-   "recep": 223,
-   "ota": 0,
-   "tp": 4,
-   "ga4": 298
+   "ga4": 298,
+   "ch": {
+    "web": {
+     "c": 551,
+     "p": 355,
+     "y": 319
+    },
+    "gr": {
+     "c": 244,
+     "p": 143,
+     "y": 0
+    },
+    "ot": {
+     "c": 279,
+     "p": 154,
+     "y": 98
+    },
+    "walk": {
+     "c": 501,
+     "p": 450,
+     "y": 687
+    },
+    "recep": {
+     "c": 223,
+     "p": 192,
+     "y": 228
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 4,
+     "p": 6,
+     "y": 84
+    }
+   }
   },
   {
    "name": "Hutong NYC",
-   "covers_cur": 1277,
-   "covers_prior": 990,
-   "covers_yoy": 1202,
-   "widget": 302,
-   "widget_prior": 227,
-   "widget_yoy": 337,
-   "gr": 98,
-   "gr_prior": 116,
-   "gr_yoy": 179,
-   "ot": 553,
-   "ot_prior": 341,
-   "ot_yoy": 317,
-   "walk": 320,
-   "recep": 0,
-   "ota": 0,
-   "tp": 4,
-   "ga4": 105
+   "ga4": 105,
+   "ch": {
+    "web": {
+     "c": 302,
+     "p": 227,
+     "y": 337
+    },
+    "gr": {
+     "c": 98,
+     "p": 116,
+     "y": 179
+    },
+    "ot": {
+     "c": 553,
+     "p": 341,
+     "y": 317
+    },
+    "walk": {
+     "c": 320,
+     "p": 298,
+     "y": 330
+    },
+    "recep": {
+     "c": 0,
+     "p": 2,
+     "y": 5
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 4,
+     "p": 6,
+     "y": 34
+    }
+   }
   },
   {
    "name": "Hutong Miami",
-   "covers_cur": 530,
-   "covers_prior": 508,
-   "covers_yoy": 501,
-   "widget": 128,
-   "widget_prior": 184,
-   "widget_yoy": 116,
-   "gr": 3,
-   "gr_prior": 25,
-   "gr_yoy": 6,
-   "ot": 146,
-   "ot_prior": 87,
-   "ot_yoy": 157,
-   "walk": 237,
-   "recep": 16,
-   "ota": 0,
-   "tp": 0,
-   "ga4": 61
+   "ga4": 61,
+   "ch": {
+    "web": {
+     "c": 128,
+     "p": 184,
+     "y": 116
+    },
+    "gr": {
+     "c": 3,
+     "p": 25,
+     "y": 6
+    },
+    "ot": {
+     "c": 146,
+     "p": 87,
+     "y": 157
+    },
+    "walk": {
+     "c": 237,
+     "p": 209,
+     "y": 222
+    },
+    "recep": {
+     "c": 16,
+     "p": 3,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
   }
  ],
  "trend": {

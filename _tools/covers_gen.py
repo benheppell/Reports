@@ -4,20 +4,27 @@
 # Covers = SUM(covers) by booking-created date (sr_created_at, market tz), net of
 # cancellations/deleted, Bar seating areas excluded.
 #
-# Channels on booking_source:
-#   widget (Website) = Booking Widget + '%Landing Page%' + Nav/Hero CTA + Menu Page + PPC + campaign tags
+# Payload venues: [{name, ga4, ch:{web|gr|ot|walk|recep|ota|tp: {c,p,y}}}]
+#   web   (Website) = Booking Widget + '%Landing Page%' + Nav/Hero CTA + Menu Page + PPC + campaign tags
 #   gr    = Google Reserve Integration
 #   ot    = market platform (London/USA OpenTable[+Resy], HK OpenRice)
 #   walk  = Walk In
 #   recep = reception / reservations desks
 #   ota   = TheFork + First Table
 #   tp    = other third-party (BuyAGift, Virgin, Amex, DoorDash, gifting, concierge)
-# EXCLUDED entirely (Ben, 13 Jul 2026): named-host / staff-entered bookings (large groups and
-# private dining keyed in by the events and reservations teams). Not a marketing channel, so they
-# are dropped from the covers total rather than parked in an "Other" bucket.
+# Every channel cell shows value + WoW + YoY.
+# EXCLUDED entirely (Ben, 13 Jul 2026): named-host / staff-entered bookings (large groups and private
+# dining keyed in by the events and reservations teams). Not a marketing channel, so dropped from the
+# covers total rather than parked in an "Other" bucket.
 import json, sys
 
 P = json.load(open(sys.argv[1])); OUT = sys.argv[2]
+V = P['venues']
+MKT = P.get('market', 'London'); PLAT = P.get('platform', 'OpenTable'); TZ = P.get('tz', 'Europe/London')
+CH = ['web', 'gr', 'ot', 'walk', 'recep', 'ota', 'tp']
+HEAD = {'web': 'Website', 'gr': 'Google Reserve', 'ot': PLAT, 'walk': 'Walk-in',
+        'recep': 'Reception', 'ota': 'TheFork / First Table', 'tp': 'Other 3rd party'}
+CLS = {'web': 's-w', 'gr': 's-g', 'ot': 's-o', 'walk': 's-k', 'recep': 's-r', 'ota': 's-x', 'tp': 's-x'}
 
 
 def pct(cur, base):
@@ -26,50 +33,54 @@ def pct(cur, base):
     return (cur - base) / base * 100.0
 
 
-def dchip(p):
+def chip(p, lab):
     if p is None:
-        return '<span class="d na">n/a</span>'
+        return f'<span class="d na">{lab} n/a</span>'
     cls = 'flat' if abs(p) < 1.5 else ('up' if p > 0 else 'down')
-    return f'<span class="d {cls}">{"+" if p >= 0 else ""}{p:.0f}%</span>'
+    return f'<span class="d {cls}">{lab} {"+" if p >= 0 else ""}{p:.0f}%</span>'
 
 
-def otd(p):
-    if p is None:
-        return ''
-    cls = 'up' if p > 0 else ('down' if p < 0 else 'flat')
-    return f'<span class="otd"><span class="d {cls}">{"+" if p >= 0 else ""}{p:.0f}%</span></span>'
+def cell(t):
+    """t = {c,p,y} -> value with WoW and YoY chips."""
+    return (f'<td class="ch"><div class="v num">{t["c"]:,}</div>'
+            f'<div class="chips">{chip(pct(t["c"], t["p"]), "W")}{chip(pct(t["c"], t["y"]), "Y")}</div></td>')
 
 
-V = P['venues']
-KEYS = ['covers_cur', 'covers_prior', 'covers_yoy', 'widget', 'widget_prior', 'widget_yoy',
-        'gr', 'gr_prior', 'gr_yoy', 'ot', 'ot_prior', 'ot_yoy', 'walk', 'recep', 'ota', 'tp', 'ga4']
-tot = {k: sum(v.get(k, 0) for v in V) for k in KEYS}
-MKT = P.get('market', 'London'); PLAT = P.get('platform', 'OpenTable'); TZ = P.get('tz', 'Europe/London')
+def totals(vs):
+    out = {}
+    for k in CH:
+        out[k] = {f: sum(v['ch'][k][f] for v in vs) for f in ('c', 'p', 'y')}
+    return out
 
 
-def mixbar(v):
-    c = v['covers_cur'] or 1
-    seg = [('s-w', v['widget']), ('s-g', v['gr']), ('s-o', v['ot']),
-           ('s-k', v['walk']), ('s-r', v['recep']), ('s-x', v['ota'] + v['tp'])]
+def covtot(t):
+    return {f: sum(t[k][f] for k in CH) for f in ('c', 'p', 'y')}
+
+
+TOT = totals(V); TCOV = covtot(TOT)
+
+
+def mixbar(chs, tot_c):
+    c = tot_c or 1
     return '<div class="bar">' + ''.join(
-        f'<i class="{cl}" style="width:{n / c * 100:.1f}%"></i>' for cl, n in seg) + '</div>'
+        f'<i class="{CLS[k]}" style="width:{chs[k]["c"] / c * 100:.1f}%"></i>' for k in CH) + '</div>'
 
 
 rows = ''
-for v in V + [{'name': f'{MKT} portfolio', 'total': True, **tot}]:
-    isT = v.get('total')
-    wow = pct(v['covers_cur'], v['covers_prior']); yoy = pct(v['covers_cur'], v['covers_yoy'])
-    cov = f"{v['covers_cur']:,}"
-    cls = ' class="total"' if isT else ''
-    rows += (f'<tr{cls}><td>{v["name"]}</td>'
-             f'<td class="num">{cov if isT else "<b>" + cov + "</b>"}</td>'
-             f'<td class="num">{dchip(wow)}</td><td class="num">{dchip(yoy)}</td>'
-             f'<td class="num">{v["widget"]:,}</td><td class="num">{v["gr"]:,}</td>'
-             f'<td class="num">{v["ot"]:,} {otd(pct(v["ot"], v["ot_yoy"]))}</td>'
-             f'<td class="num">{v["walk"]:,}</td><td class="num">{v["recep"]:,}</td>'
-             f'<td class="num">{v["ota"]:,}</td><td class="num">{v["tp"]:,}</td>'
-             f'<td class="num mut">{v["ga4"]:,}</td>'
-             f'<td style="min-width:110px">{mixbar(v)}</td></tr>')
+for v in V:
+    cov = covtot(v['ch'])
+    rows += (f'<tr><td class="vn">{v["name"]}</td>'
+             f'<td class="ch"><div class="v num"><b>{cov["c"]:,}</b></div>'
+             f'<div class="chips">{chip(pct(cov["c"], cov["p"]), "W")}{chip(pct(cov["c"], cov["y"]), "Y")}</div></td>'
+             + ''.join(cell(v['ch'][k]) for k in CH)
+             + f'<td class="num mut">{v["ga4"]:,}</td>'
+             f'<td style="min-width:110px">{mixbar(v["ch"], cov["c"])}</td></tr>')
+rows += (f'<tr class="total"><td class="vn">{MKT} portfolio</td>'
+         f'<td class="ch"><div class="v num">{TCOV["c"]:,}</div>'
+         f'<div class="chips">{chip(pct(TCOV["c"], TCOV["p"]), "W")}{chip(pct(TCOV["c"], TCOV["y"]), "Y")}</div></td>'
+         + ''.join(cell(TOT[k]) for k in CH)
+         + f'<td class="num mut">{sum(v["ga4"] for v in V):,}</td>'
+         f'<td style="min-width:110px">{mixbar(TOT, TCOV["c"])}</td></tr>')
 
 # ---- 8-week SVG (bars = total covers, line = platform covers) ----
 T = P['trend']; labels = T['labels']; tt = T['total']; oo = T['ot']
@@ -94,38 +105,38 @@ def kpi(lab, big, meta):
     return f'<div class="kpi"><div class="lab">{lab}</div><div class="big">{big}</div><div class="meta">{meta}</div></div>'
 
 
-def pt(k):
-    return sum(v.get(k, 0) for v in V)
+def kmeta(t):
+    return f'WoW {chip(pct(t["c"], t["p"]), "")} · YoY {chip(pct(t["c"], t["y"]), "")}'
 
 
-cov_yoy = pct(tot['covers_cur'], tot['covers_yoy'])
-cards = (kpi('Covers created', f"{tot['covers_cur']:,}",
-             f"WoW {dchip(pct(tot['covers_cur'], tot['covers_prior']))} · YoY {dchip(cov_yoy)}") +
-         kpi('Website covers', f"{tot['widget']:,}",
-             f"WoW {dchip(pct(tot['widget'], pt('widget_prior')))} · YoY {dchip(pct(tot['widget'], pt('widget_yoy')))}") +
-         kpi(f'{PLAT} covers', f"{tot['ot']:,}",
-             f"WoW {dchip(pct(tot['ot'], pt('ot_prior')))} · YoY {dchip(pct(tot['ot'], pt('ot_yoy')))} · <b>not in GA4</b>") +
-         kpi('Walk-in covers', f"{tot['walk']:,}", "Never visible to GA4") +
-         kpi('GA4 bookings (website)', f"{tot['ga4']:,}", P['ga4_meta']))
+cov_yoy = pct(TCOV['c'], TCOV['y'])
+cards = (kpi('Covers created', f"{TCOV['c']:,}", kmeta(TCOV)) +
+         kpi('Website covers', f"{TOT['web']['c']:,}", kmeta(TOT['web'])) +
+         kpi(f'{PLAT} covers', f"{TOT['ot']['c']:,}", kmeta(TOT['ot']) + ' · <b>not in GA4</b>') +
+         kpi('Walk-in covers', f"{TOT['walk']['c']:,}", kmeta(TOT['walk']) + ' · <b>not in GA4</b>') +
+         kpi('GA4 bookings (website)', f"{sum(v['ga4'] for v in V):,}", P['ga4_meta']))
 
-ot_mult = tot['ot'] / (tot['ot_yoy'] or 1)
+ot_mult = TOT['ot']['c'] / (TOT['ot']['y'] or 1)
 default_callout = (
     f'<b>Why this sits alongside the GA4 dashboard.</b> GA4 is becoming steadily less reliable as cookie consent '
     f'and privacy tracking cut what it can see, so treat it as a guide to overall website performance rather than a '
     f'count of bookings. <b>GA4 <code>sevenrooms_booking_complete</code></b> only fires for bookings made on our own '
     f'website. It cannot see <b>{PLAT}</b>, only partly captures <b>Google Reserve</b>, and never sees walk-ins or the '
-    f'reception desks. {PLAT} covers are <b>{tot["ot"]:,}</b> this week, from <b>{tot["ot_yoy"]:,}</b> the same week '
-    f'last year, roughly {ot_mult:.1f}x. So while GA4 reads <b>{P["ga4_yoy"]}</b>, total covers created are '
-    f'<b>{dchip(cov_yoy)} YoY</b>. This report is the more accurate view of what we are actually creating.')
+    f'reception desks. {PLAT} covers are <b>{TOT["ot"]["c"]:,}</b> this week, from <b>{TOT["ot"]["y"]:,}</b> the same '
+    f'week last year, roughly {ot_mult:.1f}x. So while GA4 reads <b>{P["ga4_yoy"]}</b>, total covers created are '
+    f'<b>{"+" if cov_yoy >= 0 else ""}{cov_yoy:.0f}% YoY</b>. This report is the more accurate view of what we are '
+    f'actually creating.')
 CALLOUT = P.get('callout', default_callout)
 PLATFOOT = P.get('platform_foot', '<b>OpenTable</b> = OT Guestcenter + OpenTable sources')
 COMBNOTE = P.get('combined_note', '<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. ')
+ths = ''.join(f'<th>{HEAD[k]}</th>' for k in CH)
+legend = ''.join(f'<span><i class="{CLS[k]}"></i>{HEAD[k]}</span>' for k in CH)
 
 HTML = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Aqua {MKT} — Covers &amp; Booking Channels — {P['week']}</title>
 <style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
 *{{box-sizing:border-box;margin:0;padding:0}}
-body{{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1280px;margin:0 auto}}
+body{{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1340px;margin:0 auto}}
 a.back{{font-size:12px;color:#2563eb;text-decoration:none}}
 h1{{font-size:24px;font-weight:700;margin-top:8px;letter-spacing:-.3px}}
 .sub{{color:#64748b;font-size:13px;margin-top:4px}}
@@ -136,24 +147,27 @@ h1{{font-size:24px;font-weight:700;margin-top:8px;letter-spacing:-.3px}}
 .kpi{{border:1px solid #e2e8f0;border-radius:12px;padding:14px 15px;background:#fafafa}}
 .kpi .lab{{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#64748b;font-weight:600}}
 .kpi .big{{font-size:24px;font-weight:700;margin-top:5px;font-family:'JetBrains Mono',monospace}}
-.kpi .meta{{font-size:11.5px;color:#475569;margin-top:5px}}
+.kpi .meta{{font-size:11.5px;color:#475569;margin-top:6px}}
 table{{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}}
-th,td{{padding:9px 7px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}}
+th,td{{padding:8px 6px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap;vertical-align:top}}
 th:first-child,td:first-child{{text-align:left}}
-thead th{{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}}
+thead th{{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0;vertical-align:bottom}}
+td.vn{{font-weight:600;vertical-align:middle}}
+td.ch .v{{font-size:13px;line-height:1.25}}
+td.ch .chips{{display:flex;gap:3px;justify-content:flex-end;margin-top:3px}}
 tr.total{{font-weight:700;background:#f1f5f9}} tr.total td{{border-top:2px solid #cbd5e1}}
-.mut{{color:#94a3b8}}
-.d{{font-size:11px;font-weight:600;padding:1px 5px;border-radius:6px}}
-.up{{color:#16a34a;background:#ecfdf3}}.down{{color:#dc2626;background:#fef2f2}}.flat{{color:#475467;background:#f2f4f7}}.na{{color:#98a2b3}}
-.otd .d,.otd{{font-size:10px}}
-.bar{{display:flex;height:13px;border-radius:4px;overflow:hidden;background:#eef2f6}}
+.mut{{color:#94a3b8;vertical-align:middle}}
+.d{{font-size:9.5px;font-weight:600;padding:1px 4px;border-radius:5px;font-family:'JetBrains Mono',monospace}}
+.up{{color:#16a34a;background:#ecfdf3}}.down{{color:#dc2626;background:#fef2f2}}.flat{{color:#475467;background:#f2f4f7}}.na{{color:#98a2b3;background:#f8fafc}}
+.bar{{display:flex;height:13px;border-radius:4px;overflow:hidden;background:#eef2f6;margin-top:2px}}
 .bar i{{display:block;height:100%}}
 .s-w{{background:#2563eb}}.s-g{{background:#16a34a}}.s-o{{background:#da3743}}.s-k{{background:#f59e0b}}.s-r{{background:#8b5cf6}}.s-x{{background:#cbd2d9}}
 .legend{{display:flex;gap:14px;font-size:12px;color:#475569;margin:14px 0 2px;flex-wrap:wrap}}
 .legend i{{display:inline-block;width:11px;height:11px;border-radius:2px;vertical-align:-1px;margin-right:5px}}
+.key{{font-size:11.5px;color:#94a3b8;margin-top:8px}}
 .sec{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;margin:28px 0 8px;border-bottom:1px solid #eef2f6;padding-bottom:6px}}
 footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.55}}
-@media(max-width:1100px){{.cards{{grid-template-columns:repeat(2,1fr)}}}}
+@media(max-width:1150px){{.cards{{grid-template-columns:repeat(2,1fr)}}}}
 </style></head><body>
 <a class="back" href="../index.html">← All {MKT} reports</a>
 <h1>Aqua {MKT} — Covers &amp; Booking Channels</h1>
@@ -164,16 +178,10 @@ footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f
 <div class="cards">{cards}</div>
 
 <div class="sec">Covers by venue &amp; booking channel</div>
-<table><thead><tr>
-<th>Venue</th><th>Covers</th><th>WoW</th><th>YoY</th>
-<th>Website</th><th>Google Reserve</th><th>{PLAT}</th><th>Walk-in</th><th>Reception</th>
-<th>TheFork / First Table</th><th>Other 3rd party</th><th>GA4 bk</th><th>Channel mix</th>
-</tr></thead><tbody>{rows}</tbody></table>
-<div class="legend">
-<span><i class="s-w"></i>Website</span><span><i class="s-g"></i>Google Reserve</span>
-<span><i class="s-o"></i>{PLAT}</span><span><i class="s-k"></i>Walk-in</span>
-<span><i class="s-r"></i>Reception</span><span><i class="s-x"></i>Third party</span>
-</div>
+<table><thead><tr><th>Venue</th><th>Covers</th>{ths}<th>GA4 bk</th><th>Channel mix</th></tr></thead>
+<tbody>{rows}</tbody></table>
+<div class="key">Each cell shows covers this week, with <b>W</b> = week on week and <b>Y</b> = year on year beneath.</div>
+<div class="legend">{legend}</div>
 
 <div class="sec">{PLAT} covers vs total covers — last 8 weeks</div>
 <div class="legend"><span><i class="s-x" style="background:#c7dbf2"></i>Total covers (bars)</span><span><i class="s-o"></i>{PLAT} covers (line)</span></div>
@@ -182,7 +190,7 @@ footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f
 <footer>
 <b>Covers</b> = SevenRooms covers by booking-created date (<code>sr_created_at</code>, {TZ}), net of cancellations and deleted bookings. Bar seating areas excluded; private dining and afternoon tea included.
 <b>Website</b> = all bookings originating on our own site: booking widget, campaign landing pages, on-site CTAs (Nav/Hero), menu page and paid-search landing pages. {PLATFOOT}; <b>Google Reserve</b> = Google Reserve Integration; <b>Walk-in</b> = Walk In; <b>Reception</b> = venue reception and reservations desks; <b>TheFork / First Table</b> and <b>Other 3rd party</b> = booking platforms, gifting and concierge partners.
-<b>Named-host bookings are excluded from this report:</b> large groups and private dining keyed in by the events and reservations teams are not a marketing channel, so they are removed from the covers total rather than parked in an "Other" bucket. This means covers totals here are lower than in reports before 13 Jul 2026 and are not comparable with them. {COMBNOTE}<b>GA4 bk</b> = website <code>sevenrooms_booking_complete</code> events (shown for context, not directly comparable to covers). Generated {P['generated']}. Source: SevenRooms via Supabase.
+<b>Named-host bookings are excluded from this report:</b> large groups and private dining keyed in by the events and reservations teams are not a marketing channel, so they are removed from the covers total rather than parked in an "Other" bucket. Covers totals here are therefore lower than in reports before 13 Jul 2026 and are not comparable with them. {COMBNOTE}<b>GA4 bk</b> = website <code>sevenrooms_booking_complete</code> events (shown for context, not directly comparable to covers). Generated {P['generated']}. Source: SevenRooms via Supabase.
 </footer>
 </body></html>'''
 open(OUT, 'w').write(HTML)
