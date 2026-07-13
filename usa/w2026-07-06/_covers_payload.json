@@ -2,18 +2,20 @@
  "market": "USA",
  "platform": "OpenTable + Resy",
  "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OT Guestcenter, OpenTable network and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 464 \u00b7 YoY \u25bc26.2%",
+ "ga4_yoy": "\u25bc26.2% YoY",
  "week": "6\u201312 Jul 2026",
  "wow": "29 Jun\u20135 Jul 2026",
  "yoy": "7\u201313 Jul 2025",
  "generated": "13 July 2026",
- "ga4_meta": "Portfolio 464 \u00b7 YoY \u25bc26.2%",
- "ga4_yoy": "\u25bc26.2% YoY",
  "venues": [
   {
    "name": "Aqua NYC",
-   "covers_cur": 2482,
-   "covers_prior": 1378,
-   "covers_yoy": 1619,
+   "covers_cur": 1802,
+   "covers_prior": 1300,
+   "covers_yoy": 1416,
    "widget": 551,
    "widget_prior": 355,
    "widget_yoy": 319,
@@ -23,14 +25,17 @@
    "ot": 279,
    "ot_prior": 154,
    "ot_yoy": 98,
-   "other": 1408,
+   "walk": 501,
+   "recep": 223,
+   "ota": 0,
+   "tp": 4,
    "ga4": 298
   },
   {
    "name": "Hutong NYC",
-   "covers_cur": 1769,
-   "covers_prior": 1239,
-   "covers_yoy": 1578,
+   "covers_cur": 1277,
+   "covers_prior": 990,
+   "covers_yoy": 1202,
    "widget": 302,
    "widget_prior": 227,
    "widget_yoy": 337,
@@ -40,14 +45,17 @@
    "ot": 553,
    "ot_prior": 341,
    "ot_yoy": 317,
-   "other": 816,
+   "walk": 320,
+   "recep": 0,
+   "ota": 0,
+   "tp": 4,
    "ga4": 105
   },
   {
    "name": "Hutong Miami",
-   "covers_cur": 673,
-   "covers_prior": 592,
-   "covers_yoy": 609,
+   "covers_cur": 530,
+   "covers_prior": 508,
+   "covers_yoy": 501,
    "widget": 128,
    "widget_prior": 184,
    "widget_yoy": 116,
@@ -57,7 +65,10 @@
    "ot": 146,
    "ot_prior": 87,
    "ot_yoy": 157,
-   "other": 396,
+   "walk": 237,
+   "recep": 16,
+   "ota": 0,
+   "tp": 0,
    "ga4": 61
   }
  ],
@@ -73,14 +84,14 @@
    "W27"
   ],
   "total": [
-   4317,
-   3937,
-   5922,
-   4372,
-   3893,
-   4403,
-   3209,
-   4924
+   3573,
+   3290,
+   4966,
+   3520,
+   3343,
+   3636,
+   2798,
+   3609
   ],
   "ot": [
    912,
@@ -92,7 +103,5 @@
    582,
    978
   ]
- },
- "platform_foot": "<b>OpenTable + Resy</b> = OT Guestcenter, OpenTable network and Resy sources",
- "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. "
+ }
 }
