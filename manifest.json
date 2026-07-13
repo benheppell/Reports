@@ -1,11 +1,18 @@
 {
- "generated": "6 July 2026",
+ "generated": "13 July 2026",
  "markets": [
   {
    "name": "Hong Kong",
    "slug": "hk",
    "ccy": "HKD",
    "weekly": [
+    {
+     "dates": "W23 · 6–12 Jul 2026",
+     "folder": "w2026-07-06",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W22 · 29 Jun–5 Jul 2026",
      "folder": "w2026-06-29",
@@ -152,6 +159,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "6–12 Jul 2026",
+     "folder": "w2026-07-06"
+    },
     {
      "dates": "29 Jun–5 Jul 2026",
      "folder": "w2026-06-29"
@@ -206,6 +217,13 @@
    "ccy": "GBP",
    "weekly": [
     {
+     "dates": "W23 · 6–12 Jul 2026",
+     "folder": "w2026-07-06",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
+    {
      "dates": "W22 · 29 Jun–5 Jul 2026",
      "folder": "w2026-06-29",
      "deepdive": true,
@@ -353,6 +371,10 @@
    ],
    "trends": [
     {
+     "dates": "6–12 Jul 2026",
+     "folder": "w2026-07-06"
+    },
+    {
      "dates": "29 Jun–5 Jul 2026",
      "folder": "w2026-06-29"
     },
@@ -401,6 +423,13 @@
    "slug": "usa",
    "ccy": "USD",
    "weekly": [
+    {
+     "dates": "W27 · 6–12 Jul 2026",
+     "folder": "w2026-07-06",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W26 · 29 Jun–5 Jul 2026",
      "folder": "w2026-06-29",
@@ -574,6 +603,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "6–12 Jul 2026",
+     "folder": "w2026-07-06"
+    },
     {
      "dates": "29 Jun–5 Jul 2026",
      "folder": "w2026-06-29"

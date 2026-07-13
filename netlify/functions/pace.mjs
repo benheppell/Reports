@@ -40,12 +40,11 @@ export default async () => {
 
   try {
     // Reference is optional; never let it fail the main pace payload.
-    const [rows, reference, reliability] = await Promise.all([
+    const [rows, reference] = await Promise.all([
       callRpc("pace_tracker"),
       callRpc("pace_ly_final_reference").catch(() => []),
-      callRpc("pace_reliability").catch(() => []),
     ]);
-    return json({ generated_at: new Date().toISOString(), rows, reference, reliability }, 200);
+    return json({ generated_at: new Date().toISOString(), rows, reference }, 200);
   } catch (e) {
     return json({ error: "Supabase RPC failed", detail: String(e) }, 502);
   }

@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "\u00a3",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1163,
+   "tgt": 2180,
+   "wow": 1180,
+   "yoy": 1807,
+   "ytd": 30578,
+   "ytdt": 32840,
+   "meta_s": 1941.34,
+   "goog_s": 2886.72,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 670,
+   "tgt": 1066,
+   "wow": 699,
+   "yoy": 817,
+   "ytd": 17036,
+   "ytdt": 17645,
+   "meta_s": 1694.79,
+   "goog_s": 1206.07,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 339,
+   "tgt": 432,
+   "wow": 428,
+   "yoy": 393,
+   "ytd": 7265,
+   "ytdt": 9206,
+   "meta_s": 1223.29,
+   "goog_s": 1327.83,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 99,
+   "tgt": 147,
+   "wow": 99,
+   "yoy": 121,
+   "ytd": 2765,
+   "ytdt": 3839,
+   "meta_s": 1138.87,
+   "goog_s": 348.83,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 124,
+   "tgt": 148,
+   "wow": 114,
+   "yoy": 112,
+   "ytd": 2421,
+   "ytdt": 3577,
+   "meta_s": 324.44,
+   "goog_s": 665.01,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 575,
+   "tgt": 207,
+   "wow": 577,
+   "yoy": 192,
+   "ytd": 12121,
+   "ytdt": 4074,
+   "meta_s": 1855.06,
+   "goog_s": 371.35,
+   "nc": true
+  }
+ ],
+ "note": "<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined (both GA4 properties and both Meta accounts; Google is a shared account). <b>DSL</b> is trading far above a pre-rebrand target, so its variance and YoY are not comparable.",
+ "week": "6\u201312 Jul 2026",
+ "wow": "29 Jun\u20135 Jul 2026",
+ "yoy": "7\u201313 Jul 2025",
+ "generated": "13 July 2026"
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua Hong Kong — Venue Trends</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:32px;max-width:1120px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:24px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 18px;font-size:13.5px;line-height:1.5}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:15px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.fy{font-size:12px;font-weight:700;color:#475569;background:#f1f5f9;padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+.chip.green{background:#ecfdf5;color:#047857}.chip.green .dot{background:#10b981}
+.chip.amber{background:#fffbeb;color:#b45309}.chip.amber .dot{background:#f59e0b}
+.chip.red{background:#fef2f2;color:#b91c1c}.chip.red .dot{background:#ef4444}
+.chip.blue{background:#eff6ff;color:#1d4ed8}.chip.blue .dot{background:#3b82f6}
+.narr{background:#f8fafc;border:1px solid #eef2f6;border-left:3px solid #2563eb;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.55;color:#1e293b;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid #e7ecf2;border-radius:12px;padding:13px 14px 11px}
+.card .lab{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b}
+.card .lab .sh{font-weight:600;color:#b6c0cc;letter-spacing:0;text-transform:none}
+.snote{font-size:12px;color:#94a3b8;font-style:italic;margin:-8px 0 16px;line-height:1.45}
+.card .row{display:flex;align-items:baseline;justify-content:space-between;margin:5px 0 9px}
+.card .val{font-family:'JetBrains Mono',monospace;font-size:21px;font-weight:600;color:#0f172a}
+.badge{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:7px;white-space:nowrap}
+.badge.up{background:#ecfdf5;color:#047857}.badge.down{background:#fef2f2;color:#b91c1c}.badge.flat{background:#f1f5f9;color:#475569}
+.cv{position:relative}
+.cv svg{display:block;width:100%;height:60px}
+.ticks{position:relative;height:26px;margin-top:2px}
+.ticks span{position:absolute;text-align:center;line-height:1.15;font-family:'JetBrains Mono',monospace}
+.ticks b{font-size:9.5px;color:#475569;font-weight:600}
+.ticks i{font-size:8.5px;color:#aeb8c4;font-style:normal;display:block}
+.gl{display:flex;gap:8px;align-items:center;font-size:9px;color:#cbd5e1;font-family:'JetBrains Mono',monospace;justify-content:flex-end;margin-bottom:1px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#475569;margin:18px 0 4px;align-items:center}
+.legend i{display:inline-block;width:22px;height:0;vertical-align:middle;margin-right:6px}
+.legend .a{border-top:3px solid #2563eb}.legend .b{border-top:3px dashed #94a3b8}
+footer{margin-top:24px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All Hong Kong reports</a>
+<h1>Hong Kong &middot; Venue Trends</h1>
+<div class="sub">Direction of travel &mdash; the last 4 weeks (Mon&ndash;Sun) vs the same 4 weeks last year. Built to spot whether users and conversion rate are in line, so a site or tracking change shows up early. Solid blue = this year, dashed grey = last year. Weeks are numbered by financial year.</div>
+<div class="bar"><select id="vsel"></select><span class="fy" id="fy"></span><span id="alert"></span></div>
+<div class="narr" id="narr"></div>
+<div class="snote" id="snote"></div>
+<div class="grid" id="grid"></div>
+<div class="legend"><span><i class="a"></i>This year</span><span><i class="b"></i>Same FY weeks last year</span><span>CPA: lower is better (green badge = down)</span></div>
+<footer>GA4 bookings = sevenrooms_booking_complete &middot; Meta bookings = schedules (offsite pixel) &middot; Google bookings = Sevenrooms booking conversions &middot; Walk-in signals = Google local actions (store visits + directions + menu views + Book&nbsp;Now + calls). CPA = ad spend &divide; bookings on that platform. Badge compares the latest FY week to the same FY week last year. FY week 1 = first Monday of the year; users are summed daily users over each Mon&ndash;Sun week.</footer>
+<script>
+var PAY={"venues":["Aqua HK","Hutong HK","The Chinese Library","Cantina","Dim Sum Library","Shiro Pacific Place","Shiro Central"],"labels":["","","",""],"weekno":["W20","W21","W22","W23"],"dateTY":["15\u201321 Jun","22\u201328 Jun","29 Jun\u20135 Jul","6\u201312 Jul"],"dateLY":["16\u201322 Jun","23\u201329 Jun","30 Jun\u20136 Jul","7\u201313 Jul"],"fyrange":"FY26 weeks 20\u201323","sym":"HK$","data":{"Aqua HK":[["Website users",[3774,3317,3385,3492],[3847,4274,4597,3674],false,"n"],["Conversion rate",[3.84,5.43,4.9,5.84],[4.13,3.63,4.13,4.79],false,"%"],["GA4 bookings",[145,180,166,204],[159,155,190,176],false,"n"],["Meta bookings",[11,9,12,10],[11,14,10,7],false,"n"],["Google bookings",[50,61,55,59],[39,39,57,57],false,"n"],["Google CPA",[175.4,129.1,147.4,143.7],[62.7,49.0,28.0,91.9],true,"$"],["Meta CPA",[619.9,905.7,771.3,462.3],[507.0,405.2,564.6,426.6],true,"$"],["Google walk-in signals",[1306,1373,1436,1096],[1623,1501,975,1161],false,"n"]],"Hutong HK":[["Website users",[3009,2363,2492,2559],[2718,3093,3561,3735],false,"n"],["Conversion rate",[8.97,9.73,9.71,8.56],[6.99,6.01,4.94,6.02],false,"%"],["GA4 bookings",[270,230,242,219],[190,186,176,225],false,"n"],["Meta bookings",[10,5,8,4],[11,17,13,14],false,"n"],["Google bookings",[25,15,11,12],[10,20,20,26],false,"n"],["Google CPA",[184.9,253.1,433.2,452.9],[265.4,99.5,90.6,81.3],true,"$"],["Meta CPA",[281.6,322.2,383.8,640.0],[515.6,334.4,418.7,403.1],true,"$"],["Google walk-in signals",[1526,1378,1794,1609],[665,521,535,671],false,"n"]],"The Chinese Library":[["Website users",[1681,1362,1755,1745],[1308,1508,1562,1362],false,"n"],["Conversion rate",[6.48,9.18,4.22,4.3],[5.96,5.31,5.95,6.68],false,"%"],["GA4 bookings",[109,125,74,75],[78,80,93,91],false,"n"],["Meta bookings",[6,3,3,2],[6,6,7,3],false,"n"],["Google bookings",[40,47,28,17],[28,16,10,12],false,"n"],["Google CPA",[127.5,52.3,127.0,240.7],[64.2,166.3,212.5,183.5],true,"$"],["Meta CPA",[637.1,1311.0,2325.4,2599.5],[575.7,588.2,489.9,1141.0],true,"$"],["Google walk-in signals",[366,244,276,193],[143,164,167,162],false,"n"]],"Cantina":[["Website users",[1788,1778,2149,2119],[889,1027,1330,1177],false,"n"],["Conversion rate",[3.8,4.44,3.49,3.54],[4.72,5.74,3.46,3.82],false,"%"],["GA4 bookings",[68,79,75,75],[42,59,46,45],false,"n"],["Meta bookings",[7,6,13,10],[3,8,4,7],false,"n"],["Google bookings",[16,29,20,18],[14,19,18,11],false,"n"],["Google CPA",[413.4,216.5,231.8,252.0],[93.4,94.7,98.0,217.6],true,"$"],["Meta CPA",[569.4,757.8,404.5,348.8],[755.2,284.5,906.6,550.5],true,"$"],["Google walk-in signals",[569,725,571,490],[83,52,134,139],false,"n"]],"Dim Sum Library":[["Website users",[1260,1002,1114,1486],[1142,1145,1154,1376],false,"n"],["Conversion rate",[10.71,14.87,11.31,9.22],[11.91,13.54,12.22,11.34],false,"%"],["GA4 bookings",[135,149,126,137],[136,155,141,156],false,"n"],["Meta bookings",[4,3,2,9],[10,12,7,8],false,"n"],["Google bookings",[59,70,54,47],[50,64,58,55],false,"n"],["Google CPA",[23.3,14.0,19.8,25.4],[19.9,17.8,19.0,17.1],true,"$"],["Meta CPA",[331.7,136.1,269.2,113.1],[189.3,139.9,254.7,225.2],true,"$"],["Google walk-in signals",[0,0,0,0],[0,0,0,0],false,"n"]],"Shiro Pacific Place":[["Website users",[796,747,661,662],[804,724,1256,805],false,"n"],["Conversion rate",[10.05,12.32,10.59,11.63],[9.7,9.81,6.61,11.06],false,"%"],["GA4 bookings",[80,92,70,77],[78,71,83,89],false,"n"],["Meta bookings",[9,9,4,14],[2,1,5,5],false,"n","shared"],["Google bookings",[44,54,43,52],[27,32,30,44],false,"n","shared"],["Google CPA",[138.2,143.3,94.7,77.4],[36.8,38.8,41.2,24.9],true,"$","shared"],["Meta CPA",[487.3,262.9,914.0,373.8],[893.6,1852.3,356.1,369.5],true,"$","shared"],["Google walk-in signals",[58,61,36,8],[112,157,165,171],false,"n","shared"]],"Shiro Central":[["Website users",[1148,1182,1588,1695],[0,0,0,0],false,"n"],["Conversion rate",[3.66,3.89,1.95,3.07],[0,0,0,0],false,"%"],["GA4 bookings",[42,46,31,52],[0,0,0,0],false,"n"],["Meta bookings",[9,9,4,14],[2,1,5,5],false,"n","shared"],["Google bookings",[44,54,43,52],[27,32,30,44],false,"n","shared"],["Google CPA",[138.2,143.3,94.7,77.4],[36.8,38.8,41.2,24.9],true,"$","shared"],["Meta CPA",[487.3,262.9,914.0,373.8],[893.6,1852.3,356.1,369.5],true,"$","shared"],["Google walk-in signals",[58,61,36,8],[112,157,165,171],false,"n","shared"]]},"narr":{"Aqua HK":"W23 users 3,492 (-5% YoY) with 204 GA4 bookings (+16% YoY); conversion rate 5.8% vs 4.8% LY. Google delivered 59 bookings at HK$144 CPA; Meta 10 at HK$462.","Hutong HK":"W23 users 2,559 (-31% YoY) with 219 GA4 bookings (-3% YoY); conversion rate 8.6% vs 6.0% LY. Google delivered 12 bookings at HK$453 CPA; Meta 4 at HK$640.","The Chinese Library":"W23 users 1,745 (+28% YoY) with 75 GA4 bookings (-18% YoY); conversion rate 4.3% vs 6.7% LY. Google delivered 17 bookings at HK$241 CPA; Meta 2 at HK$2,600.","Cantina":"W23 users 2,119 (+80% YoY) with 75 GA4 bookings (+67% YoY); conversion rate 3.5% vs 3.8% LY. Google delivered 18 bookings at HK$252 CPA; Meta 10 at HK$349.","Dim Sum Library":"W23 users 1,486 (+8% YoY) with 137 GA4 bookings (-12% YoY); conversion rate 9.2% vs 11.3% LY. Google delivered 47 bookings at HK$25 CPA; Meta 9 at HK$113.","Shiro Pacific Place":"W23 users 662 (-18% YoY) with 77 GA4 bookings (-13% YoY); conversion rate 11.6% vs 11.1% LY. Google delivered 52 bookings at HK$77 CPA; Meta 14 at HK$374.","Shiro Central":"Shiro Central (Tai Kwun) continues its 2026 ramp: 52 GA4 bookings on 1,695 users in W23 (conversion rate 3.1%). New venue \u2014 no like-for-like last year. Meta/Google panels are shared with the combined Shiro ad account."},"alert":{"Aqua HK":["green","On track","Users and conversion holding up YoY"],"Hutong HK":["red","Traffic drop","Latest-week users -31% YoY"],"The Chinese Library":["amber","Conversion check","Users +28% YoY but conversion rate 4.3% vs 6.7% LY"],"Cantina":["amber","Conversion check","Users +80% YoY but conversion rate 3.5% vs 3.8% LY"],"Dim Sum Library":["amber","Conversion check","Users +8% YoY but conversion rate 9.2% vs 11.3% LY"],"Shiro Pacific Place":["red","Traffic drop","Latest-week users -18% YoY"],"Shiro Central":["blue","New venue","Shiro Central launched 2026 \u2014 this-year only, no YoY comparison"]},"sharednote":{"Shiro Pacific Place":"Meta & Google panels are the shared Shiro ad account (Pacific Place + Tai Kwun combined).","Shiro Central":"Meta & Google panels are the shared Shiro ad account (Pacific Place + Tai Kwun combined)."}};
+var W=200,H=58,PADX=4,PADY=6,N=PAY.labels.length;
+function xpos(i){return PADX + i/(N-1)*(W-2*PADX);}      // svg units
+function xpct(i){return xpos(i)/W*100;}                  // percent for ticks
+var SYM=PAY.sym||'$';
+function fmt(v,f){if(f=='%')return v.toFixed(2)+'%';if(f=='$')return SYM+v.toFixed(1);return Math.round(v).toLocaleString();}
+function badge(ty,ly,inv){var t=ty[ty.length-1],l=ly[ly.length-1];if(!l)return ['flat','n/a'];
+ var p=(t-l)/l*100;var good=inv? p<0 : p>0;var cls=Math.abs(p)<2?'flat':(good?'up':'down');
+ return [cls,(p>=0?'+':'')+p.toFixed(0)+'% YoY'];}
+function poly(a,mn,mx){return a.map(function(v,i){
+   var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);return xpos(i).toFixed(1)+','+y.toFixed(1);}).join(' ');}
+function spark(ty,ly){
+ var all=ty.concat(ly);var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);if(mx==mn)mx=mn+1;
+ var lx=xpos(ty.length-1),lyv=H-PADY-(ty[ty.length-1]-mn)/(mx-mn)*(H-2*PADY);
+ var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none">';
+ for(var i=0;i<N;i++){var x=xpos(i).toFixed(1);svg+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="'+H+'" stroke="#f1f5f9" stroke-width="1"/>';}
+ svg+='<polyline fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ly,mn,mx)+'"/>'
+   +'<polyline fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ty,mn,mx)+'"/>'
+   +'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/></svg>';
+ return svg;
+}
+function ticks(){
+ var h='<div class="ticks">';
+ for(var i=0;i<N;i++){
+   var p=xpct(i);var tf=(i==0?'translateX(0)':(i==N-1?'translateX(-100%)':'translateX(-50%)'));
+   h+='<span style="left:'+p.toFixed(1)+'%;transform:'+tf+'"><b>'+PAY.weekno[i]+'</b><i>'+PAY.dateTY[i]+'</i></span>';
+ }
+ return h+'</div>';
+}
+function render(v){
+ var d=PAY.data[v];
+ document.getElementById('fy').textContent=PAY.fyrange;
+ document.getElementById('narr').textContent=PAY.narr[v];
+ var sn=document.getElementById('snote'); if(sn){sn.textContent=(PAY.sharednote&&PAY.sharednote[v])?PAY.sharednote[v]:'';}
+ var a=PAY.alert[v];
+ document.getElementById('alert').innerHTML='<span class="chip '+a[0]+'" title="'+a[2]+'"><span class="dot"></span>'+a[1]+'</span>';
+ var g=document.getElementById('grid');g.innerHTML='';
+ d.forEach(function(p){
+   var lab=p[0],ty=p[1],ly=p[2],inv=p[3],f=p[4];var b=badge(ty,ly,inv);
+   var card=document.createElement('div');card.className='card';
+   card.innerHTML='<div class="lab">'+lab+(p[5]==='shared'?' <span class="sh">· shared</span>':'')+'</div>'
+     +'<div class="row"><span class="val">'+fmt(ty[ty.length-1],f)+'</span><span class="badge '+b[0]+'">'+b[1]+'</span></div>'
+     +'<div class="cv">'+spark(ty,ly)+'</div>'+ticks();
+   g.appendChild(card);
+ });
+}
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
+</script>
+</body></html>

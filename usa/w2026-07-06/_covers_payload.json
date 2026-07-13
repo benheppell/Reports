@@ -1,0 +1,98 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "week": "6\u201312 Jul 2026",
+ "wow": "29 Jun\u20135 Jul 2026",
+ "yoy": "7\u201313 Jul 2025",
+ "generated": "13 July 2026",
+ "ga4_meta": "Portfolio 464 \u00b7 YoY \u25bc26.2%",
+ "ga4_yoy": "\u25bc26.2% YoY",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "covers_cur": 2482,
+   "covers_prior": 1378,
+   "covers_yoy": 1619,
+   "widget": 551,
+   "widget_prior": 355,
+   "widget_yoy": 319,
+   "gr": 244,
+   "gr_prior": 143,
+   "gr_yoy": 0,
+   "ot": 279,
+   "ot_prior": 154,
+   "ot_yoy": 98,
+   "other": 1408,
+   "ga4": 298
+  },
+  {
+   "name": "Hutong NYC",
+   "covers_cur": 1769,
+   "covers_prior": 1239,
+   "covers_yoy": 1578,
+   "widget": 302,
+   "widget_prior": 227,
+   "widget_yoy": 337,
+   "gr": 98,
+   "gr_prior": 116,
+   "gr_yoy": 179,
+   "ot": 553,
+   "ot_prior": 341,
+   "ot_yoy": 317,
+   "other": 816,
+   "ga4": 105
+  },
+  {
+   "name": "Hutong Miami",
+   "covers_cur": 673,
+   "covers_prior": 592,
+   "covers_yoy": 609,
+   "widget": 128,
+   "widget_prior": 184,
+   "widget_yoy": 116,
+   "gr": 3,
+   "gr_prior": 25,
+   "gr_yoy": 6,
+   "ot": 146,
+   "ot_prior": 87,
+   "ot_yoy": 157,
+   "other": 396,
+   "ga4": 61
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W20",
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27"
+  ],
+  "total": [
+   4317,
+   3937,
+   5922,
+   4372,
+   3893,
+   4403,
+   3209,
+   4924
+  ],
+  "ot": [
+   912,
+   568,
+   1821,
+   988,
+   885,
+   843,
+   582,
+   978
+  ]
+ },
+ "platform_foot": "<b>OpenTable + Resy</b> = OT Guestcenter, OpenTable network and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. "
+}

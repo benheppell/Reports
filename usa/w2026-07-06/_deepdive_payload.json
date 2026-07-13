@@ -1,0 +1,170 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "6\u201312 Jul 2026",
+ "wow": "29 Jun\u20135 Jul 2026",
+ "yoy": "7\u201313 Jul 2025",
+ "generated": "13 July 2026",
+ "badge": "RECOVERY WEEK",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 298,
+   "tgt": 430,
+   "wow_b": 217,
+   "yoy_b": 190,
+   "users": 5836,
+   "sessions": 7124,
+   "asd": 161.99,
+   "bounce": 0.5177,
+   "meta_s": 1614.89,
+   "meta_sch": 74,
+   "meta_sch_prior": 103,
+   "goog_s": 1180.8,
+   "goog_c": 42.0,
+   "goog_c_prior": 26,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 105,
+   "tgt": 388,
+   "wow_b": 90,
+   "yoy_b": 358,
+   "users": 1944,
+   "sessions": 2567,
+   "asd": 200.41,
+   "bounce": 0.3938,
+   "meta_s": 766.17,
+   "meta_sch": 16,
+   "meta_sch_prior": 8,
+   "goog_s": 983.73,
+   "goog_c": 21.0,
+   "goog_c_prior": 29.25,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 61,
+   "tgt": 119,
+   "wow_b": 94,
+   "yoy_b": 81,
+   "users": 1442,
+   "sessions": 1826,
+   "asd": 162.82,
+   "bounce": 0.4283,
+   "meta_s": 2509.44,
+   "meta_sch": 22,
+   "meta_sch_prior": 54,
+   "goog_s": 611.75,
+   "goog_c": 10,
+   "goog_c_prior": 8,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua NYC's Meta connector has recovered: act_1057116046095292 returned full data for the first time since the 29 June token expiry.",
+   "Meta spend collapsed WoW at all three venues (Aqua -47 percent, Hutong NYC -65 percent, Miami -58 percent), from $11,248 to $4,891 combined. Confirm whether this is intentional pacing or a delivery issue.",
+   "Hutong NYC cost per schedule repaired hard, from $275 to $47.9, as spend normalised."
+  ],
+  "google": [
+   "Google spend rose WoW at all three venues while Meta fell, so budget has effectively shifted toward search.",
+   "Aqua NYC leads on volume: $1,181 for 42 booking conversions at $28.11 CPA.",
+   "Hutong Miami remains the weakest at $61.18 per conversion, well above the $30 poor threshold."
+  ],
+  "ga4": [
+   "Aqua NYC rebounded strongly post-July 4th: 298 bookings, up 37 percent WoW and 57 percent YoY.",
+   "Hutong NYC booked 105 against 358 last year. The LY figure includes a referral and widget path that no longer exists, so treat the -71 percent YoY as non-comparable rather than a genuine collapse.",
+   "Hutong Miami fell 35 percent WoW to 61 bookings as Meta spend was cut; users dropped to 1,442.",
+   "Miami shows zero GA4 Paid Social sessions despite $2,509 of Meta spend, which is a tracking gap worth fixing."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W20",
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     222,
+     296,
+     348,
+     225,
+     206,
+     295,
+     217,
+     298
+    ],
+    "users": [
+     6120,
+     9825,
+     11215,
+     5051,
+     4181,
+     8544,
+     7032,
+     6309
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     124,
+     124,
+     124,
+     95,
+     130,
+     148,
+     90,
+     105
+    ],
+    "users": [
+     2420,
+     2295,
+     2236,
+     2096,
+     2274,
+     3837,
+     1898,
+     2185
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     33,
+     37,
+     34,
+     34,
+     54,
+     62,
+     94,
+     61
+    ],
+    "users": [
+     1245,
+     1148,
+     1309,
+     1196,
+     1267,
+     1395,
+     2481,
+     1572
+    ]
+   }
+  }
+ }
+}

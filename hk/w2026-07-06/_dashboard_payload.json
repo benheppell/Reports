@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 204,
+   "tgt": 185,
+   "wow": 166,
+   "yoy": 176,
+   "ytd": 4493,
+   "ytdt": 4858,
+   "meta_s": 4623.48,
+   "goog_s": 8476.8,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 219,
+   "tgt": 227,
+   "wow": 242,
+   "yoy": 225,
+   "ytd": 6675,
+   "ytdt": 5839,
+   "meta_s": 2559.97,
+   "goog_s": 5434.43,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 75,
+   "tgt": 93,
+   "wow": 74,
+   "yoy": 91,
+   "ytd": 2755,
+   "ytdt": 2325,
+   "meta_s": 5198.91,
+   "goog_s": 4091.31,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 75,
+   "tgt": 47,
+   "wow": 75,
+   "yoy": 45,
+   "ytd": 1367,
+   "ytdt": 1279,
+   "meta_s": 3488.19,
+   "goog_s": 4536.62,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 137,
+   "tgt": 172,
+   "wow": 126,
+   "yoy": 156,
+   "ytd": 3725,
+   "ytdt": 3916,
+   "meta_s": 1017.97,
+   "goog_s": 1192.55,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 129,
+   "tgt": 126,
+   "wow": 101,
+   "yoy": 89,
+   "ytd": 3296,
+   "ytdt": 2771,
+   "meta_s": 5233.25,
+   "goog_s": 4023.1,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = July monthly GA4 target x 7/30. <b>Vesu</b> is excluded: it has a July target (217) but recorded <b>zero bookings and zero Google spend</b> this week, while Meta spent HK$2,336 with the pixel firing no conversions (1,887 link clicks, 2 landing-page views). Worth checking before reopen.",
+ "week": "6\u201312 Jul 2026",
+ "wow": "29 Jun\u20135 Jul 2026",
+ "yoy": "7\u201313 Jul 2025",
+ "generated": "13 July 2026"
+}

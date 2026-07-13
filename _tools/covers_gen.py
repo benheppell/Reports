@@ -4,7 +4,8 @@
 # Data source: SevenRooms via Supabase project vklgpzrhjvjqhlpfennn, public.reservations.
 # Covers = SUM(covers) by booking-created date (sr_created_at, Europe/London), net of
 # cancellations/deleted, Bar seating areas excluded. Channels on booking_source:
-#   widget='Booking Widget'; gr='Google Reserve Integration';
+#   web = Booking Widget + '%Landing Page%' + Nav/Hero CTA + Menu Page + PPC + campaign tags;
+#   gr='Google Reserve Integration';
 #   ot= ILIKE '%open table%' OR '%opentable%' OR ='OT Guestcenter'; other=rest.
 # Report rows: Aqua Shard, Hutong(=Hutong London), Regent St(=Kyoto+Nueva), Azzurra,
 #   Shiro Sushi(=Shiro), DSL(=Dim Sum Library).
@@ -85,7 +86,7 @@ w_wow=pct(tot['widget'],ptot('widget_prior')); w_yoy=pct(tot['widget'],ptot('wid
 g_wow=pct(tot['gr'],ptot('gr_prior')); g_yoy=pct(tot['gr'],ptot('gr_yoy'))
 cards=(kpi('Covers created',f"{tot['covers_cur']:,}",f"WoW {dchip(cov_wow)} · YoY {dchip(cov_yoy)}")+
        kpi(f'{PLAT} covers',f"{tot['ot']:,}",f"WoW {dchip(ot_wow)} · YoY {dchip(ot_yoy)} · <b>not in GA4</b>")+
-       kpi('Booking Widget covers',f"{tot['widget']:,}",f"WoW {dchip(w_wow)} · YoY {dchip(w_yoy)}")+
+       kpi('Website covers',f"{tot['widget']:,}",f"WoW {dchip(w_wow)} · YoY {dchip(w_yoy)}")+
        kpi('Google Reserve covers',f"{tot['gr']:,}",f"WoW {dchip(g_wow)} · YoY {dchip(g_yoy)}")+
        kpi('GA4 bookings (widget)',f"{tot['ga4']:,}",P['ga4_meta']))
 
@@ -146,11 +147,11 @@ footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f
 <div class="sec">Covers by venue &amp; booking channel</div>
 <table><thead><tr>
 <th>Venue</th><th>Covers</th><th>WoW</th><th>YoY</th>
-<th>Widget</th><th>Google Reserve</th><th>{PLAT}</th><th>Other</th><th>GA4 bk</th><th>Channel mix</th>
+<th>Website</th><th>Google Reserve</th><th>{PLAT}</th><th>Other</th><th>GA4 bk</th><th>Channel mix</th>
 </tr></thead><tbody>{rows}</tbody></table>
 <div class="legend">
-<span><i class="s-w"></i>Booking Widget</span><span><i class="s-g"></i>Google Reserve</span>
-<span><i class="s-o"></i>{PLAT}</span><span><i class="s-x"></i>Other (walk-in, reception, landing pages, third-party, concierge)</span>
+<span><i class="s-w"></i>Website</span><span><i class="s-g"></i>Google Reserve</span>
+<span><i class="s-o"></i>{PLAT}</span><span><i class="s-x"></i>Other (walk-in, reception, named hosts, third-party apps, concierge)</span>
 </div>
 
 <div class="sec">{PLAT} covers vs total covers — last 8 weeks</div>
@@ -158,7 +159,7 @@ footer{{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f
 {svg}
 
 <footer>
-<b>Covers</b> = SevenRooms covers by booking-created date (<code>sr_created_at</code>, {TZ}), net of cancellations and deleted bookings. Bar seating areas excluded; private dining and afternoon tea included. {PLATFOOT}; <b>Google Reserve</b> = Google Reserve Integration; <b>Booking Widget</b> = on-site widget; <b>Other</b> = walk-ins, reservations/reception teams, landing pages, third-party apps, concierge and named hosts. {COMBNOTE}<b>GA4 bk</b> = website <code>sevenrooms_booking_complete</code> events (widget only, shown for context — not directly comparable to covers). Generated {P['generated']}. Source: SevenRooms via Supabase.
+<b>Covers</b> = SevenRooms covers by booking-created date (<code>sr_created_at</code>, {TZ}), net of cancellations and deleted bookings. Bar seating areas excluded; private dining and afternoon tea included. {PLATFOOT}; <b>Google Reserve</b> = Google Reserve Integration; <b>Website</b> = all bookings originating on our own site: booking widget, campaign landing pages, on-site CTAs (Nav/Hero), menu page, and paid-search landing pages; <b>Other</b> = walk-ins, reservations/reception teams, named hosts, third-party apps and concierge. {COMBNOTE}<b>GA4 bk</b> = website <code>sevenrooms_booking_complete</code> events (widget only, shown for context — not directly comparable to covers). Generated {P['generated']}. Source: SevenRooms via Supabase.
 </footer>
 </body></html>'''
 open(OUT,'w').write(HTML)

@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "6\u201312 Jul 2026",
+ "wow": "29 Jun\u20135 Jul 2026",
+ "yoy": "7\u201313 Jul 2025",
+ "generated": "13 July 2026",
+ "badge": "MIXED WEEK",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 204,
+   "tgt": 185,
+   "wow_b": 166,
+   "yoy_b": 176,
+   "users": 3156,
+   "sessions": 4290,
+   "asd": 324.38,
+   "bounce": 0.3851,
+   "meta_s": 4623.48,
+   "meta_sch": 10,
+   "meta_sch_prior": 12,
+   "goog_s": 8476.8,
+   "goog_c": 58.698429,
+   "goog_c_prior": 54.683681,
+   "shared": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 137,
+   "tgt": 172,
+   "wow_b": 126,
+   "yoy_b": 156,
+   "users": 1347,
+   "sessions": 1726,
+   "asd": 233.66,
+   "bounce": 0.2972,
+   "meta_s": 1017.97,
+   "meta_sch": 9,
+   "meta_sch_prior": 2,
+   "goog_s": 1192.55,
+   "goog_c": 46.97999,
+   "goog_c_prior": 53.859708,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK halved Meta spend WoW (HK$9,255 to HK$4,623) yet schedules only fell 12 to 10, so cost per schedule improved sharply.",
+   "Dim Sum Library nearly doubled Meta spend (HK$538 to HK$1,018) and schedules jumped 2 to 9, the best efficiency in the portfolio.",
+   "Meta remains a thin channel for both venues: 19 schedules combined against 341 GA4 bookings."
+  ],
+  "google": [
+   "Aqua HK Google is the workhorse: HK$8,477 spend and 58.7 booking conversions, CPA HK$144, inside the good band.",
+   "Dim Sum Library delivers 47 conversions on just HK$1,193, by far the cheapest acquisition in the portfolio.",
+   "Google now drives roughly 31 percent of the two venues' GA4 bookings."
+  ],
+  "ga4": [
+   "Aqua HK bookings recovered to 204 from 166, ahead of the 185 weekly target, but YTD is still 7.5 percent behind.",
+   "Dim Sum Library booked 137 against a 172 target, a 20 percent miss, and is 4.9 percent behind YTD.",
+   "DSL user CVR of 9.2 percent is strong, so the shortfall is a traffic problem rather than a conversion problem."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W16",
+   "W17",
+   "W18",
+   "W19",
+   "W20",
+   "W21",
+   "W22",
+   "W23"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     145,
+     172,
+     184,
+     164,
+     145,
+     180,
+     166,
+     204
+    ],
+    "users": [
+     3432,
+     3781,
+     4185,
+     3730,
+     3774,
+     3317,
+     3385,
+     3492
+    ]
+   },
+   "Dim Sum Library": {
+    "bookings": [
+     150,
+     154,
+     139,
+     146,
+     135,
+     149,
+     126,
+     137
+    ],
+    "users": [
+     1170,
+     1358,
+     1333,
+     1835,
+     1260,
+     1002,
+     1114,
+     1486
+    ]
+   }
+  }
+ }
+}
