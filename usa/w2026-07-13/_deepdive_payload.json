@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "13–19 Jul 2026",
+ "wow": "6–12 Jul 2026",
+ "yoy": "14–20 Jul 2025",
+ "generated": "20 July 2026",
+ "badge": "MID-SUMMER",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 280,
+   "tgt": 430,
+   "wow_b": 302,
+   "yoy_b": 215,
+   "users": 7733,
+   "sessions": 9615,
+   "asd": 155.17,
+   "bounce": 0.4907,
+   "meta_s": 1604.54,
+   "meta_sch": 112,
+   "meta_sch_prior": 74,
+   "goog_s": 1115.12,
+   "goog_c": 44.3,
+   "goog_c_prior": 46.7,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 154,
+   "tgt": 388,
+   "wow_b": 107,
+   "yoy_b": 330,
+   "users": 2724,
+   "sessions": 3462,
+   "asd": 184.11,
+   "bounce": 0.364,
+   "meta_s": 717.2,
+   "meta_sch": 9,
+   "meta_sch_prior": 16,
+   "goog_s": 1242.37,
+   "goog_c": 38,
+   "goog_c_prior": 26,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 47,
+   "tgt": 119,
+   "wow_b": 94,
+   "yoy_b": 98,
+   "users": 1410,
+   "sessions": 1704,
+   "asd": 146.75,
+   "bounce": 0.4161,
+   "meta_s": 2081.74,
+   "meta_sch": 19,
+   "meta_sch_prior": 22,
+   "goog_s": 529.53,
+   "goog_c": 6,
+   "goog_c_prior": 12,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua NYC's Meta account (act_1057116046095292) is fully recovered and stable: $1,605 for 112 schedules at $14.3 CPA, the best efficiency in the portfolio.",
+   "Meta spend held roughly flat WoW at Aqua (-1 percent), eased at Hutong NYC (-6 percent) and Hutong Miami (-17 percent); combined Meta spend was $4,404.",
+   "Hutong Miami stays the costliest on Meta at $109.6 per schedule, still about 4x last year's $25.4."
+  ],
+  "google": [
+   "Google spend rose at Aqua ($1,115) and Hutong NYC ($1,242) while Hutong Miami eased to $530.",
+   "Hutong NYC's Google efficiency improved to roughly $33 per booking on higher conversions (38).",
+   "Hutong Miami is weakest on Google at about $88 per booking on only 6 conversions."
+  ],
+  "ga4": [
+   "Aqua NYC booked 280, down 7 percent WoW off a strong prior week but up 30 percent YoY (215).",
+   "Hutong NYC rebounded to 154 bookings, up 44 percent WoW; the -53 percent YoY against 330 reflects the discontinued referral and widget path rather than a genuine collapse.",
+   "Hutong Miami fell to 47 bookings, down 50 percent WoW as the late-June Meta push unwound, and behind 98 last year."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     296,
+     348,
+     225,
+     206,
+     295,
+     217,
+     302,
+     280
+    ],
+    "users": [
+     9825,
+     11215,
+     5051,
+     4181,
+     8544,
+     7032,
+     6345,
+     8249
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     124,
+     124,
+     95,
+     130,
+     148,
+     90,
+     107,
+     154
+    ],
+    "users": [
+     2295,
+     2236,
+     2096,
+     2274,
+     3837,
+     1898,
+     2189,
+     3006
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     37,
+     34,
+     34,
+     54,
+     62,
+     94,
+     62,
+     47
+    ],
+    "users": [
+     1148,
+     1309,
+     1196,
+     1267,
+     1395,
+     2481,
+     1577,
+     1506
+    ]
+   }
+  }
+ }
+}

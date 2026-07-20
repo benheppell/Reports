@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 280,
+   "tgt": 430,
+   "wow": 302,
+   "yoy": 215,
+   "ytd": 7202,
+   "ytdt": 12655,
+   "meta_s": 1604.54,
+   "goog_s": 1115.12,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 154,
+   "tgt": 388,
+   "wow": 107,
+   "yoy": 330,
+   "ytd": 4582,
+   "ytdt": 12404,
+   "meta_s": 717.2,
+   "goog_s": 1242.37,
+   "nc": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 47,
+   "tgt": 119,
+   "wow": 94,
+   "yoy": 98,
+   "ytd": 2787,
+   "ytdt": 3961,
+   "meta_s": 2081.74,
+   "goog_s": 529.53,
+   "nc": false
+  }
+ ],
+ "note": "USA targets are strategic and deliberately aggressive (Hutong NYC explicitly so), so variances read heavily negative by design. <b>Hutong Miami's</b> GA4 target is derived from its Meta plan x (6,738/4,756) and is flagged as derived. Weekly target = July monthly target x 7/30.",
+ "week": "13–19 Jul 2026",
+ "wow": "6–12 Jul 2026",
+ "yoy": "14–20 Jul 2025",
+ "generated": "20 July 2026"
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua London — Venue Deep Dive — 13–19 Jul 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:#fef2f2;color:#dc2626;margin-left:8px;vertical-align:middle}
+.tabs{display:flex;gap:4px;margin:20px 0 0;border-bottom:2px solid #e2e8f0}
+.tab{padding:9px 18px;font-size:13px;font-weight:600;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab.on{color:#2563eb;border-bottom-color:#2563eb}
+.pane{display:none} .pane.on{display:block}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th:nth-child(2),td:nth-child(2){text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9} tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600} .neg{color:#dc2626;font-weight:600} .mut{color:#94a3b8;font-weight:400}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.chart{border:1px solid #e2e8f0;border-radius:12px;padding:14px;height:280px}
+.chart h3{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards,.grid2{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div><a class="back" href="../index.html">← All reports</a>
+<h1 style="margin-top:8px">Aqua London — Venue Deep Dive<span class="badge">BEHIND TARGET</span></h1>
+<div class="sub">13–19 Jul 2026 (Mon–Sun) · Currency GBP · Aqua Shard, Hutong, Regent St, Azzurra, Shiro Sushi · WoW vs 6–12 Jul 2026 · YoY vs 14–20 Jul 2025</div></div>
+
+<div class="tabs"><div class="tab on" data-t="p">Performance</div><div class="tab" data-t="t">Weekly Trends</div></div>
+
+<div class="pane on" id="p">
+<div class="cards">
+<div class="card"><div class="lab">Combined Bookings</div><div class="big">2,305</div>
+<div class="meta">Target 3,973 · -42.0% · WoW <span class="neg num">▼ 4.5%</span></div></div>
+<div class="card"><div class="lab">Combined Ad Spend</div><div class="big">£11,979</div>
+<div class="meta">Cost per booking £5.20 · Meta £7,010 + Google £4,969</div></div>
+<div class="card"><div class="lab">Combined Users</div><div class="big">45,620</div>
+<div class="meta">Blended user CVR 5.05%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">-30.0%</div>
+<div class="meta">2,305 vs 3,294 same week last year</div></div>
+</div>
+
+<div class="sec blue"><h2>Meta Ads</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead>
+<tbody><tr><td>Aqua Shard</td><td class="num">£2,538</td><td class="num">159</td><td class="num ">£15.96</td><td><span class="pos num">▲ 12.0%</span></td></tr><tr><td>Hutong</td><td class="num">£2,074</td><td class="num">150</td><td class="num pos">£13.83</td><td><span class="pos num">▲ 9.5%</span></td></tr><tr><td>Regent St</td><td class="num">£1,012</td><td class="num">59</td><td class="num ">£17.16</td><td><span class="neg num">▼ 16.9%</span></td></tr><tr><td>Azzurra</td><td class="num">£1,075</td><td class="num">64</td><td class="num ">£16.79</td><td><span class="pos num">▲ 6.7%</span></td></tr><tr><td>Shiro Sushi</td><td class="num">£310</td><td class="num">30</td><td class="num pos">£10.34</td><td><span class="pos num">▲ 3.4%</span></td></tr><tr class="total"><td>Total</td><td class="num">£7,010</td><td class="num">462</td><td class="num">£15.17</td><td><span class="pos num">▲ 5.2%</span></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Shiro Sushi is the most efficient venue on Meta at 10.34 pounds per schedule, inside the good threshold, on the smallest budget of 310 pounds.</li><li>Hutong holds strong efficiency at 13.83 per schedule with schedules up to 150, while Aqua Shard rose to 15.96 as spend climbed to 2,538 pounds.</li><li>Regent St schedules fell week on week from 71 to 59, lifting cost per schedule to 17.16; no deep-dive venue breaches the poor 25-pound mark.</li></ul></div></div>
+
+<div class="sec green"><h2>Google Ads</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead>
+<tbody><tr><td>Aqua Shard</td><td class="num">£1,351</td><td class="num">443</td><td class="num pos">£3.05</td><td><span class="neg num">▼ 35.8%</span></td></tr><tr><td>Hutong</td><td class="num">£1,393</td><td class="num">107</td><td class="num pos">£13.03</td><td><span class="neg num">▼ 20.2%</span></td></tr><tr><td>Regent St <span class="mut">(shared)</span></td><td class="num">£1,015</td><td class="num">61</td><td class="num pos">£16.66</td><td><span class="neg num">▼ 23.3%</span></td></tr><tr><td>Azzurra</td><td class="num">£625</td><td class="num">19</td><td class="num neg">£32.89</td><td><span class="neg num">▼ 34.5%</span></td></tr><tr><td>Shiro Sushi</td><td class="num">£586</td><td class="num">77</td><td class="num pos">£7.60</td><td><span class="pos num">▲ 6.5%</span></td></tr><tr class="total"><td>Total</td><td class="num">£4,969</td><td class="num">707</td><td class="num">£7.03</td><td><span class="neg num">▼ 29.7%</span></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua Shard stays remarkably cheap on Google at 3.05 pounds per booking, though conversions fell WoW from 691 to 443 as spend dropped to 1,351 pounds.</li><li>Azzurra is the only deep-dive venue above the poor threshold at 32.89 per booking, with conversions down to 19.</li><li>Shiro Sushi is the sole venue with Google conversions up WoW, 72 to 77, at an efficient 7.60 per booking.</li></ul></div></div>
+
+<div class="sec amber"><h2>GA4 Website</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce Rate</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead>
+<tbody><tr><td>Aqua Shard</td><td class="num">31,452</td><td class="num">22,717</td><td class="num">3:24</td><td class="num neg">47.4%</td><td class="num pos">1,189</td><td class="num ">5.23%</td><td class="num">3.78%</td></tr><tr><td>Hutong</td><td class="num">19,576</td><td class="num">13,604</td><td class="num">2:49</td><td class="num neg">48.2%</td><td class="num neg">663</td><td class="num ">4.87%</td><td class="num">3.39%</td></tr><tr><td>Regent St</td><td class="num">8,141</td><td class="num">6,256</td><td class="num">2:57</td><td class="num ">40.2%</td><td class="num neg">263</td><td class="num ">4.20%</td><td class="num">3.23%</td></tr><tr><td>Azzurra</td><td class="num">2,342</td><td class="num">1,933</td><td class="num">2:35</td><td class="num neg">47.6%</td><td class="num neg">79</td><td class="num ">4.09%</td><td class="num">3.37%</td></tr><tr><td>Shiro Sushi</td><td class="num">1,574</td><td class="num">1,110</td><td class="num">2:43</td><td class="num ">36.1%</td><td class="num neg">111</td><td class="num pos">10.00%</td><td class="num">7.05%</td></tr><tr class="total"><td>Total</td><td class="num">63,085</td><td class="num">45,620</td><td class="num">—</td><td class="num">—</td><td class="num">2,305</td><td class="num">5.05%</td><td class="num">3.65%</td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Deep-dive bookings of 2,305 sit 42 percent below the combined 3,973 target, with every venue behind its weekly goal.</li><li>Aqua Shard is 45 percent below target and down 36 percent YoY, the single largest drag on the market.</li><li>Regent St fell hardest week on week, down 23 percent from 341 to 263 bookings, while Azzurra slipped to 79.</li></ul></div></div>
+</div>
+
+<div class="pane" id="t">
+<p class="sub" style="margin-top:18px">8-week trend (W17 to W24) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chart"><h3>GA4 Bookings (weekly)</h3><canvas id="c1"></canvas></div>
+<div class="chart"><h3>User Conversion Rate (%)</h3><canvas id="c2"></canvas></div>
+<div class="chart"><h3>Users (weekly)</h3><canvas id="c3"></canvas></div>
+<div class="chart"><h3>Bookings vs Target (latest week)</h3><canvas id="c4"></canvas></div>
+</div>
+<table style="margin-top:24px"><thead><tr><th>Venue</th><th>Metric</th>
+<th>W17</th><th>W18</th><th>W19</th><th>W20</th><th>W21</th><th>W22</th><th>W23</th><th>W24</th><th>Trend</th></tr></thead><tbody><tr><td>Aqua Shard</td><td>Bookings</td><td class="num">1,291</td><td class="num">1,299</td><td class="num">1,159</td><td class="num">1,070</td><td class="num">1,114</td><td class="num">1,180</td><td class="num">1,175</td><td class="num">1,189</td><td class="num neg">-7.9%</td></tr><tr><td></td><td>User CVR</td><td class="num">5.26%</td><td class="num">5.14%</td><td class="num">4.80%</td><td class="num">4.69%</td><td class="num">4.91%</td><td class="num">5.10%</td><td class="num">4.74%</td><td class="num">4.76%</td><td class="num neg">-0.50pp</td></tr><tr><td>Hutong</td><td>Bookings</td><td class="num">674</td><td class="num">807</td><td class="num">623</td><td class="num">626</td><td class="num">666</td><td class="num">699</td><td class="num">676</td><td class="num">663</td><td class="num neg">-1.6%</td></tr><tr><td></td><td>User CVR</td><td class="num">4.76%</td><td class="num">5.00%</td><td class="num">4.58%</td><td class="num">4.80%</td><td class="num">4.89%</td><td class="num">4.85%</td><td class="num">4.74%</td><td class="num">4.40%</td><td class="num neg">-0.36pp</td></tr><tr><td>Regent St</td><td>Bookings</td><td class="num">447</td><td class="num">263</td><td class="num">320</td><td class="num">344</td><td class="num">409</td><td class="num">428</td><td class="num">341</td><td class="num">263</td><td class="num neg">-41.2%</td></tr><tr><td></td><td>User CVR</td><td class="num">4.55%</td><td class="num">3.63%</td><td class="num">4.46%</td><td class="num">5.09%</td><td class="num">5.02%</td><td class="num">5.49%</td><td class="num">4.31%</td><td class="num">3.79%</td><td class="num neg">-0.76pp</td></tr><tr><td>Azzurra</td><td>Bookings</td><td class="num">114</td><td class="num">124</td><td class="num">100</td><td class="num">83</td><td class="num">100</td><td class="num">99</td><td class="num">98</td><td class="num">79</td><td class="num neg">-30.7%</td></tr><tr><td></td><td>User CVR</td><td class="num">3.95%</td><td class="num">3.98%</td><td class="num">4.71%</td><td class="num">3.77%</td><td class="num">5.45%</td><td class="num">4.29%</td><td class="num">4.89%</td><td class="num">3.80%</td><td class="num neg">-0.15pp</td></tr><tr><td>Shiro Sushi</td><td>Bookings</td><td class="num">108</td><td class="num">118</td><td class="num">118</td><td class="num">118</td><td class="num">139</td><td class="num">114</td><td class="num">124</td><td class="num">111</td><td class="num pos">+2.8%</td></tr><tr><td></td><td>User CVR</td><td class="num">9.20%</td><td class="num">6.51%</td><td class="num">7.51%</td><td class="num">7.16%</td><td class="num">9.51%</td><td class="num">9.23%</td><td class="num">9.39%</td><td class="num">8.92%</td><td class="num neg">-0.28pp</td></tr></tbody></table>
+</div>
+
+<footer>Bookings = GA4 <code>sevenrooms_booking_complete</code>. Meta schedules = <code>offsite_conversion.fb_pixel_custom</code>. Google conversions filtered to the venue booking action. Generated 20 July 2026.</footer>
+<script>
+const D={"labels": ["W17", "W18", "W19", "W20", "W21", "W22", "W23", "W24"], "names": ["Aqua Shard", "Hutong", "Regent St", "Azzurra", "Shiro Sushi"], "bk": {"Aqua Shard": [1291, 1299, 1159, 1070, 1114, 1180, 1175, 1189], "Hutong": [674, 807, 623, 626, 666, 699, 676, 663], "Regent St": [447, 263, 320, 344, 409, 428, 341, 263], "Azzurra": [114, 124, 100, 83, 100, 99, 98, 79], "Shiro Sushi": [108, 118, 118, 118, 139, 114, 124, 111]}, "us": {"Aqua Shard": [24559, 25249, 24140, 22816, 22693, 23116, 24798, 24984], "Hutong": [14168, 16139, 13592, 13032, 13617, 14406, 14262, 15074], "Regent St": [9833, 7245, 7177, 6760, 8150, 7801, 7906, 6940], "Azzurra": [2889, 3116, 2125, 2204, 1834, 2309, 2004, 2077], "Shiro Sushi": [1174, 1812, 1572, 1647, 1462, 1235, 1321, 1245]}, "cv": {"Aqua Shard": [5.26, 5.14, 4.8, 4.69, 4.91, 5.1, 4.74, 4.76], "Hutong": [4.76, 5.0, 4.58, 4.8, 4.89, 4.85, 4.74, 4.4], "Regent St": [4.55, 3.63, 4.46, 5.09, 5.02, 5.49, 4.31, 3.79], "Azzurra": [3.95, 3.98, 4.71, 3.77, 5.45, 4.29, 4.89, 3.8], "Shiro Sushi": [9.2, 6.51, 7.51, 7.16, 9.51, 9.23, 9.39, 8.92]}, "col": ["#EF4444", "#F59E0B", "#3B82F6", "#8B5CF6", "#10B981"], "tgt": {"Aqua Shard": 2180, "Hutong": 1066, "Regent St": 432, "Azzurra": 147, "Shiro Sushi": 148}};
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById(t.dataset.t).classList.add('on');
+  if(t.dataset.t==='t'&&!window._drawn){window._drawn=1;draw();}
+});
+function line(id,get,suf){
+ new Chart(document.getElementById(id),{type:'line',
+  data:{labels:D.labels,datasets:D.names.map((n,i)=>({label:n,data:get(n),borderColor:D.col[i],backgroundColor:D.col[i],tension:.3,borderWidth:2,pointRadius:3}))},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}},
+   scales:{y:{beginAtZero:false,ticks:{callback:v=>v+(suf||'')}}}}});
+}
+function draw(){
+ line('c1',n=>D.bk[n]);line('c2',n=>D.cv[n],'%');line('c3',n=>D.us[n]);
+ new Chart(document.getElementById('c4'),{type:'bar',
+  data:{labels:D.names,datasets:[
+   {label:'Actual',data:D.names.map(n=>D.bk[n][D.bk[n].length-1]),backgroundColor:'#3B82F6'},
+   {label:'Target',data:D.names.map(n=>D.tgt[n]),backgroundColor:'#cbd5e1'}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}}}});
+}
+</script></body></html>

@@ -1,0 +1,913 @@
+{
+ "venues": [
+  "Aqua Shard",
+  "Hutong",
+  "Regent St",
+  "Azzurra",
+  "Shiro Sushi",
+  "DSL"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W21",
+  "W22",
+  "W23",
+  "W24"
+ ],
+ "dateTY": [
+  "22–28 Jun",
+  "29 Jun–5 Jul",
+  "6–12 Jul",
+  "13–19 Jul"
+ ],
+ "dateLY": [
+  "23–29 Jun",
+  "30 Jun–6 Jul",
+  "7–13 Jul",
+  "14–20 Jul"
+ ],
+ "fyrange": "FY26 weeks 21–24",
+ "sym": "£",
+ "data": {
+  "Aqua Shard": [
+   [
+    "Website users",
+    [
+     22693,
+     23116,
+     24839,
+     22717
+    ],
+    [
+     31189,
+     34136,
+     31696,
+     31367
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     4.91,
+     5.1,
+     4.68,
+     5.2
+    ],
+    [
+     5.16,
+     5.68,
+     5.7,
+     5.9
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     1114,
+     1180,
+     1163,
+     1190
+    ],
+    [
+     1610,
+     1940,
+     1807,
+     1860
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     101,
+     142,
+     142,
+     159
+    ],
+    [
+     111,
+     128,
+     133,
+     121
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     635,
+     637,
+     586,
+     443
+    ],
+    [
+     904,
+     935,
+     901,
+     1068
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     2.79,
+     2.92,
+     4.93,
+     3.05
+    ],
+    [
+     2.02,
+     1.44,
+     1.54,
+     1.49
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     20.03,
+     11.78,
+     13.67,
+     15.96
+    ],
+    [
+     9.93,
+     8.61,
+     8.23,
+     9.03
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     1029,
+     1123,
+     658,
+     341
+    ],
+    [
+     806,
+     656,
+     772,
+     865
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Hutong": [
+   [
+    "Website users",
+    [
+     13617,
+     14406,
+     14250,
+     13604
+    ],
+    [
+     12461,
+     12957,
+     13624,
+     14746
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     4.89,
+     4.85,
+     4.7,
+     4.9
+    ],
+    [
+     5.94,
+     6.23,
+     6.0,
+     6.1
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     666,
+     699,
+     670,
+     663
+    ],
+    [
+     740,
+     807,
+     817,
+     906
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     105,
+     122,
+     137,
+     150
+    ],
+    [
+     57,
+     76,
+     62,
+     76
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     259,
+     261,
+     142,
+     147
+    ],
+    [
+     440,
+     438,
+     554,
+     514
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     7.6,
+     9.79,
+     8.5,
+     9.48
+    ],
+    [
+     3.34,
+     3.2,
+     2.59,
+     2.73
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     17.9,
+     14.03,
+     12.37,
+     13.83
+    ],
+    [
+     9.81,
+     7.39,
+     9.04,
+     7.34
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     540,
+     618,
+     206,
+     256
+    ],
+    [
+     615,
+     624,
+     536,
+     593
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Regent St": [
+   [
+    "Website users",
+    [
+     8150,
+     7801,
+     7890,
+     6257
+    ],
+    [
+     11590,
+     9590,
+     10164,
+     7704
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.02,
+     5.49,
+     4.3,
+     4.2
+    ],
+    [
+     3.73,
+     3.87,
+     3.87,
+     4.3
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     409,
+     428,
+     339,
+     263
+    ],
+    [
+     432,
+     371,
+     393,
+     335
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     69,
+     71,
+     71,
+     59
+    ],
+    [
+     29,
+     29,
+     21,
+     25
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     159,
+     69,
+     68,
+     61
+    ],
+    [
+     104,
+     86,
+     66,
+     100
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     11.59,
+     9.69,
+     19.55,
+     16.63
+    ],
+    [
+     24.4,
+     16.6,
+     17.1,
+     10.42
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     12.58,
+     14.83,
+     17.23,
+     17.16
+    ],
+    [
+     22.5,
+     22.49,
+     30.91,
+     25.71
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     453,
+     237,
+     196,
+     155
+    ],
+    [
+     626,
+     367,
+     417,
+     289
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Azzurra": [
+   [
+    "Website users",
+    [
+     1834,
+     2309,
+     2001,
+     1934
+    ],
+    [
+     2244,
+     2311,
+     2361,
+     1907
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.45,
+     4.29,
+     4.95,
+     4.3
+    ],
+    [
+     4.77,
+     4.41,
+     5.12,
+     4.8
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     100,
+     99,
+     99,
+     83
+    ],
+    [
+     107,
+     102,
+     121,
+     91
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     26,
+     59,
+     60,
+     64
+    ],
+    [
+     6,
+     2,
+     3,
+     12
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     22,
+     27,
+     27,
+     19
+    ],
+    [
+     15,
+     23,
+     42,
+     30
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     25.36,
+     19.34,
+     12.92,
+     32.89
+    ],
+    [
+     11.75,
+     24.27,
+     16.95,
+     21.44
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     26.87,
+     17.33,
+     18.98,
+     16.79
+    ],
+    [
+     139.22,
+     93.53,
+     47.59,
+     24.61
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     99,
+     106,
+     27,
+     38
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Shiro Sushi": [
+   [
+    "Website users",
+    [
+     1462,
+     1235,
+     1321,
+     1110
+    ],
+    [
+     1968,
+     2791,
+     2404,
+     2278
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     9.51,
+     9.23,
+     9.39,
+     10.0
+    ],
+    [
+     4.62,
+     4.3,
+     4.66,
+     4.5
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     139,
+     114,
+     124,
+     111
+    ],
+    [
+     91,
+     120,
+     112,
+     102
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     29,
+     30,
+     29,
+     30
+    ],
+    [
+     23,
+     11,
+     17,
+     13
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     42,
+     30,
+     60,
+     77
+    ],
+    [
+     49,
+     74,
+     89,
+     57
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     7.17,
+     4.42,
+     11.08,
+     7.6
+    ],
+    [
+     15.16,
+     9.75,
+     7.1,
+     11.35
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     14.26,
+     12.72,
+     11.19,
+     10.34
+    ],
+    [
+     15.47,
+     31.04,
+     20.94,
+     26.63
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     284,
+     128,
+     314,
+     182
+    ],
+    [
+     443,
+     394,
+     513,
+     482
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "DSL": [
+   [
+    "Website users",
+    [
+     5432,
+     6950,
+     6121,
+     6218
+    ],
+    [
+     3190,
+     3140,
+     2819,
+     2994
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     8.47,
+     8.3,
+     9.39,
+     8.7
+    ],
+    [
+     4.55,
+     5.22,
+     6.81,
+     5.8
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     460,
+     577,
+     575,
+     543
+    ],
+    [
+     145,
+     164,
+     192,
+     173
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     62,
+     76,
+     97,
+     93
+    ],
+    [
+     31,
+     43,
+     30,
+     44
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     68,
+     80,
+     27,
+     32
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     21.15,
+     15.48,
+     13.75,
+     8.6
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     20.59,
+     21.05,
+     19.12,
+     19.26
+    ],
+    [
+     18.57,
+     13.57,
+     19.49,
+     13.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Shard": "Aqua Shard's traffic gap remains the headline: 22,717 users in W24, about 28% below the same FY week last year, and conversion has slipped to 5.2% from 5.9% LY, so GA4 bookings of 1,190 are well short of last July's 1,860. Google spend was pulled back to £1,351 (443 bookings, £3.05 CPA — efficient but volume down). Meta held 159 schedules at £15.96, above last year's £9.03. Walk-in signals fell to 341, though some of the latest week's Google conversions are still settling.",
+  "Hutong": "Hutong's users eased to 13,604, down 7.7% YoY, and the funnel stays soft: conversion of 4.9% against 6.1% a year ago left GA4 bookings at 663 vs 906 LY. Google ran £1,393 for 147 bookings at £9.48 CPA, still well above last year's £2.73. Meta improved to £13.83 on a strong 150 schedules. Walk-in signals recovered to 256.",
+  "Regent St": "Regent St (Kyoto + Nueva combined) is now converting broadly in line with last year at 4.2% (4.3% LY), but the traffic base has thinned to 6,257 users, about 19% below LY, dragging GA4 bookings to 263 vs 335. Google spend held near £1,015 for 61 bookings (£16.63 CPA). Meta sits at £17.16 on 59 schedules, still far better than last year's £25.71. The lever here is top-of-funnel volume.",
+  "Azzurra": "Azzurra held its traffic at 1,934 users, up 1.4% YoY, but conversion softened to 4.3% from 4.8% LY, leaving GA4 bookings at 83 vs 91. Google spent £625 at a high £32.89 CPA on 19 bookings. Meta scaled to £1,075 for 64 schedules at £16.79 — a big improvement on last year's £24.61. Walk-in signals were 38.",
+  "Shiro Sushi": "Shiro Sushi is volume-capped but converting exceptionally: 1,110 users (down 51% YoY) yet a 10.0% conversion rate against 4.5% last year, so GA4 bookings rose to 111 vs 102 LY. Google delivered 77 bookings at £7.60 CPA on £586 spend, and Meta ran at £10.34 — the cheapest in the portfolio. Walk-in signals were 182. Fixing the traffic shortfall is the single biggest opportunity in the set.",
+  "DSL": "DSL (Dim Sum Library) leads the portfolio on conversion at 8.7% on 6,218 users, with GA4 bookings of 543. NOTE: DSL rebranded, so the 2025 lines are pre-rebrand (Luci) and are NOT a like-for-like comparison — the apparent YoY gains are a rebrand artefact and last year's Google data does not exist on this account. Google spend was £275 in W24 (32 bookings, £8.60 CPA) while Meta ran £1,791 for 93 schedules (£19.26). No Google local-action conversions are configured, so walk-in signals show 0."
+ },
+ "alert": {
+  "Aqua Shard": [
+   "red",
+   "Traffic drop",
+   "Latest-week users down 27.6% vs same FY week last year; conversion rate also down"
+  ],
+  "Hutong": [
+   "amber",
+   "Conversion check",
+   "Users down 7.7% YoY and conversion rate down to 4.9% from 6.1%"
+  ],
+  "Regent St": [
+   "red",
+   "Traffic drop",
+   "Latest-week users down 18.8% YoY despite conversion rate in line with last year"
+  ],
+  "Azzurra": [
+   "amber",
+   "Conversion check",
+   "Users up 1.4% YoY but conversion rate down to 4.3% from 4.8%"
+  ],
+  "Shiro Sushi": [
+   "red",
+   "Traffic drop",
+   "Latest-week users down 51.3% YoY — volume-capped, though conversion is double last year"
+  ],
+  "DSL": [
+   "blue",
+   "Not comparable",
+   "Pre-rebrand (Luci) baseline last year — YoY lines are not a like-for-like comparison"
+  ]
+ },
+ "sharednote": {
+  "Regent St": "Regent St combines Aqua Kyoto + Aqua Nueva (GA4 users/bookings & Meta spend/schedules summed; Google is a single shared account — Kyoto + Nueva booking actions summed). Walk-in signals are the shared Google account's local actions (Directions + Menu views + Clicks to call; no Store-visit action on this account).",
+  "Hutong": "Google bookings sum two booking actions ('Sevenrooms Booking Complete' + 'Hutong UK - GA4 (web) sevenrooms_booking_complete'). No 'Click Book Now' conversion action exists on this account, so walk-in signals cover Store visits + Directions + Menu views + Clicks to call.",
+  "Shiro Sushi": "Google bookings sum three booking actions (SST booking_complete + UK sevenrooms_booking_complete + Booking Complete).",
+  "Azzurra": "Google account has no Store-visit conversion; walk-in signals cover Directions + Menu views + Clicks to call only, and no local actions were recorded last year (LY = 0).",
+  "DSL": "DSL Meta account reports as 'Luci' (confirmed mapping). Google account has no 2025 data (post-rebrand build) and no local-action conversions, so LY Google bookings/CPA and all walk-in signals show 0."
+ }
+}

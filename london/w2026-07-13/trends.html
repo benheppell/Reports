@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua London — Venue Trends</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:32px;max-width:1120px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:24px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 18px;font-size:13.5px;line-height:1.5}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:15px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.fy{font-size:12px;font-weight:700;color:#475569;background:#f1f5f9;padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+.chip.green{background:#ecfdf5;color:#047857}.chip.green .dot{background:#10b981}
+.chip.amber{background:#fffbeb;color:#b45309}.chip.amber .dot{background:#f59e0b}
+.chip.red{background:#fef2f2;color:#b91c1c}.chip.red .dot{background:#ef4444}
+.chip.blue{background:#eff6ff;color:#1d4ed8}.chip.blue .dot{background:#3b82f6}
+.narr{background:#f8fafc;border:1px solid #eef2f6;border-left:3px solid #2563eb;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.55;color:#1e293b;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid #e7ecf2;border-radius:12px;padding:13px 14px 11px}
+.card .lab{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b}
+.card .lab .sh{font-weight:600;color:#b6c0cc;letter-spacing:0;text-transform:none}
+.snote{font-size:12px;color:#94a3b8;font-style:italic;margin:-8px 0 16px;line-height:1.45}
+.card .row{display:flex;align-items:baseline;justify-content:space-between;margin:5px 0 9px}
+.card .val{font-family:'JetBrains Mono',monospace;font-size:21px;font-weight:600;color:#0f172a}
+.badge{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:7px;white-space:nowrap}
+.badge.up{background:#ecfdf5;color:#047857}.badge.down{background:#fef2f2;color:#b91c1c}.badge.flat{background:#f1f5f9;color:#475569}
+.cv{position:relative}
+.cv svg{display:block;width:100%;height:60px}
+.ticks{position:relative;height:26px;margin-top:2px}
+.ticks span{position:absolute;text-align:center;line-height:1.15;font-family:'JetBrains Mono',monospace}
+.ticks b{font-size:9.5px;color:#475569;font-weight:600}
+.ticks i{font-size:8.5px;color:#aeb8c4;font-style:normal;display:block}
+.gl{display:flex;gap:8px;align-items:center;font-size:9px;color:#cbd5e1;font-family:'JetBrains Mono',monospace;justify-content:flex-end;margin-bottom:1px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#475569;margin:18px 0 4px;align-items:center}
+.legend i{display:inline-block;width:22px;height:0;vertical-align:middle;margin-right:6px}
+.legend .a{border-top:3px solid #2563eb}.legend .b{border-top:3px dashed #94a3b8}
+footer{margin-top:24px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All London reports</a>
+<h1>London &middot; Venue Trends</h1>
+<div class="sub">Direction of travel &mdash; the last 4 weeks (Mon&ndash;Sun) vs the same 4 weeks last year. Built to spot whether users and conversion rate are in line, so a site or tracking change shows up early. Solid blue = this year, dashed grey = last year. Weeks are numbered by financial year.</div>
+<div class="bar"><select id="vsel"></select><span class="fy" id="fy"></span><span id="alert"></span></div>
+<div class="narr" id="narr"></div>
+<div class="snote" id="snote"></div>
+<div class="grid" id="grid"></div>
+<div class="legend"><span><i class="a"></i>This year</span><span><i class="b"></i>Same FY weeks last year</span><span>CPA: lower is better (green badge = down)</span></div>
+<footer>GA4 bookings = sevenrooms_booking_complete &middot; Meta bookings = schedules (offsite pixel) &middot; Google bookings = Sevenrooms booking conversions &middot; Walk-in signals = Google local actions (store visits + directions + menu views + Book&nbsp;Now + calls). CPA = ad spend &divide; bookings on that platform. Badge compares the latest FY week to the same FY week last year. FY week 1 = first Monday of the year; users are summed daily users over each Mon&ndash;Sun week.</footer>
+<script>
+var PAY={"venues":["Aqua Shard","Hutong","Regent St","Azzurra","Shiro Sushi","DSL"],"labels":["","","",""],"weekno":["W21","W22","W23","W24"],"dateTY":["22\u201328 Jun","29 Jun\u20135 Jul","6\u201312 Jul","13\u201319 Jul"],"dateLY":["23\u201329 Jun","30 Jun\u20136 Jul","7\u201313 Jul","14\u201320 Jul"],"fyrange":"FY26 weeks 21\u201324","sym":"\u00a3","data":{"Aqua Shard":[["Website users",[22693,23116,24839,22717],[31189,34136,31696,31367],false,"n"],["Conversion rate",[4.91,5.1,4.68,5.2],[5.16,5.68,5.7,5.9],false,"%"],["GA4 bookings",[1114,1180,1163,1190],[1610,1940,1807,1860],false,"n"],["Meta bookings",[101,142,142,159],[111,128,133,121],false,"n"],["Google bookings",[635,637,586,443],[904,935,901,1068],false,"n"],["Google CPA",[2.79,2.92,4.93,3.05],[2.02,1.44,1.54,1.49],true,"$"],["Meta CPA",[20.03,11.78,13.67,15.96],[9.93,8.61,8.23,9.03],true,"$"],["Google walk-in signals",[1029,1123,658,341],[806,656,772,865],false,"n"]],"Hutong":[["Website users",[13617,14406,14250,13604],[12461,12957,13624,14746],false,"n"],["Conversion rate",[4.89,4.85,4.7,4.9],[5.94,6.23,6.0,6.1],false,"%"],["GA4 bookings",[666,699,670,663],[740,807,817,906],false,"n"],["Meta bookings",[105,122,137,150],[57,76,62,76],false,"n"],["Google bookings",[259,261,142,147],[440,438,554,514],false,"n"],["Google CPA",[7.6,9.79,8.5,9.48],[3.34,3.2,2.59,2.73],true,"$"],["Meta CPA",[17.9,14.03,12.37,13.83],[9.81,7.39,9.04,7.34],true,"$"],["Google walk-in signals",[540,618,206,256],[615,624,536,593],false,"n"]],"Regent St":[["Website users",[8150,7801,7890,6257],[11590,9590,10164,7704],false,"n"],["Conversion rate",[5.02,5.49,4.3,4.2],[3.73,3.87,3.87,4.3],false,"%"],["GA4 bookings",[409,428,339,263],[432,371,393,335],false,"n"],["Meta bookings",[69,71,71,59],[29,29,21,25],false,"n"],["Google bookings",[159,69,68,61],[104,86,66,100],false,"n"],["Google CPA",[11.59,9.69,19.55,16.63],[24.4,16.6,17.1,10.42],true,"$"],["Meta CPA",[12.58,14.83,17.23,17.16],[22.5,22.49,30.91,25.71],true,"$"],["Google walk-in signals",[453,237,196,155],[626,367,417,289],false,"n"]],"Azzurra":[["Website users",[1834,2309,2001,1934],[2244,2311,2361,1907],false,"n"],["Conversion rate",[5.45,4.29,4.95,4.3],[4.77,4.41,5.12,4.8],false,"%"],["GA4 bookings",[100,99,99,83],[107,102,121,91],false,"n"],["Meta bookings",[26,59,60,64],[6,2,3,12],false,"n"],["Google bookings",[22,27,27,19],[15,23,42,30],false,"n"],["Google CPA",[25.36,19.34,12.92,32.89],[11.75,24.27,16.95,21.44],true,"$"],["Meta CPA",[26.87,17.33,18.98,16.79],[139.22,93.53,47.59,24.61],true,"$"],["Google walk-in signals",[99,106,27,38],[0,0,0,0],false,"n"]],"Shiro Sushi":[["Website users",[1462,1235,1321,1110],[1968,2791,2404,2278],false,"n"],["Conversion rate",[9.51,9.23,9.39,10.0],[4.62,4.3,4.66,4.5],false,"%"],["GA4 bookings",[139,114,124,111],[91,120,112,102],false,"n"],["Meta bookings",[29,30,29,30],[23,11,17,13],false,"n"],["Google bookings",[42,30,60,77],[49,74,89,57],false,"n"],["Google CPA",[7.17,4.42,11.08,7.6],[15.16,9.75,7.1,11.35],true,"$"],["Meta CPA",[14.26,12.72,11.19,10.34],[15.47,31.04,20.94,26.63],true,"$"],["Google walk-in signals",[284,128,314,182],[443,394,513,482],false,"n"]],"DSL":[["Website users",[5432,6950,6121,6218],[3190,3140,2819,2994],false,"n"],["Conversion rate",[8.47,8.3,9.39,8.7],[4.55,5.22,6.81,5.8],false,"%"],["GA4 bookings",[460,577,575,543],[145,164,192,173],false,"n"],["Meta bookings",[62,76,97,93],[31,43,30,44],false,"n"],["Google bookings",[68,80,27,32],[0,0,0,0],false,"n"],["Google CPA",[21.15,15.48,13.75,8.6],[0,0,0,0],true,"$"],["Meta CPA",[20.59,21.05,19.12,19.26],[18.57,13.57,19.49,13.1],true,"$"],["Google walk-in signals",[0,0,0,0],[0,0,0,0],false,"n"]]},"narr":{"Aqua Shard":"Aqua Shard's traffic gap remains the headline: 22,717 users in W24, about 28% below the same FY week last year, and conversion has slipped to 5.2% from 5.9% LY, so GA4 bookings of 1,190 are well short of last July's 1,860. Google spend was pulled back to \u00a31,351 (443 bookings, \u00a33.05 CPA \u2014 efficient but volume down). Meta held 159 schedules at \u00a315.96, above last year's \u00a39.03. Walk-in signals fell to 341, though some of the latest week's Google conversions are still settling.","Hutong":"Hutong's users eased to 13,604, down 7.7% YoY, and the funnel stays soft: conversion of 4.9% against 6.1% a year ago left GA4 bookings at 663 vs 906 LY. Google ran \u00a31,393 for 147 bookings at \u00a39.48 CPA, still well above last year's \u00a32.73. Meta improved to \u00a313.83 on a strong 150 schedules. Walk-in signals recovered to 256.","Regent St":"Regent St (Kyoto + Nueva combined) is now converting broadly in line with last year at 4.2% (4.3% LY), but the traffic base has thinned to 6,257 users, about 19% below LY, dragging GA4 bookings to 263 vs 335. Google spend held near \u00a31,015 for 61 bookings (\u00a316.63 CPA). Meta sits at \u00a317.16 on 59 schedules, still far better than last year's \u00a325.71. The lever here is top-of-funnel volume.","Azzurra":"Azzurra held its traffic at 1,934 users, up 1.4% YoY, but conversion softened to 4.3% from 4.8% LY, leaving GA4 bookings at 83 vs 91. Google spent \u00a3625 at a high \u00a332.89 CPA on 19 bookings. Meta scaled to \u00a31,075 for 64 schedules at \u00a316.79 \u2014 a big improvement on last year's \u00a324.61. Walk-in signals were 38.","Shiro Sushi":"Shiro Sushi is volume-capped but converting exceptionally: 1,110 users (down 51% YoY) yet a 10.0% conversion rate against 4.5% last year, so GA4 bookings rose to 111 vs 102 LY. Google delivered 77 bookings at \u00a37.60 CPA on \u00a3586 spend, and Meta ran at \u00a310.34 \u2014 the cheapest in the portfolio. Walk-in signals were 182. Fixing the traffic shortfall is the single biggest opportunity in the set.","DSL":"DSL (Dim Sum Library) leads the portfolio on conversion at 8.7% on 6,218 users, with GA4 bookings of 543. NOTE: DSL rebranded, so the 2025 lines are pre-rebrand (Luci) and are NOT a like-for-like comparison \u2014 the apparent YoY gains are a rebrand artefact and last year's Google data does not exist on this account. Google spend was \u00a3275 in W24 (32 bookings, \u00a38.60 CPA) while Meta ran \u00a31,791 for 93 schedules (\u00a319.26). No Google local-action conversions are configured, so walk-in signals show 0."},"alert":{"Aqua Shard":["red","Traffic drop","Latest-week users down 27.6% vs same FY week last year; conversion rate also down"],"Hutong":["amber","Conversion check","Users down 7.7% YoY and conversion rate down to 4.9% from 6.1%"],"Regent St":["red","Traffic drop","Latest-week users down 18.8% YoY despite conversion rate in line with last year"],"Azzurra":["amber","Conversion check","Users up 1.4% YoY but conversion rate down to 4.3% from 4.8%"],"Shiro Sushi":["red","Traffic drop","Latest-week users down 51.3% YoY \u2014 volume-capped, though conversion is double last year"],"DSL":["blue","Not comparable","Pre-rebrand (Luci) baseline last year \u2014 YoY lines are not a like-for-like comparison"]},"sharednote":{"Regent St":"Regent St combines Aqua Kyoto + Aqua Nueva (GA4 users/bookings & Meta spend/schedules summed; Google is a single shared account \u2014 Kyoto + Nueva booking actions summed). Walk-in signals are the shared Google account's local actions (Directions + Menu views + Clicks to call; no Store-visit action on this account).","Hutong":"Google bookings sum two booking actions ('Sevenrooms Booking Complete' + 'Hutong UK - GA4 (web) sevenrooms_booking_complete'). No 'Click Book Now' conversion action exists on this account, so walk-in signals cover Store visits + Directions + Menu views + Clicks to call.","Shiro Sushi":"Google bookings sum three booking actions (SST booking_complete + UK sevenrooms_booking_complete + Booking Complete).","Azzurra":"Google account has no Store-visit conversion; walk-in signals cover Directions + Menu views + Clicks to call only, and no local actions were recorded last year (LY = 0).","DSL":"DSL Meta account reports as 'Luci' (confirmed mapping). Google account has no 2025 data (post-rebrand build) and no local-action conversions, so LY Google bookings/CPA and all walk-in signals show 0."}};
+var W=200,H=58,PADX=4,PADY=6,N=PAY.labels.length;
+function xpos(i){return PADX + i/(N-1)*(W-2*PADX);}      // svg units
+function xpct(i){return xpos(i)/W*100;}                  // percent for ticks
+var SYM=PAY.sym||'$';
+function fmt(v,f){if(f=='%')return v.toFixed(2)+'%';if(f=='$')return SYM+v.toFixed(1);return Math.round(v).toLocaleString();}
+function badge(ty,ly,inv){var t=ty[ty.length-1],l=ly[ly.length-1];if(!l)return ['flat','n/a'];
+ var p=(t-l)/l*100;var good=inv? p<0 : p>0;var cls=Math.abs(p)<2?'flat':(good?'up':'down');
+ return [cls,(p>=0?'+':'')+p.toFixed(0)+'% YoY'];}
+function poly(a,mn,mx){return a.map(function(v,i){
+   var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);return xpos(i).toFixed(1)+','+y.toFixed(1);}).join(' ');}
+function spark(ty,ly){
+ var all=ty.concat(ly);var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);if(mx==mn)mx=mn+1;
+ var lx=xpos(ty.length-1),lyv=H-PADY-(ty[ty.length-1]-mn)/(mx-mn)*(H-2*PADY);
+ var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none">';
+ for(var i=0;i<N;i++){var x=xpos(i).toFixed(1);svg+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="'+H+'" stroke="#f1f5f9" stroke-width="1"/>';}
+ svg+='<polyline fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ly,mn,mx)+'"/>'
+   +'<polyline fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ty,mn,mx)+'"/>'
+   +'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/></svg>';
+ return svg;
+}
+function ticks(){
+ var h='<div class="ticks">';
+ for(var i=0;i<N;i++){
+   var p=xpct(i);var tf=(i==0?'translateX(0)':(i==N-1?'translateX(-100%)':'translateX(-50%)'));
+   h+='<span style="left:'+p.toFixed(1)+'%;transform:'+tf+'"><b>'+PAY.weekno[i]+'</b><i>'+PAY.dateTY[i]+'</i></span>';
+ }
+ return h+'</div>';
+}
+function render(v){
+ var d=PAY.data[v];
+ document.getElementById('fy').textContent=PAY.fyrange;
+ document.getElementById('narr').textContent=PAY.narr[v];
+ var sn=document.getElementById('snote'); if(sn){sn.textContent=(PAY.sharednote&&PAY.sharednote[v])?PAY.sharednote[v]:'';}
+ var a=PAY.alert[v];
+ document.getElementById('alert').innerHTML='<span class="chip '+a[0]+'" title="'+a[2]+'"><span class="dot"></span>'+a[1]+'</span>';
+ var g=document.getElementById('grid');g.innerHTML='';
+ d.forEach(function(p){
+   var lab=p[0],ty=p[1],ly=p[2],inv=p[3],f=p[4];var b=badge(ty,ly,inv);
+   var card=document.createElement('div');card.className='card';
+   card.innerHTML='<div class="lab">'+lab+(p[5]==='shared'?' <span class="sh">· shared</span>':'')+'</div>'
+     +'<div class="row"><span class="val">'+fmt(ty[ty.length-1],f)+'</span><span class="badge '+b[0]+'">'+b[1]+'</span></div>'
+     +'<div class="cv">'+spark(ty,ly)+'</div>'+ticks();
+   g.appendChild(card);
+ });
+}
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
+</script>
+</body></html>

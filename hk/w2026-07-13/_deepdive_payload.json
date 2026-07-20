@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "13–19 Jul 2026",
+ "wow": "6–12 Jul 2026",
+ "yoy": "14–20 Jul 2025",
+ "generated": "20 July 2026",
+ "badge": "SOFTER WEEK",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 164,
+   "tgt": 185,
+   "wow_b": 204,
+   "yoy_b": 176,
+   "users": 2675,
+   "sessions": 3656,
+   "asd": 217.55,
+   "bounce": 0.3042,
+   "meta_s": 3670.35,
+   "meta_sch": 6,
+   "meta_sch_prior": 10,
+   "goog_s": 8997.08,
+   "goog_c": 55.968369,
+   "goog_c_prior": 58.698429,
+   "shared": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 130,
+   "tgt": 172,
+   "wow_b": 137,
+   "yoy_b": 163,
+   "users": 1133,
+   "sessions": 1483,
+   "asd": 162.51,
+   "bounce": 0.319,
+   "meta_s": 1000.22,
+   "meta_sch": 3,
+   "meta_sch_prior": 9,
+   "goog_s": 2438.28,
+   "goog_c": 57.927806,
+   "goog_c_prior": 46.97999,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK spent HK$3,670 on Meta for just 6 schedules, a weak week after 10 the week before.",
+   "Dim Sum Library trimmed Meta to HK$1,000 and booked 3 schedules, down from 9 the prior week.",
+   "Meta stays a thin channel for both venues: 9 schedules combined against 294 GA4 bookings."
+  ],
+  "google": [
+   "Aqua HK Google remains the workhorse: HK$8,997 spend and 56 booking conversions at HK$161 CPA, just outside the good band.",
+   "Dim Sum Library lifted Google spend to HK$2,438 and delivered 58 conversions, still the cheapest acquisition at HK$42 CPA.",
+   "Google now drives roughly a third of the two venues' GA4 bookings."
+  ],
+  "ga4": [
+   "Aqua HK slipped to 164 bookings from 204, missing the 185 target and now 7.7 percent behind YTD.",
+   "Dim Sum Library booked 130 against a 172 target, a 24 percent miss, and is 5.7 percent behind YTD.",
+   "DSL user CVR of 11.5 percent stays strong, so the shortfall is traffic rather than conversion."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W17",
+   "W18",
+   "W19",
+   "W20",
+   "W21",
+   "W22",
+   "W23",
+   "W24"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     172,
+     184,
+     164,
+     145,
+     180,
+     166,
+     204,
+     164
+    ],
+    "users": [
+     3781,
+     4185,
+     3730,
+     3774,
+     3317,
+     3385,
+     3492,
+     3017
+    ]
+   },
+   "Dim Sum Library": {
+    "bookings": [
+     154,
+     139,
+     146,
+     135,
+     149,
+     126,
+     137,
+     130
+    ],
+    "users": [
+     1358,
+     1333,
+     1835,
+     1260,
+     1002,
+     1114,
+     1486,
+     1249
+    ]
+   }
+  }
+ }
+}

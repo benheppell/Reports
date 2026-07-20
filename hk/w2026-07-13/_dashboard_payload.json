@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 164,
+   "tgt": 185,
+   "wow": 204,
+   "yoy": 176,
+   "ytd": 4657,
+   "ytdt": 5043,
+   "meta_s": 3670.35,
+   "goog_s": 8997.08,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 233,
+   "tgt": 227,
+   "wow": 219,
+   "yoy": 193,
+   "ytd": 6908,
+   "ytdt": 6066,
+   "meta_s": 2254.69,
+   "goog_s": 5479.66,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 108,
+   "tgt": 93,
+   "wow": 75,
+   "yoy": 87,
+   "ytd": 2863,
+   "ytdt": 2418,
+   "meta_s": 5380.71,
+   "goog_s": 4128.14,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 89,
+   "tgt": 47,
+   "wow": 75,
+   "yoy": 64,
+   "ytd": 1456,
+   "ytdt": 1326,
+   "meta_s": 3687.2,
+   "goog_s": 4853.29,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 130,
+   "tgt": 172,
+   "wow": 137,
+   "yoy": 163,
+   "ytd": 3855,
+   "ytdt": 4088,
+   "meta_s": 1000.22,
+   "goog_s": 2438.28,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 123,
+   "tgt": 126,
+   "wow": 129,
+   "yoy": 93,
+   "ytd": 3419,
+   "ytdt": 2897,
+   "meta_s": 5431.79,
+   "goog_s": 4164.03,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = July monthly GA4 target x 7/30. <b>Vesu</b> remains excluded: still closed, with zero bookings and no Google spend this week. The portfolio landed at <b>847 bookings</b> against an 850 target (on pace) and <b>up 9 percent</b> year on year, but the picture is uneven: Hutong, The Chinese Library and Cantina all beat target, while Aqua HK, Dim Sum Library and Shiro finished behind. Dim Sum Library is the clearest soft spot at 24 percent below its weekly target.",
+ "week": "13–19 Jul 2026",
+ "wow": "6–12 Jul 2026",
+ "yoy": "14–20 Jul 2025",
+ "generated": "20 July 2026"
+}

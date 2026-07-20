@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1189,
+   "tgt": 2180,
+   "wow": 1175,
+   "yoy": 1860,
+   "ytd": 31767,
+   "ytdt": 35020,
+   "meta_s": 2538.3,
+   "goog_s": 1350.61,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 663,
+   "tgt": 1066,
+   "wow": 676,
+   "yoy": 906,
+   "ytd": 17699,
+   "ytdt": 18711,
+   "meta_s": 2074.45,
+   "goog_s": 1392.81,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 263,
+   "tgt": 432,
+   "wow": 341,
+   "yoy": 335,
+   "ytd": 7528,
+   "ytdt": 9638,
+   "meta_s": 1012.28,
+   "goog_s": 1014.65,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 79,
+   "tgt": 147,
+   "wow": 98,
+   "yoy": 91,
+   "ytd": 2844,
+   "ytdt": 3986,
+   "meta_s": 1074.87,
+   "goog_s": 624.9,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 111,
+   "tgt": 148,
+   "wow": 124,
+   "yoy": 102,
+   "ytd": 2532,
+   "ytdt": 3725,
+   "meta_s": 310.14,
+   "goog_s": 585.57,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 543,
+   "tgt": 207,
+   "wow": 578,
+   "yoy": 173,
+   "ytd": 12664,
+   "ytdt": 4281,
+   "meta_s": 1790.83,
+   "goog_s": 275.16,
+   "nc": true
+  }
+ ],
+ "note": "<b>Portfolio</b> bookings of 2,848 landed 32 percent below the 4,180 weekly target and 4.8 percent below the prior week, with Aqua Shard 45 percent under target and Regent St off 23 percent week on week. <b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined (both GA4 properties and both Meta accounts; Google is a shared account). <b>DSL</b> is trading far above a pre-rebrand target, so its variance and YoY are not comparable.",
+ "week": "13–19 Jul 2026",
+ "wow": "6–12 Jul 2026",
+ "yoy": "14–20 Jul 2025",
+ "generated": "20 July 2026"
+}

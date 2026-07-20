@@ -36,6 +36,7 @@ tr.group td{font-weight:700;background:#f8fafc}
 tr.venue td{font-weight:600}
 td.seg{padding-left:26px;color:#475569;font-weight:400}
 .pace{font-weight:600}
+.ctx,td.ctx{color:#94a3b8}
 .up{color:#16a34a}.down{color:#dc2626}.flat{color:#64748b}
 .na{color:#cbd5e1}
 .cell .n{font-weight:600;display:block}
@@ -74,7 +75,7 @@ footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6
   <strong>How to read this.</strong>
   <em>On books now</em> = covers currently held for that service month.
   <em>LY same point</em> = covers held for the equivalent month at the same lead time last year.
-  <em>Pace</em> = now vs LY same point (<span class="up">green</span> ahead, <span class="down">red</span> behind).
+  <b>Pace = on-books-now ÷ on-books at the SAME point last year</b> (<span class="up">green</span> ahead, <span class="down">red</span> behind). “LY final” is last year’s <em>whole finished month</em> — context only, never the pace comparison.
   <em>Forecast</em> = LY final + (now − LY same point), a conservative guide — months still fill materially in-month, so early months read low.
   Dim Sum Library opened ~Dec 2025 so its year-on-year is not like-for-like: it is shown on-books only, kept out of the group total, and its pace/forecast marked n/a.
 </div>
@@ -110,7 +111,7 @@ function renderShift(monthIdx){
   const rows = rowsFor("shift", monthIdx);
   const venues = VENUE_ORDER.filter(v => rows.some(r => r.venue === v));
   let html = `<table><thead><tr>
-    <th>Venue / shift</th><th>On books now</th><th>LY same point</th><th>Pace</th><th>LY final</th><th>Forecast</th>
+    <th>Venue / shift</th><th>On books now</th><th>LY same point</th><th>Pace<br><span style='font-weight:400;color:#94a3b8'>(now vs LY same&nbsp;point)</span></th><th class='ctx'>LY final<br><span style='font-weight:400;color:#94a3b8'>(whole month — context)</span></th><th>Forecast</th>
   </tr></thead><tbody>`;
   for(const v of venues){
     const isDsl = v === DSL;
@@ -122,14 +123,14 @@ function renderShift(monthIdx){
     const vf = isDsl ? '<span class="na">n/a</span>' : fmt(tLyf + (tNow - tLyp));
     const tag = isDsl ? '<span class="tag">not LFL</span>' : '';
     html += `<tr class="${cls}"><td>${v}${tag}</td><td>${fmt(tNow)}</td><td>${fmt(tLyp)}</td>
-      <td class="pace ${vp.cls}">${vp.txt}</td><td>${fmt(tLyf)}</td><td>${vf}</td></tr>`;
+      <td class="pace ${vp.cls}">${vp.txt}</td><td class="ctx">${fmt(tLyf)}</td><td>${vf}</td></tr>`;
     for(const s of segs){
       const r = get("shift",monthIdx,v,s);
       const now=n(r&&r.on_books_now), lyp=n(r&&r.ly_at_point), lyf=n(r&&r.ly_final);
       const p = isDsl ? {txt:"n/a",cls:"na"} : paceStr(now, lyp);
       const f = isDsl ? '<span class="na">n/a</span>' : fmt(lyf + (now - lyp));
       html += `<tr><td class="seg">${s}</td><td>${fmt(now)}</td><td>${fmt(lyp)}</td>
-        <td class="pace ${p.cls}">${p.txt}</td><td>${fmt(lyf)}</td><td>${f}</td></tr>`;
+        <td class="pace ${p.cls}">${p.txt}</td><td class="ctx">${fmt(lyf)}</td><td>${f}</td></tr>`;
     }
   }
   html += `</tbody></table>`;
