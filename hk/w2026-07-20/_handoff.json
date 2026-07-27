@@ -1,0 +1,16 @@
+{
+ "venues": [
+  {"name": "Aqua HK", "weekly_bookings": 201},
+  {"name": "Hutong HK", "weekly_bookings": 223},
+  {"name": "The Chinese Library", "weekly_bookings": 88},
+  {"name": "Cantina", "weekly_bookings": 71},
+  {"name": "Dim Sum Library", "weekly_bookings": 141},
+  {"name": "Shiro", "weekly_bookings": 111}
+ ],
+ "portfolio_bookings": 835,
+ "portfolio_target": 850,
+ "yoy_pct": 0.8,
+ "deepdive_venues": ["Aqua HK", "Dim Sum Library"],
+ "ga4_meta": "Portfolio 835 · YoY ▲0.8%",
+ "ga4_yoy": "▲0.8% YoY"
+}

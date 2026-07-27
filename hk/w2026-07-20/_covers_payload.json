@@ -1,0 +1,99 @@
+{
+ "market": "Hong Kong",
+ "platform": "OpenRice",
+ "tz": "Asia/Hong_Kong",
+ "platform_foot": "<b>OpenRice</b> = OpenRice sources",
+ "combined_note": "<b>Shiro</b> = Shiro Hong Kong (Pacific Place) + Shiro Tai Kwun combined. Vesu excluded. ",
+ "ga4_meta": "Portfolio 835 · YoY ▲0.8%",
+ "ga4_yoy": "▲0.8% YoY",
+ "week": "20–26 Jul 2026",
+ "wow": "13–19 Jul 2026",
+ "yoy": "21–27 Jul 2025",
+ "generated": "27 July 2026",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ga4": 201,
+   "ch": {
+    "web": {"c": 424, "p": 381, "y": 404},
+    "gr": {"c": 202, "p": 177, "y": 115},
+    "ot": {"c": 284, "p": 293, "y": 282},
+    "walk": {"c": 84, "p": 65, "y": 65},
+    "recep": {"c": 179, "p": 258, "y": 197},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 0, "p": 0, "y": 0}
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ga4": 223,
+   "ch": {
+    "web": {"c": 462, "p": 452, "y": 349},
+    "gr": {"c": 256, "p": 222, "y": 205},
+    "ot": {"c": 226, "p": 253, "y": 227},
+    "walk": {"c": 140, "p": 83, "y": 77},
+    "recep": {"c": 466, "p": 534, "y": 585},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 2, "p": 0, "y": 0}
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ga4": 88,
+   "ch": {
+    "web": {"c": 198, "p": 208, "y": 174},
+    "gr": {"c": 120, "p": 133, "y": 85},
+    "ot": {"c": 240, "p": 180, "y": 122},
+    "walk": {"c": 95, "p": 55, "y": 83},
+    "recep": {"c": 212, "p": 179, "y": 195},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 0, "p": 0, "y": 0}
+   }
+  },
+  {
+   "name": "Cantina",
+   "ga4": 71,
+   "ch": {
+    "web": {"c": 144, "p": 163, "y": 137},
+    "gr": {"c": 40, "p": 44, "y": 15},
+    "ot": {"c": 230, "p": 233, "y": 205},
+    "walk": {"c": 51, "p": 55, "y": 68},
+    "recep": {"c": 38, "p": 80, "y": 115},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 0, "p": 0, "y": 0}
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ga4": 141,
+   "ch": {
+    "web": {"c": 369, "p": 315, "y": 332},
+    "gr": {"c": 189, "p": 230, "y": 258},
+    "ot": {"c": 342, "p": 334, "y": 287},
+    "walk": {"c": 1028, "p": 1077, "y": 1171},
+    "recep": {"c": 388, "p": 367, "y": 280},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 0, "p": 0, "y": 0}
+   }
+  },
+  {
+   "name": "Shiro",
+   "ga4": 111,
+   "ch": {
+    "web": {"c": 290, "p": 276, "y": 149},
+    "gr": {"c": 158, "p": 152, "y": 64},
+    "ot": {"c": 545, "p": 481, "y": 322},
+    "walk": {"c": 1106, "p": 1743, "y": 902},
+    "recep": {"c": 285, "p": 353, "y": 303},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 0, "p": 0, "y": 0}
+   }
+  }
+ ],
+ "trend": {
+  "labels": ["W18","W19","W20","W21","W22","W23","W24","W25"],
+  "total": [9925,10007,10115,9300,8222,9245,9376,8793],
+  "ot": [1671,1865,1776,1643,1436,1724,1774,1867]
+ },
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 only fires for bookings made on our own website, so it never sees <b>OpenRice</b> — around a fifth of Hong Kong covers — only partly captures <b>Google Reserve</b>, and is blind to walk-ins and the reception desks, which together are close to half of all covers created. That is why the two numbers move differently: GA4 reads <b>▲0.8% YoY</b> on website bookings while total covers created across every channel are <b>+13% YoY</b>. Read this as the fuller demand and channel picture — OpenRice strength, heavy walk-in and reception volume at Dim Sum Library and Shiro — not as a contradiction of the GA4 story."
+}

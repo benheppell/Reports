@@ -1,0 +1,40 @@
+{
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "weekly_bookings": 1328
+  },
+  {
+   "name": "Hutong",
+   "weekly_bookings": 871
+  },
+  {
+   "name": "Regent St",
+   "weekly_bookings": 321
+  },
+  {
+   "name": "Azzurra",
+   "weekly_bookings": 90
+  },
+  {
+   "name": "Shiro Sushi",
+   "weekly_bookings": 117
+  },
+  {
+   "name": "DSL",
+   "weekly_bookings": 571
+  }
+ ],
+ "portfolio_bookings": 3298,
+ "portfolio_target": 4180,
+ "yoy_pct": -4.3,
+ "deepdive_venues": [
+  "Aqua Shard",
+  "Hutong",
+  "Regent St",
+  "Azzurra",
+  "Shiro Sushi"
+ ],
+ "ga4_meta": "Portfolio 3,298 · YoY ▼4.3%",
+ "ga4_yoy": "▼4.3% YoY"
+}

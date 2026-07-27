@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 201,
+   "tgt": 185,
+   "wow": 164,
+   "yoy": 206,
+   "ytd": 4858,
+   "ytdt": 5228,
+   "meta_s": 5891.3,
+   "goog_s": 10379.06,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 223,
+   "tgt": 227,
+   "wow": 233,
+   "yoy": 228,
+   "ytd": 7131,
+   "ytdt": 6293,
+   "meta_s": 4632.76,
+   "goog_s": 5347.39,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 88,
+   "tgt": 93,
+   "wow": 108,
+   "yoy": 70,
+   "ytd": 2951,
+   "ytdt": 2511,
+   "meta_s": 6032.79,
+   "goog_s": 4428.33,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 71,
+   "tgt": 47,
+   "wow": 89,
+   "yoy": 53,
+   "ytd": 1527,
+   "ytdt": 1372,
+   "meta_s": 3799.55,
+   "goog_s": 4700.18,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 141,
+   "tgt": 172,
+   "wow": 130,
+   "yoy": 185,
+   "ytd": 3996,
+   "ytdt": 4259,
+   "meta_s": 1006.2,
+   "goog_s": 1245.94,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 111,
+   "tgt": 126,
+   "wow": 123,
+   "yoy": 86,
+   "ytd": 3532,
+   "ytdt": 3023,
+   "meta_s": 5575.01,
+   "goog_s": 4777.42,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = July monthly GA4 target x 7/30. <b>Vesu</b> remains excluded: still closed, with zero bookings and no Google spend this week. The portfolio landed at <b>835 bookings</b> against an 850 target (-1.8 percent, broadly on pace) and was <b>essentially flat year on year at +0.8 percent</b>. Aqua HK and Cantina beat their weekly targets, while <b>Hutong, The Chinese Library, Dim Sum Library and Shiro</b> finished behind — Dim Sum Library is the clearest soft spot at 18 percent below its weekly target. On a YTD basis only <b>Aqua HK (-7.1%)</b> and <b>Dim Sum Library (-6.2%)</b> trail their cumulative targets.",
+ "week": "20–26 Jul 2026",
+ "wow": "13–19 Jul 2026",
+ "yoy": "21–27 Jul 2025",
+ "generated": "27 July 2026"
+}

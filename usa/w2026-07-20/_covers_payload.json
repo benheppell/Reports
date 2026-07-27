@@ -1,0 +1,60 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OT Guestcenter, OpenTable network and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 508 · YoY ▼17.7%",
+ "ga4_yoy": "▼17.7% YoY",
+ "week": "20–26 Jul 2026",
+ "wow": "13–19 Jul 2026",
+ "yoy": "21–27 Jul 2025",
+ "generated": "27 July 2026",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> The USA mirrors London: GA4 website bookings read <b>▼17.7% YoY</b>, yet total covers created are <b>+11% YoY</b>. GA4's <code>sevenrooms_booking_complete</code> only fires for bookings made on our own website. It cannot see <b>OpenTable + Resy</b> — <b>1,166</b> covers this week, about a quarter of the total — only partly captures <b>Google Reserve</b>, and never sees walk-ins or the reception desks. So the GA4 decline reflects the website-widget channel, not demand: total covers are up week on week and year on year. This report is the more accurate view of what we are actually creating.",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 307,
+   "ch": {
+    "web": {"c": 652, "p": 529, "y": 555},
+    "gr": {"c": 123, "p": 142, "y": 0},
+    "ot": {"c": 276, "p": 210, "y": 167},
+    "walk": {"c": 571, "p": 536, "y": 750},
+    "recep": {"c": 488, "p": 434, "y": 475},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 3, "p": 2, "y": 0}
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 131,
+   "ch": {
+    "web": {"c": 353, "p": 356, "y": 442},
+    "gr": {"c": 57, "p": 94, "y": 293},
+    "ot": {"c": 772, "p": 523, "y": 471},
+    "walk": {"c": 336, "p": 334, "y": 378},
+    "recep": {"c": 842, "p": 598, "y": 288},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 6, "p": 4, "y": 10}
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 70,
+   "ch": {
+    "web": {"c": 158, "p": 98, "y": 159},
+    "gr": {"c": 16, "p": 2, "y": 42},
+    "ot": {"c": 118, "p": 203, "y": 102},
+    "walk": {"c": 105, "p": 184, "y": 232},
+    "recep": {"c": 61, "p": 67, "y": 67},
+    "ota": {"c": 0, "p": 0, "y": 0},
+    "tp": {"c": 0, "p": 7, "y": 0}
+   }
+  }
+ ],
+ "trend": {
+  "labels": ["W22", "W23", "W24", "W25", "W26", "W27", "W28", "W29"],
+  "total": [5914, 4366, 3872, 4386, 3172, 4724, 4323, 4937],
+  "ot": [1819, 988, 875, 839, 574, 947, 936, 1166]
+ }
+}

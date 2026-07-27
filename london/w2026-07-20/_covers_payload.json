@@ -1,0 +1,39 @@
+{
+ "market": "London",
+ "platform": "OpenTable",
+ "tz": "Europe/London",
+ "platform_foot": "<b>OpenTable</b> = OT Guestcenter + OpenTable sources",
+ "combined_note": "<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. ",
+ "ga4_meta": "Portfolio 3,298 · YoY ▼4.3%",
+ "ga4_yoy": "▼4.3% YoY",
+ "week": "20–26 Jul 2026",
+ "wow": "13–19 Jul 2026",
+ "yoy": "21–27 Jul 2025",
+ "generated": "27 July 2026",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 is becoming steadily less reliable as cookie consent and privacy tracking cut what it can see, so treat it as a guide to overall website performance rather than a count of bookings. <b>GA4 <code>sevenrooms_booking_complete</code></b> only fires for bookings made on our own website widget, so <b>OpenTable is invisible to GA4</b> and <b>Google Reserve</b> is only partly captured; walk-ins and reception desks are never seen. <b>OpenTable</b> covers are <b>1,672</b> this week, up from <b>386</b> the same week last year, roughly 4.3x. So while GA4 reads <b>▼4.3% YoY</b>, total covers created are <b>+35% YoY</b> — covers run well ahead of the GA4 trend, and this report is the more accurate view of the demand we are actually creating.",
+ "venues": [
+  {"name":"Aqua Shard","ga4":1328,"ch":{
+    "web":{"c":2534,"p":2409,"y":2762},"gr":{"c":148,"p":93,"y":173},"ot":{"c":383,"p":276,"y":66},
+    "walk":{"c":123,"p":134,"y":155},"recep":{"c":4,"p":0,"y":0},"ota":{"c":0,"p":0,"y":0},"tp":{"c":62,"p":29,"y":46}}},
+  {"name":"Hutong","ga4":871,"ch":{
+    "web":{"c":1859,"p":1285,"y":1679},"gr":{"c":243,"p":182,"y":224},"ot":{"c":240,"p":236,"y":99},
+    "walk":{"c":210,"p":173,"y":158},"recep":{"c":2,"p":21,"y":27},"ota":{"c":0,"p":0,"y":0},"tp":{"c":65,"p":67,"y":40}}},
+  {"name":"Regent St","ga4":321,"ch":{
+    "web":{"c":694,"p":608,"y":534},"gr":{"c":73,"p":33,"y":151},"ot":{"c":223,"p":177,"y":101},
+    "walk":{"c":184,"p":185,"y":165},"recep":{"c":34,"p":53,"y":26},"ota":{"c":0,"p":0,"y":0},"tp":{"c":102,"p":121,"y":135}}},
+  {"name":"Azzurra","ga4":90,"ch":{
+    "web":{"c":209,"p":181,"y":154},"gr":{"c":49,"p":17,"y":81},"ot":{"c":83,"p":88,"y":33},
+    "walk":{"c":271,"p":336,"y":278},"recep":{"c":31,"p":21,"y":10},"ota":{"c":0,"p":0,"y":0},"tp":{"c":31,"p":60,"y":124}}},
+  {"name":"Shiro Sushi","ga4":117,"ch":{
+    "web":{"c":284,"p":257,"y":231},"gr":{"c":35,"p":51,"y":78},"ot":{"c":78,"p":48,"y":22},
+    "walk":{"c":332,"p":292,"y":231},"recep":{"c":0,"p":0,"y":0},"ota":{"c":0,"p":0,"y":0},"tp":{"c":50,"p":50,"y":33}}},
+  {"name":"DSL","ga4":571,"ch":{
+    "web":{"c":1334,"p":1220,"y":360},"gr":{"c":212,"p":191,"y":180},"ot":{"c":665,"p":636,"y":65},
+    "walk":{"c":1275,"p":1071,"y":379},"recep":{"c":57,"p":51,"y":0},"ota":{"c":0,"p":0,"y":0},"tp":{"c":5,"p":0,"y":205}}}
+ ],
+ "trend": {
+  "labels": ["W18","W19","W20","W21","W22","W23","W24","W25"],
+  "total": [10210,9906,10593,10619,11567,11868,10652,12184],
+  "ot": [1164,1318,1548,1477,1549,1565,1461,1672]
+ }
+}

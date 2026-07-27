@@ -1,0 +1,1170 @@
+{
+ "market": "USA",
+ "sym": "$",
+ "week": "W29 · 20–26 Jul 2026",
+ "fy": "FY26",
+ "venues": [
+  "All",
+  "Aqua New York",
+  "Hutong NYC",
+  "Hutong Miami"
+ ],
+ "data": {
+  "Aqua New York": {
+   "web": {
+    "cur": {
+     "bookings": 307,
+     "users": 6985,
+     "sessions": 8920,
+     "avgsec": 153.6,
+     "engrate": 50.2,
+     "pps": 2.87,
+     "newpct": 91.3
+    },
+    "prior": {
+     "bookings": 284,
+     "users": 7774,
+     "sessions": 9758,
+     "avgsec": 145.8,
+     "engrate": 55.8,
+     "pps": 2.76,
+     "newpct": 91.8
+    },
+    "yoy": {
+     "bookings": 276,
+     "users": 5595,
+     "sessions": 7256,
+     "avgsec": 191.8,
+     "engrate": 63.5,
+     "pps": 3.57,
+     "newpct": 91.2
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1626.41,
+      "bookings": 90,
+      "impr": 82456,
+      "clicks": 3616
+     },
+     "prior": {
+      "spend": 1605.5,
+      "bookings": 112,
+      "impr": 84991,
+      "clicks": 3482
+     },
+     "yoy": {
+      "spend": 870.88,
+      "bookings": 61,
+      "impr": 149404,
+      "clicks": 4922
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1119.73,
+      "bookings": 55,
+      "impr": 60641,
+      "clicks": 1762
+     },
+     "prior": {
+      "spend": 1115.13,
+      "bookings": 51,
+      "impr": 55568,
+      "clicks": 1788
+     },
+     "yoy": {
+      "spend": 846.05,
+      "bookings": 65,
+      "impr": 38247,
+      "clicks": 1322
+     }
+    }
+   },
+   "budget": {
+    "meta": 1725,
+    "google": 575
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      2439,
+      2423,
+      415
+     ],
+     "b": [
+      46,
+      45,
+      9
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      2154,
+      2815,
+      1394
+     ],
+     "b": [
+      94,
+      96,
+      49
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1854,
+      2031,
+      1667
+     ],
+     "b": [
+      56,
+      57,
+      78
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      728,
+      244,
+      93
+     ],
+     "b": [
+      31,
+      22,
+      7
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      682,
+      747,
+      336
+     ],
+     "b": [
+      30,
+      22,
+      17
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      563,
+      558,
+      780
+     ],
+     "b": [
+      14,
+      7,
+      19
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      389,
+      345,
+      696
+     ],
+     "b": [
+      16,
+      13,
+      40
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 82,
+    "Desktop": 17,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/aqua-roma",
+     "s": 3732,
+     "b": 74
+    },
+    {
+     "path": "/ (home)",
+     "s": 1588,
+     "b": 45
+    },
+    {
+     "path": "/aqua-kyoto",
+     "s": 686,
+     "b": 23
+    },
+    {
+     "path": "/explore/aquanyc/reservations/create/search",
+     "s": 403,
+     "b": 50
+    },
+    {
+     "path": "/explore/aquanyc/reservations/manage",
+     "s": 298,
+     "b": 18
+    },
+    {
+     "path": "/explore/aquakyotonyc/reservations/create/search",
+     "s": 220,
+     "b": 17
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     5942,
+     2335,
+     2134,
+     7501,
+     3853,
+     2796,
+     2720,
+     2746
+    ],
+    "bookings": [
+     348,
+     225,
+     206,
+     295,
+     217,
+     302,
+     280,
+     307
+    ]
+   },
+   "funnel": {
+    "impr": 143097,
+    "clicks": 5378,
+    "landing": 3121,
+    "bookings": 145
+   },
+   "campaigns": [
+    {
+     "name": "Meta > CRKLR Prospecting",
+     "platform": "Meta",
+     "spend": 988,
+     "bookings": 51,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Remarketing",
+     "platform": "Meta",
+     "spend": 423,
+     "bookings": 30,
+     "wow": "down"
+    },
+    {
+     "name": "PMax > Generic",
+     "platform": "Google",
+     "spend": 341,
+     "bookings": 19,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Outdoor Dining",
+     "platform": "Meta",
+     "spend": 215,
+     "bookings": 9,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 214,
+     "bookings": 23,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Italian Restaurant - Manhattan",
+     "platform": "Google",
+     "spend": 174,
+     "bookings": 3,
+     "wow": "down"
+    }
+   ]
+  },
+  "Hutong NYC": {
+   "web": {
+    "cur": {
+     "bookings": 131,
+     "users": 2584,
+     "sessions": 3413,
+     "avgsec": 205.2,
+     "engrate": 64.5,
+     "pps": 2.24,
+     "newpct": 64.4
+    },
+    "prior": {
+     "bookings": 156,
+     "users": 2725,
+     "sessions": 3453,
+     "avgsec": 174.7,
+     "engrate": 71.9,
+     "pps": 2.25,
+     "newpct": 61.2
+    },
+    "yoy": {
+     "bookings": 250,
+     "users": 4604,
+     "sessions": 6017,
+     "avgsec": 189.5,
+     "engrate": 62.5,
+     "pps": 2.07,
+     "newpct": 85.9
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 752.68,
+      "bookings": 5,
+      "impr": 98122,
+      "clicks": 2557
+     },
+     "prior": {
+      "spend": 717.94,
+      "bookings": 9,
+      "impr": 84040,
+      "clicks": 2969
+     },
+     "yoy": {
+      "spend": 812.46,
+      "bookings": 26,
+      "impr": 375226,
+      "clicks": 4979
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 232.6,
+      "bookings": 11,
+      "impr": 22637,
+      "clicks": 508
+     },
+     "prior": {
+      "spend": 1242.57,
+      "bookings": 52,
+      "impr": 114005,
+      "clicks": 2966
+     },
+     "yoy": {
+      "spend": 884.88,
+      "bookings": 76,
+      "impr": 174561,
+      "clicks": 2156
+     }
+    }
+   },
+   "budget": {
+    "meta": 892,
+    "google": 1338
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1241,
+      889,
+      1661
+     ],
+     "b": [
+      37,
+      39,
+      78
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      864,
+      843,
+      1156
+     ],
+     "b": [
+      26,
+      34,
+      63
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      477,
+      344,
+      653
+     ],
+     "b": [
+      41,
+      43,
+      51
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      355,
+      360,
+      1416
+     ],
+     "b": [
+      1,
+      1,
+      7
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      305,
+      46,
+      59
+     ],
+     "b": [
+      10,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      215,
+      428,
+      519
+     ],
+     "b": [
+      2,
+      2,
+      20
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      140,
+      65,
+      221
+     ],
+     "b": [
+      5,
+      1,
+      3
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 69,
+    "Desktop": 29,
+    "Tablet": 2
+   },
+   "landing": [
+    {
+     "path": "/ (home)",
+     "s": 1600,
+     "b": 55
+    },
+    {
+     "path": "/menus",
+     "s": 594,
+     "b": 4
+    },
+    {
+     "path": "/reservations/hutongnewyork",
+     "s": 244,
+     "b": 26
+    },
+    {
+     "path": "/explore/hutongnewyork/reservations/manage",
+     "s": 150,
+     "b": 7
+    },
+    {
+     "path": "/menus/dinner",
+     "s": 146,
+     "b": 0
+    },
+    {
+     "path": "/reservations/hutongnewyork/website",
+     "s": 107,
+     "b": 18
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     1550,
+     2021,
+     2117,
+     5429,
+     2867,
+     1751,
+     1960,
+     985
+    ],
+    "bookings": [
+     124,
+     95,
+     130,
+     148,
+     90,
+     107,
+     154,
+     131
+    ]
+   },
+   "funnel": {
+    "impr": 120759,
+    "clicks": 3065,
+    "landing": 465,
+    "bookings": 16
+   },
+   "campaigns": [
+    {
+     "name": "Meta > CRKLR Prospecting",
+     "platform": "Meta",
+     "spend": 401,
+     "bookings": 5,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Restaurant Week LPV",
+     "platform": "Meta",
+     "spend": 351,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 98,
+     "bookings": 5,
+     "wow": "down"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 89,
+     "bookings": 6,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant Type",
+     "platform": "Google",
+     "spend": 44,
+     "bookings": 0,
+     "wow": "down"
+    }
+   ]
+  },
+  "Hutong Miami": {
+   "web": {
+    "cur": {
+     "bookings": 70,
+     "users": 1514,
+     "sessions": 1897,
+     "avgsec": 171.1,
+     "engrate": 60.6,
+     "pps": 3.15,
+     "newpct": 85.7
+    },
+    "prior": {
+     "bookings": 47,
+     "users": 1410,
+     "sessions": 1708,
+     "avgsec": 142.4,
+     "engrate": 66.6,
+     "pps": 3.09,
+     "newpct": 87.0
+    },
+    "yoy": {
+     "bookings": 91,
+     "users": 2038,
+     "sessions": 2331,
+     "avgsec": 134.3,
+     "engrate": 55.8,
+     "pps": 1.7,
+     "newpct": 89.1
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 2158.82,
+      "bookings": 28,
+      "impr": 80811,
+      "clicks": 2844
+     },
+     "prior": {
+      "spend": 2081.87,
+      "bookings": 19,
+      "impr": 85199,
+      "clicks": 2888
+     },
+     "yoy": {
+      "spend": 835.61,
+      "bookings": 33,
+      "impr": 174483,
+      "clicks": 3045
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 269.94,
+      "bookings": 5,
+      "impr": 9716,
+      "clicks": 383
+     },
+     "prior": {
+      "spend": 529.68,
+      "bookings": 6,
+      "impr": 20333,
+      "clicks": 693
+     },
+     "yoy": {
+      "spend": 697.33,
+      "bookings": 17,
+      "impr": 32181,
+      "clicks": 821
+     }
+    }
+   },
+   "budget": {
+    "meta": 1607,
+    "google": 577
+   },
+   "channels": [
+    {
+     "name": "Organic Social",
+     "s": [
+      742,
+      736,
+      1276
+     ],
+     "b": [
+      26,
+      18,
+      28
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      438,
+      343,
+      377
+     ],
+     "b": [
+      14,
+      6,
+      20
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      336,
+      309,
+      299
+     ],
+     "b": [
+      15,
+      11,
+      24
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      168,
+      78,
+      106
+     ],
+     "b": [
+      1,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      148,
+      18,
+      19
+     ],
+     "b": [
+      6,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      116,
+      190,
+      219
+     ],
+     "b": [
+      6,
+      6,
+      15
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      51,
+      33,
+      39
+     ],
+     "b": [
+      2,
+      1,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 86,
+    "Desktop": 13,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/ (home)",
+     "s": 1132,
+     "b": 26
+    },
+    {
+     "path": "/menus",
+     "s": 170,
+     "b": 2
+    },
+    {
+     "path": "/events/brickell-nights",
+     "s": 139,
+     "b": 9
+    },
+    {
+     "path": "/explore/hutongmiami/reservations/create/search",
+     "s": 139,
+     "b": 20
+    },
+    {
+     "path": "/explore/hutongmiami/reservations/manage",
+     "s": 64,
+     "b": 2
+    },
+    {
+     "path": "/menus/miami-spice-dinner-menu",
+     "s": 23,
+     "b": 0
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     2347,
+     1885,
+     1782,
+     1569,
+     6513,
+     3122,
+     2611,
+     2429
+    ],
+    "bookings": [
+     34,
+     34,
+     54,
+     62,
+     94,
+     62,
+     47,
+     70
+    ]
+   },
+   "funnel": {
+    "impr": 90527,
+    "clicks": 3227,
+    "landing": 116,
+    "bookings": 33
+   },
+   "campaigns": [
+    {
+     "name": "Meta > CRKLR Prospecting",
+     "platform": "Meta",
+     "spend": 2159,
+     "bookings": 28,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Chinese Cuisine",
+     "platform": "Google",
+     "spend": 85,
+     "bookings": 2,
+     "wow": "flat"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 67,
+     "bookings": 0,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 48,
+     "bookings": 3,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Special Events",
+     "platform": "Google",
+     "spend": 43,
+     "bookings": 0,
+     "wow": "flat"
+    }
+   ]
+  },
+  "All": {
+   "web": {
+    "cur": {
+     "bookings": 508,
+     "users": 11083,
+     "sessions": 14230,
+     "avgsec": 168.3,
+     "engrate": 55.0,
+     "pps": 2.75,
+     "newpct": 84.2
+    },
+    "prior": {
+     "bookings": 487,
+     "users": 11909,
+     "sessions": 14919,
+     "avgsec": 152.1,
+     "engrate": 60.7,
+     "pps": 2.68,
+     "newpct": 84.2
+    },
+    "yoy": {
+     "bookings": 617,
+     "users": 12237,
+     "sessions": 15604,
+     "avgsec": 182.3,
+     "engrate": 62.0,
+     "pps": 2.71,
+     "newpct": 88.8
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 4537.91,
+      "bookings": 123,
+      "impr": 261389,
+      "clicks": 9017
+     },
+     "prior": {
+      "spend": 4405.31,
+      "bookings": 140,
+      "impr": 254230,
+      "clicks": 9339
+     },
+     "yoy": {
+      "spend": 2518.95,
+      "bookings": 120,
+      "impr": 699113,
+      "clicks": 12946
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1622.27,
+      "bookings": 71,
+      "impr": 92994,
+      "clicks": 2653
+     },
+     "prior": {
+      "spend": 2887.38,
+      "bookings": 109,
+      "impr": 189906,
+      "clicks": 5447
+     },
+     "yoy": {
+      "spend": 2428.26,
+      "bookings": 158,
+      "impr": 244989,
+      "clicks": 4299
+     }
+    }
+   },
+   "budget": {
+    "meta": 4224,
+    "google": 2490
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      3833,
+      4047,
+      3432
+     ],
+     "b": [
+      145,
+      141,
+      147
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      3054,
+      3183,
+      3122
+     ],
+     "b": [
+      97,
+      102,
+      165
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      2794,
+      2783,
+      1831
+     ],
+     "b": [
+      47,
+      46,
+      16
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      1181,
+      308,
+      171
+     ],
+     "b": [
+      47,
+      27,
+      11
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      1091,
+      935,
+      1472
+     ],
+     "b": [
+      57,
+      51,
+      70
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      882,
+      801,
+      1497
+     ],
+     "b": [
+      31,
+      19,
+      31
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      798,
+      937,
+      555
+     ],
+     "b": [
+      36,
+      28,
+      32
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 80,
+    "Desktop": 19,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Aqua /aqua-roma",
+     "s": 3732,
+     "b": 74
+    },
+    {
+     "path": "Hutong NYC / (home)",
+     "s": 1600,
+     "b": 55
+    },
+    {
+     "path": "Aqua / (home)",
+     "s": 1588,
+     "b": 45
+    },
+    {
+     "path": "Miami / (home)",
+     "s": 1132,
+     "b": 26
+    },
+    {
+     "path": "Aqua /aqua-kyoto",
+     "s": 686,
+     "b": 23
+    },
+    {
+     "path": "Hutong NYC /menus",
+     "s": 594,
+     "b": 4
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     9839,
+     6241,
+     6033,
+     14499,
+     13233,
+     7669,
+     7291,
+     6160
+    ],
+    "bookings": [
+     506,
+     354,
+     390,
+     505,
+     401,
+     471,
+     481,
+     508
+    ]
+   },
+   "funnel": {
+    "impr": 354383,
+    "clicks": 11670,
+    "landing": 3702,
+    "bookings": 194
+   },
+   "campaigns": [
+    {
+     "name": "Meta > CRKLR Prospecting — Aqua New York",
+     "platform": "Meta",
+     "spend": 988,
+     "bookings": 51,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Remarketing — Aqua New York",
+     "platform": "Meta",
+     "spend": 423,
+     "bookings": 30,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Prospecting — Hutong Miami",
+     "platform": "Meta",
+     "spend": 2159,
+     "bookings": 28,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand — Aqua New York",
+     "platform": "Google",
+     "spend": 214,
+     "bookings": 23,
+     "wow": "up"
+    },
+    {
+     "name": "PMax > Generic — Aqua New York",
+     "platform": "Google",
+     "spend": 341,
+     "bookings": 19,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Outdoor Dining — Aqua New York",
+     "platform": "Meta",
+     "spend": 215,
+     "bookings": 9,
+     "wow": "flat"
+    },
+    {
+     "name": "P. Max > Generic — Hutong NYC",
+     "platform": "Google",
+     "spend": 89,
+     "bookings": 6,
+     "wow": "down"
+    },
+    {
+     "name": "Meta > CRKLR Prospecting — Hutong NYC",
+     "platform": "Meta",
+     "spend": 401,
+     "bookings": 5,
+     "wow": "down"
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "weekly_bookings": 307
+  },
+  {
+   "name": "Hutong NYC",
+   "weekly_bookings": 131
+  },
+  {
+   "name": "Hutong Miami",
+   "weekly_bookings": 70
+  }
+ ],
+ "portfolio_bookings": 508,
+ "portfolio_target": 937,
+ "yoy_pct": -17.7,
+ "deepdive_venues": [
+  "Aqua NYC",
+  "Hutong NYC",
+  "Hutong Miami"
+ ],
+ "ga4_meta": "Portfolio 508 · YoY ▼17.7%",
+ "ga4_yoy": "-17.7% YoY"
+}
