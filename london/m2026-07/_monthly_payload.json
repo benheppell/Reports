@@ -1,0 +1,57 @@
+{
+ "market": "Aqua London",
+ "sym": "£",
+ "month_label": "July 2026",
+ "generated": "3 August 2026",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 5545,
+   "tgt": 9536,
+   "mom": 4997,
+   "yoy": 8257,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 3320,
+   "tgt": 4672,
+   "mom": 2921,
+   "yoy": 4009,
+   "nc": false
+  },
+  {
+   "name": "Regent St | Kyoto+Nueva",
+   "act": 1457,
+   "tgt": 1906,
+   "mom": 1468,
+   "yoy": 1520,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 390,
+   "tgt": 647,
+   "mom": 445,
+   "yoy": 425,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 555,
+   "tgt": 647,
+   "mom": 538,
+   "yoy": 496,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 2515,
+   "tgt": 905,
+   "mom": 2023,
+   "yoy": 831,
+   "nc": true
+  }
+ ],
+ "note": "<b>July 2026</b> portfolio GA4 bookings of 13,782 landed 25 percent below the 18,313 monthly target. Aqua Shard (-42%) is the largest drag and down 33 percent year on year. <b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. <b>DSL</b> trades far above its pre-rebrand target, so its variance and YoY are not comparable."
+}

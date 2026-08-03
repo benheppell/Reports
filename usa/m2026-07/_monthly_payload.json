@@ -1,0 +1,33 @@
+{
+ "market": "Aqua USA",
+ "sym": "$",
+ "month_label": "July 2026",
+ "generated": "3 August 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 1299,
+   "tgt": 1842,
+   "mom": 1130,
+   "yoy": 993,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 612,
+   "tgt": 1662,
+   "mom": 520,
+   "yoy": 1352,
+   "nc": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 314,
+   "tgt": 509,
+   "mom": 196,
+   "yoy": 398,
+   "nc": false
+  }
+ ],
+ "note": "July 2026 closed with 2,225 GA4 bookings across the three USA venues against a strategic 4,013 target (55%) — up +21% MoM (1,846 in June) but -19% YoY (2,743). <b>Aqua NYC</b> led at 1,299, +15% MoM and +31% YoY (993 LY), the portfolio's clear outperformer. <b>Hutong NYC</b> recovered to 612 (+18% MoM) but is -55% YoY (1,352 LY) as the retired referral/widget path unwinds against a deliberately aggressive target. <b>Hutong Miami</b> rose to 314 (+60% MoM) yet sits -21% YoY (398); its monthly target of 509 is derived from the Meta plan × (6,738/4,756)."
+}

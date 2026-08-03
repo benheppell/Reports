@@ -1,0 +1,1914 @@
+{
+ "market": "Hong Kong",
+ "sym": "HK$",
+ "week": "W26 \u00b7 27 Jul\u20132 Aug 2026",
+ "fy": "FY26",
+ "venues": [
+  "All",
+  "Aqua HK",
+  "Hutong HK",
+  "The Chinese Library",
+  "Cantina",
+  "Dim Sum Library",
+  "Shiro"
+ ],
+ "data": {
+  "All": {
+   "web": {
+    "cur": {
+     "bookings": 998,
+     "users": 13193,
+     "sessions": 16816,
+     "avgsec": 181.2,
+     "engrate": 64.0,
+     "pps": 2.57,
+     "newpct": 87.5
+    },
+    "prior": {
+     "bookings": 835,
+     "users": 12381,
+     "sessions": 15655,
+     "avgsec": 172.0,
+     "engrate": 62.2,
+     "pps": 2.43,
+     "newpct": 88.4
+    },
+    "yoy": {
+     "bookings": 756,
+     "users": 10604,
+     "sessions": 13678,
+     "avgsec": 187.3,
+     "engrate": 71.8,
+     "pps": 2.21,
+     "newpct": 85.7
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 30932,
+      "bookings": 68,
+      "impr": 817797,
+      "clicks": 13131
+     },
+     "prior": {
+      "spend": 26939,
+      "bookings": 43,
+      "impr": 660123,
+      "clicks": 11202
+     },
+     "yoy": {
+      "spend": 20309,
+      "bookings": 53,
+      "impr": 396957,
+      "clicks": 17174
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 30979,
+      "bookings": 289,
+      "impr": 604969,
+      "clicks": 16837
+     },
+     "prior": {
+      "spend": 30874,
+      "bookings": 272,
+      "impr": 568141,
+      "clicks": 15859
+     },
+     "yoy": {
+      "spend": 16531,
+      "bookings": 221,
+      "impr": 316799,
+      "clicks": 9758
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      4240,
+      3727,
+      2817
+     ],
+     "b": [
+      303,
+      286,
+      229
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      3403,
+      3043,
+      3135
+     ],
+     "b": [
+      236,
+      186,
+      192
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      3235,
+      2808,
+      2573
+     ],
+     "b": [
+      287,
+      231,
+      227
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      2483,
+      2644,
+      2041
+     ],
+     "b": [
+      11,
+      7,
+      17
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      1214,
+      1334,
+      1030
+     ],
+     "b": [
+      26,
+      37,
+      42
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      1004,
+      990,
+      1330
+     ],
+     "b": [
+      21,
+      17,
+      21
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 76,
+    "Desktop": 23,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Aqua HK /",
+     "s": 2077,
+     "b": 73
+    },
+    {
+     "path": "Hutong HK /",
+     "s": 1448,
+     "b": 81
+    },
+    {
+     "path": "Cantina /explore/cantinahk/reservations/create/search",
+     "s": 747,
+     "b": 33
+    },
+    {
+     "path": "Shiro /experiences/shirotaikwun/a-japanese-feast-for-every-occasion-at-shiro-6039637657829376",
+     "s": 684,
+     "b": 6
+    },
+    {
+     "path": "The Chinese Library /",
+     "s": 630,
+     "b": 33
+    },
+    {
+     "path": "Dim Sum Library /",
+     "s": 591,
+     "b": 65
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     56340,
+     55716,
+     50145,
+     54960,
+     49870,
+     51487,
+     57813,
+     61910
+    ],
+    "bookings": [
+     331,
+     285,
+     314,
+     259,
+     278,
+     305,
+     315,
+     357
+    ]
+   },
+   "funnel": {
+    "impr": 1422766,
+    "clicks": 29968,
+    "landing": 6723,
+    "bookings": 357
+   },
+   "campaigns": [
+    {
+     "name": "Dim Sum Library \u00b7 Search > Brand",
+     "platform": "Google",
+     "spend": 271,
+     "bookings": 61,
+     "wow": "up"
+    },
+    {
+     "name": "Shiro \u00b7 Search > Brand",
+     "platform": "Google",
+     "spend": 307,
+     "bookings": 58,
+     "wow": "up"
+    },
+    {
+     "name": "Aqua HK \u00b7 Search > Brand",
+     "platform": "Google",
+     "spend": 639,
+     "bookings": 36,
+     "wow": "down"
+    },
+    {
+     "name": "The Chinese Library \u00b7 Search > Brand",
+     "platform": "Google",
+     "spend": 361,
+     "bookings": 18,
+     "wow": "up"
+    },
+    {
+     "name": "Aqua HK \u00b7 CRKLR - Prospecting Campaign - Adv+",
+     "platform": "Meta",
+     "spend": 12246,
+     "bookings": 15,
+     "wow": "up"
+    },
+    {
+     "name": "Shiro \u00b7 CRKLR - Prospecting Campaign - NEW Shiro Central",
+     "platform": "Meta",
+     "spend": 2564,
+     "bookings": 14,
+     "wow": "up"
+    }
+   ]
+  },
+  "Aqua HK": {
+   "web": {
+    "cur": {
+     "bookings": 196,
+     "users": 3159,
+     "sessions": 4309,
+     "avgsec": 223.3,
+     "engrate": 71.4,
+     "pps": 2.74,
+     "newpct": 87.5
+    },
+    "prior": {
+     "bookings": 201,
+     "users": 2789,
+     "sessions": 3832,
+     "avgsec": 225.9,
+     "engrate": 68.7,
+     "pps": 2.7,
+     "newpct": 87.9
+    },
+    "yoy": {
+     "bookings": 198,
+     "users": 3237,
+     "sessions": 4295,
+     "avgsec": 196.3,
+     "engrate": 71.9,
+     "pps": 2.15,
+     "newpct": 85.5
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 12246,
+      "bookings": 15,
+      "impr": 283339,
+      "clicks": 4677
+     },
+     "prior": {
+      "spend": 5892,
+      "bookings": 12,
+      "impr": 125818,
+      "clicks": 2224
+     },
+     "yoy": {
+      "spend": 4453,
+      "bookings": 24,
+      "impr": 81184,
+      "clicks": 3181
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 11501,
+      "bookings": 59,
+      "impr": 151446,
+      "clicks": 5223
+     },
+     "prior": {
+      "spend": 10379,
+      "bookings": 84,
+      "impr": 145863,
+      "clicks": 4601
+     },
+     "yoy": {
+      "spend": 8578,
+      "bookings": 65,
+      "impr": 87109,
+      "clicks": 3493
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      1579,
+      1366,
+      990
+     ],
+     "b": [
+      65,
+      89,
+      49
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      981,
+      971,
+      1075
+     ],
+     "b": [
+      45,
+      41,
+      57
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      869,
+      754,
+      818
+     ],
+     "b": [
+      50,
+      47,
+      60
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      257,
+      288,
+      198
+     ],
+     "b": [
+      1,
+      6,
+      11
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      189,
+      138,
+      354
+     ],
+     "b": [
+      2,
+      0,
+      6
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      107,
+      97,
+      90
+     ],
+     "b": [
+      3,
+      3,
+      6
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 75,
+    "Desktop": 24,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 2077,
+     "b": 73
+    },
+    {
+     "path": "/menus",
+     "s": 349,
+     "b": 6
+    },
+    {
+     "path": "/explore/aquahk/reservations/create/search",
+     "s": 333,
+     "b": 57
+    },
+    {
+     "path": "/reservations",
+     "s": 291,
+     "b": 23
+    },
+    {
+     "path": "/explore/aquahk/reservations/manage",
+     "s": 265,
+     "b": 10
+    },
+    {
+     "path": "(not set)",
+     "s": 249,
+     "b": 0
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     16060,
+     15590,
+     16025,
+     17363,
+     13102,
+     12667,
+     16271,
+     23747
+    ],
+    "bookings": [
+     67,
+     61,
+     70,
+     68,
+     69,
+     66,
+     96,
+     74
+    ]
+   },
+   "funnel": {
+    "impr": 434785,
+    "clicks": 9900,
+    "landing": 1768,
+    "bookings": 74
+   },
+   "campaigns": [
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 639,
+     "bookings": 36,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign - Adv+",
+     "platform": "Meta",
+     "spend": 12246,
+     "bookings": 15,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Private Events",
+     "platform": "Google",
+     "spend": 941,
+     "bookings": 7,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Weekend Brunch",
+     "platform": "Google",
+     "spend": 1226,
+     "bookings": 6,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Japanese Restaurant",
+     "platform": "Google",
+     "spend": 2564,
+     "bookings": 5,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Japanese Restaurant CH",
+     "platform": "Google",
+     "spend": 1476,
+     "bookings": 3,
+     "wow": "down"
+    }
+   ]
+  },
+  "Hutong HK": {
+   "web": {
+    "cur": {
+     "bookings": 285,
+     "users": 3083,
+     "sessions": 4001,
+     "avgsec": 201.0,
+     "engrate": 62.8,
+     "pps": 2.65,
+     "newpct": 86.3
+    },
+    "prior": {
+     "bookings": 223,
+     "users": 2621,
+     "sessions": 3480,
+     "avgsec": 191.0,
+     "engrate": 60.5,
+     "pps": 2.5,
+     "newpct": 86.2
+    },
+    "yoy": {
+     "bookings": 200,
+     "users": 3243,
+     "sessions": 4205,
+     "avgsec": 196.0,
+     "engrate": 72.3,
+     "pps": 2.23,
+     "newpct": 85.1
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 5891,
+      "bookings": 12,
+      "impr": 254667,
+      "clicks": 2776
+     },
+     "prior": {
+      "spend": 4633,
+      "bookings": 7,
+      "impr": 191367,
+      "clicks": 2365
+     },
+     "yoy": {
+      "spend": 5626,
+      "bookings": 9,
+      "impr": 101151,
+      "clicks": 3926
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 5598,
+      "bookings": 17,
+      "impr": 180542,
+      "clicks": 4890
+     },
+     "prior": {
+      "spend": 5347,
+      "bookings": 14,
+      "impr": 176848,
+      "clicks": 4682
+     },
+     "yoy": {
+      "spend": 1793,
+      "bookings": 15,
+      "impr": 99680,
+      "clicks": 2959
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1384,
+      1108,
+      1040
+     ],
+     "b": [
+      113,
+      89,
+      53
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      890,
+      799,
+      788
+     ],
+     "b": [
+      105,
+      87,
+      79
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      631,
+      520,
+      807
+     ],
+     "b": [
+      2,
+      1,
+      5
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      483,
+      421,
+      533
+     ],
+     "b": [
+      33,
+      25,
+      33
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      166,
+      188,
+      470
+     ],
+     "b": [
+      4,
+      2,
+      12
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      158,
+      197,
+      39
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 74,
+    "Desktop": 25,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 1448,
+     "b": 81
+    },
+    {
+     "path": "/explore/hutonghongkong/reservations/create/search",
+     "s": 915,
+     "b": 57
+    },
+    {
+     "path": "/menus",
+     "s": 411,
+     "b": 2
+    },
+    {
+     "path": "/explore/hutonghongkong/reservations/manage",
+     "s": 259,
+     "b": 24
+    },
+    {
+     "path": "(not set)",
+     "s": 228,
+     "b": 0
+    },
+    {
+     "path": "/explore/hutonghongkong/reservations/create/upgrades",
+     "s": 212,
+     "b": 100
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     8735,
+     7439,
+     5408,
+     7836,
+     7995,
+     7734,
+     9980,
+     11488
+    ],
+    "bookings": [
+     38,
+     36,
+     20,
+     19,
+     19,
+     27,
+     21,
+     29
+    ]
+   },
+   "funnel": {
+    "impr": 435209,
+    "clicks": 7666,
+    "landing": 1114,
+    "bookings": 29
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting Campaign \u2013 Daily Budgets V2",
+     "platform": "Meta",
+     "spend": 5891,
+     "bookings": 12,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 776,
+     "bookings": 6,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max - Generic Bookings",
+     "platform": "Google",
+     "spend": 1245,
+     "bookings": 4,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 1184,
+     "bookings": 3,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brunch",
+     "platform": "Google",
+     "spend": 720,
+     "bookings": 2,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max - Local Visit",
+     "platform": "Google",
+     "spend": 982,
+     "bookings": 1,
+     "wow": "down"
+    }
+   ]
+  },
+  "The Chinese Library": {
+   "web": {
+    "cur": {
+     "bookings": 94,
+     "users": 1442,
+     "sessions": 1782,
+     "avgsec": 183.3,
+     "engrate": 70.3,
+     "pps": 2.51,
+     "newpct": 88.3
+    },
+    "prior": {
+     "bookings": 88,
+     "users": 1528,
+     "sessions": 1851,
+     "avgsec": 156.8,
+     "engrate": 69.2,
+     "pps": 2.34,
+     "newpct": 89.5
+    },
+    "yoy": {
+     "bookings": 78,
+     "users": 1058,
+     "sessions": 1366,
+     "avgsec": 181.4,
+     "engrate": 72.7,
+     "pps": 2.25,
+     "newpct": 86.6
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 4027,
+      "bookings": 3,
+      "impr": 76247,
+      "clicks": 778
+     },
+     "prior": {
+      "spend": 6033,
+      "bookings": 6,
+      "impr": 121697,
+      "clicks": 1458
+     },
+     "yoy": {
+      "spend": 3383,
+      "bookings": 5,
+      "impr": 82788,
+      "clicks": 4814
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 3348,
+      "bookings": 39,
+      "impr": 84226,
+      "clicks": 2022
+     },
+     "prior": {
+      "spend": 4428,
+      "bookings": 27,
+      "impr": 90720,
+      "clicks": 2072
+     },
+     "yoy": {
+      "spend": 2039,
+      "bookings": 35,
+      "impr": 48260,
+      "clicks": 1210
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      514,
+      478,
+      425
+     ],
+     "b": [
+      34,
+      21,
+      26
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      379,
+      439,
+      95
+     ],
+     "b": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      299,
+      275,
+      237
+     ],
+     "b": [
+      30,
+      31,
+      19
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      282,
+      284,
+      374
+     ],
+     "b": [
+      16,
+      19,
+      21
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      183,
+      254,
+      122
+     ],
+     "b": [
+      6,
+      6,
+      8
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      42,
+      49,
+      65
+     ],
+     "b": [
+      1,
+      2,
+      1
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 75,
+    "Desktop": 24,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 630,
+     "b": 33
+    },
+    {
+     "path": "/experiences/thechineselibraryhk/icons-of-flavour--tasting-menu-from-chef-junno-li-5389883663499264",
+     "s": 364,
+     "b": 0
+    },
+    {
+     "path": "/explore/thechineselibraryhk/reservations/create/search",
+     "s": 140,
+     "b": 19
+    },
+    {
+     "path": "/menus",
+     "s": 116,
+     "b": 1
+    },
+    {
+     "path": "(not set)",
+     "s": 86,
+     "b": 0
+    },
+    {
+     "path": "/explore/thechineselibraryhk/reservations/manage",
+     "s": 73,
+     "b": 4
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     8515,
+     8920,
+     6390,
+     10531,
+     9284,
+     9510,
+     10461,
+     7376
+    ],
+    "bookings": [
+     36,
+     47,
+     50,
+     32,
+     24,
+     44,
+     33,
+     42
+    ]
+   },
+   "funnel": {
+    "impr": 160473,
+    "clicks": 2800,
+    "landing": 893,
+    "bookings": 42
+   },
+   "campaigns": [
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 361,
+     "bookings": 18,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 1053,
+     "bookings": 9,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Private Events",
+     "platform": "Google",
+     "spend": 625,
+     "bookings": 5,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max > Generic CH",
+     "platform": "Google",
+     "spend": 760,
+     "bookings": 5,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign \u2013 Daily Budget",
+     "platform": "Meta",
+     "spend": 3898,
+     "bookings": 3,
+     "wow": "down"
+    },
+    {
+     "name": "P.Max > Generic EN",
+     "platform": "Google",
+     "spend": 549,
+     "bookings": 2,
+     "wow": "down"
+    }
+   ]
+  },
+  "Cantina": {
+   "web": {
+    "cur": {
+     "bookings": 83,
+     "users": 1767,
+     "sessions": 2122,
+     "avgsec": 147.0,
+     "engrate": 58.1,
+     "pps": 2.07,
+     "newpct": 90.4
+    },
+    "prior": {
+     "bookings": 71,
+     "users": 1882,
+     "sessions": 2214,
+     "avgsec": 120.6,
+     "engrate": 48.6,
+     "pps": 1.86,
+     "newpct": 92.0
+    },
+    "yoy": {
+     "bookings": 43,
+     "users": 1096,
+     "sessions": 1342,
+     "avgsec": 151.7,
+     "engrate": 76.1,
+     "pps": 2.32,
+     "newpct": 87.1
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 2341,
+      "bookings": 10,
+      "impr": 43492,
+      "clicks": 1051
+     },
+     "prior": {
+      "spend": 3800,
+      "bookings": 6,
+      "impr": 72509,
+      "clicks": 1500
+     },
+     "yoy": {
+      "spend": 3263,
+      "bookings": 7,
+      "impr": 60672,
+      "clicks": 1948
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 4473,
+      "bookings": 14,
+      "impr": 95123,
+      "clicks": 2217
+     },
+     "prior": {
+      "spend": 4697,
+      "bookings": 28,
+      "impr": 90332,
+      "clicks": 2226
+     },
+     "yoy": {
+      "spend": 2011,
+      "bookings": 14,
+      "impr": 45542,
+      "clicks": 967
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      614,
+      839,
+      345
+     ],
+     "b": [
+      5,
+      3,
+      2
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      452,
+      266,
+      203
+     ],
+     "b": [
+      35,
+      14,
+      14
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      391,
+      477,
+      277
+     ],
+     "b": [
+      11,
+      23,
+      13
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      275,
+      226,
+      206
+     ],
+     "b": [
+      18,
+      13,
+      5
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      175,
+      169,
+      137
+     ],
+     "b": [
+      3,
+      4,
+      3
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      72,
+      84,
+      74
+     ],
+     "b": [
+      3,
+      5,
+      3
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 79,
+    "Desktop": 20,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/explore/cantinahk/reservations/create/search",
+     "s": 747,
+     "b": 33
+    },
+    {
+     "path": "/",
+     "s": 578,
+     "b": 19
+    },
+    {
+     "path": "/experiences/cantinahk/celebrate-your-birthday-with-us-5364284085026816",
+     "s": 130,
+     "b": 4
+    },
+    {
+     "path": "/menus",
+     "s": 124,
+     "b": 1
+    },
+    {
+     "path": "(not set)",
+     "s": 79,
+     "b": 0
+    },
+    {
+     "path": "/thedispensarybar",
+     "s": 71,
+     "b": 0
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     9566,
+     10600,
+     10826,
+     9894,
+     8023,
+     8540,
+     8497,
+     6814
+    ],
+    "bookings": [
+     42,
+     23,
+     34,
+     34,
+     36,
+     41,
+     34,
+     24
+    ]
+   },
+   "funnel": {
+    "impr": 138615,
+    "clicks": 3268,
+    "landing": 1005,
+    "bookings": 24
+   },
+   "campaigns": [
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 726,
+     "bookings": 7,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign \u2013 Early Week Supper Ads",
+     "platform": "Meta",
+     "spend": 1679,
+     "bookings": 6,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 1441,
+     "bookings": 4,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign \u2013 Daily Budget \u2013 V2",
+     "platform": "Meta",
+     "spend": 635,
+     "bookings": 4,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max > Generic Booking EN",
+     "platform": "Google",
+     "spend": 1655,
+     "bookings": 3,
+     "wow": "down"
+    },
+    {
+     "name": "P.Max > Local Visits",
+     "platform": "Google",
+     "spend": 651,
+     "bookings": 0,
+     "wow": "flat"
+    }
+   ]
+  },
+  "Dim Sum Library": {
+   "web": {
+    "cur": {
+     "bookings": 170,
+     "users": 1048,
+     "sessions": 1418,
+     "avgsec": 165.6,
+     "engrate": 69.7,
+     "pps": 2.91,
+     "newpct": 84.1
+    },
+    "prior": {
+     "bookings": 141,
+     "users": 966,
+     "sessions": 1251,
+     "avgsec": 179.4,
+     "engrate": 68.5,
+     "pps": 2.71,
+     "newpct": 85.1
+    },
+    "yoy": {
+     "bookings": 143,
+     "users": 1153,
+     "sessions": 1518,
+     "avgsec": 211.0,
+     "engrate": 71.0,
+     "pps": 2.38,
+     "newpct": 85.1
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 960,
+      "bookings": 7,
+      "impr": 40403,
+      "clicks": 752
+     },
+     "prior": {
+      "spend": 1006,
+      "bookings": 4,
+      "impr": 36449,
+      "clicks": 844
+     },
+     "yoy": {
+      "spend": 1802,
+      "bookings": 4,
+      "impr": 40401,
+      "clicks": 2188
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1354,
+      "bookings": 79,
+      "impr": 5640,
+      "clicks": 637
+     },
+     "prior": {
+      "spend": 1246,
+      "bookings": 67,
+      "impr": 4511,
+      "clicks": 485
+     },
+     "yoy": {
+      "spend": 973,
+      "bookings": 60,
+      "impr": 5453,
+      "clicks": 492
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      545,
+      410,
+      388
+     ],
+     "b": [
+      87,
+      72,
+      74
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      343,
+      338,
+      400
+     ],
+     "b": [
+      35,
+      37,
+      35
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      280,
+      238,
+      271
+     ],
+     "b": [
+      27,
+      13,
+      22
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      70,
+      83,
+      160
+     ],
+     "b": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      52,
+      51,
+      56
+     ],
+     "b": [
+      6,
+      8,
+      6
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      48,
+      55,
+      189
+     ],
+     "b": [
+      1,
+      1,
+      3
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 69,
+    "Desktop": 29,
+    "Tablet": 2
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 591,
+     "b": 65
+    },
+    {
+     "path": "/menus",
+     "s": 145,
+     "b": 5
+    },
+    {
+     "path": "/explore/dimsumlibrarypacificplace/reservations/create/search",
+     "s": 140,
+     "b": 56
+    },
+    {
+     "path": "/explore/dimsumlibrarypacificplace/reservations/manage",
+     "s": 138,
+     "b": 12
+    },
+    {
+     "path": "(not set)",
+     "s": 110,
+     "b": 0
+    },
+    {
+     "path": "/reservations",
+     "s": 108,
+     "b": 25
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     2876,
+     2699,
+     1390,
+     1608,
+     2211,
+     3439,
+     2252,
+     2314
+    ],
+    "bookings": [
+     74,
+     63,
+     73,
+     59,
+     58,
+     63,
+     71,
+     86
+    ]
+   },
+   "funnel": {
+    "impr": 46043,
+    "clicks": 1389,
+    "landing": 615,
+    "bookings": 86
+   },
+   "campaigns": [
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 271,
+     "bookings": 61,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max > Generic EN",
+     "platform": "Google",
+     "spend": 282,
+     "bookings": 8,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 677,
+     "bookings": 7,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign - Daily Budgets",
+     "platform": "Meta",
+     "spend": 960,
+     "bookings": 7,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Afternoon Tea",
+     "platform": "Google",
+     "spend": 125,
+     "bookings": 3,
+     "wow": "up"
+    }
+   ]
+  },
+  "Shiro": {
+   "web": {
+    "cur": {
+     "bookings": 170,
+     "users": 2694,
+     "sessions": 3184,
+     "avgsec": 128.0,
+     "engrate": 53.5,
+     "pps": 2.46,
+     "newpct": 88.0
+    },
+    "prior": {
+     "bookings": 111,
+     "users": 2595,
+     "sessions": 3027,
+     "avgsec": 125.9,
+     "engrate": 59.0,
+     "pps": 2.35,
+     "newpct": 89.1
+    },
+    "yoy": {
+     "bookings": 94,
+     "users": 817,
+     "sessions": 952,
+     "avgsec": 129.8,
+     "engrate": 63.7,
+     "pps": 1.87,
+     "newpct": 87.0
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 5467,
+      "bookings": 21,
+      "impr": 119649,
+      "clicks": 3097
+     },
+     "prior": {
+      "spend": 5575,
+      "bookings": 8,
+      "impr": 112283,
+      "clicks": 2811
+     },
+     "yoy": {
+      "spend": 1782,
+      "bookings": 4,
+      "impr": 30761,
+      "clicks": 1117
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 4705,
+      "bookings": 81,
+      "impr": 87992,
+      "clicks": 1848
+     },
+     "prior": {
+      "spend": 4777,
+      "bookings": 52,
+      "impr": 59867,
+      "clicks": 1793
+     },
+     "yoy": {
+      "spend": 1137,
+      "bookings": 32,
+      "impr": 30755,
+      "clicks": 637
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      728,
+      575,
+      204
+     ],
+     "b": [
+      73,
+      56,
+      34
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      681,
+      671,
+      27
+     ],
+     "b": [
+      7,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      600,
+      625,
+      280
+     ],
+     "b": [
+      1,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      382,
+      376,
+      127
+     ],
+     "b": [
+      32,
+      15,
+      20
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      381,
+      384,
+      47
+     ],
+     "b": [
+      6,
+      11,
+      2
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      201,
+      216,
+      169
+     ],
+     "b": [
+      17,
+      11,
+      34
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 83,
+    "Desktop": 15,
+    "Tablet": 2
+   },
+   "landing": [
+    {
+     "path": "/experiences/shirotaikwun/a-japanese-feast-for-every-occasion-at-shiro-6039637657829376",
+     "s": 684,
+     "b": 6
+    },
+    {
+     "path": "/explore/shirotaikwun/reservations/create/search",
+     "s": 648,
+     "b": 32
+    },
+    {
+     "path": "/",
+     "s": 486,
+     "b": 32
+    },
+    {
+     "path": "/shiro-central",
+     "s": 318,
+     "b": 5
+    },
+    {
+     "path": "(not set)",
+     "s": 221,
+     "b": 5
+    },
+    {
+     "path": "/shiro-pacific-place",
+     "s": 138,
+     "b": 22
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W19",
+     "W20",
+     "W21",
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26"
+    ],
+    "spend": [
+     10588,
+     10468,
+     10106,
+     7728,
+     9255,
+     9597,
+     10352,
+     10171
+    ],
+    "bookings": [
+     74,
+     55,
+     67,
+     47,
+     72,
+     64,
+     60,
+     102
+    ]
+   },
+   "funnel": {
+    "impr": 207641,
+    "clicks": 4945,
+    "landing": 1328,
+    "bookings": 102
+   },
+   "campaigns": [
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 307,
+     "bookings": 58,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign - NEW Shiro Central",
+     "platform": "Meta",
+     "spend": 2564,
+     "bookings": 14,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max > Booking",
+     "platform": "Google",
+     "spend": 804,
+     "bookings": 10,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant (Central)",
+     "platform": "Google",
+     "spend": 1038,
+     "bookings": 6,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign - Daily Budgets",
+     "platform": "Meta",
+     "spend": 1940,
+     "bookings": 6,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant (Admiralty)",
+     "platform": "Google",
+     "spend": 871,
+     "bookings": 5,
+     "wow": "up"
+    }
+   ]
+  }
+ }
+}

@@ -1,11 +1,18 @@
 {
- "generated": "27 July 2026",
+ "generated": "3 August 2026",
  "markets": [
   {
    "name": "Hong Kong",
    "slug": "hk",
    "ccy": "HKD",
    "weekly": [
+    {
+     "dates": "W26 · 27 Jul–2 Aug 2026",
+     "folder": "w2026-07-27",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W25 · 20–26 Jul 2026",
      "folder": "w2026-07-20",
@@ -152,6 +159,10 @@
    ],
    "monthly": [
     {
+     "label": "July 2026",
+     "folder": "m2026-07"
+    },
+    {
      "label": "June 2026",
      "folder": "m2026-06"
     },
@@ -173,6 +184,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "27 Jul–2 Aug 2026",
+     "folder": "w2026-07-27"
+    },
     {
      "dates": "20–26 Jul 2026",
      "folder": "w2026-07-20"
@@ -239,6 +254,13 @@
    "ccy": "GBP",
    "weekly": [
     {
+     "dates": "W26 · 27 Jul–2 Aug 2026",
+     "folder": "w2026-07-27",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
+    {
      "dates": "W25 · 20–26 Jul 2026",
      "folder": "w2026-07-20",
      "deepdive": true,
@@ -385,6 +407,10 @@
    ],
    "monthly": [
     {
+     "label": "July 2026",
+     "folder": "m2026-07"
+    },
+    {
      "label": "June 2026",
      "folder": "m2026-06"
     },
@@ -406,6 +432,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "27 Jul–2 Aug 2026",
+     "folder": "w2026-07-27"
+    },
     {
      "dates": "20–26 Jul 2026",
      "folder": "w2026-07-20"
@@ -467,6 +497,13 @@
    "slug": "usa",
    "ccy": "USD",
    "weekly": [
+    {
+     "dates": "W30 · 27 Jul–2 Aug 2026",
+     "folder": "w2026-07-27",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W29 · 20–26 Jul 2026",
      "folder": "w2026-07-20",
@@ -636,6 +673,10 @@
    ],
    "monthly": [
     {
+     "label": "July 2026",
+     "folder": "m2026-07"
+    },
+    {
      "label": "June 2026",
      "folder": "m2026-06"
     },
@@ -661,6 +702,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "27 Jul–2 Aug 2026",
+     "folder": "w2026-07-27"
+    },
     {
      "dates": "20–26 Jul 2026",
      "folder": "w2026-07-20"

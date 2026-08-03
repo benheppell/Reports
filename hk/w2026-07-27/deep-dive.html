@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua Hong Kong — Venue Deep Dive — 27 Jul–2 Aug 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:#fef2f2;color:#dc2626;margin-left:8px;vertical-align:middle}
+.tabs{display:flex;gap:4px;margin:20px 0 0;border-bottom:2px solid #e2e8f0}
+.tab{padding:9px 18px;font-size:13px;font-weight:600;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab.on{color:#2563eb;border-bottom-color:#2563eb}
+.pane{display:none} .pane.on{display:block}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th:nth-child(2),td:nth-child(2){text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9} tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600} .neg{color:#dc2626;font-weight:600} .mut{color:#94a3b8;font-weight:400}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.chart{border:1px solid #e2e8f0;border-radius:12px;padding:14px;height:280px}
+.chart h3{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards,.grid2{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div><a class="back" href="../index.html">← All reports</a>
+<h1 style="margin-top:8px">Aqua Hong Kong — Venue Deep Dive<span class="badge">REBOUND WEEK</span></h1>
+<div class="sub">27 Jul–2 Aug 2026 (Mon–Sun) · Currency HKD · Aqua HK, Dim Sum Library · WoW vs 20–26 Jul 2026 · YoY vs 28 Jul–3 Aug 2025</div></div>
+
+<div class="tabs"><div class="tab on" data-t="p">Performance</div><div class="tab" data-t="t">Weekly Trends</div></div>
+
+<div class="pane on" id="p">
+<div class="cards">
+<div class="card"><div class="lab">Combined Bookings</div><div class="big">366</div>
+<div class="meta">Target 357 · +2.5% · WoW <span class="pos num">▲ 7.0%</span></div></div>
+<div class="card"><div class="lab">Combined Ad Spend</div><div class="big">HK$26,060</div>
+<div class="meta">Cost per booking HK$71.20 · Meta HK$13,205 + Google HK$12,855</div></div>
+<div class="card"><div class="lab">Combined Users</div><div class="big">4,207</div>
+<div class="meta">Blended user CVR 8.70%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">+7.3%</div>
+<div class="meta">366 vs 341 same week last year</div></div>
+</div>
+
+<div class="sec blue"><h2>Meta Ads</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead>
+<tbody><tr><td>Aqua HK</td><td class="num">HK$12,246</td><td class="num">15</td><td class="num neg">HK$816.37</td><td><span class="pos num">▲ 25.0%</span></td></tr><tr><td>Dim Sum Library</td><td class="num">HK$960</td><td class="num">7</td><td class="num pos">HK$137.13</td><td><span class="pos num">▲ 75.0%</span></td></tr><tr class="total"><td>Total</td><td class="num">HK$13,205</td><td class="num">22</td><td class="num">HK$600.25</td><td><span class="pos num">▲ 37.5%</span></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua HK doubled Meta to HK$12,246 for just 15 schedules (~HK$816 CPA), well above the HK$600 poor band.</li><li>Dim Sum Library kept Meta light at HK$960 for 7 schedules, up from 4, at ~HK$137 CPA inside the good band.</li><li>Meta stays a thin last-click channel: 22 schedules combined against 366 GA4 bookings.</li></ul></div></div>
+
+<div class="sec green"><h2>Google Ads</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead>
+<tbody><tr><td>Aqua HK</td><td class="num">HK$11,501</td><td class="num">59</td><td class="num ">HK$195.20</td><td><span class="neg num">▼ 29.8%</span></td></tr><tr><td>Dim Sum Library</td><td class="num">HK$1,354</td><td class="num">79</td><td class="num pos">HK$17.15</td><td><span class="pos num">▲ 17.9%</span></td></tr><tr class="total"><td>Total</td><td class="num">HK$12,855</td><td class="num">138</td><td class="num">HK$93.25</td><td><span class="neg num">▼ 8.6%</span></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua HK Google ran HK$11,501 for 59 booking conversions at ~HK$195 CPA, in the mid band.</li><li>Dim Sum Library Google delivered 79 conversions on only HK$1,354 spend — ~HK$17 CPA, the cheapest acquisition in the portfolio.</li><li>Google drove ~138 of the two venues' 366 bookings, close to two fifths of the combined total.</li></ul></div></div>
+
+<div class="sec amber"><h2>GA4 Website</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce Rate</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead>
+<tbody><tr><td>Aqua HK</td><td class="num">4,309</td><td class="num">3,159</td><td class="num">3:43</td><td class="num ">28.6%</td><td class="num neg">196</td><td class="num pos">6.20%</td><td class="num">4.55%</td></tr><tr><td>Dim Sum Library</td><td class="num">1,418</td><td class="num">1,048</td><td class="num">2:45</td><td class="num ">30.3%</td><td class="num pos">170</td><td class="num pos">16.22%</td><td class="num">11.99%</td></tr><tr class="total"><td>Total</td><td class="num">5,727</td><td class="num">4,207</td><td class="num">—</td><td class="num">—</td><td class="num">366</td><td class="num">8.70%</td><td class="num">6.39%</td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua HK held at 196 bookings (from 201), beating the 185 target by 6% but still -6.6% behind YTD.</li><li>Dim Sum Library rebounded to 170 from 141 (+21% WoW, +19% YoY), just shy of the 172 target and -6.0% on YTD.</li><li>DSL user CVR of ~16% stays strong; Aqua's ~6% CVR means its gap is conversion-side, DSL's is traffic.</li></ul></div></div>
+</div>
+
+<div class="pane" id="t">
+<p class="sub" style="margin-top:18px">8-week trend (W19 to W26) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chart"><h3>GA4 Bookings (weekly)</h3><canvas id="c1"></canvas></div>
+<div class="chart"><h3>User Conversion Rate (%)</h3><canvas id="c2"></canvas></div>
+<div class="chart"><h3>Users (weekly)</h3><canvas id="c3"></canvas></div>
+<div class="chart"><h3>Bookings vs Target (latest week)</h3><canvas id="c4"></canvas></div>
+</div>
+<table style="margin-top:24px"><thead><tr><th>Venue</th><th>Metric</th>
+<th>W19</th><th>W20</th><th>W21</th><th>W22</th><th>W23</th><th>W24</th><th>W25</th><th>W26</th><th>Trend</th></tr></thead><tbody><tr><td>Aqua HK</td><td>Bookings</td><td class="num">164</td><td class="num">145</td><td class="num">180</td><td class="num">166</td><td class="num">204</td><td class="num">164</td><td class="num">201</td><td class="num">196</td><td class="num pos">+19.5%</td></tr><tr><td></td><td>User CVR</td><td class="num">4.77%</td><td class="num">4.26%</td><td class="num">5.95%</td><td class="num">5.43%</td><td class="num">6.46%</td><td class="num">6.13%</td><td class="num">7.21%</td><td class="num">6.20%</td><td class="num pos">+1.43pp</td></tr><tr><td>Dim Sum Library</td><td>Bookings</td><td class="num">146</td><td class="num">135</td><td class="num">149</td><td class="num">126</td><td class="num">137</td><td class="num">130</td><td class="num">141</td><td class="num">170</td><td class="num pos">+16.4%</td></tr><tr><td></td><td>User CVR</td><td class="num">8.51%</td><td class="num">11.69%</td><td class="num">16.37%</td><td class="num">12.37%</td><td class="num">10.17%</td><td class="num">11.47%</td><td class="num">14.60%</td><td class="num">16.22%</td><td class="num pos">+7.71pp</td></tr></tbody></table>
+</div>
+
+<footer>Bookings = GA4 <code>sevenrooms_booking_complete</code>. Meta schedules = <code>offsite_conversion.fb_pixel_custom</code>. Google conversions filtered to the venue booking action. Generated 3 August 2026.</footer>
+<script>
+const D={"labels": ["W19", "W20", "W21", "W22", "W23", "W24", "W25", "W26"], "names": ["Aqua HK", "Dim Sum Library"], "bk": {"Aqua HK": [164, 145, 180, 166, 204, 164, 201, 196], "Dim Sum Library": [146, 135, 149, 126, 137, 130, 141, 170]}, "us": {"Aqua HK": [3437, 3406, 3023, 3055, 3156, 2675, 2789, 3159], "Dim Sum Library": [1716, 1155, 910, 1019, 1347, 1133, 966, 1048]}, "cv": {"Aqua HK": [4.77, 4.26, 5.95, 5.43, 6.46, 6.13, 7.21, 6.2], "Dim Sum Library": [8.51, 11.69, 16.37, 12.37, 10.17, 11.47, 14.6, 16.22]}, "col": ["#EF4444", "#F59E0B"], "tgt": {"Aqua HK": 185, "Dim Sum Library": 172}};
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById(t.dataset.t).classList.add('on');
+  if(t.dataset.t==='t'&&!window._drawn){window._drawn=1;draw();}
+});
+function line(id,get,suf){
+ new Chart(document.getElementById(id),{type:'line',
+  data:{labels:D.labels,datasets:D.names.map((n,i)=>({label:n,data:get(n),borderColor:D.col[i],backgroundColor:D.col[i],tension:.3,borderWidth:2,pointRadius:3}))},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}},
+   scales:{y:{beginAtZero:false,ticks:{callback:v=>v+(suf||'')}}}}});
+}
+function draw(){
+ line('c1',n=>D.bk[n]);line('c2',n=>D.cv[n],'%');line('c3',n=>D.us[n]);
+ new Chart(document.getElementById('c4'),{type:'bar',
+  data:{labels:D.names,datasets:[
+   {label:'Actual',data:D.names.map(n=>D.bk[n][D.bk[n].length-1]),backgroundColor:'#3B82F6'},
+   {label:'Target',data:D.names.map(n=>D.tgt[n]),backgroundColor:'#cbd5e1'}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}}}});
+}
+</script></body></html>
