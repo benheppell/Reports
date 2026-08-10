@@ -817,6 +817,12 @@
    "ccy": "AED",
    "weekly": [
     {
+     "dates": "W31 · 3–9 Aug 2026",
+     "folder": "w2026-08-03",
+     "ads": true,
+     "dash": false
+    },
+    {
      "dates": "W25 · 22–28 Jun 2026",
      "folder": "w2026-06-22",
      "ads": true,
@@ -901,6 +907,10 @@
    ],
    "trends": [
     {
+     "dates": "3–9 Aug 2026",
+     "folder": "w2026-08-03"
+    },
+    {
      "dates": "22–28 Jun 2026",
      "folder": "w2026-06-22"
     },
@@ -955,6 +965,12 @@
    "slug": "paris",
    "ccy": "EUR",
    "weekly": [
+    {
+     "dates": "W27 · 3–9 Aug 2026",
+     "folder": "w2026-08-03",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "W21 · 22–28 Jun 2026",
      "folder": "w2026-06-22",
@@ -1138,6 +1154,10 @@
    ],
    "monthly": [],
    "trends": [
+    {
+     "dates": "3–9 Aug 2026",
+     "folder": "w2026-08-03"
+    },
     {
      "dates": "22–28 Jun 2026",
      "folder": "w2026-06-22"
