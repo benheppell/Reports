@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 194,
+   "tgt": 224,
+   "wow": 196,
+   "yoy": 187,
+   "ytd": 5248,
+   "ytdt": 5637,
+   "meta_s": 6607.15,
+   "goog_s": 9260.9,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 245,
+   "tgt": 264,
+   "wow": 285,
+   "yoy": 255,
+   "ytd": 7661,
+   "ytdt": 6784,
+   "meta_s": 3589.29,
+   "goog_s": 5376.37,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 107,
+   "tgt": 100,
+   "wow": 94,
+   "yoy": 82,
+   "ytd": 3152,
+   "ytdt": 2704,
+   "meta_s": 3944.33,
+   "goog_s": 7006.18,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 101,
+   "tgt": 52,
+   "wow": 83,
+   "yoy": 50,
+   "ytd": 1711,
+   "ytdt": 1471,
+   "meta_s": 4769.88,
+   "goog_s": 6618.44,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 149,
+   "tgt": 181,
+   "wow": 170,
+   "yoy": 174,
+   "ytd": 4315,
+   "ytdt": 4612,
+   "meta_s": 2292.71,
+   "goog_s": 3696.74,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 156,
+   "tgt": 128,
+   "wow": 172,
+   "yoy": 92,
+   "ytd": 3858,
+   "ytdt": 3277,
+   "meta_s": 5946.14,
+   "goog_s": 5239.98,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = August monthly GA4 target x 7/30. <b>Vesu</b> remains excluded (still closed, no bookings or Google spend). The portfolio landed <b>952 bookings</b> against a 949 target (<b>+0.3 percent</b>) and was up <b>+13.3 percent year on year</b>, though down 4.8 percent week on week off an exceptional prior week of 1,000. Three venues beat target, led by <b>Cantina (+94%), Shiro (+22%) and The Chinese Library (+7%)</b>; <b>Dim Sum Library (-18%), Aqua HK (-13%) and Hutong (-7%)</b> came in below their August weekly targets. On a YTD basis only <b>Aqua HK (-6.9%)</b> and <b>Dim Sum Library (-6.4%)</b> still trail their cumulative targets; the other four remain comfortably ahead.",
+ "week": "3\u20139 Aug 2026",
+ "wow": "27 Jul\u20132 Aug 2026",
+ "yoy": "4\u201310 Aug 2025",
+ "generated": "10 August 2026"
+}

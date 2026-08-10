@@ -1,11 +1,16 @@
 {
- "generated": "3 August 2026",
+ "generated": "10 August 2026",
  "markets": [
   {
    "name": "Hong Kong",
    "slug": "hk",
    "ccy": "HKD",
    "weekly": [
+    {
+     "dates": "W27 · 3–9 Aug 2026",
+     "folder": "w2026-08-03",
+     "deepdive": true
+    },
     {
      "dates": "W26 · 27 Jul–2 Aug 2026",
      "folder": "w2026-07-27",
@@ -253,6 +258,11 @@
    "slug": "london",
    "ccy": "GBP",
    "weekly": [
+    {
+     "dates": "W27 · 3–9 Aug 2026",
+     "folder": "w2026-08-03",
+     "deepdive": true
+    },
     {
      "dates": "W26 · 27 Jul–2 Aug 2026",
      "folder": "w2026-07-27",
@@ -857,6 +867,10 @@
     }
    ],
    "monthly": [
+    {
+     "label": "July 2026",
+     "folder": "m2026-07"
+    },
     {
      "label": "June 2026",
      "folder": "m2026-06"

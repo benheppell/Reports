@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "3\u20139 Aug 2026",
+ "wow": "27 Jul\u20132 Aug 2026",
+ "yoy": "4\u201310 Aug 2025",
+ "generated": "10 August 2026",
+ "badge": "PULLBACK WEEK",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 194,
+   "tgt": 224,
+   "wow_b": 196,
+   "yoy_b": 187,
+   "users": 3061,
+   "sessions": 4202,
+   "asd": 205.6256284535935,
+   "bounce": 0.31294621608757733,
+   "meta_s": 6607.15,
+   "meta_sch": 18,
+   "meta_sch_prior": 15,
+   "goog_s": 9260.9,
+   "goog_c": 70.53,
+   "goog_c_prior": 60.15,
+   "shared": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 149,
+   "tgt": 181,
+   "wow_b": 170,
+   "yoy_b": 174,
+   "users": 1231,
+   "sessions": 1605,
+   "asd": 184.37534368535825,
+   "bounce": 0.32274143302180686,
+   "meta_s": 2292.71,
+   "meta_sch": 8,
+   "meta_sch_prior": 7,
+   "goog_s": 3696.74,
+   "goog_c": 68.37,
+   "goog_c_prior": 79.75,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK halved Meta to HK$6,607 for 18 schedules (~HK$367 CPA), a sharp efficiency gain on the prior week's HK$12,246 for 15.",
+   "Dim Sum Library lifted Meta to HK$2,293 for 8 schedules (~HK$287 CPA), up from HK$960 for 7, still inside the mid band.",
+   "Meta stays a thin last-click channel: 26 combined schedules against 343 GA4 bookings."
+  ],
+  "google": [
+   "Aqua HK Google ran HK$9,261 for ~71 booking conversions at ~HK$131 CPA, back in the good band.",
+   "Dim Sum Library Google delivered ~68 conversions on HK$3,697 at ~HK$54 CPA, the cheapest acquisition in the portfolio.",
+   "Google drove ~139 of the two venues' 343 bookings, around two fifths of the combined total."
+  ],
+  "ga4": [
+   "Aqua HK eased to 194 bookings from 196, 13% under the raised August target of 224 and still -6.9% on YTD; user CVR held near 6.3%.",
+   "Dim Sum Library slipped to 149 from 170 (-12% WoW, -14% YoY), 18% under target and -6.4% YTD, though users rose to 1,231.",
+   "DSL's ~12% user CVR stays strong so its gap is traffic-side; Aqua's ~6% CVR means its gap is conversion-side."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W20",
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     145,
+     180,
+     166,
+     204,
+     164,
+     201,
+     196,
+     194
+    ],
+    "users": [
+     3406,
+     3023,
+     3055,
+     3156,
+     2675,
+     2789,
+     3159,
+     3061
+    ]
+   },
+   "Dim Sum Library": {
+    "bookings": [
+     135,
+     149,
+     126,
+     137,
+     130,
+     141,
+     170,
+     149
+    ],
+    "users": [
+     1155,
+     910,
+     1019,
+     1347,
+     1133,
+     966,
+     1048,
+     1231
+    ]
+   }
+  }
+ }
+}
