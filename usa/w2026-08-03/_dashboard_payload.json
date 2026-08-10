@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 289,
+   "tgt": 494,
+   "wow": 297,
+   "yoy": 332,
+   "ytd": 8103,
+   "ytdt": 13981,
+   "meta_s": 1841.3,
+   "goog_s": 602.14,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 180,
+   "tgt": 470,
+   "wow": 195,
+   "yoy": 231,
+   "ytd": 5092,
+   "ytdt": 13625,
+   "meta_s": 967.1,
+   "goog_s": 1287.24,
+   "nc": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 92,
+   "tgt": 137,
+   "wow": 65,
+   "yoy": 131,
+   "ytd": 3015,
+   "ytdt": 4328,
+   "meta_s": 1737.4,
+   "goog_s": 701.88,
+   "nc": false
+  }
+ ],
+ "note": "USA targets are strategic and deliberately aggressive (Hutong NYC explicitly so), and August targets step up further, so weekly and YTD variances read heavily negative by design. The portfolio booked <b>561 GA4 bookings</b> against a 1,101 blended weekly target (51%), essentially flat week on week (+0.7%) and <b>-19% YoY</b> (694 LY). <b>Hutong Miami</b> was the bright spot, up to 92 (+42% WoW) though still -30% YoY; <b>Aqua NYC</b> eased to 289 (-3% WoW, -13% YoY) and <b>Hutong NYC</b> softened to 180 (-8% WoW, -22% YoY) despite heavy Google reinvestment. <b>Hutong Miami's</b> GA4 target is derived from its Meta plan x (6,738/4,756) and flagged as derived; weekly target = August monthly x 7/30. All three venues sit well below their cumulative YTD targets by design.",
+ "week": "3–9 Aug 2026",
+ "wow": "27 Jul–2 Aug 2026",
+ "yoy": "4–10 Aug 2025",
+ "generated": "10 August 2026"
+}

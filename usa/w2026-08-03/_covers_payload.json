@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OT Guestcenter, OpenTable and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 561 · YoY ▼19.2%",
+ "ga4_yoy": "▼19.2% YoY",
+ "week": "3–9 Aug 2026",
+ "wow": "27 Jul–2 Aug 2026",
+ "yoy": "4–10 Aug 2025",
+ "generated": "10 August 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 289,
+   "ch": {
+    "web": {
+     "c": 552,
+     "p": 587,
+     "y": 560
+    },
+    "gr": {
+     "c": 174,
+     "p": 169,
+     "y": 0
+    },
+    "ot": {
+     "c": 242,
+     "p": 263,
+     "y": 227
+    },
+    "walk": {
+     "c": 700,
+     "p": 635,
+     "y": 634
+    },
+    "recep": {
+     "c": 448,
+     "p": 1042,
+     "y": 475
+    },
+    "ota": {
+     "c": 16,
+     "p": 9,
+     "y": 7
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 180,
+   "ch": {
+    "web": {
+     "c": 404,
+     "p": 461,
+     "y": 416
+    },
+    "gr": {
+     "c": 111,
+     "p": 107,
+     "y": 209
+    },
+    "ot": {
+     "c": 492,
+     "p": 737,
+     "y": 245
+    },
+    "walk": {
+     "c": 419,
+     "p": 455,
+     "y": 418
+    },
+    "recep": {
+     "c": 443,
+     "p": 632,
+     "y": 376
+    },
+    "ota": {
+     "c": 41,
+     "p": 7,
+     "y": 6
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 92,
+   "ch": {
+    "web": {
+     "c": 219,
+     "p": 130,
+     "y": 111
+    },
+    "gr": {
+     "c": 15,
+     "p": 0,
+     "y": 60
+    },
+    "ot": {
+     "c": 157,
+     "p": 258,
+     "y": 161
+    },
+    "walk": {
+     "c": 240,
+     "p": 161,
+     "y": 366
+    },
+    "recep": {
+     "c": 94,
+     "p": 113,
+     "y": 55
+    },
+    "ota": {
+     "c": 0,
+     "p": 2,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31"
+  ],
+  "total": [
+   3864,
+   4378,
+   3166,
+   4699,
+   4287,
+   4779,
+   5881,
+   4767
+  ],
+  "ot": [
+   867,
+   832,
+   566,
+   943,
+   926,
+   1121,
+   1300,
+   891
+  ]
+ },
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 only fires for bookings made on our own website widget, so it is blind to <b>OpenTable and Resy</b>, only partly captures <b>Google Reserve</b>, and never sees walk-ins or the reservation desks, which together are the majority of USA covers. That is why the two numbers diverge: GA4 reads <b>▼19.2% YoY</b> on website bookings while total covers created across every channel are <b>▲10.2% YoY</b>. OpenTable and Resy alone move close to 900 covers a week, entirely invisible to GA4. Read covers as the fuller demand and channel picture, not as a contradiction of the GA4 story."
+}
