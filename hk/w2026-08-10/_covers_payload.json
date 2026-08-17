@@ -1,0 +1,294 @@
+{
+ "market": "Hong Kong",
+ "platform": "OpenRice",
+ "tz": "Asia/Hong_Kong",
+ "platform_foot": "<b>OpenRice</b> = OpenRice sources",
+ "combined_note": "<b>Shiro</b> = Shiro Hong Kong (Pacific Place) + Shiro Tai Kwun combined. Vesu excluded. ",
+ "ga4_meta": "Portfolio 1,041 · YoY ▲14.6%",
+ "ga4_yoy": "▲14.6% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Hong Kong's GA4 bookings are up <b>14.6% YoY</b>, and covers tell you what that demand is actually worth and where it comes from. GA4 only fires for bookings made on our own website, so it never sees <b>OpenRice</b> (about a sixth of Hong Kong covers this week), only partly captures <b>Google Reserve</b>, and is completely blind to walk-ins and the reception desks — which between them are close to half of all covers. Read the two together: GA4 is the scoreboard for the channel we control and can optimise, covers are the full demand picture.",
+ "week": "10–16 Aug 2026",
+ "wow": "3–9 Aug 2026",
+ "yoy": "11–17 Aug 2025",
+ "generated": "17 August 2026",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ga4": 215,
+   "ch": {
+    "web": {
+     "c": 556,
+     "p": 461,
+     "y": 453
+    },
+    "gr": {
+     "c": 193,
+     "p": 233,
+     "y": 131
+    },
+    "ot": {
+     "c": 388,
+     "p": 328,
+     "y": 279
+    },
+    "walk": {
+     "c": 48,
+     "p": 94,
+     "y": 66
+    },
+    "recep": {
+     "c": 311,
+     "p": 437,
+     "y": 346
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ga4": 296,
+   "ch": {
+    "web": {
+     "c": 549,
+     "p": 501,
+     "y": 437
+    },
+    "gr": {
+     "c": 292,
+     "p": 288,
+     "y": 146
+    },
+    "ot": {
+     "c": 256,
+     "p": 243,
+     "y": 188
+    },
+    "walk": {
+     "c": 111,
+     "p": 107,
+     "y": 115
+    },
+    "recep": {
+     "c": 770,
+     "p": 537,
+     "y": 1145
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ga4": 128,
+   "ch": {
+    "web": {
+     "c": 263,
+     "p": 222,
+     "y": 149
+    },
+    "gr": {
+     "c": 125,
+     "p": 112,
+     "y": 115
+    },
+    "ot": {
+     "c": 178,
+     "p": 196,
+     "y": 142
+    },
+    "walk": {
+     "c": 72,
+     "p": 93,
+     "y": 106
+    },
+    "recep": {
+     "c": 225,
+     "p": 199,
+     "y": 285
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ga4": 95,
+   "ch": {
+    "web": {
+     "c": 232,
+     "p": 208,
+     "y": 97
+    },
+    "gr": {
+     "c": 75,
+     "p": 48,
+     "y": 37
+    },
+    "ot": {
+     "c": 246,
+     "p": 225,
+     "y": 260
+    },
+    "walk": {
+     "c": 76,
+     "p": 45,
+     "y": 70
+    },
+    "recep": {
+     "c": 509,
+     "p": 193,
+     "y": 473
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ga4": 148,
+   "ch": {
+    "web": {
+     "c": 354,
+     "p": 445,
+     "y": 305
+    },
+    "gr": {
+     "c": 266,
+     "p": 233,
+     "y": 225
+    },
+    "ot": {
+     "c": 376,
+     "p": 390,
+     "y": 322
+    },
+    "walk": {
+     "c": 1009,
+     "p": 1115,
+     "y": 1216
+    },
+    "recep": {
+     "c": 648,
+     "p": 346,
+     "y": 329
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro",
+   "ga4": 159,
+   "ch": {
+    "web": {
+     "c": 372,
+     "p": 350,
+     "y": 205
+    },
+    "gr": {
+     "c": 151,
+     "p": 154,
+     "y": 60
+    },
+    "ot": {
+     "c": 531,
+     "p": 482,
+     "y": 327
+    },
+    "walk": {
+     "c": 1897,
+     "p": 1834,
+     "y": 1010
+    },
+    "recep": {
+     "c": 575,
+     "p": 397,
+     "y": 312
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28"
+  ],
+  "total": [
+   9317,
+   8206,
+   9199,
+   9274,
+   8451,
+   10721,
+   10516,
+   11654
+  ],
+  "ot": [
+   1639,
+   1433,
+   1712,
+   1740,
+   1723,
+   1741,
+   1864,
+   1975
+  ]
+ }
+}

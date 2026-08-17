@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 215,
+   "tgt": 224,
+   "wow": 194,
+   "yoy": 221,
+   "ytd": 5463,
+   "ytdt": 5861,
+   "meta_s": 5536.61,
+   "goog_s": 8813.96,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 296,
+   "tgt": 264,
+   "wow": 245,
+   "yoy": 281,
+   "ytd": 7957,
+   "ytdt": 7048,
+   "meta_s": 3314.73,
+   "goog_s": 5977.57,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 128,
+   "tgt": 100,
+   "wow": 107,
+   "yoy": 78,
+   "ytd": 3280,
+   "ytdt": 2804,
+   "meta_s": 4172.58,
+   "goog_s": 8872.92,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 95,
+   "tgt": 52,
+   "wow": 101,
+   "yoy": 46,
+   "ytd": 1806,
+   "ytdt": 1523,
+   "meta_s": 4922.48,
+   "goog_s": 6905.43,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 148,
+   "tgt": 181,
+   "wow": 149,
+   "yoy": 164,
+   "ytd": 4463,
+   "ytdt": 4793,
+   "meta_s": 2280.87,
+   "goog_s": 3907.59,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 159,
+   "tgt": 128,
+   "wow": 158,
+   "yoy": 118,
+   "ytd": 4021,
+   "ytdt": 3405,
+   "meta_s": 6273.6,
+   "goog_s": 4939.68,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = August monthly GA4 target x 7/30. <b>Vesu</b> remains excluded (still closed, no bookings or Google spend). Hong Kong had its strongest week of the half: <b>1,041 bookings</b> against a 949 target (<b>+9.7 percent</b>), up <b>+9.1 percent week on week</b> and <b>+14.6 percent year on year</b>. Four venues beat target, led by <b>Cantina (+83%), The Chinese Library (+28%), Shiro (+24%) and Hutong (+12%)</b>. <b>Dim Sum Library (-18%)</b> and <b>Aqua HK (-4%)</b> were the only misses, and both are the same two venues still behind on YTD (<b>Aqua HK -6.8%</b>, <b>Dim Sum Library -6.9%</b>); the other four are all double-digit percentages ahead. The portfolio is now <b>+6.1 percent ahead of its cumulative YTD target</b>.",
+ "week": "10–16 Aug 2026",
+ "wow": "3–9 Aug 2026",
+ "yoy": "11–17 Aug 2025",
+ "generated": "17 August 2026"
+}

@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "10–16 Aug 2026",
+ "wow": "3–9 Aug 2026",
+ "yoy": "11–17 Aug 2025",
+ "generated": "17 August 2026",
+ "badge": "SOFT WEEK",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 254,
+   "tgt": 494,
+   "wow_b": 295,
+   "yoy_b": 309,
+   "users": 6107,
+   "sessions": 7473,
+   "asd": 155.6030265158571,
+   "bounce": 0.5194700923323966,
+   "meta_s": 1881.89,
+   "meta_sch": 84,
+   "meta_sch_prior": 94,
+   "goog_s": 569.97,
+   "goog_c": 41.0,
+   "goog_c_prior": 30.9,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 168,
+   "tgt": 470,
+   "wow_b": 180,
+   "yoy_b": 228,
+   "users": 3342,
+   "sessions": 4349,
+   "asd": 191.03259078500804,
+   "bounce": 0.40331110600137965,
+   "meta_s": 1029.9,
+   "meta_sch": 18,
+   "meta_sch_prior": 5,
+   "goog_s": 1260.7,
+   "goog_c": 35.97,
+   "goog_c_prior": 42.96,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 87,
+   "tgt": 137,
+   "wow_b": 93,
+   "yoy_b": 142,
+   "users": 1929,
+   "sessions": 2444,
+   "asd": 174.22152440834697,
+   "bounce": 0.4509001636661211,
+   "meta_s": 1839.29,
+   "meta_sch": 19,
+   "meta_sch_prior": 29,
+   "goog_s": 637.91,
+   "goog_c": 18.0,
+   "goog_c_prior": 18.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua NYC is the most efficient on Meta at ~$22 per schedule (84 schedules on $1,882), inside the good band.",
+   "Hutong Miami ran $1,839 for just 19 schedules (~$97 CPA), almost double the $50 poor mark and the weakest Meta return in the portfolio.",
+   "Hutong NYC recovered from 5 schedules to 18 on $1,030 (~$57 CPA), still past the poor line but moving the right way."
+  ],
+  "google": [
+   "Aqua NYC Google was most efficient at 41 conversions on $570 (~$14 CPA), inside the good band and up from 31 conversions last week.",
+   "Hutong NYC leaned on Google with 36 conversions on $1,261 (~$35 CPA), past the $30 poor line.",
+   "Hutong Miami delivered 18 conversions on $638 (~$35 CPA), also past the poor line."
+  ],
+  "ga4": [
+   "Portfolio 509 bookings sit 54% below the aggressive 1,101 blended target, down 10.4% WoW and -25% YoY.",
+   "All three venues fell WoW and all three are down double digits YoY — Hutong Miami -38.7%, Hutong NYC -26.3%, Aqua NYC -17.8%.",
+   "The consistent YoY decline across every venue points to a demand and traffic problem rather than a single-venue issue."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     295,
+     217,
+     302,
+     284,
+     311,
+     300,
+     295,
+     254
+    ],
+    "users": [
+     8133,
+     6616,
+     5867,
+     7774,
+     7042,
+     7437,
+     6974,
+     6110
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     148,
+     90,
+     107,
+     156,
+     134,
+     191,
+     180,
+     168
+    ],
+    "users": [
+     3463,
+     1703,
+     1947,
+     2725,
+     2585,
+     3230,
+     3226,
+     3342
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     62,
+     94,
+     62,
+     47,
+     71,
+     65,
+     93,
+     87
+    ],
+    "users": [
+     1287,
+     2305,
+     1446,
+     1410,
+     1516,
+     1515,
+     1705,
+     1929
+    ]
+   }
+  }
+ }
+}

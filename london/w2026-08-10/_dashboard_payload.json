@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1084,
+   "tgt": 2083,
+   "wow": 1188,
+   "yoy": 1729,
+   "ytd": 36850,
+   "ytdt": 43616,
+   "meta_s": 1991.35,
+   "goog_s": 2309.67,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 862,
+   "tgt": 1008,
+   "wow": 833,
+   "yoy": 906,
+   "ytd": 21098,
+   "ytdt": 22901,
+   "meta_s": 1376.73,
+   "goog_s": 1303.79,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 342,
+   "tgt": 375,
+   "wow": 296,
+   "yoy": 336,
+   "ytd": 8779,
+   "ytdt": 11293,
+   "meta_s": 1111.28,
+   "goog_s": 1302.58,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 69,
+   "tgt": 121,
+   "wow": 76,
+   "yoy": 66,
+   "ytd": 3161,
+   "ytdt": 4540,
+   "meta_s": 941.26,
+   "goog_s": 339.02,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 109,
+   "tgt": 112,
+   "wow": 102,
+   "yoy": 93,
+   "ytd": 3004,
+   "ytdt": 4271,
+   "meta_s": 324.61,
+   "goog_s": 370.01,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 493,
+   "tgt": 195,
+   "wow": 618,
+   "yoy": 183,
+   "ytd": 14889,
+   "ytdt": 5093,
+   "meta_s": 1820.84,
+   "goog_s": 450.78,
+   "nc": true
+  }
+ ],
+ "note": "Weekly targets are the FY26/27 portfolio plan (week commencing 10 Aug). <b>Portfolio</b> bookings of 2,959 finished 24 percent below the 3,894 weekly target, down 4.9 percent week on week and 10.7 percent below last year. <b>DSL</b> is flagged not comparable: it trades far above its pre-rebrand target base, so its variance, YoY and YTD position are not like for like — excluding DSL the portfolio ran <b>2,466 against 3,699 (-33 percent) and -21 percent YoY</b>. <b>Aqua Shard</b> remains the single largest gap at 1,084 against a 2,083 target (-48%) and -37 percent YoY, continuing the summer decline. <b>Regent St (+15.5% WoW)</b> and <b>Shiro Sushi (+6.9% WoW, +17% YoY)</b> were the week's improvers. On YTD every venue except DSL trails its cumulative target, with <b>Azzurra (-30%)</b>, <b>Shiro Sushi (-30%)</b> and <b>Regent St (-22%)</b> furthest behind.",
+ "week": "10–16 Aug 2026",
+ "wow": "3–9 Aug 2026",
+ "yoy": "11–17 Aug 2025",
+ "generated": "17 August 2026"
+}

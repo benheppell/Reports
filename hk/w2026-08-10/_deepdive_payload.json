@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "10–16 Aug 2026",
+ "wow": "3–9 Aug 2026",
+ "yoy": "11–17 Aug 2025",
+ "generated": "17 August 2026",
+ "badge": "STRONG WEEK",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 215,
+   "tgt": 224,
+   "wow_b": 194,
+   "yoy_b": 221,
+   "users": 3242,
+   "sessions": 4284,
+   "asd": 225.89315027357608,
+   "bounce": 0.28408029878618113,
+   "meta_s": 5536.61,
+   "meta_sch": 22,
+   "meta_sch_prior": 18,
+   "goog_s": 8813.96,
+   "goog_c": 72.36,
+   "goog_c_prior": 74.58,
+   "shared": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 148,
+   "tgt": 181,
+   "wow_b": 149,
+   "yoy_b": 164,
+   "users": 1270,
+   "sessions": 1641,
+   "asd": 207.73985124741012,
+   "bounce": 0.30591102985984153,
+   "meta_s": 2280.87,
+   "meta_sch": 3,
+   "meta_sch_prior": 8,
+   "goog_s": 3907.59,
+   "goog_c": 68.41,
+   "goog_c_prior": 71.37,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK cut Meta to HK$5,537 and still lifted schedules to 22 (~HK$252 CPA), comfortably inside the good band and the best efficiency in the portfolio.",
+   "Dim Sum Library dropped to 3 schedules on HK$2,281 (~HK$760 CPA), past the HK$600 poor mark and the weakest Meta return of the two deep-dive venues.",
+   "Meta remains a thin last-click channel here: 25 combined schedules against 363 GA4 bookings across the two venues."
+  ],
+  "google": [
+   "Aqua HK Google ran HK$8,814 for ~72 booking conversions at ~HK$122 CPA, inside the good band.",
+   "Dim Sum Library Google delivered ~68 conversions on HK$3,908 at ~HK$57 CPA, still the cheapest acquisition in the portfolio.",
+   "Google drove ~141 of the two venues' 363 bookings, close to two fifths of the combined total."
+  ],
+  "ga4": [
+   "Aqua HK recovered to 215 bookings (+10.8% WoW) but stayed 4% under the August target of 224 and -2.7% YoY; it remains -6.8% on YTD.",
+   "Dim Sum Library was flat at 148 (-0.7% WoW, -9.8% YoY), 18% under target and -6.9% YTD — the portfolio's only sustained soft spot.",
+   "DSL's user conversion rate stays high, so its gap is traffic-side; Aqua HK's lower CVR means its gap is conversion-side."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W21",
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     180,
+     166,
+     204,
+     164,
+     201,
+     196,
+     194,
+     215
+    ],
+    "users": [
+     3023,
+     3055,
+     3156,
+     2675,
+     2789,
+     3159,
+     3061,
+     3242
+    ]
+   },
+   "Dim Sum Library": {
+    "bookings": [
+     149,
+     126,
+     137,
+     130,
+     141,
+     170,
+     149,
+     148
+    ],
+    "users": [
+     910,
+     1019,
+     1347,
+     1133,
+     966,
+     1048,
+     1231,
+     1270
+    ]
+   }
+  }
+ }
+}
