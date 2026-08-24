@@ -1,0 +1,249 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "week": "17–23 Aug 2026",
+ "wow": "10–16 Aug 2026",
+ "yoy": "18–24 Aug 2025",
+ "generated": "24 August 2026",
+ "badge": "BEHIND TARGET",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1127,
+   "tgt": 2083,
+   "wow_b": 1095,
+   "yoy_b": 1861,
+   "users": 25975,
+   "sessions": 35884,
+   "asd": 189.16660492932786,
+   "bounce": 0.43102775610299854,
+   "meta_s": 2594.5,
+   "meta_sch": 188,
+   "meta_sch_prior": 169,
+   "goog_s": 3332.4,
+   "goog_c": 307.34,
+   "goog_c_prior": 263.23,
+   "shared": false
+  },
+  {
+   "name": "Hutong",
+   "act": 959,
+   "tgt": 1008,
+   "wow_b": 877,
+   "yoy_b": 833,
+   "users": 16423,
+   "sessions": 23801,
+   "asd": 170.5913356349313,
+   "bounce": 0.46224948531574306,
+   "meta_s": 1989.05,
+   "meta_sch": 209,
+   "meta_sch_prior": 176,
+   "goog_s": 1966.21,
+   "goog_c": 187.03,
+   "goog_c_prior": 326.68,
+   "shared": false
+  },
+  {
+   "name": "Regent St",
+   "act": 253,
+   "tgt": 375,
+   "wow_b": 344,
+   "yoy_b": 282,
+   "users": 5764,
+   "sessions": 7178,
+   "asd": 176.40534618272983,
+   "bounce": 0.3790749512398997,
+   "meta_s": 1709.87,
+   "meta_sch": 84,
+   "meta_sch_prior": 72,
+   "goog_s": 1420.93,
+   "goog_c": 51.0,
+   "goog_c_prior": 83.47,
+   "shared": true
+  },
+  {
+   "name": "Azzurra",
+   "act": 64,
+   "tgt": 121,
+   "wow_b": 69,
+   "yoy_b": 79,
+   "users": 1437,
+   "sessions": 1752,
+   "asd": 183.53769092694063,
+   "bounce": 0.4098173515981735,
+   "meta_s": 860.81,
+   "meta_sch": 46,
+   "meta_sch_prior": 61,
+   "goog_s": 308.78,
+   "goog_c": 16.0,
+   "goog_c_prior": 20.0,
+   "shared": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 87,
+   "tgt": 112,
+   "wow_b": 109,
+   "yoy_b": 91,
+   "users": 1095,
+   "sessions": 1442,
+   "asd": 193.48943615811373,
+   "bounce": 0.3432732316227462,
+   "meta_s": 320.13,
+   "meta_sch": 21,
+   "meta_sch_prior": 26,
+   "goog_s": 338.89,
+   "goog_c": 28.33,
+   "goog_c_prior": 53.67,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 15,
+  "meta_poor": 25,
+  "goog_good": 18,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua Shard and Hutong are the efficient end: 188 schedules at about £13.80 and 209 at about £9.52, both inside the good band, and both stepped spend up week on week.",
+   "Regent St spent £1,710 for 84 schedules at about £20.36 and Azzurra £861 for 46 at about £18.72; both sit between the good and poor marks, and Regent St's spend rose 54 percent week on week for 12 extra schedules.",
+   "Shiro Sushi cut spend to £320 and took 21 schedules at about £15.25, roughly at the good threshold but on the smallest base in the portfolio."
+  ],
+  "google": [
+   "Aqua Shard Google delivered about 307 booking conversions on £3,332, roughly £10.85 each, the best value in the portfolio, helped by a new Afternoon Tea search campaign.",
+   "Hutong ran £1,966 for about 187 conversions at roughly £10.51, still inside the good band, though conversions read well below last week's 327.",
+   "Regent St at about £27.86 is close to the £30 poor mark, with conversions down from 83 to 51 on flat spend. Current-week Google conversions are not fully attributed yet, so every CPA here will settle lower."
+  ],
+  "ga4": [
+   "The portfolio booked 3,015 against a 3,894 target, 22.6 percent short, up 0.8 percent week on week and 9.4 percent below last year.",
+   "Aqua Shard is the whole of the year on year gap: 1,127 against 1,861. Users are down only 9 percent, so this is conversion rate (4.3% against 6.5% last year) and a much smaller paid search base, not a traffic collapse.",
+   "Regent St (-26.5% WoW), Shiro Sushi (-20.2% WoW) and Azzurra (-7.2% WoW) all gave ground, while Hutong grew 9.4 percent week on week and is 15.1 percent ahead of last year."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29"
+  ],
+  "venues": {
+   "Aqua Shard": {
+    "bookings": [
+     1180,
+     1175,
+     1201,
+     1336,
+     1451,
+     1188,
+     1084,
+     1127
+    ],
+    "users": [
+     20967,
+     22537,
+     22655,
+     23469,
+     25660,
+     21883,
+     21769,
+     25975
+    ]
+   },
+   "Hutong": {
+    "bookings": [
+     699,
+     676,
+     669,
+     884,
+     808,
+     833,
+     862,
+     959
+    ],
+    "users": [
+     12828,
+     12795,
+     13598,
+     14353,
+     14465,
+     13878,
+     14050,
+     16423
+    ]
+   },
+   "Regent St": {
+    "bookings": [
+     428,
+     341,
+     266,
+     324,
+     284,
+     296,
+     342,
+     253
+    ],
+    "users": [
+     7004,
+     7143,
+     6266,
+     6057,
+     6165,
+     5747,
+     6258,
+     5764
+    ]
+   },
+   "Azzurra": {
+    "bookings": [
+     99,
+     98,
+     83,
+     92,
+     77,
+     76,
+     69,
+     64
+    ],
+    "users": [
+     2144,
+     1828,
+     1934,
+     1817,
+     1621,
+     1507,
+     1442,
+     1437
+    ]
+   },
+   "Shiro Sushi": {
+    "bookings": [
+     114,
+     124,
+     111,
+     117,
+     144,
+     102,
+     109,
+     87
+    ],
+    "users": [
+     1104,
+     1188,
+     1110,
+     1329,
+     1359,
+     1222,
+     1243,
+     1095
+    ]
+   }
+  }
+ }
+}

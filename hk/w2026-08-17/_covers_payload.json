@@ -1,0 +1,294 @@
+{
+ "market": "Hong Kong",
+ "platform": "OpenRice",
+ "tz": "Asia/Hong_Kong",
+ "platform_foot": "<b>OpenRice</b> = OpenRice sources",
+ "combined_note": "<b>Shiro</b> = Shiro Hong Kong (Pacific Place) + Shiro Tai Kwun combined. Vesu excluded. ",
+ "ga4_meta": "Portfolio 1,052 · YoY ▲12.3%",
+ "ga4_yoy": "▲12.3% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Hong Kong's GA4 bookings are up <b>12.3% YoY</b>, and covers tell you what that demand is actually worth and where it comes from. GA4 only fires for bookings made on our own website, so it never sees <b>OpenRice</b> (about a sixth of Hong Kong covers this week), only partly captures <b>Google Reserve</b>, and is completely blind to walk-ins and the reception desks, which between them are close to <b>six tenths of all covers</b>. Read the two together: GA4 is the scoreboard for the channel we control and can optimise, covers are the full demand picture. One caveat on this week's record 13,191 covers: roughly 850 of them come from two one-off private events booked through reception (a 600-cover booking at Aqua Hong Kong and a 250-cover booking at The Chinese Library), so the underlying run rate is closer to 12,300.",
+ "week": "17–23 Aug 2026",
+ "wow": "10–16 Aug 2026",
+ "yoy": "18–24 Aug 2025",
+ "generated": "24 August 2026",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ga4": 213,
+   "ch": {
+    "web": {
+     "c": 461,
+     "p": 526,
+     "y": 489
+    },
+    "gr": {
+     "c": 190,
+     "p": 183,
+     "y": 116
+    },
+    "ot": {
+     "c": 315,
+     "p": 367,
+     "y": 256
+    },
+    "walk": {
+     "c": 102,
+     "p": 48,
+     "y": 117
+    },
+    "recep": {
+     "c": 1161,
+     "p": 280,
+     "y": 833
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 9,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ga4": 294,
+   "ch": {
+    "web": {
+     "c": 504,
+     "p": 532,
+     "y": 465
+    },
+    "gr": {
+     "c": 369,
+     "p": 278,
+     "y": 113
+    },
+    "ot": {
+     "c": 285,
+     "p": 250,
+     "y": 156
+    },
+    "walk": {
+     "c": 125,
+     "p": 100,
+     "y": 73
+    },
+    "recep": {
+     "c": 833,
+     "p": 716,
+     "y": 810
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 4,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ga4": 120,
+   "ch": {
+    "web": {
+     "c": 244,
+     "p": 259,
+     "y": 268
+    },
+    "gr": {
+     "c": 100,
+     "p": 122,
+     "y": 55
+    },
+    "ot": {
+     "c": 260,
+     "p": 172,
+     "y": 178
+    },
+    "walk": {
+     "c": 104,
+     "p": 72,
+     "y": 63
+    },
+    "recep": {
+     "c": 636,
+     "p": 220,
+     "y": 368
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ga4": 105,
+   "ch": {
+    "web": {
+     "c": 213,
+     "p": 214,
+     "y": 132
+    },
+    "gr": {
+     "c": 105,
+     "p": 75,
+     "y": 28
+    },
+    "ot": {
+     "c": 243,
+     "p": 236,
+     "y": 198
+    },
+    "walk": {
+     "c": 117,
+     "p": 76,
+     "y": 64
+    },
+    "recep": {
+     "c": 548,
+     "p": 465,
+     "y": 492
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 2,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ga4": 155,
+   "ch": {
+    "web": {
+     "c": 400,
+     "p": 352,
+     "y": 336
+    },
+    "gr": {
+     "c": 208,
+     "p": 268,
+     "y": 257
+    },
+    "ot": {
+     "c": 489,
+     "p": 354,
+     "y": 260
+    },
+    "walk": {
+     "c": 1045,
+     "p": 1009,
+     "y": 1072
+    },
+    "recep": {
+     "c": 542,
+     "p": 617,
+     "y": 415
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro",
+   "ga4": 165,
+   "ch": {
+    "web": {
+     "c": 392,
+     "p": 360,
+     "y": 183
+    },
+    "gr": {
+     "c": 185,
+     "p": 151,
+     "y": 61
+    },
+    "ot": {
+     "c": 525,
+     "p": 505,
+     "y": 331
+    },
+    "walk": {
+     "c": 1870,
+     "p": 1897,
+     "y": 952
+    },
+    "recep": {
+     "c": 620,
+     "p": 537,
+     "y": 350
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W22",
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29"
+  ],
+  "total": [
+   8195,
+   9203,
+   9272,
+   8448,
+   10674,
+   10379,
+   11256,
+   13191
+  ],
+  "ot": [
+   1433,
+   1710,
+   1740,
+   1717,
+   1731,
+   1824,
+   1884,
+   2117
+  ]
+ }
+}

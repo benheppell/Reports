@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 201,
+   "tgt": 494,
+   "wow": 259,
+   "yoy": 296,
+   "ytd": 8576,
+   "ytdt": 14969,
+   "meta_s": 1904.74,
+   "goog_s": 559.84,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 139,
+   "tgt": 470,
+   "wow": 169,
+   "yoy": 215,
+   "ytd": 5399,
+   "ytdt": 14565,
+   "meta_s": 1032.45,
+   "goog_s": 1350.88,
+   "nc": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 112,
+   "tgt": 137,
+   "wow": 88,
+   "yoy": 133,
+   "ytd": 3217,
+   "ytdt": 4602,
+   "meta_s": 1847.11,
+   "goog_s": 639.04,
+   "nc": false
+  }
+ ],
+ "note": "USA targets are strategic and deliberately aggressive (Hutong NYC explicitly so), and August targets step up again, so weekly and YTD variances read heavily negative by design. The portfolio booked <b>452 GA4 bookings</b> against a 1,101 blended weekly target, <b>down 12.4 percent week on week</b> and <b>29.8 percent below last year</b>. <b>Hutong Miami</b> was the only venue up week on week (+27.3 percent, on users +11.3 percent). <b>Aqua NYC</b> fell to 201 (-22.4% WoW) even though its users are 17.6 percent ahead of last year, so its gap is conversion rather than traffic. All three venues are below YTD target: Aqua NYC 8,576 against 14,969, Hutong NYC 5,399 against 14,565, Hutong Miami 3,217 against 4,602. Read this with the covers report: both US Hutongs moved their Google Reserve booking provider to <b>OpenTable</b> in March, so part of the year on year decline in website bookings is a routing change rather than lost demand. Hutong Miami's monthly GA4 target is derived from its Meta plan (x 6738/4756).",
+ "week": "17–23 Aug 2026",
+ "wow": "10–16 Aug 2026",
+ "yoy": "18–24 Aug 2025",
+ "generated": "24 August 2026"
+}

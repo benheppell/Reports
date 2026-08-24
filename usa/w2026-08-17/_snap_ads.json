@@ -1,0 +1,504 @@
+{
+ "data": {
+  "Aqua New York": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1905,
+      "bookings": 71,
+      "impr": 83994,
+      "clicks": 3971
+     },
+     "prior": {
+      "spend": 1883,
+      "bookings": 84,
+      "impr": 82253,
+      "clicks": 3981
+     },
+     "yoy": {
+      "spend": 860,
+      "bookings": 67,
+      "impr": 127038,
+      "clicks": 3925
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 560,
+      "bookings": 23,
+      "impr": 11892,
+      "clicks": 707
+     },
+     "prior": {
+      "spend": 570,
+      "bookings": 48,
+      "impr": 15588,
+      "clicks": 836
+     },
+     "yoy": {
+      "spend": 1432,
+      "bookings": 62,
+      "impr": 78071,
+      "clicks": 2204
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W26",
+     "W27",
+     "W28",
+     "W29",
+     "W30",
+     "W31",
+     "W32",
+     "W33"
+    ],
+    "spend": [
+     3853,
+     2796,
+     2721,
+     2746,
+     2740,
+     2444,
+     2452,
+     2465
+    ],
+    "bookings": [
+     132,
+     122,
+     167,
+     154,
+     122,
+     125,
+     125,
+     94
+    ]
+   },
+   "funnel": {
+    "impr": 95886,
+    "clicks": 4678,
+    "bookings": 94
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting",
+     "platform": "Meta",
+     "spend": 1129,
+     "bookings": 40,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Remarketing Campaign",
+     "platform": "Meta",
+     "spend": 565,
+     "bookings": 26,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 73,
+     "bookings": 10,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting – Outdoor Dining Campaign",
+     "platform": "Meta",
+     "spend": 211,
+     "bookings": 5,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Italian Restaurant - Manhattan",
+     "platform": "Google",
+     "spend": 75,
+     "bookings": 5,
+     "wow": "up"
+    },
+    {
+     "name": "PMax > Generic",
+     "platform": "Google",
+     "spend": 72,
+     "bookings": 4,
+     "wow": "up"
+    }
+   ]
+  },
+  "Hutong NYC": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1032,
+      "bookings": 22,
+      "impr": 99922,
+      "clicks": 2465
+     },
+     "prior": {
+      "spend": 1031,
+      "bookings": 18,
+      "impr": 130159,
+      "clicks": 3340
+     },
+     "yoy": {
+      "spend": 810,
+      "bookings": 26,
+      "impr": 292333,
+      "clicks": 4312
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1351,
+      "bookings": 24,
+      "impr": 120325,
+      "clicks": 3361
+     },
+     "prior": {
+      "spend": 1262,
+      "bookings": 38,
+      "impr": 114192,
+      "clicks": 3208
+     },
+     "yoy": {
+      "spend": 754,
+      "bookings": 63,
+      "impr": 141428,
+      "clicks": 1719
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W26",
+     "W27",
+     "W28",
+     "W29",
+     "W30",
+     "W31",
+     "W32",
+     "W33"
+    ],
+    "spend": [
+     2867,
+     1751,
+     1961,
+     986,
+     2708,
+     2255,
+     2291,
+     2383
+    ],
+    "bookings": [
+     42,
+     53,
+     74,
+     21,
+     74,
+     48,
+     54,
+     46
+    ]
+   },
+   "funnel": {
+    "impr": 220247,
+    "clicks": 5826,
+    "bookings": 46
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 576,
+     "bookings": 19,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 180,
+     "bookings": 15,
+     "wow": "down"
+    },
+    {
+     "name": "Search >  Generic",
+     "platform": "Google",
+     "spend": 347,
+     "bookings": 6,
+     "wow": "down"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 374,
+     "bookings": 3,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR | NEW Retargeting Campaign",
+     "platform": "Meta",
+     "spend": 254,
+     "bookings": 3,
+     "wow": "down"
+    },
+    {
+     "name": "Demand Gen > Generic",
+     "platform": "Google",
+     "spend": 229,
+     "bookings": 0,
+     "wow": "down"
+    }
+   ]
+  },
+  "Hutong Miami": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1847,
+      "bookings": 32,
+      "impr": 194704,
+      "clicks": 5021
+     },
+     "prior": {
+      "spend": 1839,
+      "bookings": 19,
+      "impr": 111170,
+      "clicks": 3364
+     },
+     "yoy": {
+      "spend": 688,
+      "bookings": 31,
+      "impr": 200708,
+      "clicks": 2871
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 639,
+      "bookings": 15,
+      "impr": 18827,
+      "clicks": 785
+     },
+     "prior": {
+      "spend": 638,
+      "bookings": 23,
+      "impr": 20901,
+      "clicks": 849
+     },
+     "yoy": {
+      "spend": 1101,
+      "bookings": 39,
+      "impr": 51960,
+      "clicks": 1307
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W26",
+     "W27",
+     "W28",
+     "W29",
+     "W30",
+     "W31",
+     "W32",
+     "W33"
+    ],
+    "spend": [
+     6513,
+     3122,
+     2612,
+     2429,
+     2214,
+     2440,
+     2477,
+     2486
+    ],
+    "bookings": [
+     64,
+     35,
+     26,
+     33,
+     35,
+     47,
+     37,
+     47
+    ]
+   },
+   "funnel": {
+    "impr": 213531,
+    "clicks": 5806,
+    "bookings": 47
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 1006,
+     "bookings": 26,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 100,
+     "bookings": 11,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR | NEW Retargeting Campaign",
+     "platform": "Meta",
+     "spend": 468,
+     "bookings": 6,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Chinese Cuisine",
+     "platform": "Google",
+     "spend": 192,
+     "bookings": 2,
+     "wow": "up"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 181,
+     "bookings": 1,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Special Events",
+     "platform": "Google",
+     "spend": 100,
+     "bookings": 1,
+     "wow": "up"
+    }
+   ]
+  },
+  "All": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 4784,
+      "bookings": 125,
+      "impr": 378620,
+      "clicks": 11457
+     },
+     "prior": {
+      "spend": 4753,
+      "bookings": 121,
+      "impr": 323582,
+      "clicks": 10685
+     },
+     "yoy": {
+      "spend": 2358,
+      "bookings": 124,
+      "impr": 620079,
+      "clicks": 11108
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 2550,
+      "bookings": 62,
+      "impr": 151044,
+      "clicks": 4853
+     },
+     "prior": {
+      "spend": 2470,
+      "bookings": 109,
+      "impr": 150681,
+      "clicks": 4893
+     },
+     "yoy": {
+      "spend": 3287,
+      "bookings": 164,
+      "impr": 271459,
+      "clicks": 5230
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W26",
+     "W27",
+     "W28",
+     "W29",
+     "W30",
+     "W31",
+     "W32",
+     "W33"
+    ],
+    "spend": [
+     13232,
+     7669,
+     7293,
+     6161,
+     7662,
+     7139,
+     7220,
+     7334
+    ],
+    "bookings": [
+     238,
+     210,
+     268,
+     208,
+     231,
+     220,
+     216,
+     187
+    ]
+   },
+   "funnel": {
+    "impr": 529664,
+    "clicks": 16310,
+    "bookings": 187
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting",
+     "platform": "Meta",
+     "spend": 1129,
+     "bookings": 40,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 1006,
+     "bookings": 26,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Remarketing Campaign",
+     "platform": "Meta",
+     "spend": 565,
+     "bookings": 26,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 576,
+     "bookings": 19,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 180,
+     "bookings": 15,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 100,
+     "bookings": 11,
+     "wow": "down"
+    }
+   ]
+  }
+ }
+}

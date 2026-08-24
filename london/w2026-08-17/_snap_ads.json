@@ -1,0 +1,858 @@
+{
+ "data": {
+  "Aqua Shard": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 2595,
+      "bookings": 188,
+      "impr": 396560,
+      "clicks": 12713
+     },
+     "prior": {
+      "spend": 1994,
+      "bookings": 169,
+      "impr": 308751,
+      "clicks": 9718
+     },
+     "yoy": {
+      "spend": 1642,
+      "bookings": 148,
+      "impr": 228800,
+      "clicks": 11096
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 3336,
+      "bookings": 307,
+      "impr": 124230,
+      "clicks": 7930
+     },
+     "prior": {
+      "spend": 2319,
+      "bookings": 263,
+      "impr": 104327,
+      "clicks": 5791
+     },
+     "yoy": {
+      "spend": 2031,
+      "bookings": 1085,
+      "impr": 88322,
+      "clicks": 12359
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     3532,
+     4831,
+     3889,
+     4810,
+     8596,
+     3012,
+     4301,
+     5931
+    ],
+    "bookings": [
+     837,
+     905,
+     732,
+     612,
+     665,
+     419,
+     390,
+     495
+    ]
+   },
+   "funnel": {
+    "impr": 520790,
+    "clicks": 20643,
+    "bookings": 495
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 2265,
+     "bookings": 188,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Afternoon Tea",
+     "platform": "Google",
+     "spend": 397,
+     "bookings": 96,
+     "wow": "up"
+    },
+    {
+     "name": "Search >  Shard",
+     "platform": "Google",
+     "spend": 677,
+     "bookings": 86,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Generic-Occasion",
+     "platform": "Google",
+     "spend": 535,
+     "bookings": 33,
+     "wow": "down"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 434,
+     "bookings": 31,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 219,
+     "bookings": 16,
+     "wow": "up"
+    }
+   ]
+  },
+  "Hutong": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1989,
+      "bookings": 209,
+      "impr": 376187,
+      "clicks": 11942
+     },
+     "prior": {
+      "spend": 1377,
+      "bookings": 176,
+      "impr": 260450,
+      "clicks": 8450
+     },
+     "yoy": {
+      "spend": 1184,
+      "bookings": 76,
+      "impr": 212648,
+      "clicks": 10630
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1966,
+      "bookings": 238,
+      "impr": 76092,
+      "clicks": 4477
+     },
+     "prior": {
+      "spend": 1307,
+      "bookings": 422,
+      "impr": 51391,
+      "clicks": 4004
+     },
+     "yoy": {
+      "spend": 2069,
+      "bookings": 445,
+      "impr": 108677,
+      "clicks": 6030
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     4266,
+     2901,
+     3467,
+     3662,
+     3525,
+     2703,
+     2681,
+     3956
+    ],
+    "bookings": [
+     334,
+     281,
+     301,
+     445,
+     490,
+     481,
+     455,
+     447
+    ]
+   },
+   "funnel": {
+    "impr": 452279,
+    "clicks": 16419,
+    "bookings": 447
+   },
+   "campaigns": [
+    {
+     "name": "Search > Golden Sky",
+     "platform": "Google",
+     "spend": 167,
+     "bookings": 149,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign – Tactical",
+     "platform": "Meta",
+     "spend": 1666,
+     "bookings": 148,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 211,
+     "bookings": 48,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Shard",
+     "platform": "Google",
+     "spend": 332,
+     "bookings": 25,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 514,
+     "bookings": 20,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 165,
+     "bookings": 19,
+     "wow": "down"
+    }
+   ]
+  },
+  "Regent St": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1710,
+      "bookings": 84,
+      "impr": 265558,
+      "clicks": 7775
+     },
+     "prior": {
+      "spend": 1112,
+      "bookings": 72,
+      "impr": 191092,
+      "clicks": 5995
+     },
+     "yoy": {
+      "spend": 646,
+      "bookings": 14,
+      "impr": 87364,
+      "clicks": 3158
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1421,
+      "bookings": 51,
+      "impr": 71988,
+      "clicks": 2129
+     },
+     "prior": {
+      "spend": 1305,
+      "bookings": 83,
+      "impr": 57784,
+      "clicks": 2118
+     },
+     "yoy": {
+      "spend": 1360,
+      "bookings": 64,
+      "impr": 79856,
+      "clicks": 2284
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     1721,
+     2553,
+     2027,
+     1826,
+     1724,
+     2038,
+     2414,
+     3131
+    ],
+    "bookings": [
+     149,
+     168,
+     140,
+     167,
+     143,
+     168,
+     145,
+     135
+    ]
+   },
+   "funnel": {
+    "impr": 337546,
+    "clicks": 9904,
+    "bookings": 135
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting Campaign V2",
+     "platform": "Meta",
+     "spend": 489,
+     "bookings": 31,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 458,
+     "bookings": 25,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Weekend Brunch Focus",
+     "platform": "Meta",
+     "spend": 377,
+     "bookings": 17,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Nueva > Roof top",
+     "platform": "Google",
+     "spend": 307,
+     "bookings": 12,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Kyoto > Brunch and Sushi Extravaganza",
+     "platform": "Google",
+     "spend": 235,
+     "bookings": 12,
+     "wow": "up"
+    },
+    {
+     "name": "PMax > Aqua Nueva",
+     "platform": "Google",
+     "spend": 354,
+     "bookings": 11,
+     "wow": "down"
+    }
+   ]
+  },
+  "Azzurra": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 861,
+      "bookings": 46,
+      "impr": 163277,
+      "clicks": 2445
+     },
+     "prior": {
+      "spend": 942,
+      "bookings": 61,
+      "impr": 211683,
+      "clicks": 2778
+     },
+     "yoy": {
+      "spend": 487,
+      "bookings": 19,
+      "impr": 61898,
+      "clicks": 1614
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 309,
+      "bookings": 16,
+      "impr": 9186,
+      "clicks": 552
+     },
+     "prior": {
+      "spend": 339,
+      "bookings": 20,
+      "impr": 6801,
+      "clicks": 481
+     },
+     "yoy": {
+      "spend": 658,
+      "bookings": 23,
+      "impr": 32654,
+      "clicks": 1190
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     1545,
+     1488,
+     1700,
+     1815,
+     1208,
+     1534,
+     1280,
+     1170
+    ],
+    "bookings": [
+     91,
+     91,
+     83,
+     71,
+     58,
+     69,
+     78,
+     62
+    ]
+   },
+   "funnel": {
+    "impr": 172463,
+    "clicks": 2997,
+    "bookings": 62
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 861,
+     "bookings": 46,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 106,
+     "bookings": 9,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Local Discovery",
+     "platform": "Google",
+     "spend": 51,
+     "bookings": 4,
+     "wow": "down"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 108,
+     "bookings": 2,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 13,
+     "bookings": 1,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Private Events",
+     "platform": "Google",
+     "spend": 31,
+     "bookings": 0,
+     "wow": "down"
+    }
+   ]
+  },
+  "Shiro Sushi": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 320,
+      "bookings": 21,
+      "impr": 65094,
+      "clicks": 1347
+     },
+     "prior": {
+      "spend": 325,
+      "bookings": 26,
+      "impr": 68416,
+      "clicks": 1353
+     },
+     "yoy": {
+      "spend": 344,
+      "bookings": 24,
+      "impr": 70107,
+      "clicks": 2520
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 339,
+      "bookings": 28,
+      "impr": 56734,
+      "clicks": 646
+     },
+     "prior": {
+      "spend": 370,
+      "bookings": 54,
+      "impr": 79326,
+      "clicks": 899
+     },
+     "yoy": {
+      "spend": 475,
+      "bookings": 59,
+      "impr": 282451,
+      "clicks": 1062
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     514,
+     990,
+     896,
+     1078,
+     1041,
+     903,
+     695,
+     659
+    ],
+    "bookings": [
+     65,
+     101,
+     111,
+     138,
+     142,
+     84,
+     79,
+     49
+    ]
+   },
+   "funnel": {
+    "impr": 121828,
+    "clicks": 1993,
+    "bookings": 49
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Leads Campaign – Consolidated",
+     "platform": "Meta",
+     "spend": 320,
+     "bookings": 21,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 67,
+     "bookings": 21,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 124,
+     "bookings": 7,
+     "wow": "down"
+    },
+    {
+     "name": "Pmax > Generic",
+     "platform": "Google",
+     "spend": 147,
+     "bookings": 1,
+     "wow": "down"
+    }
+   ]
+  },
+  "DSL": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1820,
+      "bookings": 107,
+      "impr": 271127,
+      "clicks": 7069
+     },
+     "prior": {
+      "spend": 1821,
+      "bookings": 128,
+      "impr": 289138,
+      "clicks": 7601
+     },
+     "yoy": {
+      "spend": 582,
+      "bookings": 29,
+      "impr": 76519,
+      "clicks": 3222
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1462,
+      "bookings": 57,
+      "impr": 23435,
+      "clicks": 1403
+     },
+     "prior": {
+      "spend": 451,
+      "bookings": 46,
+      "impr": 5967,
+      "clicks": 627
+     },
+     "yoy": {
+      "spend": 0,
+      "bookings": 0,
+      "impr": 0,
+      "clicks": 0
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     2838,
+     2226,
+     2066,
+     2122,
+     2084,
+     2245,
+     2272,
+     3282
+    ],
+    "bookings": [
+     165,
+     129,
+     134,
+     184,
+     168,
+     187,
+     168,
+     164
+    ]
+   },
+   "funnel": {
+    "impr": 294562,
+    "clicks": 8472,
+    "bookings": 164
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - DSL Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 1820,
+     "bookings": 107,
+     "wow": "down"
+    },
+    {
+     "name": "PMax > Generic",
+     "platform": "Google",
+     "spend": 970,
+     "bookings": 38,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Afternoon Tea",
+     "platform": "Google",
+     "spend": 237,
+     "bookings": 10,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 76,
+     "bookings": 9,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Restaurant",
+     "platform": "Google",
+     "spend": 179,
+     "bookings": 0,
+     "wow": "down"
+    }
+   ]
+  },
+  "All": {
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 9296,
+      "bookings": 655,
+      "impr": 1537803,
+      "clicks": 43291
+     },
+     "prior": {
+      "spend": 7571,
+      "bookings": 632,
+      "impr": 1329530,
+      "clicks": 35895
+     },
+     "yoy": {
+      "spend": 4887,
+      "bookings": 310,
+      "impr": 737336,
+      "clicks": 32240
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 8832,
+      "bookings": 697,
+      "impr": 361665,
+      "clicks": 17137
+     },
+     "prior": {
+      "spend": 6090,
+      "bookings": 888,
+      "impr": 305596,
+      "clicks": 13920
+     },
+     "yoy": {
+      "spend": 6594,
+      "bookings": 1676,
+      "impr": 591960,
+      "clicks": 22925
+     }
+    }
+   },
+   "trend": {
+    "labels": [
+     "W22",
+     "W23",
+     "W24",
+     "W25",
+     "W26",
+     "W27",
+     "W28",
+     "W29"
+    ],
+    "spend": [
+     14416,
+     14989,
+     14046,
+     15313,
+     18178,
+     12435,
+     13642,
+     18128
+    ],
+    "bookings": [
+     1641,
+     1675,
+     1503,
+     1618,
+     1666,
+     1408,
+     1315,
+     1352
+    ]
+   },
+   "funnel": {
+    "impr": 1899468,
+    "clicks": 60428,
+    "bookings": 1352
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 2265,
+     "bookings": 188,
+     "wow": "up"
+    },
+    {
+     "name": "Search > Golden Sky",
+     "platform": "Google",
+     "spend": 167,
+     "bookings": 149,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting Campaign – Tactical",
+     "platform": "Meta",
+     "spend": 1666,
+     "bookings": 148,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - DSL Prospecting Campaign",
+     "platform": "Meta",
+     "spend": 1820,
+     "bookings": 107,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Afternoon Tea",
+     "platform": "Google",
+     "spend": 397,
+     "bookings": 96,
+     "wow": "up"
+    },
+    {
+     "name": "Search >  Shard",
+     "platform": "Google",
+     "spend": 677,
+     "bookings": 86,
+     "wow": "down"
+    }
+   ]
+  }
+ }
+}

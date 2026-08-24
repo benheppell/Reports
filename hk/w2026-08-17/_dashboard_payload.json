@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 213,
+   "tgt": 224,
+   "wow": 215,
+   "yoy": 240,
+   "ytd": 5676,
+   "ytdt": 6085,
+   "meta_s": 5680.23,
+   "goog_s": 8282.04,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 294,
+   "tgt": 264,
+   "wow": 296,
+   "yoy": 226,
+   "ytd": 8251,
+   "ytdt": 7312,
+   "meta_s": 3327.83,
+   "goog_s": 4849.53,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 120,
+   "tgt": 100,
+   "wow": 128,
+   "yoy": 114,
+   "ytd": 3400,
+   "ytdt": 2904,
+   "meta_s": 3921.56,
+   "goog_s": 8472.64,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 105,
+   "tgt": 52,
+   "wow": 95,
+   "yoy": 62,
+   "ytd": 1911,
+   "ytdt": 1575,
+   "meta_s": 5124.28,
+   "goog_s": 6041.11,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 155,
+   "tgt": 181,
+   "wow": 148,
+   "yoy": 185,
+   "ytd": 4618,
+   "ytdt": 4974,
+   "meta_s": 2408.16,
+   "goog_s": 2792.09,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 165,
+   "tgt": 128,
+   "wow": 160,
+   "yoy": 110,
+   "ytd": 4187,
+   "ytdt": 3533,
+   "meta_s": 6220.84,
+   "goog_s": 4683.36,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = August monthly GA4 target x 7/30. <b>Vesu</b> remains excluded (still closed, no bookings or Google spend). Hong Kong held its record level: <b>1,052 bookings</b> against a 949 target (<b>+10.9 percent</b>), up <b>+1.0 percent week on week</b> and <b>+12.3 percent year on year</b>. Four venues beat target, led by <b>Cantina (+102%)</b>, <b>Shiro (+29%)</b>, <b>The Chinese Library (+20%)</b> and <b>Hutong (+11%)</b>. <b>Dim Sum Library (-14%)</b> and <b>Aqua HK (-5%)</b> were the only misses, and they are the same two venues still behind on YTD (<b>Aqua HK -6.7%</b>, <b>Dim Sum Library -7.2%</b>); the other four are all double-digit percentages ahead. The portfolio is <b>+6.3 percent ahead of its cumulative YTD target</b>.",
+ "week": "17–23 Aug 2026",
+ "wow": "10–16 Aug 2026",
+ "yoy": "18–24 Aug 2025",
+ "generated": "24 August 2026"
+}

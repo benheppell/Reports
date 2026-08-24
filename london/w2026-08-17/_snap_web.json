@@ -1,0 +1,1556 @@
+{
+ "venues": [
+  "All",
+  "Aqua Shard",
+  "Hutong",
+  "Regent St",
+  "Azzurra",
+  "Shiro Sushi",
+  "DSL"
+ ],
+ "data": {
+  "All": {
+   "web": {
+    "cur": {
+     "bookings": 3015,
+     "users": 56135,
+     "sessions": 77156,
+     "avgsec": 181.3,
+     "engrate": 56.9,
+     "pps": 2.71,
+     "newpct": 80.0
+    },
+    "prior": {
+     "bookings": 2992,
+     "users": 50565,
+     "sessions": 70185,
+     "avgsec": 170.7,
+     "engrate": 65.3,
+     "pps": 2.83,
+     "newpct": 81.8
+    },
+    "yoy": {
+     "bookings": 3327,
+     "users": 58508,
+     "sessions": 108136,
+     "avgsec": 165.3,
+     "engrate": 67.0,
+     "pps": 2.17,
+     "newpct": 40.2
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      22488,
+      21909,
+      24826
+     ],
+     "b": [
+      995,
+      1100,
+      738
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      13189,
+      13808,
+      12637
+     ],
+     "b": [
+      638,
+      706,
+      870
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      12524,
+      10946,
+      23576
+     ],
+     "b": [
+      438,
+      489,
+      775
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      11849,
+      10549,
+      18405
+     ],
+     "b": [
+      178,
+      148,
+      186
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      7670,
+      1935,
+      2265
+     ],
+     "b": [
+      353,
+      132,
+      47
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      6304,
+      6701,
+      14937
+     ],
+     "b": [
+      265,
+      284,
+      424
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      5164,
+      2017,
+      9204
+     ],
+     "b": [
+      83,
+      48,
+      251
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      1161,
+      1091,
+      1167
+     ],
+     "b": [
+      15,
+      25,
+      12
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      789,
+      349,
+      672
+     ],
+     "b": [
+      8,
+      11,
+      12
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      615,
+      741,
+      0
+     ],
+     "b": [
+      35,
+      43,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      124,
+      112,
+      737
+     ],
+     "b": [
+      7,
+      6,
+      12
+     ]
+    },
+    {
+     "name": "Mobile Push Notifications",
+     "s": [
+      1,
+      4,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Display",
+     "s": [
+      0,
+      0,
+      4
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 81,
+    "Desktop": 18,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Aqua Shard /",
+     "s": 12471,
+     "b": 334
+    },
+    {
+     "path": "Aqua Shard /peter-pan-afternoon-tea",
+     "s": 7956,
+     "b": 111
+    },
+    {
+     "path": "Hutong /",
+     "s": 6305,
+     "b": 176
+    },
+    {
+     "path": "Hutong /menus",
+     "s": 4369,
+     "b": 43
+    },
+    {
+     "path": "Hutong /menus/lunch-ppc",
+     "s": 3161,
+     "b": 41
+    },
+    {
+     "path": "Regent St / (Kyoto+Nueva)",
+     "s": 2943,
+     "b": 59
+    }
+   ]
+  },
+  "Aqua Shard": {
+   "web": {
+    "cur": {
+     "bookings": 1127,
+     "users": 25976,
+     "sessions": 35884,
+     "avgsec": 189.2,
+     "engrate": 56.9,
+     "pps": 2.62,
+     "newpct": 79.2
+    },
+    "prior": {
+     "bookings": 1095,
+     "users": 21726,
+     "sessions": 30253,
+     "avgsec": 178.3,
+     "engrate": 65.0,
+     "pps": 2.83,
+     "newpct": 80.7
+    },
+    "yoy": {
+     "bookings": 1861,
+     "users": 28602,
+     "sessions": 58908,
+     "avgsec": 176.3,
+     "engrate": 67.7,
+     "pps": 2.15,
+     "newpct": 22.0
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      10664,
+      10006,
+      11346
+     ],
+     "b": [
+      344,
+      441,
+      302
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      7345,
+      5259,
+      18210
+     ],
+     "b": [
+      220,
+      195,
+      613
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      6132,
+      6220,
+      5669
+     ],
+     "b": [
+      263,
+      276,
+      428
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      3659,
+      2936,
+      8464
+     ],
+     "b": [
+      47,
+      28,
+      113
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      3501,
+      760,
+      1439
+     ],
+     "b": [
+      107,
+      36,
+      17
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      3294,
+      3448,
+      9262
+     ],
+     "b": [
+      89,
+      75,
+      278
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      2581,
+      952,
+      3439
+     ],
+     "b": [
+      28,
+      14,
+      96
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      592,
+      68,
+      282
+     ],
+     "b": [
+      5,
+      1,
+      7
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      342,
+      383,
+      0
+     ],
+     "b": [
+      22,
+      19,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      313,
+      240,
+      206
+     ],
+     "b": [
+      2,
+      10,
+      3
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      19,
+      6,
+      143
+     ],
+     "b": [
+      0,
+      0,
+      4
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 79,
+    "Desktop": 19,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Aqua Shard /",
+     "s": 12471,
+     "b": 334
+    },
+    {
+     "path": "Aqua Shard /peter-pan-afternoon-tea",
+     "s": 7956,
+     "b": 111
+    },
+    {
+     "path": "Aqua Shard /menus",
+     "s": 2275,
+     "b": 23
+    },
+    {
+     "path": "Aqua Shard /explore/…/search",
+     "s": 1948,
+     "b": 217
+    },
+    {
+     "path": "Aqua Shard /2025/04/09/sunday-roast-london",
+     "s": 1766,
+     "b": 1
+    },
+    {
+     "path": "Aqua Shard /explore/…/manage",
+     "s": 1408,
+     "b": 84
+    }
+   ]
+  },
+  "Hutong": {
+   "web": {
+    "cur": {
+     "bookings": 959,
+     "users": 16425,
+     "sessions": 23801,
+     "avgsec": 170.7,
+     "engrate": 53.8,
+     "pps": 2.65,
+     "newpct": 77.8
+    },
+    "prior": {
+     "bookings": 877,
+     "users": 14047,
+     "sessions": 20858,
+     "avgsec": 164.5,
+     "engrate": 62.9,
+     "pps": 2.69,
+     "newpct": 80.0
+    },
+    "yoy": {
+     "bookings": 833,
+     "users": 16143,
+     "sessions": 31592,
+     "avgsec": 152.1,
+     "engrate": 65.3,
+     "pps": 2.03,
+     "newpct": 32.9
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      5813,
+      4920,
+      6819
+     ],
+     "b": [
+      300,
+      251,
+      171
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      5572,
+      4205,
+      7714
+     ],
+     "b": [
+      86,
+      70,
+      52
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      4091,
+      4085,
+      3200
+     ],
+     "b": [
+      218,
+      218,
+      248
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      3619,
+      3980,
+      3453
+     ],
+     "b": [
+      140,
+      207,
+      83
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      2432,
+      720,
+      554
+     ],
+     "b": [
+      140,
+      45,
+      11
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      1670,
+      1733,
+      4950
+     ],
+     "b": [
+      40,
+      47,
+      123
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      1160,
+      437,
+      4912
+     ],
+     "b": [
+      16,
+      10,
+      134
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      169,
+      178,
+      0
+     ],
+     "b": [
+      10,
+      20,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      165,
+      214,
+      216
+     ],
+     "b": [
+      4,
+      5,
+      2
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      100,
+      150,
+      126
+     ],
+     "b": [
+      1,
+      0,
+      4
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      78,
+      79,
+      440
+     ],
+     "b": [
+      4,
+      4,
+      5
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 85,
+    "Desktop": 15,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Hutong /",
+     "s": 6305,
+     "b": 176
+    },
+    {
+     "path": "Hutong /menus",
+     "s": 4369,
+     "b": 43
+    },
+    {
+     "path": "Hutong /menus/lunch-ppc",
+     "s": 3161,
+     "b": 41
+    },
+    {
+     "path": "Hutong /explore/…/search",
+     "s": 2532,
+     "b": 294
+    },
+    {
+     "path": "Hutong /events/golden-sky-dinner-menu",
+     "s": 1714,
+     "b": 21
+    },
+    {
+     "path": "Hutong /explore/…/manage",
+     "s": 1010,
+     "b": 85
+    }
+   ]
+  },
+  "Regent St": {
+   "web": {
+    "cur": {
+     "bookings": 253,
+     "users": 5765,
+     "sessions": 7178,
+     "avgsec": 176.6,
+     "engrate": 62.1,
+     "pps": 2.9,
+     "newpct": 85.0
+    },
+    "prior": {
+     "bookings": 344,
+     "users": 6265,
+     "sessions": 8158,
+     "avgsec": 178.9,
+     "engrate": 68.3,
+     "pps": 3.06,
+     "newpct": 85.9
+    },
+    "yoy": {
+     "bookings": 282,
+     "users": 7285,
+     "sessions": 9462,
+     "avgsec": 160.1,
+     "engrate": 68.4,
+     "pps": 2.67,
+     "newpct": 86.5
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      2583,
+      3503,
+      4039
+     ],
+     "b": [
+      92,
+      153,
+      142
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1368,
+      1715,
+      1906
+     ],
+     "b": [
+      64,
+      96,
+      76
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      883,
+      1075,
+      1243
+     ],
+     "b": [
+      33,
+      44,
+      37
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      780,
+      225,
+      156
+     ],
+     "b": [
+      37,
+      17,
+      7
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      705,
+      514,
+      619
+     ],
+     "b": [
+      6,
+      12,
+      1
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      547,
+      294,
+      320
+     ],
+     "b": [
+      6,
+      5,
+      2
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      537,
+      445,
+      662
+     ],
+     "b": [
+      7,
+      7,
+      4
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      169,
+      209,
+      358
+     ],
+     "b": [
+      8,
+      4,
+      12
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      69,
+      137,
+      0
+     ],
+     "b": [
+      0,
+      3,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      14,
+      12,
+      21
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      3,
+      54,
+      107
+     ],
+     "b": [
+      0,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "Mobile Push Notifications",
+     "s": [
+      1,
+      4,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 81,
+    "Desktop": 18,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Regent St / (Kyoto+Nueva)",
+     "s": 2943,
+     "b": 59
+    },
+    {
+     "path": "Regent St /explore/…/search",
+     "s": 753,
+     "b": 86
+    },
+    {
+     "path": "Regent St /events/aqua-nueva-x-casamigos-tequila",
+     "s": 453,
+     "b": 9
+    },
+    {
+     "path": "Regent St /weekend-brunch",
+     "s": 419,
+     "b": 8
+    },
+    {
+     "path": "Regent St /menus",
+     "s": 365,
+     "b": 2
+    },
+    {
+     "path": "Regent St /explore/…/manage",
+     "s": 245,
+     "b": 17
+    }
+   ]
+  },
+  "Azzurra": {
+   "web": {
+    "cur": {
+     "bookings": 64,
+     "users": 1437,
+     "sessions": 1756,
+     "avgsec": 172.4,
+     "engrate": 67.1,
+     "pps": 2.67,
+     "newpct": 87.8
+    },
+    "prior": {
+     "bookings": 69,
+     "users": 1443,
+     "sessions": 1776,
+     "avgsec": 146.1,
+     "engrate": 65.1,
+     "pps": 2.73,
+     "newpct": 87.4
+    },
+    "yoy": {
+     "bookings": 79,
+     "users": 1714,
+     "sessions": 2097,
+     "avgsec": 139.1,
+     "engrate": 66.3,
+     "pps": 1.91,
+     "newpct": 85.2
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      589,
+      499,
+      491
+     ],
+     "b": [
+      27,
+      15,
+      21
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      387,
+      425,
+      445
+     ],
+     "b": [
+      10,
+      21,
+      31
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      280,
+      290,
+      139
+     ],
+     "b": [
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      228,
+      253,
+      239
+     ],
+     "b": [
+      19,
+      18,
+      7
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      106,
+      70,
+      440
+     ],
+     "b": [
+      1,
+      2,
+      17
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      95,
+      106,
+      131
+     ],
+     "b": [
+      1,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      41,
+      50,
+      33
+     ],
+     "b": [
+      5,
+      5,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      20,
+      39,
+      14
+     ],
+     "b": [
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      12,
+      18,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      0,
+      22,
+      114
+     ],
+     "b": [
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      0,
+      0,
+      47
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Display",
+     "s": [
+      0,
+      0,
+      4
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 73,
+    "Desktop": 26,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Azzurra /",
+     "s": 782,
+     "b": 27
+    },
+    {
+     "path": "Azzurra /menus",
+     "s": 227,
+     "b": 3
+    },
+    {
+     "path": "Azzurra /events/oyster-hour",
+     "s": 184,
+     "b": 0
+    },
+    {
+     "path": "Azzurra /explore/…/search",
+     "s": 96,
+     "b": 20
+    },
+    {
+     "path": "Azzurra /explore/…/manage",
+     "s": 76,
+     "b": 3
+    },
+    {
+     "path": "Azzurra /menus/a-la-carte",
+     "s": 50,
+     "b": 0
+    }
+   ]
+  },
+  "Shiro Sushi": {
+   "web": {
+    "cur": {
+     "bookings": 87,
+     "users": 1095,
+     "sessions": 1442,
+     "avgsec": 193.5,
+     "engrate": 65.7,
+     "pps": 2.87,
+     "newpct": 82.4
+    },
+    "prior": {
+     "bookings": 109,
+     "users": 1243,
+     "sessions": 1651,
+     "avgsec": 186.0,
+     "engrate": 66.6,
+     "pps": 2.86,
+     "newpct": 83.3
+    },
+    "yoy": {
+     "bookings": 91,
+     "users": 1917,
+     "sessions": 2364,
+     "avgsec": 126.3,
+     "engrate": 62.7,
+     "pps": 2.08,
+     "newpct": 87.5
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      607,
+      734,
+      779
+     ],
+     "b": [
+      40,
+      55,
+      39
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      297,
+      325,
+      469
+     ],
+     "b": [
+      26,
+      22,
+      24
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      265,
+      231,
+      692
+     ],
+     "b": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      135,
+      185,
+      172
+     ],
+     "b": [
+      14,
+      14,
+      16
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      50,
+      62,
+      73
+     ],
+     "b": [
+      2,
+      5,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      46,
+      35,
+      46
+     ],
+     "b": [
+      4,
+      6,
+      10
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      20,
+      24,
+      19
+     ],
+     "b": [
+      0,
+      0,
+      2
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      16,
+      35,
+      56
+     ],
+     "b": [
+      0,
+      3,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      4,
+      8,
+      1
+     ],
+     "b": [
+      0,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      3,
+      7,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      2,
+      5,
+      57
+     ],
+     "b": [
+      0,
+      1,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 74,
+    "Desktop": 26,
+    "Tablet": 0
+   },
+   "landing": [
+    {
+     "path": "Shiro Sushi /",
+     "s": 574,
+     "b": 31
+    },
+    {
+     "path": "Shiro Sushi /events/shiro-brunch",
+     "s": 249,
+     "b": 4
+    },
+    {
+     "path": "Shiro Sushi /menus",
+     "s": 115,
+     "b": 2
+    },
+    {
+     "path": "Shiro Sushi /explore/…/search",
+     "s": 104,
+     "b": 28
+    },
+    {
+     "path": "Shiro Sushi /explore/…/manage",
+     "s": 81,
+     "b": 11
+    },
+    {
+     "path": "Shiro Sushi /menus/a-la-carte",
+     "s": 56,
+     "b": 1
+    }
+   ]
+  },
+  "DSL": {
+   "web": {
+    "cur": {
+     "bookings": 525,
+     "users": 5437,
+     "sessions": 7095,
+     "avgsec": 180.9,
+     "engrate": 57.8,
+     "pps": 3.08,
+     "newpct": 82.8
+    },
+    "prior": {
+     "bookings": 498,
+     "users": 5841,
+     "sessions": 7489,
+     "avgsec": 151.2,
+     "engrate": 69.9,
+     "pps": 2.98,
+     "newpct": 83.8
+    },
+    "yoy": {
+     "bookings": 181,
+     "users": 2847,
+     "sessions": 3713,
+     "avgsec": 154.9,
+     "engrate": 68.5,
+     "pps": 2.74,
+     "newpct": 86.9
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      2232,
+      2247,
+      1352
+     ],
+     "b": [
+      192,
+      185,
+      63
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      1368,
+      2373,
+      777
+     ],
+     "b": [
+      37,
+      36,
+      18
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      1026,
+      1143,
+      163
+     ],
+     "b": [
+      125,
+      150,
+      10
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      914,
+      1038,
+      948
+     ],
+     "b": [
+      57,
+      73,
+      63
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      870,
+      145,
+      37
+     ],
+     "b": [
+      60,
+      23,
+      2
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      754,
+      229,
+      37
+     ],
+     "b": [
+      32,
+      14,
+      2
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      314,
+      194,
+      259
+     ],
+     "b": [
+      12,
+      11,
+      19
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      106,
+      129,
+      50
+     ],
+     "b": [
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      90,
+      47,
+      42
+     ],
+     "b": [
+      2,
+      3,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      20,
+      18,
+      0
+     ],
+     "b": [
+      3,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      11,
+      10,
+      29
+     ],
+     "b": [
+      3,
+      1,
+      3
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 84,
+    "Desktop": 15,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "DSL /",
+     "s": 2335,
+     "b": 151
+    },
+    {
+     "path": "DSL /menus",
+     "s": 1398,
+     "b": 24
+    },
+    {
+     "path": "DSL /explore/…/search",
+     "s": 680,
+     "b": 190
+    },
+    {
+     "path": "DSL /explore/…/manage",
+     "s": 508,
+     "b": 38
+    },
+    {
+     "path": "DSL /menus/a-la-carte",
+     "s": 390,
+     "b": 6
+    },
+    {
+     "path": "DSL /experiences/…/express-lunch-menu…",
+     "s": 372,
+     "b": 3
+    }
+   ]
+  }
+ }
+}

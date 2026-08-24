@@ -1,0 +1,1413 @@
+{
+ "venues": [
+  "All",
+  "Aqua HK",
+  "Hutong HK",
+  "The Chinese Library",
+  "Cantina",
+  "Dim Sum Library",
+  "Shiro"
+ ],
+ "data": {
+  "All": {
+   "web": {
+    "cur": {
+     "bookings": 1052,
+     "users": 13514,
+     "sessions": 17573,
+     "avgsec": 187.6,
+     "engrate": 64.8,
+     "pps": 2.59,
+     "newpct": 85.4
+    },
+    "prior": {
+     "bookings": 1042,
+     "users": 13560,
+     "sessions": 17303,
+     "avgsec": 187.5,
+     "engrate": 67.0,
+     "pps": 2.62,
+     "newpct": 86.7
+    },
+    "yoy": {
+     "bookings": 937,
+     "users": 11222,
+     "sessions": 14706,
+     "avgsec": 190.6,
+     "engrate": 70.2,
+     "pps": 2.28,
+     "newpct": 86.0
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      4618,
+      4703,
+      3507
+     ],
+     "b": [
+      321,
+      318,
+      308
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      3816,
+      3529,
+      3055
+     ],
+     "b": [
+      349,
+      314,
+      264
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      3474,
+      3416,
+      3252
+     ],
+     "b": [
+      240,
+      248,
+      247
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      2425,
+      2016,
+      1784
+     ],
+     "b": [
+      15,
+      18,
+      13
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      1151,
+      1398,
+      1096
+     ],
+     "b": [
+      29,
+      39,
+      43
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      774,
+      1018,
+      1045
+     ],
+     "b": [
+      13,
+      15,
+      31
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      497,
+      470,
+      631
+     ],
+     "b": [
+      18,
+      21,
+      20
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      485,
+      415,
+      149
+     ],
+     "b": [
+      55,
+      54,
+      10
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      220,
+      234,
+      0
+     ],
+     "b": [
+      12,
+      15,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      104,
+      112,
+      91
+     ],
+     "b": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "name": "Display",
+     "s": [
+      1,
+      2,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 76,
+    "Desktop": 23,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Aqua HK /",
+     "s": 2001,
+     "b": 90
+    },
+    {
+     "path": "Hutong HK /",
+     "s": 1474,
+     "b": 73
+    },
+    {
+     "path": "Cantina /explore/…/search",
+     "s": 950,
+     "b": 50
+    },
+    {
+     "path": "The Chinese Library /",
+     "s": 944,
+     "b": 38
+    },
+    {
+     "path": "Cantina /",
+     "s": 718,
+     "b": 13
+    },
+    {
+     "path": "Shiro /shiro-central",
+     "s": 677,
+     "b": 19
+    }
+   ]
+  },
+  "Aqua HK": {
+   "web": {
+    "cur": {
+     "bookings": 213,
+     "users": 3170,
+     "sessions": 4347,
+     "avgsec": 213.9,
+     "engrate": 68.9,
+     "pps": 2.74,
+     "newpct": 82.6
+    },
+    "prior": {
+     "bookings": 215,
+     "users": 3242,
+     "sessions": 4330,
+     "avgsec": 223.4,
+     "engrate": 71.9,
+     "pps": 2.81,
+     "newpct": 85.2
+    },
+    "yoy": {
+     "bookings": 240,
+     "users": 3712,
+     "sessions": 4988,
+     "avgsec": 195.5,
+     "engrate": 71.4,
+     "pps": 2.14,
+     "newpct": 86.4
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      1538,
+      1611,
+      1428
+     ],
+     "b": [
+      73,
+      78,
+      87
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      1065,
+      1032,
+      1026
+     ],
+     "b": [
+      58,
+      52,
+      66
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      987,
+      970,
+      975
+     ],
+     "b": [
+      59,
+      55,
+      58
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      169,
+      182,
+      473
+     ],
+     "b": [
+      1,
+      3,
+      4
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      165,
+      135,
+      42
+     ],
+     "b": [
+      7,
+      7,
+      1
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      107,
+      89,
+      156
+     ],
+     "b": [
+      4,
+      3,
+      6
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      105,
+      120,
+      0
+     ],
+     "b": [
+      6,
+      9,
+      0
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      85,
+      115,
+      111
+     ],
+     "b": [
+      2,
+      7,
+      9
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      83,
+      83,
+      665
+     ],
+     "b": [
+      3,
+      1,
+      8
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 73,
+    "Desktop": 26,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Aqua HK /",
+     "s": 2001,
+     "b": 90
+    },
+    {
+     "path": "Aqua HK /explore/…/search",
+     "s": 429,
+     "b": 51
+    },
+    {
+     "path": "Aqua HK /explore/…/manage",
+     "s": 333,
+     "b": 16
+    },
+    {
+     "path": "Aqua HK /menus",
+     "s": 306,
+     "b": 6
+    },
+    {
+     "path": "Aqua HK /menus/brunch",
+     "s": 281,
+     "b": 3
+    },
+    {
+     "path": "Aqua HK /reservations",
+     "s": 143,
+     "b": 9
+    }
+   ]
+  },
+  "Hutong HK": {
+   "web": {
+    "cur": {
+     "bookings": 294,
+     "users": 2702,
+     "sessions": 3689,
+     "avgsec": 236.5,
+     "engrate": 67.7,
+     "pps": 2.77,
+     "newpct": 83.9
+    },
+    "prior": {
+     "bookings": 296,
+     "users": 2771,
+     "sessions": 3694,
+     "avgsec": 229.6,
+     "engrate": 67.7,
+     "pps": 2.79,
+     "newpct": 85.1
+    },
+    "yoy": {
+     "bookings": 226,
+     "users": 3012,
+     "sessions": 4067,
+     "avgsec": 212.5,
+     "engrate": 70.1,
+     "pps": 2.79,
+     "newpct": 83.1
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1349,
+      1350,
+      1097
+     ],
+     "b": [
+      115,
+      120,
+      79
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1067,
+      978,
+      852
+     ],
+     "b": [
+      121,
+      108,
+      64
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      449,
+      502,
+      708
+     ],
+     "b": [
+      33,
+      37,
+      46
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      232,
+      271,
+      456
+     ],
+     "b": [
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      178,
+      169,
+      542
+     ],
+     "b": [
+      4,
+      5,
+      21
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      133,
+      103,
+      226
+     ],
+     "b": [
+      4,
+      3,
+      2
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      97,
+      88,
+      0
+     ],
+     "b": [
+      6,
+      4,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      78,
+      82,
+      45
+     ],
+     "b": [
+      8,
+      12,
+      4
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      75,
+      110,
+      128
+     ],
+     "b": [
+      3,
+      6,
+      9
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      31,
+      58,
+      13
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 71,
+    "Desktop": 28,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Hutong HK /",
+     "s": 1474,
+     "b": 73
+    },
+    {
+     "path": "Hutong HK /explore/…/search",
+     "s": 439,
+     "b": 53
+    },
+    {
+     "path": "Hutong HK /menus",
+     "s": 326,
+     "b": 0
+    },
+    {
+     "path": "Hutong HK /explore/…/manage",
+     "s": 297,
+     "b": 12
+    },
+    {
+     "path": "Hutong HK /explore/…/upgrades",
+     "s": 264,
+     "b": 126
+    },
+    {
+     "path": "Hutong HK /menus/dinner",
+     "s": 131,
+     "b": 2
+    }
+   ]
+  },
+  "The Chinese Library": {
+   "web": {
+    "cur": {
+     "bookings": 120,
+     "users": 1879,
+     "sessions": 2400,
+     "avgsec": 142.2,
+     "engrate": 65.6,
+     "pps": 2.37,
+     "newpct": 88.3
+    },
+    "prior": {
+     "bookings": 128,
+     "users": 1875,
+     "sessions": 2326,
+     "avgsec": 172.8,
+     "engrate": 68.4,
+     "pps": 2.55,
+     "newpct": 88.3
+    },
+    "yoy": {
+     "bookings": 114,
+     "users": 1422,
+     "sessions": 1771,
+     "avgsec": 165.4,
+     "engrate": 69.1,
+     "pps": 1.92,
+     "newpct": 90.1
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      722,
+      685,
+      409
+     ],
+     "b": [
+      36,
+      38,
+      38
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      453,
+      414,
+      484
+     ],
+     "b": [
+      46,
+      42,
+      32
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      396,
+      420,
+      149
+     ],
+     "b": [
+      9,
+      11,
+      5
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      326,
+      267,
+      370
+     ],
+     "b": [
+      18,
+      24,
+      28
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      221,
+      267,
+      45
+     ],
+     "b": [
+      2,
+      1,
+      4
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      153,
+      139,
+      179
+     ],
+     "b": [
+      1,
+      1,
+      4
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      63,
+      60,
+      76
+     ],
+     "b": [
+      1,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      55,
+      62,
+      33
+     ],
+     "b": [
+      7,
+      9,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      6,
+      10,
+      0
+     ],
+     "b": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Display",
+     "s": [
+      1,
+      2,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 76,
+    "Desktop": 23,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "The Chinese Library /",
+     "s": 944,
+     "b": 38
+    },
+    {
+     "path": "The Chinese Library /menus",
+     "s": 334,
+     "b": 4
+    },
+    {
+     "path": "The Chinese Library /explore/…/search",
+     "s": 221,
+     "b": 32
+    },
+    {
+     "path": "The Chinese Library /experiences/…/behind-the-kitchen…",
+     "s": 192,
+     "b": 0
+    },
+    {
+     "path": "The Chinese Library /explore/…/manage",
+     "s": 102,
+     "b": 9
+    },
+    {
+     "path": "The Chinese Library /menus/brunch",
+     "s": 99,
+     "b": 1
+    }
+   ]
+  },
+  "Cantina": {
+   "web": {
+    "cur": {
+     "bookings": 105,
+     "users": 2078,
+     "sessions": 2482,
+     "avgsec": 125.3,
+     "engrate": 53.5,
+     "pps": 2.04,
+     "newpct": 89.2
+    },
+    "prior": {
+     "bookings": 95,
+     "users": 2037,
+     "sessions": 2423,
+     "avgsec": 129.0,
+     "engrate": 55.1,
+     "pps": 2.03,
+     "newpct": 91.9
+    },
+    "yoy": {
+     "bookings": 62,
+     "users": 1045,
+     "sessions": 1325,
+     "avgsec": 159.4,
+     "engrate": 70.3,
+     "pps": 2.12,
+     "newpct": 87.7
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      753,
+      784,
+      240
+     ],
+     "b": [
+      4,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      584,
+      589,
+      318
+     ],
+     "b": [
+      10,
+      18,
+      22
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      475,
+      387,
+      220
+     ],
+     "b": [
+      59,
+      45,
+      20
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      239,
+      257,
+      232
+     ],
+     "b": [
+      18,
+      19,
+      7
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      183,
+      212,
+      131
+     ],
+     "b": [
+      2,
+      3,
+      2
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      78,
+      54,
+      91
+     ],
+     "b": [
+      6,
+      2,
+      3
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      60,
+      79,
+      68
+     ],
+     "b": [
+      4,
+      1,
+      4
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      54,
+      28,
+      12
+     ],
+     "b": [
+      2,
+      4,
+      1
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      52,
+      40,
+      11
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      2,
+      0,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 83,
+    "Desktop": 16,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Cantina /explore/…/search",
+     "s": 950,
+     "b": 50
+    },
+    {
+     "path": "Cantina /",
+     "s": 718,
+     "b": 13
+    },
+    {
+     "path": "Cantina /menus",
+     "s": 145,
+     "b": 1
+    },
+    {
+     "path": "Cantina /explore/…/manage",
+     "s": 107,
+     "b": 5
+    },
+    {
+     "path": "Cantina /menus/brunch",
+     "s": 102,
+     "b": 0
+    },
+    {
+     "path": "Cantina /thedispensarybar",
+     "s": 53,
+     "b": 0
+    }
+   ]
+  },
+  "Dim Sum Library": {
+   "web": {
+    "cur": {
+     "bookings": 155,
+     "users": 1280,
+     "sessions": 1704,
+     "avgsec": 267.0,
+     "engrate": 69.0,
+     "pps": 2.66,
+     "newpct": 85.0
+    },
+    "prior": {
+     "bookings": 148,
+     "users": 1270,
+     "sessions": 1641,
+     "avgsec": 207.7,
+     "engrate": 69.4,
+     "pps": 2.77,
+     "newpct": 85.8
+    },
+    "yoy": {
+     "bookings": 185,
+     "users": 1165,
+     "sessions": 1501,
+     "avgsec": 208.7,
+     "engrate": 72.8,
+     "pps": 2.29,
+     "newpct": 85.1
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      582,
+      589,
+      416
+     ],
+     "b": [
+      76,
+      76,
+      82
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      382,
+      366,
+      360
+     ],
+     "b": [
+      41,
+      33,
+      56
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      248,
+      262,
+      345
+     ],
+     "b": [
+      15,
+      17,
+      34
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      194,
+      126,
+      135
+     ],
+     "b": [
+      4,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      118,
+      147,
+      61
+     ],
+     "b": [
+      8,
+      9,
+      4
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      66,
+      49,
+      124
+     ],
+     "b": [
+      1,
+      2,
+      6
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      46,
+      40,
+      14
+     ],
+     "b": [
+      9,
+      7,
+      3
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      39,
+      33,
+      42
+     ],
+     "b": [
+      1,
+      3,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      18,
+      11,
+      7
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      8,
+      14,
+      0
+     ],
+     "b": [
+      0,
+      1,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 74,
+    "Desktop": 25,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Dim Sum Library /",
+     "s": 634,
+     "b": 49
+    },
+    {
+     "path": "Dim Sum Library /menus",
+     "s": 320,
+     "b": 6
+    },
+    {
+     "path": "Dim Sum Library /explore/…/manage",
+     "s": 204,
+     "b": 5
+    },
+    {
+     "path": "Dim Sum Library /explore/…/search",
+     "s": 159,
+     "b": 62
+    },
+    {
+     "path": "Dim Sum Library /reservations",
+     "s": 85,
+     "b": 24
+    },
+    {
+     "path": "Dim Sum Library /menus/afternoon-tea",
+     "s": 37,
+     "b": 4
+    }
+   ]
+  },
+  "Shiro": {
+   "web": {
+    "cur": {
+     "bookings": 165,
+     "users": 2405,
+     "sessions": 2951,
+     "avgsec": 131.1,
+     "engrate": 61.6,
+     "pps": 2.72,
+     "newpct": 85.6
+    },
+    "prior": {
+     "bookings": 160,
+     "users": 2365,
+     "sessions": 2889,
+     "avgsec": 129.4,
+     "engrate": 66.5,
+     "pps": 2.56,
+     "newpct": 85.6
+    },
+    "yoy": {
+     "bookings": 110,
+     "users": 866,
+     "sessions": 1054,
+     "avgsec": 138.2,
+     "engrate": 62.0,
+     "pps": 1.74,
+     "newpct": 87.4
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      924,
+      514,
+      301
+     ],
+     "b": [
+      5,
+      10,
+      1
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      743,
+      727,
+      228
+     ],
+     "b": [
+      93,
+      71,
+      33
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      452,
+      414,
+      164
+     ],
+     "b": [
+      23,
+      31,
+      34
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      269,
+      430,
+      15
+     ],
+     "b": [
+      0,
+      4,
+      0
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      247,
+      248,
+      182
+     ],
+     "b": [
+      16,
+      16,
+      33
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      169,
+      361,
+      57
+     ],
+     "b": [
+      2,
+      8,
+      5
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      99,
+      105,
+      85
+     ],
+     "b": [
+      4,
+      5,
+      4
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      87,
+      68,
+      3
+     ],
+     "b": [
+      22,
+      15,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      3,
+      1,
+      19
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      2,
+      2,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 81,
+    "Desktop": 18,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "Shiro /shiro-central",
+     "s": 677,
+     "b": 19
+    },
+    {
+     "path": "Shiro /explore/…/search",
+     "s": 529,
+     "b": 31
+    },
+    {
+     "path": "Shiro /",
+     "s": 488,
+     "b": 40
+    },
+    {
+     "path": "Shiro /experiences/…/a-japanese-feast-f…",
+     "s": 223,
+     "b": 0
+    },
+    {
+     "path": "Shiro /explore/…/manage",
+     "s": 139,
+     "b": 11
+    },
+    {
+     "path": "Shiro /shiro-pacific-place",
+     "s": 114,
+     "b": 23
+    }
+   ]
+  }
+ }
+}

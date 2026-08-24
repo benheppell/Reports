@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1127,
+   "tgt": 2083,
+   "wow": 1095,
+   "yoy": 1861,
+   "ytd": 37988,
+   "ytdt": 45699,
+   "meta_s": 2594.5,
+   "goog_s": 3332.4,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 959,
+   "tgt": 1008,
+   "wow": 877,
+   "yoy": 833,
+   "ytd": 22072,
+   "ytdt": 23909,
+   "meta_s": 1989.05,
+   "goog_s": 1966.21,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 253,
+   "tgt": 375,
+   "wow": 344,
+   "yoy": 282,
+   "ytd": 9034,
+   "ytdt": 11668,
+   "meta_s": 1709.87,
+   "goog_s": 1420.93,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 64,
+   "tgt": 121,
+   "wow": 69,
+   "yoy": 79,
+   "ytd": 3225,
+   "ytdt": 4661,
+   "meta_s": 860.81,
+   "goog_s": 308.78,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 87,
+   "tgt": 112,
+   "wow": 109,
+   "yoy": 91,
+   "ytd": 3091,
+   "ytdt": 4383,
+   "meta_s": 320.13,
+   "goog_s": 338.89,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 525,
+   "tgt": 195,
+   "wow": 498,
+   "yoy": 181,
+   "ytd": 15418,
+   "ytdt": 5288,
+   "meta_s": 1819.59,
+   "goog_s": 1461.88,
+   "nc": true
+  }
+ ],
+ "note": "Weekly targets are the FY26/27 portfolio plan (week commencing 17 Aug). <b>Portfolio</b> bookings of 3,015 finished <b>23 percent below</b> the 3,894 weekly target, up 0.8 percent week on week and 9.4 percent below last year. <b>DSL</b> is flagged not comparable: its target predates the rebrand, so 525 bookings against a 195 target is a target problem, not a performance one. Excluding DSL the portfolio is 2,490 against 3,699. <b>Aqua Shard</b> carries the gap: 1,127 against a 2,083 target and 1,861 last year, with users only 9 percent lower, so the loss sits in conversion and in paid search volume rather than in traffic. <b>Hutong (+15.1 percent year on year)</b> and DSL are the only venues ahead of last year; <b>Regent St</b> gave back last week's gain (-26 percent week on week). On YTD the portfolio is <b>5.0 percent behind</b> cumulative target, and 16.5 percent behind excluding DSL. London is reported on covers as well as GA4 bookings, because GA4 only sees the website channel.",
+ "week": "17–23 Aug 2026",
+ "wow": "10–16 Aug 2026",
+ "yoy": "18–24 Aug 2025",
+ "generated": "24 August 2026"
+}
