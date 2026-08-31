@@ -1,0 +1,1123 @@
+{
+  "venues": {
+    "Aqua Shard": {
+      "meta": {
+        "cur": {
+          "spend": 2529.69,
+          "bookings": 153.0,
+          "impr": 376027,
+          "clicks": 12270
+        },
+        "prior": {
+          "spend": 2596.13,
+          "bookings": 188.0,
+          "impr": 396661,
+          "clicks": 12716
+        },
+        "yoy": {
+          "spend": 833.5,
+          "bookings": 112.0,
+          "impr": 123823,
+          "clicks": 5320
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 3012.52,
+          "bookings": 305.87,
+          "impr": 60743,
+          "clicks": 5714
+        },
+        "prior": {
+          "spend": 3335.33,
+          "bookings": 368.46,
+          "impr": 124230,
+          "clicks": 7928
+        },
+        "yoy": {
+          "spend": 2135.19,
+          "bookings": 1131.15,
+          "impr": 86762,
+          "clicks": 12909
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          1942.08,
+          2538.88,
+          2842.28,
+          3024.57,
+          1394.22,
+          1994.02,
+          2596.13,
+          2529.69
+        ],
+        "google_spend": [
+          2888.52,
+          1350.52,
+          1967.74,
+          5570.96,
+          1617.72,
+          2318.85,
+          3335.33,
+          3012.52
+        ],
+        "meta_bookings": [
+          142.0,
+          159.0,
+          183.0,
+          168.0,
+          148.0,
+          169.0,
+          188.0,
+          153.0
+        ],
+        "google_bookings": [
+          762.82,
+          574.2,
+          444.28,
+          524.81,
+          282.72,
+          277.78,
+          368.46,
+          305.87
+        ]
+      },
+      "t4_meta_spend_ty": [
+        1394.22,
+        1994.02,
+        2596.13,
+        2529.69
+      ],
+      "t4_meta_spend_ly": [
+        1619.5,
+        1663.13,
+        1642.36,
+        833.5
+      ],
+      "t4_meta_bookings_ty": [
+        148.0,
+        169.0,
+        188.0,
+        153.0
+      ],
+      "t4_meta_bookings_ly": [
+        152.0,
+        160.0,
+        148.0,
+        112.0
+      ],
+      "t4_goog_spend_ty": [
+        1617.72,
+        2318.85,
+        3335.33,
+        3012.52
+      ],
+      "t4_goog_spend_ly": [
+        1482.4,
+        1655.06,
+        2031.37,
+        2135.19
+      ],
+      "t4_goog_bookings_ty": [
+        282.72,
+        277.78,
+        368.46,
+        305.87
+      ],
+      "t4_goog_bookings_ly": [
+        986.44,
+        893.12,
+        1084.98,
+        1131.15
+      ],
+      "t4_walkin_ty": [
+        694.69,
+        669.73,
+        773.08,
+        395.92
+      ],
+      "t4_walkin_ly": [
+        812.06,
+        789.52,
+        938.59,
+        1006.92
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR | Prospecting Campaign",
+          "platform": "Meta",
+          "spend": 2144.7,
+          "bookings": 152.0,
+          "wow": "down"
+        },
+        {
+          "name": "Search >  Shard",
+          "platform": "Google",
+          "spend": 569.7,
+          "bookings": 34.03,
+          "wow": "down"
+        },
+        {
+          "name": "Search > Afternoon Tea",
+          "platform": "Google",
+          "spend": 533.85,
+          "bookings": 169.43,
+          "wow": "up"
+        },
+        {
+          "name": "Demand Gen > Maps Only",
+          "platform": "Google",
+          "spend": 418.47,
+          "bookings": 0.0,
+          "wow": "up"
+        },
+        {
+          "name": "Search > Generic-Occasion",
+          "platform": "Google",
+          "spend": 386.2,
+          "bookings": 11.25,
+          "wow": "down"
+        },
+        {
+          "name": "CRKLR | Traffic",
+          "platform": "Meta",
+          "spend": 385.03,
+          "bookings": 1.0,
+          "wow": "up"
+        }
+      ]
+    },
+    "Hutong": {
+      "meta": {
+        "cur": {
+          "spend": 1905.2,
+          "bookings": 198.0,
+          "impr": 318976,
+          "clicks": 10966
+        },
+        "prior": {
+          "spend": 1989.38,
+          "bookings": 209.0,
+          "impr": 376210,
+          "clicks": 11942
+        },
+        "yoy": {
+          "spend": 604.36,
+          "bookings": 47.0,
+          "impr": 112486,
+          "clicks": 5214
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 2085.14,
+          "bookings": 192.97,
+          "impr": 85132,
+          "clicks": 4727
+        },
+        "prior": {
+          "spend": 1966.21,
+          "bookings": 224.38,
+          "impr": 76092,
+          "clicks": 4477
+        },
+        "yoy": {
+          "spend": 1461.38,
+          "bookings": 264.79,
+          "impr": 88975,
+          "clicks": 4594
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          1695.08,
+          2074.68,
+          2182.02,
+          2141.78,
+          1261.26,
+          1377.14,
+          1989.38,
+          1905.2
+        ],
+        "google_spend": [
+          1206.41,
+          1392.81,
+          1480.45,
+          1383.63,
+          1441.66,
+          1307.27,
+          1966.21,
+          2085.14
+        ],
+        "meta_bookings": [
+          137.0,
+          150.0,
+          231.0,
+          211.0,
+          213.0,
+          176.0,
+          209.0,
+          198.0
+        ],
+        "google_bookings": [
+          143.99,
+          150.15,
+          227.4,
+          289.39,
+          298.59,
+          345.95,
+          224.38,
+          192.97
+        ]
+      },
+      "t4_meta_spend_ty": [
+        1261.26,
+        1377.14,
+        1989.38,
+        1905.2
+      ],
+      "t4_meta_spend_ly": [
+        1144.62,
+        1185.49,
+        1184.48,
+        604.36
+      ],
+      "t4_meta_bookings_ty": [
+        213.0,
+        176.0,
+        209.0,
+        198.0
+      ],
+      "t4_meta_bookings_ly": [
+        66.0,
+        70.0,
+        76.0,
+        47.0
+      ],
+      "t4_goog_spend_ty": [
+        1441.66,
+        1307.27,
+        1966.21,
+        2085.14
+      ],
+      "t4_goog_spend_ly": [
+        2229.73,
+        2193.56,
+        2069.16,
+        1461.38
+      ],
+      "t4_goog_bookings_ty": [
+        298.59,
+        345.95,
+        224.38,
+        192.97
+      ],
+      "t4_goog_bookings_ly": [
+        471.96,
+        415.98,
+        356.71,
+        264.79
+      ],
+      "t4_walkin_ty": [
+        657.91,
+        739.09,
+        772.0,
+        434.0
+      ],
+      "t4_walkin_ly": [
+        817.0,
+        909.51,
+        994.96,
+        754.52
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR - Prospecting Campaign – Tactical",
+          "platform": "Meta",
+          "spend": 1592.62,
+          "bookings": 137.0,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Restaurant",
+          "platform": "Google",
+          "spend": 564.2,
+          "bookings": 19.9,
+          "wow": "up"
+        },
+        {
+          "name": "P. Max > Hutong",
+          "platform": "Google",
+          "spend": 411.0,
+          "bookings": 28.45,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Lunch",
+          "platform": "Google",
+          "spend": 389.8,
+          "bookings": 11.01,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Shard",
+          "platform": "Google",
+          "spend": 343.43,
+          "bookings": 15.25,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Golden Sky",
+          "platform": "Google",
+          "spend": 210.47,
+          "bookings": 113.01,
+          "wow": "up"
+        }
+      ]
+    },
+    "Regent St": {
+      "meta": {
+        "cur": {
+          "spend": 1812.02,
+          "bookings": 103.0,
+          "impr": 263097,
+          "clicks": 7425
+        },
+        "prior": {
+          "spend": 1710.18,
+          "bookings": 84.0,
+          "impr": 265582,
+          "clicks": 7776
+        },
+        "yoy": {
+          "spend": 332.86,
+          "bookings": 7.0,
+          "impr": 44059,
+          "clicks": 1541
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 1534.89,
+          "bookings": 46.0,
+          "impr": 67757,
+          "clicks": 2108
+        },
+        "prior": {
+          "spend": 1420.91,
+          "bookings": 58.0,
+          "impr": 71985,
+          "clicks": 2127
+        },
+        "yoy": {
+          "spend": 1176.94,
+          "bookings": 58.0,
+          "impr": 91320,
+          "clicks": 2224
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          1223.46,
+          1012.39,
+          1043.85,
+          1021.84,
+          1109.82,
+          1111.65,
+          1710.18,
+          1812.02
+        ],
+        "google_spend": [
+          1329.27,
+          1014.65,
+          782.55,
+          701.95,
+          928.5,
+          1304.54,
+          1420.91,
+          1534.89
+        ],
+        "meta_bookings": [
+          71.0,
+          59.0,
+          77.0,
+          67.0,
+          98.0,
+          72.0,
+          84.0,
+          103.0
+        ],
+        "google_bookings": [
+          97.07,
+          81.25,
+          92.0,
+          79.75,
+          79.78,
+          95.47,
+          58.0,
+          46.0
+        ]
+      },
+      "t4_meta_spend_ty": [
+        1109.82,
+        1111.65,
+        1710.18,
+        1812.02
+      ],
+      "t4_meta_spend_ly": [
+        651.44,
+        648.33,
+        646.47,
+        332.86
+      ],
+      "t4_meta_bookings_ty": [
+        98.0,
+        72.0,
+        84.0,
+        103.0
+      ],
+      "t4_meta_bookings_ly": [
+        11.0,
+        21.0,
+        14.0,
+        7.0
+      ],
+      "t4_goog_spend_ty": [
+        928.5,
+        1304.54,
+        1420.91,
+        1534.89
+      ],
+      "t4_goog_spend_ly": [
+        1391.17,
+        1298.47,
+        1360.01,
+        1176.94
+      ],
+      "t4_goog_bookings_ty": [
+        79.78,
+        95.47,
+        58.0,
+        46.0
+      ],
+      "t4_goog_bookings_ly": [
+        54.0,
+        75.0,
+        64.0,
+        58.0
+      ],
+      "t4_walkin_ty": [
+        274.0,
+        334.0,
+        267.0,
+        150.0
+      ],
+      "t4_walkin_ly": [
+        304.0,
+        294.0,
+        313.0,
+        306.0
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR - Prospecting Campaign V2",
+          "platform": "Meta",
+          "spend": 508.69,
+          "bookings": 33.0,
+          "wow": "flat"
+        },
+        {
+          "name": "CRKLR - Prospecting Campaign",
+          "platform": "Meta",
+          "spend": 479.54,
+          "bookings": 35.0,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Nueva > Roof top",
+          "platform": "Google",
+          "spend": 438.07,
+          "bookings": 19.0,
+          "wow": "up"
+        },
+        {
+          "name": "CRKLR - Weekend Brunch Focus",
+          "platform": "Meta",
+          "spend": 406.46,
+          "bookings": 23.0,
+          "wow": "up"
+        },
+        {
+          "name": "PMax > Aqua Nueva",
+          "platform": "Google",
+          "spend": 356.15,
+          "bookings": 10.12,
+          "wow": "flat"
+        },
+        {
+          "name": "CRKLR - Prospecting Campaign – Tactical",
+          "platform": "Meta",
+          "spend": 347.98,
+          "bookings": 12.0,
+          "wow": "up"
+        }
+      ]
+    },
+    "Azzurra": {
+      "meta": {
+        "cur": {
+          "spend": 1017.48,
+          "bookings": 50.0,
+          "impr": 175982,
+          "clicks": 2936
+        },
+        "prior": {
+          "spend": 861.02,
+          "bookings": 46.0,
+          "impr": 163294,
+          "clicks": 2446
+        },
+        "yoy": {
+          "spend": 279.03,
+          "bookings": 18.0,
+          "impr": 42704,
+          "clicks": 892
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 340.02,
+          "bookings": 17.5,
+          "impr": 8301,
+          "clicks": 465
+        },
+        "prior": {
+          "spend": 308.78,
+          "bookings": 21.0,
+          "impr": 9186,
+          "clicks": 552
+        },
+        "yoy": {
+          "spend": 2052.72,
+          "bookings": 37.0,
+          "impr": 245376,
+          "clicks": 1996
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          1139.34,
+          1074.95,
+          1151.22,
+          567.08,
+          898.17,
+          941.9,
+          861.02,
+          1017.48
+        ],
+        "google_spend": [
+          348.83,
+          624.9,
+          663.4,
+          640.61,
+          635.86,
+          339.02,
+          308.78,
+          340.02
+        ],
+        "meta_bookings": [
+          60.0,
+          64.0,
+          54.0,
+          40.0,
+          57.0,
+          61.0,
+          46.0,
+          50.0
+        ],
+        "google_bookings": [
+          31.67,
+          19.17,
+          17.33,
+          17.83,
+          14.33,
+          22.0,
+          21.0,
+          17.5
+        ]
+      },
+      "t4_meta_spend_ty": [
+        898.17,
+        941.9,
+        861.02,
+        1017.48
+      ],
+      "t4_meta_spend_ly": [
+        276.79,
+        349.55,
+        487.31,
+        279.03
+      ],
+      "t4_meta_bookings_ty": [
+        57.0,
+        61.0,
+        46.0,
+        50.0
+      ],
+      "t4_meta_bookings_ly": [
+        12.0,
+        16.0,
+        19.0,
+        18.0
+      ],
+      "t4_goog_spend_ty": [
+        635.86,
+        339.02,
+        308.78,
+        340.02
+      ],
+      "t4_goog_spend_ly": [
+        690.01,
+        608.06,
+        657.85,
+        2052.72
+      ],
+      "t4_goog_bookings_ty": [
+        14.33,
+        22.0,
+        21.0,
+        17.5
+      ],
+      "t4_goog_bookings_ly": [
+        21.5,
+        16.5,
+        23.0,
+        37.0
+      ],
+      "t4_walkin_ty": [
+        82.0,
+        30.0,
+        68.0,
+        39.0
+      ],
+      "t4_walkin_ly": [
+        20.0,
+        23.0,
+        47.0,
+        102.0
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR - Prospecting Campaign",
+          "platform": "Meta",
+          "spend": 1017.53,
+          "bookings": 50.0,
+          "wow": "up"
+        },
+        {
+          "name": "Search > Brand",
+          "platform": "Google",
+          "spend": 107.25,
+          "bookings": 9.5,
+          "wow": "flat"
+        },
+        {
+          "name": "P. Max > Generic",
+          "platform": "Google",
+          "spend": 104.04,
+          "bookings": 6.0,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Local Discovery",
+          "platform": "Google",
+          "spend": 64.46,
+          "bookings": 2.0,
+          "wow": "up"
+        },
+        {
+          "name": "Search > Private Events",
+          "platform": "Google",
+          "spend": 38.31,
+          "bookings": 0.0,
+          "wow": "up"
+        },
+        {
+          "name": "Search > Restaurant",
+          "platform": "Google",
+          "spend": 25.95,
+          "bookings": 0.0,
+          "wow": "up"
+        }
+      ]
+    },
+    "Shiro Sushi": {
+      "meta": {
+        "cur": {
+          "spend": 311.91,
+          "bookings": 21.0,
+          "impr": 60136,
+          "clicks": 1151
+        },
+        "prior": {
+          "spend": 320.33,
+          "bookings": 21.0,
+          "impr": 65100,
+          "clicks": 1347
+        },
+        "yoy": {
+          "spend": 350.65,
+          "bookings": 20.0,
+          "impr": 77907,
+          "clicks": 2683
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 348.58,
+          "bookings": 38.95,
+          "impr": 36700,
+          "clicks": 452
+        },
+        "prior": {
+          "spend": 338.89,
+          "bookings": 30.33,
+          "impr": 56734,
+          "clicks": 646
+        },
+        "yoy": {
+          "spend": 290.91,
+          "bookings": 53.16,
+          "impr": 180584,
+          "clicks": 779
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          324.49,
+          310.17,
+          326.52,
+          314.12,
+          312.73,
+          324.98,
+          320.33,
+          311.91
+        ],
+        "google_spend": [
+          665.01,
+          585.57,
+          751.38,
+          726.7,
+          590.02,
+          370.01,
+          338.89,
+          348.58
+        ],
+        "meta_bookings": [
+          29.0,
+          30.0,
+          40.0,
+          40.0,
+          29.0,
+          26.0,
+          21.0,
+          21.0
+        ],
+        "google_bookings": [
+          72.35,
+          81.4,
+          97.92,
+          106.35,
+          55.5,
+          53.67,
+          30.33,
+          38.95
+        ]
+      },
+      "t4_meta_spend_ty": [
+        312.73,
+        324.98,
+        320.33,
+        311.91
+      ],
+      "t4_meta_spend_ly": [
+        349.58,
+        352.89,
+        344.4,
+        350.65
+      ],
+      "t4_meta_bookings_ty": [
+        29.0,
+        26.0,
+        21.0,
+        21.0
+      ],
+      "t4_meta_bookings_ly": [
+        17.0,
+        24.0,
+        24.0,
+        20.0
+      ],
+      "t4_goog_spend_ty": [
+        590.02,
+        370.01,
+        338.89,
+        348.58
+      ],
+      "t4_goog_spend_ly": [
+        551.83,
+        525.59,
+        475.27,
+        290.91
+      ],
+      "t4_goog_bookings_ty": [
+        55.5,
+        53.67,
+        30.33,
+        38.95
+      ],
+      "t4_goog_bookings_ly": [
+        88.8,
+        59.99,
+        59.05,
+        53.16
+      ],
+      "t4_walkin_ty": [
+        460.0,
+        417.0,
+        223.0,
+        124.0
+      ],
+      "t4_walkin_ly": [
+        484.5,
+        433.0,
+        425.0,
+        306.0
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR - Leads Campaign – Consolidated",
+          "platform": "Meta",
+          "spend": 311.91,
+          "bookings": 21.0,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Restaurant",
+          "platform": "Google",
+          "spend": 143.37,
+          "bookings": 9.24,
+          "wow": "up"
+        },
+        {
+          "name": "Pmax > Generic",
+          "platform": "Google",
+          "spend": 138.31,
+          "bookings": 0.0,
+          "wow": "down"
+        },
+        {
+          "name": "Search > Brand",
+          "platform": "Google",
+          "spend": 66.89,
+          "bookings": 29.7,
+          "wow": "flat"
+        }
+      ]
+    },
+    "DSL": {
+      "meta": {
+        "cur": {
+          "spend": 1813.6,
+          "bookings": 132.0,
+          "impr": 247348,
+          "clicks": 7338
+        },
+        "prior": {
+          "spend": 1819.73,
+          "bookings": 107.0,
+          "impr": 271146,
+          "clicks": 7070
+        },
+        "yoy": {
+          "spend": 297.37,
+          "bookings": 22.0,
+          "impr": 41475,
+          "clicks": 1555
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 1183.56,
+          "bookings": 34.0,
+          "impr": 15490,
+          "clicks": 858
+        },
+        "prior": {
+          "spend": 1461.88,
+          "bookings": 69.0,
+          "impr": 23432,
+          "clicks": 1403
+        },
+        "yoy": {
+          "spend": 0.0,
+          "bookings": 0.0,
+          "impr": 0,
+          "clicks": 0
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          1855.13,
+          1791.07,
+          1847.7,
+          1814.51,
+          1824.78,
+          1821.45,
+          1819.73,
+          1813.6
+        ],
+        "google_spend": [
+          371.35,
+          275.16,
+          273.9,
+          269.99,
+          420.6,
+          450.78,
+          1461.88,
+          1183.56
+        ],
+        "meta_bookings": [
+          97.0,
+          93.0,
+          148.0,
+          139.0,
+          133.0,
+          128.0,
+          107.0,
+          132.0
+        ],
+        "google_bookings": [
+          32.0,
+          41.5,
+          36.0,
+          31.49,
+          53.75,
+          46.92,
+          69.0,
+          34.0
+        ]
+      },
+      "t4_meta_spend_ty": [
+        1824.78,
+        1821.45,
+        1819.73,
+        1813.6
+      ],
+      "t4_meta_spend_ly": [
+        583.44,
+        577.67,
+        582.22,
+        297.37
+      ],
+      "t4_meta_bookings_ty": [
+        133.0,
+        128.0,
+        107.0,
+        132.0
+      ],
+      "t4_meta_bookings_ly": [
+        40.0,
+        33.0,
+        29.0,
+        22.0
+      ],
+      "t4_goog_spend_ty": [
+        420.6,
+        450.78,
+        1461.88,
+        1183.56
+      ],
+      "t4_goog_spend_ly": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t4_goog_bookings_ty": [
+        53.75,
+        46.92,
+        69.0,
+        34.0
+      ],
+      "t4_goog_bookings_ly": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t4_walkin_ty": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "t4_walkin_ly": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR - DSL Prospecting Campaign",
+          "platform": "Meta",
+          "spend": 1813.6,
+          "bookings": 132.0,
+          "wow": "flat"
+        },
+        {
+          "name": "PMax > Generic",
+          "platform": "Google",
+          "spend": 597.63,
+          "bookings": 15.5,
+          "wow": "down"
+        },
+        {
+          "name": "Search > Afternoon Tea",
+          "platform": "Google",
+          "spend": 241.36,
+          "bookings": 4.0,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Restaurant",
+          "platform": "Google",
+          "spend": 200.59,
+          "bookings": 5.5,
+          "wow": "up"
+        },
+        {
+          "name": "Search > Brand",
+          "platform": "Google",
+          "spend": 143.98,
+          "bookings": 9.0,
+          "wow": "up"
+        }
+      ]
+    }
+  },
+  "problems": [
+    "DSL Meta account act_986571809129888 verified: Graph API returns account_name 'Luci' (not 'Dim Sum Library'). Used as instructed.",
+    "DSL Google customer 3456575686 returned no rows for 2025-08-04..2025-08-31; all YoY and t4 LY Google figures for DSL are reported as 0 (no 2025 data exists, not a fetch failure).",
+    "Hutong Google: two booking-complete actions exist. Used 'Sevenrooms Booking Complete'; excluded 'Hutong UK - GA4 (web) sevenrooms_booking_complete' per the GA4 exclusion rule (a non-GA4 alternative was available).",
+    "Walk-in signals: 'Click Book Now' does not exist in any of the six Google accounts. 'Store visits' is absent for Regent St (3511646647) in both years, for Azzurra (4154355693) in 2026, and for DSL (3456575686) entirely; those walk-in totals therefore cover only the actions that exist.",
+    "Azzurra Google 2025 walk-in signals consist of 'Store visits' only (no Local actions / Clicks to call rows in 2025), so t4_walkin_ly is not like-for-like with t4_walkin_ty for this venue.",
+    "Azzurra Google LY impressions look anomalous (w2025-08-11 = 1,125,146; w2025-08-25 = 245,376 on 2052.72 spend) vs ~24-33k in other weeks. Reported as returned by the API, not adjusted.",
+    "First batch of 8 concurrent Meta insights calls: 5 timed out after 180s. All were re-run successfully at lower concurrency; no Meta data is missing.",
+    "Meta campaign-level spend differs from account-level by pennies from API rounding (Aqua Shard CUR 2529.73 vs 2529.69; Azzurra CUR 1017.53 vs 1017.48). Venue totals use the account-level figures.",
+    "Shiro Sushi has only 4 campaigns with CUR-week spend and DSL only 5, so their 'campaigns' lists are shorter than 6.",
+    "Regent St = act_1545421758841127 (Aqua Kyoto) + act_1545420182174618 (Aqua nueva) summed for Meta; Google 3511646647 bookings = 'Kyoto Booking Complete Sevenrooms' + 'Nueva Booking Complete Sevenrooms'."
+  ]
+}

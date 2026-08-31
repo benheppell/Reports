@@ -1,0 +1,874 @@
+{
+ "meta": {
+  "week": "w2026-08-24",
+  "cur": [
+   "2026-08-24",
+   "2026-08-30"
+  ],
+  "prior": [
+   "2026-08-17",
+   "2026-08-23"
+  ],
+  "yoy": [
+   "2025-08-25",
+   "2025-08-31"
+  ],
+  "ytd": [
+   "2026-01-01",
+   "2026-08-30"
+  ],
+  "weeks8": [
+   "2026-07-06",
+   "2026-07-13",
+   "2026-07-20",
+   "2026-07-27",
+   "2026-08-03",
+   "2026-08-10",
+   "2026-08-17",
+   "2026-08-24"
+  ]
+ },
+ "venues": {
+  "Aqua NYC": {
+   "property_id": "451165443",
+   "cur": {
+    "users": 5908,
+    "sessions": 7175,
+    "avgsec": 161.4,
+    "engrate": 42.5,
+    "pps": 2.76,
+    "newpct": 90.6,
+    "bookings": 215
+   },
+   "prior": {
+    "users": 5778,
+    "sessions": 7035,
+    "avgsec": 144.3,
+    "engrate": 55.2,
+    "pps": 2.78,
+    "newpct": 92.3,
+    "bookings": 207
+   },
+   "yoy": {
+    "users": 4862,
+    "sessions": 6232,
+    "avgsec": 205.9,
+    "engrate": 63.8,
+    "pps": 3.49,
+    "newpct": 87.9,
+    "bookings": 334
+   },
+   "ytd": 8797,
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      2520,
+      2630,
+      559
+     ],
+     "b": [
+      26,
+      35,
+      10
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      2106,
+      1951,
+      1095
+     ],
+     "b": [
+      72,
+      90,
+      46
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1393,
+      1265,
+      1384
+     ],
+     "b": [
+      39,
+      38,
+      90
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      992,
+      50,
+      73
+     ],
+     "b": [
+      46,
+      8,
+      8
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      456,
+      566,
+      687
+     ],
+     "b": [
+      10,
+      21,
+      41
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      219,
+      211,
+      242
+     ],
+     "b": [
+      11,
+      7,
+      8
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      156,
+      245,
+      258
+     ],
+     "b": [
+      2,
+      4,
+      6
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      143,
+      77,
+      666
+     ],
+     "b": [
+      6,
+      3,
+      48
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      27,
+      36,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      23,
+      17,
+      1301
+     ],
+     "b": [
+      2,
+      1,
+      75
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      3,
+      42,
+      16
+     ],
+     "b": [
+      0,
+      0,
+      2
+     ]
+    }
+   ],
+   "devices": {
+    "mobile": 85,
+    "desktop": 14,
+    "tablet": 1
+   },
+   "landing": [
+    {
+     "page": "/aqua-roma",
+     "sessions": 3392,
+     "bookings": 45
+    },
+    {
+     "page": "/",
+     "sessions": 916,
+     "bookings": 21
+    },
+    {
+     "page": "(blank)",
+     "sessions": 746,
+     "bookings": 23
+    },
+    {
+     "page": "/aqua-kyoto",
+     "sessions": 496,
+     "bookings": 10
+    },
+    {
+     "page": "/explore/aquanyc/reservations/create/search",
+     "sessions": 370,
+     "bookings": 35
+    },
+    {
+     "page": "/explore/aquanyc/reservations/manage",
+     "sessions": 291,
+     "bookings": 26
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     302,
+     284,
+     311,
+     300,
+     295,
+     259,
+     207,
+     215
+    ],
+    "users": [
+     5867,
+     7774,
+     7042,
+     7437,
+     6974,
+     6158,
+     5778,
+     5908
+    ]
+   },
+   "t4_book_ty": [
+    295,
+    259,
+    207,
+    215
+   ],
+   "t4_book_ly": [
+    332,
+    309,
+    296,
+    334
+   ],
+   "t4_users_ty": [
+    6974,
+    6158,
+    5778,
+    5908
+   ],
+   "t4_users_ly": [
+    5182,
+    4905,
+    4877,
+    4862
+   ],
+   "paid_sessions_cur": 2976
+  },
+  "Hutong NYC": {
+   "property_id": "370519903",
+   "cur": {
+    "users": 2937,
+    "sessions": 3801,
+    "avgsec": 201.0,
+    "engrate": 61.4,
+    "pps": 2.48,
+    "newpct": 59.3,
+    "bookings": 136
+   },
+   "prior": {
+    "users": 3395,
+    "sessions": 4326,
+    "avgsec": 162.4,
+    "engrate": 71.1,
+    "pps": 2.48,
+    "newpct": 62.2,
+    "bookings": 141
+   },
+   "yoy": {
+    "users": 4024,
+    "sessions": 5094,
+    "avgsec": 151.0,
+    "engrate": 61.3,
+    "pps": 2.47,
+    "newpct": 86.5,
+    "bookings": 186
+   },
+   "ytd": 5537,
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1293,
+      1313,
+      1454
+     ],
+     "b": [
+      50,
+      38,
+      62
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      646,
+      638,
+      1005
+     ],
+     "b": [
+      19,
+      16,
+      44
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      535,
+      536,
+      290
+     ],
+     "b": [
+      4,
+      0,
+      14
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      440,
+      481,
+      1154
+     ],
+     "b": [
+      10,
+      13,
+      7
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      310,
+      45,
+      52
+     ],
+     "b": [
+      11,
+      11,
+      4
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      305,
+      455,
+      249
+     ],
+     "b": [
+      5,
+      24,
+      18
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      297,
+      306,
+      535
+     ],
+     "b": [
+      27,
+      24,
+      35
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      96,
+      113,
+      169
+     ],
+     "b": [
+      2,
+      4,
+      2
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      60,
+      339,
+      3
+     ],
+     "b": [
+      6,
+      9,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      56,
+      56,
+      0
+     ],
+     "b": [
+      2,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      1,
+      18,
+      116
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "mobile": 74,
+    "desktop": 24,
+    "tablet": 2
+   },
+   "landing": [
+    {
+     "page": "/",
+     "sessions": 1849,
+     "bookings": 47
+    },
+    {
+     "page": "/explore/hutongnewyork/reservations/create/search",
+     "sessions": 375,
+     "bookings": 37
+    },
+    {
+     "page": "/menus",
+     "sessions": 357,
+     "bookings": 4
+    },
+    {
+     "page": "(blank)",
+     "sessions": 220,
+     "bookings": 5
+    },
+    {
+     "page": "/restaurant-week-2",
+     "sessions": 187,
+     "bookings": 6
+    },
+    {
+     "page": "(not set)",
+     "sessions": 176,
+     "bookings": 0
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     107,
+     156,
+     134,
+     191,
+     180,
+     169,
+     141,
+     136
+    ],
+    "users": [
+     1947,
+     2725,
+     2585,
+     3230,
+     3226,
+     3347,
+     3395,
+     2937
+    ]
+   },
+   "t4_book_ty": [
+    180,
+    169,
+    141,
+    136
+   ],
+   "t4_book_ly": [
+    231,
+    228,
+    215,
+    186
+   ],
+   "t4_users_ty": [
+    3226,
+    3347,
+    3395,
+    2937
+   ],
+   "t4_users_ly": [
+    4563,
+    4135,
+    4026,
+    4024
+   ],
+   "paid_sessions_cur": 745
+  },
+  "Hutong Miami": {
+   "property_id": "369179739",
+   "cur": {
+    "users": 1839,
+    "sessions": 2285,
+    "avgsec": 175.7,
+    "engrate": 56.2,
+    "pps": 2.77,
+    "newpct": 81.8,
+    "bookings": 80
+   },
+   "prior": {
+    "users": 2154,
+    "sessions": 2767,
+    "avgsec": 161.7,
+    "engrate": 65.5,
+    "pps": 2.61,
+    "newpct": 87.8,
+    "bookings": 112
+   },
+   "yoy": {
+    "users": 1797,
+    "sessions": 2164,
+    "avgsec": 160.2,
+    "engrate": 65.5,
+    "pps": 2.03,
+    "newpct": 88.9,
+    "bookings": 103
+   },
+   "ytd": 3297,
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      672,
+      941,
+      1
+     ],
+     "b": [
+      11,
+      11,
+      0
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      522,
+      655,
+      425
+     ],
+     "b": [
+      19,
+      40,
+      27
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      358,
+      411,
+      363
+     ],
+     "b": [
+      14,
+      21,
+      18
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      248,
+      92,
+      240
+     ],
+     "b": [
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      227,
+      34,
+      15
+     ],
+     "b": [
+      7,
+      3,
+      0
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      214,
+      258,
+      281
+     ],
+     "b": [
+      11,
+      15,
+      18
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      142,
+      200,
+      686
+     ],
+     "b": [
+      6,
+      7,
+      8
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      54,
+      92,
+      143
+     ],
+     "b": [
+      9,
+      11,
+      31
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      12,
+      28,
+      0
+     ],
+     "b": [
+      1,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      1,
+      51,
+      0
+     ],
+     "b": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      0,
+      0,
+      3
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "mobile": 88,
+    "desktop": 11,
+    "tablet": 1
+   },
+   "landing": [
+    {
+     "page": "/",
+     "sessions": 786,
+     "bookings": 23
+    },
+    {
+     "page": "/menus/bubbles-bao-brunch",
+     "sessions": 561,
+     "bookings": 7
+    },
+    {
+     "page": "/menus",
+     "sessions": 218,
+     "bookings": 1
+    },
+    {
+     "page": "/menus/brickell-nights-menu",
+     "sessions": 163,
+     "bookings": 4
+    },
+    {
+     "page": "/explore/hutongmiami/reservations/create/search",
+     "sessions": 156,
+     "bookings": 28
+    },
+    {
+     "page": "(blank)",
+     "sessions": 129,
+     "bookings": 2
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     62,
+     47,
+     71,
+     65,
+     93,
+     88,
+     112,
+     80
+    ],
+    "users": [
+     1446,
+     1410,
+     1516,
+     1515,
+     1705,
+     1934,
+     2154,
+     1839
+    ]
+   },
+   "t4_book_ty": [
+    93,
+    88,
+    112,
+    80
+   ],
+   "t4_book_ly": [
+    131,
+    142,
+    133,
+    103
+   ],
+   "t4_users_ty": [
+    1705,
+    1934,
+    2154,
+    1839
+   ],
+   "t4_users_ly": [
+    2831,
+    2730,
+    2297,
+    1797
+   ],
+   "paid_sessions_cur": 886
+  }
+ },
+ "splits": {
+  "Aqua Kyoto NYC": {
+   "t4_users_ty": [
+    1481,
+    1266,
+    1199,
+    1080
+   ],
+   "t4_users_ly": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "t4_book_ty": [
+    37,
+    27,
+    21,
+    23
+   ],
+   "t4_book_ly": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Aqua Roma": {
+   "t4_users_ty": [
+    5493,
+    4892,
+    4579,
+    4828
+   ],
+   "t4_users_ly": [
+    5182,
+    4905,
+    4877,
+    4862
+   ],
+   "t4_book_ty": [
+    258,
+    232,
+    186,
+    192
+   ],
+   "t4_book_ly": [
+    332,
+    309,
+    296,
+    334
+   ]
+  }
+ },
+ "problems": [
+  "Aqua NYC prior-week bookings call timed out on first attempt (MCP 180s); retried successfully -> 207.",
+  "Aqua Kyoto NYC LY users: GA4 pagePath regex 'kyoto|aquakyotonyc' does return LY traffic (2025 wks: 420/432/358/449) but ONLY from the legacy page /menu/a-la-carte/kyoto-a-la-carte/ - there was no Aqua Kyoto NYC venue section LY. Per brief, LY arrays reported as [0,0,0,0]; Aqua Roma (continuation) therefore carries the full LY combined users.",
+  "Aqua Kyoto NYC LY bookings query returned 'No data found' (genuine zero) - reported [0,0,0,0].",
+  "Venue split users are derived by subtraction (combined minus pagePath-scoped Kyoto); GA4 totalUsers are not additive so Aqua Roma users are an approximation.",
+  "GA4 Unassigned is elevated in the current week (Aqua NYC 992 sessions / 46 bookings vs 50 / 8 prior) - normal re-attribution lag, do not read CUR channel splits as final."
+ ]
+}

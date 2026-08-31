@@ -1,0 +1,445 @@
+{
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ch": {
+    "web": {
+     "c": 2256,
+     "p": 2269,
+     "y": 2914
+    },
+    "gr": {
+     "c": 396,
+     "p": 316,
+     "y": 118
+    },
+    "ot": {
+     "c": 148,
+     "p": 141,
+     "y": 61
+    },
+    "walk": {
+     "c": 135,
+     "p": 129,
+     "y": 99
+    },
+    "recep": {
+     "c": 0,
+     "p": 6,
+     "y": 0
+    },
+    "ota": {
+     "c": 18,
+     "p": 19,
+     "y": 21
+    },
+    "tp": {
+     "c": 57,
+     "p": 42,
+     "y": 44
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ch": {
+    "web": {
+     "c": 1922,
+     "p": 1743,
+     "y": 1497
+    },
+    "gr": {
+     "c": 372,
+     "p": 331,
+     "y": 157
+    },
+    "ot": {
+     "c": 105,
+     "p": 113,
+     "y": 98
+    },
+    "walk": {
+     "c": 120,
+     "p": 167,
+     "y": 79
+    },
+    "recep": {
+     "c": 35,
+     "p": 41,
+     "y": 39
+    },
+    "ota": {
+     "c": 27,
+     "p": 6,
+     "y": 27
+    },
+    "tp": {
+     "c": 48,
+     "p": 38,
+     "y": 10
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ch": {
+    "web": {
+     "c": 615,
+     "p": 562,
+     "y": 494
+    },
+    "gr": {
+     "c": 42,
+     "p": 31,
+     "y": 82
+    },
+    "ot": {
+     "c": 169,
+     "p": 122,
+     "y": 92
+    },
+    "walk": {
+     "c": 170,
+     "p": 158,
+     "y": 143
+    },
+    "recep": {
+     "c": 43,
+     "p": 43,
+     "y": 25
+    },
+    "ota": {
+     "c": 264,
+     "p": 266,
+     "y": 163
+    },
+    "tp": {
+     "c": 6,
+     "p": 0,
+     "y": 9
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ch": {
+    "web": {
+     "c": 204,
+     "p": 140,
+     "y": 161
+    },
+    "gr": {
+     "c": 30,
+     "p": 34,
+     "y": 58
+    },
+    "ot": {
+     "c": 97,
+     "p": 72,
+     "y": 34
+    },
+    "walk": {
+     "c": 255,
+     "p": 285,
+     "y": 253
+    },
+    "recep": {
+     "c": 22,
+     "p": 19,
+     "y": 42
+    },
+    "ota": {
+     "c": 29,
+     "p": 42,
+     "y": 148
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ch": {
+    "web": {
+     "c": 241,
+     "p": 184,
+     "y": 142
+    },
+    "gr": {
+     "c": 30,
+     "p": 50,
+     "y": 68
+    },
+    "ot": {
+     "c": 58,
+     "p": 65,
+     "y": 14
+    },
+    "walk": {
+     "c": 351,
+     "p": 347,
+     "y": 229
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 96,
+     "p": 98,
+     "y": 30
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 4
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ch": {
+    "web": {
+     "c": 1191,
+     "p": 1192,
+     "y": 345
+    },
+    "gr": {
+     "c": 120,
+     "p": 141,
+     "y": 86
+    },
+    "ot": {
+     "c": 486,
+     "p": 496,
+     "y": 62
+    },
+    "walk": {
+     "c": 1053,
+     "p": 1073,
+     "y": 338
+    },
+    "recep": {
+     "c": 23,
+     "p": 33,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 199
+    },
+    "tp": {
+     "c": 2,
+     "p": 0,
+     "y": 4
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30"
+  ],
+  "total": [
+   11633,
+   10293,
+   12153,
+   11259,
+   11321,
+   10512,
+   10814,
+   11236
+  ],
+  "ot": [
+   1551,
+   1405,
+   1607,
+   1474,
+   1558,
+   1089,
+   1009,
+   1063
+  ]
+ },
+ "source_map": {
+  "Booking Widget": "web",
+  "Walk In": "walk",
+  "OT Guestcenter": "ot",
+  "Nav CTA": "web",
+  "Google Reserve Integration": "gr",
+  "Afternoon Tea - Landing Page": "web",
+  "Ava Taylor": "EXCLUDED",
+  "Hero CTA": "web",
+  "Hannah Brown": "EXCLUDED",
+  "Maisie Brind": "EXCLUDED",
+  "Thefork Integration": "ota",
+  "Lucy Taylor": "EXCLUDED",
+  "First Table": "ota",
+  "Lucy Dearman": "EXCLUDED",
+  "Giuseppe Prette": "EXCLUDED",
+  "Sunset Hour - Landing Page": "web",
+  "À la carte - Landing Page": "web",
+  "Evelyn Ragui": "EXCLUDED",
+  "À La Carte Menu - Landing Page": "web",
+  "Mia Smith": "EXCLUDED",
+  "Tea Tales - Landing Page": "web",
+  "Yasmine Peaches": "EXCLUDED",
+  "Regent Street Reception": "recep",
+  "Skyline Dining Experience - Landing Page": "web",
+  "Menu Page": "web",
+  "PPC Google": "web",
+  "Darya Pavlikova": "EXCLUDED",
+  "Cordelia Simon": "EXCLUDED",
+  "Hutong Dynasty Brunch - Landing Page": "web",
+  "Taste the Season Lunch Menu - Landing Page": "web",
+  "Restaurant - Landing Page": "web",
+  "Sunday Roast Aqua Shard - Landing Page": "web",
+  "BuyAGift": "tp",
+  "Zarah Stevens": "EXCLUDED",
+  "Kyoto Sunday Brunch - Landing Page": "web",
+  "Virgin Experiences": "tp",
+  "Vera Jin": "EXCLUDED",
+  "DSL Host": "recep",
+  "Azzurra Reception": "recep",
+  "Hutong Reception": "recep",
+  "Flavours of Hutong - Landing Page": "web",
+  "January Kyoto Nights - Landing Page": "web",
+  "Brunch at Aqua Shard - Landing Page": "web",
+  "Open Table": "ot",
+  "Diana Bordas": "EXCLUDED",
+  "Santa Kudina": "EXCLUDED",
+  "Patrycja Kokoszka": "EXCLUDED",
+  "Opentable": "ot",
+  "Lunch Set Menu - Landing Page": "web",
+  "Hutong Window Table Experience - Landing Page": "web",
+  "Birthday offer - Hutong - Landing Page": "web",
+  "Complimentary Bellini with our Sunset Menu - Landing Page": "web",
+  "Instagram": "web",
+  "Fay Collins": "EXCLUDED",
+  "Website": "web",
+  "Klaudia Kiss": "EXCLUDED",
+  "Birthday offer - aqua shard - Landing Page": "web",
+  "DSL Reception": "recep",
+  "Golden Sky £60 - Landing Page": "web",
+  "Set Dinner Menu - Landing Page": "web",
+  "Complimentary Chinese Lantern Cocktail With Lunch - Landing Page": "web",
+  "Shiro's Bottomless Sushi Brunch - Landing Page": "web",
+  "afternoontea.co.uk": "tp",
+  "Nueva Dark Brunch - Landing Page": "web",
+  "Alessandro dallatomasina": "EXCLUDED",
+  "Denise O’Grady": "EXCLUDED",
+  "Alejandro Fernandez": "EXCLUDED",
+  "Aqua Shard Bar - Landing Page": "web",
+  "Terrace Dining - Landing Page": "web",
+  "Oyster Hour - Landing Page": "web",
+  "Dovile Kacinskaite": "EXCLUDED",
+  "Three-Course Set Menu - Landing Page": "web",
+  "popup": "web",
+  "Email": "web",
+  "Nicholas Sartore": "EXCLUDED",
+  "Prachi Chaudhary": "EXCLUDED",
+  "Faysal Fahad": "EXCLUDED",
+  "Ten Group": "tp",
+  "aqua shard Reception": "recep",
+  "Rooftop Terrace - Landing Page": "web",
+  "Shaftesbury Theatre – Show Night Special at Dim Sum Library - Landing Page": "web",
+  "Pre-Theatre Menu - Landing Page": "web",
+  "Birthday offer - aqua kyoto - Landing Page": "web",
+  "À La Carte - Landing Page": "web",
+  "SquareMeal": "tp",
+  "You're invited to an evening of jazz, delicious food, and great wine - Landing Page": "web",
+  "Bubbles & Bao Sunday Brunch - Landing Page": "web",
+  "Aqua Nueva’s Free-Flowing Brunch - Landing Page": "web",
+  "Isabel Joynes": "EXCLUDED",
+  "Shiro Local 20 Discount - Landing Page": "web",
+  "Petronela Cristian": "EXCLUDED",
+  "Amex": "tp",
+  "Open Table Transfer": "ot",
+  "Bottomlessbrunch.com": "tp",
+  "Team London Bridge | 25% off - Landing Page": "web",
+  "Shaftesbury Complimentary Aperol Spritz - Landing Page": "web",
+  "Bottomless Oysters - Landing Page": "web",
+  "Truly experiences concierge": "tp",
+  "Shanghai Socials - Landing Page": "web",
+  "We miss you - Landing Page": "web",
+  "Petros Mastorakis": "EXCLUDED",
+  "Dim Sum in the Clouds - Landing Page": "web",
+  "Hubert Krotkiewicz": "EXCLUDED",
+  "Kinga Bartnicka": "EXCLUDED",
+  "Express Lunch Menu - Landing Page": "web",
+  "Vijay Sanas": "EXCLUDED",
+  "4.\tAqua Spirit Bar - Landing Page": "web",
+  "Truly Experiences concierge": "tp",
+  "Sunset Dinner": "web",
+  "Natali Nikolova": "EXCLUDED",
+  "Your Table is Waiting - Landing Page": "web",
+  "Pierre Meunier": "EXCLUDED",
+  "Kids Eat Free": "web",
+  "Kat Karali": "EXCLUDED",
+  "Sunset Sessions": "web",
+  "Your Table is Waiting - Landing Page, Yasmine Peaches": "web",
+  "Burn & Brunch: Empowered by Lululemon Rooftop Yoga & Aqua Kyoto Sushi Brunch - Landing Page": "web",
+  "Birthday Offer - Dim Sum Library - Landing Page": "web",
+  "Mirko Maimeri": "EXCLUDED",
+  "Marta Peddis": "EXCLUDED",
+  "Maki Monday - Landing Page": "web",
+  "Yonder": "tp",
+  "Afternoon Tea": "web",
+  "Set Menu - Landing Page": "web",
+  "Onezone": "tp",
+  "Marbo, Walk In": "walk",
+  "LVMH / Exclusive 20% Off - Landing Page": "web",
+  "Paola Giannobile": "EXCLUDED",
+  "We Miss You - Landing Page": "web",
+  "Elle x Azzurra - Landing Page": "web",
+  "Buy a Gift": "tp",
+  "Birthday Offer - Azzurra - Landing Page": "web",
+  "Shaftesbury Theatre | LUCi to Kyoto - Landing Page": "web",
+  "Set Menu": "web",
+  "Your Gift Awaits - Landing Page": "web",
+  "Weekday Lunch Sets - Landing Page": "web",
+  "Mario Neziri": "EXCLUDED",
+  "Gianluca Capilungo": "EXCLUDED",
+  "Katy Cheung": "EXCLUDED",
+  "edm": "web",
+  "Chinese Lantern Offer - Landing Page": "web",
+  "Reynold Habadah": "EXCLUDED",
+  "Rakesh Raut": "EXCLUDED",
+  "AfternoonTea.co.uk": "tp",
+  "Your Exclusive Offer | Aqua Nueva x lululemon Reward - Landing Page": "web",
+  "Lunch Experience Menu DH": "web",
+  "Truly Experiences": "tp",
+  "Shaftesbury Theatre": "tp",
+  "Beyond the Runway: Panel & Networking - Landing Page": "web",
+  "Pre-Theatre": "web",
+  "Ben Heppell": "EXCLUDED",
+  "Visa Complimentary Drink": "tp",
+  "Angela Polcovnicu": "EXCLUDED",
+  "Daisy Rui": "EXCLUDED",
+  "Cristina Viola": "EXCLUDED",
+  "An Evening With Kelvin Okafor - Landing Page": "web",
+  "Flavour of Hutong": "web",
+  "West End Club offer - Landing Page": "web",
+  "Aldwych Theatre - shown Night Special at Dim Sum Library - Landing Page": "web",
+  "Kyoto Nights": "web",
+  "Peter Pan Afternoon tea offer - Landing Page": "web",
+  "Birthday Offer - Shiro - Landing Page": "web",
+  "Exclusive Window Table Booking at Dinner - Landing Page": "web",
+  "Google": "web",
+  "Bianca Hoehn": "EXCLUDED",
+  "Kelvin Okafor Workshop - Landing Page": "web"
+ },
+ "problems": []
+}

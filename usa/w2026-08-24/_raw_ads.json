@@ -1,0 +1,593 @@
+{
+  "meta_info": {
+    "currency": "USD",
+    "cur": "2026-08-24..2026-08-30",
+    "prior": "2026-08-17..2026-08-23",
+    "yoy": "2025-08-25..2025-08-31",
+    "trend8_mondays": [
+      "2026-07-06",
+      "2026-07-13",
+      "2026-07-20",
+      "2026-07-27",
+      "2026-08-03",
+      "2026-08-10",
+      "2026-08-17",
+      "2026-08-24"
+    ],
+    "meta_booking_action": "offsite_conversion.fb_pixel_custom (Schedule)",
+    "google_walkin_signals": [
+      "Store visits",
+      "Local actions - Directions",
+      "Local actions - Menu views",
+      "Click Book Now",
+      "Clicks to call"
+    ]
+  },
+  "venues": {
+    "Aqua NYC": {
+      "meta": {
+        "cur": {
+          "spend": 1875.52,
+          "bookings": 74,
+          "impr": 77730,
+          "clicks": 4075
+        },
+        "prior": {
+          "spend": 1905.46,
+          "bookings": 72,
+          "impr": 84021,
+          "clicks": 3971
+        },
+        "yoy": {
+          "spend": 1358.7,
+          "bookings": 71,
+          "impr": 136693,
+          "clicks": 4456
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 692.3,
+          "bookings": 27,
+          "impr": 16071,
+          "clicks": 846
+        },
+        "prior": {
+          "spend": 559.84,
+          "bookings": 26,
+          "impr": 11892,
+          "clicks": 707
+        },
+        "yoy": {
+          "spend": 1586.54,
+          "bookings": 85,
+          "impr": 108771,
+          "clicks": 2552
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          1615.54,
+          1605.5,
+          1626.74,
+          1605.33,
+          1841.8,
+          1882.56,
+          1905.46,
+          1875.52
+        ],
+        "google_spend": [
+          1180.8,
+          1115.12,
+          1119.74,
+          1134.67,
+          602.14,
+          569.97,
+          559.84,
+          692.3
+        ],
+        "meta_bookings": [
+          74,
+          112,
+          90,
+          71,
+          94,
+          84,
+          72,
+          74
+        ],
+        "google_bookings": [
+          48,
+          55,
+          64,
+          52,
+          34,
+          48,
+          26,
+          27
+        ]
+      },
+      "t4_meta_bookings_ty": [
+        94,
+        84,
+        72,
+        74
+      ],
+      "t4_meta_bookings_ly": [
+        69,
+        73,
+        67,
+        71
+      ],
+      "t4_meta_spend_ty": [
+        1841.8,
+        1882.56,
+        1905.46,
+        1875.52
+      ],
+      "t4_meta_spend_ly": [
+        856.61,
+        856.38,
+        859.56,
+        1358.7
+      ],
+      "t4_goog_bookings_ty": [
+        34,
+        48,
+        26,
+        27
+      ],
+      "t4_goog_bookings_ly": [
+        64,
+        74,
+        62,
+        85
+      ],
+      "t4_goog_spend_ty": [
+        602.14,
+        569.97,
+        559.84,
+        692.3
+      ],
+      "t4_goog_spend_ly": [
+        1204.31,
+        1278.62,
+        1432.11,
+        1586.54
+      ],
+      "t4_walkin_ty": [
+        271,
+        250,
+        218,
+        174
+      ],
+      "t4_walkin_ly": [
+        581,
+        699,
+        815,
+        753
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR - Prospecting",
+          "platform": "meta",
+          "spend": 1107.29,
+          "bookings": 42,
+          "wow": "flat"
+        },
+        {
+          "name": "CRKLR - Remarketing Campaign",
+          "platform": "meta",
+          "spend": 562.32,
+          "bookings": 24,
+          "wow": "flat"
+        },
+        {
+          "name": "CRKLR - Prospecting – Outdoor Dining Campaign",
+          "platform": "meta",
+          "spend": 205.91,
+          "bookings": 8,
+          "wow": "flat"
+        },
+        {
+          "name": "Search > Italian Restaurant - Manhattan",
+          "platform": "google",
+          "spend": 143.3,
+          "bookings": 8,
+          "wow": "up"
+        },
+        {
+          "name": "Search > Japanese Restaurant - Manhattan",
+          "platform": "google",
+          "spend": 112.62,
+          "bookings": 4,
+          "wow": "up"
+        },
+        {
+          "name": "PMax > Generic",
+          "platform": "google",
+          "spend": 101.57,
+          "bookings": 5,
+          "wow": "up"
+        }
+      ]
+    },
+    "Hutong NYC": {
+      "meta": {
+        "cur": {
+          "spend": 1018.22,
+          "bookings": 13,
+          "impr": 86954,
+          "clicks": 2373
+        },
+        "prior": {
+          "spend": 1032.83,
+          "bookings": 22,
+          "impr": 99956,
+          "clicks": 2465
+        },
+        "yoy": {
+          "spend": 812.38,
+          "bookings": 14,
+          "impr": 185713,
+          "clicks": 3606
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 1245.32,
+          "bookings": 20,
+          "impr": 102162,
+          "clicks": 2532
+        },
+        "prior": {
+          "spend": 1352.8,
+          "bookings": 31,
+          "impr": 120337,
+          "clicks": 3362
+        },
+        "yoy": {
+          "spend": 1138.54,
+          "bookings": 53,
+          "impr": 126002,
+          "clicks": 1618
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          766.94,
+          717.94,
+          753.41,
+          752.51,
+          967.85,
+          1031.29,
+          1032.83,
+          1018.22
+        ],
+        "google_spend": [
+          983.73,
+          1242.57,
+          232.61,
+          1955.21,
+          1287.38,
+          1261.71,
+          1352.8,
+          1245.32
+        ],
+        "meta_bookings": [
+          16,
+          9,
+          5,
+          9,
+          5,
+          18,
+          22,
+          13
+        ],
+        "google_bookings": [
+          38,
+          67,
+          16,
+          76,
+          51,
+          48,
+          31,
+          20
+        ]
+      },
+      "t4_meta_bookings_ty": [
+        5,
+        18,
+        22,
+        13
+      ],
+      "t4_meta_bookings_ly": [
+        14,
+        13,
+        26,
+        14
+      ],
+      "t4_meta_spend_ty": [
+        967.85,
+        1031.29,
+        1032.83,
+        1018.22
+      ],
+      "t4_meta_spend_ly": [
+        805.68,
+        812.04,
+        810.2,
+        812.38
+      ],
+      "t4_goog_bookings_ty": [
+        51,
+        48,
+        31,
+        20
+      ],
+      "t4_goog_bookings_ly": [
+        67,
+        53,
+        63,
+        53
+      ],
+      "t4_goog_spend_ty": [
+        1287.38,
+        1261.71,
+        1352.8,
+        1245.32
+      ],
+      "t4_goog_spend_ly": [
+        696.78,
+        744.11,
+        754.32,
+        1138.54
+      ],
+      "t4_walkin_ty": [
+        899,
+        779,
+        619,
+        324
+      ],
+      "t4_walkin_ly": [
+        892,
+        730,
+        782,
+        650
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR | NEW Conversions Campaign",
+          "platform": "meta",
+          "spend": 553.35,
+          "bookings": 12,
+          "wow": "flat"
+        },
+        {
+          "name": "P. Max > Generic",
+          "platform": "google",
+          "spend": 288.37,
+          "bookings": 8,
+          "wow": "down"
+        },
+        {
+          "name": "Demand Gen > Generic",
+          "platform": "google",
+          "spend": 281.07,
+          "bookings": 1,
+          "wow": "up"
+        },
+        {
+          "name": "CRKLR | NEW Retargeting Campaign",
+          "platform": "meta",
+          "spend": 254.96,
+          "bookings": 1,
+          "wow": "flat"
+        },
+        {
+          "name": "Search >  Generic",
+          "platform": "google",
+          "spend": 245.57,
+          "bookings": 3,
+          "wow": "down"
+        },
+        {
+          "name": "CRKLR | NEW Awareness Campaign | Video Viewers",
+          "platform": "meta",
+          "spend": 209.91,
+          "bookings": 0,
+          "wow": "flat"
+        }
+      ]
+    },
+    "Hutong Miami": {
+      "meta": {
+        "cur": {
+          "spend": 1845.06,
+          "bookings": 23,
+          "impr": 174362,
+          "clicks": 4150
+        },
+        "prior": {
+          "spend": 1847.32,
+          "bookings": 32,
+          "impr": 194714,
+          "clicks": 5021
+        },
+        "yoy": {
+          "spend": 471.49,
+          "bookings": 11,
+          "impr": 103265,
+          "clicks": 1337
+        }
+      },
+      "google": {
+        "cur": {
+          "spend": 609.56,
+          "bookings": 13,
+          "impr": 17957,
+          "clicks": 673
+        },
+        "prior": {
+          "spend": 639.04,
+          "bookings": 21,
+          "impr": 18827,
+          "clicks": 785
+        },
+        "yoy": {
+          "spend": 1233.25,
+          "bookings": 27,
+          "impr": 62665,
+          "clicks": 1340
+        }
+      },
+      "trend8": {
+        "meta_spend": [
+          2509.94,
+          2081.87,
+          2158.89,
+          1625.35,
+          1737.59,
+          1839.41,
+          1847.32,
+          1845.06
+        ],
+        "google_spend": [
+          611.75,
+          529.68,
+          269.94,
+          589.13,
+          702.03,
+          638.1,
+          639.04,
+          609.56
+        ],
+        "meta_bookings": [
+          22,
+          19,
+          28,
+          20,
+          29,
+          19,
+          32,
+          23
+        ],
+        "google_bookings": [
+          13,
+          7,
+          5,
+          22,
+          22,
+          24,
+          21,
+          13
+        ]
+      },
+      "t4_meta_bookings_ty": [
+        29,
+        19,
+        32,
+        23
+      ],
+      "t4_meta_bookings_ly": [
+        25,
+        43,
+        31,
+        11
+      ],
+      "t4_meta_spend_ty": [
+        1737.59,
+        1839.41,
+        1847.32,
+        1845.06
+      ],
+      "t4_meta_spend_ly": [
+        1008.69,
+        1030.93,
+        688.1,
+        471.49
+      ],
+      "t4_goog_bookings_ty": [
+        22,
+        24,
+        21,
+        13
+      ],
+      "t4_goog_bookings_ly": [
+        34,
+        37,
+        39,
+        27
+      ],
+      "t4_goog_spend_ty": [
+        702.03,
+        638.1,
+        639.04,
+        609.56
+      ],
+      "t4_goog_spend_ly": [
+        638.85,
+        791.16,
+        1100.67,
+        1233.25
+      ],
+      "t4_walkin_ty": [
+        398,
+        352,
+        311,
+        127
+      ],
+      "t4_walkin_ly": [
+        313,
+        386,
+        365,
+        328
+      ],
+      "campaigns": [
+        {
+          "name": "CRKLR | NEW Conversions Campaign",
+          "platform": "meta",
+          "spend": 996.88,
+          "bookings": 10,
+          "wow": "flat"
+        },
+        {
+          "name": "CRKLR | NEW Retargeting Campaign",
+          "platform": "meta",
+          "spend": 465.49,
+          "bookings": 13,
+          "wow": "flat"
+        },
+        {
+          "name": "CRKLR | NEW Awareness Campaign",
+          "platform": "meta",
+          "spend": 382.69,
+          "bookings": 0,
+          "wow": "flat"
+        },
+        {
+          "name": "P. Max > Generic",
+          "platform": "google",
+          "spend": 164.05,
+          "bookings": 4,
+          "wow": "down"
+        },
+        {
+          "name": "Search > Chinese Cuisine",
+          "platform": "google",
+          "spend": 161.0,
+          "bookings": 5,
+          "wow": "down"
+        },
+        {
+          "name": "Search > Special Events",
+          "platform": "google",
+          "spend": 114.73,
+          "bookings": 0,
+          "wow": "up"
+        }
+      ]
+    }
+  },
+  "problems": []
+}

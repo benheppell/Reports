@@ -1,0 +1,354 @@
+{
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ch": {
+    "web": {
+     "c": 490,
+     "p": 456,
+     "y": 434
+    },
+    "gr": {
+     "c": 232,
+     "p": 180,
+     "y": 100
+    },
+    "ot": {
+     "c": 269,
+     "p": 284,
+     "y": 236
+    },
+    "walk": {
+     "c": 58,
+     "p": 102,
+     "y": 79
+    },
+    "recep": {
+     "c": 137,
+     "p": 846,
+     "y": 57
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ch": {
+    "web": {
+     "c": 562,
+     "p": 489,
+     "y": 523
+    },
+    "gr": {
+     "c": 403,
+     "p": 364,
+     "y": 106
+    },
+    "ot": {
+     "c": 288,
+     "p": 256,
+     "y": 166
+    },
+    "walk": {
+     "c": 169,
+     "p": 125,
+     "y": 87
+    },
+    "recep": {
+     "c": 60,
+     "p": 158,
+     "y": 176
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ch": {
+    "web": {
+     "c": 301,
+     "p": 241,
+     "y": 247
+    },
+    "gr": {
+     "c": 159,
+     "p": 100,
+     "y": 104
+    },
+    "ot": {
+     "c": 237,
+     "p": 259,
+     "y": 125
+    },
+    "walk": {
+     "c": 93,
+     "p": 104,
+     "y": 89
+    },
+    "recep": {
+     "c": 292,
+     "p": 247,
+     "y": 331
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ch": {
+    "web": {
+     "c": 198,
+     "p": 206,
+     "y": 103
+    },
+    "gr": {
+     "c": 68,
+     "p": 96,
+     "y": 19
+    },
+    "ot": {
+     "c": 221,
+     "p": 231,
+     "y": 190
+    },
+    "walk": {
+     "c": 88,
+     "p": 117,
+     "y": 81
+    },
+    "recep": {
+     "c": 303,
+     "p": 398,
+     "y": 561
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 6,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ch": {
+    "web": {
+     "c": 375,
+     "p": 392,
+     "y": 297
+    },
+    "gr": {
+     "c": 258,
+     "p": 202,
+     "y": 131
+    },
+    "ot": {
+     "c": 358,
+     "p": 470,
+     "y": 286
+    },
+    "walk": {
+     "c": 992,
+     "p": 1045,
+     "y": 1019
+    },
+    "recep": {
+     "c": 147,
+     "p": 258,
+     "y": 62
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro",
+   "ch": {
+    "web": {
+     "c": 388,
+     "p": 383,
+     "y": 168
+    },
+    "gr": {
+     "c": 170,
+     "p": 177,
+     "y": 63
+    },
+    "ot": {
+     "c": 503,
+     "p": 510,
+     "y": 310
+    },
+    "walk": {
+     "c": 1770,
+     "p": 1870,
+     "y": 641
+    },
+    "recep": {
+     "c": 466,
+     "p": 606,
+     "y": 359
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W23",
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30"
+  ],
+  "total": [
+   8081,
+   8222,
+   7476,
+   8681,
+   9107,
+   9595,
+   11172,
+   10061
+  ],
+  "ot": [
+   1710,
+   1740,
+   1713,
+   1730,
+   1787,
+   1862,
+   2010,
+   1876
+  ]
+ },
+ "source_map": {
+  "Walk In": "walk",
+  "Booking Widget": "web",
+  "OpenRice": "ot",
+  "Google Reserve Integration": "gr",
+  "Reception Team": "recep",
+  "Shiro Reception": "recep",
+  "Janet": "EXCLUDED",
+  "Cantina Reservations": "recep",
+  "Divina Narwani": "EXCLUDED",
+  "Stella": "EXCLUDED",
+  "Shanti Gurung": "EXCLUDED",
+  "Panda": "EXCLUDED",
+  "Shiro TK Reception": "recep",
+  "Chinese Library": "recep",
+  "Hutong Reservations Hutong Reservations": "recep",
+  "Hiu Ching": "EXCLUDED",
+  "Emily Tse": "EXCLUDED",
+  "Ceci": "EXCLUDED",
+  "Rachel": "EXCLUDED",
+  "Kathy Chen": "EXCLUDED",
+  "Prerana": "EXCLUDED",
+  "Isha Sunwar": "EXCLUDED",
+  "Prerna": "EXCLUDED",
+  "Claudia": "EXCLUDED",
+  "Joan Bunyi": "EXCLUDED",
+  "Razena": "EXCLUDED",
+  "Deborah Ho": "EXCLUDED",
+  "Joanna Hung": "EXCLUDED",
+  "Sze": "EXCLUDED",
+  "Matthew Ho": "EXCLUDED",
+  "JY Ho": "EXCLUDED",
+  "A Japanese Feast for Every Occasion at Shiro - Landing Page": "web",
+  "Kaitlyn": "EXCLUDED",
+  "Pacific Place": "recep",
+  "Popup": "web",
+  "JY": "EXCLUDED",
+  "Brian": "EXCLUDED",
+  "Mandy Wong": "EXCLUDED",
+  "Snow": "EXCLUDED",
+  "Queenie Wong": "EXCLUDED",
+  "Alice Pun": "EXCLUDED",
+  "Christopher Cheung": "EXCLUDED",
+  "Google": "web",
+  "Adele": "EXCLUDED",
+  "Icons of Flavour- Tasting Menu from Chef Junno Li - Landing Page": "web",
+  "WhatsApp Booking": "recep",
+  "Trip Advisor Integration": "tp",
+  "Derek": "EXCLUDED",
+  "The Early Week Supper Menu - Landing Page": "web",
+  "Instagram": "web",
+  "Roma & Kyoto Set Lunch - Landing Page": "web",
+  "Elina Subedi": "EXCLUDED",
+  "7X EXCLUSIVE": "web",
+  "Barry": "EXCLUDED",
+  "Zico": "EXCLUDED",
+  "Axify.ai (LS)": "tp",
+  "Shanti": "EXCLUDED",
+  "Hutong’s Red Lantern Series – Occasionally Fiery - Landing Page": "web",
+  "Skyline Menu - Landing Page": "web",
+  "Melo": "EXCLUDED",
+  "A Special Invitation – Rediscover The Chinese Library - Landing Page": "web",
+  "A Special Invitation – Rediscover Hutong’s Stunning Flavors & Views - Landing Page": "web",
+  "Chinese Valentine's Day - Landing Page": "web",
+  "Beli": "EXCLUDED",
+  "Birthday Offer": "web",
+  "Celebrate Your Birthday with Us - Landing Page": "web",
+  "What's On": "web",
+  "Jo Fong": "EXCLUDED",
+  "Matthew": "EXCLUDED",
+  "Behind The Kitchen Doors - Landing Page": "web",
+  "Zoe": "EXCLUDED",
+  "Gina": "EXCLUDED",
+  "Snow Cheung": "EXCLUDED",
+  "Always About Sushi - Landing Page": "web",
+  "Event Booking": "EXCLUDED"
+ },
+ "problems": []
+}

@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1078,
+   "tgt": 2083,
+   "wow": 1133,
+   "yoy": 1770,
+   "ytd": 39072,
+   "ytdt": 47782,
+   "meta_s": 2529.69,
+   "goog_s": 3012.52,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 995,
+   "tgt": 1008,
+   "wow": 980,
+   "yoy": 792,
+   "ytd": 23088,
+   "ytdt": 24917,
+   "meta_s": 1905.2,
+   "goog_s": 2085.14,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 266,
+   "tgt": 375,
+   "wow": 256,
+   "yoy": 269,
+   "ytd": 9303,
+   "ytdt": 12043,
+   "meta_s": 1812.02,
+   "goog_s": 1534.89,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 80,
+   "tgt": 121,
+   "wow": 64,
+   "yoy": 99,
+   "ytd": 3305,
+   "ytdt": 4782,
+   "meta_s": 1017.48,
+   "goog_s": 340.02,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 89,
+   "tgt": 112,
+   "wow": 87,
+   "yoy": 69,
+   "ytd": 3180,
+   "ytdt": 4495,
+   "meta_s": 311.91,
+   "goog_s": 348.58,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 486,
+   "tgt": 195,
+   "wow": 531,
+   "yoy": 160,
+   "ytd": 15911,
+   "ytdt": 5483,
+   "meta_s": 1813.6,
+   "goog_s": 1183.56,
+   "nc": false
+  }
+ ],
+ "note": "Read London on week-on-week and year-on-year movement; the weekly targets are shown for reference only. London booked <b>2,994 GA4 bookings</b>, <b>down 1.9 percent week on week</b> and <b>down 5.2 percent year on year</b>. <b>Hutong</b> is the standout at 995, <b>+25.6 percent year on year</b> and effectively level with its reference target. <b>Shiro Sushi</b> is <b>+29.0 percent year on year</b> on much lower traffic, so its conversion rate has more than doubled. <b>Aqua Shard</b> fell to 1,078, <b>-39.1 percent year on year</b>, with users down 11.9 percent and conversion at 4.7 percent against 6.8 percent last year, so the gap there is now as much conversion as traffic. <b>Azzurra</b> is the weakest read, users <b>-26.6 percent year on year</b>. <b>DSL</b> sits far above a pre-rebrand target, so its variance and year-on-year are <b>not comparable</b>. Covers are the fuller demand measure for London, so read this next to the covers report.",
+ "week": "24–30 Aug 2026",
+ "wow": "17–23 Aug 2026",
+ "yoy": "25–31 Aug 2025",
+ "generated": "31 August 2026"
+}

@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 175,
+   "tgt": 224,
+   "wow": 213,
+   "yoy": 219,
+   "ytd": 5851,
+   "ytdt": 6309,
+   "meta_s": 5446.03,
+   "goog_s": 8792.72,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 303,
+   "tgt": 264,
+   "wow": 294,
+   "yoy": 257,
+   "ytd": 8510,
+   "ytdt": 7576,
+   "meta_s": 3307.61,
+   "goog_s": 4874.35,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 135,
+   "tgt": 100,
+   "wow": 120,
+   "yoy": 104,
+   "ytd": 3535,
+   "ytdt": 3004,
+   "meta_s": 3826.99,
+   "goog_s": 6491.55,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 94,
+   "tgt": 52,
+   "wow": 105,
+   "yoy": 44,
+   "ytd": 2005,
+   "ytdt": 1627,
+   "meta_s": 4977.8,
+   "goog_s": 6177.28,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 146,
+   "tgt": 181,
+   "wow": 155,
+   "yoy": 142,
+   "ytd": 4764,
+   "ytdt": 5155,
+   "meta_s": 2232.21,
+   "goog_s": 3062.59,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 159,
+   "tgt": 128,
+   "wow": 165,
+   "yoy": 108,
+   "ytd": 4346,
+   "ytdt": 3661,
+   "meta_s": 6062.53,
+   "goog_s": 5430.83,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = August monthly GA4 target x 7/30. <b>Vesu</b> remains excluded (still closed, no bookings or Google spend). Hong Kong booked <b>1,012 bookings</b> against a 949 target (<b>+6.6 percent</b>), <b>down 3.8 percent week on week</b> from last week’s record 1,052 but still <b>+15.8 percent year on year</b>. Four venues beat target, led by <b>Cantina (+81%)</b>, <b>The Chinese Library (+35%)</b>, <b>Shiro (+24%)</b> and <b>Hutong (+15%)</b>. <b>Aqua HK (-22%)</b> and <b>Dim Sum Library (-19%)</b> missed, and they are the same two venues behind on YTD (<b>Aqua HK -7.3%</b>, <b>Dim Sum Library -7.6%</b>); the other four are all double-digit percentages ahead. Aqua HK is the one to watch: its users fell <b>22.7 percent year on year</b> this week, so the gap there is traffic rather than conversion. The portfolio is <b>+6.1 percent ahead of its cumulative YTD target</b>.",
+ "week": "24–30 Aug 2026",
+ "wow": "17–23 Aug 2026",
+ "yoy": "25–31 Aug 2025",
+ "generated": "31 August 2026"
+}

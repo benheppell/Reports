@@ -1,0 +1,1574 @@
+{
+ "venues": {
+  "Aqua HK": {
+   "cur": {
+    "bookings": 175,
+    "users": 3078,
+    "sessions": 4193,
+    "avgsec": 215.2,
+    "engrate": 70.5,
+    "pps": 2.7,
+    "newpct": 84.8
+   },
+   "prior": {
+    "bookings": 213,
+    "users": 3170,
+    "sessions": 4347,
+    "avgsec": 213.9,
+    "engrate": 68.9,
+    "pps": 2.74,
+    "newpct": 82.6
+   },
+   "yoy": {
+    "bookings": 219,
+    "users": 3981,
+    "sessions": 5179,
+    "avgsec": 177.8,
+    "engrate": 72.2,
+    "pps": 2.17,
+    "newpct": 86.3
+   },
+   "ytd": 5851,
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      1462,
+      1538,
+      1354
+     ],
+     "b": [
+      71,
+      73,
+      67
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1007,
+      987,
+      1010
+     ],
+     "b": [
+      46,
+      59,
+      64
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      917,
+      1065,
+      1080
+     ],
+     "b": [
+      33,
+      58,
+      63
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      194,
+      169,
+      420
+     ],
+     "b": [
+      0,
+      1,
+      3
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      129,
+      165,
+      47
+     ],
+     "b": [
+      11,
+      7,
+      7
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      114,
+      107,
+      137
+     ],
+     "b": [
+      3,
+      4,
+      8
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      112,
+      85,
+      143
+     ],
+     "b": [
+      5,
+      2,
+      4
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      91,
+      105,
+      0
+     ],
+     "b": [
+      5,
+      6,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      81,
+      83,
+      977
+     ],
+     "b": [
+      1,
+      3,
+      3
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      1,
+      0,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      0,
+      0,
+      24
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Organic Video",
+     "s": [
+      0,
+      0,
+      2
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 73,
+    "Desktop": 26,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 1891,
+     "b": 74
+    },
+    {
+     "path": "/explore/aquahk/reservations/create/search",
+     "s": 409,
+     "b": 55
+    },
+    {
+     "path": "/explore/aquahk/reservations/manage",
+     "s": 323,
+     "b": 16
+    },
+    {
+     "path": "/menus/brunch",
+     "s": 311,
+     "b": 7
+    },
+    {
+     "path": "/menus",
+     "s": 290,
+     "b": 2
+    },
+    {
+     "path": "(not set)",
+     "s": 236,
+     "b": 0
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     204,
+     164,
+     201,
+     196,
+     194,
+     215,
+     213,
+     175
+    ],
+    "users": [
+     3156,
+     2675,
+     2789,
+     3159,
+     3061,
+     3242,
+     3170,
+     3078
+    ]
+   },
+   "t4_book_ty": [
+    194,
+    215,
+    213,
+    175
+   ],
+   "t4_book_ly": [
+    187,
+    221,
+    240,
+    219
+   ],
+   "t4_users_ty": [
+    3061,
+    3242,
+    3170,
+    3078
+   ],
+   "t4_users_ly": [
+    3866,
+    3940,
+    3712,
+    3981
+   ],
+   "paid_sessions_cur": 1656
+  },
+  "Hutong HK": {
+   "cur": {
+    "bookings": 303,
+    "users": 2721,
+    "sessions": 3815,
+    "avgsec": 241.3,
+    "engrate": 65.8,
+    "pps": 2.73,
+    "newpct": 84.5
+   },
+   "prior": {
+    "bookings": 294,
+    "users": 2369,
+    "sessions": 3174,
+    "avgsec": 234.5,
+    "engrate": 67.3,
+    "pps": 2.77,
+    "newpct": 81.6
+   },
+   "yoy": {
+    "bookings": 257,
+    "users": 2851,
+    "sessions": 3942,
+    "avgsec": 226.1,
+    "engrate": 70.6,
+    "pps": 2.17,
+    "newpct": 81.7
+   },
+   "ytd": 8510,
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1461,
+      1169,
+      1116
+     ],
+     "b": [
+      122,
+      103,
+      62
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1050,
+      894,
+      924
+     ],
+     "b": [
+      118,
+      98,
+      95
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      410,
+      393,
+      643
+     ],
+     "b": [
+      26,
+      28,
+      54
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      295,
+      201,
+      418
+     ],
+     "b": [
+      2,
+      0,
+      2
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      162,
+      142,
+      547
+     ],
+     "b": [
+      0,
+      3,
+      33
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      119,
+      118,
+      156
+     ],
+     "b": [
+      3,
+      3,
+      5
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      91,
+      90,
+      0
+     ],
+     "b": [
+      6,
+      5,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      79,
+      70,
+      43
+     ],
+     "b": [
+      24,
+      7,
+      1
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      76,
+      65,
+      90
+     ],
+     "b": [
+      2,
+      3,
+      5
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      42,
+      27,
+      9
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 71,
+    "Desktop": 28,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 1475,
+     "b": 63
+    },
+    {
+     "path": "/explore/hutonghongkong/reservations/create/search",
+     "s": 539,
+     "b": 66
+    },
+    {
+     "path": "/menus",
+     "s": 385,
+     "b": 6
+    },
+    {
+     "path": "/explore/hutonghongkong/reservations/manage",
+     "s": 278,
+     "b": 16
+    },
+    {
+     "path": "(not set)",
+     "s": 243,
+     "b": 0
+    },
+    {
+     "path": "/explore/hutonghongkong/reservations/create/upgrades",
+     "s": 233,
+     "b": 122
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     219,
+     233,
+     223,
+     285,
+     245,
+     296,
+     294,
+     303
+    ],
+    "users": [
+     2310,
+     2311,
+     2621,
+     3083,
+     2571,
+     2771,
+     2369,
+     2721
+    ]
+   },
+   "t4_book_ty": [
+    245,
+    296,
+    294,
+    303
+   ],
+   "t4_book_ly": [
+    255,
+    281,
+    226,
+    257
+   ],
+   "t4_users_ty": [
+    2571,
+    2771,
+    2369,
+    2721
+   ],
+   "t4_users_ly": [
+    3586,
+    3239,
+    3012,
+    2851
+   ],
+   "paid_sessions_cur": 705
+  },
+  "The Chinese Library": {
+   "cur": {
+    "bookings": 135,
+    "users": 1712,
+    "sessions": 2188,
+    "avgsec": 157.5,
+    "engrate": 68.2,
+    "pps": 2.48,
+    "newpct": 87.9
+   },
+   "prior": {
+    "bookings": 120,
+    "users": 1879,
+    "sessions": 2400,
+    "avgsec": 142.2,
+    "engrate": 65.6,
+    "pps": 2.37,
+    "newpct": 88.3
+   },
+   "yoy": {
+    "bookings": 104,
+    "users": 1242,
+    "sessions": 1602,
+    "avgsec": 186.5,
+    "engrate": 70.3,
+    "pps": 2.04,
+    "newpct": 88.2
+   },
+   "ytd": 3535,
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      644,
+      722,
+      475
+     ],
+     "b": [
+      40,
+      36,
+      32
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      443,
+      453,
+      307
+     ],
+     "b": [
+      41,
+      46,
+      33
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      364,
+      326,
+      357
+     ],
+     "b": [
+      32,
+      18,
+      28
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      276,
+      396,
+      137
+     ],
+     "b": [
+      7,
+      9,
+      7
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      220,
+      221,
+      44
+     ],
+     "b": [
+      2,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      120,
+      153,
+      198
+     ],
+     "b": [
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      68,
+      63,
+      67
+     ],
+     "b": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      46,
+      55,
+      8
+     ],
+     "b": [
+      10,
+      7,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      9,
+      6,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Display",
+     "s": [
+      0,
+      1,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      0,
+      0,
+      6
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 72,
+    "Desktop": 27,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 885,
+     "b": 41
+    },
+    {
+     "path": "/menus",
+     "s": 312,
+     "b": 12
+    },
+    {
+     "path": "/experiences/thechineselibraryhk/behind-the-kitchen-doors-5255500106481664",
+     "s": 189,
+     "b": 0
+    },
+    {
+     "path": "/explore/thechineselibraryhk/reservations/create/search",
+     "s": 182,
+     "b": 32
+    },
+    {
+     "path": "/explore/thechineselibraryhk/reservations/manage",
+     "s": 116,
+     "b": 4
+    },
+    {
+     "path": "(not set)",
+     "s": 90,
+     "b": 0
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     75,
+     108,
+     88,
+     94,
+     107,
+     128,
+     120,
+     135
+    ],
+    "users": [
+     1633,
+     1383,
+     1528,
+     1442,
+     1847,
+     1875,
+     1879,
+     1712
+    ]
+   },
+   "t4_book_ty": [
+    107,
+    128,
+    120,
+    135
+   ],
+   "t4_book_ly": [
+    82,
+    78,
+    114,
+    104
+   ],
+   "t4_users_ty": [
+    1847,
+    1875,
+    1879,
+    1712
+   ],
+   "t4_users_ly": [
+    1209,
+    1285,
+    1422,
+    1242
+   ],
+   "paid_sessions_cur": 764
+  },
+  "Cantina": {
+   "cur": {
+    "bookings": 94,
+    "users": 1940,
+    "sessions": 2387,
+    "avgsec": 143.9,
+    "engrate": 53.7,
+    "pps": 2.01,
+    "newpct": 90.6
+   },
+   "prior": {
+    "bookings": 105,
+    "users": 2078,
+    "sessions": 2485,
+    "avgsec": 125.2,
+    "engrate": 53.6,
+    "pps": 2.04,
+    "newpct": 89.2
+   },
+   "yoy": {
+    "bookings": 44,
+    "users": 1036,
+    "sessions": 1277,
+    "avgsec": 226.5,
+    "engrate": 72.2,
+    "pps": 2.17,
+    "newpct": 87.6
+   },
+   "ytd": 2005,
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      802,
+      753,
+      276
+     ],
+     "b": [
+      7,
+      4,
+      4
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      555,
+      585,
+      320
+     ],
+     "b": [
+      15,
+      10,
+      14
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      397,
+      475,
+      199
+     ],
+     "b": [
+      52,
+      59,
+      12
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      269,
+      239,
+      208
+     ],
+     "b": [
+      12,
+      18,
+      10
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      154,
+      183,
+      116
+     ],
+     "b": [
+      2,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      68,
+      78,
+      80
+     ],
+     "b": [
+      2,
+      6,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      54,
+      52,
+      20
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      52,
+      60,
+      48
+     ],
+     "b": [
+      1,
+      4,
+      2
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      35,
+      53,
+      7
+     ],
+     "b": [
+      3,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      4,
+      2,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 82,
+    "Desktop": 17,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/explore/cantinahk/reservations/create/search",
+     "s": 934,
+     "b": 47
+    },
+    {
+     "path": "/",
+     "s": 663,
+     "b": 15
+    },
+    {
+     "path": "/menus",
+     "s": 127,
+     "b": 1
+    },
+    {
+     "path": "/menus/brunch",
+     "s": 127,
+     "b": 0
+    },
+    {
+     "path": "/explore/cantinahk/reservations/manage",
+     "s": 113,
+     "b": 5
+    },
+    {
+     "path": "(not set)",
+     "s": 83,
+     "b": 0
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     75,
+     89,
+     71,
+     83,
+     101,
+     95,
+     105,
+     94
+    ],
+    "users": [
+     2021,
+     1768,
+     1882,
+     1767,
+     2216,
+     2037,
+     2078,
+     1940
+    ]
+   },
+   "t4_book_ty": [
+    101,
+    95,
+    105,
+    94
+   ],
+   "t4_book_ly": [
+    50,
+    46,
+    62,
+    44
+   ],
+   "t4_users_ty": [
+    2216,
+    2037,
+    2078,
+    1940
+   ],
+   "t4_users_ly": [
+    1145,
+    1042,
+    1045,
+    1036
+   ],
+   "paid_sessions_cur": 1357
+  },
+  "Dim Sum Library": {
+   "cur": {
+    "bookings": 146,
+    "users": 1201,
+    "sessions": 1564,
+    "avgsec": 196.8,
+    "engrate": 69.9,
+    "pps": 2.74,
+    "newpct": 85.2
+   },
+   "prior": {
+    "bookings": 155,
+    "users": 1280,
+    "sessions": 1704,
+    "avgsec": 267.0,
+    "engrate": 69.0,
+    "pps": 2.66,
+    "newpct": 85.0
+   },
+   "yoy": {
+    "bookings": 142,
+    "users": 1057,
+    "sessions": 1362,
+    "avgsec": 163.9,
+    "engrate": 70.0,
+    "pps": 2.22,
+    "newpct": 84.1
+   },
+   "ytd": 4764,
+   "channels": [
+    {
+     "name": "Paid Search",
+     "s": [
+      532,
+      582,
+      399
+     ],
+     "b": [
+      60,
+      76,
+      75
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      386,
+      382,
+      359
+     ],
+     "b": [
+      34,
+      41,
+      42
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      288,
+      248,
+      243
+     ],
+     "b": [
+      25,
+      15,
+      19
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      149,
+      194,
+      134
+     ],
+     "b": [
+      0,
+      4,
+      1
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      90,
+      118,
+      59
+     ],
+     "b": [
+      10,
+      8,
+      1
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      44,
+      66,
+      103
+     ],
+     "b": [
+      3,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      31,
+      46,
+      27
+     ],
+     "b": [
+      12,
+      9,
+      3
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      28,
+      39,
+      31
+     ],
+     "b": [
+      1,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      8,
+      8,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      8,
+      18,
+      3
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 71,
+    "Desktop": 28,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 624,
+     "b": 43
+    },
+    {
+     "path": "/menus",
+     "s": 248,
+     "b": 1
+    },
+    {
+     "path": "/explore/dimsumlibrarypacificplace/reservations/manage",
+     "s": 189,
+     "b": 10
+    },
+    {
+     "path": "/explore/dimsumlibrarypacificplace/reservations/create/search",
+     "s": 169,
+     "b": 58
+    },
+    {
+     "path": "(not set)",
+     "s": 97,
+     "b": 0
+    },
+    {
+     "path": "/reservations",
+     "s": 76,
+     "b": 24
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     137,
+     130,
+     141,
+     170,
+     149,
+     148,
+     155,
+     146
+    ],
+    "users": [
+     1347,
+     1133,
+     966,
+     1048,
+     1231,
+     1270,
+     1280,
+     1201
+    ]
+   },
+   "t4_book_ty": [
+    149,
+    148,
+    155,
+    146
+   ],
+   "t4_book_ly": [
+    174,
+    164,
+    185,
+    142
+   ],
+   "t4_users_ty": [
+    1231,
+    1270,
+    1280,
+    1201
+   ],
+   "t4_users_ly": [
+    1160,
+    1129,
+    1165,
+    1057
+   ],
+   "paid_sessions_cur": 681
+  },
+  "Shiro": {
+   "cur": {
+    "bookings": 159,
+    "users": 2147,
+    "sessions": 2614,
+    "avgsec": 137.4,
+    "engrate": 60.6,
+    "pps": 2.79,
+    "newpct": 87.1
+   },
+   "prior": {
+    "bookings": 165,
+    "users": 2405,
+    "sessions": 2951,
+    "avgsec": 131.1,
+    "engrate": 61.6,
+    "pps": 2.72,
+    "newpct": 85.6
+   },
+   "yoy": {
+    "bookings": 108,
+    "users": 787,
+    "sessions": 946,
+    "avgsec": 147.3,
+    "engrate": 60.8,
+    "pps": 1.84,
+    "newpct": 84.6
+   },
+   "ytd": 4346,
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      816,
+      924,
+      260
+     ],
+     "b": [
+      9,
+      5,
+      0
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      592,
+      743,
+      213
+     ],
+     "b": [
+      76,
+      93,
+      41
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      421,
+      452,
+      131
+     ],
+     "b": [
+      24,
+      23,
+      22
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      305,
+      269,
+      14
+     ],
+     "b": [
+      7,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      245,
+      247,
+      186
+     ],
+     "b": [
+      23,
+      16,
+      38
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      95,
+      169,
+      51
+     ],
+     "b": [
+      7,
+      2,
+      4
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      76,
+      99,
+      30
+     ],
+     "b": [
+      2,
+      4,
+      2
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      53,
+      87,
+      7
+     ],
+     "b": [
+      11,
+      22,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      6,
+      2,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      0,
+      3,
+      52
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 82,
+    "Desktop": 17,
+    "Tablet": 1
+   },
+   "landing": [
+    {
+     "path": "/explore/shirotaikwun/reservations/create/search",
+     "s": 538,
+     "b": 19
+    },
+    {
+     "path": "/shiro-central",
+     "s": 455,
+     "b": 22
+    },
+    {
+     "path": "/",
+     "s": 436,
+     "b": 53
+    },
+    {
+     "path": "/experiences/shirotaikwun/a-japanese-feast-for-every-occasion-at-shiro-6039637657829376",
+     "s": 259,
+     "b": 5
+    },
+    {
+     "path": "(not set)",
+     "s": 107,
+     "b": 0
+    },
+    {
+     "path": "/explore/shirohongkong/reservations/manage",
+     "s": 107,
+     "b": 7
+    }
+   ],
+   "trend8": {
+    "bookings": [
+     129,
+     125,
+     111,
+     172,
+     158,
+     160,
+     165,
+     159
+    ],
+    "users": [
+     2225,
+     2400,
+     2595,
+     2701,
+     2788,
+     2365,
+     2405,
+     2147
+    ]
+   },
+   "t4_book_ty": [
+    158,
+    160,
+    165,
+    159
+   ],
+   "t4_book_ly": [
+    92,
+    118,
+    110,
+    108
+   ],
+   "t4_users_ty": [
+    2788,
+    2365,
+    2405,
+    2147
+   ],
+   "t4_users_ly": [
+    798,
+    865,
+    866,
+    787
+   ],
+   "paid_sessions_cur": 1408
+  }
+ },
+ "splits": {
+  "Shiro Central": {
+   "t4_users_ty": [
+    1970,
+    1560,
+    1650,
+    1467
+   ],
+   "t4_users_ly": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "t4_book_ty": [
+    71,
+    61,
+    67,
+    68
+   ],
+   "t4_book_ly": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Shiro Pacific Place": {
+   "t4_users_ty": [
+    818,
+    805,
+    755,
+    680
+   ],
+   "t4_users_ly": [
+    798,
+    865,
+    866,
+    787
+   ],
+   "t4_book_ty": [
+    87,
+    99,
+    98,
+    91
+   ],
+   "t4_book_ly": [
+    92,
+    118,
+    110,
+    108
+   ]
+  }
+ },
+ "problems": []
+}

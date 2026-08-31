@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OT Guestcenter, OpenTable and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 431 · YoY ▼30.8%",
+ "ga4_yoy": "▼30.8% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 only fires for bookings made on our own website, so it is blind to <b>OpenTable and Resy</b>, only partly captures <b>Google Reserve</b>, and never sees walk-ins or the reservation desks, which together are the majority of US covers. That is why GA4 reads <b>-30.8% YoY</b> while covers are <b>3,443</b>, only <b>3.7 percent below</b> the same week last year. The clearest evidence is Hutong NYC: Google Reserve covers fell from 254 to 62 year on year while OpenTable rose from 294 to 460. That is the March provider handoff, not lost demand. It is a margin change, not a demand change. <b>Basis note:</b> this report excludes bookings keyed in under individual staff names, which is the documented method. The 3, 10 and 17 August reports wrongly swept those into Reception, so their headline covers totals were overstated and do not line up with the figures here. Week on week and year on year in this report are both rebuilt on the correct basis.",
+ "week": "24–30 Aug 2026",
+ "wow": "17–23 Aug 2026",
+ "yoy": "25–31 Aug 2025",
+ "generated": "31 August 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 215,
+   "ch": {
+    "web": {
+     "c": 425,
+     "p": 368,
+     "y": 518
+    },
+    "gr": {
+     "c": 145,
+     "p": 98,
+     "y": 82
+    },
+    "ot": {
+     "c": 225,
+     "p": 150,
+     "y": 145
+    },
+    "walk": {
+     "c": 445,
+     "p": 732,
+     "y": 685
+    },
+    "recep": {
+     "c": 168,
+     "p": 187,
+     "y": 254
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 34,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 136,
+   "ch": {
+    "web": {
+     "c": 372,
+     "p": 390,
+     "y": 343
+    },
+    "gr": {
+     "c": 62,
+     "p": 66,
+     "y": 254
+    },
+    "ot": {
+     "c": 460,
+     "p": 413,
+     "y": 294
+    },
+    "walk": {
+     "c": 401,
+     "p": 438,
+     "y": 368
+    },
+    "recep": {
+     "c": 3,
+     "p": 20,
+     "y": 13
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 48,
+     "p": 18,
+     "y": 2
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 80,
+   "ch": {
+    "web": {
+     "c": 154,
+     "p": 191,
+     "y": 105
+    },
+    "gr": {
+     "c": 13,
+     "p": 13,
+     "y": 36
+    },
+    "ot": {
+     "c": 169,
+     "p": 220,
+     "y": 134
+    },
+    "walk": {
+     "c": 298,
+     "p": 231,
+     "y": 343
+    },
+    "recep": {
+     "c": 14,
+     "p": 27,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 7,
+     "p": 14,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34"
+  ],
+  "total": [
+   3405,
+   3483,
+   3683,
+   4288,
+   4015,
+   3815,
+   3576,
+   3443
+  ],
+  "ot": [
+   940,
+   917,
+   1088,
+   1229,
+   844,
+   931,
+   783,
+   854
+  ]
+ }
+}

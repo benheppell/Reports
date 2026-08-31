@@ -1,0 +1,181 @@
+{
+ "venues": [
+  "Hutong Dubai"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W31",
+  "W32",
+  "W33",
+  "W34"
+ ],
+ "dateTY": [
+  "3–9 Aug",
+  "10–16 Aug",
+  "17–23 Aug",
+  "24–30 Aug"
+ ],
+ "dateLY": [
+  "4–10 Aug",
+  "11–17 Aug",
+  "18–24 Aug",
+  "25–31 Aug"
+ ],
+ "fyrange": "FY26 weeks 31–34",
+ "sym": "AED ",
+ "data": {
+  "Hutong Dubai": [
+   [
+    "Website users",
+    [
+     1213,
+     1128,
+     1218,
+     1196
+    ],
+    [
+     1380,
+     1325,
+     1361,
+     1162
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     6.7,
+     5.2,
+     5.5,
+     7.4
+    ],
+    [
+     7.3,
+     7.8,
+     8.7,
+     7.5
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     81,
+     59,
+     67,
+     88
+    ],
+    [
+     101,
+     104,
+     118,
+     87
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     40,
+     32,
+     26,
+     28
+    ],
+    [
+     15,
+     8,
+     11,
+     5
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     18,
+     14,
+     11,
+     17
+    ],
+    [
+     23,
+     22,
+     16,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     230.8,
+     205.2,
+     251.3,
+     151.6
+    ],
+    [
+     180.2,
+     154.1,
+     144.2,
+     0.0
+    ],
+    true,
+    "AED "
+   ],
+   [
+    "Meta CPA",
+    [
+     90.4,
+     112.8,
+     139.5,
+     123.3
+    ],
+    [
+     186.3,
+     216.3,
+     155.4,
+     339.1
+    ],
+    true,
+    "AED "
+   ],
+   [
+    "Google walk-in signals",
+    [
+     367,
+     71,
+     0,
+     0
+    ],
+    [
+     407,
+     335,
+     291,
+     2
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Hutong Dubai": "W34 users 1,196 (+2.9% YoY) with 88 GA4 bookings (+1.1% YoY); conversion rate 7.4% vs 7.5% LY. Google delivered 17 bookings at AED 152 CPA; Meta 28 at AED 123. Google walk-in signals read 0 for the last three weeks: local and store-visit conversions have not reported since 12 August, so this is a reporting gap rather than a real zero."
+ },
+ "alert": {
+  "Hutong Dubai": [
+   "green",
+   "On track",
+   "Users and conversion holding up YoY"
+  ]
+ }
+}

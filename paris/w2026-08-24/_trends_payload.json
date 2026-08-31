@@ -1,0 +1,181 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W27",
+  "W28",
+  "W29",
+  "W30"
+ ],
+ "dateTY": [
+  "3–9 Aug",
+  "10–16 Aug",
+  "17–23 Aug",
+  "24–30 Aug"
+ ],
+ "dateLY": [
+  "—",
+  "—",
+  "—",
+  "—"
+ ],
+ "fyrange": "FY26 weeks 27–30",
+ "sym": "€",
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     4282,
+     4483,
+     3914,
+     4258
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.4,
+     4.6,
+     4.8,
+     5.4
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     232,
+     206,
+     189,
+     231
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     41,
+     36,
+     32,
+     36
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     52,
+     38,
+     29,
+     41
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     24.7,
+     26.5,
+     22.2,
+     30.3
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    true,
+    "€"
+   ],
+   [
+    "Meta CPA",
+    [
+     41.8,
+     50.0,
+     56.8,
+     50.3
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    true,
+    "€"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W30 users 4,258 with 231 GA4 bookings; conversion rate 5.4%. Aqua Kyoto Paris launched late 2025 so there is no like-for-like last year. Google delivered 41 bookings at €30 CPA; Meta 36 at €50."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "blue",
+   "New venue",
+   "Launched late 2025 — this-year only, no YoY comparison"
+  ]
+ }
+}

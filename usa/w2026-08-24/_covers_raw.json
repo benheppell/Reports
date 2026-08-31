@@ -1,0 +1,235 @@
+{
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ch": {
+    "web": {
+     "c": 425,
+     "p": 368,
+     "y": 518
+    },
+    "gr": {
+     "c": 145,
+     "p": 98,
+     "y": 82
+    },
+    "ot": {
+     "c": 225,
+     "p": 150,
+     "y": 145
+    },
+    "walk": {
+     "c": 445,
+     "p": 732,
+     "y": 685
+    },
+    "recep": {
+     "c": 168,
+     "p": 187,
+     "y": 254
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 34,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ch": {
+    "web": {
+     "c": 372,
+     "p": 390,
+     "y": 343
+    },
+    "gr": {
+     "c": 62,
+     "p": 66,
+     "y": 254
+    },
+    "ot": {
+     "c": 460,
+     "p": 413,
+     "y": 294
+    },
+    "walk": {
+     "c": 401,
+     "p": 438,
+     "y": 368
+    },
+    "recep": {
+     "c": 3,
+     "p": 20,
+     "y": 13
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 48,
+     "p": 18,
+     "y": 2
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ch": {
+    "web": {
+     "c": 154,
+     "p": 191,
+     "y": 105
+    },
+    "gr": {
+     "c": 13,
+     "p": 13,
+     "y": 36
+    },
+    "ot": {
+     "c": 169,
+     "p": 220,
+     "y": 134
+    },
+    "walk": {
+     "c": 298,
+     "p": 231,
+     "y": 343
+    },
+    "recep": {
+     "c": 14,
+     "p": 27,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 7,
+     "p": 14,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34"
+  ],
+  "total": [
+   3405,
+   3483,
+   3683,
+   4288,
+   4015,
+   3815,
+   3576,
+   3443
+  ],
+  "ot": [
+   940,
+   917,
+   1088,
+   1229,
+   844,
+   931,
+   783,
+   854
+  ]
+ },
+ "source_map": {
+  "Walk In": "walk",
+  "Booking Widget": "web",
+  "OT Guestcenter": "ot",
+  "Resy": "ot",
+  "Reservation Team": "recep",
+  "Google Reserve Integration": "gr",
+  "OT": "ot",
+  "Veronica Difelice": "EXCLUDED",
+  "Website": "web",
+  "Brooke Paolotto": "EXCLUDED",
+  "Farah Zeaman": "EXCLUDED",
+  "Susie Kim": "EXCLUDED",
+  "Samanta Alcantara": "EXCLUDED",
+  "Luz": "EXCLUDED",
+  "Ashley Tidman": "EXCLUDED",
+  "Alberto Melendez": "EXCLUDED",
+  "andrew sicklin": "EXCLUDED",
+  "Yanil Pimentel": "EXCLUDED",
+  "DoorDash": "tp",
+  "Joana Rosales": "EXCLUDED",
+  "Linda Haripersaud": "EXCLUDED",
+  "Rachael Palmer": "EXCLUDED",
+  "Kenneth Ferrer": "EXCLUDED",
+  "Tracey": "EXCLUDED",
+  "Reception/Reservation Hutong": "recep",
+  "Taylor Calicari": "EXCLUDED",
+  "Miyae Folkes": "EXCLUDED",
+  "Raafet Olian": "EXCLUDED",
+  "OTGC - OpenTable Network": "ot",
+  "Reservations Team": "recep",
+  "Yana Dominique": "EXCLUDED",
+  "Lucilly": "EXCLUDED",
+  "Flaming Duck Miami": "tp",
+  "Amanda F": "EXCLUDED",
+  "Marcela Oliva": "EXCLUDED",
+  "Facebook": "web",
+  "Flaming Duck NYC": "tp",
+  "Google": "web",
+  "Imported Reservations": "recep",
+  "Insider Offer: $68 Unlimited Dim Sum and Bottomless Bubbles - Landing Page": "web",
+  "Johana Gomez Velez": "EXCLUDED",
+  "Open Table": "ot",
+  "Private Dining Room - Landing Page": "web",
+  "Serge Ayite": "EXCLUDED",
+  "Brunch Relaunch - 50% Off - Landing Page": "web",
+  "Wendy Hernandez": "EXCLUDED",
+  "Aqua X For the Plot - Landing Page": "web",
+  "Brunch on Broadway + Unlimited Bubbles for $58 - Landing Page": "web",
+  "Birthday Offer - Landing Page": "web",
+  "Thomas Popov": "EXCLUDED",
+  "Brunch on Broadway (4-course prix-fixe) - Landing Page": "web",
+  "US OPEN - Coach VIP Access - Landing Page": "web",
+  "Damarys": "EXCLUDED",
+  "Sam Toosi": "EXCLUDED",
+  "Omar Salahi": "EXCLUDED",
+  "Restaurant Week - Landing Page": "web",
+  "Summer Brunch: Unlimited Dim Sum & Bubbles - Landing Page": "web",
+  "Summer Insider: Complimentary Welcome Drink with the Emperor Menu - Landing Page": "web",
+  "Insider Offer: Tiramisu for Two (or More!) - Landing Page": "web",
+  "Bilt Integration": "tp",
+  "Caroline": "EXCLUDED",
+  "Dinner | À la carte - Landing Page": "web",
+  "Capital One": "tp",
+  "Joana Gonzales": "EXCLUDED",
+  "Martyna": "EXCLUDED",
+  "Breezze - Landing Page": "web",
+  "Opentable": "ot",
+  "7X EXCLUSIVE": "web",
+  "Johnnie Chapman": "EXCLUDED",
+  "PPC": "web",
+  "Summer Insider: Complimentary Chef's Selection of Dim Sum - Landing Page": "web",
+  "Insider Offer: Double the Dim Sum - Landing Page": "web",
+  "First Timers - Landing Page": "web",
+  "Jazz": "web",
+  "Al Fresco Dining - Landing Page": "web",
+  "Dim Sum Library Brunch - Landing Page": "web"
+ },
+ "problems": []
+}
