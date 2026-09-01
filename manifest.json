@@ -1,5 +1,5 @@
 {
- "generated": "31 August 2026",
+ "generated": "1 September 2026",
  "markets": [
   {
    "name": "Hong Kong",
@@ -186,6 +186,10 @@
     }
    ],
    "monthly": [
+    {
+     "label": "August 2026",
+     "folder": "m2026-08"
+    },
     {
      "label": "July 2026",
      "folder": "m2026-07"
@@ -478,6 +482,10 @@
     }
    ],
    "monthly": [
+    {
+     "label": "August 2026",
+     "folder": "m2026-08"
+    },
     {
      "label": "July 2026",
      "folder": "m2026-07"
@@ -789,6 +797,10 @@
    ],
    "monthly": [
     {
+     "label": "August 2026",
+     "folder": "m2026-08"
+    },
+    {
      "label": "July 2026",
      "folder": "m2026-07"
     },
@@ -1014,12 +1026,36 @@
    ],
    "monthly": [
     {
+     "label": "August 2026",
+     "folder": "m2026-08"
+    },
+    {
      "label": "July 2026",
      "folder": "m2026-07"
     },
     {
      "label": "June 2026",
      "folder": "m2026-06"
+    },
+    {
+     "label": "May 2026",
+     "folder": "m2026-05"
+    },
+    {
+     "label": "April 2026",
+     "folder": "m2026-04"
+    },
+    {
+     "label": "March 2026",
+     "folder": "m2026-03"
+    },
+    {
+     "label": "February 2026",
+     "folder": "m2026-02"
+    },
+    {
+     "label": "January 2026",
+     "folder": "m2026-01"
     }
    ],
    "trends": [
@@ -1299,7 +1335,36 @@
      "dash": false
     }
    ],
-   "monthly": [],
+   "monthly": [
+    {
+     "label": "August 2026",
+     "folder": "m2026-08"
+    },
+    {
+     "label": "July 2026",
+     "folder": "m2026-07"
+    },
+    {
+     "label": "June 2026",
+     "folder": "m2026-06"
+    },
+    {
+     "label": "May 2026",
+     "folder": "m2026-05"
+    },
+    {
+     "label": "April 2026",
+     "folder": "m2026-04"
+    },
+    {
+     "label": "March 2026",
+     "folder": "m2026-03"
+    },
+    {
+     "label": "February 2026",
+     "folder": "m2026-02"
+    }
+   ],
    "trends": [
     {
      "dates": "24–30 Aug 2026",

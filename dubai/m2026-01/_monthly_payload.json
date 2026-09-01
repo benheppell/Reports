@@ -1,0 +1,19 @@
+{
+ "market": "Aqua Dubai",
+ "sym": "AED ",
+ "ccy": "AED",
+ "month_label": "January 2026",
+ "generated": "1 September 2026",
+ "venues": [
+  {
+   "name": "Hutong Dubai",
+   "act": 625,
+   "tgt": 0,
+   "mom": 610,
+   "yoy": 601,
+   "nc": false
+  }
+ ],
+ "note": "No agreed GA4 booking target for this market, so this report shows volume, month on month and year on year only.",
+ "no_target": true
+}

@@ -1,0 +1,19 @@
+{
+ "market": "Aqua Dubai",
+ "sym": "AED ",
+ "ccy": "AED",
+ "month_label": "March 2026",
+ "generated": "1 September 2026",
+ "venues": [
+  {
+   "name": "Hutong Dubai",
+   "act": 159,
+   "tgt": 0,
+   "mom": 615,
+   "yoy": 445,
+   "nc": false
+  }
+ ],
+ "note": "Hutong Dubai has no agreed GA4 booking target, so this report shows volume, month on month and year on year only. March was the low point of the year at <b>159 bookings</b>, down 74 percent on February. Ramadan fell across most of the month, which is the likely cause, but it is a sharper fall than March 2025 and worth checking against covers before it is read as demand.",
+ "no_target": true
+}

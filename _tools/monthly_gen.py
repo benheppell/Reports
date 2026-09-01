@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 # Generic monthly dashboard generator. Usage: monthly_gen.py <payload.json> <out.html>
 # Payload: {market, sym, month_label, generated, venues:[{name,act,tgt,mom,yoy,nc}], note}
+# Set "no_target": true for markets with no agreed GA4 target (Dubai, Paris). That drops the
+# Target and Variance columns and the "Venues vs Target" card, leaving bookings, MoM and YoY.
 import json, sys
 P = json.load(open(sys.argv[1])); OUT = sys.argv[2]
+NT = bool(P.get('no_target'))
 sym = P.get('sym', '')
 mkt = P['market']
 back = mkt.replace('Aqua ', '').strip()
@@ -45,18 +48,27 @@ for v in vs:
         if d < 0: below += 1
         yoy_html = arrow_span(pct(act, yoy))
     mom_html = arrow_span(pct(act, mom))
-    rows.append(f'<tr><td>{v["name"]}</td><td class="num">{n(act)}</td><td class="num">{n(tgt)}</td>'
-                f'<td class="num">{var_html}</td><td class="num">{mom_html}</td><td class="num">{yoy_html}</td></tr>')
+    if NT:
+        rows.append(f'<tr><td>{v["name"]}</td><td class="num">{n(act)}</td>'
+                    f'<td class="num">{mom_html}</td><td class="num">{yoy_html}</td></tr>')
+    else:
+        rows.append(f'<tr><td>{v["name"]}</td><td class="num">{n(act)}</td><td class="num">{n(tgt)}</td>'
+                    f'<td class="num">{var_html}</td><td class="num">{mom_html}</td><td class="num">{yoy_html}</td></tr>')
 
 # portfolio
 pd = tot_act - tot_tgt
 pvp = pct(tot_act, tot_tgt)
 pcls = 'pos' if pd >= 0 else 'neg'
 psign = '+' if pd >= 0 else ''
-prow = (f'<tr class="total"><td>Portfolio</td><td class="num">{n(tot_act)}</td><td class="num">{n(tot_tgt)}</td>'
-        f'<td class="num"><span class="{pcls}">{psign}{n(pd)} ({psign}{pvp:.1f}%)</span></td>'
-        f'<td class="num">{arrow_span(pct(tot_act, tot_mom))}</td>'
-        f'<td class="num">{arrow_span(pct(tot_act, tot_yoy))}</td></tr>')
+if NT:
+    prow = (f'<tr class="total"><td>Portfolio</td><td class="num">{n(tot_act)}</td>'
+            f'<td class="num">{arrow_span(pct(tot_act, tot_mom))}</td>'
+            f'<td class="num">{arrow_span(pct(tot_act, tot_yoy))}</td></tr>')
+else:
+    prow = (f'<tr class="total"><td>Portfolio</td><td class="num">{n(tot_act)}</td><td class="num">{n(tot_tgt)}</td>'
+            f'<td class="num"><span class="{pcls}">{psign}{n(pd)} ({psign}{pvp:.1f}%)</span></td>'
+            f'<td class="num">{arrow_span(pct(tot_act, tot_mom))}</td>'
+            f'<td class="num">{arrow_span(pct(tot_act, tot_yoy))}</td></tr>')
 
 mom_card = pct(tot_act, tot_mom); yoy_card = pct(tot_act, tot_yoy)
 def card_pct(p):
@@ -66,6 +78,18 @@ mom_cls = 'pos' if (mom_card or 0) >= 0 else 'neg'
 yoy_cls = 'pos' if (yoy_card or 0) >= 0 else 'neg'
 note = P.get('note', '')
 note_html = f'<div class="obs"><b>Summary</b>{note}</div>' if note else ''
+
+cards_style = ' style="grid-template-columns:repeat(3,1fr)"' if NT else ''
+card1_meta = ('No agreed GA4 target for this market yet' if NT
+              else f'Target {n(tot_tgt)} · <span class="{pcls}">{psign}{pvp:.1f}%</span>')
+card4 = ('' if NT else
+         f'<div class="card"><div class="lab">Venues vs Target</div>'
+         f'<div class="big">{counted-below} / {counted}</div>'
+         f'<div class="meta">{below} below target.</div></div>')
+thead = ('<tr><th>Venue</th><th>Bookings</th><th>MoM</th><th>YoY</th></tr>' if NT else
+         '<tr><th>Venue</th><th>Bookings</th><th>Target</th><th>Variance</th><th>MoM</th><th>YoY</th></tr>')
+sub_mid = 'GA4 bookings, no monthly target set' if NT else 'GA4 bookings vs monthly target'
+foot_tgt = '' if NT else ' Monthly target per the FY26 targets file.'
 
 html = f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{mkt} — Monthly — {month}</title>
@@ -98,16 +122,16 @@ a.back{{font-size:12px;color:#2563eb;text-decoration:none}}
 @media(max-width:900px){{.cards{{grid-template-columns:repeat(2,1fr)}}}}
 </style></head><body><div><a class="back" href="../index.html">← {back} reports</a>
 <h1 style="margin-top:8px">{mkt} — Monthly Performance</h1>
-<div class="sub">{month} · GA4 bookings vs monthly target · {ccy} · MoM vs prior month · YoY vs same month last year</div></div>
-<div class="cards">
-<div class="card"><div class="lab">Monthly Bookings</div><div class="big">{n(tot_act)}</div><div class="meta">Target {n(tot_tgt)} · <span class="{pcls}">{psign}{pvp:.1f}%</span></div></div>
+<div class="sub">{month} · {sub_mid} · {ccy} · MoM vs prior month · YoY vs same month last year</div></div>
+<div class="cards"{cards_style}>
+<div class="card"><div class="lab">Monthly Bookings</div><div class="big">{n(tot_act)}</div><div class="meta">{card1_meta}</div></div>
 <div class="card"><div class="lab">Month on Month</div><div class="big">{card_pct(mom_card)}</div><div class="meta">vs {n(tot_mom)}</div></div>
 <div class="card"><div class="lab">Year on Year</div><div class="big">{card_pct(yoy_card)}</div><div class="meta">vs {n(tot_yoy)}</div></div>
-<div class="card"><div class="lab">Venues vs Target</div><div class="big">{counted-below} / {counted}</div><div class="meta">{below} below target.</div></div>
+{card4}
 </div>
-<table><thead><tr><th>Venue</th><th>Bookings</th><th>Target</th><th>Variance</th><th>MoM</th><th>YoY</th></tr></thead>
+<table><thead>{thead}</thead>
 <tbody>{''.join(rows)}{prow}</tbody></table>
 {note_html}
-<footer>GA4 bookings = sevenrooms_booking_complete. Monthly target per the FY26 targets file. Generated {gen}.</footer></body></html>'''
+<footer>GA4 bookings = sevenrooms_booking_complete.{foot_tgt} Generated {gen}.</footer></body></html>'''
 open(OUT, 'w').write(html)
 print(f"wrote {OUT} ({len(html)} bytes)")
