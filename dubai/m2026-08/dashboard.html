@@ -2,18 +2,22 @@
 <title>Aqua Dubai — Monthly — August 2026</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+:root{color-scheme:light}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
-h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px;margin-top:8px}
 .sub{color:#64748b;font-size:13px;margin-top:4px}
+.exec{background:#fbf7f4;border:1px solid #ecd9cf;border-left:4px solid #7c2d3a;border-radius:10px;padding:14px 16px;margin:18px 0 6px;font-size:13.5px}
+.exec b{color:#7c2d3a}
 .num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
 .card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
 .card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
-.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .big{font-size:25px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
 .card .meta{font-size:12px;color:#475569;margin-top:6px}
 table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
-th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th,td{padding:8px 9px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
 th:first-child,td:first-child{text-align:left}
 thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
 tbody tr:hover{background:#f8fafc}
@@ -21,22 +25,212 @@ tr.total{font-weight:700;background:#f1f5f9}
 tr.total td{border-top:2px solid #cbd5e1}
 .pos{color:#16a34a;font-weight:600}
 .neg{color:#dc2626;font-weight:600}
-.pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:11px;font-weight:600}
-.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:18px 0 2px;border-radius:0 8px 8px 0;font-size:13px}
+.flat{color:#94a3b8;font-weight:600}
+.tag{display:inline-block;padding:1px 7px;border-radius:999px;font-size:10.5px;font-weight:600;letter-spacing:.2px}
+.t-pro{background:#e0edff;color:#1d4ed8}.t-rem{background:#dcfce7;color:#15803d}.t-awr{background:#fef3c7;color:#b45309}
+.thumb{display:inline-block;width:34px;height:34px;border-radius:6px;overflow:hidden;border:1px solid #e2e8f0;vertical-align:middle;background:#f1f5f9}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.pv{font-size:11px;color:#2563eb;text-decoration:none;font-weight:600;margin-left:6px;white-space:nowrap}
+.pv:hover{text-decoration:underline}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:8px 14px 16px}
+.maroon h2{background:#7c2d3a}.blue h2{background:#2563eb}.green h2{background:#16a34a}.amber h2{background:#d97706}.slate h2{background:#475569}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 0 2px;border-radius:0 8px 8px 0;font-size:13px}
 .obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
-footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
-a.back{font-size:12px;color:#2563eb;text-decoration:none}
-@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
-</style></head><body><div><a class="back" href="../index.html">← Dubai reports</a>
-<h1 style="margin-top:8px">Aqua Dubai — Monthly Performance</h1>
-<div class="sub">August 2026 · GA4 bookings, no monthly target set · AED · MoM vs prior month · YoY vs same month last year</div></div>
-<div class="cards" style="grid-template-columns:repeat(3,1fr)">
-<div class="card"><div class="lab">Monthly Bookings</div><div class="big">324</div><div class="meta">No agreed GA4 target for this market yet</div></div>
-<div class="card"><div class="lab">Month on Month</div><div class="big">-1.8%</div><div class="meta">vs 330</div></div>
-<div class="card"><div class="lab">Year on Year</div><div class="big">-27.8%</div><div class="meta">vs 449</div></div>
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.col h3{font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;margin:6px 0 2px}
+.bars{display:flex;flex-direction:column;gap:8px;margin-top:8px;font-size:13px}
+.barrow{display:grid;grid-template-columns:150px 1fr 52px;gap:10px;align-items:center}
+.track{height:8px;background:#eef2f6;border-radius:4px;overflow:hidden}
+.fill{height:8px;border-radius:4px}
+.ww{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.wcol{border-radius:10px;padding:12px 14px}
+.wgood{background:#f0fdf4;border:1px solid #bbf7d0}.wbad{background:#fef2f2;border:1px solid #fecaca}
+.wcol h4{font-size:12px;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.wgood h4{color:#15803d}.wbad h4{color:#b91c1c}
+.wcol ul{margin-left:15px;font-size:13px}.wcol li{margin:5px 0}
+.mini{font-size:11px;color:#94a3b8}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.6}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}.grid2,.ww{grid-template-columns:1fr}.barrow{grid-template-columns:120px 1fr 46px}}
+</style></head><body>
+<a class="back" href="../index.html">← All Dubai reports</a>
+<h1>Aqua Dubai — Monthly Performance · Hutong Dubai</h1>
+<div class="sub">August 2026 (full calendar month) · AED · MoM vs July 2026 · YoY vs August 2025 · one venue</div>
 
+<div class="exec">
+<b>The read.</b> August was the summer low — completed covers of 2,635, down 7.4% on July and 16% on last August, as the seasonal trough finally arrived. Revenue fell 11% MoM to AED 844k. But the forward book turned sharply: net created covers jumped 25% MoM to 3,766 (and +10% YoY), most of it bookings made in August for September dates — the recovery is loading. Website users actually rose (+8% MoM as paid pushed more traffic) but conversion slipped to 6.5%, the softest of the summer and the clear watch item. On paid, Meta softened with the market (bookings 173→133, CPA up to AED 119) while Google improved (CPA down to AED 70, P.Max scaling); blended CPA AED 90. Meta is still a daytime/brunch-only story, with nothing behind dinner or à la carte.
 </div>
-<table><thead><tr><th>Venue</th><th>Bookings</th><th>MoM</th><th>YoY</th></tr></thead>
-<tbody><tr><td>Hutong Dubai</td><td class="num">324</td><td class="num"><span class="neg">▼ 1.8%</span></td><td class="num"><span class="neg">▼ 27.8%</span></td></tr><tr class="total"><td>Portfolio</td><td class="num">324</td><td class="num"><span class="neg">▼ 1.8%</span></td><td class="num"><span class="neg">▼ 27.8%</span></td></tr></tbody></table>
-<div class="obs"><b>Summary</b>Hutong Dubai has no agreed GA4 booking target, so this report shows volume, month on month and year on year only. August took <b>324 bookings</b>, level with July and below last August.</div>
-<footer>GA4 bookings = sevenrooms_booking_complete. Generated 1 September 2026.</footer></body></html>
+
+<div class="cards">
+<div class="card"><div class="lab">Completed covers</div><div class="big">2,635</div><div class="meta">MoM <span class="neg">▼ 7.4%</span> · YoY <span class="neg">▼ 16.4%</span></div></div>
+<div class="card"><div class="lab">Completed revenue</div><div class="big">AED 844k</div><div class="meta">MoM <span class="neg">▼ 10.7%</span> · YoY <span class="neg">▼ 12.3%</span></div></div>
+<div class="card"><div class="lab">Forward book (net created)</div><div class="big">3,766</div><div class="meta">MoM <span class="pos">▲ 25.1%</span> · YoY <span class="pos">▲ 10.4%</span></div></div>
+<div class="card"><div class="lab">Blended paid CPA</div><div class="big">AED 90</div><div class="meta">Spend AED 29.2k · 324 platform bk</div></div>
+</div>
+
+<!-- COVERS -->
+<div class="sec maroon"><h2>1 · Covers &amp; revenue (SevenRooms)</h2><div class="body">
+<table>
+<thead><tr><th>Metric</th><th>Aug 2026</th><th>July 2026</th><th>MoM</th><th>Aug 2025</th><th>YoY</th></tr></thead>
+<tbody>
+<tr><td>Gross created covers</td><td class="num">4,068</td><td class="num">3,338</td><td class="num"><span class="pos">▲ 21.9%</span></td><td class="num">3,874</td><td class="num"><span class="pos">▲ 5.0%</span></td></tr>
+<tr><td>Cancelled</td><td class="num">302</td><td class="num">327</td><td class="num"><span class="pos">▼ 7.6%</span></td><td class="num">463</td><td class="num"><span class="pos">▼ 34.8%</span></td></tr>
+<tr><td>Net created covers</td><td class="num">3,766</td><td class="num">3,011</td><td class="num"><span class="pos">▲ 25.1%</span></td><td class="num">3,411</td><td class="num"><span class="pos">▲ 10.4%</span></td></tr>
+<tr><td>Completed (dined) covers</td><td class="num">2,635</td><td class="num">2,845</td><td class="num"><span class="neg">▼ 7.4%</span></td><td class="num">3,153</td><td class="num"><span class="neg">▼ 16.4%</span></td></tr>
+<tr><td>Completed revenue (AED)</td><td class="num">843,548</td><td class="num">944,485</td><td class="num"><span class="neg">▼ 10.7%</span></td><td class="num">961,363</td><td class="num"><span class="neg">▼ 12.3%</span></td></tr>
+<tr class="total"><td>Revenue per cover (AED)</td><td class="num">320</td><td class="num">332</td><td class="num"><span class="neg">▼ 3.6%</span></td><td class="num">305</td><td class="num"><span class="pos">▲ 5.0%</span></td></tr>
+</tbody></table>
+<div class="obs"><b>What it says</b>Dined covers hit the summer floor (−7.4% MoM), but the standout is the <b>forward book</b>: net created covers rose 25% MoM to 3,766 — well above the 2,635 that actually dined — which in a same-day market means a large block of August bookings are for <b>September service dates</b>. That's a strong leading signal for the autumn rebound. Cancellations fell again to 7.4% of gross (from 9.8% in July, 12% last August). Revenue per cover eased MoM but is still up 5% on last year.</div>
+
+<div class="grid2" style="margin-top:16px">
+<div class="col"><h3>Channel mix — completed covers</h3>
+<div class="bars">
+<div class="barrow"><span>Reservations team</span><div class="track"><div class="fill" style="width:100%;background:#7c2d3a"></div></div><span class="num">872</span></div>
+<div class="barrow"><span>Walk-in</span><div class="track"><div class="fill" style="width:86%;background:#d97706"></div></div><span class="num">753</span></div>
+<div class="barrow"><span>Website widget</span><div class="track"><div class="fill" style="width:83%;background:#2563eb"></div></div><span class="num">726</span></div>
+<div class="barrow"><span>Google Reserve</span><div class="track"><div class="fill" style="width:15%;background:#16a34a"></div></div><span class="num">133</span></div>
+<div class="barrow"><span>Zomato</span><div class="track"><div class="fill" style="width:12%;background:#64748b"></div></div><span class="num">105</span></div>
+<div class="barrow"><span>Landing / social / OT</span><div class="track"><div class="fill" style="width:5%;background:#94a3b8"></div></div><span class="num">46</span></div>
+</div>
+<div class="mini" style="margin-top:8px">Team 33% · Walk-in 29% · Website 28%. Walk-in edged ahead of the widget this month; landing-page bookings now span Business Lunch, A La Carte and Dark Brunch.</div>
+</div>
+<div class="col"><h3>Daypart mix — completed covers</h3>
+<div class="bars">
+<div class="barrow"><span>Dinner</span><div class="track"><div class="fill" style="width:100%;background:#7c2d3a"></div></div><span class="num">1,345</span></div>
+<div class="barrow"><span>Lunch</span><div class="track"><div class="fill" style="width:79%;background:#2563eb"></div></div><span class="num">1,061</span></div>
+<div class="barrow"><span>Brunch</span><div class="track"><div class="fill" style="width:17%;background:#d97706"></div></div><span class="num">229</span></div>
+</div>
+<div class="mini" style="margin-top:8px">Dinner 51% · Lunch 40% · Brunch 9%. Dinner's share keeps climbing (49% in July) — and dinner still has no paid support (see §4).</div>
+</div>
+</div>
+</div></div>
+
+<!-- WEBSITE -->
+<div class="sec blue"><h2>2 · Website (GA4)</h2><div class="body">
+<table>
+<thead><tr><th>Metric</th><th>Aug 2026</th><th>July 2026</th><th>MoM</th><th>Aug 2025</th><th>YoY</th></tr></thead>
+<tbody>
+<tr><td>Users (totalUsers)</td><td class="num">5,010</td><td class="num">4,646</td><td class="num"><span class="pos">▲ 7.8%</span></td><td class="num">5,463</td><td class="num"><span class="neg">▼ 8.3%</span></td></tr>
+<tr><td>Web bookings</td><td class="num">324</td><td class="num">330</td><td class="num"><span class="neg">▼ 1.8%</span></td><td class="num">449</td><td class="num"><span class="neg">▼ 27.8%</span></td></tr>
+<tr class="total"><td>Conversion rate</td><td class="num">6.47%</td><td class="num">7.10%</td><td class="num"><span class="neg">▼ 0.6pt</span></td><td class="num">8.22%</td><td class="num"><span class="neg">▼ 1.8pt</span></td></tr>
+</tbody></table>
+<div class="obs"><b>What it says</b>The website is the soft spot again — and the shape is telling: users rose 8% MoM (paid pushed more traffic in) but bookings were flat and conversion fell to 6.5%, the lowest of the summer. More visitors, converting worse. This is the clearest case for the <b>site migration</b>: the priority is lifting on-site conversion, not just buying traffic. Metric is totalUsers; booking event = <span class="num">sevenrooms_booking_complete</span>.</div>
+</div></div>
+
+<!-- PAID MEDIA SUMMARY -->
+<div class="sec green"><h2>3 · Paid media — summary</h2><div class="body">
+<table>
+<thead><tr><th>Platform</th><th>Spend (AED)</th><th>Bookings</th><th>CPA (AED)</th><th>Spend MoM</th><th>Spend YoY</th><th>CPA YoY</th></tr></thead>
+<tbody>
+<tr><td>Meta</td><td class="num">15,802</td><td class="num">133</td><td class="num">119</td><td class="num"><span class="flat">▲ 0.8%</span></td><td class="num"><span class="flat">▲ 99%</span></td><td class="num"><span class="pos">▼ 42%</span></td></tr>
+<tr><td>Google</td><td class="num">13,356</td><td class="num">191</td><td class="num">70</td><td class="num"><span class="flat">▼ 3.9%</span></td><td class="num"><span class="flat">▲ 24%</span></td><td class="num"><span class="neg">▲ 18%</span></td></tr>
+<tr class="total"><td>Blended</td><td class="num">29,158</td><td class="num">324</td><td class="num">90</td><td class="num"><span class="flat">▼ 1.4%</span></td><td class="num"><span class="flat">▲ 56%</span></td><td class="num"><span class="flat">▲ 6%</span></td></tr>
+</tbody></table>
+<div class="obs"><b>The two platforms split this month</b>Bookings are each platform's own reported conversions (Meta = SCHEDULE; Google = "Sevenrooms Booking Complete", bookings-only), overlapping each other and GA4's 324 — efficiency signals, not additive to covers. <b>Meta softened with the market</b>: flat spend but bookings dropped 173→133, so CPA rose to AED 119 (still far ahead of last August's 203). <b>Google went the other way</b> — spend trimmed 4% but bookings up ~10% to 191 and CPA down to AED 70, with P.Max &gt; Generic scaling (98k→134k impressions). Brand remains the standout at AED 42/booking.</div>
+<div class="mini" style="margin-top:8px">FX: Google Ads bills in GBP; converted at 4.84 AED/GBP (same rate across all periods to isolate volume/efficiency from FX). £2,759.60 → AED 13,356.</div>
+</div></div>
+
+<!-- LIVE ADS - META -->
+<div class="sec slate"><h2>4 · Live ads — every ad that ran in August (Meta)</h2><div class="body">
+<div class="mini" style="margin-bottom:6px">13 ads delivered. <span class="tag t-pro">Prospecting</span> <span class="tag t-rem">Remarketing</span> <span class="tag t-awr">Awareness / Reach</span> — awareness ads are bought for reach, not bookings. Click any preview thumbnail to open the full creative (▶ video / ◱ image).</div>
+<table id="metaTbl">
+<thead><tr><th>Preview</th><th>Ad</th><th>Stage</th><th>Spend</th><th>Impr.</th><th>Clicks</th><th>CTR</th><th>Bookings</th><th>CPA</th></tr></thead>
+<tbody id="metaBody"></tbody>
+<tfoot><tr class="total"><td></td><td>Total — 13 ads</td><td></td><td class="num">15,802</td><td class="num">1,903,881</td><td class="num">10,047</td><td class="num">0.53%</td><td class="num">133</td><td class="num">119</td></tr></tfoot>
+</table>
+<div class="obs"><b>What's working / what's not in Meta</b>The mix rebalanced a little — <b>Business Lunch</b> prospecting scaled up (AED 4,048 / 28 bookings) as <b>Imperial Brunch</b> eased back to 42% of spend (from 55% in July), and <b>Unlimited Dim Sum</b> remarketing held (AED 112 CPA). But August demand thinned, so CPAs across the board rose. The structural point is unchanged: Meta is <b>100% brunch/lunch daytime product</b>, with still <b>no ad support for dinner, à la carte / the chef's tasting menus, Dark Brunch or Red Lantern</b> — the evening products the menu work is built around. The Eye Studio dinner/à la carte video is the missing piece here.</div>
+</div></div>
+
+<!-- LIVE ADS - GOOGLE -->
+<div class="sec slate"><h2>5 · Live ads — every ad that ran in August (Google)</h2><div class="body">
+<div class="mini" style="margin-bottom:6px">5 responsive search ads across 2 search campaigns, plus Performance Max (asset-based). Cost in AED (GBP × 4.84). Conversions = "Sevenrooms Booking Complete".</div>
+<table>
+<thead><tr><th>Campaign · ad group</th><th>Spend</th><th>Impr.</th><th>Clicks</th><th>CTR</th><th>Bookings</th><th>CPA</th></tr></thead>
+<tbody>
+<tr><td>Search &gt; Brand · Generic</td><td class="num">5,543</td><td class="num">5,219</td><td class="num">1,343</td><td class="num">25.7%</td><td class="num">132.9</td><td class="num">42</td></tr>
+<tr><td>P.Max &gt; Generic <span class="mini">(asset-based)</span></td><td class="num">5,216</td><td class="num">134,379</td><td class="num">2,510</td><td class="num">1.87%</td><td class="num">38.6</td><td class="num">135</td></tr>
+<tr><td>Search &gt; Restaurant · Chinese &gt; Restaurant</td><td class="num">787</td><td class="num">6,371</td><td class="num">195</td><td class="num">3.06%</td><td class="num">6.0</td><td class="num">132</td></tr>
+<tr><td>Search &gt; Restaurant · Food Type</td><td class="num">731</td><td class="num">3,957</td><td class="num">185</td><td class="num">4.68%</td><td class="num">6.5</td><td class="num">112</td></tr>
+<tr><td>Search &gt; Restaurant · Asian &gt; Restaurant</td><td class="num">387</td><td class="num">4,202</td><td class="num">100</td><td class="num">2.38%</td><td class="num">4.0</td><td class="num">97</td></tr>
+<tr><td>Search &gt; Restaurant · Generic &amp; Special Occasion</td><td class="num">693</td><td class="num">2,503</td><td class="num">130</td><td class="num">5.19%</td><td class="num">3.0</td><td class="num">231</td></tr>
+<tr class="total"><td>Total — 5 RSAs + P.Max</td><td class="num">13,356</td><td class="num">156,631</td><td class="num">4,463</td><td class="num">2.85%</td><td class="num">191.0</td><td class="num">70</td></tr>
+</tbody></table>
+<div class="obs"><b>Where the Google cost sits</b>Brand carried the month again — AED 5,543 → 133 bookings at AED 42 on a 26% click-through. <b>P.Max &gt; Generic</b> is now the second-biggest line and improved slightly (CPA AED 135 vs 161 in July) as it scales; worth keeping on a leash. The non-brand "Restaurant" ad groups remain the expensive tail (AED 97–231) — the standing lever to tighten toward brand and high-intent occasion terms.</div>
+</div></div>
+
+<!-- FORWARD -->
+<div class="sec amber"><h2>6 · Forward book &amp; outlook</h2><div class="body">
+<div class="obs" style="margin-top:2px"><b>The forward signal</b>Dubai books almost same-day, so the forward book is normally empty — which makes this month's <b>25% jump in net created covers (3,766)</b> notable: it's well above what dined in August, so a real block of September service dates is already on the books. That points to the autumn rebound arriving on cue.</div>
+<table>
+<thead><tr><th>Period</th><th>2024 covers</th><th>2025 covers</th><th>2026</th></tr></thead>
+<tbody>
+<tr><td>July</td><td class="num">3,466</td><td class="num">3,467</td><td class="num">2,845 (actual)</td></tr>
+<tr><td>August</td><td class="num">3,778</td><td class="num">3,153</td><td class="num">2,635 (actual)</td></tr>
+<tr><td>September</td><td class="num">~3,900</td><td class="num">3,600+</td><td class="num">rebound (fwd book building)</td></tr>
+</tbody></table>
+<div class="mini" style="margin-top:8px">August was the seasonal floor; September historically recovers strongly, and this year the forward book is already loading for it. Expect covers to climb back through September.</div>
+<div class="obs"><b>Plan</b>Ride the September recovery. On media: keep Google's efficient brand + P.Max running, and <b>open a dinner / à la carte line on Meta</b> (the biggest coverage gap — pending the Eye Studio video). On the website — soft all summer — the <b>migration</b> is the priority for lifting on-site conversion.</div>
+</div></div>
+
+<!-- WHAT'S WORKING -->
+<div class="sec slate"><h2>7 · What's working / what's not</h2><div class="body">
+<div class="ww">
+<div class="wcol wgood"><h4>Working</h4><ul>
+<li>Forward book jumped 25% MoM — September rebound is loading.</li>
+<li>Cancellations down again to 7.4% of gross created — a clean book.</li>
+<li>Google improved into the trough: CPA down to AED 70, brand at AED 42/booking.</li>
+<li>Revenue per cover still up 5% YoY despite the seasonal dip.</li>
+<li>Meta far ahead of last August (CPA AED 119 vs 203).</li>
+</ul></div>
+<div class="wcol wbad"><h4>Not working / watch</h4><ul>
+<li>Covers at the summer floor — down 16% YoY, revenue −12% YoY.</li>
+<li>Website conversion slipped to 6.5% despite more traffic — migration should fix this.</li>
+<li>Meta CPA jumped to AED 119 as August demand thinned.</li>
+<li>Meta still 100% daytime — no dinner, à la carte, Dark Brunch or Red Lantern support.</li>
+<li>P.Max &gt; Generic still the pricier Google line (AED 135) — keep watching.</li>
+</ul></div>
+</div>
+</div></div>
+
+<footer>
+Hutong Dubai · single venue · August 2026 full calendar month · currency AED.
+Covers &amp; revenue: SevenRooms via Supabase (completed = status Complete by service date; created = by sr_created_at in Asia/Dubai; deleted excluded).
+Website: GA4 property 359650118, metric totalUsers, booking event sevenrooms_booking_complete.
+Meta: account act_551167838895768, bookings = SCHEDULE conversion (AED, no FX).
+Google Ads: customer 7344894846 via MCC, bookings = "Sevenrooms Booking Complete" primary conversion; cost GBP converted at 4.84 AED/GBP.
+Platform-reported ad bookings overlap each other and GA4 and are not additive to covers. MoM vs July 2026, YoY vs August 2025 (calendar month). Generated 2 September 2026.
+</footer>
+<script>
+var B="https://assets-organizer-cdn.gomarble.ai/mcp-agent/ad-assets/";
+var META=[
+["Imperial Brunch","pro",6575.91,168535,3382,2.01,60,"b12a3484-b502-4150-a75e-e79ab6bcd661.mp4","b12a3484-b502-4150-a75e-e79ab6bcd661_d1da4cc3-2854-414d-92d0-ae65d454514b.jpg"],
+["Business Lunch","pro",4047.85,170586,2889,1.69,28,"82c261fa-4efa-4db8-98a9-33cffa7e6386.jpg","82c261fa-4efa-4db8-98a9-33cffa7e6386.jpg"],
+["Unlimited Dim Sum — Reel","rem",3115.83,99886,1542,1.54,28,"281ba836-a630-49a1-af5f-1c9721ca0278.jpg","281ba836-a630-49a1-af5f-1c9721ca0278.jpg"],
+["Business Lunch","awr",996.96,1348199,1265,0.09,0,"7ffd90d8-b7e3-4e19-a6dc-df1bb65a0f0f.jpg","7ffd90d8-b7e3-4e19-a6dc-df1bb65a0f0f.jpg"],
+["Business Lunch","rem",394.33,15286,231,1.51,6,"66363ef9-2173-4018-b1db-2193e083af41.jpg","66363ef9-2173-4018-b1db-2193e083af41.jpg"],
+["A sensory glimpse — Reel","pro",367.79,37803,455,1.20,11,"a74e0bee-fb2f-4407-9888-e229b2e136ad.mp4","a74e0bee-fb2f-4407-9888-e229b2e136ad_47d2c32b-d96c-4576-93f9-6d011d1db20d.jpg"],
+["A soft final note — Post","rem",120.77,5495,107,1.95,0,"e2641b07-a605-4822-8e51-363a8f0265d5.jpg","e2641b07-a605-4822-8e51-363a8f0265d5.jpg"],
+["A sensory glimpse — Reel","rem",61.86,5730,71,1.24,0,"a74e0bee-fb2f-4407-9888-e229b2e136ad.mp4","a74e0bee-fb2f-4407-9888-e229b2e136ad_47d2c32b-d96c-4576-93f9-6d011d1db20d.jpg"],
+["Signature Desserts","pro",47.39,2005,9,0.45,0,"b583679b-0594-4ebc-9954-49dcbda1b0ac.mp4","b583679b-0594-4ebc-9954-49dcbda1b0ac_a19c1ac3-fbd5-467f-9b52-d51432779d1e.jpg"],
+["Unlimited Dim Sum — Reel","awr",31.55,45855,53,0.12,0,"281ba836-a630-49a1-af5f-1c9721ca0278.jpg","281ba836-a630-49a1-af5f-1c9721ca0278.jpg"],
+["A soft final note — Post (Copy)","pro",21.65,1398,26,1.86,0,"df228c46-a39c-4efb-85e1-5d39105a5750.jpg","df228c46-a39c-4efb-85e1-5d39105a5750.jpg"],
+["Steamed mandarin fish — Reel","pro",18.97,1633,17,1.04,0,"b840d510-9053-4a8d-8352-aab88a2b65c8.mp4","b840d510-9053-4a8d-8352-aab88a2b65c8_44cf0f22-b200-49ef-bb80-52916315f894.jpg"],
+["Imperial Brunch","awr",1.10,1470,0,0,0,"b12a3484-b502-4150-a75e-e79ab6bcd661.mp4","b12a3484-b502-4150-a75e-e79ab6bcd661_d1da4cc3-2854-414d-92d0-ae65d454514b.jpg"]
+];
+var STG={pro:["Prospecting","t-pro"],rem:["Remarketing","t-rem"],awr:["Awareness","t-awr"]};
+function nf(n){return Math.round(n).toLocaleString();}
+var rows="";
+META.forEach(function(a){
+ var cpa=a[6]?("AED "+Math.round(a[2]/a[6])):"—";
+ var st=STG[a[1]];
+ var asset=B+a[7], thumb=B+a[8], isVid=/\.mp4$/.test(a[7]);
+ var prev='<a class="thumb" href="'+asset+'" target="_blank" rel="noopener" title="Open creative"><img loading="lazy" onerror="this.style.display=&#39;none&#39;" src="'+thumb+'" alt=""></a>'+
+   '<a class="pv" href="'+asset+'" target="_blank" rel="noopener">'+(isVid?'▶ video':'◱ image')+'</a>';
+ rows+='<tr><td style="text-align:left">'+prev+'</td><td>'+a[0]+'</td><td style="text-align:left"><span class="tag '+st[1]+'">'+st[0]+'</span></td>'+
+ '<td class="num">'+nf(a[2])+'</td><td class="num">'+nf(a[3])+'</td><td class="num">'+nf(a[4])+'</td>'+
+ '<td class="num">'+a[5].toFixed(2)+'%</td><td class="num">'+a[6]+'</td><td class="num">'+cpa+'</td></tr>';
+});
+document.getElementById("metaBody").innerHTML=rows;
+</script>
+</body></html>
