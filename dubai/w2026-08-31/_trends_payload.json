@@ -1,0 +1,181 @@
+{
+ "venues": [
+  "Hutong Dubai"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W32",
+  "W33",
+  "W34",
+  "W35"
+ ],
+ "dateTY": [
+  "10–16 Aug",
+  "17–23 Aug",
+  "24–30 Aug",
+  "31 Aug–6 Sep"
+ ],
+ "dateLY": [
+  "11–17 Aug",
+  "18–24 Aug",
+  "25–31 Aug",
+  "1–7 Sep"
+ ],
+ "fyrange": "FY26 weeks 32–35",
+ "sym": "AED ",
+ "data": {
+  "Hutong Dubai": [
+   [
+    "Website users",
+    [
+     1128,
+     1218,
+     1196,
+     1200
+    ],
+    [
+     1325,
+     1361,
+     1162,
+     1435
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.2,
+     5.5,
+     7.4,
+     8.8
+    ],
+    [
+     7.8,
+     8.7,
+     7.5,
+     7.9
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     59,
+     67,
+     88,
+     105
+    ],
+    [
+     104,
+     118,
+     87,
+     113
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     32,
+     26,
+     28,
+     29
+    ],
+    [
+     8,
+     11,
+     5,
+     4
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     15,
+     11,
+     17,
+     17
+    ],
+    [
+     22,
+     16,
+     0,
+     13
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     191.9,
+     251.3,
+     151.6,
+     157.1
+    ],
+    [
+     154.1,
+     144.2,
+     0.0,
+     200.0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     112.8,
+     139.5,
+     123.4,
+     125.3
+    ],
+    [
+     216.3,
+     155.4,
+     339.1,
+     429.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     71,
+     0,
+     0,
+     0
+    ],
+    [
+     335,
+     291,
+     2,
+     289
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Hutong Dubai": "W35 users 1,200 (-16.4% YoY) with 105 GA4 bookings (-7.1% YoY); conversion rate 8.8% vs 7.9% LY. Google delivered 17 bookings at AED 157 CPA; Meta 29 at AED 125. Google walk-in signals have now read 0 for four consecutive weeks: local and store-visit conversions have not reported since 12 August, so treat that panel as a tracking gap rather than a fall in footfall."
+ },
+ "alert": {
+  "Hutong Dubai": [
+   "red",
+   "Traffic drop",
+   "Users 16% below last year"
+  ]
+ }
+}

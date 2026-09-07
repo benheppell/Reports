@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 891,
+   "tgt": 2088,
+   "wow": 1086,
+   "yoy": 1773,
+   "ytd": 39971,
+   "ytdt": 49773,
+   "meta_s": 1327.84,
+   "goog_s": 1778.35,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 807,
+   "tgt": 992,
+   "wow": 1015,
+   "yoy": 875,
+   "ytd": 23915,
+   "ytdt": 25851,
+   "meta_s": 1124.02,
+   "goog_s": 1682.03,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 234,
+   "tgt": 337,
+   "wow": 269,
+   "yoy": 277,
+   "ytd": 9540,
+   "ytdt": 12323,
+   "meta_s": 949.25,
+   "goog_s": 1601.07,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 85,
+   "tgt": 136,
+   "wow": 82,
+   "yoy": 83,
+   "ytd": 3392,
+   "ytdt": 4892,
+   "meta_s": 920.43,
+   "goog_s": 344.03,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 78,
+   "tgt": 140,
+   "wow": 89,
+   "yoy": 103,
+   "ytd": 3258,
+   "ytdt": 4599,
+   "meta_s": 408.09,
+   "goog_s": 433.17,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 451,
+   "tgt": 148,
+   "wow": 497,
+   "yoy": 157,
+   "ytd": 16373,
+   "ytdt": 5619,
+   "meta_s": 2016.0,
+   "goog_s": 801.8,
+   "nc": true
+  }
+ ],
+ "note": "Read London on week-on-week and year-on-year movement; the weekly targets are shown for reference only. London booked <b>2,546</b> GA4 bookings, <b>down 16.2 percent</b> week on week and <b>down 22.1 percent</b> year on year. Two things frame that fall. First, this reporting week opens on the <b>UK late-summer bank holiday (Mon 31 Aug)</b>, while the 364-day comparison week (1&ndash;7 Sep 2025) is a clean back-to-work week &mdash; the 2025 holiday sat in the previous comparison week, so the year-on-year gap is overstated. Second, website users fell at five of six venues, so this is a traffic step-down rather than a conversion failure: portfolio conversion held at <b>5.8 percent</b>. <b>Aqua Shard</b> remains the structural issue at <b>&minus;49.7 percent</b> year on year on users <b>&minus;27.2 percent</b>, the continuation of the deliberate the-shard.com free-to-paid referral shift plus an organic visibility problem. <b>Azzurra</b> was the only venue up week on week (+3.7 percent). <b>DSL</b> is measured against a pre-rebrand target and is not comparable; its +187 percent year on year reflects a low 2025 base, not a like-for-like gain. Covers, reported separately, are <b>up 24.4 percent year on year</b> on the same week &mdash; GA4 cannot see OpenTable or most of Google Reserve, so read the two together.",
+ "week": "31 Aug–6 Sep 2026",
+ "wow": "24–30 Aug 2026",
+ "yoy": "1–7 Sep 2025",
+ "generated": "7 September 2026"
+}

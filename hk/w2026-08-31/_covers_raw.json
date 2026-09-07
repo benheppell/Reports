@@ -1,0 +1,281 @@
+{
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ch": {
+    "web": {
+     "c": 444,
+     "p": 480,
+     "y": 370
+    },
+    "gr": {
+     "c": 177,
+     "p": 225,
+     "y": 107
+    },
+    "ot": {
+     "c": 344,
+     "p": 261,
+     "y": 261
+    },
+    "walk": {
+     "c": 81,
+     "p": 58,
+     "y": 109
+    },
+    "recep": {
+     "c": 80,
+     "p": 123,
+     "y": 37
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ch": {
+    "web": {
+     "c": 548,
+     "p": 553,
+     "y": 489
+    },
+    "gr": {
+     "c": 329,
+     "p": 392,
+     "y": 106
+    },
+    "ot": {
+     "c": 337,
+     "p": 275,
+     "y": 227
+    },
+    "walk": {
+     "c": 138,
+     "p": 172,
+     "y": 99
+    },
+    "recep": {
+     "c": 207,
+     "p": 62,
+     "y": 86
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ch": {
+    "web": {
+     "c": 245,
+     "p": 291,
+     "y": 163
+    },
+    "gr": {
+     "c": 129,
+     "p": 158,
+     "y": 87
+    },
+    "ot": {
+     "c": 184,
+     "p": 229,
+     "y": 155
+    },
+    "walk": {
+     "c": 78,
+     "p": 93,
+     "y": 88
+    },
+    "recep": {
+     "c": 199,
+     "p": 288,
+     "y": 213
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ch": {
+    "web": {
+     "c": 170,
+     "p": 174,
+     "y": 119
+    },
+    "gr": {
+     "c": 83,
+     "p": 66,
+     "y": 18
+    },
+    "ot": {
+     "c": 198,
+     "p": 209,
+     "y": 261
+    },
+    "walk": {
+     "c": 66,
+     "p": 88,
+     "y": 45
+    },
+    "recep": {
+     "c": 307,
+     "p": 288,
+     "y": 171
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 5,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ch": {
+    "web": {
+     "c": 356,
+     "p": 357,
+     "y": 441
+    },
+    "gr": {
+     "c": 234,
+     "p": 258,
+     "y": 0
+    },
+    "ot": {
+     "c": 360,
+     "p": 352,
+     "y": 374
+    },
+    "walk": {
+     "c": 907,
+     "p": 992,
+     "y": 1048
+    },
+    "recep": {
+     "c": 156,
+     "p": 140,
+     "y": 99
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro",
+   "ch": {
+    "web": {
+     "c": 345,
+     "p": 382,
+     "y": 170
+    },
+    "gr": {
+     "c": 169,
+     "p": 164,
+     "y": 31
+    },
+    "ot": {
+     "c": 566,
+     "p": 485,
+     "y": 274
+    },
+    "walk": {
+     "c": 1609,
+     "p": 1774,
+     "y": 579
+    },
+    "recep": {
+     "c": 478,
+     "p": 466,
+     "y": 289
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31"
+  ],
+  "total": [
+   8209,
+   7470,
+   8670,
+   9097,
+   9564,
+   11052,
+   9860,
+   9524
+  ],
+  "ot": [
+   1732,
+   1706,
+   1728,
+   1776,
+   1846,
+   1990,
+   1811,
+   1989
+  ]
+ },
+ "problems": [
+  "Staff-name booking sources are EXCLUDED (documented basis, same as w2026-08-24). The task brief's line about routing staff names to 'recep' was NOT applied: it contradicts the corrected basis established last week and would re-introduce the 3/10/17 Aug overstatement.",
+  "DATA GAP: 'Dim Sum Library - Pacific Place' has ZERO Google Reserve rows created between 2025-08-29 and 2025-09-08 inclusive, while Sep 2025 as a whole has 668 GR covers. The DSL 'gr' YoY value of 0 is therefore a source-data gap, NOT a real zero. Do not report DSL Google Reserve YoY growth from this file.",
+  "New sources bucketed this week: 'Booked In Person' (3 covers) -> 'recep'; 'Restaurant Week', 'Unlimited Dim Sum Brunch - Landing Page', 'A Culinary Invitation...' , 'Northern Dim Sum - Landing Page' -> 'web'. New staff names excluded: Joe Chan, Jacqueline Dunn, William Wong. 'Event Booking' kept EXCLUDED per last week (0 covers)."
+ ]
+}

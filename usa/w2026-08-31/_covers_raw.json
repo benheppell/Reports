@@ -1,0 +1,179 @@
+{
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ch": {
+    "web": {
+     "c": 415,
+     "p": 411,
+     "y": 617
+    },
+    "gr": {
+     "c": 154,
+     "p": 150,
+     "y": 67
+    },
+    "ot": {
+     "c": 136,
+     "p": 201,
+     "y": 215
+    },
+    "walk": {
+     "c": 623,
+     "p": 445,
+     "y": 590
+    },
+    "recep": {
+     "c": 117,
+     "p": 154,
+     "y": 214
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 72,
+     "p": 28,
+     "y": 0
+    },
+    "other": {
+     "c": 812,
+     "p": 627,
+     "y": 804
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ch": {
+    "web": {
+     "c": 377,
+     "p": 373,
+     "y": 340
+    },
+    "gr": {
+     "c": 103,
+     "p": 56,
+     "y": 247
+    },
+    "ot": {
+     "c": 400,
+     "p": 453,
+     "y": 306
+    },
+    "walk": {
+     "c": 413,
+     "p": 401,
+     "y": 366
+    },
+    "recep": {
+     "c": 5,
+     "p": 3,
+     "y": 94
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 25,
+     "p": 49,
+     "y": 5
+    },
+    "other": {
+     "c": 443,
+     "p": 453,
+     "y": 465
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ch": {
+    "web": {
+     "c": 168,
+     "p": 154,
+     "y": 117
+    },
+    "gr": {
+     "c": 6,
+     "p": 13,
+     "y": 60
+    },
+    "ot": {
+     "c": 166,
+     "p": 152,
+     "y": 131
+    },
+    "walk": {
+     "c": 198,
+     "p": 298,
+     "y": 285
+    },
+    "recep": {
+     "c": 41,
+     "p": 14,
+     "y": 6
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 18,
+     "p": 7,
+     "y": 0
+    },
+    "other": {
+     "c": 257,
+     "p": 319,
+     "y": 291
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35"
+  ],
+  "total": [
+   3481,
+   3684,
+   4286,
+   4008,
+   3799,
+   3522,
+   3362,
+   3437
+  ],
+  "ot": [
+   917,
+   1091,
+   1228,
+   844,
+   929,
+   769,
+   806,
+   702
+  ]
+ },
+ "problems": [
+  "Staff-name booking sources are EXCLUDED (documented basis, same as w2026-08-24). The task brief's line about routing staff names to 'recep' was NOT applied: it contradicts the corrected basis established last week and would re-introduce the 3/10/17 Aug overstatement.",
+  "'other' key (London/USA only) is a convenience rollup of walk+recep+ota+tp. Do NOT add it to the other buckets - it double counts.",
+  "BULK-IMPORT ARTEFACT: Hutong New York received 695 'OT Guestcenter' records (1,942 covers) all created 2026-09-04 22:17-22:53 UTC, with service dates spanning 2026-07-28 to 2026-10-19 and 611 of them already in the past. This is a backfill load, not demand created in the reporting week. Numbers in this file INCLUDE it (methodology unchanged). Excluding it: Hutong NYC ot c=400, Hutong NYC total c=1,323, USA trend total W35=3,437 (vs 5,379 as written), USA trend ot W35=702 (vs 2,644).",
+  "The YoY week also contains a smaller import of the same kind: Hutong NYC 'OT Guestcenter' 999 covers / 289 records created 2025-09-04 with service dates back to Jan 2025. Hutong NYC ot y=1,305 includes it.",
+  "Smaller 'OT Guestcenter' batches for Hutong NYC also sit in trend weeks W28 (140+4+99), W29 (426+27) and W30 (276+123); these were present in last week's published trend too.",
+  "New staff names excluded: Natalie Crooks (1,049 covers in the YoY week alone, 26 large-party records), Gabby Sater, Valentin Bouchet, Laura, Alejandro Marquina, Pedro Ramirez."
+ ]
+}

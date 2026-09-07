@@ -1,0 +1,181 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W28",
+  "W29",
+  "W30",
+  "W31"
+ ],
+ "dateTY": [
+  "10–16 Aug",
+  "17–23 Aug",
+  "24–30 Aug",
+  "31 Aug–6 Sep"
+ ],
+ "dateLY": [
+  "11–17 Aug",
+  "18–24 Aug",
+  "25–31 Aug",
+  "1–7 Sep"
+ ],
+ "fyrange": "FY26 weeks 28–31",
+ "sym": "€",
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     4483,
+     3914,
+     4266,
+     4703
+    ],
+    [
+     316,
+     473,
+     975,
+     4933
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     4.6,
+     4.8,
+     5.5,
+     5.9
+    ],
+    [
+     0.0,
+     7.6,
+     0.5,
+     2.6
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     206,
+     189,
+     235,
+     279
+    ],
+    [
+     0,
+     36,
+     5,
+     130
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     36,
+     32,
+     36,
+     34
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     38,
+     29,
+     44,
+     52
+    ],
+    [
+     0,
+     0,
+     0,
+     3
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     26.5,
+     22.2,
+     28.3,
+     29.9
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     823.4
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     50.0,
+     56.8,
+     50.3,
+     53.0
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W31 users 4,703 with 279 GA4 bookings; conversion rate 5.9%. New in 2026, so there is no like-for-like last year. Google delivered 52 bookings at €30 CPA; Meta 34 at €53. The year-ago line is the 2025 launch ramp, when paid social and paid search were running hard on a brand-new property, so it is not a like-for-like base. Weekly budget is September plan prorated x7/30: Meta €1,633, Google €1,400."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "blue",
+   "New venue",
+   "Launched late 2025 &mdash; this-year only, no YoY comparison"
+  ]
+ }
+}

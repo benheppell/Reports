@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 233,
+   "tgt": 516,
+   "wow": 220,
+   "yoy": 441,
+   "ytd": 9035,
+   "ytdt": 15979,
+   "meta_s": 1889.71,
+   "goog_s": 761.6,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 141,
+   "tgt": 368,
+   "wow": 137,
+   "yoy": 150,
+   "ytd": 5679,
+   "ytdt": 15403,
+   "meta_s": 808.8,
+   "goog_s": 1160.38,
+   "nc": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 74,
+   "tgt": 112,
+   "wow": 80,
+   "yoy": 105,
+   "ytd": 3371,
+   "ytdt": 4851,
+   "meta_s": 1597.97,
+   "goog_s": 568.08,
+   "nc": true
+  }
+ ],
+ "note": "USA targets are strategic and deliberately aggressive (Hutong NYC explicitly so), and September targets step up again at Aqua NYC, so weekly and year-to-date variances read heavily negative by design. Weekly target = September monthly GA4 target x 7/30; <b>Hutong Miami</b>&rsquo;s GA4 target is derived from its Meta plan x 6,738/4,756 and is flagged as not directly comparable. The portfolio booked <b>448</b> GA4 bookings against a <b>996</b> blended weekly target, <b>up 2.5 percent</b> week on week and <b>down 35.6 percent</b> year on year. Two of three venues were up week on week. The year-on-year picture is distorted by unusual 2025 bases: the year-ago week carried 1,556 Paid Other sessions at <b>Aqua NYC</b> (17 this year) and 1,876 Organic Social sessions at <b>Hutong Miami</b> (122 this year), which is most of the apparent decline. Conversion is the more useful read and it is up at every venue: Hutong NYC 5.5 percent against 3.8 percent last year, Hutong Miami 4.4 against 3.8. <b>Aqua NYC</b> is the exception at 4.4 percent against 7.9 percent last year. Covers, reported separately, are down only 6.1 percent year on year against GA4&rsquo;s 35.6 percent, because GA4 cannot see OpenTable or Resy.",
+ "week": "31 Aug–6 Sep 2026",
+ "wow": "24–30 Aug 2026",
+ "yoy": "1–7 Sep 2025",
+ "generated": "7 September 2026"
+}

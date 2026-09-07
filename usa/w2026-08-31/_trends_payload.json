@@ -1,0 +1,630 @@
+{
+ "venues": [
+  "Aqua Roma",
+  "Aqua Kyoto",
+  "Hutong NYC",
+  "Hutong Miami"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W32",
+  "W33",
+  "W34",
+  "W35"
+ ],
+ "dateTY": [
+  "10–16 Aug",
+  "17–23 Aug",
+  "24–30 Aug",
+  "31 Aug–6 Sep"
+ ],
+ "dateLY": [
+  "11–17 Aug",
+  "18–24 Aug",
+  "25–31 Aug",
+  "1–7 Sep"
+ ],
+ "fyrange": "FY26 weeks 32–35",
+ "sym": "$",
+ "data": {
+  "Aqua Roma": [
+   [
+    "Website users",
+    [
+     4892,
+     4579,
+     4878,
+     4396
+    ],
+    [
+     4905,
+     4877,
+     4862,
+     5609
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     4.7,
+     4.1,
+     4.0,
+     4.9
+    ],
+    [
+     6.3,
+     6.1,
+     6.9,
+     7.9
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     232,
+     186,
+     197,
+     217
+    ],
+    [
+     309,
+     296,
+     334,
+     441
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     84,
+     72,
+     74,
+     80
+    ],
+    [
+     73,
+     67,
+     71,
+     117
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google bookings",
+    [
+     48,
+     26,
+     29,
+     29
+    ],
+    [
+     74,
+     62,
+     85,
+     91
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google CPA",
+    [
+     11.9,
+     21.5,
+     23.9,
+     26.3
+    ],
+    [
+     17.3,
+     22.9,
+     18.7,
+     14.0
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Meta CPA",
+    [
+     22.4,
+     26.5,
+     25.4,
+     23.6
+    ],
+    [
+     11.7,
+     12.8,
+     19.1,
+     13.4
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     271,
+     231,
+     304,
+     126
+    ],
+    [
+     699,
+     815,
+     753,
+     479
+    ],
+    false,
+    "n",
+    "shared"
+   ]
+  ],
+  "Aqua Kyoto": [
+   [
+    "Website users",
+    [
+     1266,
+     1199,
+     1088,
+     944
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     2.1,
+     1.8,
+     2.1,
+     1.7
+    ],
+    [
+     0.0,
+     0.0,
+     0.0,
+     0.0
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     27,
+     21,
+     23,
+     16
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     84,
+     72,
+     74,
+     80
+    ],
+    [
+     73,
+     67,
+     71,
+     117
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google bookings",
+    [
+     48,
+     26,
+     29,
+     29
+    ],
+    [
+     74,
+     62,
+     85,
+     91
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google CPA",
+    [
+     11.9,
+     21.5,
+     23.9,
+     26.3
+    ],
+    [
+     17.3,
+     22.9,
+     18.7,
+     14.0
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Meta CPA",
+    [
+     22.4,
+     26.5,
+     25.4,
+     23.6
+    ],
+    [
+     11.7,
+     12.8,
+     19.1,
+     13.4
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     271,
+     231,
+     304,
+     126
+    ],
+    [
+     699,
+     815,
+     753,
+     479
+    ],
+    false,
+    "n",
+    "shared"
+   ]
+  ],
+  "Hutong NYC": [
+   [
+    "Website users",
+    [
+     3347,
+     3395,
+     2937,
+     2564
+    ],
+    [
+     4135,
+     4026,
+     4024,
+     3983
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.0,
+     4.2,
+     4.7,
+     5.5
+    ],
+    [
+     5.5,
+     5.3,
+     4.6,
+     3.8
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     169,
+     141,
+     137,
+     141
+    ],
+    [
+     228,
+     215,
+     186,
+     150
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     18,
+     22,
+     13,
+     11
+    ],
+    [
+     13,
+     26,
+     14,
+     7
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     53,
+     39,
+     27,
+     19
+    ],
+    [
+     53,
+     63,
+     53,
+     37
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     23.7,
+     34.7,
+     46.1,
+     61.2
+    ],
+    [
+     14.0,
+     11.9,
+     21.4,
+     28.2
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     57.3,
+     46.9,
+     78.4,
+     73.5
+    ],
+    [
+     62.5,
+     31.2,
+     58.0,
+     115.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     819,
+     660,
+     564,
+     286
+    ],
+    [
+     730,
+     782,
+     650,
+     608
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Hutong Miami": [
+   [
+    "Website users",
+    [
+     1934,
+     2154,
+     1841,
+     1673
+    ],
+    [
+     2730,
+     2297,
+     1797,
+     2783
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     4.6,
+     5.2,
+     4.3,
+     4.4
+    ],
+    [
+     5.2,
+     5.8,
+     5.7,
+     3.8
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     88,
+     112,
+     80,
+     74
+    ],
+    [
+     142,
+     133,
+     103,
+     105
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     19,
+     32,
+     23,
+     18
+    ],
+    [
+     43,
+     31,
+     11,
+     35
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     24,
+     22,
+     14,
+     19
+    ],
+    [
+     37,
+     39,
+     27,
+     26
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     26.6,
+     29.0,
+     43.5,
+     29.9
+    ],
+    [
+     21.2,
+     28.2,
+     46.2,
+     33.2
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     96.8,
+     57.7,
+     80.2,
+     88.8
+    ],
+    [
+     24.0,
+     22.2,
+     42.9,
+     28.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     342,
+     303,
+     214,
+     94
+    ],
+    [
+     386,
+     365,
+     328,
+     253
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Roma": "W35 users 4,396 (-21.6% YoY) with 217 GA4 bookings (-50.8% YoY); conversion rate 4.9% vs 7.9% LY. Shared account Google delivered 29 bookings at $26 CPA; Meta 80 at $24.",
+  "Aqua Kyoto": "W35 users 944 with 16 GA4 bookings; conversion rate 1.7%. New in 2026, so there is no like-for-like last year. Shared account Google delivered 29 bookings at $26 CPA; Meta 80 at $24.",
+  "Hutong NYC": "W35 users 2,564 (-35.6% YoY) with 141 GA4 bookings (-6.0% YoY); conversion rate 5.5% vs 3.8% LY. Google delivered 19 bookings at $61 CPA; Meta 11 at $74.",
+  "Hutong Miami": "W35 users 1,673 (-39.9% YoY) with 74 GA4 bookings (-29.5% YoY); conversion rate 4.4% vs 3.8% LY. Google delivered 19 bookings at $30 CPA; Meta 18 at $89."
+ },
+ "alert": {
+  "Aqua Roma": [
+   "red",
+   "Traffic drop",
+   "Users 22% below last year"
+  ],
+  "Aqua Kyoto": [
+   "blue",
+   "New venue",
+   "Launched 2026 &mdash; this-year only, no YoY comparison"
+  ],
+  "Hutong NYC": [
+   "red",
+   "Traffic drop",
+   "Users 36% below last year"
+  ],
+  "Hutong Miami": [
+   "red",
+   "Traffic drop",
+   "Users 40% below last year"
+  ]
+ },
+ "sharednote": {
+  "Aqua Roma": "Meta &amp; Google panels are the shared Aqua NYC ad account (Aqua Roma + Aqua Kyoto NYC combined).",
+  "Aqua Kyoto": "Meta &amp; Google panels are the shared Aqua NYC ad account (Aqua Roma + Aqua Kyoto NYC combined)."
+ }
+}

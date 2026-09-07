@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OpenTable, OT Guestcenter and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 448 &middot; YoY &#9660;35.6%",
+ "ga4_yoy": "&#9660;35.6% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 bookings are <b>35.6% down YoY</b> but covers are only <b>6.1% down</b>, because GA4 only counts website-widget bookings and cannot see <b>OpenTable or Resy</b> (20 percent of covers), walk-ins or desk bookings (a further 41 percent). Covers came in at <b>3,437</b>, <b>up 2.2 percent</b> week on week. <b>Adjustment applied:</b> 695 OpenTable records (1,942 covers) were loaded into Hutong New York in a 36-minute batch on 4 Sep with service dates running from 28 July to 19 October, and a comparable 999-cover batch sits in the year-ago week. Both have been removed here; leaving them in would have shown the market up 60 percent week on week, which is a data load rather than demand.",
+ "week": "31 Aug–6 Sep 2026",
+ "wow": "24–30 Aug 2026",
+ "yoy": "1–7 Sep 2025",
+ "generated": "7 September 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 233,
+   "ch": {
+    "web": {
+     "c": 415,
+     "p": 411,
+     "y": 617
+    },
+    "gr": {
+     "c": 154,
+     "p": 150,
+     "y": 67
+    },
+    "ot": {
+     "c": 136,
+     "p": 201,
+     "y": 215
+    },
+    "walk": {
+     "c": 623,
+     "p": 445,
+     "y": 590
+    },
+    "recep": {
+     "c": 117,
+     "p": 154,
+     "y": 214
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 72,
+     "p": 28,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 141,
+   "ch": {
+    "web": {
+     "c": 377,
+     "p": 373,
+     "y": 340
+    },
+    "gr": {
+     "c": 103,
+     "p": 56,
+     "y": 247
+    },
+    "ot": {
+     "c": 400,
+     "p": 453,
+     "y": 306
+    },
+    "walk": {
+     "c": 413,
+     "p": 401,
+     "y": 366
+    },
+    "recep": {
+     "c": 5,
+     "p": 3,
+     "y": 94
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 25,
+     "p": 49,
+     "y": 5
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 74,
+   "ch": {
+    "web": {
+     "c": 168,
+     "p": 154,
+     "y": 117
+    },
+    "gr": {
+     "c": 6,
+     "p": 13,
+     "y": 60
+    },
+    "ot": {
+     "c": 166,
+     "p": 152,
+     "y": 131
+    },
+    "walk": {
+     "c": 198,
+     "p": 298,
+     "y": 285
+    },
+    "recep": {
+     "c": 41,
+     "p": 14,
+     "y": 6
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 18,
+     "p": 7,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35"
+  ],
+  "total": [
+   3481,
+   3684,
+   4286,
+   4008,
+   3799,
+   3522,
+   3362,
+   3437
+  ],
+  "ot": [
+   917,
+   1091,
+   1228,
+   844,
+   929,
+   769,
+   806,
+   702
+  ]
+ }
+}

@@ -1,0 +1,311 @@
+{
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ch": {
+    "web": {
+     "c": 1992,
+     "p": 2209,
+     "y": 2895
+    },
+    "gr": {
+     "c": 287,
+     "p": 369,
+     "y": 148
+    },
+    "ot": {
+     "c": 129,
+     "p": 144,
+     "y": 75
+    },
+    "walk": {
+     "c": 84,
+     "p": 135,
+     "y": 122
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 22,
+     "p": 14,
+     "y": 8
+    },
+    "tp": {
+     "c": 59,
+     "p": 57,
+     "y": 42
+    },
+    "other": {
+     "c": 165,
+     "p": 206,
+     "y": 172
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ch": {
+    "web": {
+     "c": 1575,
+     "p": 1848,
+     "y": 1572
+    },
+    "gr": {
+     "c": 445,
+     "p": 358,
+     "y": 159
+    },
+    "ot": {
+     "c": 92,
+     "p": 101,
+     "y": 57
+    },
+    "walk": {
+     "c": 151,
+     "p": 120,
+     "y": 87
+    },
+    "recep": {
+     "c": 15,
+     "p": 32,
+     "y": 20
+    },
+    "ota": {
+     "c": 11,
+     "p": 27,
+     "y": 12
+    },
+    "tp": {
+     "c": 61,
+     "p": 48,
+     "y": 8
+    },
+    "other": {
+     "c": 238,
+     "p": 227,
+     "y": 127
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ch": {
+    "web": {
+     "c": 632,
+     "p": 592,
+     "y": 493
+    },
+    "gr": {
+     "c": 63,
+     "p": 38,
+     "y": 75
+    },
+    "ot": {
+     "c": 140,
+     "p": 167,
+     "y": 59
+    },
+    "walk": {
+     "c": 160,
+     "p": 170,
+     "y": 147
+    },
+    "recep": {
+     "c": 9,
+     "p": 43,
+     "y": 22
+    },
+    "ota": {
+     "c": 242,
+     "p": 252,
+     "y": 179
+    },
+    "tp": {
+     "c": 2,
+     "p": 6,
+     "y": 22
+    },
+    "other": {
+     "c": 413,
+     "p": 471,
+     "y": 370
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ch": {
+    "web": {
+     "c": 213,
+     "p": 198,
+     "y": 158
+    },
+    "gr": {
+     "c": 21,
+     "p": 30,
+     "y": 56
+    },
+    "ot": {
+     "c": 99,
+     "p": 97,
+     "y": 27
+    },
+    "walk": {
+     "c": 267,
+     "p": 255,
+     "y": 177
+    },
+    "recep": {
+     "c": 25,
+     "p": 23,
+     "y": 19
+    },
+    "ota": {
+     "c": 38,
+     "p": 29,
+     "y": 129
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "other": {
+     "c": 330,
+     "p": 307,
+     "y": 325
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ch": {
+    "web": {
+     "c": 177,
+     "p": 232,
+     "y": 209
+    },
+    "gr": {
+     "c": 44,
+     "p": 30,
+     "y": 61
+    },
+    "ot": {
+     "c": 36,
+     "p": 58,
+     "y": 20
+    },
+    "walk": {
+     "c": 221,
+     "p": 351,
+     "y": 193
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 70,
+     "p": 96,
+     "y": 38
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 12
+    },
+    "other": {
+     "c": 291,
+     "p": 447,
+     "y": 243
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ch": {
+    "web": {
+     "c": 1092,
+     "p": 1149,
+     "y": 332
+    },
+    "gr": {
+     "c": 120,
+     "p": 119,
+     "y": 43
+    },
+    "ot": {
+     "c": 421,
+     "p": 482,
+     "y": 42
+    },
+    "walk": {
+     "c": 1184,
+     "p": 1053,
+     "y": 258
+    },
+    "recep": {
+     "c": 28,
+     "p": 23,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 245
+    },
+    "tp": {
+     "c": 3,
+     "p": 2,
+     "y": 5
+    },
+    "other": {
+     "c": 1215,
+     "p": 1078,
+     "y": 508
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31"
+  ],
+  "total": [
+   10282,
+   12106,
+   11238,
+   11237,
+   10447,
+   10731,
+   10957,
+   10230
+  ],
+  "ot": [
+   1404,
+   1599,
+   1466,
+   1556,
+   1091,
+   1006,
+   1049,
+   917
+  ]
+ },
+ "problems": [
+  "Staff-name booking sources are EXCLUDED (documented basis, same as w2026-08-24). The task brief's line about routing staff names to 'recep' was NOT applied: it contradicts the corrected basis established last week and would re-introduce the 3/10/17 Aug overstatement.",
+  "'other' key (London/USA only) is a convenience rollup of walk+recep+ota+tp. Do NOT add it to the other buckets - it double counts.",
+  "New booking_source seen this week, not in last week's map: 'TripleSeat Integration' (Hutong London, 7 covers) -> bucketed 'tp'. 'Bottomlessbrunch.com, Giuseppe Prette' (2 covers, YoY week) -> 'tp'. 'The New Building offer - 25% OFF...- Landing Page' -> 'web'. New staff names excluded: Camila Carvalho, Mariame Diagne, Luz Perez."
+ ]
+}

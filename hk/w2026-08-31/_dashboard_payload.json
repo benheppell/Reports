@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 208,
+   "tgt": 190,
+   "wow": 175,
+   "yoy": 186,
+   "ytd": 6059,
+   "ytdt": 6499,
+   "meta_s": 6730.52,
+   "goog_s": 9858.48,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 293,
+   "tgt": 262,
+   "wow": 303,
+   "yoy": 252,
+   "ytd": 8847,
+   "ytdt": 7838,
+   "meta_s": 3882.02,
+   "goog_s": 5903.36,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 123,
+   "tgt": 97,
+   "wow": 135,
+   "yoy": 99,
+   "ytd": 3658,
+   "ytdt": 3101,
+   "meta_s": 5573.07,
+   "goog_s": 4033.07,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 91,
+   "tgt": 65,
+   "wow": 94,
+   "yoy": 47,
+   "ytd": 2096,
+   "ytdt": 1692,
+   "meta_s": 3090.4,
+   "goog_s": 4007.38,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 144,
+   "tgt": 167,
+   "wow": 146,
+   "yoy": 199,
+   "ytd": 4908,
+   "ytdt": 5322,
+   "meta_s": 1378.33,
+   "goog_s": 2004.47,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 140,
+   "tgt": 118,
+   "wow": 159,
+   "yoy": 96,
+   "ytd": 4486,
+   "ytdt": 3779,
+   "meta_s": 3603.04,
+   "goog_s": 4468.73,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = September monthly GA4 target x 7/30; the week straddles the month end (31 Aug plus 1&ndash;6 Sep) and is priced on September. <b>Vesu</b> remains excluded from the portfolio view. Hong Kong booked <b>999</b> GA4 bookings against a <b>899</b> blended weekly target, <b>up 11.1 percent</b> ahead of target, <b>down 1.3 percent</b> week on week and <b>up 13.7 percent</b> year on year. Five of six venues beat target. <b>Cantina</b> is the standout at +93.6 percent year on year and <b>Shiro</b> +45.8 percent, still carrying the Tai Kwun opening. <b>Dim Sum Library</b> is the one venue below target this week (&minus;13.8 percent) and the only one down year on year (&minus;27.6 percent); its conversion rate fell to 13.4 percent from 17.7 percent last year on similar traffic, so this is a conversion question rather than a demand one. Year to date the portfolio is <b>up 6.5 percent</b> ahead of target, with <b>Aqua HK</b> (&minus;6.8 percent) and <b>Dim Sum Library</b> (&minus;7.8 percent) the only venues behind.",
+ "week": "31 Aug–6 Sep 2026",
+ "wow": "24–30 Aug 2026",
+ "yoy": "1–7 Sep 2025",
+ "generated": "7 September 2026"
+}

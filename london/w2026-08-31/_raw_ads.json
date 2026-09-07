@@ -1,0 +1,442 @@
+{
+  "meta_notes": {
+    "currency": "GBP",
+    "windows": {
+      "cur": "2026-08-31..2026-09-06",
+      "prior": "2026-08-24..2026-08-30",
+      "yoy": "2025-09-01..2025-09-07"
+    },
+    "week_map_2026": {
+      "W24": "2026-07-13",
+      "W25": "2026-07-20",
+      "W26": "2026-07-27",
+      "W27": "2026-08-03",
+      "W28": "2026-08-10",
+      "W29": "2026-08-17",
+      "W30": "2026-08-24",
+      "W31": "2026-08-31"
+    },
+    "week_map_ly": {
+      "L28": "2025-08-11",
+      "L29": "2025-08-18",
+      "L30": "2025-08-25",
+      "L31": "2025-09-01"
+    },
+    "meta_bookings_definition": "action_type offsite_conversion.fb_pixel_custom (Schedule)",
+    "meta_week_verification": "time_increment=7 returned date_start values on Mondays for every account; no per-week fallback needed",
+    "dsl_account_name": "Meta act_986571809129888 returns account_name 'Luci' - verified, this is the correct DSL London account",
+    "google_week_verification": "segments.week returned Monday-based week starts (2026-07-13 ... 2026-08-31, 2025-08-11 ... 2025-09-01); no daily re-bucketing needed",
+    "google_aggregation_note": "Account totals pulled with FROM customer (identical aggregation to summing FROM campaign, far fewer rows). Campaign-level queries used for the CUR-week top-3 campaigns.",
+    "google_cost_note": "metrics.cost_micros is returned pre-converted by the connector as 'cost' in GBP",
+    "walkin_definition": "sum of all_conversions for actions named 'Store visits', 'Local actions - Directions', 'Local actions - Menu views', 'Click Book Now', 'Clicks to call'. No account has a 'Click Book Now' action."
+  },
+  "venues": {
+    "Aqua Shard": {
+      "meta": {
+        "cur": {"spend": 1327.84, "sch": 102.0, "impr": 186864, "clicks": 6354},
+        "prior": {"spend": 2530.13, "sch": 153.0, "impr": 376099, "clicks": 12271},
+        "yoy": {"spend": 1272.97, "sch": 157.0, "impr": 204877, "clicks": 9705},
+        "series": {
+          "W24": {"spend": 2538.88, "sch": 159.0},
+          "W25": {"spend": 2842.28, "sch": 183.0},
+          "W26": {"spend": 3024.57, "sch": 168.0},
+          "W27": {"spend": 1394.22, "sch": 148.0},
+          "W28": {"spend": 1994.02, "sch": 169.0},
+          "W29": {"spend": 2596.13, "sch": 188.0},
+          "W30": {"spend": 2530.13, "sch": 153.0},
+          "W31": {"spend": 1327.84, "sch": 102.0}
+        },
+        "ly": {
+          "L28": {"spend": 1663.13, "sch": 160.0},
+          "L29": {"spend": 1642.36, "sch": 148.0},
+          "L30": {"spend": 833.5, "sch": 112.0},
+          "L31": {"spend": 1272.97, "sch": 157.0}
+        },
+        "campaigns": [
+          {"name": "CRKLR | Prospecting Campaign", "spend": 1177.46, "bookings": 102.0},
+          {"name": "CRKLR | Traffic", "spend": 150.41, "bookings": 0.0}
+        ],
+        "campaigns_note": "only 2 campaigns delivered in the CUR week"
+      },
+      "google": {
+        "cur": {"spend": 1778.35, "conv": 168.661282, "impr": 35793, "clicks": 3315},
+        "prior": {"spend": 3012.52, "conv": 360.690427, "impr": 60745, "clicks": 5714},
+        "yoy": {"spend": 1820.51, "conv": 979.173426, "impr": 100427, "clicks": 11093},
+        "series": {
+          "W24": {"spend": 1350.52, "conv": 574.196881},
+          "W25": {"spend": 1967.74, "conv": 444.284185},
+          "W26": {"spend": 5570.96, "conv": 524.814158},
+          "W27": {"spend": 1617.72, "conv": 285.718406},
+          "W28": {"spend": 2318.85, "conv": 282.784269},
+          "W29": {"spend": 3335.33, "conv": 380.979551},
+          "W30": {"spend": 3012.52, "conv": 360.690427},
+          "W31": {"spend": 1778.35, "conv": 168.661282}
+        },
+        "ly": {
+          "L28": {"spend": 1655.06, "conv": 893.121422},
+          "L29": {"spend": 2031.37, "conv": 1084.983991},
+          "L30": {"spend": 2135.19, "conv": 1131.154926},
+          "L31": {"spend": 1820.51, "conv": 979.173426}
+        },
+        "walkin": {
+          "W28": 686.3125,
+          "W29": 768.166667,
+          "W30": 589.416666,
+          "W31": 172.916666,
+          "L28": 789.518519,
+          "L29": 938.588623,
+          "L30": 1006.916667,
+          "L31": 979.683333
+        },
+        "action_names": ["Booking Complete Sevenrooms"],
+        "campaigns": [
+          {"name": "Search > Afternoon Tea", "spend": 366.63, "bookings": 88.674117},
+          {"name": "Demand Gen > Maps Only", "spend": 328.06, "bookings": 0.0},
+          {"name": "Search >  Shard", "spend": 325.31, "bookings": 7.5}
+        ]
+      }
+    },
+    "Hutong": {
+      "meta": {
+        "cur": {"spend": 1124.02, "sch": 112.0, "impr": 171741, "clicks": 6014},
+        "prior": {"spend": 1905.59, "sch": 198.0, "impr": 319019, "clicks": 10967},
+        "yoy": {"spend": 1377.75, "sch": 90.0, "impr": 297345, "clicks": 16639},
+        "series": {
+          "W24": {"spend": 2074.68, "sch": 150.0},
+          "W25": {"spend": 2182.02, "sch": 231.0},
+          "W26": {"spend": 2141.78, "sch": 211.0},
+          "W27": {"spend": 1261.26, "sch": 213.0},
+          "W28": {"spend": 1377.14, "sch": 176.0},
+          "W29": {"spend": 1989.38, "sch": 209.0},
+          "W30": {"spend": 1905.59, "sch": 198.0},
+          "W31": {"spend": 1124.02, "sch": 112.0}
+        },
+        "ly": {
+          "L28": {"spend": 1185.49, "sch": 70.0},
+          "L29": {"spend": 1184.48, "sch": 76.0},
+          "L30": {"spend": 604.36, "sch": 47.0},
+          "L31": {"spend": 1377.75, "sch": 90.0}
+        },
+        "campaigns": [
+          {"name": "CRKLR - Prospecting Campaign – Tactical", "spend": 688.88, "bookings": 54.0},
+          {"name": "CRKLR - Prospecting Campaign", "spend": 366.03, "bookings": 54.0},
+          {"name": "CRKLR - Remarketing Campaign", "spend": 69.11, "bookings": 4.0}
+        ]
+      },
+      "google": {
+        "cur": {"spend": 1682.03, "conv": 165.697112, "impr": 53418, "clicks": 3669},
+        "prior": {"spend": 2085.14, "conv": 248.025006, "impr": 85133, "clicks": 4727},
+        "yoy": {"spend": 1888.11, "conv": 380.407252, "impr": 102492, "clicks": 5338},
+        "series": {
+          "W24": {"spend": 1392.81, "conv": 150.147826},
+          "W25": {"spend": 1480.45, "conv": 227.400081},
+          "W26": {"spend": 1383.63, "conv": 291.394267},
+          "W27": {"spend": 1441.66, "conv": 303.620237},
+          "W28": {"spend": 1307.27, "conv": 371.376575},
+          "W29": {"spend": 1966.21, "conv": 252.159887},
+          "W30": {"spend": 2085.14, "conv": 248.025006},
+          "W31": {"spend": 1682.03, "conv": 165.697112}
+        },
+        "ly": {
+          "L28": {"spend": 2193.56, "conv": 415.984349},
+          "L29": {"spend": 2069.16, "conv": 356.712248},
+          "L30": {"spend": 1461.38, "conv": 264.786339},
+          "L31": {"spend": 1888.11, "conv": 380.407252}
+        },
+        "walkin": {
+          "W28": 749.498317,
+          "W29": 786.759259,
+          "W30": 818.736829,
+          "W31": 419.096504,
+          "L28": 909.514131,
+          "L29": 994.962061,
+          "L30": 754.523808,
+          "L31": 854.0
+        },
+        "action_names": ["Sevenrooms Booking Complete"],
+        "action_names_excluded": ["Hutong UK - GA4 (web) sevenrooms_booking_complete"],
+        "action_names_note": "Hutong has BOTH a native 'Sevenrooms Booking Complete' and a GA4 duplicate. Per the dedupe rule the GA4 one is excluded because a native action exists.",
+        "campaigns": [
+          {"name": "Search > Restaurant", "spend": 432.99, "bookings": 12.983324},
+          {"name": "Search > Shard", "spend": 352.71, "bookings": 17.0},
+          {"name": "Search > Lunch", "spend": 314.28, "bookings": 16.032348}
+        ]
+      }
+    },
+    "Regent St": {
+      "meta": {
+        "cur": {"spend": 949.25, "sch": 47.0, "impr": 136261, "clicks": 4254},
+        "prior": {"spend": 1812.4, "sch": 103.0, "impr": 263153, "clicks": 7425},
+        "yoy": {"spend": 754.14, "sch": 18.0, "impr": 99330, "clicks": 3966},
+        "series": {
+          "W24": {"spend": 1012.39, "sch": 59.0},
+          "W25": {"spend": 1043.85, "sch": 77.0},
+          "W26": {"spend": 1021.84, "sch": 67.0},
+          "W27": {"spend": 1109.82, "sch": 98.0},
+          "W28": {"spend": 1111.65, "sch": 72.0},
+          "W29": {"spend": 1710.18, "sch": 84.0},
+          "W30": {"spend": 1812.4, "sch": 103.0},
+          "W31": {"spend": 949.25, "sch": 47.0}
+        },
+        "ly": {
+          "L28": {"spend": 648.33, "sch": 21.0},
+          "L29": {"spend": 646.47, "sch": 14.0},
+          "L30": {"spend": 332.86, "sch": 7.0},
+          "L31": {"spend": 754.14, "sch": 18.0}
+        },
+        "campaigns": [
+          {"name": "CRKLR - Prospecting Campaign (Aqua Nueva)", "spend": 300.33, "bookings": 15.0},
+          {"name": "CRKLR - Weekend Brunch Focus (Aqua Kyoto)", "spend": 247.94, "bookings": 14.0},
+          {"name": "CRKLR - Prospecting Campaign V2 (Aqua Kyoto)", "spend": 211.1, "bookings": 16.0}
+        ],
+        "campaigns_note": "top 3 by spend merged across both Meta accounts (Kyoto act_1545421758841127 + Nueva act_1545420182174618)",
+        "components": {
+          "Aqua Kyoto": {"cur_spend": 459.04, "cur_sch": 30.0},
+          "Aqua Nueva": {"cur_spend": 490.21, "cur_sch": 17.0}
+        }
+      },
+      "google": {
+        "cur": {"spend": 1601.07, "conv": 26.0, "impr": 55867, "clicks": 1831},
+        "prior": {"spend": 1535.2, "conv": 57.0, "impr": 67756, "clicks": 2109},
+        "yoy": {"spend": 976.19, "conv": 47.5, "impr": 71295, "clicks": 1804},
+        "series": {
+          "W24": {"spend": 1014.65, "conv": 81.245716},
+          "W25": {"spend": 782.55, "conv": 92.0},
+          "W26": {"spend": 701.95, "conv": 79.75},
+          "W27": {"spend": 928.5, "conv": 83.777334},
+          "W28": {"spend": 1304.54, "conv": 99.472666},
+          "W29": {"spend": 1420.91, "conv": 62.0},
+          "W30": {"spend": 1535.2, "conv": 57.0},
+          "W31": {"spend": 1601.07, "conv": 26.0}
+        },
+        "ly": {
+          "L28": {"spend": 1298.47, "conv": 75.0},
+          "L29": {"spend": 1360.01, "conv": 64.0},
+          "L30": {"spend": 1176.94, "conv": 58.0},
+          "L31": {"spend": 976.19, "conv": 47.5}
+        },
+        "walkin": {
+          "W28": 343.0,
+          "W29": 270.0,
+          "W30": 259.0,
+          "W31": 128.0,
+          "L28": 294.0,
+          "L29": 313.0,
+          "L30": 306.0,
+          "L31": 292.0
+        },
+        "action_names": ["Kyoto Booking Complete Sevenrooms", "Nueva Booking Complete Sevenrooms"],
+        "action_names_note": "shared account 3511646647 - both venues' booking actions counted",
+        "walkin_note": "this account has no 'Store visits' conversion action; walk-in = Directions + Menu views + Clicks to call",
+        "campaigns": [
+          {"name": "PMax > Aqua Nueva", "spend": 352.2, "bookings": 3.0},
+          {"name": "Search > Nueva > Roof top", "spend": 341.16, "bookings": 12.0},
+          {"name": "Search > Kyoto > Brunch and Sushi Extravaganza", "spend": 271.66, "bookings": 5.0}
+        ]
+      }
+    },
+    "Azzurra": {
+      "meta": {
+        "cur": {"spend": 920.43, "sch": 46.0, "impr": 153219, "clicks": 3377},
+        "prior": {"spend": 1017.71, "sch": 50.0, "impr": 176021, "clicks": 2938},
+        "yoy": {"spend": 283.56, "sch": 18.0, "impr": 40251, "clicks": 764},
+        "series": {
+          "W24": {"spend": 1074.95, "sch": 64.0},
+          "W25": {"spend": 1151.22, "sch": 54.0},
+          "W26": {"spend": 567.08, "sch": 40.0},
+          "W27": {"spend": 898.17, "sch": 57.0},
+          "W28": {"spend": 941.9, "sch": 61.0},
+          "W29": {"spend": 861.02, "sch": 46.0},
+          "W30": {"spend": 1017.71, "sch": 50.0},
+          "W31": {"spend": 920.43, "sch": 46.0}
+        },
+        "ly": {
+          "L28": {"spend": 349.55, "sch": 16.0},
+          "L29": {"spend": 487.31, "sch": 19.0},
+          "L30": {"spend": 279.03, "sch": 18.0},
+          "L31": {"spend": 283.56, "sch": 18.0}
+        },
+        "campaigns": [
+          {"name": "CRKLR - Prospecting Campaign", "spend": 710.66, "bookings": 36.0},
+          {"name": "CRKLR - Jazz Night Campaign", "spend": 162.85, "bookings": 10.0},
+          {"name": "CRKLR - LPV Campaign - Stories", "spend": 46.93, "bookings": 0.0}
+        ]
+      },
+      "google": {
+        "cur": {"spend": 344.03, "conv": 18.0, "impr": 8771, "clicks": 448},
+        "prior": {"spend": 340.02, "conv": 17.5, "impr": 8301, "clicks": 465},
+        "yoy": {"spend": 893.12, "conv": 24.0, "impr": 137004, "clicks": 1085},
+        "series": {
+          "W24": {"spend": 624.9, "conv": 19.166666},
+          "W25": {"spend": 663.4, "conv": 17.333332},
+          "W26": {"spend": 640.61, "conv": 17.833336},
+          "W27": {"spend": 635.86, "conv": 14.333334},
+          "W28": {"spend": 339.02, "conv": 23.0},
+          "W29": {"spend": 308.78, "conv": 21.0},
+          "W30": {"spend": 340.02, "conv": 17.5},
+          "W31": {"spend": 344.03, "conv": 18.0}
+        },
+        "ly": {
+          "L28": {"spend": 608.06, "conv": 16.5},
+          "L29": {"spend": 657.85, "conv": 23.0},
+          "L30": {"spend": 2052.72, "conv": 37.0},
+          "L31": {"spend": 893.12, "conv": 24.0}
+        },
+        "walkin": {
+          "W28": 30.0,
+          "W29": 70.0,
+          "W30": 62.0,
+          "W31": 32.0,
+          "L28": 23.0,
+          "L29": 47.0,
+          "L30": 102.0,
+          "L31": 72.0
+        },
+        "action_names": ["Azzurra UK (web) sevenrooms_booking_complete"],
+        "walkin_note": "2026 weeks have Directions/Menu views/Clicks to call but no 'Store visits'; 2025 weeks have only 'Store visits' (no Local actions or Clicks to call). Basis is not like-for-like across years.",
+        "campaigns": [
+          {"name": "Search > Brand", "spend": 112.33, "bookings": 4.0},
+          {"name": "P. Max > Generic", "spend": 108.72, "bookings": 6.0},
+          {"name": "Search > Local Discovery", "spend": 75.97, "bookings": 6.0}
+        ]
+      }
+    },
+    "Shiro Sushi": {
+      "meta": {
+        "cur": {"spend": 408.09, "sch": 16.0, "impr": 75793, "clicks": 1475},
+        "prior": {"spend": 311.96, "sch": 21.0, "impr": 60149, "clicks": 1151},
+        "yoy": {"spend": 352.76, "sch": 24.0, "impr": 71854, "clicks": 2298},
+        "series": {
+          "W24": {"spend": 310.17, "sch": 30.0},
+          "W25": {"spend": 326.52, "sch": 40.0},
+          "W26": {"spend": 314.12, "sch": 40.0},
+          "W27": {"spend": 312.73, "sch": 29.0},
+          "W28": {"spend": 324.98, "sch": 26.0},
+          "W29": {"spend": 320.33, "sch": 21.0},
+          "W30": {"spend": 311.96, "sch": 21.0},
+          "W31": {"spend": 408.09, "sch": 16.0}
+        },
+        "ly": {
+          "L28": {"spend": 352.89, "sch": 24.0},
+          "L29": {"spend": 344.4, "sch": 24.0},
+          "L30": {"spend": 350.65, "sch": 20.0},
+          "L31": {"spend": 352.76, "sch": 24.0}
+        },
+        "campaigns": [
+          {"name": "CRKLR - Leads Campaign – Consolidated", "spend": 408.1, "bookings": 16.0}
+        ],
+        "campaigns_note": "only 1 campaign delivered in the CUR week"
+      },
+      "google": {
+        "cur": {"spend": 433.17, "conv": 27.718092, "impr": 33441, "clicks": 420},
+        "prior": {"spend": 348.58, "conv": 39.947876, "impr": 36700, "clicks": 452},
+        "yoy": {"spend": 349.24, "conv": 66.265008, "impr": 199083, "clicks": 925},
+        "series": {
+          "W24": {"spend": 585.57, "conv": 81.402797},
+          "W25": {"spend": 751.38, "conv": 97.92105},
+          "W26": {"spend": 726.7, "conv": 106.347828},
+          "W27": {"spend": 590.02, "conv": 56.5},
+          "W28": {"spend": 370.01, "conv": 53.666666},
+          "W29": {"spend": 338.89, "conv": 30.333333},
+          "W30": {"spend": 348.58, "conv": 39.947876},
+          "W31": {"spend": 433.17, "conv": 27.718092}
+        },
+        "ly": {
+          "L28": {"spend": 525.59, "conv": 59.992908},
+          "L29": {"spend": 475.27, "conv": 59.051892},
+          "L30": {"spend": 290.91, "conv": 53.162883},
+          "L31": {"spend": 349.24, "conv": 66.265008}
+        },
+        "walkin": {
+          "W28": 420.0,
+          "W29": 226.0,
+          "W30": 178.0,
+          "W31": 121.0,
+          "L28": 433.0,
+          "L29": 425.0,
+          "L30": 306.0,
+          "L31": 285.0
+        },
+        "action_names": [
+          "Aqua Shiro - SST (web) booking_complete",
+          "Aqua Shiro UK (web) sevenrooms_booking_complete",
+          "Booking Complete"
+        ],
+        "action_names_note": "all three summed per the Shiro Sushi exception (all three confirmed present in both 2026 and 2025)",
+        "campaigns": [
+          {"name": "Pmax > Generic", "spend": 247.66, "bookings": 0.0},
+          {"name": "Search > Restaurant", "spend": 120.68, "bookings": 19.218092},
+          {"name": "Search > Brand", "spend": 64.83, "bookings": 8.5}
+        ],
+        "campaigns_note": "Pmax > Generic is the highest-cost campaign but recorded zero booking conversions in the CUR week"
+      }
+    },
+    "DSL": {
+      "meta": {
+        "cur": {"spend": 2016.0, "sch": 91.0, "impr": 266310, "clicks": 7349},
+        "prior": {"spend": 1813.8, "sch": 132.0, "impr": 247377, "clicks": 7338},
+        "yoy": {"spend": 522.31, "sch": 35.0, "impr": 71048, "clicks": 2860},
+        "series": {
+          "W24": {"spend": 1791.07, "sch": 93.0},
+          "W25": {"spend": 1847.7, "sch": 148.0},
+          "W26": {"spend": 1814.51, "sch": 139.0},
+          "W27": {"spend": 1824.78, "sch": 133.0},
+          "W28": {"spend": 1821.45, "sch": 128.0},
+          "W29": {"spend": 1819.73, "sch": 107.0},
+          "W30": {"spend": 1813.8, "sch": 132.0},
+          "W31": {"spend": 2016.0, "sch": 91.0}
+        },
+        "ly": {
+          "L28": {"spend": 577.67, "sch": 33.0},
+          "L29": {"spend": 582.22, "sch": 29.0},
+          "L30": {"spend": 297.37, "sch": 22.0},
+          "L31": {"spend": 522.31, "sch": 35.0}
+        },
+        "campaigns": [
+          {"name": "CRKLR - DSL Prospecting Campaign", "spend": 2016.0, "bookings": 91.0}
+        ],
+        "campaigns_note": "only 1 campaign delivered in the CUR week; account name returns as 'Luci' (verified correct)"
+      },
+      "google": {
+        "cur": {"spend": 801.8, "conv": 29.0, "impr": 12281, "clicks": 589},
+        "prior": {"spend": 1183.56, "conv": 42.0, "impr": 15490, "clicks": 858},
+        "yoy": null,
+        "series": {
+          "W24": {"spend": 275.16, "conv": 43.5},
+          "W25": {"spend": 273.9, "conv": 37.0},
+          "W26": {"spend": 269.99, "conv": 31.486611},
+          "W27": {"spend": 420.6, "conv": 53.753623},
+          "W28": {"spend": 450.78, "conv": 47.91787},
+          "W29": {"spend": 1461.88, "conv": 70.0},
+          "W30": {"spend": 1183.56, "conv": 42.0},
+          "W31": {"spend": 801.8, "conv": 29.0}
+        },
+        "ly": {
+          "L28": null,
+          "L29": null,
+          "L30": null,
+          "L31": null
+        },
+        "walkin": {
+          "W28": 0.0,
+          "W29": 0.0,
+          "W30": 0.0,
+          "W31": 0.0,
+          "L28": null,
+          "L29": null,
+          "L30": null,
+          "L31": null
+        },
+        "action_names": ["Dim Sum Library UK (web) sevenrooms_booking_complete"],
+        "action_names_excluded": ["Purchase (Google Analytics event sevenrooms_finish_search_page)"],
+        "yoy_note": "Google account 3456575686 returns 'No results found' for 2025-08-11..2025-09-07 - no 2025 Google data exists for DSL, as expected. YoY and all LY weeks recorded as null.",
+        "walkin_note": "account has no Store visits / Local actions / Clicks to call conversion actions at all in 2026 - legitimate zeros, not a failure",
+        "campaigns": [
+          {"name": "PMax > Generic", "spend": 272.35, "bookings": 13.0},
+          {"name": "Search > Afternoon Tea", "spend": 266.87, "bookings": 3.0},
+          {"name": "Search > Restaurant", "spend": 165.72, "bookings": 2.0}
+        ]
+      }
+    }
+  }
+}

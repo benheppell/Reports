@@ -1,0 +1,440 @@
+{
+ "venue": "Hutong Dubai",
+ "currency": "AED",
+ "week": "2026-08-31",
+ "web": {
+  "cur": {
+   "users": 1200,
+   "sessions": 1477,
+   "bookings": 105,
+   "pps": 2.45,
+   "avgsec": 143,
+   "engrate": 71.9,
+   "newpct": 86.2
+  },
+  "prior": {
+   "users": 1196,
+   "sessions": 1456,
+   "bookings": 88,
+   "pps": 2.56,
+   "avgsec": 161,
+   "engrate": 70.8,
+   "newpct": 84.9
+  },
+  "yoy": {
+   "users": 1435,
+   "sessions": 2643,
+   "bookings": 113,
+   "pps": 1.39,
+   "avgsec": 190,
+   "engrate": 71.2,
+   "newpct": 36.8
+  }
+ },
+ "ads": {
+  "meta": {
+   "cur": {
+    "spend": 3633.82,
+    "bookings": 29,
+    "impr": 333276,
+    "clicks": 1810
+   },
+   "prior": {
+    "spend": 3453.92,
+    "bookings": 28,
+    "impr": 344735,
+    "clicks": 2002
+   },
+   "yoy": {
+    "spend": 1716.44,
+    "bookings": 4,
+    "impr": 47561,
+    "clicks": 1793
+   }
+  },
+  "google": {
+   "cur": {
+    "spend": 2713.87,
+    "bookings": 17.27,
+    "impr": 19320,
+    "clicks": 742
+   },
+   "prior": {
+    "spend": 2519.24,
+    "bookings": 16.62,
+    "impr": 22606,
+    "clicks": 783
+   },
+   "yoy": {
+    "spend": 2620.18,
+    "bookings": 13.1,
+    "impr": 74483,
+    "clicks": 1159
+   }
+  }
+ },
+ "channels": [
+  {
+   "name": "Paid Search",
+   "s": [
+    375,
+    348,
+    407
+   ],
+   "b": [
+    35,
+    35,
+    24
+   ]
+  },
+  {
+   "name": "Organic Search",
+   "s": [
+    348,
+    368,
+    980
+   ],
+   "b": [
+    24,
+    25,
+    36
+   ]
+  },
+  {
+   "name": "Paid Social",
+   "s": [
+    265,
+    278,
+    291
+   ],
+   "b": [
+    4,
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Direct",
+   "s": [
+    179,
+    151,
+    329
+   ],
+   "b": [
+    20,
+    5,
+    44
+   ]
+  },
+  {
+   "name": "Cross-network",
+   "s": [
+    138,
+    155,
+    151
+   ],
+   "b": [
+    9,
+    6,
+    4
+   ]
+  },
+  {
+   "name": "Referral",
+   "s": [
+    57,
+    35,
+    199
+   ],
+   "b": [
+    4,
+    3,
+    2
+   ]
+  },
+  {
+   "name": "Unassigned",
+   "s": [
+    48,
+    65,
+    56
+   ],
+   "b": [
+    7,
+    9,
+    0
+   ]
+  },
+  {
+   "name": "Organic Social",
+   "s": [
+    34,
+    46,
+    108
+   ],
+   "b": [
+    1,
+    4,
+    1
+   ]
+  },
+  {
+   "name": "AI Assistant",
+   "s": [
+    25,
+    17,
+    0
+   ],
+   "b": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Paid Other",
+   "s": [
+    3,
+    0,
+    121
+   ],
+   "b": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Email",
+   "s": [
+    0,
+    0,
+    2
+   ],
+   "b": [
+    0,
+    0,
+    1
+   ]
+  }
+ ],
+ "devices": {
+  "mobile": 79,
+  "desktop": 20,
+  "tablet": 1
+ },
+ "landing": [
+  {
+   "path": "/",
+   "s": 568,
+   "b": 50
+  },
+  {
+   "path": "/menus",
+   "s": 340,
+   "b": 6
+  },
+  {
+   "path": "/business-lunch",
+   "s": 138,
+   "b": 4
+  },
+  {
+   "path": "/explore/hutongdubai/reservations/create/search",
+   "s": 131,
+   "b": 36
+  },
+  {
+   "path": "(not set)",
+   "s": 95,
+   "b": 0
+  }
+ ],
+ "trend8": {
+  "spend": [
+   6504.98,
+   7946.44,
+   7142.76,
+   7871.01,
+   6563.64,
+   6429.3,
+   5973.16,
+   6347.69
+  ],
+  "bookings": [
+   28.93,
+   59.65,
+   52.66,
+   58.44,
+   47.4,
+   37.15,
+   44.62,
+   46.27
+  ]
+ },
+ "funnel": {
+  "impr": 352596,
+  "clicks": 2552,
+  "landing": 640,
+  "bookings": 46.27
+ },
+ "campaigns": [
+  {
+   "name": "CRKLR - Prospecting Campaign",
+   "platform": "meta",
+   "spend": 2562.22,
+   "bookings": 18,
+   "wow": "up"
+  },
+  {
+   "name": "P.Max > Generic",
+   "platform": "google",
+   "spend": 1000.92,
+   "bookings": 3.33,
+   "wow": "up"
+  },
+  {
+   "name": "Search > Brand",
+   "platform": "google",
+   "spend": 983.09,
+   "bookings": 12.23,
+   "wow": "down"
+  },
+  {
+   "name": "CRKLR - Remarketing Campaign",
+   "platform": "meta",
+   "spend": 843.87,
+   "bookings": 11,
+   "wow": "up"
+  },
+  {
+   "name": "Search > Restaurant",
+   "platform": "google",
+   "spend": 729.86,
+   "bookings": 1.71,
+   "wow": "up"
+  }
+ ],
+ "t4_users_ty": [
+  1128,
+  1218,
+  1196,
+  1200
+ ],
+ "t4_users_ly": [
+  1325,
+  1361,
+  1162,
+  1435
+ ],
+ "t4_book_ty": [
+  59,
+  67,
+  88,
+  105
+ ],
+ "t4_book_ly": [
+  104,
+  118,
+  87,
+  113
+ ],
+ "t4_meta_bookings_ty": [
+  32,
+  26,
+  28,
+  29
+ ],
+ "t4_meta_bookings_ly": [
+  8,
+  11,
+  5,
+  4
+ ],
+ "t4_meta_spend_ty": [
+  3608.65,
+  3627.63,
+  3453.92,
+  3633.82
+ ],
+ "t4_meta_spend_ly": [
+  1730.34,
+  1709.8,
+  1695.71,
+  1716.44
+ ],
+ "t4_goog_bookings_ty": [
+  15.4,
+  11.15,
+  16.62,
+  17.27
+ ],
+ "t4_goog_bookings_ly": [
+  22.19,
+  15.67,
+  0.0,
+  13.1
+ ],
+ "t4_goog_spend_ty": [
+  2954.99,
+  2801.67,
+  2519.24,
+  2713.87
+ ],
+ "t4_goog_spend_ly": [
+  3420.0,
+  2259.59,
+  9.75,
+  2620.18
+ ],
+ "t4_walkin_ty": [
+  70.83,
+  0,
+  0,
+  0
+ ],
+ "t4_walkin_ly": [
+  335.03,
+  291.3,
+  2.0,
+  289.31
+ ],
+ "meta": {
+  "fx": "Google Ads cost for 7344894846 is returned in GBP; converted to AED at a fixed 4.90 for ALL Google spend, CPA and campaign figures. Meta spend is native AED (no conversion).",
+  "windows": {
+   "cur": "2026-08-31..2026-09-06",
+   "prior": "2026-08-24..2026-08-30",
+   "yoy": "2025-09-01..2025-09-07 (364d offset)"
+  },
+  "fy_label": "FY26 · W35 (Dubai FY = calendar year)",
+  "trend8_weeks": [
+   "2026-07-13",
+   "2026-07-20",
+   "2026-07-27",
+   "2026-08-03",
+   "2026-08-10",
+   "2026-08-17",
+   "2026-08-24",
+   "2026-08-31"
+  ],
+  "t4_weeks_ty": [
+   "2026-08-10",
+   "2026-08-17",
+   "2026-08-24",
+   "2026-08-31"
+  ],
+  "t4_weeks_ly": [
+   "2025-08-11",
+   "2025-08-18",
+   "2025-08-25",
+   "2025-09-01"
+  ],
+  "method": "GA4 weekly users are deduplicated (one no-date-dimension call per week, never summed from daily rows). Bookings = eventCount where eventName EXACTLY 'sevenrooms_booking_complete'. Google bookings use metrics.all_conversions filtered to conversion action 'Hutong Dubai (web) sevenrooms_booking_complete'. Meta bookings = action_type 'offsite_conversion.fb_pixel_custom'. trend8/funnel spend and bookings = Meta + Google combined. funnel.landing = GA4 Paid Search + Paid Social sessions."
+ },
+ "problems": [
+  "Google Ads (7344894846): local/offline conversion actions (Store visits, Local actions - Directions/Menu views, Clicks to call) still return NO rows from 2026-08-13 onward. Confirmed with an unfiltered conversion-action query for 2026-08-10..2026-09-06 - only the two SevenRooms booking actions appear for weeks 17 Aug, 24 Aug and 31 Aug. t4_walkin_ty weeks 2-4 are therefore 0 and understated; this is a reporting gap, not a real zero. Now 4 consecutive weeks affected.",
+  "Google Ads LY reference point changed: the 2025-08-25 week was an outage week (GBP1.99 / 633 impr) but the new YoY week 2025-09-01 has full delivery (GBP534.73 / 74,483 impr / 13.10 bookings), so YoY Google spend and bookings jump versus last week's report. Both are genuine.",
+  "GA4 prior-week values have matured slightly since last week's pull (bookings 88 unchanged; Google bookings for w2026-08-10 moved 14.40 -> 15.40 as conversions completed their lag). Current-week Google bookings will keep rising for a few more days.",
+  "GA4 Unassigned (48 sessions / 7 bookings this week) will re-attribute within ~24h - do not read per-channel CVR for the current week."
+ ]
+}

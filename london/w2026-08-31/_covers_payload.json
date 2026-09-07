@@ -1,0 +1,294 @@
+{
+ "market": "London",
+ "platform": "OpenTable",
+ "tz": "Europe/London",
+ "platform_foot": "<b>OpenTable</b> = OpenTable and OT Guestcenter sources",
+ "combined_note": "<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. ",
+ "ga4_meta": "Portfolio 2,546 &middot; YoY &#9660;22.1%",
+ "ga4_yoy": "&#9660;22.1% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> GA4 bookings are <b>22.1% down YoY</b> while covers are <b>24.4% up YoY</b>. The two do not contradict each other: GA4&rsquo;s sevenrooms_booking_complete only fires for website-widget bookings, so <b>OpenTable</b> is invisible to it and Google Reserve only partly captured. Covers came in at <b>10,230</b>, <b>down 6.6 percent</b> week on week, with walk-ins and desk bookings a further <b>21 percent</b> of the total. Read covers alongside GA4, not instead of it.",
+ "week": "31 Aug–6 Sep 2026",
+ "wow": "24–30 Aug 2026",
+ "yoy": "1–7 Sep 2025",
+ "generated": "7 September 2026",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ga4": 891,
+   "ch": {
+    "web": {
+     "c": 1992,
+     "p": 2209,
+     "y": 2895
+    },
+    "gr": {
+     "c": 287,
+     "p": 369,
+     "y": 148
+    },
+    "ot": {
+     "c": 129,
+     "p": 144,
+     "y": 75
+    },
+    "walk": {
+     "c": 84,
+     "p": 135,
+     "y": 122
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 22,
+     "p": 14,
+     "y": 8
+    },
+    "tp": {
+     "c": 59,
+     "p": 57,
+     "y": 42
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ga4": 807,
+   "ch": {
+    "web": {
+     "c": 1575,
+     "p": 1848,
+     "y": 1572
+    },
+    "gr": {
+     "c": 445,
+     "p": 358,
+     "y": 159
+    },
+    "ot": {
+     "c": 92,
+     "p": 101,
+     "y": 57
+    },
+    "walk": {
+     "c": 151,
+     "p": 120,
+     "y": 87
+    },
+    "recep": {
+     "c": 15,
+     "p": 32,
+     "y": 20
+    },
+    "ota": {
+     "c": 11,
+     "p": 27,
+     "y": 12
+    },
+    "tp": {
+     "c": 61,
+     "p": 48,
+     "y": 8
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ga4": 234,
+   "ch": {
+    "web": {
+     "c": 632,
+     "p": 592,
+     "y": 493
+    },
+    "gr": {
+     "c": 63,
+     "p": 38,
+     "y": 75
+    },
+    "ot": {
+     "c": 140,
+     "p": 167,
+     "y": 59
+    },
+    "walk": {
+     "c": 160,
+     "p": 170,
+     "y": 147
+    },
+    "recep": {
+     "c": 9,
+     "p": 43,
+     "y": 22
+    },
+    "ota": {
+     "c": 242,
+     "p": 252,
+     "y": 179
+    },
+    "tp": {
+     "c": 2,
+     "p": 6,
+     "y": 22
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ga4": 85,
+   "ch": {
+    "web": {
+     "c": 213,
+     "p": 198,
+     "y": 158
+    },
+    "gr": {
+     "c": 21,
+     "p": 30,
+     "y": 56
+    },
+    "ot": {
+     "c": 99,
+     "p": 97,
+     "y": 27
+    },
+    "walk": {
+     "c": 267,
+     "p": 255,
+     "y": 177
+    },
+    "recep": {
+     "c": 25,
+     "p": 23,
+     "y": 19
+    },
+    "ota": {
+     "c": 38,
+     "p": 29,
+     "y": 129
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ga4": 78,
+   "ch": {
+    "web": {
+     "c": 177,
+     "p": 232,
+     "y": 209
+    },
+    "gr": {
+     "c": 44,
+     "p": 30,
+     "y": 61
+    },
+    "ot": {
+     "c": 36,
+     "p": 58,
+     "y": 20
+    },
+    "walk": {
+     "c": 221,
+     "p": 351,
+     "y": 193
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 70,
+     "p": 96,
+     "y": 38
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 12
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ga4": 451,
+   "ch": {
+    "web": {
+     "c": 1092,
+     "p": 1149,
+     "y": 332
+    },
+    "gr": {
+     "c": 120,
+     "p": 119,
+     "y": 43
+    },
+    "ot": {
+     "c": 421,
+     "p": 482,
+     "y": 42
+    },
+    "walk": {
+     "c": 1184,
+     "p": 1053,
+     "y": 258
+    },
+    "recep": {
+     "c": 28,
+     "p": 23,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 245
+    },
+    "tp": {
+     "c": 3,
+     "p": 2,
+     "y": 5
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W24",
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31"
+  ],
+  "total": [
+   10282,
+   12106,
+   11238,
+   11237,
+   10447,
+   10731,
+   10957,
+   10230
+  ],
+  "ot": [
+   1404,
+   1599,
+   1466,
+   1556,
+   1091,
+   1006,
+   1049,
+   917
+  ]
+ }
+}

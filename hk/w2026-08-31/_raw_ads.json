@@ -1,0 +1,375 @@
+{
+ "meta_info": {
+  "currency": "HKD",
+  "cur": "2026-08-31..2026-09-06",
+  "prior": "2026-08-24..2026-08-30",
+  "yoy": "2025-09-01..2025-09-07",
+  "weeks": {"W24":"2026-07-13","W25":"2026-07-20","W26":"2026-07-27","W27":"2026-08-03","W28":"2026-08-10","W29":"2026-08-17","W30":"2026-08-24","W31":"2026-08-31"},
+  "ly_weeks": {"L28":"2025-08-11","L29":"2025-08-18","L30":"2025-08-25","L31":"2025-09-01"},
+  "meta_bookings_definition": "actions[].offsite_conversion.fb_pixel_custom (matches conversions[].schedule_total in every account)",
+  "google_bookings_definition": "sum of metrics.all_conversions for conversion actions containing 'booking' AND 'complete', excluding names containing 'ga4'",
+  "google_walkin_definition": "sum of all_conversions for 'Store visits','Local actions - Directions','Local actions - Menu views','Click Book Now','Clicks to call' ('Click Book Now' not present in any HK account)",
+  "warnings": [
+   "Cantina and Shiro: their ONLY sevenrooms booking_complete action is named with 'GA4' in it ('Cantina HK - GA4 (web) sevenrooms_booking_complete', 'Shiro HK - GA4 (web) sevenrooms_booking_complete'). The stated rule excludes any name containing 'ga4', so google.conv is recorded as 0 for both. The real measured values are preserved under google.conv_if_ga4_named_included. Decide which to publish.",
+   "Dim Sum Library Google has no walk-in signal conversion actions at all (only the booking action), so all walkin values are 0 - legitimate, not a failure.",
+   "Google segments.week verified Monday-based; Meta time_increment=7 verified Monday-aligned. CUR/PRIOR/YOY derived from the verified weekly series."
+  ]
+ },
+ "venues": {
+  "Aqua HK": {
+   "meta": {
+    "cur": {"spend": 6730.52, "sch": 21, "impr": 140753, "clicks": 2286},
+    "prior": {"spend": 5446.25, "sch": 12, "impr": 105542, "clicks": 1647},
+    "yoy": {"spend": 5929.98, "sch": 12, "impr": 151255, "clicks": 3725},
+    "series": {
+     "W24": {"spend": 3670.35, "sch": 6},
+     "W25": {"spend": 5891.61, "sch": 12},
+     "W26": {"spend": 12246.22, "sch": 15},
+     "W27": {"spend": 6607.19, "sch": 18},
+     "W28": {"spend": 5536.81, "sch": 22},
+     "W29": {"spend": 5680.87, "sch": 21},
+     "W30": {"spend": 5446.25, "sch": 12},
+     "W31": {"spend": 6730.52, "sch": 21}
+    },
+    "ly": {
+     "L28": {"spend": 5886.80, "sch": 20},
+     "L29": {"spend": 5962.83, "sch": 20},
+     "L30": {"spend": 5996.18, "sch": 17},
+     "L31": {"spend": 5929.98, "sch": 12}
+    },
+    "campaigns": [
+     {"name": "CRKLR - Prospecting Campaign - Adv+", "spend": 6730.52, "bookings": 21}
+    ]
+   },
+   "google": {
+    "cur": {"spend": 9858.48, "conv": 76.833088, "impr": 91389, "clicks": 4008},
+    "prior": {"spend": 8792.72, "conv": 62.209149, "impr": 100361, "clicks": 3973},
+    "yoy": {"spend": 6807.23, "conv": 62.359429, "impr": 88056, "clicks": 4107},
+    "series": {
+     "W24": {"spend": 8997.08, "conv": 60.194878},
+     "W25": {"spend": 10379.06, "conv": 85.808475},
+     "W26": {"spend": 11501.09, "conv": 61.734088},
+     "W27": {"spend": 9256.34, "conv": 76.609359},
+     "W28": {"spend": 8821.63, "conv": 74.641780},
+     "W29": {"spend": 8282.04, "conv": 64.623678},
+     "W30": {"spend": 8792.72, "conv": 62.209149},
+     "W31": {"spend": 9858.48, "conv": 76.833088}
+    },
+    "ly": {
+     "L28": {"spend": 9627.00, "conv": 66.002935},
+     "L29": {"spend": 8902.13, "conv": 73.705886},
+     "L30": {"spend": 6810.29, "conv": 64.604722},
+     "L31": {"spend": 6807.23, "conv": 62.359429}
+    },
+    "walkin": {"W28": 1848.422453, "W29": 1282.021137, "W30": 1222.323811, "W31": 923.309522,
+               "L28": 2495.266666, "L29": 2355.500000, "L30": 2310.600000, "L31": 1839.500000},
+    "action_names": ["Aqua HK (web) sevenrooms_booking_complete"],
+    "campaigns": [
+     {"name": "P.Max > Local Visits", "spend": 2127.81, "bookings": 0},
+     {"name": "Search > Weekend Brunch", "spend": 1475.17, "bookings": 10},
+     {"name": "Search > Japanese Restaurant CH", "spend": 1199.15, "bookings": 5.5}
+    ]
+   }
+  },
+  "Hutong HK": {
+   "meta": {
+    "cur": {"spend": 3882.02, "sch": 5, "impr": 131902, "clicks": 1800},
+    "prior": {"spend": 3307.67, "sch": 7, "impr": 103217, "clicks": 1493},
+    "yoy": {"spend": 6228.58, "sch": 11, "impr": 167686, "clicks": 3380},
+    "series": {
+     "W24": {"spend": 2254.70, "sch": 10},
+     "W25": {"spend": 4633.20, "sch": 7},
+     "W26": {"spend": 5890.77, "sch": 12},
+     "W27": {"spend": 3589.43, "sch": 6},
+     "W28": {"spend": 3315.13, "sch": 5},
+     "W29": {"spend": 3328.30, "sch": 7},
+     "W30": {"spend": 3307.67, "sch": 7},
+     "W31": {"spend": 3882.02, "sch": 5}
+    },
+    "ly": {
+     "L28": {"spend": 5601.73, "sch": 20},
+     "L29": {"spend": 5544.96, "sch": 14},
+     "L30": {"spend": 5753.88, "sch": 8},
+     "L31": {"spend": 6228.58, "sch": 11}
+    },
+    "campaigns": [
+     {"name": "CRKLR - Prospecting Campaign – Daily Budgets V2", "spend": 3882.02, "bookings": 5}
+    ]
+   },
+   "google": {
+    "cur": {"spend": 5903.36, "conv": 22.593934, "impr": 218355, "clicks": 6261},
+    "prior": {"spend": 4874.35, "conv": 15.981909, "impr": 219099, "clicks": 6174},
+    "yoy": {"spend": 4307.50, "conv": 21.796623, "impr": 238108, "clicks": 5022},
+    "series": {
+     "W24": {"spend": 5479.60, "conv": 17.271295},
+     "W25": {"spend": 5347.13, "conv": 14.655844},
+     "W26": {"spend": 5597.72, "conv": 21.684673},
+     "W27": {"spend": 5376.26, "conv": 17.805011},
+     "W28": {"spend": 5981.97, "conv": 23.543626},
+     "W29": {"spend": 4849.53, "conv": 18.501815},
+     "W30": {"spend": 4874.35, "conv": 15.981909},
+     "W31": {"spend": 5903.36, "conv": 22.593934}
+    },
+    "ly": {
+     "L28": {"spend": 2299.78, "conv": 22.538683},
+     "L29": {"spend": 2251.64, "conv": 21.434779},
+     "L30": {"spend": 2080.76, "conv": 26.562162},
+     "L31": {"spend": 4307.50, "conv": 21.796623}
+    },
+    "walkin": {"W28": 2297.094275, "W29": 2403.409449, "W30": 2439.250000, "W31": 1978.750000,
+               "L28": 941.986993, "L29": 961.451077, "L30": 1006.108106, "L31": 1089.966397},
+    "action_names": ["Hutong HK (web) sevenrooms_booking_complete"],
+    "campaigns": [
+     {"name": "Search > Private Events", "spend": 1253.94, "bookings": 6.737548},
+     {"name": "P.Max - Generic Bookings", "spend": 1068.15, "bookings": 6.166666},
+     {"name": "P.Max - Local Visit", "spend": 1037.96, "bookings": 0}
+    ]
+   }
+  },
+  "The Chinese Library": {
+   "meta": {
+    "cur": {"spend": 5573.07, "sch": 10, "impr": 120315, "clicks": 3356},
+    "prior": {"spend": 3827.04, "sch": 7, "impr": 66106, "clicks": 2007},
+    "yoy": {"spend": 3462.35, "sch": 1, "impr": 98312, "clicks": 5535},
+    "series": {
+     "W24": {"spend": 5381.89, "sch": 6},
+     "W25": {"spend": 6032.94, "sch": 6},
+     "W26": {"spend": 4027.35, "sch": 3},
+     "W27": {"spend": 3944.34, "sch": 3},
+     "W28": {"spend": 4172.72, "sch": 8},
+     "W29": {"spend": 3921.60, "sch": 5},
+     "W30": {"spend": 3827.04, "sch": 7},
+     "W31": {"spend": 5573.07, "sch": 10}
+    },
+    "ly": {
+     "L28": {"spend": 3403.42, "sch": 4},
+     "L29": {"spend": 3381.08, "sch": 10},
+     "L30": {"spend": 3379.76, "sch": 1},
+     "L31": {"spend": 3462.35, "sch": 1}
+    },
+    "campaigns": [
+     {"name": "CRKLR - Prospecting Campaign – Daily Budget", "spend": 3425.77, "bookings": 4},
+     {"name": "CRKLR - Prospecting Campaign – Behind Kitchen Doors", "spend": 2147.30, "bookings": 6}
+    ]
+   },
+   "google": {
+    "cur": {"spend": 4033.07, "conv": 37, "impr": 98353, "clicks": 2285},
+    "prior": {"spend": 6491.47, "conv": 38.768834, "impr": 148698, "clicks": 3030},
+    "yoy": {"spend": 2855.63, "conv": 30, "impr": 87764, "clicks": 1895},
+    "series": {
+     "W24": {"spend": 4128.14, "conv": 38},
+     "W25": {"spend": 4428.33, "conv": 27},
+     "W26": {"spend": 3348.44, "conv": 44.161322},
+     "W27": {"spend": 7002.03, "conv": 45.366819},
+     "W28": {"spend": 8872.72, "conv": 42},
+     "W29": {"spend": 8472.58, "conv": 38},
+     "W30": {"spend": 6491.47, "conv": 38.768834},
+     "W31": {"spend": 4033.07, "conv": 37}
+    },
+    "ly": {
+     "L28": {"spend": 2255.57, "conv": 30},
+     "L29": {"spend": 2198.76, "conv": 30},
+     "L30": {"spend": 2043.98, "conv": 31.6},
+     "L31": {"spend": 2855.63, "conv": 30}
+    },
+    "walkin": {"W28": 396.807752, "W29": 438.917292, "W30": 461.666666, "W31": 198.000000,
+               "L28": 222.095056, "L29": 254.827262, "L30": 289.504170, "L31": 335.230589},
+    "action_names": ["The Chinese Library HK (web) sevenrooms_booking_complete"],
+    "campaigns": [
+     {"name": "P.Max > Generic CH", "spend": 1099.65, "bookings": 2},
+     {"name": "P.Max > Generic EN", "spend": 847.53, "bookings": 4},
+     {"name": "Search > Restaurant", "spend": 766.82, "bookings": 7.5}
+    ]
+   }
+  },
+  "Cantina": {
+   "meta": {
+    "cur": {"spend": 3090.40, "sch": 11, "impr": 52544, "clicks": 1150},
+    "prior": {"spend": 4977.99, "sch": 11, "impr": 92835, "clicks": 2027},
+    "yoy": {"spend": 2980.57, "sch": 6, "impr": 55124, "clicks": 1736},
+    "series": {
+     "W24": {"spend": 3687.21, "sch": 10},
+     "W25": {"spend": 3799.56, "sch": 6},
+     "W26": {"spend": 2340.85, "sch": 10},
+     "W27": {"spend": 4770.18, "sch": 12},
+     "W28": {"spend": 4922.48, "sch": 6},
+     "W29": {"spend": 5124.44, "sch": 8},
+     "W30": {"spend": 4977.99, "sch": 11},
+     "W31": {"spend": 3090.40, "sch": 11}
+    },
+    "ly": {
+     "L28": {"spend": 2236.17, "sch": 10},
+     "L29": {"spend": 2254.68, "sch": 8},
+     "L30": {"spend": 2252.93, "sch": 3},
+     "L31": {"spend": 2980.57, "sch": 6}
+    },
+    "campaigns": [
+     {"name": "CRKLR - Prospecting Campaign – Daily Budget – V2", "spend": 1665.80, "bookings": 7},
+     {"name": "CRKLR - Prospecting Campaign – Early Week Supper Ads", "spend": 1424.60, "bookings": 4}
+    ]
+   },
+   "google": {
+    "note": "Only booking_complete action in this account is 'Cantina HK - GA4 (web) sevenrooms_booking_complete', which contains 'GA4'. Per the stated exclusion rule conv=0; real values in conv_if_ga4_named_included.",
+    "cur": {"spend": 4007.38, "conv": 0, "impr": 116809, "clicks": 3102},
+    "prior": {"spend": 6176.63, "conv": 0, "impr": 151601, "clicks": 4134},
+    "yoy": {"spend": 3152.23, "conv": 0, "impr": 62455, "clicks": 1176},
+    "series": {
+     "W24": {"spend": 4853.29, "conv": 0},
+     "W25": {"spend": 4697.36, "conv": 0},
+     "W26": {"spend": 4473.12, "conv": 0},
+     "W27": {"spend": 6617.51, "conv": 0},
+     "W28": {"spend": 6898.25, "conv": 0},
+     "W29": {"spend": 6041.11, "conv": 0},
+     "W30": {"spend": 6176.63, "conv": 0},
+     "W31": {"spend": 4007.38, "conv": 0}
+    },
+    "ly": {
+     "L28": {"spend": 2280.06, "conv": 0},
+     "L29": {"spend": 2176.91, "conv": 0},
+     "L30": {"spend": 2020.06, "conv": 0},
+     "L31": {"spend": 3152.23, "conv": 0}
+    },
+    "conv_if_ga4_named_included": {
+     "cur": 6, "prior": 20, "yoy": 12,
+     "series": {"W24": 33, "W25": 28, "W26": 15, "W27": 19, "W28": 26, "W29": 15, "W30": 20, "W31": 6},
+     "ly": {"L28": 13, "L29": 20, "L30": 11, "L31": 12},
+     "campaigns": [
+      {"name": "Search > Restaurant", "bookings": 2},
+      {"name": "Search > Brand", "bookings": 4}
+     ]
+    },
+    "walkin": {"W28": 1185.726190, "W29": 1404.316980, "W30": 1552.926923, "W31": 986.672763,
+               "L28": 184.988982, "L29": 183.269081, "L30": 192.268677, "L31": 203.624540},
+    "action_names": [],
+    "campaigns": [
+     {"name": "P.Max > Generic Booking EN", "spend": 1271.23, "bookings": 0},
+     {"name": "P.Max > Local Visits", "spend": 1107.99, "bookings": 0},
+     {"name": "Search > Restaurant", "spend": 991.34, "bookings": 0}
+    ]
+   }
+  },
+  "Dim Sum Library": {
+   "meta": {
+    "cur": {"spend": 1378.33, "sch": 6, "impr": 48281, "clicks": 888},
+    "prior": {"spend": 2232.22, "sch": 2, "impr": 70510, "clicks": 1640},
+    "yoy": {"spend": 1885.95, "sch": 9, "impr": 53918, "clicks": 1438},
+    "series": {
+     "W24": {"spend": 1000.25, "sch": 3},
+     "W25": {"spend": 1006.20, "sch": 4},
+     "W26": {"spend": 959.98, "sch": 7},
+     "W27": {"spend": 2292.79, "sch": 8},
+     "W28": {"spend": 2280.91, "sch": 3},
+     "W29": {"spend": 2408.19, "sch": 11},
+     "W30": {"spend": 2232.22, "sch": 2},
+     "W31": {"spend": 1378.33, "sch": 6}
+    },
+    "ly": {
+     "L28": {"spend": 1805.12, "sch": 14},
+     "L29": {"spend": 1799.04, "sch": 9},
+     "L30": {"spend": 1820.11, "sch": 11},
+     "L31": {"spend": 1885.95, "sch": 9}
+    },
+    "campaigns": [
+     {"name": "CRKLR - Prospecting Campaign - Daily Budgets", "spend": 1378.33, "bookings": 6}
+    ]
+   },
+   "google": {
+    "cur": {"spend": 2004.47, "conv": 65.952734, "impr": 20611, "clicks": 591},
+    "prior": {"spend": 3062.44, "conv": 55.963390, "impr": 30674, "clicks": 856},
+    "yoy": {"spend": 1117.73, "conv": 71.458987, "impr": 6888, "clicks": 630},
+    "series": {
+     "W24": {"spend": 2438.28, "conv": 61.178579},
+     "W25": {"spend": 1245.94, "conv": 70.838116},
+     "W26": {"spend": 1353.88, "conv": 80.468686},
+     "W27": {"spend": 3695.23, "conv": 73.040214},
+     "W28": {"spend": 3907.20, "conv": 71.435248},
+     "W29": {"spend": 2792.00, "conv": 61.981563},
+     "W30": {"spend": 3062.44, "conv": 55.963390},
+     "W31": {"spend": 2004.47, "conv": 65.952734}
+    },
+    "ly": {
+     "L28": {"spend": 1180.56, "conv": 63.152627},
+     "L29": {"spend": 1099.11, "conv": 54.991407},
+     "L30": {"spend": 1024.71, "conv": 50.765647},
+     "L31": {"spend": 1117.73, "conv": 71.458987}
+    },
+    "walkin": {"W28": 0, "W29": 0, "W30": 0, "W31": 0, "L28": 0, "L29": 0, "L30": 0, "L31": 0},
+    "action_names": ["Dim Sum Library HK (web) sevenrooms_booking_complete"],
+    "campaigns": [
+     {"name": "Search > Restaurant", "spend": 738.90, "bookings": 9.976784},
+     {"name": "Demand Gen > Generic", "spend": 400.32, "bookings": 0},
+     {"name": "P.Max > Generic EN", "spend": 390.49, "bookings": 8.990136}
+    ]
+   }
+  },
+  "Shiro": {
+   "meta": {
+    "cur": {"spend": 3603.04, "sch": 16, "impr": 73131, "clicks": 2095},
+    "prior": {"spend": 6062.94, "sch": 32, "impr": 117397, "clicks": 3571},
+    "yoy": {"spend": 1900.54, "sch": 6, "impr": 50834, "clicks": 1526},
+    "series": {
+     "W24": {"spend": 5432.60, "sch": 20},
+     "W25": {"spend": 5575.12, "sch": 8},
+     "W26": {"spend": 5466.80, "sch": 21},
+     "W27": {"spend": 5946.40, "sch": 20},
+     "W28": {"spend": 6273.75, "sch": 17},
+     "W29": {"spend": 6220.85, "sch": 22},
+     "W30": {"spend": 6062.94, "sch": 32},
+     "W31": {"spend": 3603.04, "sch": 16}
+    },
+    "ly": {
+     "L28": {"spend": 1778.59, "sch": 6},
+     "L29": {"spend": 1834.46, "sch": 4},
+     "L30": {"spend": 1819.08, "sch": 8},
+     "L31": {"spend": 1900.54, "sch": 6}
+    },
+    "campaigns": [
+     {"name": "CRKLR - Prospecting Campaign - NEW Shiro Central", "spend": 1863.87, "bookings": 13},
+     {"name": "CRKLR - Prospecting Campaign - Daily Budgets", "spend": 1106.25, "bookings": 3},
+     {"name": "CRKLR - Awareness Campaign - NEW Shiro Central - LPV Campaign", "spend": 311.76, "bookings": 0}
+    ]
+   },
+   "google": {
+    "note": "Only booking_complete action in this account is 'Shiro HK - GA4 (web) sevenrooms_booking_complete', which contains 'GA4'. Per the stated exclusion rule conv=0; real values in conv_if_ga4_named_included.",
+    "cur": {"spend": 4468.73, "conv": 0, "impr": 65521, "clicks": 1666},
+    "prior": {"spend": 5430.83, "conv": 0, "impr": 81835, "clicks": 1647},
+    "yoy": {"spend": 1011.04, "conv": 0, "impr": 31141, "clicks": 658},
+    "series": {
+     "W24": {"spend": 4164.01, "conv": 0},
+     "W25": {"spend": 4776.74, "conv": 0},
+     "W26": {"spend": 4703.60, "conv": 0},
+     "W27": {"spend": 5214.14, "conv": 0},
+     "W28": {"spend": 4934.69, "conv": 0},
+     "W29": {"spend": 4683.34, "conv": 0},
+     "W30": {"spend": 5430.83, "conv": 0},
+     "W31": {"spend": 4468.73, "conv": 0}
+    },
+    "ly": {
+     "L28": {"spend": 1066.49, "conv": 0},
+     "L29": {"spend": 1199.72, "conv": 0},
+     "L30": {"spend": 896.97, "conv": 0},
+     "L31": {"spend": 1011.04, "conv": 0}
+    },
+    "conv_if_ga4_named_included": {
+     "cur": 60.953368, "prior": 75.798865, "yoy": 35.463665,
+     "series": {"W24": 46.878072, "W25": 55.762085, "W26": 95.825815, "W27": 80.926638,
+                "W28": 81.970719, "W29": 72.512930, "W30": 75.798865, "W31": 60.953368},
+     "ly": {"L28": 46.178137, "L29": 22.049248, "L30": 40.953693, "L31": 35.463665},
+     "campaigns": [
+      {"name": "Search > Restaurant (Admiralty)", "bookings": 7.75},
+      {"name": "Search > Private Dining & Events", "bookings": 8},
+      {"name": "Demand Gen > Maps Only", "bookings": 0}
+     ]
+    },
+    "walkin": {"W28": 144.642860, "W29": 207.583331, "W30": 251.290473, "W31": 174.400000,
+               "L28": 163.000000, "L29": 179.020834, "L30": 148.666666, "L31": 181.249999},
+    "action_names": [],
+    "campaigns": [
+     {"name": "Demand Gen > Maps Only", "spend": 1187.20, "bookings": 0},
+     {"name": "Search > Restaurant (Admiralty)", "spend": 764.36, "bookings": 0},
+     {"name": "Search > Private Dining & Events", "spend": 727.74, "bookings": 0}
+    ]
+   }
+  }
+ }
+}
