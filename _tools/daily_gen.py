@@ -177,7 +177,6 @@ for r in rows:
         f'<tr><td class="vn">{v["name"]}</td>'
         f'<td class="num"><b>{cov:,}</b><div class="chips">{chip(pct(cov, r["a"]["Total covers"]["base"]))}</div></td>'
         f'<td class="num">{web:,}<div class="chips">{chip(pct(web, r["a"]["Website covers"]["base"]))}</div></td>'
-        f'<td class="num mut">{wid:,}</td>'
         f'<td class="num">{gr:,}</td><td class="num">{ot:,}</td><td class="num">{oth:,}</td>'
         f'<td class="num">{sh:.0f}%</td>'
         f'<td class="num">{bk:,}<div class="chips">{chip(pct(bk, r["a"]["GA4 bookings"]["base"]))}</div></td>'
@@ -187,7 +186,6 @@ for r in rows:
 trows += (f'<tr class="total"><td class="vn">London portfolio</td>'
           f'<td class="num">{TCOV:,}<div class="chips">{chip(pct(TCOV, BCOV))}</div></td>'
           f'<td class="num">{TWEB:,}<div class="chips">{chip(pct(TWEB, BWEB))}</div></td>'
-          f'<td class="num mut">{sum(v["widget"][N-1] for v in P["venues"]):,}</td>'
           f'<td class="num">{sum(v["gr"][N-1] for v in P["venues"]):,}</td>'
           f'<td class="num">{sum(v["ot"][N-1] for v in P["venues"]):,}</td>'
           f'<td class="num">{sum(v["walk"][N-1]+v["recep"][N-1]+v["other"][N-1] for v in P["venues"]):,}</td>'
@@ -263,7 +261,7 @@ footer ul{{margin:6px 0 0 16px}}
 </div>
 
 <div class="sec">By venue — {RD}</div>
-<table><thead><tr><th>Venue</th><th>Covers</th><th>Website</th><th>of which widget</th>
+<table><thead><tr><th>Venue</th><th>Covers</th><th>Website</th>
 <th>Google Reserve</th><th>OpenTable</th><th>Other</th><th>Web share</th>
 <th>GA4 bookings</th><th>Conv rate</th><th>Alert</th></tr></thead><tbody>{trows}</tbody></table>
 <div class="sub" style="margin-top:8px;font-size:11.5px">Variance chips compare the day with the median of the same weekday over the four preceding weeks. Other = walk-in, reception and third party.</div>
@@ -272,10 +270,10 @@ footer ul{{margin:6px 0 0 16px}}
 <div class="panels">{panels}</div>
 
 <footer>
-<b>Method.</b> Covers = SUM(covers) from SevenRooms via Supabase, bucketed by booking-created date in Europe/London, excluding deleted and cancelled bookings and bar seating areas. Staff-name booking sources are excluded from covers entirely. Website = Booking Widget plus all landing pages, Nav and Hero CTAs, the menu page, PPC and campaign tags; the widget column is a subset of it, shown separately. GA4 bookings = event sevenrooms_booking_complete. Regent St combines Aqua Kyoto and Aqua Nueva.
+<b>Method.</b> Covers = SUM(covers) from SevenRooms via Supabase, bucketed by booking-created date in Europe/London, excluding deleted and cancelled bookings and bar seating areas. Staff-name booking sources are excluded from covers entirely. Website = Booking Widget plus all landing pages, Nav and Hero CTAs, the menu page, PPC and campaign tags. GA4 bookings = event sevenrooms_booking_complete. Regent St combines Aqua Kyoto and Aqua Nueva.
 <ul>
 <li>Baseline for each day is the median of that same weekday across the four preceding weeks. Band is baseline plus or minus 20 percent. Red is three or more consecutive days below the band, or a single day under half baseline. Amber is two consecutive days.</li>
-<li>Alerts run on Website covers, not on the raw Booking Widget source. Aqua Shard re-tagged widget traffic into named landing pages on 21 Aug 2026, so the raw widget series has a definition break there.</li>
+<li>Alerts run on Website covers, not on the raw Booking Widget source. Aqua Shard re-tagged widget traffic into named landing pages on 21 Aug 2026, so the raw widget series has a definition break there. The widget series is still carried in the payload; it is not shown, because it measures how a booking was tagged rather than anything actionable.</li>
 <li>Google conversions and GA4 channel data are deliberately absent: both settle over two to three days and cannot be read on a daily cadence.</li>
 <li>Covers re-settle downward as cancellations accrue, so the full 35-day window is re-pulled every morning rather than carried forward.</li>
 <li>Suppressed dates (closures and known buyouts): {SUPPTXT}.</li>
