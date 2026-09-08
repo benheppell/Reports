@@ -26,6 +26,7 @@ SUPP = P.get('suppressed', {})
 BAND = 0.20; MIX_PP = 10.0
 
 SERIES = [('covers', 'Covers'), ('web', 'Website'), ('bookings', 'GA4 bookings')]
+SHORT = {'Covers': 'covers', 'Website': 'website', 'GA4 bookings': 'GA4 bookings'}
 INK, ALERT, GRID, BANDFILL, SURF = '#2563eb', '#dc2626', '#94a3b8', '#eef2f7', '#ffffff'
 
 
@@ -176,22 +177,6 @@ def spark(vals, title):
             f'stroke-linejoin="round" stroke-linecap="round"/>{marks}{endlab}{labs}</svg>')
 
 
-# ---------------------------------------------------------------- run matrix
-MCOLS = [('Covers', 'covers'), ('Website', 'web'), ('GA4 bookings', 'bookings')]
-mhead = ''.join(f'<th>{lab}</th>' for lab, _ in MCOLS) + '<th>Website mix</th>'
-mrows = ''
-for r in rows:
-    cells = ''
-    for lab, _ in MCOLS:
-        a = r['a'][lab]
-        v = pct(a['value'], a['base'])
-        cells += (f'<td class="m m-{a["status"]}"><div class="mr">{a["run"]}</div>'
-                  f'<div class="mv">{"+" if (v or 0) >= 0 else ""}{v:.0f}%</div></td>')
-    m = r['mix']
-    cells += (f'<td class="m m-{m["status"]}"><div class="mr">{m["run"]}</div>'
-              f'<div class="mv">{m["share"]:.0f}% vs {m["base"]:.0f}%</div></td>')
-    mrows += f'<tr><td class="vn">{r["v"]["name"]}</td>{cells}</tr>'
-
 # ---------------------------------------------------------------- alert strip
 PORT = []
 for lab, cur, base in (('covers created', TCOV, BCOV), ('GA4 bookings', TBK, BBK)):
@@ -211,7 +196,7 @@ if flagged or PORT:
                 continue
             why = 'single day under half baseline' if a['cliff'] and a['run'] < 3 \
                 else f'{a["run"]} days below band'
-            bits.append(f'<b>{lab.lower()}</b> {why} ({fmt(a["value"])} against a '
+            bits.append(f'<b>{SHORT[lab]}</b> {why} ({fmt(a["value"])} against a '
                         f'{fmt(a["base"])} baseline)')
         if r['mix']['status'] in ALERTING:
             bits.append(f'<b>channel shift</b> website share {r["mix"]["share"]:.0f}% against a '
@@ -226,39 +211,75 @@ WATCH = []
 for r in rows:
     for _, lab in SERIES:
         if r['a'][lab]['status'] == 'blue':
-            WATCH.append(f'{r["v"]["name"]} {lab.lower()}')
+            WATCH.append(f'{r["v"]["name"]} {SHORT[lab]}')
 WATCHTXT = (f'<div class="watch">One day into a run, so a repeat today turns these amber: '
             f'<b>{", ".join(WATCH)}</b>.</div>') if WATCH else ''
 
 # ---------------------------------------------------------------- venue table
+# One row per venue. Two numbers that matter (covers, GA4 bookings), two that explain
+# them (website, walk-in), the rest of the mix as a bar rather than five more columns.
+MIX = [('web', 'Website', '#2563eb'), ('walk', 'Walk-in', '#ea580c'),
+       ('gr', 'Google Reserve', '#0d9488'), ('ot', 'OpenTable', '#8b5cf6'),
+       ('rest', 'Reception / third party', '#cbd5e1')]
+
+
+def vchip(cur, base):
+    p = pct(cur, base)
+    if p is None:
+        return '<span class="v na">n/a</span>'
+    cls = 'flat' if abs(p) < 5 else ('up' if p > 0 else 'down')
+    return f'<span class="v {cls}">{"+" if p >= 0 else ""}{p:.0f}%</span>'
+
+
+def numcell(cur, base, lead=False):
+    return (f'<td class="n"><span class="big{" lead" if lead else ""}">{cur:,}</span>'
+            f'{vchip(cur, base)}<div class="bl">vs {fmt(base)}</div></td>')
+
+
+def mixbar(d, tot):
+    if not tot:
+        return ''
+    segs = ''
+    for k, lab, col in MIX:
+        val = d[k]
+        if not val:
+            continue
+        segs += (f'<i style="width:{val / tot * 100:.2f}%;background:{col}">'
+                 f'<span>{lab} {val:,} · {val / tot * 100:.0f}%</span></i>')
+    NAME = {'gr': 'Google Reserve', 'ot': 'OpenTable', 'rest': 'Other'}
+    under = ' · '.join(f'{NAME[k]} {d[k]:,}'
+                       for k, _, _ in MIX if k in NAME and d[k])
+    return f'<div class="bar">{segs}</div><div class="bl mixnum">{under or "&nbsp;"}</div>'
+
+
 trows = ''
 for r in rows:
     v = r['v']; i = i0
-    cov, web, walk = v['covers'][i], v['web'][i], v['walk'][i]
-    gr, ot, oth = v['gr'][i], v['ot'][i], v['recep'][i] + v['other'][i]
-    bk, us = v['bookings'][i], v['users'][i]
-    cvr = f'{bk / us * 100.0:.1f}%' if us else '–'
+    d = {'web': v['web'][i], 'walk': v['walk'][i], 'gr': v['gr'][i], 'ot': v['ot'][i],
+         'rest': v['recep'][i] + v['other'][i]}
+    cov, bk, us = v['covers'][i], v['bookings'][i], v['users'][i]
+    runs = [SHORT[lab].replace(' bookings', '') for _, lab in SERIES if r['a'][lab]['run']]
+    nrun = max([r['a'][lab]['run'] for _, lab in SERIES] + [0])
+    why = (f'<div class="why">{", ".join(runs)} · {nrun} day{"s" if nrun != 1 else ""} below band</div>'
+           if runs else '<div class="why">inside band</div>')
     trows += (
-        f'<tr><td class="vn">{v["name"]}</td>'
-        f'<td class="num"><b>{cov:,}</b><div class="chips">{chip(pct(cov, r["a"]["Covers"]["base"]))}</div></td>'
-        f'<td class="num">{web:,}<div class="chips">{chip(pct(web, r["a"]["Website"]["base"]))}</div></td>'
-        f'<td class="num">{walk:,}<div class="chips">{chip(pct(walk, baseline(v["walk"], i)))}</div></td>'
-        f'<td class="num">{gr:,}</td><td class="num">{ot:,}</td><td class="num">{oth:,}</td>'
-        f'<td class="num">{web / cov * 100:.0f}%</td>'
-        f'<td class="num">{bk:,}<div class="chips">{chip(pct(bk, r["a"]["GA4 bookings"]["base"]))}</div></td>'
-        f'<td class="num mut">{cvr}</td>'
-        f'<td>{alertchip(r["status"])}</td></tr>')
+        f'<tr><td class="vn">{v["name"]}'
+        f'<div class="bl">{f"{bk / us * 100:.1f}% conversion" if us else "&nbsp;"}</div></td>'
+        + numcell(cov, r['a']['Covers']['base'], lead=True)
+        + numcell(bk, r['a']['GA4 bookings']['base'])
+        + numcell(d['web'], r['a']['Website']['base'])
+        + numcell(d['walk'], baseline(v['walk'], i))
+        + f'<td class="mixcell">{mixbar(d, cov)}</td>'
+        + f'<td class="st">{alertchip(r["status"])}{why}</td></tr>')
 
-TOTH = TOT['recep'][i0] + TOT['other'][i0]
-trows += (f'<tr class="total"><td class="vn">London portfolio</td>'
-          f'<td class="num">{TCOV:,}<div class="chips">{chip(pct(TCOV, BCOV))}</div></td>'
-          f'<td class="num">{TWEB:,}<div class="chips">{chip(pct(TWEB, BWEB))}</div></td>'
-          f'<td class="num">{TWALK:,}<div class="chips">{chip(pct(TWALK, BWALK))}</div></td>'
-          f'<td class="num">{TOT["gr"][i0]:,}</td><td class="num">{TOT["ot"][i0]:,}</td>'
-          f'<td class="num">{TOTH:,}</td>'
-          f'<td class="num">{TWEB / TCOV * 100:.0f}%</td>'
-          f'<td class="num">{TBK:,}<div class="chips">{chip(pct(TBK, BBK))}</div></td>'
-          f'<td class="num mut">–</td><td></td></tr>')
+dT = {'web': TWEB, 'walk': TWALK, 'gr': TOT['gr'][i0], 'ot': TOT['ot'][i0],
+      'rest': TOT['recep'][i0] + TOT['other'][i0]}
+trows += (f'<tr class="total"><td class="vn">London portfolio<div class="bl">six venues</div></td>'
+          + numcell(TCOV, BCOV, lead=True) + numcell(TBK, BBK)
+          + numcell(TWEB, BWEB) + numcell(TWALK, BWALK)
+          + f'<td class="mixcell">{mixbar(dT, TCOV)}</td><td class="st"></td></tr>')
+
+MIXLEG = ''.join(f'<span><i style="background:{c}"></i>{l}</span>' for _, l, c in MIX)
 
 # ---------------------------------------------------------------- 7-day panels
 panels = ''
@@ -296,24 +317,32 @@ h1{{font-size:24px;font-weight:700;margin-top:8px;letter-spacing:-.3px}}
 .kpi .lab{{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#64748b;font-weight:600}}
 .kpi .big{{font-size:24px;font-weight:700;margin-top:5px;font-family:'DM Sans',sans-serif}}
 .kpi .meta{{font-size:11.5px;color:#475569;margin-top:6px}}
-table{{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:6px}}
-th,td{{padding:8px 6px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap;vertical-align:middle}}
-th:first-child,td:first-child{{text-align:left}}
-thead th{{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0;vertical-align:bottom}}
-td.vn{{font-weight:600}} .chips{{margin-top:2px}}
-tr.total{{font-weight:700;background:#f1f5f9}} tr.total td{{border-top:2px solid #cbd5e1}}
-.mut{{color:#94a3b8}}
-.d{{font-size:9.5px;font-weight:600;padding:1px 4px;border-radius:5px;font-family:'JetBrains Mono',monospace}}
-.up{{color:#16a34a;background:#ecfdf3}}.down{{color:#dc2626;background:#fef2f2}}.flat{{color:#475467;background:#f2f4f7}}.na{{color:#98a2b3;background:#f8fafc}}
 .sec{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;margin:30px 0 8px;border-bottom:1px solid #eef2f6;padding-bottom:6px}}
-table.matrix{{table-layout:fixed}}
-table.matrix th{{text-align:center}} table.matrix th:first-child{{text-align:left}}
-table.matrix td.vn,table.matrix th:first-child{{width:16%}}
-table.matrix td.m{{text-align:center;border-radius:8px;border-bottom:3px solid #fff;padding:7px 6px}}
-table.matrix .mr{{font-size:17px;font-weight:700;font-family:'JetBrains Mono',monospace;line-height:1.1}}
-table.matrix .mv{{font-size:10px;font-family:'JetBrains Mono',monospace;opacity:.72;margin-top:1px}}
-.m-green{{background:#f0fdf4;color:#15803d}}.m-blue{{background:#eff6ff;color:#1d4ed8}}
-.m-amber{{background:#fffbeb;color:#b45309}}.m-red{{background:#fef2f2;color:#b91c1c}}
+table{{width:100%;border-collapse:separate;border-spacing:0;font-size:13.5px;margin-top:4px}}
+th,td{{padding:13px 12px;text-align:right;white-space:nowrap;vertical-align:middle;border-bottom:1px solid #eef2f6}}
+th:first-child,td:first-child{{text-align:left;padding-left:14px}}
+thead th{{font-size:10.5px;text-transform:uppercase;letter-spacing:.5px;color:#7c8899;font-weight:700;border-bottom:1.5px solid #cbd5e1;padding-bottom:9px;white-space:normal;line-height:1.3}}
+tbody tr:nth-child(even){{background:#fbfcfd}}
+tbody tr:hover{{background:#f4f8ff}}
+td.vn{{font-weight:700;font-size:14.5px;letter-spacing:-.15px}}
+td.n .big{{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums;font-size:16px;font-weight:600;letter-spacing:-.3px}}
+td.n .big.lead{{font-size:19px;font-weight:700}}
+.v{{font-size:11.5px;font-weight:700;font-family:'JetBrains Mono',monospace;margin-left:7px}}
+.up{{color:#15803d}}.down{{color:#dc2626}}.flat{{color:#64748b}}.na{{color:#a8b3c2}}
+.bl{{font-size:10.5px;color:#a8b3c2;font-weight:500;margin-top:3px;letter-spacing:.1px}}
+tr.total{{background:#f1f5f9 !important;font-weight:700}} tr.total td{{border-top:2px solid #cbd5e1;border-bottom:none}}
+td.mixcell{{min-width:190px;padding-right:14px}}
+.bar{{display:flex;height:15px;border-radius:5px;overflow:hidden;background:#f1f5f9}}
+.bar i{{display:block;height:100%;position:relative;border-right:2px solid #fff}}
+.bar i:last-child{{border-right:none}}
+.bar i span{{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);background:#0f172a;color:#fff;font-size:11px;
+  padding:4px 8px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .12s;z-index:5;font-weight:500}}
+.bar i:hover span{{opacity:1}}
+td.st{{text-align:right}}
+.why{{font-size:10.5px;color:#94a3b8;margin-top:4px;white-space:normal;max-width:150px;margin-left:auto;line-height:1.35}}
+.mixnum{{text-align:left;margin-top:5px}}
+.mixleg{{display:flex;gap:15px;font-size:11.5px;color:#64748b;margin:12px 0 2px;flex-wrap:wrap;align-items:center}}
+.mixleg i{{display:inline-block;width:10px;height:10px;border-radius:2.5px;vertical-align:-1px;margin-right:6px}}
 .panels{{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}}
 .panel{{border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px}}
 .pt{{font-size:13px;font-weight:700;margin-bottom:8px}}
@@ -351,15 +380,13 @@ footer ul{{margin:6px 0 0 16px}}
 <div class="meta">baseline {fmt(BBK)} · {chip(pct(TBK, BBK))}</div></div>
 </div>
 
-<div class="sec">How close each venue is to an alert</div>
-<div class="sub" style="font-size:12px;margin:0 0 8px">Consecutive days below the band, counting back from {RD}. Three or more is red, two is amber, one is a watch, and the small figure is today against its weekday baseline.</div>
-<table class="matrix"><thead><tr><th>Venue</th>{mhead}</tr></thead><tbody>{mrows}</tbody></table>
-
-<div class="sec">By venue — {RD}</div>
-<table><thead><tr><th>Venue</th><th>Covers</th><th>Website</th><th>Walk-in</th>
-<th>Google Reserve</th><th>OpenTable</th><th>Other</th><th>Web share</th>
-<th>GA4 bookings</th><th>Conv rate</th><th>Alert</th></tr></thead><tbody>{trows}</tbody></table>
-<div class="sub" style="margin-top:8px;font-size:11.5px">Variance chips compare the day with the median of the same weekday over the four preceding weeks. Other = reception plus third party. Walk-ins are shown but never alerted on: they are footfall, not a channel we run.</div>
+<div class="sec">Yesterday by venue — {RD}</div>
+<div class="mixleg">{MIXLEG}<span style="color:#a8b3c2">hover a bar segment for its numbers</span></div>
+<table><thead><tr>
+<th>Venue</th><th>Covers created</th><th>GA4 bookings</th><th>Website covers</th>
+<th>Walk-ins</th><th>Channel mix</th><th>Status</th></tr></thead>
+<tbody>{trows}</tbody></table>
+<div class="sub" style="margin-top:10px;font-size:12px">Every figure is compared with the median of the same weekday over the four preceding weeks, shown beneath it. Status counts consecutive days below the band ending on {RD}: three or more is red, two is amber, one is a watch. Walk-ins are shown but never alerted on, being footfall rather than a channel we run.</div>
 
 <div class="sec">Seven days to {RD} — variance against the weekday baseline</div>
 <div class="legend">
