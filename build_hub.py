@@ -12,7 +12,7 @@ h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size
 .tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
 .tab.active{color:#0f172a;border-bottom-color:#2563eb}
 .market{display:none}.market.active{display:block}
-.pick{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;max-width:1100px}
+.pick{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;max-width:1280px}
 .pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
 select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
 select:hover{border-color:#2563eb}
@@ -23,7 +23,8 @@ a.livelink:hover{background:#dbeafe;border-color:#2563eb}
 a.livelink .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;display:inline-block}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
-@media(max-width:900px){.pick{grid-template-columns:1fr 1fr}}
+@media(max-width:1150px){.pick{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.pick{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.pick{grid-template-columns:1fr}}'''
 
 def selects(mk, prefix):
@@ -77,12 +78,20 @@ def selects(mk, prefix):
     if not has_cov:
         copts='<option value="" selected disabled>None yet</option>'
         cdis=' disabled style="opacity:.5"'
+    # daily column (live page first, then dated copies newest first)
+    dopts='<option value="" selected disabled>None yet</option>'; ddis=' disabled style="opacity:.5"'
+    if mk.get('daily'):
+        ddis=''
+        dopts=f'<option value="{prefix}daily/index.html" selected>Latest — updates each morning</option>'
+        for d in sorted(mk.get('daily_history',[]), reverse=True):
+            dopts+=f'<option value="{prefix}daily/d{d}.html">{d}</option>'
     return f'''<div class="pick">
 <div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value"{wdis}>{wopts}</select></div>
 <div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value"{mdis}>{mopts}</select></div>
 <div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"{adis}>{aopts}</select></div>
 <div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"{tdis}>{topts}</select></div>
 <div class="col"><label>Covers report</label><select onchange="if(this.value)location.href=this.value"{cdis}>{copts}</select></div>
+<div class="col"><label>Daily covers</label><select onchange="if(this.value)location.href=this.value"{ddis}>{dopts}</select></div>
 </div>'''
 
 def livelinks(mk):
