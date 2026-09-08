@@ -103,8 +103,11 @@ def chip(p):
     return f'<span class="d {cls}">{"+" if p >= 0 else ""}{p:.0f}%</span>'
 
 
-def alertchip(s, txt):
-    return f'<span class="chip c-{s}">{txt}</span>'
+LABEL = {'green': 'GREEN', 'blue': 'WATCH', 'amber': 'AMBER', 'red': 'RED'}
+
+
+def alertchip(s, txt=None):
+    return f'<span class="chip c-{s}">{txt or LABEL[s]}</span>'
 
 
 def fmt(x):
@@ -201,7 +204,7 @@ if flagged or PORT:
         if r['mix']['status'] in ALERTING:
             bits.append(f'<b>channel shift</b> website share {r["mix"]["share"]:.0f}% against a '
                         f'{r["mix"]["base"]:.0f}% baseline, {r["mix"]["run"]} days')
-        items += (f'<li>{alertchip(r["status"], r["status"].upper())} '
+        items += (f'<li>{alertchip(r["status"])} '
                   f'<b>{r["v"]["name"]}</b> — ' + '; '.join(bits) + '</li>')
     STRIP = f'<div class="alerts"><ul>{items}</ul></div>'
 else:
@@ -232,7 +235,7 @@ for r in rows:
         f'<td class="num">{web / cov * 100:.0f}%</td>'
         f'<td class="num">{bk:,}<div class="chips">{chip(pct(bk, r["a"]["GA4 bookings"]["base"]))}</div></td>'
         f'<td class="num mut">{cvr}</td>'
-        f'<td>{alertchip(r["status"], r["status"].upper())}</td></tr>')
+        f'<td>{alertchip(r["status"])}</td></tr>')
 
 TOTH = TOT['recep'][i0] + TOT['other'][i0]
 trows += (f'<tr class="total"><td class="vn">London portfolio</td>'
@@ -255,7 +258,7 @@ for r in rows:
         tag = f'<span class="runtag">{a["run"]}d below</span>' if a['run'] else ''
         cards += f'<div><div class="pl">{lab} {tag}</div>{spark(v[key], lab)}</div>'
     panels += (f'<div class="panel"><div class="pt">{v["name"]} '
-               f'{alertchip(r["status"], r["status"].upper())}</div>'
+               f'{alertchip(r["status"])}</div>'
                f'<div class="pg">{cards}</div></div>')
 
 NOTES = ''.join(f'<li>{n}</li>' for n in P.get('notes', []))
@@ -291,6 +294,9 @@ tr.total{{font-weight:700;background:#f1f5f9}} tr.total td{{border-top:2px solid
 .d{{font-size:9.5px;font-weight:600;padding:1px 4px;border-radius:5px;font-family:'JetBrains Mono',monospace}}
 .up{{color:#16a34a;background:#ecfdf3}}.down{{color:#dc2626;background:#fef2f2}}.flat{{color:#475467;background:#f2f4f7}}.na{{color:#98a2b3;background:#f8fafc}}
 .sec{{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;margin:30px 0 8px;border-bottom:1px solid #eef2f6;padding-bottom:6px}}
+table.matrix{{table-layout:fixed}}
+table.matrix th{{text-align:center}} table.matrix th:first-child{{text-align:left}}
+table.matrix td.vn,table.matrix th:first-child{{width:16%}}
 table.matrix td.m{{text-align:center;border-radius:8px;border-bottom:3px solid #fff;padding:7px 6px}}
 table.matrix .mr{{font-size:17px;font-weight:700;font-family:'JetBrains Mono',monospace;line-height:1.1}}
 table.matrix .mv{{font-size:10px;font-family:'JetBrains Mono',monospace;opacity:.72;margin-top:1px}}
