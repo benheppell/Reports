@@ -118,50 +118,62 @@ def dlabel(iso):
     return dt.date.fromisoformat(iso).strftime('%a %d %b')
 
 
+SCALE = 50.0  # chart y-range, plus/minus percent against baseline
+
+
 def spark(vals, title):
-    """7-day line against a shaded plus/minus 20 percent band. Hand-rolled SVG, no CDN."""
+    """7 days plotted as variance against the weekday baseline, so the plus/minus 20 percent
+    band is a constant ribbon and every chart on the page reads on the same scale.
+    Raw values live on the end label and in the hover tooltip. Hand-rolled SVG, no CDN."""
     idx = list(range(N - 7, N))
     vs = [vals[i] for i in idx]
     bs = [baseline(vals, i) or 0 for i in idx]
-    lo_b = [b * (1 - BAND) for b in bs]
-    hi_b = [b * (1 + BAND) for b in bs]
-    hi = max(vs + hi_b + [1]) * 1.12
-    W, H, PL, PR, PT, PB = 276.0, 84.0, 6.0, 30.0, 8.0, 15.0
+    dev = [((v - b) / b * 100.0 if b else 0.0) for v, b in zip(vs, bs)]
+    W, H, PL, PR, PT, PB = 204.0, 92.0, 4.0, 34.0, 9.0, 14.0
+    MIDY = PT + (H - PT - PB) / 2.0
+    HALF = (H - PT - PB) / 2.0
 
     def X(k): return PL + k * (W - PL - PR) / 6.0
-    def Y(val): return PT + (1 - val / hi) * (H - PT - PB)
+    def Y(d): return MIDY - max(-SCALE, min(SCALE, d)) / SCALE * HALF
 
-    band = (' '.join(f'{X(k):.1f},{Y(b):.1f}' for k, b in enumerate(hi_b)) + ' ' +
-            ' '.join(f'{X(k):.1f},{Y(b):.1f}' for k, b in reversed(list(enumerate(lo_b)))))
-    mid = ' '.join(f'{X(k):.1f},{Y(b):.1f}' for k, b in enumerate(bs))
-    line = ' '.join(f'{X(k):.1f},{Y(v):.1f}' for k, v in enumerate(vs))
+    bandtop, bandbot = Y(BAND * 100), Y(-BAND * 100)
+    grid = (f'<rect x="{PL - 3:.1f}" y="{bandtop:.1f}" width="{W - PL - PR + 6:.1f}" '
+            f'height="{bandbot - bandtop:.1f}" fill="{BANDFILL}" rx="3"/>'
+            f'<line x1="{PL - 3:.1f}" y1="{MIDY:.1f}" x2="{W - PR + 3:.1f}" y2="{MIDY:.1f}" '
+            f'stroke="{GRID}" stroke-width="1"/>')
+    line = ' '.join(f'{X(k):.1f},{Y(d):.1f}' for k, d in enumerate(dev))
 
     marks = ''
-    for k, v in enumerate(vs):
-        bad = below(v, bs[k] or None)
+    for k, d in enumerate(dev):
+        bad = below(vs[k], bs[k] or None)
         last = (k == 6)
-        r = 3.4 if last else 2.4
+        off = abs(d) > SCALE
+        r = 3.4 if last else 2.5
         fillc = ALERT if bad else INK
-        marks += (f'<g><title>{dlabel(D[idx[k]])} · {title} {v:,} · baseline {bs[k]:,.0f}'
-                  f' · band {lo_b[k]:,.0f} to {hi_b[k]:,.0f}'
-                  f'{" · BELOW BAND" if bad else ""}</title>'
-                  f'<circle cx="{X(k):.1f}" cy="{Y(v):.1f}" r="{r + 1.6:.1f}" fill="{SURF}"/>'
-                  f'<circle cx="{X(k):.1f}" cy="{Y(v):.1f}" r="{r:.1f}" fill="{fillc}"/>'
-                  f'<rect x="{X(k) - 16:.1f}" y="0" width="32" height="{H - PB:.0f}" fill="transparent"/>'
+        marks += (f'<g><title>{dlabel(D[idx[k]])} · {title} {vs[k]:,} · baseline {bs[k]:,.0f}'
+                  f' · {d:+.0f}% · band {bs[k] * 0.8:,.0f} to {bs[k] * 1.2:,.0f}'
+                  f'{" · BELOW BAND" if bad else ""}{" · off scale" if off else ""}</title>'
+                  f'<circle cx="{X(k):.1f}" cy="{Y(d):.1f}" r="{r + 1.7:.1f}" fill="{SURF}"/>'
+                  f'<circle cx="{X(k):.1f}" cy="{Y(d):.1f}" r="{r:.1f}" '
+                  + (f'fill="{SURF}" stroke="{fillc}" stroke-width="1.8"/>' if off
+                     else f'fill="{fillc}"/>')
+                  + f'<rect x="{X(k) - 17:.1f}" y="0" width="34" height="{H - PB:.0f}" fill="transparent"/>'
                   f'</g>')
+
     endc = ALERT if below(vs[6], bs[6] or None) else '#334155'
-    ey = min(Y(vs[6]) + 3.4, H - PB - 2)
-    endlab = (f'<text x="{X(6) + 6:.1f}" y="{ey:.1f}" font-size="10.5" font-weight="600" '
-              f'fill="{endc}" font-family="JetBrains Mono,monospace">{vs[6]:,}</text>')
+    endlab = (f'<text x="{X(6) + 7:.1f}" y="{Y(dev[6]) - 1:.1f}" font-size="10" font-weight="700" '
+              f'fill="{endc}" font-family="JetBrains Mono,monospace">{vs[6]:,}</text>'
+              f'<text x="{X(6) + 7:.1f}" y="{Y(dev[6]) + 9:.1f}" font-size="8.5" '
+              f'fill="#94a3b8" font-family="JetBrains Mono,monospace">{dev[6]:+.0f}%</text>')
+    axis = ''
     labs = ''.join(
-        f'<text x="{X(k):.1f}" y="{H - 4:.0f}" text-anchor="middle" font-size="8" fill="#a8b3c2" '
+        f'<text x="{X(k):.1f}" y="{H - 4:.0f}" text-anchor="middle" font-size="7.5" fill="#a8b3c2" '
         f'font-family="JetBrains Mono,monospace">{D[i][8:10]}</text>' for k, i in enumerate(idx))
-    return (f'<svg viewBox="0 0 {W:.0f} {H:.0f}" width="100%" height="{H:.0f}" role="img" '
-            f'aria-label="{title}, seven days to {RD}">'
-            f'<polygon points="{band}" fill="{BANDFILL}"/>'
-            f'<polyline points="{mid}" fill="none" stroke="{GRID}" stroke-width="1"/>'
+    return (f'<svg viewBox="0 0 {W:.0f} {H:.0f}" role="img" '
+            f'aria-label="{title}, seven days to {RD}, variance against weekday baseline">'
+            f'{grid}{axis}'
             f'<polyline points="{line}" fill="none" stroke="{INK}" stroke-width="1.8" '
-            f'stroke-linejoin="round"/>{marks}{endlab}{labs}</svg>')
+            f'stroke-linejoin="round" stroke-linecap="round"/>{marks}{endlab}{labs}</svg>')
 
 
 # ---------------------------------------------------------------- run matrix
@@ -305,8 +317,9 @@ table.matrix .mv{{font-size:10px;font-family:'JetBrains Mono',monospace;opacity:
 .panels{{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}}
 .panel{{border:1px solid #e2e8f0;border-radius:12px;padding:12px 14px}}
 .pt{{font-size:13px;font-weight:700;margin-bottom:8px}}
-.pg{{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}}
-.pl{{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#94a3b8;font-weight:700;margin-bottom:2px;min-height:26px;line-height:1.3}}
+.pg{{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;align-items:end}}
+.pg svg{{display:block;width:100%;height:auto}}
+.pl{{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#94a3b8;font-weight:700;margin-bottom:2px;line-height:1.35}}
 .runtag{{color:#dc2626;letter-spacing:0;text-transform:none;font-weight:700}}
 .legend{{display:flex;gap:16px;font-size:11.5px;color:#64748b;margin:10px 0 14px;flex-wrap:wrap;align-items:center}}
 .legend i{{display:inline-block;vertical-align:-1px;margin-right:6px}}
@@ -314,6 +327,7 @@ table.matrix .mv{{font-size:10px;font-family:'JetBrains Mono',monospace;opacity:
 .lg-base{{width:14px;height:2px;background:#94a3b8}}
 .lg-line{{width:14px;height:2px;background:#2563eb}}
 .lg-dot{{width:8px;height:8px;border-radius:50%;background:#dc2626}}
+.lg-off{{width:8px;height:8px;border-radius:50%;background:#fff;border:1.8px solid #2563eb}}
 footer{{margin-top:32px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.6}}
 footer ul{{margin:6px 0 0 16px}}
 @media(max-width:1150px){{.cards{{grid-template-columns:repeat(2,1fr)}}}}
@@ -347,13 +361,14 @@ footer ul{{margin:6px 0 0 16px}}
 <th>GA4 bookings</th><th>Conv rate</th><th>Alert</th></tr></thead><tbody>{trows}</tbody></table>
 <div class="sub" style="margin-top:8px;font-size:11.5px">Variance chips compare the day with the median of the same weekday over the four preceding weeks. Other = reception plus third party. Walk-ins are shown but never alerted on: they are footfall, not a channel we run.</div>
 
-<div class="sec">Seven days to {RD}</div>
+<div class="sec">Seven days to {RD} — variance against the weekday baseline</div>
 <div class="legend">
-<span><i class="lg-line"></i>actual</span>
-<span><i class="lg-base"></i>weekday baseline</span>
-<span><i class="lg-band"></i>band, baseline ±20%</span>
+<span><i class="lg-line"></i>variance against the weekday baseline</span>
+<span><i class="lg-base"></i>baseline, 0%</span>
+<span><i class="lg-band"></i>band, ±20%</span>
 <span><i class="lg-dot"></i>day below the band</span>
-<span style="color:#94a3b8">hover any point for the numbers</span>
+<span><i class="lg-off"></i>beyond ±50%, clamped to the edge</span>
+<span style="color:#94a3b8">every chart is on the same ±50% scale · hover any point for the raw numbers</span>
 </div>
 <div class="panels">{panels}</div>
 
