@@ -1,0 +1,2063 @@
+{
+ "meta": {
+  "bookings_metric": "eventCount where eventName = sevenrooms_booking_complete",
+  "windows": {
+   "cur": "2026-09-07..2026-09-13",
+   "prior": "2026-08-31..2026-09-06",
+   "yoy": "2025-09-08..2025-09-14",
+   "ytd": "2026-02-01..2026-09-13 (FY Feb-Jan)"
+  },
+  "week_buckets": "isoYearIsoWeek (Mon-start). W25=202630 .. W32=202637; L29=202534 .. L32=202537",
+  "bounce_engagement_units": "0-1 fractions (raw GA4 API values), NOT percentages",
+  "asd_units": "seconds",
+  "regent_st": "Aqua Kyoto 342430509 + Aqua Nueva 360337941 summed; sessions/users/pageviews/newusers/bookings are sums, asd/bounce/engrate are session-weighted averages; landing paths prefixed Kyoto/Nueva",
+  "all_aggregate": "sum of the 6 report venues (7 GA4 properties); All landing paths prefixed with venue name",
+  "verification": "series W32 bookings reconciled against an independent cur-window bookings call for Aqua Shard (1035) and Hutong (813) - both match exactly; for every venue the sum of cur channel bookings also equals cur bookings",
+  "dsl_note": "DSL is trading far above a pre-rebrand target, so its YoY and variance-to-target figures are not comparable and should not be read as like-for-like growth",
+  "restatements": "GA4 has restated the prior week (W31 = 2026-08-31..09-06) since last week's file: e.g. Aqua Shard bookings 891 -> 902 and users 19187 -> 19172. Prior-week values in this file are the current GA4 numbers",
+  "failures": "none - every requested call returned data (one Hutong YTD bookings call timed out once and succeeded on retry)"
+ },
+ "venues": {
+  "Aqua Shard": {
+   "book": {
+    "cur": 1035,
+    "prior": 902,
+    "yoy": 1742,
+    "ytd": 41017
+   },
+   "site": {
+    "cur": {
+     "sessions": 30001,
+     "users": 21546,
+     "pageviews": 79324,
+     "asd": 202.47179832782243,
+     "bounce": 0.47148428385720476,
+     "engrate": 0.5285157161427952,
+     "newusers": 16463
+    },
+    "prior": {
+     "sessions": 27483,
+     "users": 19172,
+     "pageviews": 71338,
+     "asd": 179.7421245225776,
+     "bounce": 0.33951897536659026,
+     "engrate": 0.6604810246334097,
+     "newusers": 14932
+    },
+    "yoy": {
+     "sessions": 51783,
+     "users": 25614,
+     "pageviews": 114178,
+     "asd": 182.99054649431278,
+     "bounce": 0.32060714906436477,
+     "engrate": 0.6793928509356353,
+     "newusers": 5771
+    }
+   },
+   "series": {
+    "W25": {
+     "b": 1336,
+     "u": 23469
+    },
+    "W26": {
+     "b": 1451,
+     "u": 25660
+    },
+    "W27": {
+     "b": 1188,
+     "u": 21883
+    },
+    "W28": {
+     "b": 1095,
+     "u": 21726
+    },
+    "W29": {
+     "b": 1133,
+     "u": 25933
+    },
+    "W30": {
+     "b": 1086,
+     "u": 23052
+    },
+    "W31": {
+     "b": 902,
+     "u": 19172
+    },
+    "W32": {
+     "b": 1035,
+     "u": 21546
+    }
+   },
+   "ly": {
+    "L29": {
+     "b": 1861,
+     "u": 28602
+    },
+    "L30": {
+     "b": 1770,
+     "u": 26213
+    },
+    "L31": {
+     "b": 1773,
+     "u": 26342
+    },
+    "L32": {
+     "b": 1742,
+     "u": 25614
+    }
+   }
+  },
+  "Hutong": {
+   "book": {
+    "cur": 813,
+    "prior": 825,
+    "yoy": 841,
+    "ytd": 24746
+   },
+   "site": {
+    "cur": {
+     "sessions": 20616,
+     "users": 14622,
+     "pageviews": 55797,
+     "asd": 201.3664785895421,
+     "bounce": 0.48898913465269694,
+     "engrate": 0.5110108653473031,
+     "newusers": 10853
+    },
+    "prior": {
+     "sessions": 19451,
+     "users": 13061,
+     "pageviews": 53200,
+     "asd": 172.49478522451287,
+     "bounce": 0.3863040460644697,
+     "engrate": 0.6136959539355303,
+     "newusers": 10105
+    },
+    "yoy": {
+     "sessions": 32558,
+     "users": 16681,
+     "pageviews": 64135,
+     "asd": 157.09203716459857,
+     "bounce": 0.3445236193869402,
+     "engrate": 0.6554763806130598,
+     "newusers": 5244
+    }
+   },
+   "series": {
+    "W25": {
+     "b": 884,
+     "u": 14353
+    },
+    "W26": {
+     "b": 808,
+     "u": 14465
+    },
+    "W27": {
+     "b": 833,
+     "u": 13878
+    },
+    "W28": {
+     "b": 877,
+     "u": 14047
+    },
+    "W29": {
+     "b": 980,
+     "u": 16439
+    },
+    "W30": {
+     "b": 1015,
+     "u": 16216
+    },
+    "W31": {
+     "b": 825,
+     "u": 13061
+    },
+    "W32": {
+     "b": 813,
+     "u": 14622
+    }
+   },
+   "ly": {
+    "L29": {
+     "b": 833,
+     "u": 16143
+    },
+    "L30": {
+     "b": 792,
+     "u": 12620
+    },
+    "L31": {
+     "b": 875,
+     "u": 15910
+    },
+    "L32": {
+     "b": 841,
+     "u": 16681
+    }
+   }
+  },
+  "Regent St": {
+   "book": {
+    "cur": 233,
+    "prior": 241,
+    "yoy": 218,
+    "ytd": 9780
+   },
+   "site": {
+    "cur": {
+     "sessions": 5783,
+     "users": 4434,
+     "pageviews": 16587,
+     "asd": 184.52240940947607,
+     "bounce": 0.4051530347570465,
+     "engrate": 0.5948469652429534,
+     "newusers": 3649
+    },
+    "prior": {
+     "sessions": 5835,
+     "users": 4539,
+     "pageviews": 16694,
+     "asd": 161.82904878011996,
+     "bounce": 0.32167952013710366,
+     "engrate": 0.6783204798628963,
+     "newusers": 3779
+    },
+    "yoy": {
+     "sessions": 13134,
+     "users": 6214,
+     "pageviews": 21148,
+     "asd": 113.63483592530837,
+     "bounce": 0.32571950662402926,
+     "engrate": 0.6742804933759707,
+     "newusers": 1645
+    }
+   },
+   "series": {
+    "W25": {
+     "b": 324,
+     "u": 6057
+    },
+    "W26": {
+     "b": 284,
+     "u": 6165
+    },
+    "W27": {
+     "b": 296,
+     "u": 5747
+    },
+    "W28": {
+     "b": 344,
+     "u": 6265
+    },
+    "W29": {
+     "b": 256,
+     "u": 5776
+    },
+    "W30": {
+     "b": 269,
+     "u": 5768
+    },
+    "W31": {
+     "b": 241,
+     "u": 4539
+    },
+    "W32": {
+     "b": 233,
+     "u": 4434
+    }
+   },
+   "ly": {
+    "L29": {
+     "b": 282,
+     "u": 7285
+    },
+    "L30": {
+     "b": 269,
+     "u": 5902
+    },
+    "L31": {
+     "b": 277,
+     "u": 7093
+    },
+    "L32": {
+     "b": 218,
+     "u": 6214
+    }
+   }
+  },
+  "Azzurra": {
+   "book": {
+    "cur": 74,
+    "prior": 87,
+    "yoy": 77,
+    "ytd": 3468
+   },
+   "site": {
+    "cur": {
+     "sessions": 2098,
+     "users": 1678,
+     "pageviews": 5095,
+     "asd": 189.45368621163013,
+     "bounce": 0.41372735938989513,
+     "engrate": 0.5862726406101049,
+     "newusers": 1416
+    },
+    "prior": {
+     "sessions": 2007,
+     "users": 1606,
+     "pageviews": 5383,
+     "asd": 181.3748324314898,
+     "bounce": 0.3393124065769806,
+     "engrate": 0.6606875934230194,
+     "newusers": 1381
+    },
+    "yoy": {
+     "sessions": 2061,
+     "users": 1679,
+     "pageviews": 4075,
+     "asd": 154.0902278214459,
+     "bounce": 0.311984473556526,
+     "engrate": 0.6880155264434741,
+     "newusers": 1465
+    }
+   },
+   "series": {
+    "W25": {
+     "b": 92,
+     "u": 1817
+    },
+    "W26": {
+     "b": 77,
+     "u": 1621
+    },
+    "W27": {
+     "b": 76,
+     "u": 1507
+    },
+    "W28": {
+     "b": 69,
+     "u": 1443
+    },
+    "W29": {
+     "b": 64,
+     "u": 1437
+    },
+    "W30": {
+     "b": 82,
+     "u": 1500
+    },
+    "W31": {
+     "b": 87,
+     "u": 1606
+    },
+    "W32": {
+     "b": 74,
+     "u": 1678
+    }
+   },
+   "ly": {
+    "L29": {
+     "b": 79,
+     "u": 1714
+    },
+    "L30": {
+     "b": 99,
+     "u": 2040
+    },
+    "L31": {
+     "b": 83,
+     "u": 1829
+    },
+    "L32": {
+     "b": 77,
+     "u": 1679
+    }
+   }
+  },
+  "Shiro Sushi": {
+   "book": {
+    "cur": 84,
+    "prior": 78,
+    "yoy": 105,
+    "ytd": 3342
+   },
+   "site": {
+    "cur": {
+     "sessions": 1483,
+     "users": 1167,
+     "pageviews": 3970,
+     "asd": 160.17545315711396,
+     "bounce": 0.32231962238705325,
+     "engrate": 0.6776803776129467,
+     "newusers": 966
+    },
+    "prior": {
+     "sessions": 1399,
+     "users": 1076,
+     "pageviews": 3687,
+     "asd": 161.22787889135097,
+     "bounce": 0.3402430307362402,
+     "engrate": 0.6597569692637598,
+     "newusers": 891
+    },
+    "yoy": {
+     "sessions": 2284,
+     "users": 1814,
+     "pageviews": 4861,
+     "asd": 136.5919850372154,
+     "bounce": 0.38747810858143605,
+     "engrate": 0.612521891418564,
+     "newusers": 1587
+    }
+   },
+   "series": {
+    "W25": {
+     "b": 117,
+     "u": 1329
+    },
+    "W26": {
+     "b": 144,
+     "u": 1359
+    },
+    "W27": {
+     "b": 102,
+     "u": 1222
+    },
+    "W28": {
+     "b": 109,
+     "u": 1243
+    },
+    "W29": {
+     "b": 87,
+     "u": 1095
+    },
+    "W30": {
+     "b": 89,
+     "u": 1083
+    },
+    "W31": {
+     "b": 78,
+     "u": 1076
+    },
+    "W32": {
+     "b": 84,
+     "u": 1167
+    }
+   },
+   "ly": {
+    "L29": {
+     "b": 91,
+     "u": 1917
+    },
+    "L30": {
+     "b": 69,
+     "u": 1929
+    },
+    "L31": {
+     "b": 103,
+     "u": 1794
+    },
+    "L32": {
+     "b": 105,
+     "u": 1814
+    }
+   }
+  },
+  "DSL": {
+   "book": {
+    "cur": 448,
+    "prior": 458,
+    "yoy": 104,
+    "ytd": 16828
+   },
+   "site": {
+    "cur": {
+     "sessions": 6154,
+     "users": 4671,
+     "pageviews": 19760,
+     "asd": 186.58376629688007,
+     "bounce": 0.41501462463438415,
+     "engrate": 0.5849853753656159,
+     "newusers": 3778
+    },
+    "prior": {
+     "sessions": 6325,
+     "users": 4823,
+     "pageviews": 20436,
+     "asd": 175.77442231288538,
+     "bounce": 0.3068774703557312,
+     "engrate": 0.6931225296442688,
+     "newusers": 3977
+    },
+    "yoy": {
+     "sessions": 4822,
+     "users": 2367,
+     "pageviews": 7993,
+     "asd": 113.60019897055165,
+     "bounce": 0.3231024471173787,
+     "engrate": 0.6768975528826213,
+     "newusers": 721
+    }
+   },
+   "series": {
+    "W25": {
+     "b": 580,
+     "u": 5692
+    },
+    "W26": {
+     "b": 528,
+     "u": 5484
+    },
+    "W27": {
+     "b": 618,
+     "u": 5949
+    },
+    "W28": {
+     "b": 498,
+     "u": 5841
+    },
+    "W29": {
+     "b": 531,
+     "u": 5446
+    },
+    "W30": {
+     "b": 497,
+     "u": 5036
+    },
+    "W31": {
+     "b": 458,
+     "u": 4823
+    },
+    "W32": {
+     "b": 448,
+     "u": 4671
+    }
+   },
+   "ly": {
+    "L29": {
+     "b": 181,
+     "u": 2847
+    },
+    "L30": {
+     "b": 160,
+     "u": 2196
+    },
+    "L31": {
+     "b": 157,
+     "u": 2424
+    },
+    "L32": {
+     "b": 104,
+     "u": 2367
+    }
+   }
+  }
+ },
+ "snapshot": {
+  "All": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 21740,
+      "b": 986
+     },
+     {
+      "name": "Direct",
+      "s": 12183,
+      "b": 572
+     },
+     {
+      "name": "Unassigned",
+      "s": 9544,
+      "b": 401
+     },
+     {
+      "name": "Paid Search",
+      "s": 8473,
+      "b": 276
+     },
+     {
+      "name": "Paid Social",
+      "s": 7845,
+      "b": 113
+     },
+     {
+      "name": "Referral",
+      "s": 5827,
+      "b": 217
+     },
+     {
+      "name": "Cross-network",
+      "s": 3563,
+      "b": 65
+     },
+     {
+      "name": "Organic Social",
+      "s": 860,
+      "b": 11
+     },
+     {
+      "name": "AI Assistant",
+      "s": 655,
+      "b": 36
+     },
+     {
+      "name": "Email",
+      "s": 222,
+      "b": 5
+     },
+     {
+      "name": "Paid Other",
+      "s": 95,
+      "b": 5
+     },
+     {
+      "name": "Organic Video",
+      "s": 2,
+      "b": 0
+     },
+     {
+      "name": "Mobile Push Notifications",
+      "s": 1,
+      "b": 0
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 21666,
+      "b": 1107
+     },
+     {
+      "name": "Direct",
+      "s": 11676,
+      "b": 599
+     },
+     {
+      "name": "Paid Search",
+      "s": 8850,
+      "b": 322
+     },
+     {
+      "name": "Paid Social",
+      "s": 7582,
+      "b": 98
+     },
+     {
+      "name": "Referral",
+      "s": 6072,
+      "b": 241
+     },
+     {
+      "name": "Unassigned",
+      "s": 2632,
+      "b": 148
+     },
+     {
+      "name": "Cross-network",
+      "s": 968,
+      "b": 26
+     },
+     {
+      "name": "Organic Social",
+      "s": 892,
+      "b": 12
+     },
+     {
+      "name": "AI Assistant",
+      "s": 643,
+      "b": 26
+     },
+     {
+      "name": "Email",
+      "s": 391,
+      "b": 9
+     },
+     {
+      "name": "Paid Other",
+      "s": 58,
+      "b": 3
+     },
+     {
+      "name": "Mobile Push Notifications",
+      "s": 1,
+      "b": 0
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Organic Search",
+      "s": 27467,
+      "b": 662
+     },
+     {
+      "name": "Paid Social",
+      "s": 20188,
+      "b": 152
+     },
+     {
+      "name": "Paid Search",
+      "s": 18581,
+      "b": 662
+     },
+     {
+      "name": "Referral",
+      "s": 14355,
+      "b": 375
+     },
+     {
+      "name": "Direct",
+      "s": 11524,
+      "b": 916
+     },
+     {
+      "name": "Cross-network",
+      "s": 9846,
+      "b": 268
+     },
+     {
+      "name": "Unassigned",
+      "s": 2074,
+      "b": 32
+     },
+     {
+      "name": "Organic Social",
+      "s": 1963,
+      "b": 10
+     },
+     {
+      "name": "Paid Other",
+      "s": 869,
+      "b": 7
+     },
+     {
+      "name": "Email",
+      "s": 46,
+      "b": 3
+     },
+     {
+      "name": "Display",
+      "s": 3,
+      "b": 0
+     },
+     {
+      "name": "Mobile Push Notifications",
+      "s": 2,
+      "b": 0
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 51493,
+     "desktop": 13840,
+     "tablet": 737
+    },
+    "shares": {
+     "mobile": 0.7794,
+     "desktop": 0.2095,
+     "tablet": 0.0112
+    },
+    "total": 66070
+   },
+   "landing": [
+    {
+     "path": "Aqua Shard /",
+     "s": 10249,
+     "b": 257
+    },
+    {
+     "path": "Hutong /",
+     "s": 6519,
+     "b": 156
+    },
+    {
+     "path": "Aqua Shard /peter-pan-afternoon-tea",
+     "s": 5124,
+     "b": 102
+    },
+    {
+     "path": "Hutong /menus",
+     "s": 3790,
+     "b": 37
+    },
+    {
+     "path": "Aqua Shard /menus",
+     "s": 3009,
+     "b": 30
+    }
+   ]
+  },
+  "Aqua Shard": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 9944,
+      "b": 346
+     },
+     {
+      "name": "Direct",
+      "s": 5845,
+      "b": 233
+     },
+     {
+      "name": "Paid Search",
+      "s": 4786,
+      "b": 146
+     },
+     {
+      "name": "Unassigned",
+      "s": 3893,
+      "b": 132
+     },
+     {
+      "name": "Referral",
+      "s": 3333,
+      "b": 102
+     },
+     {
+      "name": "Paid Social",
+      "s": 2664,
+      "b": 25
+     },
+     {
+      "name": "Cross-network",
+      "s": 1525,
+      "b": 26
+     },
+     {
+      "name": "AI Assistant",
+      "s": 383,
+      "b": 21
+     },
+     {
+      "name": "Organic Social",
+      "s": 257,
+      "b": 3
+     },
+     {
+      "name": "Email",
+      "s": 43,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 32,
+      "b": 1
+     },
+     {
+      "name": "Organic Video",
+      "s": 2,
+      "b": 0
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 9581,
+      "b": 347
+     },
+     {
+      "name": "Direct",
+      "s": 5543,
+      "b": 233
+     },
+     {
+      "name": "Paid Search",
+      "s": 4515,
+      "b": 150
+     },
+     {
+      "name": "Referral",
+      "s": 3208,
+      "b": 90
+     },
+     {
+      "name": "Paid Social",
+      "s": 2133,
+      "b": 14
+     },
+     {
+      "name": "Unassigned",
+      "s": 941,
+      "b": 43
+     },
+     {
+      "name": "AI Assistant",
+      "s": 392,
+      "b": 14
+     },
+     {
+      "name": "Email",
+      "s": 320,
+      "b": 8
+     },
+     {
+      "name": "Organic Social",
+      "s": 186,
+      "b": 0
+     },
+     {
+      "name": "Cross-network",
+      "s": 136,
+      "b": 3
+     },
+     {
+      "name": "Paid Other",
+      "s": 7,
+      "b": 0
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Paid Search",
+      "s": 13707,
+      "b": 513
+     },
+     {
+      "name": "Organic Search",
+      "s": 11486,
+      "b": 326
+     },
+     {
+      "name": "Referral",
+      "s": 8444,
+      "b": 255
+     },
+     {
+      "name": "Paid Social",
+      "s": 7676,
+      "b": 83
+     },
+     {
+      "name": "Direct",
+      "s": 5116,
+      "b": 418
+     },
+     {
+      "name": "Cross-network",
+      "s": 4241,
+      "b": 127
+     },
+     {
+      "name": "Unassigned",
+      "s": 1320,
+      "b": 12
+     },
+     {
+      "name": "Organic Social",
+      "s": 300,
+      "b": 3
+     },
+     {
+      "name": "Paid Other",
+      "s": 105,
+      "b": 2
+     },
+     {
+      "name": "Email",
+      "s": 23,
+      "b": 3
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 22841,
+     "desktop": 6806,
+     "tablet": 397
+    },
+    "shares": {
+     "mobile": 0.7603,
+     "desktop": 0.2265,
+     "tablet": 0.0132
+    },
+    "total": 30044
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 10249,
+     "b": 257
+    },
+    {
+     "path": "/peter-pan-afternoon-tea",
+     "s": 5124,
+     "b": 102
+    },
+    {
+     "path": "/menus",
+     "s": 3009,
+     "b": 30
+    },
+    {
+     "path": "",
+     "s": 2819,
+     "b": 30
+    },
+    {
+     "path": "/explore/aquashard/reservations/create/search",
+     "s": 2372,
+     "b": 208
+    }
+   ]
+  },
+  "Hutong": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 5755,
+      "b": 259
+     },
+     {
+      "name": "Unassigned",
+      "s": 3897,
+      "b": 173
+     },
+     {
+      "name": "Direct",
+      "s": 3687,
+      "b": 192
+     },
+     {
+      "name": "Paid Social",
+      "s": 2986,
+      "b": 42
+     },
+     {
+      "name": "Paid Search",
+      "s": 2698,
+      "b": 86
+     },
+     {
+      "name": "Referral",
+      "s": 1543,
+      "b": 33
+     },
+     {
+      "name": "Cross-network",
+      "s": 1048,
+      "b": 17
+     },
+     {
+      "name": "Organic Social",
+      "s": 166,
+      "b": 1
+     },
+     {
+      "name": "AI Assistant",
+      "s": 159,
+      "b": 10
+     },
+     {
+      "name": "Paid Other",
+      "s": 36,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 6,
+      "b": 0
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 5776,
+      "b": 330
+     },
+     {
+      "name": "Direct",
+      "s": 3684,
+      "b": 212
+     },
+     {
+      "name": "Paid Search",
+      "s": 3184,
+      "b": 130
+     },
+     {
+      "name": "Paid Social",
+      "s": 2898,
+      "b": 40
+     },
+     {
+      "name": "Referral",
+      "s": 1711,
+      "b": 44
+     },
+     {
+      "name": "Unassigned",
+      "s": 916,
+      "b": 44
+     },
+     {
+      "name": "Cross-network",
+      "s": 335,
+      "b": 15
+     },
+     {
+      "name": "Organic Social",
+      "s": 213,
+      "b": 4
+     },
+     {
+      "name": "AI Assistant",
+      "s": 147,
+      "b": 4
+     },
+     {
+      "name": "Paid Other",
+      "s": 27,
+      "b": 2
+     },
+     {
+      "name": "Email",
+      "s": 14,
+      "b": 0
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Paid Social",
+      "s": 9169,
+      "b": 52
+     },
+     {
+      "name": "Organic Search",
+      "s": 6392,
+      "b": 156
+     },
+     {
+      "name": "Cross-network",
+      "s": 4859,
+      "b": 126
+     },
+     {
+      "name": "Referral",
+      "s": 4683,
+      "b": 103
+     },
+     {
+      "name": "Direct",
+      "s": 3378,
+      "b": 287
+     },
+     {
+      "name": "Paid Search",
+      "s": 2804,
+      "b": 96
+     },
+     {
+      "name": "Paid Other",
+      "s": 556,
+      "b": 2
+     },
+     {
+      "name": "Unassigned",
+      "s": 484,
+      "b": 17
+     },
+     {
+      "name": "Organic Social",
+      "s": 209,
+      "b": 2
+     },
+     {
+      "name": "Email",
+      "s": 3,
+      "b": 0
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 16398,
+     "desktop": 3980,
+     "tablet": 208
+    },
+    "shares": {
+     "mobile": 0.7966,
+     "desktop": 0.1933,
+     "tablet": 0.0101
+    },
+    "total": 20586
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 6519,
+     "b": 156
+    },
+    {
+     "path": "/menus",
+     "s": 3790,
+     "b": 37
+    },
+    {
+     "path": "/menus/lunch-ppc",
+     "s": 2340,
+     "b": 19
+    },
+    {
+     "path": "/explore/hutonglondon/reservations/create/search",
+     "s": 2220,
+     "b": 246
+    },
+    {
+     "path": "",
+     "s": 1832,
+     "b": 33
+    }
+   ]
+  },
+  "Regent St": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 2374,
+      "b": 105
+     },
+     {
+      "name": "Direct",
+      "s": 1157,
+      "b": 62
+     },
+     {
+      "name": "Unassigned",
+      "s": 670,
+      "b": 26
+     },
+     {
+      "name": "Paid Search",
+      "s": 551,
+      "b": 17
+     },
+     {
+      "name": "Paid Social",
+      "s": 472,
+      "b": 8
+     },
+     {
+      "name": "Cross-network",
+      "s": 352,
+      "b": 2
+     },
+     {
+      "name": "Organic Social",
+      "s": 269,
+      "b": 5
+     },
+     {
+      "name": "Referral",
+      "s": 111,
+      "b": 2
+     },
+     {
+      "name": "AI Assistant",
+      "s": 71,
+      "b": 5
+     },
+     {
+      "name": "Paid Other",
+      "s": 12,
+      "b": 1
+     },
+     {
+      "name": "Email",
+      "s": 10,
+      "b": 0
+     },
+     {
+      "name": "Mobile Push Notifications",
+      "s": 1,
+      "b": 0
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 2519,
+      "b": 119
+     },
+     {
+      "name": "Direct",
+      "s": 1112,
+      "b": 69
+     },
+     {
+      "name": "Paid Search",
+      "s": 712,
+      "b": 17
+     },
+     {
+      "name": "Paid Social",
+      "s": 500,
+      "b": 6
+     },
+     {
+      "name": "Organic Social",
+      "s": 320,
+      "b": 4
+     },
+     {
+      "name": "Unassigned",
+      "s": 265,
+      "b": 13
+     },
+     {
+      "name": "Cross-network",
+      "s": 189,
+      "b": 1
+     },
+     {
+      "name": "Referral",
+      "s": 136,
+      "b": 4
+     },
+     {
+      "name": "AI Assistant",
+      "s": 59,
+      "b": 7
+     },
+     {
+      "name": "Paid Other",
+      "s": 10,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 5,
+      "b": 1
+     },
+     {
+      "name": "Mobile Push Notifications",
+      "s": 1,
+      "b": 0
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Organic Search",
+      "s": 6007,
+      "b": 80
+     },
+     {
+      "name": "Paid Search",
+      "s": 1553,
+      "b": 20
+     },
+     {
+      "name": "Direct",
+      "s": 1497,
+      "b": 100
+     },
+     {
+      "name": "Organic Social",
+      "s": 1381,
+      "b": 4
+     },
+     {
+      "name": "Paid Social",
+      "s": 1206,
+      "b": 4
+     },
+     {
+      "name": "Referral",
+      "s": 618,
+      "b": 5
+     },
+     {
+      "name": "Cross-network",
+      "s": 356,
+      "b": 3
+     },
+     {
+      "name": "Unassigned",
+      "s": 139,
+      "b": 1
+     },
+     {
+      "name": "Paid Other",
+      "s": 93,
+      "b": 1
+     },
+     {
+      "name": "Mobile Push Notifications",
+      "s": 2,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 1,
+      "b": 0
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 4438,
+     "desktop": 1260,
+     "tablet": 38
+    },
+    "shares": {
+     "mobile": 0.7737,
+     "desktop": 0.2197,
+     "tablet": 0.0066
+    },
+    "total": 5736
+   },
+   "landing": [
+    {
+     "path": "Kyoto /",
+     "s": 1410,
+     "b": 43
+    },
+    {
+     "path": "Nueva /",
+     "s": 842,
+     "b": 23
+    },
+    {
+     "path": "Kyoto /explore/aquakyoto/reservations/create/search",
+     "s": 444,
+     "b": 57
+    },
+    {
+     "path": "Kyoto /weekend-brunch",
+     "s": 332,
+     "b": 6
+    },
+    {
+     "path": "Kyoto ",
+     "s": 257,
+     "b": 7
+    }
+   ]
+  },
+  "Azzurra": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 705,
+      "b": 28
+     },
+     {
+      "name": "Direct",
+      "s": 428,
+      "b": 19
+     },
+     {
+      "name": "Paid Social",
+      "s": 243,
+      "b": 0
+     },
+     {
+      "name": "Paid Search",
+      "s": 216,
+      "b": 12
+     },
+     {
+      "name": "Cross-network",
+      "s": 215,
+      "b": 4
+     },
+     {
+      "name": "Unassigned",
+      "s": 196,
+      "b": 9
+     },
+     {
+      "name": "Referral",
+      "s": 82,
+      "b": 1
+     },
+     {
+      "name": "Organic Social",
+      "s": 55,
+      "b": 1
+     },
+     {
+      "name": "Email",
+      "s": 38,
+      "b": 0
+     },
+     {
+      "name": "AI Assistant",
+      "s": 20,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 1,
+      "b": 0
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 760,
+      "b": 38
+     },
+     {
+      "name": "Direct",
+      "s": 387,
+      "b": 23
+     },
+     {
+      "name": "Paid Social",
+      "s": 332,
+      "b": 1
+     },
+     {
+      "name": "Paid Search",
+      "s": 168,
+      "b": 10
+     },
+     {
+      "name": "Cross-network",
+      "s": 102,
+      "b": 4
+     },
+     {
+      "name": "Referral",
+      "s": 91,
+      "b": 3
+     },
+     {
+      "name": "Unassigned",
+      "s": 87,
+      "b": 6
+     },
+     {
+      "name": "Organic Social",
+      "s": 50,
+      "b": 1
+     },
+     {
+      "name": "AI Assistant",
+      "s": 21,
+      "b": 1
+     },
+     {
+      "name": "Email",
+      "s": 7,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 2,
+      "b": 0
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Organic Search",
+      "s": 540,
+      "b": 17
+     },
+     {
+      "name": "Direct",
+      "s": 498,
+      "b": 32
+     },
+     {
+      "name": "Paid Search",
+      "s": 351,
+      "b": 17
+     },
+     {
+      "name": "Cross-network",
+      "s": 340,
+      "b": 9
+     },
+     {
+      "name": "Referral",
+      "s": 170,
+      "b": 2
+     },
+     {
+      "name": "Paid Social",
+      "s": 97,
+      "b": 0
+     },
+     {
+      "name": "Unassigned",
+      "s": 22,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 17,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 16,
+      "b": 0
+     },
+     {
+      "name": "Organic Social",
+      "s": 13,
+      "b": 0
+     },
+     {
+      "name": "Display",
+      "s": 3,
+      "b": 0
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 1566,
+     "desktop": 500,
+     "tablet": 31
+    },
+    "shares": {
+     "mobile": 0.7468,
+     "desktop": 0.2384,
+     "tablet": 0.0148
+    },
+    "total": 2097
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 844,
+     "b": 23
+    },
+    {
+     "path": "/menus",
+     "s": 251,
+     "b": 6
+    },
+    {
+     "path": "/explore/azzurra/reservations/create/search",
+     "s": 135,
+     "b": 24
+    },
+    {
+     "path": "(not set)",
+     "s": 121,
+     "b": 0
+    },
+    {
+     "path": "/events/chelsea-arts-festival",
+     "s": 121,
+     "b": 0
+    }
+   ]
+  },
+  "Shiro Sushi": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 625,
+      "b": 42
+     },
+     {
+      "name": "Paid Social",
+      "s": 282,
+      "b": 0
+     },
+     {
+      "name": "Direct",
+      "s": 279,
+      "b": 24
+     },
+     {
+      "name": "Paid Search",
+      "s": 125,
+      "b": 11
+     },
+     {
+      "name": "Unassigned",
+      "s": 55,
+      "b": 3
+     },
+     {
+      "name": "Referral",
+      "s": 42,
+      "b": 0
+     },
+     {
+      "name": "Cross-network",
+      "s": 29,
+      "b": 2
+     },
+     {
+      "name": "Organic Social",
+      "s": 28,
+      "b": 1
+     },
+     {
+      "name": "AI Assistant",
+      "s": 15,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 7,
+      "b": 1
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 556,
+      "b": 41
+     },
+     {
+      "name": "Paid Social",
+      "s": 250,
+      "b": 0
+     },
+     {
+      "name": "Direct",
+      "s": 212,
+      "b": 12
+     },
+     {
+      "name": "Unassigned",
+      "s": 195,
+      "b": 12
+     },
+     {
+      "name": "Paid Search",
+      "s": 92,
+      "b": 9
+     },
+     {
+      "name": "Email",
+      "s": 33,
+      "b": 0
+     },
+     {
+      "name": "Referral",
+      "s": 25,
+      "b": 3
+     },
+     {
+      "name": "Organic Social",
+      "s": 22,
+      "b": 0
+     },
+     {
+      "name": "AI Assistant",
+      "s": 6,
+      "b": 0
+     },
+     {
+      "name": "Cross-network",
+      "s": 5,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 1,
+      "b": 1
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Organic Search",
+      "s": 840,
+      "b": 42
+     },
+     {
+      "name": "Paid Social",
+      "s": 609,
+      "b": 0
+     },
+     {
+      "name": "Direct",
+      "s": 465,
+      "b": 40
+     },
+     {
+      "name": "Paid Search",
+      "s": 142,
+      "b": 16
+     },
+     {
+      "name": "Referral",
+      "s": 90,
+      "b": 2
+     },
+     {
+      "name": "Cross-network",
+      "s": 50,
+      "b": 3
+     },
+     {
+      "name": "Paid Other",
+      "s": 34,
+      "b": 0
+     },
+     {
+      "name": "Unassigned",
+      "s": 30,
+      "b": 2
+     },
+     {
+      "name": "Organic Social",
+      "s": 26,
+      "b": 0
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 1117,
+     "desktop": 360,
+     "tablet": 7
+    },
+    "shares": {
+     "mobile": 0.7527,
+     "desktop": 0.2426,
+     "tablet": 0.0047
+    },
+    "total": 1484
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 561,
+     "b": 30
+    },
+    {
+     "path": "/events/shiro-brunch",
+     "s": 183,
+     "b": 1
+    },
+    {
+     "path": "/explore/shiro/reservations/create/search",
+     "s": 122,
+     "b": 31
+    },
+    {
+     "path": "/menus",
+     "s": 118,
+     "b": 4
+    },
+    {
+     "path": "/menus/lunch-set-menu",
+     "s": 102,
+     "b": 0
+    }
+   ]
+  },
+  "DSL": {
+   "channels": {
+    "cur": [
+     {
+      "name": "Organic Search",
+      "s": 2337,
+      "b": 206
+     },
+     {
+      "name": "Paid Social",
+      "s": 1198,
+      "b": 38
+     },
+     {
+      "name": "Unassigned",
+      "s": 833,
+      "b": 58
+     },
+     {
+      "name": "Direct",
+      "s": 787,
+      "b": 42
+     },
+     {
+      "name": "Referral",
+      "s": 716,
+      "b": 79
+     },
+     {
+      "name": "Cross-network",
+      "s": 394,
+      "b": 14
+     },
+     {
+      "name": "Email",
+      "s": 118,
+      "b": 4
+     },
+     {
+      "name": "Paid Search",
+      "s": 97,
+      "b": 4
+     },
+     {
+      "name": "Organic Social",
+      "s": 85,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 14,
+      "b": 3
+     },
+     {
+      "name": "AI Assistant",
+      "s": 7,
+      "b": 0
+     }
+    ],
+    "prior": [
+     {
+      "name": "Organic Search",
+      "s": 2474,
+      "b": 232
+     },
+     {
+      "name": "Paid Social",
+      "s": 1469,
+      "b": 37
+     },
+     {
+      "name": "Referral",
+      "s": 901,
+      "b": 97
+     },
+     {
+      "name": "Direct",
+      "s": 738,
+      "b": 50
+     },
+     {
+      "name": "Unassigned",
+      "s": 228,
+      "b": 30
+     },
+     {
+      "name": "Cross-network",
+      "s": 201,
+      "b": 3
+     },
+     {
+      "name": "Paid Search",
+      "s": 179,
+      "b": 6
+     },
+     {
+      "name": "Organic Social",
+      "s": 101,
+      "b": 3
+     },
+     {
+      "name": "AI Assistant",
+      "s": 18,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 12,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 11,
+      "b": 0
+     }
+    ],
+    "yoy": [
+     {
+      "name": "Organic Search",
+      "s": 2202,
+      "b": 41
+     },
+     {
+      "name": "Paid Social",
+      "s": 1431,
+      "b": 13
+     },
+     {
+      "name": "Direct",
+      "s": 570,
+      "b": 39
+     },
+     {
+      "name": "Referral",
+      "s": 350,
+      "b": 8
+     },
+     {
+      "name": "Unassigned",
+      "s": 79,
+      "b": 0
+     },
+     {
+      "name": "Paid Other",
+      "s": 64,
+      "b": 2
+     },
+     {
+      "name": "Organic Social",
+      "s": 34,
+      "b": 1
+     },
+     {
+      "name": "Paid Search",
+      "s": 24,
+      "b": 0
+     },
+     {
+      "name": "Email",
+      "s": 3,
+      "b": 0
+     }
+    ]
+   },
+   "devices": {
+    "sessions": {
+     "mobile": 5133,
+     "desktop": 934,
+     "tablet": 56
+    },
+    "shares": {
+     "mobile": 0.8383,
+     "desktop": 0.1525,
+     "tablet": 0.0091
+    },
+    "total": 6123
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 2040,
+     "b": 127
+    },
+    {
+     "path": "/menus",
+     "s": 1268,
+     "b": 35
+    },
+    {
+     "path": "/explore/dimsumlibrary/reservations/create/search",
+     "s": 609,
+     "b": 187
+    },
+    {
+     "path": "",
+     "s": 487,
+     "b": 6
+    },
+    {
+     "path": "/explore/dimsumlibrary/reservations/manage",
+     "s": 388,
+     "b": 20
+    }
+   ]
+  }
+ }
+}

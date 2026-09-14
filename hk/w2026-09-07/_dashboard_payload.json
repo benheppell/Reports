@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 184,
+   "tgt": 190,
+   "wow": 208,
+   "yoy": 190,
+   "ytd": 6243,
+   "ytdt": 6689,
+   "meta_s": 7362.01,
+   "goog_s": 8444.38,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 292,
+   "tgt": 262,
+   "wow": 293,
+   "yoy": 229,
+   "ytd": 9139,
+   "ytdt": 8100,
+   "meta_s": 4426.38,
+   "goog_s": 6668.95,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 138,
+   "tgt": 97,
+   "wow": 123,
+   "yoy": 102,
+   "ytd": 3796,
+   "ytdt": 3198,
+   "meta_s": 6457.92,
+   "goog_s": 3289.03,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 83,
+   "tgt": 65,
+   "wow": 91,
+   "yoy": 47,
+   "ytd": 2179,
+   "ytdt": 1757,
+   "meta_s": 2494.78,
+   "goog_s": 3191.38,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 128,
+   "tgt": 167,
+   "wow": 144,
+   "yoy": 165,
+   "ytd": 5036,
+   "ytdt": 5489,
+   "meta_s": 1105.48,
+   "goog_s": 1184.39,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 162,
+   "tgt": 118,
+   "wow": 142,
+   "yoy": 103,
+   "ytd": 4650,
+   "ytdt": 3897,
+   "meta_s": 5995.7,
+   "goog_s": 4190.33,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = September monthly GA4 target &times; 7/30. Hong Kong booked <b>987</b> GA4 bookings against an <b>899</b> blended weekly target, <b>9.8 percent</b> ahead, <b>down 1.4 percent</b> week on week and <b>up 18.1 percent</b> year on year. Four of six venues beat the weekly target, led by <b>The Chinese Library</b> (+42.3 percent) and <b>Shiro</b> (+37.3 percent). <b>Aqua HK</b> (&minus;3.2 percent) and <b>Dim Sum Library</b> (&minus;23.4 percent) are the two below target, and the same two are the only venues behind on the FY-to-date line (&minus;6.7 and &minus;8.3 percent). Year to date the portfolio is <b>6.6 percent</b> ahead of target. <b>Vesu</b> remains excluded from the portfolio view, but it booked <b>100</b> this week against <b>53</b> the week before and <b>58</b> in the same week last year &mdash; its first week clear of the 2025 line since reopening, and worth a look before it is read as settled.",
+ "week": "7–13 Sep 2026",
+ "wow": "31 Aug–6 Sep 2026",
+ "yoy": "8–14 Sep 2025",
+ "generated": "14 September 2026"
+}

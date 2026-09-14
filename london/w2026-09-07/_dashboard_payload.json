@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1035,
+   "tgt": 2089,
+   "wow": 902,
+   "yoy": 1742,
+   "ytd": 41017,
+   "ytdt": 51862,
+   "meta_s": 1803.33,
+   "goog_s": 1933.34,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 813,
+   "tgt": 989,
+   "wow": 825,
+   "yoy": 841,
+   "ytd": 24746,
+   "ytdt": 26840,
+   "meta_s": 1441.5,
+   "goog_s": 1876.68,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 233,
+   "tgt": 331,
+   "wow": 241,
+   "yoy": 218,
+   "ytd": 9780,
+   "ytdt": 12654,
+   "meta_s": 1001.14,
+   "goog_s": 942.79,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 74,
+   "tgt": 139,
+   "wow": 87,
+   "yoy": 77,
+   "ytd": 3468,
+   "ytdt": 5031,
+   "meta_s": 1022.47,
+   "goog_s": 420.67,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 84,
+   "tgt": 144,
+   "wow": 78,
+   "yoy": 105,
+   "ytd": 3342,
+   "ytdt": 4743,
+   "meta_s": 407.76,
+   "goog_s": 541.05,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 448,
+   "tgt": 140,
+   "wow": 458,
+   "yoy": 104,
+   "ytd": 16828,
+   "ytdt": 5759,
+   "meta_s": 2018.11,
+   "goog_s": 368.36,
+   "nc": true
+  }
+ ],
+ "note": "London is framed week on week and year on year rather than against target: the FY26/27 weekly targets were set before the Shard's traffic shift and the Dim Sum Library rebrand, so variance to them is not a clean read, and <b>DSL</b> is flagged not comparable for the same reason. London booked <b>2,687</b> GA4 bookings, <b>up 3.7 percent</b> week on week and <b>down 13.0 percent</b> year on year. The whole of that year-on-year gap sits in <b>Aqua Shard</b>, which is <b>707</b> bookings below last year; the other five venues together are <b>up 22.8 percent</b> year on year. Users fell year on year at every venue except Azzurra, but conversion rose at Hutong, Regent St and Shiro Sushi, so this reads as a traffic problem rather than a booking-journey one. Covers are reported alongside these figures because <code>total_payment</code> is unreliable in London and GA4 cannot see OpenTable.",
+ "week": "7–13 Sep 2026",
+ "wow": "31 Aug–6 Sep 2026",
+ "yoy": "8–14 Sep 2025",
+ "generated": "14 September 2026"
+}

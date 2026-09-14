@@ -1,0 +1,182 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W29",
+  "W30",
+  "W31",
+  "W32"
+ ],
+ "dateTY": [
+  "17–23 Aug",
+  "24–30 Aug",
+  "31 Aug–6 Sep",
+  "7–13 Sep"
+ ],
+ "dateLY": [
+  "18–24 Aug",
+  "25–31 Aug",
+  "1–7 Sep",
+  "8–14 Sep"
+ ],
+ "fyrange": "FY26 weeks 29–32",
+ "sym": "€",
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     3914,
+     4266,
+     4715,
+     4794
+    ],
+    [
+     473,
+     975,
+     4933,
+     8178
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     4.8,
+     5.5,
+     6.0,
+     6.7
+    ],
+    [
+     7.6,
+     0.5,
+     2.6,
+     2.4
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     189,
+     235,
+     283,
+     323
+    ],
+    [
+     36,
+     5,
+     130,
+     198
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     32,
+     36,
+     34,
+     66
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     29,
+     45,
+     53,
+     33
+    ],
+    [
+     0,
+     0,
+     3,
+     22
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     22.2,
+     27.7,
+     29.3,
+     44.5
+    ],
+    [
+     0,
+     0,
+     823.4,
+     61.0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     56.8,
+     50.3,
+     53.0,
+     27.7
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W32 users 4,794 with 323 GA4 bookings; conversion rate 6.7%. The venue launched late in 2025, so the year-ago line is the launch ramp (8,178 users on heavy paid social) rather than a like-for-like trading week. Google delivered 33 bookings at €44 CPA; Meta 66 at €28."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "blue",
+   "New venue",
+   "Launched late 2025 &mdash; this-year only, no YoY comparison"
+  ]
+ },
+ "sharednote": {}
+}

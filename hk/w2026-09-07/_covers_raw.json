@@ -1,0 +1,287 @@
+{
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ch": {
+    "web": {
+     "c": 448,
+     "p": 431,
+     "y": 399
+    },
+    "gr": {
+     "c": 190,
+     "p": 171,
+     "y": 89
+    },
+    "ot": {
+     "c": 353,
+     "p": 293,
+     "y": 283
+    },
+    "walk": {
+     "c": 89,
+     "p": 81,
+     "y": 80
+    },
+    "recep": {
+     "c": 28,
+     "p": 85,
+     "y": 19
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ch": {
+    "web": {
+     "c": 556,
+     "p": 542,
+     "y": 453
+    },
+    "gr": {
+     "c": 294,
+     "p": 325,
+     "y": 99
+    },
+    "ot": {
+     "c": 262,
+     "p": 314,
+     "y": 172
+    },
+    "walk": {
+     "c": 132,
+     "p": 129,
+     "y": 89
+    },
+    "recep": {
+     "c": 107,
+     "p": 175,
+     "y": 159
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ch": {
+    "web": {
+     "c": 276,
+     "p": 240,
+     "y": 176
+    },
+    "gr": {
+     "c": 156,
+     "p": 128,
+     "y": 109
+    },
+    "ot": {
+     "c": 288,
+     "p": 177,
+     "y": 173
+    },
+    "walk": {
+     "c": 84,
+     "p": 78,
+     "y": 86
+    },
+    "recep": {
+     "c": 179,
+     "p": 186,
+     "y": 673
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ch": {
+    "web": {
+     "c": 177,
+     "p": 167,
+     "y": 93
+    },
+    "gr": {
+     "c": 44,
+     "p": 81,
+     "y": 34
+    },
+    "ot": {
+     "c": 262,
+     "p": 187,
+     "y": 267
+    },
+    "walk": {
+     "c": 79,
+     "p": 66,
+     "y": 42
+    },
+    "recep": {
+     "c": 264,
+     "p": 276,
+     "y": 350
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ch": {
+    "web": {
+     "c": 334,
+     "p": 348,
+     "y": 332
+    },
+    "gr": {
+     "c": 208,
+     "p": 228,
+     "y": 178
+    },
+    "ot": {
+     "c": 441,
+     "p": 349,
+     "y": 390
+    },
+    "walk": {
+     "c": 860,
+     "p": 919,
+     "y": 971
+    },
+    "recep": {
+     "c": 187,
+     "p": 148,
+     "y": 101
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro",
+   "ch": {
+    "web": {
+     "c": 365,
+     "p": 347,
+     "y": 183
+    },
+    "gr": {
+     "c": 98,
+     "p": 168,
+     "y": 30
+    },
+    "ot": {
+     "c": 528,
+     "p": 544,
+     "y": 311
+    },
+    "walk": {
+     "c": 1629,
+     "p": 1609,
+     "y": 761
+    },
+    "recep": {
+     "c": 595,
+     "p": 464,
+     "y": 292
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32"
+  ],
+  "total": [
+   7460,
+   8659,
+   9087,
+   9545,
+   10993,
+   9792,
+   9256,
+   9513
+  ],
+  "ot": [
+   1706,
+   1728,
+   1777,
+   1843,
+   1974,
+   1805,
+   1864,
+   2134
+  ]
+ },
+ "problems": [
+  "Staff-name booking sources are EXCLUDED from the covers total entirely (not parked in 'other'), per Ben's 13 Jul 2026 instruction and the corrected basis used from w2026-08-24 onward. Verified: reproducing this week's prior window (2026-08-31..09-06) on this basis returns values equal to or slightly below last week's published 'cur' column for every venue and channel, consistent with normal downward cancellation settling.",
+  "Trend last value (W32 = 9,513) VERIFIED equal to the sum of cur covers across all six venue rows; trend ot last value (2,134) verified equal to the sum of cur 'ot' (OpenRice).",
+  "Prior (p) and yoy (y) were re-pulled fresh from the current snapshot, not copied from last week. Prior-week HK total re-settled from 9,524 as published last week to 9,256 now (-268, -2.8%) through accrued cancellations.",
+  "DATA GAP - SHIRO YOY IS HALF A VENUE: the 'Shiro' row combines 'Shiro Hong Kong' + 'Shiro Tai Kwun'. Shiro Tai Kwun has ZERO rows in the yoy window (2025-09-08..09-14) - its earliest booking in the system was created 2026-01-07, so the site has no 2025 history at all. The Shiro yoy column (1,577 covers) is Shiro Hong Kong only, while cur and prior are both sites combined. Shiro YoY growth from this file is overstated and should NOT be reported as like-for-like.",
+  "For reference, Shiro Tai Kwun contributed 253 covers to 'recep' (Shiro TK Reception) in cur and 194 in prior, against 0 in yoy for the same structural reason.",
+  "The Dim Sum Library Google Reserve YoY gap flagged last week has RESOLVED for this window: DSL HK has 65 GR rows / 178 covers in the 2025-09-08..09-14 window, so 'gr' y = 178 is a real figure, not a hole. (Last week's zero was specific to the 2025-08-29..09-08 window.)",
+  "'ota' and 'tp' are structurally zero in Hong Kong across all three windows - there is no TheFork, First Table or third-party gifting channel in this market. These are true absences of a channel, not collection failures, and should be rendered as not-applicable rather than as declines.",
+  "Reception/reservations-desk sources mapped to 'recep': Cantina Reservations, Shiro Reception, Shiro TK Reception, Reception Team, Hutong Reservations, Chinese Library, Pacific Place, Booked In Person. Every booking_source appearing in any of the three windows was classified; nothing was silently dropped except the staff names described above.",
+  "Vesu is EXCLUDED from this market file as instructed (a small 'Vesu Reception' source exists in the data and was not counted)."
+ ]
+}

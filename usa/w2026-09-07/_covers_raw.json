@@ -1,0 +1,183 @@
+{
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ch": {
+    "web": {
+     "c": 379,
+     "p": 405,
+     "y": 873
+    },
+    "gr": {
+     "c": 192,
+     "p": 149,
+     "y": 76
+    },
+    "ot": {
+     "c": 183,
+     "p": 135,
+     "y": 207
+    },
+    "walk": {
+     "c": 774,
+     "p": 623,
+     "y": 724
+    },
+    "recep": {
+     "c": 222,
+     "p": 107,
+     "y": 117
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 43,
+     "p": 68,
+     "y": 0
+    },
+    "other": {
+     "c": 1039,
+     "p": 798,
+     "y": 841
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ch": {
+    "web": {
+     "c": 359,
+     "p": 359,
+     "y": 375
+    },
+    "gr": {
+     "c": 68,
+     "p": 101,
+     "y": 247
+    },
+    "ot": {
+     "c": 552,
+     "p": 399,
+     "y": 280
+    },
+    "walk": {
+     "c": 370,
+     "p": 413,
+     "y": 391
+    },
+    "recep": {
+     "c": 6,
+     "p": 5,
+     "y": 9
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 43,
+     "p": 25,
+     "y": 10
+    },
+    "other": {
+     "c": 419,
+     "p": 443,
+     "y": 410
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ch": {
+    "web": {
+     "c": 87,
+     "p": 145,
+     "y": 114
+    },
+    "gr": {
+     "c": 5,
+     "p": 6,
+     "y": 46
+    },
+    "ot": {
+     "c": 193,
+     "p": 157,
+     "y": 122
+    },
+    "walk": {
+     "c": 253,
+     "p": 196,
+     "y": 295
+    },
+    "recep": {
+     "c": 17,
+     "p": 41,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 27,
+     "p": 14,
+     "y": 0
+    },
+    "other": {
+     "c": 297,
+     "p": 251,
+     "y": 295
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36"
+  ],
+  "total": [
+   3680,
+   4287,
+   4004,
+   3788,
+   3507,
+   3302,
+   3348,
+   3773
+  ],
+  "ot": [
+   1091,
+   1229,
+   844,
+   920,
+   761,
+   793,
+   691,
+   928
+  ]
+ },
+ "problems": [
+  "Staff-name booking sources are EXCLUDED from the covers total entirely (not parked in 'other'), per Ben's 13 Jul 2026 instruction and the corrected basis used from w2026-08-24 onward. Verified: reproducing this week's prior window (2026-08-31..09-06) on this basis returns values equal to or slightly below last week's published 'cur' column for every venue and channel, consistent with normal downward cancellation settling.",
+  "'other' key (London/USA only) is a convenience rollup of walk+recep+ota+tp. Do NOT add it to the other buckets - it double counts.",
+  "BULK-IMPORT ARTEFACT EXCLUDED FROM PRIOR WEEK: the Hutong New York OpenTable backfill flagged last week now falls inside this week's PRIOR window. It is a single burst of 688 'OT Guestcenter' records / 1,921 covers created 2026-09-04 22:17-22:53 UTC, 611 of them already past-dated at the time of creation. It is a backfill load, not demand created in that week. It has been EXCLUDED from Hutong NYC 'ot' p, from the market prior total, and from trend W35. On the raw unfiltered methodology Hutong NYC 'ot' p would be 2,320 and trend W35 would be 5,269 / ot 2,612. The exclusion reproduces last week's published basis exactly: 399 here against 400 published last week, the 1-cover difference being ordinary settling.",
+  "SMALLER IMPORT PRESENT IN THE CURRENT WEEK, NOT EXCLUDED: Hutong New York took 62 'OT Guestcenter' records / 181 covers in a single hour at 2026-09-09 22:00 UTC, 44 of them past-dated - the same backfill pattern at roughly a tenth the scale. Consistent with last week's treatment of the small W28-W30 batches, it is left IN the numbers. Hutong NYC 'ot' c of 552 and the market cur total of 3,773 therefore carry roughly 180 covers of backfill. Excluding it, Hutong NYC 'ot' c would be about 371 and the market cur total about 3,592 - which would turn the market's reported WoW gain into a much smaller one. Flag this before drawing a demand conclusion from the USA OpenTable line.",
+  "Trend last value (W36 = 3,773) VERIFIED equal to the sum of cur covers across all three venue rows; trend ot last value (928) verified equal to the sum of cur 'ot'. Trend W35 (3,348) likewise verified equal to the sum of the prior column.",
+  "Prior (p) and yoy (y) were re-pulled fresh from the current snapshot, not copied from last week. Prior-week USA total re-settled from 3,437 as published last week to 3,348 now (-89, -2.6%).",
+  "GENUINE SOURCE-DATA ZEROS (no rows at all, not real zeros): Aqua NYC 'tp' yoy = 0 and Hutong Miami 'tp' yoy = 0 - DoorDash, the dominant third-party source now, has no rows in the 2025 window for either venue, so 'tp' YoY growth is undefined rather than infinite. Hutong Miami 'recep' yoy = 0 - no reception/reservations-team source rows exist for Miami in the 2025 window at all.",
+  "'ota' is structurally zero in the USA across all three windows - TheFork and First Table do not operate in this market. Render as not-applicable, not as a decline.",
+  "The YoY window (2025-09-08..09-14) is CLEAN of the bulk-import problem. The 2025 backfill noted last week was created 2025-09-04, which falls outside this window, so Hutong NYC 'ot' y = 280 is organic.",
+  "Per the standing market definition, 'ot' here is OpenTable + Resy combined (OT Guestcenter, OT, Open Table, Opentable, OTGC - OpenTable Network, Resy). New staff names excluded this week: Veronica Difelice, Stephanie Suarez, Andrew Sicklin, Lucilly, Serge Ayite, Wendy."
+ ]
+}

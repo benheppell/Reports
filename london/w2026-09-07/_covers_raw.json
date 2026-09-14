@@ -1,0 +1,316 @@
+{
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ch": {
+    "web": {
+     "c": 2165,
+     "p": 1961,
+     "y": 2723
+    },
+    "gr": {
+     "c": 359,
+     "p": 262,
+     "y": 212
+    },
+    "ot": {
+     "c": 197,
+     "p": 126,
+     "y": 79
+    },
+    "walk": {
+     "c": 105,
+     "p": 84,
+     "y": 73
+    },
+    "recep": {
+     "c": 8,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 41,
+     "p": 14,
+     "y": 17
+    },
+    "tp": {
+     "c": 29,
+     "p": 59,
+     "y": 39
+    },
+    "other": {
+     "c": 183,
+     "p": 157,
+     "y": 129
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ch": {
+    "web": {
+     "c": 1637,
+     "p": 1573,
+     "y": 1612
+    },
+    "gr": {
+     "c": 402,
+     "p": 429,
+     "y": 163
+    },
+    "ot": {
+     "c": 151,
+     "p": 97,
+     "y": 69
+    },
+    "walk": {
+     "c": 154,
+     "p": 151,
+     "y": 105
+    },
+    "recep": {
+     "c": 41,
+     "p": 15,
+     "y": 39
+    },
+    "ota": {
+     "c": 16,
+     "p": 11,
+     "y": 15
+    },
+    "tp": {
+     "c": 54,
+     "p": 63,
+     "y": 24
+    },
+    "other": {
+     "c": 265,
+     "p": 240,
+     "y": 183
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ch": {
+    "web": {
+     "c": 561,
+     "p": 592,
+     "y": 375
+    },
+    "gr": {
+     "c": 37,
+     "p": 59,
+     "y": 71
+    },
+    "ot": {
+     "c": 139,
+     "p": 140,
+     "y": 42
+    },
+    "walk": {
+     "c": 123,
+     "p": 160,
+     "y": 88
+    },
+    "recep": {
+     "c": 25,
+     "p": 9,
+     "y": 10
+    },
+    "ota": {
+     "c": 126,
+     "p": 241,
+     "y": 220
+    },
+    "tp": {
+     "c": 0,
+     "p": 2,
+     "y": 19
+    },
+    "other": {
+     "c": 274,
+     "p": 412,
+     "y": 337
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ch": {
+    "web": {
+     "c": 175,
+     "p": 192,
+     "y": 130
+    },
+    "gr": {
+     "c": 41,
+     "p": 21,
+     "y": 59
+    },
+    "ot": {
+     "c": 108,
+     "p": 94,
+     "y": 26
+    },
+    "walk": {
+     "c": 272,
+     "p": 267,
+     "y": 218
+    },
+    "recep": {
+     "c": 12,
+     "p": 29,
+     "y": 31
+    },
+    "ota": {
+     "c": 30,
+     "p": 38,
+     "y": 67
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "other": {
+     "c": 314,
+     "p": 334,
+     "y": 316
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ch": {
+    "web": {
+     "c": 200,
+     "p": 175,
+     "y": 178
+    },
+    "gr": {
+     "c": 66,
+     "p": 44,
+     "y": 76
+    },
+    "ot": {
+     "c": 89,
+     "p": 36,
+     "y": 15
+    },
+    "walk": {
+     "c": 252,
+     "p": 221,
+     "y": 187
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 78,
+     "p": 68,
+     "y": 41
+    },
+    "tp": {
+     "c": 2,
+     "p": 0,
+     "y": 18
+    },
+    "other": {
+     "c": 332,
+     "p": 289,
+     "y": 246
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ch": {
+    "web": {
+     "c": 1107,
+     "p": 1062,
+     "y": 181
+    },
+    "gr": {
+     "c": 95,
+     "p": 121,
+     "y": 55
+    },
+    "ot": {
+     "c": 456,
+     "p": 417,
+     "y": 32
+    },
+    "walk": {
+     "c": 1128,
+     "p": 1184,
+     "y": 252
+    },
+    "recep": {
+     "c": 24,
+     "p": 28,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 287
+    },
+    "tp": {
+     "c": 2,
+     "p": 3,
+     "y": 0
+    },
+    "other": {
+     "c": 1154,
+     "p": 1215,
+     "y": 539
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W25",
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32"
+  ],
+  "total": [
+   12053,
+   11202,
+   11188,
+   10390,
+   10609,
+   10829,
+   10048,
+   10507
+  ],
+  "ot": [
+   1599,
+   1457,
+   1554,
+   1087,
+   1000,
+   1045,
+   910,
+   1140
+  ]
+ },
+ "problems": [
+  "Staff-name booking sources are EXCLUDED from the covers total entirely (not parked in 'other'), per Ben's 13 Jul 2026 instruction and the corrected basis used from w2026-08-24 onward. Verified: reproducing this week's prior window (2026-08-31..09-06) on this basis returns values equal to or slightly below last week's published 'cur' column for every venue and channel, consistent with normal downward cancellation settling.",
+  "'other' key (London/USA only) is a convenience rollup of walk+recep+ota+tp. Do NOT add it to the other buckets - it double counts.",
+  "Trend last value (W32 = 10,507) VERIFIED equal to the sum of cur covers across all six venue rows; trend ot last value (1,140) verified equal to the sum of cur 'ot'.",
+  "Prior (p) and yoy (y) were re-pulled fresh from the current snapshot, not copied from last week. Prior-week London total re-settled from 10,230 as published last week to 10,048 now (-182, -1.8%) through accrued cancellations.",
+  "New booking_source values seen this week and classified: 'aqua shard Reception' -> 'recep' (first appearance; Aqua Shard recep was a true 0 in prior and yoy because no such rows existed, now 8 covers); 'Buy a Gift' -> 'tp'; 'Sunday Roast Dinner - Landing Page', 'Rooftop Terrace - Landing Page', 'Let Us Welcome You - Landing Page', 'Your Gift Awaits - Landing Page', 'Birthday Offer - Shiro - Landing Page', 'Birthday Offer - Dim Sum Library - Landing Page', '4. Aqua Spirit Bar - Landing Page' -> 'web'. New staff names excluded: David Dunlea, Kat Karali, Vijay Sanas, Petronela Cristian.",
+  "GENUINE SOURCE-DATA ZEROS (no rows at all, not real zeros): DSL 'recep' yoy = 0 - the 'DSL Reception' and 'DSL Host' sources were not in use in Sep 2025, so no reception-desk channel existed to measure. Aqua Shard 'recep' prior and yoy = 0 for the same reason. Shiro Sushi 'recep' = 0 in all three windows (no reception source exists for that venue at all).",
+  "REAL CHANGE, NOT A GAP: DSL 'ota' yoy = 287 vs cur/prior = 0. DSL London carried TheFork volume in Sep 2025 and carries none now; the venue has 405 rows in the yoy window overall, so this is a discontinued channel rather than missing data. Do not report it as a collection failure.",
+  "DSL yoy is a low base across every channel (807 covers total vs 2,812 now). The venue was in its early post-launch period in Sep 2025; YoY growth percentages for DSL will be very large and are not comparable to the mature venues."
+ ]
+}

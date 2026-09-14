@@ -1,0 +1,634 @@
+{
+ "meta_notes": {
+  "currency": "USD",
+  "windows": {
+   "cur": "2026-09-07..2026-09-13",
+   "prior": "2026-08-31..2026-09-06",
+   "yoy": "2025-09-08..2025-09-14"
+  },
+  "meta_bookings_definition": "action_type offsite_conversion.fb_pixel_custom (Schedule)",
+  "google_bookings_definition": "metrics.all_conversions for the named booking conversion action only",
+  "verification": "Meta time_increment=7 returned Monday date_start values for both the 8-week and LY-4-week series (2026-07-20..2026-09-13 and 2025-08-18..2025-09-14); 8 and 4 buckets respectively, no partial buckets. Google segments.week also returned Mondays (8 and 4 rows). All Meta responses reported response_complete=true and paging_next_present=false (no pagination needed). Week labels shifted forward one week vs last week's file (W28..W35/L32..L35 -> W29..W36/L33..L36); the overlapping weeks reconcile to last week's values.",
+  "walkin_rule_applied": "Summed all_conversions for action names 'Store visits', 'Local actions - Directions', 'Local actions - Menu views', 'Click Book Now', 'Clicks to call'. NOTE: Hutong NYC and Hutong Miami again have a separate, differently-spelled action 'Click to call' (singular) which does NOT match 'Clicks to call' and was therefore EXCLUDED, consistent with last week. Re-verified this week: both spellings are still live and distinct in both accounts (e.g. Hutong NYC W36 'Click to call' 6 vs 'Clicks to call' 3; Hutong Miami W36 'Click to call' 4 vs 'Clicks to call' 6). Aqua NYC has only 'Clicks to call' and no 'Click Book Now' action at all.",
+  "aqua_nyc_meta_token": "No auth error. act_1057116046095292 returned full data for all windows and both series; the mid-2026 token expiry remains resolved.",
+  "warnings": [
+   "Google 'Store visits' is MISSING entirely for the current week (W36, 2026-09-07) in ALL THREE accounts - no row is returned for that action. Store visits is a modelled metric that lands with a lag, so the W36 walkin figures (Aqua NYC 131, Hutong NYC 335.93, Hutong Miami 75) are understated and NOT comparable with prior weeks or LY. This is the same pattern seen last week: last week's file recorded Hutong NYC W35 walkin as 286.17; refetched now it is 477.37 (+67%) once Store visits (64.7) and a restated Click Book Now landed. Treat W36 walkin as provisional.",
+   "Current-year Google walkin figures for W33-W35 have been restated upward vs last week's file (Hutong NYC W33 660.26 -> 676.16, W34 563.80 -> 580.70) because modelled Store visits keep accruing. LY (L33-L35) values reconcile exactly to last week's file, confirming the restatement is confined to recent weeks.",
+   "Small Google restatements on the overlapping week: Hutong NYC W35 spend 1160.38 -> 1160.64 and booking conv 18.952694 -> 19.952694; W32 conv 53.307347 -> 57.307347. Meta Hutong NYC W35 spend 808.80 -> 809.20. All refreshed values used here.",
+   "Hutong NYC Meta has only TWO campaigns with delivery in the current week (Conversions and Awareness | Video Viewers), so the 'top 3' list has two entries. 'CRKLR | NEW Retargeting Campaign' spent in prior weeks but had zero impressions this week - a legitimate zero (campaign off), not a data gap.",
+   "Zero-bookings entries that are legitimate, not missing data: Hutong NYC Meta 'Awareness | Video Viewers' (0 schedules - a video-view objective campaign, no pixel Schedule events), Hutong Miami Meta 'Awareness - LPV Campaign' (0), Hutong NYC Google 'Demand Gen > Generic' (0 booking conversions), Hutong Miami Google 'P. Max > Generic' and 'Search > Special Events' (0 each; Miami booked only via 'Search > Chinese Cuisine' 6 and 'Search > Brand' 1 this week).",
+   "Hutong Miami Google uses 'Calls from ads (1)' (with a trailing ' (1)') and a lowercase 'Click to email', where Hutong NYC uses 'Calls from ads' and 'Click To Email'. None of these are in the walkin rule so totals are unaffected, but the naming is inconsistent across accounts and worth cleaning up in Google Ads.",
+   "Aqua NYC Google has no 'Click Book Now' conversion action at all, so its walkin is Store visits + Directions + Menu views + Clicks to call only, and is structurally lower than the Hutong accounts. Not comparable venue-to-venue.",
+   "Aqua NYC Google spend has roughly halved since W30 (1134.67 -> 693.44) with booking conversions down from 52.0 to 23.0; consistent with the known CRKLR budget-reset behaviour on this account. No data issue, flagged for interpretation.",
+   "Google campaign top-3 queries hit the tool's LIMIT warning (5 of 7 rows for Aqua NYC, 5 of 6 for Hutong NYC). Rows were ORDER BY cost DESC so the top 3 by spend are correct; only the full campaign counts are a lower bound. Per-campaign spend sums reconcile to account totals (Miami 593.23 vs 593.22 rounding)."
+  ]
+ },
+ "venues": {
+  "Aqua NYC": {
+   "meta": {
+    "cur": {
+     "spend": 1882.57,
+     "sch": 62.0,
+     "impr": 75071,
+     "clicks": 3755
+    },
+    "prior": {
+     "spend": 1890.37,
+     "sch": 80.0,
+     "impr": 72169,
+     "clicks": 3695
+    },
+    "yoy": {
+     "spend": 1030.16,
+     "sch": 153.0,
+     "impr": 149085,
+     "clicks": 6895
+    },
+    "series": {
+     "W29": {
+      "spend": 1626.74,
+      "sch": 90.0
+     },
+     "W30": {
+      "spend": 1605.33,
+      "sch": 71.0
+     },
+     "W31": {
+      "spend": 1841.8,
+      "sch": 94.0
+     },
+     "W32": {
+      "spend": 1882.56,
+      "sch": 84.0
+     },
+     "W33": {
+      "spend": 1905.46,
+      "sch": 72.0
+     },
+     "W34": {
+      "spend": 1876.74,
+      "sch": 74.0
+     },
+     "W35": {
+      "spend": 1890.37,
+      "sch": 80.0
+     },
+     "W36": {
+      "spend": 1882.57,
+      "sch": 62.0
+     }
+    },
+    "ly": {
+     "L33": {
+      "spend": 859.56,
+      "sch": 67.0
+     },
+     "L34": {
+      "spend": 1358.7,
+      "sch": 71.0
+     },
+     "L35": {
+      "spend": 1570.86,
+      "sch": 117.0
+     },
+     "L36": {
+      "spend": 1030.16,
+      "sch": 153.0
+     }
+    },
+    "campaigns": [
+     {
+      "name": "CRKLR - Prospecting",
+      "spend": 1117.05,
+      "bookings": 32.0
+     },
+     {
+      "name": "CRKLR - Remarketing Campaign",
+      "spend": 558.42,
+      "bookings": 27.0
+     },
+     {
+      "name": "CRKLR - Prospecting \u2013 Outdoor Dining Campaign",
+      "spend": 207.1,
+      "bookings": 3.0
+     }
+    ]
+   },
+   "google": {
+    "cur": {
+     "spend": 693.44,
+     "conv": 23.0,
+     "impr": 12781,
+     "clicks": 702
+    },
+    "prior": {
+     "spend": 761.6,
+     "conv": 31.0,
+     "impr": 15670,
+     "clicks": 898
+    },
+    "yoy": {
+     "spend": 1340.29,
+     "conv": 107.266173,
+     "impr": 47476,
+     "clicks": 1987
+    },
+    "series": {
+     "W29": {
+      "spend": 1119.74,
+      "conv": 63.548444
+     },
+     "W30": {
+      "spend": 1134.67,
+      "conv": 52.048445
+     },
+     "W31": {
+      "spend": 602.14,
+      "conv": 34.903111
+     },
+     "W32": {
+      "spend": 569.97,
+      "conv": 48.0
+     },
+     "W33": {
+      "spend": 559.84,
+      "conv": 25.999508
+     },
+     "W34": {
+      "spend": 692.3,
+      "conv": 30.0
+     },
+     "W35": {
+      "spend": 761.6,
+      "conv": 31.0
+     },
+     "W36": {
+      "spend": 693.44,
+      "conv": 23.0
+     }
+    },
+    "ly": {
+     "L33": {
+      "spend": 1432.11,
+      "conv": 62.49152
+     },
+     "L34": {
+      "spend": 1586.54,
+      "conv": 84.982686
+     },
+     "L35": {
+      "spend": 1270.83,
+      "conv": 90.790295
+     },
+     "L36": {
+      "spend": 1340.29,
+      "conv": 107.266173
+     }
+    },
+    "walkin": {
+     "W33": 220.0,
+     "W34": 300.0,
+     "W35": 219.0,
+     "W36": 131.0,
+     "L33": 814.53667,
+     "L34": 752.837458,
+     "L35": 479.108015,
+     "L36": 728.799366
+    },
+    "action_names": [
+     "Aqua NYC (web) phone_click",
+     "Aqua NYC (web) sevenrooms_booking_complete",
+     "Calls from ads",
+     "Clicks to call",
+     "Local actions - Directions",
+     "Local actions - Menu views",
+     "Local actions - Orders",
+     "Local actions - Other engagements",
+     "Local actions - Website visits",
+     "Store visits"
+    ],
+    "campaigns": [
+     {
+      "name": "PMax > Generic",
+      "spend": 152.48,
+      "bookings": 7.0
+     },
+     {
+      "name": "Search > Italian Restaurant - Manhattan",
+      "spend": 147.51,
+      "bookings": 9.0
+     },
+     {
+      "name": "Search > Brunch",
+      "spend": 81.88,
+      "bookings": 3.0
+     }
+    ]
+   }
+  },
+  "Hutong NYC": {
+   "meta": {
+    "cur": {
+     "spend": 956.74,
+     "sch": 6.0,
+     "impr": 83939,
+     "clicks": 2200
+    },
+    "prior": {
+     "spend": 809.2,
+     "sch": 11.0,
+     "impr": 80048,
+     "clicks": 1811
+    },
+    "yoy": {
+     "spend": 811.88,
+     "sch": 7.0,
+     "impr": 177840,
+     "clicks": 3937
+    },
+    "series": {
+     "W29": {
+      "spend": 753.41,
+      "sch": 5.0
+     },
+     "W30": {
+      "spend": 752.51,
+      "sch": 9.0
+     },
+     "W31": {
+      "spend": 967.85,
+      "sch": 5.0
+     },
+     "W32": {
+      "spend": 1031.29,
+      "sch": 18.0
+     },
+     "W33": {
+      "spend": 1032.83,
+      "sch": 22.0
+     },
+     "W34": {
+      "spend": 1018.91,
+      "sch": 13.0
+     },
+     "W35": {
+      "spend": 809.2,
+      "sch": 11.0
+     },
+     "W36": {
+      "spend": 956.74,
+      "sch": 6.0
+     }
+    },
+    "ly": {
+     "L33": {
+      "spend": 810.2,
+      "sch": 26.0
+     },
+     "L34": {
+      "spend": 812.38,
+      "sch": 14.0
+     },
+     "L35": {
+      "spend": 805.45,
+      "sch": 7.0
+     },
+     "L36": {
+      "spend": 811.88,
+      "sch": 7.0
+     }
+    },
+    "campaigns": [
+     {
+      "name": "CRKLR | NEW Conversions Campaign",
+      "spend": 748.94,
+      "bookings": 6.0
+     },
+     {
+      "name": "CRKLR | NEW Awareness Campaign | Video Viewers",
+      "spend": 207.8,
+      "bookings": 0.0
+     }
+    ]
+   },
+   "google": {
+    "cur": {
+     "spend": 1056.11,
+     "conv": 20.0,
+     "impr": 113325,
+     "clicks": 2724
+    },
+    "prior": {
+     "spend": 1160.64,
+     "conv": 19.952694,
+     "impr": 109259,
+     "clicks": 2568
+    },
+    "yoy": {
+     "spend": 1091.08,
+     "conv": 40.510921,
+     "impr": 186371,
+     "clicks": 2387
+    },
+    "series": {
+     "W29": {
+      "spend": 232.61,
+      "conv": 15.96604
+     },
+     "W30": {
+      "spend": 1955.21,
+      "conv": 77.515287
+     },
+     "W31": {
+      "spend": 1287.38,
+      "conv": 55.760802
+     },
+     "W32": {
+      "spend": 1261.71,
+      "conv": 57.307347
+     },
+     "W33": {
+      "spend": 1352.8,
+      "conv": 39.0
+     },
+     "W34": {
+      "spend": 1245.77,
+      "conv": 26.996488
+     },
+     "W35": {
+      "spend": 1160.64,
+      "conv": 19.952694
+     },
+     "W36": {
+      "spend": 1056.11,
+      "conv": 20.0
+     }
+    },
+    "ly": {
+     "L33": {
+      "spend": 754.32,
+      "conv": 63.250389
+     },
+     "L34": {
+      "spend": 1138.54,
+      "conv": 53.166666
+     },
+     "L35": {
+      "spend": 1047.49,
+      "conv": 37.10111
+     },
+     "L36": {
+      "spend": 1091.08,
+      "conv": 40.510921
+     }
+    },
+    "walkin": {
+     "W33": 676.160329,
+     "W34": 580.704086,
+     "W35": 477.366667,
+     "W36": 335.933898,
+     "L33": 781.95631,
+     "L34": 650.446318,
+     "L35": 608.345227,
+     "L36": 794.069612
+    },
+    "action_names": [
+     "Calls from ads",
+     "Click Book Now",
+     "Click To Email",
+     "Click to call",
+     "Clicks to call",
+     "Contact Form",
+     "Local actions - Directions",
+     "Local actions - Menu views",
+     "Local actions - Orders",
+     "Local actions - Other engagements",
+     "Local actions - Website visits",
+     "Sevenrooms Booking Complete",
+     "Store visits"
+    ],
+    "campaigns": [
+     {
+      "name": "P. Max > Generic",
+      "spend": 303.91,
+      "bookings": 7.047306
+     },
+     {
+      "name": "Demand Gen > Generic",
+      "spend": 217.5,
+      "bookings": 0.0
+     },
+     {
+      "name": "Search >  Generic",
+      "spend": 201.48,
+      "bookings": 5.0
+     }
+    ]
+   }
+  },
+  "Hutong Miami": {
+   "meta": {
+    "cur": {
+     "spend": 1668.98,
+     "sch": 16.0,
+     "impr": 112070,
+     "clicks": 3997
+    },
+    "prior": {
+     "spend": 1598.46,
+     "sch": 18.0,
+     "impr": 114494,
+     "clicks": 3143
+    },
+    "yoy": {
+     "spend": 1045.76,
+     "sch": 24.0,
+     "impr": 269553,
+     "clicks": 3857
+    },
+    "series": {
+     "W29": {
+      "spend": 2158.89,
+      "sch": 28.0
+     },
+     "W30": {
+      "spend": 1625.35,
+      "sch": 20.0
+     },
+     "W31": {
+      "spend": 1737.59,
+      "sch": 29.0
+     },
+     "W32": {
+      "spend": 1839.41,
+      "sch": 19.0
+     },
+     "W33": {
+      "spend": 1847.32,
+      "sch": 32.0
+     },
+     "W34": {
+      "spend": 1845.16,
+      "sch": 23.0
+     },
+     "W35": {
+      "spend": 1598.46,
+      "sch": 18.0
+     },
+     "W36": {
+      "spend": 1668.98,
+      "sch": 16.0
+     }
+    },
+    "ly": {
+     "L33": {
+      "spend": 688.1,
+      "sch": 31.0
+     },
+     "L34": {
+      "spend": 471.49,
+      "sch": 11.0
+     },
+     "L35": {
+      "spend": 984.63,
+      "sch": 35.0
+     },
+     "L36": {
+      "spend": 1045.76,
+      "sch": 24.0
+     }
+    },
+    "campaigns": [
+     {
+      "name": "CRKLR | NEW Conversions Campaign",
+      "spend": 1004.25,
+      "bookings": 11.0
+     },
+     {
+      "name": "CRKLR | NEW Retargeting Campaign",
+      "spend": 428.93,
+      "bookings": 5.0
+     },
+     {
+      "name": "CRKLR | NEW Awareness Campaign \u2013 LPV Campaign",
+      "spend": 170.14,
+      "bookings": 0.0
+     }
+    ]
+   },
+   "google": {
+    "cur": {
+     "spend": 593.22,
+     "conv": 7.0,
+     "impr": 13007,
+     "clicks": 585
+    },
+    "prior": {
+     "spend": 568.08,
+     "conv": 21.0,
+     "impr": 12430,
+     "clicks": 606
+    },
+    "yoy": {
+     "spend": 822.64,
+     "conv": 21.0,
+     "impr": 47871,
+     "clicks": 903
+    },
+    "series": {
+     "W29": {
+      "spend": 269.94,
+      "conv": 5.0
+     },
+     "W30": {
+      "spend": 589.13,
+      "conv": 21.5
+     },
+     "W31": {
+      "spend": 702.03,
+      "conv": 22.5
+     },
+     "W32": {
+      "spend": 638.1,
+      "conv": 24.0
+     },
+     "W33": {
+      "spend": 639.04,
+      "conv": 22.0
+     },
+     "W34": {
+      "spend": 609.56,
+      "conv": 14.0
+     },
+     "W35": {
+      "spend": 568.08,
+      "conv": 21.0
+     },
+     "W36": {
+      "spend": 593.22,
+      "conv": 7.0
+     }
+    },
+    "ly": {
+     "L33": {
+      "spend": 1100.67,
+      "conv": 39.0
+     },
+     "L34": {
+      "spend": 1233.25,
+      "conv": 26.666667
+     },
+     "L35": {
+      "spend": 863.64,
+      "conv": 26.0
+     },
+     "L36": {
+      "spend": 822.64,
+      "conv": 21.0
+     }
+    },
+    "walkin": {
+     "W33": 301.47619,
+     "W34": 223.0,
+     "W35": 175.5,
+     "W36": 75.0,
+     "L33": 365.000584,
+     "L34": 327.500001,
+     "L35": 252.606352,
+     "L36": 323.4375
+    },
+    "action_names": [
+     "Calls from ads (1)",
+     "Click Book Now",
+     "Click to call",
+     "Click to email",
+     "Clicks to call",
+     "Local actions - Directions",
+     "Local actions - Menu views",
+     "Local actions - Orders",
+     "Local actions - Other engagements",
+     "Local actions - Website visits",
+     "Sevenrooms Booking Complete",
+     "Store visits"
+    ],
+    "campaigns": [
+     {
+      "name": "Search > Chinese Cuisine",
+      "spend": 148.03,
+      "bookings": 6.0
+     },
+     {
+      "name": "P. Max > Generic",
+      "spend": 147.38,
+      "bookings": 0.0
+     },
+     {
+      "name": "Search > Special Events",
+      "spend": 124.94,
+      "bookings": 0.0
+     }
+    ]
+   }
+  }
+ }
+}

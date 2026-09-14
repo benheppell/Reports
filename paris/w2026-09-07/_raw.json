@@ -1,0 +1,459 @@
+{
+ "venue": "Aqua Kyoto Paris",
+ "currency": "EUR",
+ "week": "2026-09-07",
+ "web": {
+  "cur": {
+   "users": 4794,
+   "sessions": 6030,
+   "bookings": 323,
+   "pps": 3.11,
+   "avgsec": 208,
+   "engrate": 56.9,
+   "newpct": 83.0
+  },
+  "prior": {
+   "users": 4715,
+   "sessions": 6036,
+   "bookings": 283,
+   "pps": 3.04,
+   "avgsec": 159,
+   "engrate": 64.7,
+   "newpct": 83.3
+  },
+  "yoy": {
+   "users": 8178,
+   "sessions": 15914,
+   "bookings": 198,
+   "pps": 1.65,
+   "avgsec": 110,
+   "engrate": 63.8,
+   "newpct": 34.5
+  }
+ },
+ "ads": {
+  "meta": {
+   "cur": {
+    "spend": 1829.67,
+    "bookings": 66,
+    "impr": 361044,
+    "clicks": 11065
+   },
+   "prior": {
+    "spend": 1802.28,
+    "bookings": 34,
+    "impr": 377122,
+    "clicks": 11044
+   },
+   "yoy": {
+    "spend": 536.69,
+    "bookings": 0,
+    "impr": 165868,
+    "clicks": 7382
+   }
+  },
+  "google": {
+   "cur": {
+    "spend": 1467.0,
+    "bookings": 33.0,
+    "impr": 26037,
+    "clicks": 1776
+   },
+   "prior": {
+    "spend": 1553.61,
+    "bookings": 53.0,
+    "impr": 24306,
+    "clicks": 1838
+   },
+   "yoy": {
+    "spend": 1342.9,
+    "bookings": 22.0,
+    "impr": 63958,
+    "clicks": 1706
+   }
+  }
+ },
+ "channels": [
+  {
+   "name": "Organic Search",
+   "s": [
+    1875,
+    1816,
+    4113
+   ],
+   "b": [
+    140,
+    125,
+    65
+   ]
+  },
+  {
+   "name": "Direct",
+   "s": [
+    1219,
+    1211,
+    1393
+   ],
+   "b": [
+    80,
+    64,
+    76
+   ]
+  },
+  {
+   "name": "Paid Social",
+   "s": [
+    875,
+    992,
+    3814
+   ],
+   "b": [
+    13,
+    7,
+    5
+   ]
+  },
+  {
+   "name": "Unassigned",
+   "s": [
+    839,
+    217,
+    127
+   ],
+   "b": [
+    37,
+    15,
+    0
+   ]
+  },
+  {
+   "name": "Paid Search",
+   "s": [
+    723,
+    964,
+    1520
+   ],
+   "b": [
+    21,
+    31,
+    18
+   ]
+  },
+  {
+   "name": "Cross-network",
+   "s": [
+    550,
+    238,
+    662
+   ],
+   "b": [
+    9,
+    13,
+    8
+   ]
+  },
+  {
+   "name": "Organic Social",
+   "s": [
+    341,
+    376,
+    3570
+   ],
+   "b": [
+    13,
+    20,
+    21
+   ]
+  },
+  {
+   "name": "AI Assistant",
+   "s": [
+    115,
+    118,
+    0
+   ],
+   "b": [
+    9,
+    4,
+    0
+   ]
+  },
+  {
+   "name": "Referral",
+   "s": [
+    59,
+    43,
+    475
+   ],
+   "b": [
+    0,
+    1,
+    4
+   ]
+  },
+  {
+   "name": "Paid Other",
+   "s": [
+    6,
+    9,
+    26
+   ],
+   "b": [
+    1,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Email",
+   "s": [
+    4,
+    30,
+    85
+   ],
+   "b": [
+    0,
+    3,
+    1
+   ]
+  }
+ ],
+ "devices": {
+  "mobile": 83,
+  "desktop": 16,
+  "tablet": 1
+ },
+ "landing": [
+  {
+   "path": "/fr",
+   "s": 1288,
+   "b": 49
+  },
+  {
+   "path": "/",
+   "s": 980,
+   "b": 42
+  },
+  {
+   "path": "/explore/aquakyotoparis/reservations/create/search",
+   "s": 901,
+   "b": 94
+  },
+  {
+   "path": "/en",
+   "s": 726,
+   "b": 12
+  },
+  {
+   "path": "(blank)",
+   "s": 554,
+   "b": 9
+  }
+ ],
+ "trend8": {
+  "spend": [
+   2976.5,
+   2939.62,
+   2998.03,
+   2808.3,
+   2461.18,
+   3057.62,
+   3355.89,
+   3296.67
+  ],
+  "bookings": [
+   144.43,
+   104.5,
+   92.95,
+   74.0,
+   61.0,
+   81.0,
+   87.0,
+   99.0
+  ]
+ },
+ "funnel": {
+  "impr": 387081,
+  "clicks": 12841,
+  "landing": 1598,
+  "bookings": 99.0
+ },
+ "campaigns": [
+  {
+   "name": "CRKLR - Prospecting - Booking Complete",
+   "platform": "meta",
+   "spend": 950.05,
+   "bookings": 42,
+   "wow": "up"
+  },
+  {
+   "name": "CRKLR - Prospecting - Booking Complete – Brunch Focus",
+   "platform": "meta",
+   "spend": 567.58,
+   "bookings": 21,
+   "wow": "up"
+  },
+  {
+   "name": "Search | FR | Japonais & Champs-Elysees",
+   "platform": "google",
+   "spend": 327.68,
+   "bookings": 5.5,
+   "wow": "down"
+  },
+  {
+   "name": "Performance Max | Aqua Kyoto Paris",
+   "platform": "google",
+   "spend": 313.13,
+   "bookings": 8.0,
+   "wow": "up"
+  },
+  {
+   "name": "CRKLR - Prospecting - Landing Page Views",
+   "platform": "meta",
+   "spend": 312.05,
+   "bookings": 0,
+   "wow": "up"
+  }
+ ],
+ "t4_users_ty": [
+  3914,
+  4266,
+  4715,
+  4794
+ ],
+ "t4_users_ly": [
+  473,
+  975,
+  4933,
+  8178
+ ],
+ "t4_book_ty": [
+  189,
+  235,
+  283,
+  323
+ ],
+ "t4_book_ly": [
+  36,
+  5,
+  130,
+  198
+ ],
+ "t4_meta_bookings_ty": [
+  32,
+  36,
+  34,
+  66
+ ],
+ "t4_meta_bookings_ly": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "t4_meta_spend_ty": [
+  1816.06,
+  1811.88,
+  1802.28,
+  1829.67
+ ],
+ "t4_meta_spend_ly": [
+  1399.01,
+  761.34,
+  896.45,
+  536.69
+ ],
+ "t4_goog_bookings_ty": [
+  29.0,
+  45.0,
+  53.0,
+  33.0
+ ],
+ "t4_goog_bookings_ly": [
+  0.0,
+  0.0,
+  3.0,
+  22.0
+ ],
+ "t4_goog_spend_ty": [
+  645.12,
+  1245.74,
+  1553.61,
+  1467.0
+ ],
+ "t4_goog_spend_ly": [
+  0.0,
+  415.52,
+  2470.21,
+  1342.9
+ ],
+ "t4_walkin_ty": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "t4_walkin_ly": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "budget": {
+  "meta": 1633.33,
+  "google": 1400.0
+ },
+ "meta": {
+  "fx": "None applied. Google Ads 3987846746 reports in EUR and Meta act_1090963963133236 reports in EUR - both native.",
+  "windows": {
+   "cur": "2026-09-07..2026-09-13",
+   "prior": "2026-08-31..2026-09-06",
+   "yoy": "2025-09-08..2025-09-14 (364d offset)"
+  },
+  "fy_label": "FY26 · W32 (Paris FY = Feb-Jan)",
+  "trend8_weeks": [
+   "2026-07-20",
+   "2026-07-27",
+   "2026-08-03",
+   "2026-08-10",
+   "2026-08-17",
+   "2026-08-24",
+   "2026-08-31",
+   "2026-09-07"
+  ],
+  "t4_weeks_ty": [
+   "2026-08-17",
+   "2026-08-24",
+   "2026-08-31",
+   "2026-09-07"
+  ],
+  "t4_weeks_ly": [
+   "2025-08-18",
+   "2025-08-25",
+   "2025-09-01",
+   "2025-09-08"
+  ],
+  "budget_source": {
+   "file": "Aqua_Kyoto_Paris_Digital_Budget_2026_EUR.xlsx",
+   "sep_2026_month_plan": {
+    "meta": 7000,
+    "google": 6000,
+    "total_digital": 13000,
+    "retainer": 1050
+   },
+   "proration": "September month plan prorated x7/30 (meta 7000*7/30 = 1633.33, google 6000*7/30 = 1400.00), same method as w2026-08-31.",
+   "note": "The reporting week 7-13 Sep sits wholly inside September, so no month blending is needed this week (unlike w2026-08-31, which straddled 1 day of August)."
+  },
+  "method": "GA4 weekly users are deduplicated (isoYearIsoWeek dimension, never summed from daily rows). Bookings = eventCount where eventName EXACTLY 'sevenrooms_booking_complete'. Google bookings use metrics.all_conversions filtered to conversion action 'Aqua Kyoto Paris (web) sevenrooms_booking_complete'. Meta bookings = action_type 'offsite_conversion.fb_pixel_custom'. trend8/funnel spend and bookings = Meta + Google combined. funnel.landing = GA4 Paid Search + Paid Social sessions.",
+  "failures": []
+ },
+ "problems": [
+  "IMPORTANT - the YoY window is still inside the launch ramp and is larger, not smaller, than TY. GA4 478459011 reads 8,178 users / 15,914 sessions / 198 bookings for 8-14 Sep 2025, driven by Paid Social (3,814 sessions) and Organic Social (3,570) opening spend. This is a launch spike, not a like-for-like base: the trends report should keep showing the blue 'New venue' chip and YoY deltas should not be read as decline.",
+  "Meta LY: no offsite_conversion.fb_pixel_custom rows in ANY of the four LY weeks - the custom pixel event was not yet configured. All t4_meta_bookings_ly values are 0 by absence, not by fetch failure.",
+  "Google Ads LY: the 2025-08-18 week returned NO rows at all (no delivery), so t4_goog_spend_ly[0] and t4_goog_bookings_ly[0] are genuine zeros. 2025-08-25 delivered EUR415.52 with 0 booking conversions; 2025-09-01 delivered EUR2,470.21 with only 3.",
+  "Google Ads (3987846746): still NO local/offline conversion actions on this account - an unfiltered conversion-action query for 2026-07-20..2026-09-13 returns only the booking action and 'Calls from ads'. All walk-in arrays are 0 by absence, not by fetch failure.",
+  "GA4 Unassigned remains elevated (839 sessions / 37 bookings vs 217 / 15 last week) - this re-attributes into Direct within ~24h, so do not read current-week channel splits or per-channel CVR.",
+  "Prior-week figures matured since last week's pull: GA4 users 4,703 -> 4,715, sessions 6,009 -> 6,036, bookings 279 -> 283; Google bookings w2026-08-24 44 -> 45 and w2026-08-31 52 -> 53. Current-week Google bookings (33.0) will keep rising for a few more days and are the lowest weekly figure since 17 Aug despite near-flat spend.",
+  "Meta bookings jumped to 66 this week (34 last week) on flat spend - the rise sits in 'CRKLR - Prospecting - Booking Complete' (23 -> 42) and the Brunch Focus set (11 -> 21). Both are real pixel-custom rows, not a tagging change."
+ ]
+}
