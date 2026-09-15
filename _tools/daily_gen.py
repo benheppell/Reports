@@ -1,4 +1,20 @@
 #!/usr/bin/env python3
+# ============================================================================
+# RETIRED 15 Sep 2026. Do not use, and do not edit to change an alert rule.
+#
+# This built a STATIC daily page from a payload committed to git each morning,
+# which is why the report went stale every time the morning push was blocked
+# (8 to 14 Sep 2026, seven days running).
+#
+# The live report is now london/daily/index.html, which renders in the browser
+# from /.netlify/functions/london-daily -> public.london_daily() in Supabase.
+# The baselines, bands, runs and alert statuses live in that page's JS and
+# nowhere else. Changing a threshold means editing the page, not this file.
+#
+# Kept only as the record of the original implementation. The JS port was
+# verified against this script's output for reporting day 2026-09-14: identical
+# portfolio figures, identical alert list, identical watch list.
+# ============================================================================
 # London daily covers & bookings report.  Usage: daily_gen.py <payload.json> <out.html>
 # Prints a JSON run-summary (alerts, portfolio numbers) on stdout for the run report / email draft.
 #
