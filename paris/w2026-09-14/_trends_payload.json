@@ -1,0 +1,182 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W30",
+  "W31",
+  "W32",
+  "W33"
+ ],
+ "dateTY": [
+  "24–30 Aug",
+  "31 Aug–6 Sep",
+  "7–13 Sep",
+  "14–20 Sep"
+ ],
+ "dateLY": [
+  "25–31 Aug",
+  "1–7 Sep",
+  "8–14 Sep",
+  "15–21 Sep"
+ ],
+ "fyrange": "FY26 weeks 30–33",
+ "sym": "€",
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     4266,
+     4715,
+     4800,
+     5063
+    ],
+    [
+     975,
+     4933,
+     8178,
+     7567
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.5,
+     6.0,
+     6.9,
+     6.1
+    ],
+    [
+     0.5,
+     2.6,
+     2.4,
+     3.1
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     235,
+     283,
+     329,
+     310
+    ],
+    [
+     5,
+     130,
+     198,
+     236
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     36,
+     34,
+     66,
+     48
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     47,
+     54,
+     33,
+     42
+    ],
+    [
+     0,
+     3,
+     22,
+     56
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     26.5,
+     28.8,
+     44.5,
+     33.9
+    ],
+    [
+     0,
+     823.4,
+     61.0,
+     18.7
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     50.3,
+     53.0,
+     27.7,
+     37.0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W33 users 5,063 with 310 GA4 bookings; conversion rate 6.1%. The year-ago week sits in the launch period, so read YoY with care. Even so, users are down 33% on the year while GA4 bookings are up 31%, the same split as last week. The reason for that divergence is not known. Google delivered 42 bookings at €34 CPA; Meta 48 at €37."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "blue",
+   "New venue",
+   "Launched late 2025: year-ago weeks are the launch period, read YoY with care"
+  ]
+ },
+ "sharednote": {}
+}

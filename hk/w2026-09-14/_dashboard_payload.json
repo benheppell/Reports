@@ -1,0 +1,85 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 220,
+   "tgt": 190,
+   "wow": 184,
+   "yoy": 218,
+   "ytd": 6463,
+   "ytdt": 6879,
+   "meta_s": 6527.05,
+   "goog_s": 10815.29,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 315,
+   "tgt": 262,
+   "wow": 292,
+   "yoy": 251,
+   "ytd": 9454,
+   "ytdt": 8362,
+   "meta_s": 4615.38,
+   "goog_s": 6152.96,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 139,
+   "tgt": 97,
+   "wow": 138,
+   "yoy": 121,
+   "ytd": 3935,
+   "ytdt": 3295,
+   "meta_s": 3650.7,
+   "goog_s": 3145.7,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 81,
+   "tgt": 65,
+   "wow": 83,
+   "yoy": 49,
+   "ytd": 2260,
+   "ytdt": 1822,
+   "meta_s": 2287.9,
+   "goog_s": 3114.78,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 155,
+   "tgt": 167,
+   "wow": 128,
+   "yoy": 180,
+   "ytd": 5191,
+   "ytdt": 5656,
+   "meta_s": 1046.59,
+   "goog_s": 1295.7,
+   "nc": false
+  },
+  {
+   "name": "Shiro",
+   "act": 145,
+   "tgt": 118,
+   "wow": 163,
+   "yoy": 108,
+   "ytd": 4796,
+   "ytdt": 4015,
+   "meta_s": 5136.74,
+   "goog_s": 4040.83,
+   "nc": false
+  }
+ ],
+ "note": "Weekly target = September monthly GA4 target &times; 7/30. Hong Kong booked <b>1,055</b> GA4 bookings against an <b>899</b> blended weekly target, <b>17.4 percent</b> ahead, <b>up 6.8 percent</b> week on week and <b>up 13.8 percent</b> year on year. Five of six venues beat the weekly target, led by <b>The Chinese Library</b> (+43.3 percent) and <b>Cantina</b> (+24.6 percent). <b>Dim Sum Library</b> (&minus;7.2 percent) is the only venue below target this week. It and <b>Aqua HK</b> remain the two venues behind on the FY-to-date line (&minus;8.2 and &minus;6.0 percent), although Aqua HK beat its weekly target by 15.8 percent. Year to date the portfolio is <b>6.9 percent</b> ahead of target. <b>Hutong HK</b> users rose 50.8 percent week on week, mostly visitors to its National Day firework dinner page, which produced no website bookings as a landing page, so its conversion rate fell to 6.8 percent from 9.6 percent. <b>Vesu</b> remains excluded from the portfolio view. It booked <b>101</b> this week against <b>100</b> the week before and <b>65</b> in the same week last year, a second week clear of the 2025 line.",
+ "week": "14–20 Sep 2026",
+ "wow": "7–13 Sep 2026",
+ "yoy": "15–21 Sep 2025",
+ "generated": "21 September 2026"
+}

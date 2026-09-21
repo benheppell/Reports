@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1320,
+   "tgt": 2089,
+   "wow": 1048,
+   "yoy": 1867,
+   "ytd": 42350,
+   "ytdt": 53951,
+   "meta_s": 2378.45,
+   "goog_s": 3200.1,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 868,
+   "tgt": 989,
+   "wow": 831,
+   "yoy": 772,
+   "ytd": 25632,
+   "ytdt": 27829,
+   "meta_s": 1840.36,
+   "goog_s": 2196.27,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 273,
+   "tgt": 331,
+   "wow": 238,
+   "yoy": 261,
+   "ytd": 10058,
+   "ytdt": 12985,
+   "meta_s": 1048.4,
+   "goog_s": 625.3,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 86,
+   "tgt": 139,
+   "wow": 76,
+   "yoy": 96,
+   "ytd": 3556,
+   "ytdt": 5170,
+   "meta_s": 1114.35,
+   "goog_s": 407.37,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 92,
+   "tgt": 144,
+   "wow": 84,
+   "yoy": 113,
+   "ytd": 3434,
+   "ytdt": 4887,
+   "meta_s": 393.02,
+   "goog_s": 602.65,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 463,
+   "tgt": 140,
+   "wow": 461,
+   "yoy": 136,
+   "ytd": 17304,
+   "ytdt": 5899,
+   "meta_s": 2012.48,
+   "goog_s": 310.03,
+   "nc": true
+  }
+ ],
+ "note": "London is framed week on week and year on year rather than against target: the FY26/27 weekly targets were set before the Shard's traffic shift and the Dim Sum Library rebrand, so variance to them is not a clean read, and <b>DSL</b> is flagged not comparable for the same reason. London booked <b>3,102</b> GA4 bookings, <b>up 13.3 percent</b> week on week and <b>down 4.4 percent</b> year on year. The year-on-year gap again sits in <b>Aqua Shard</b>, which is <b>547</b> bookings below last year even after a 26 percent week-on-week lift; the other five venues together are <b>up 29.3 percent</b> year on year, and every venue grew week on week, with DSL broadly flat. Users fell year on year at every venue except DSL, but conversion rose everywhere except Aqua Shard, so outside the Shard this still reads as a traffic problem rather than a booking-journey one. Covers are reported alongside these figures because <code>total_payment</code> is unreliable in London and GA4 cannot see OpenTable.",
+ "week": "14–20 Sep 2026",
+ "wow": "7–13 Sep 2026",
+ "yoy": "15–21 Sep 2025",
+ "generated": "21 September 2026"
+}

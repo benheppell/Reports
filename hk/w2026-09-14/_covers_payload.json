@@ -1,0 +1,294 @@
+{
+ "market": "Hong Kong",
+ "platform": "OpenRice",
+ "tz": "Asia/Hong_Kong",
+ "platform_foot": "<b>OpenRice</b> = OpenRice sources",
+ "combined_note": "<b>Shiro</b> = Shiro Hong Kong (Pacific Place) + Shiro Tai Kwun combined. Vesu excluded. ",
+ "ga4_meta": "Portfolio 1,055 &middot; YoY &#9650;13.8%",
+ "ga4_yoy": "&#9650;13.8% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Hong Kong&rsquo;s GA4 bookings are up <b>13.8% YoY</b> and covers are up <b>49.4% YoY</b>, so the two measures agree on direction, and covers show the fuller picture. GA4 only fires on our own website, which is <b>22 percent</b> of Hong Kong covers. It never sees <b>OpenRice</b> (<b>20 percent</b>), and it never sees walk-ins and the reception and reservations desks, which together are <b>45 percent</b>. Covers came in at <b>10,138</b>, <b>up 10.5 percent</b> week on week. Reception and reservations-desk covers rose sharply at <b>Aqua HK</b> (167 from 28) and <b>Hutong HK</b> (281 from 98), which accounts for much of those two venues&rsquo; weekly gain. One caveat on the venue rows: the <b>Shiro</b> line combines Shiro Hong Kong and Shiro Tai Kwun, and Tai Kwun has no 2025 records at all, so its +83.5 percent year-on-year figure is two sites measured against one and is not like for like.",
+ "week": "14–20 Sep 2026",
+ "wow": "7–13 Sep 2026",
+ "yoy": "15–21 Sep 2025",
+ "generated": "21 September 2026",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ga4": 220,
+   "ch": {
+    "web": {
+     "c": 565,
+     "p": 440,
+     "y": 400
+    },
+    "gr": {
+     "c": 221,
+     "p": 175,
+     "y": 113
+    },
+    "ot": {
+     "c": 370,
+     "p": 308,
+     "y": 335
+    },
+    "walk": {
+     "c": 108,
+     "p": 89,
+     "y": 109
+    },
+    "recep": {
+     "c": 167,
+     "p": 28,
+     "y": 7
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ga4": 315,
+   "ch": {
+    "web": {
+     "c": 548,
+     "p": 525,
+     "y": 445
+    },
+    "gr": {
+     "c": 361,
+     "p": 286,
+     "y": 111
+    },
+    "ot": {
+     "c": 244,
+     "p": 229,
+     "y": 150
+    },
+    "walk": {
+     "c": 128,
+     "p": 119,
+     "y": 112
+    },
+    "recep": {
+     "c": 281,
+     "p": 98,
+     "y": 34
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 14,
+     "p": 0,
+     "y": 14
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ga4": 139,
+   "ch": {
+    "web": {
+     "c": 235,
+     "p": 258,
+     "y": 231
+    },
+    "gr": {
+     "c": 190,
+     "p": 152,
+     "y": 88
+    },
+    "ot": {
+     "c": 300,
+     "p": 250,
+     "y": 154
+    },
+    "walk": {
+     "c": 80,
+     "p": 84,
+     "y": 140
+    },
+    "recep": {
+     "c": 171,
+     "p": 177,
+     "y": 97
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 2
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ga4": 81,
+   "ch": {
+    "web": {
+     "c": 167,
+     "p": 163,
+     "y": 102
+    },
+    "gr": {
+     "c": 70,
+     "p": 42,
+     "y": 17
+    },
+    "ot": {
+     "c": 239,
+     "p": 242,
+     "y": 230
+    },
+    "walk": {
+     "c": 73,
+     "p": 79,
+     "y": 48
+    },
+    "recep": {
+     "c": 212,
+     "p": 259,
+     "y": 160
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ga4": 155,
+   "ch": {
+    "web": {
+     "c": 384,
+     "p": 329,
+     "y": 380
+    },
+    "gr": {
+     "c": 327,
+     "p": 206,
+     "y": 237
+    },
+    "ot": {
+     "c": 347,
+     "p": 416,
+     "y": 310
+    },
+    "walk": {
+     "c": 1072,
+     "p": 860,
+     "y": 947
+    },
+    "recep": {
+     "c": 123,
+     "p": 180,
+     "y": 99
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 4
+    }
+   }
+  },
+  {
+   "name": "Shiro",
+   "ga4": 145,
+   "ch": {
+    "web": {
+     "c": 334,
+     "p": 360,
+     "y": 167
+    },
+    "gr": {
+     "c": 168,
+     "p": 94,
+     "y": 51
+    },
+    "ot": {
+     "c": 506,
+     "p": 511,
+     "y": 288
+    },
+    "walk": {
+     "c": 1598,
+     "p": 1629,
+     "y": 928
+    },
+    "recep": {
+     "c": 535,
+     "p": 590,
+     "y": 273
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 5
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W26",
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33"
+  ],
+  "total": [
+   8661,
+   9089,
+   9539,
+   10978,
+   9757,
+   9143,
+   9178,
+   10138
+  ],
+  "ot": [
+   1728,
+   1777,
+   1843,
+   1972,
+   1798,
+   1832,
+   1956,
+   2006
+  ]
+ }
+}

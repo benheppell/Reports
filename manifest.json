@@ -1,11 +1,18 @@
 {
- "generated": "15 September 2026",
+ "generated": "21 September 2026",
  "markets": [
   {
    "name": "Hong Kong",
    "slug": "hk",
    "ccy": "HKD",
    "weekly": [
+    {
+     "dates": "W33 · 14–20 Sep 2026",
+     "folder": "w2026-09-14",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W32 · 7–13 Sep 2026",
      "folder": "w2026-09-07",
@@ -230,6 +237,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "14–20 Sep 2026",
+     "folder": "w2026-09-14"
+    },
     {
      "dates": "7–13 Sep 2026",
      "folder": "w2026-09-07"
@@ -324,6 +335,13 @@
    "ccy": "GBP",
    "weekly": [
     {
+     "dates": "W33 · 14–20 Sep 2026",
+     "folder": "w2026-09-14",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
+    {
      "dates": "W32 · 7–13 Sep 2026",
      "folder": "w2026-09-07",
      "deepdive": true,
@@ -548,6 +566,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "14–20 Sep 2026",
+     "folder": "w2026-09-14"
+    },
     {
      "dates": "7–13 Sep 2026",
      "folder": "w2026-09-07"
@@ -646,6 +668,13 @@
    "slug": "usa",
    "ccy": "USD",
    "weekly": [
+    {
+     "dates": "W37 · 14–20 Sep 2026",
+     "folder": "w2026-09-14",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W36 · 7–13 Sep 2026",
      "folder": "w2026-09-07",
@@ -898,6 +927,10 @@
    ],
    "trends": [
     {
+     "dates": "14–20 Sep 2026",
+     "folder": "w2026-09-14"
+    },
+    {
      "dates": "7–13 Sep 2026",
      "folder": "w2026-09-07"
     },
@@ -1002,6 +1035,12 @@
    "slug": "dubai",
    "ccy": "AED",
    "weekly": [
+    {
+     "dates": "W37 · 14–20 Sep 2026",
+     "folder": "w2026-09-14",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "W36 · 7–13 Sep 2026",
      "folder": "w2026-09-07",
@@ -1147,6 +1186,10 @@
    ],
    "trends": [
     {
+     "dates": "14–20 Sep 2026",
+     "folder": "w2026-09-14"
+    },
+    {
      "dates": "7–13 Sep 2026",
      "folder": "w2026-09-07"
     },
@@ -1225,6 +1268,12 @@
    "slug": "paris",
    "ccy": "EUR",
    "weekly": [
+    {
+     "dates": "W33 · 14–20 Sep 2026",
+     "folder": "w2026-09-14",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "W32 · 7–13 Sep 2026",
      "folder": "w2026-09-07",
@@ -1473,6 +1522,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "14–20 Sep 2026",
+     "folder": "w2026-09-14"
+    },
     {
      "dates": "7–13 Sep 2026",
      "folder": "w2026-09-07"
