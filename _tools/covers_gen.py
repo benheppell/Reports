@@ -67,9 +67,19 @@ def mixbar(chs, tot_c):
 
 
 rows = ''
+
+
+def _pill(v):
+    # optional per-row pill (HK Sep 2026); '' when absent so older payloads render identically
+    if not v.get('pill'):
+        return ''
+    return (' <span style="display:inline-block;padding:1px 7px;border-radius:999px;font-size:10px;font-weight:600;'
+            f'background:#eff6ff;color:#2563eb">{v["pill"]}</span>')
+
+
 for v in V:
     cov = covtot(v['ch'])
-    rows += (f'<tr><td class="vn">{v["name"]}</td>'
+    rows += (f'<tr><td class="vn">{v["name"]}{_pill(v)}</td>'
              f'<td class="ch"><div class="v num"><b>{cov["c"]:,}</b></div>'
              f'<div class="chips">{chip(pct(cov["c"], cov["p"]), "W")}{chip(pct(cov["c"], cov["y"]), "Y")}</div></td>'
              + ''.join(cell(v['ch'][k]) for k in CH)
@@ -81,6 +91,20 @@ rows += (f'<tr class="total"><td class="vn">{MKT} portfolio</td>'
          + ''.join(cell(TOT[k]) for k in CH)
          + f'<td class="num mut">{sum(v["ga4"] for v in V):,}</td>'
          f'<td style="min-width:110px">{mixbar(TOT, TCOV["c"])}</td></tr>')
+# optional rows below the portfolio line, excluded from every total and from the trend (HK Sep 2026)
+OUTSIDE = P.get('outside', [])
+if OUTSIDE:
+    rows += (f'<tr><td colspan="11" style="text-align:left;font-size:10px;text-transform:uppercase;letter-spacing:.4px;'
+             f'color:#64748b;font-weight:700;padding-top:16px;border-bottom:2px solid #e2e8f0">'
+             f'{P.get("outside_label", "Outside the portfolio")}</td></tr>')
+    for v in OUTSIDE:
+        cov = covtot(v['ch'])
+        rows += (f'<tr><td class="vn">{v["name"]}{_pill(v)}</td>'
+                 f'<td class="ch"><div class="v num"><b>{cov["c"]:,}</b></div>'
+                 f'<div class="chips">{chip(pct(cov["c"], cov["p"]), "W")}{chip(pct(cov["c"], cov["y"]), "Y")}</div></td>'
+                 + ''.join(cell(v['ch'][k]) for k in CH)
+                 + f'<td class="num mut">{v["ga4"]:,}</td>'
+                 f'<td style="min-width:110px">{mixbar(v["ch"], cov["c"])}</td></tr>')
 
 # ---- 8-week SVG (bars = total covers, line = platform covers) ----
 T = P['trend']; labels = T['labels']; tt = T['total']; oo = T['ot']

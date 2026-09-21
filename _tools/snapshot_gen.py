@@ -185,6 +185,49 @@ PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;
 sel.onchange=function(){render(this.value);};
 render(PAY.venues[0]);
 </script></body></html>'''
+
+# ---- optional extensions (HK Sep 2026), applied only when the payload sets "ext": true.
+# Payloads without "ext" render byte-identically to before.
+# Adds: per-venue d.notes (insight lines), d.noyoy (YoY shown as n/a), d.shared (paid share n/a, text),
+# platform x.na (bookings not available: excluded from bookings, CPA and funnel maths), x.cpa_spend
+# (spend basis for CPA, e.g. excluding awareness campaigns), x.note (line under a platform card),
+# campaign bookings null (n/a), PAY.foot_extra.
+EXT_PATCHES = [
+ ("""function wy(c,pr,yo,inv){return '<span class="d">WoW '+dchip(c,pr,inv)+' &nbsp; YoY '+dchip(c,yo,inv)+'</span>';}""",
+  """function wy(c,pr,yo,inv){return '<span class="d">WoW '+dchip(c,pr,inv)+' &nbsp; YoY '+(NOY?na():dchip(c,yo,inv))+'</span>';}"""),
+ ("""var cur='All';""",
+  """var cur='All';var NOY=false;function na(){return '<span class="fl">n/a</span>';}function cs(x){return (x.cpa_spend!=null)?x.cpa_spend:x.spend;}"""),
+ (""" cur=v; var d=PAY.data[v];""", """ cur=v; var d=PAY.data[v]; NOY=!!d.noyoy;"""),
+ (""" var m=d.ads.meta,g=d.ads.google;""",
+  """ var m=d.ads.meta,g=d.ads.google,gna=!!g.na;function gb(x){return gna?0:(x.bookings||0);}function gs(x){return gna?0:cs(x);}"""),
+ (""" var abk=m.cur.bookings+g.cur.bookings, abkP=m.prior.bookings+g.prior.bookings, abkY=m.yoy.bookings+g.yoy.bookings;
+ var cpa=abk?spend/abk:0, cpaP=abkP?spendP/abkP:0, cpaY=abkY?spendY/abkY:0;""",
+  """ var abk=m.cur.bookings+gb(g.cur), abkP=m.prior.bookings+gb(g.prior), abkY=m.yoy.bookings+gb(g.yoy);
+ var csp=cs(m.cur)+gs(g.cur), cspP=cs(m.prior)+gs(g.prior), cspY=cs(m.yoy)+gs(g.yoy);
+ var cpa=abk?csp/abk:0, cpaP=abkP?cspP/abkP:0, cpaY=abkY?cspY/abkY:0;"""),
+ ("""   kcard('Ad-driven bookings',nf(abk),abk,abkP,abkY)+""",
+  """   kcard(gna?'Ad-driven bookings (Meta only)':'Ad-driven bookings',nf(abk),abk,abkP,abkY)+"""),
+ ("""   kcard('Paid share of bookings',share.toFixed(0)+'%',share,shareP,shareY);""",
+  """   (d.shared?'<div class="kpi"><div class="l">Paid share of bookings</div><div class="v">n/a</div><span class="d">'+d.shared+'</span></div>':kcard('Paid share of bookings',share.toFixed(0)+'%',share,shareP,shareY));"""),
+ (""" var ins='';""", """ var ins='';if(d.notes)d.notes.forEach(function(t){ins+='<div class="b">'+t+'</div>';});"""),
+ (""" var mcpa=m.cur.bookings?m.cur.spend/m.cur.bookings:0, gcpa=g.cur.bookings?g.cur.spend/g.cur.bookings:0;""",
+  """ var mcpa=m.cur.bookings?cs(m.cur)/m.cur.bookings:0, gcpa=(!gna&&g.cur.bookings)?cs(g.cur)/g.cur.bookings:0;"""),
+ (""" if(eff) ins+=""", """ if(eff&&!d.shared) ins+="""),
+ ("""dchip(c.b[0],c.b[2])""", """(NOY?na():dchip(c.b[0],c.b[2]))"""),
+ ("""{var c=x.cur;var cp=c.bookings?c.spend/c.bookings:0;""", """{var c=x.cur;var nb=!!x.na;var cp=(!nb&&c.bookings)?cs(c)/c.bookings:0;"""),
+ ("""var cpp=x.prior.bookings?x.prior.spend/x.prior.bookings:0;""", """var cpp=(!nb&&x.prior.bookings)?cs(x.prior)/x.prior.bookings:0;"""),
+ ("""<div class="s">Bookings</div><div style="font-weight:600">'+nf(c.bookings)+'""", """<div class="s">Bookings</div><div style="font-weight:600">'+(nb?'n/a':nf(c.bookings))+'"""),
+ ("""'+money(cp)+' '+dchip(cp,cpp,true)+'""", """'+(nb?'n/a':money(cp)+' '+dchip(cp,cpp,true))+'"""),
+ ("""ct.toFixed(1)+'%</div></div></div></div>';}""",
+  """ct.toFixed(1)+'%</div></div></div>'+(x.note?'<div style="font-size:11.5px;color:#64748b;margin-top:9px;line-height:1.45">'+x.note+'</div>':'')+'</div>';}"""),
+ ("""d.campaigns.forEach(function(c){var cp=c.bookings?c.spend/c.bookings:0;""", """d.campaigns.forEach(function(c){var cnb=(c.bookings===null);var cp=c.bookings?c.spend/c.bookings:0;"""),
+ ("""'+nf(c.bookings)+'</td><td class="r2 mono">'+money(cp)+'</td>""", """'+(cnb?'n/a':nf(c.bookings))+'</td><td class="r2 mono">'+(cnb?'n/a':money(cp))+'</td>"""),
+ ("""(364-day offset).';""", """(364-day offset).'+(PAY.foot_extra?' '+PAY.foot_extra:'');"""),
+]
+if PAY.get('ext'):
+    for _a, _b in EXT_PATCHES:
+        assert HTML.count(_a) == 1, ('snapshot ext patch target not unique', _a[:70])
+        HTML = HTML.replace(_a, _b)
 HTML=HTML.replace('__PAYLOAD__',P).replace('__MKTL__',PAY['market']).replace('__MKT__',PAY['market'])
 open(OUT,'w').write(HTML)
 print("wrote",OUT,len(HTML),"bytes")

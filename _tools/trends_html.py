@@ -108,6 +108,28 @@ sel.onchange=function(){render(this.value);};
 render(PAY.venues[0]);
 </script>
 </body></html>'''
+# ---- optional extension (HK Sep 2026): payload "gaps": true lets panel values be null (not tracked /
+# venue closed / not yet open). Nulls render as gaps and "n/a", never as zeros. Without "gaps" output is unchanged.
+GAP_PATCHES = [
+ ("""function fmt(v,f){""", """function fmt(v,f){if(v==null)return 'n/a';"""),
+ ("""var t=ty[ty.length-1],l=ly[ly.length-1];if(!l)return""", """var t=ty[ty.length-1],l=ly[ly.length-1];if(t===null||!l)return"""),
+ ("""function poly(a,mn,mx){""", """function segs(a,mn,mx){var out=[],c=[];a.forEach(function(v,i){if(v===null){if(c.length)out.push(c);c=[];return;}
+ var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);c.push([xpos(i).toFixed(1),y.toFixed(1)]);});if(c.length)out.push(c);return out;}
+function pl(a,mn,mx,st,col){return segs(a,mn,mx).map(function(sg){if(sg.length==1)return '<circle cx="'+sg[0][0]+'" cy="'+sg[0][1]+'" r="2" fill="'+col+'"/>';
+ return '<polyline fill="none" '+st+' points="'+sg.map(function(q){return q.join(',');}).join(' ')+'"/>';}).join('');}
+function poly(a,mn,mx){"""),
+ (""" var all=ty.concat(ly);""", """ var all=ty.concat(ly).filter(function(v){return v!==null;});if(!all.length)all=[0,1];"""),
+ (""" svg+='<polyline fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ly,mn,mx)+'"/>'
+   +'<polyline fill="none" stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="'+poly(ty,mn,mx)+'"/>'
+   +'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/></svg>';""",
+  """ svg+=pl(ly,mn,mx,'stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round"','#94a3b8')
+   +pl(ty,mn,mx,'stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"','#2563eb')
+   +(ty[ty.length-1]===null?'':'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/>')+'</svg>';"""),
+]
+if P.get('gaps'):
+    for _a, _b in GAP_PATCHES:
+        assert html.count(_a) == 1, ('trends gap patch target not unique', _a[:70])
+        html = html.replace(_a, _b)
 html=html.replace('__PAYLOAD__',PAY)
 html=html.replace('MKT',MARKET)
 open(OUTPATH,'w').write(html)

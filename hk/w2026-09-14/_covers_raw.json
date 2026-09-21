@@ -201,31 +201,31 @@
    }
   },
   {
-   "name": "Shiro",
+   "name": "Shiro Pacific Place",
    "ch": {
     "web": {
-     "c": 334,
-     "p": 360,
+     "c": 163,
+     "p": 185,
      "y": 167
     },
     "gr": {
-     "c": 168,
-     "p": 94,
+     "c": 89,
+     "p": 84,
      "y": 51
     },
     "ot": {
-     "c": 506,
-     "p": 511,
+     "c": 346,
+     "p": 361,
      "y": 288
     },
     "walk": {
-     "c": 1598,
-     "p": 1629,
+     "c": 904,
+     "p": 722,
      "y": 928
     },
     "recep": {
-     "c": 535,
-     "p": 590,
+     "c": 300,
+     "p": 338,
      "y": 273
     },
     "ota": {
@@ -237,6 +237,46 @@
      "c": 0,
      "p": 0,
      "y": 5
+    }
+   }
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "ch": {
+    "web": {
+     "c": 171,
+     "p": 175,
+     "y": 0
+    },
+    "gr": {
+     "c": 79,
+     "p": 10,
+     "y": 0
+    },
+    "ot": {
+     "c": 160,
+     "p": 150,
+     "y": 0
+    },
+    "walk": {
+     "c": 694,
+     "p": 907,
+     "y": 0
+    },
+    "recep": {
+     "c": 235,
+     "p": 252,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
     }
    }
   }
@@ -280,7 +320,92 @@
   "Trend last value (W33 = 10,138) verified equal to the sum of cur covers across all six venue rows; trend ot last value (2,006) verified equal to the sum of cur 'ot' (OpenRice).",
   "Prior (p) and yoy (y) were re-pulled fresh from the current snapshot, not copied from last week.",
   "CLASSIFICATION CHANGE TO FLAG: a handful of non-staff, non-channel sources (Trip Advisor Integration, Google, Instagram, 7X EXCLUSIVE, Axify.ai (LS), Restaurant Week, What's On, Event Booking) are now placed in 'tp' (Other 3rd party) rather than dropped. This week that is 14 covers (Trip Advisor, Hutong HK); yoy 25 covers. Last week's file showed tp as structurally zero.",
-  "DATA GAP - SHIRO YOY IS HALF A VENUE: the 'Shiro' row combines 'Shiro Hong Kong' + 'Shiro Tai Kwun'. Shiro Tai Kwun has no 2025 history (earliest booking created 2026-01-07), so Shiro YoY is overstated and not like for like.",
-  "'ota' is structurally zero in Hong Kong (no TheFork or First Table). Vesu is EXCLUDED (the 'Vesu Reception' source that appears under Hutong Hong Kong is dropped)."
+  "'ota' is structurally zero in Hong Kong (no TheFork or First Table). The 'Vesu Reception' source that appears under Hutong Hong Kong stays dropped from Hutong.",
+  "21 Sep rebuild: Shiro split into Shiro Pacific Place (venue 'Shiro Hong Kong'; 'Pacific Place' desk source = recep) and Shiro Tai Kwun (venue 'Shiro Tai Kwun'). PP + TK reproduces the old combined row exactly for every channel, cur, prior and yoy.",
+  "Vesu = venue 'Vesu' (portfolio exclusion kept: shown below the portfolio line). web = Booking Widget + two '- Landing Page' sources; recep = Vesu Reception + 'canton Library Reservations' desk source on the Vesu record (26 cur, 7 prior) + 'Vista Reception' (2 yoy); tp = 'Google' (9 yoy). Staff excluded: Emily Tse, HiuChing, Joanna Hung, Snow Cheung, Yannes.",
+  "The Canton Library = venue 'Vista', booking-created on or after 2026-09-08 only (prior = 8 to 13 Sep). recep = 'canton Library Reservations' + 'Vesu Reception' + 'Hutong Reservations Hutong Reservations'; staff excluded: Ceci, Emily Tse, HiuChing, Joanna Hung, Snow Cheung, Yannes. JUDGEMENT CALL: one source string 'Allergy, Dining City Booking, Complimentary Welcome Bubbles, HT Referral, ...' (4 covers, cur) placed in tp as a DiningCity third-party booking. No yoy: 2025 Vista bookings were a different restaurant and are never shown as Canton.",
+  "Trend (8 weeks) and portfolio totals are unchanged: they stay on the six-venue basis (Shiro = both sites)."
+ ],
+ "outside": [
+  {
+   "name": "Vesu",
+   "ch": {
+    "web": {
+     "c": 223,
+     "p": 165,
+     "y": 79
+    },
+    "gr": {
+     "c": 60,
+     "p": 12,
+     "y": 43
+    },
+    "ot": {
+     "c": 232,
+     "p": 96,
+     "y": 190
+    },
+    "walk": {
+     "c": 65,
+     "p": 37,
+     "y": 94
+    },
+    "recep": {
+     "c": 52,
+     "p": 29,
+     "y": 44
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 9
+    }
+   }
+  },
+  {
+   "name": "The Canton Library",
+   "ch": {
+    "web": {
+     "c": 69,
+     "p": 54,
+     "y": 0
+    },
+    "gr": {
+     "c": 21,
+     "p": 24,
+     "y": 0
+    },
+    "ot": {
+     "c": 55,
+     "p": 16,
+     "y": 0
+    },
+    "walk": {
+     "c": 19,
+     "p": 14,
+     "y": 0
+    },
+    "recep": {
+     "c": 313,
+     "p": 37,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 4,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
  ]
 }

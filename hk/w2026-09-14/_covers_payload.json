@@ -3,10 +3,10 @@
  "platform": "OpenRice",
  "tz": "Asia/Hong_Kong",
  "platform_foot": "<b>OpenRice</b> = OpenRice sources",
- "combined_note": "<b>Shiro</b> = Shiro Hong Kong (Pacific Place) + Shiro Tai Kwun combined. Vesu excluded. ",
+ "combined_note": "<b>Shiro Pacific Place</b> = SevenRooms venue Shiro Hong Kong; <b>Shiro Tai Kwun</b> = SevenRooms venue Shiro Tai Kwun (new in 2026, no year on year). <b>Vesu</b> reopened on 8 September 2026; covers are by booking-created date, so its prior week includes bookings made on 7 September before reopening. <b>The Canton Library</b> books under the Vista SevenRooms venue and is counted only from its opening on 8 September 2026 (prior week = 8 to 13 Sep). The 2025 Vista bookings were a different restaurant, so Canton has no year on year. Vesu and The Canton Library are outside the portfolio total and the trend. ",
  "ga4_meta": "Portfolio 1,055 &middot; YoY &#9650;13.8%",
  "ga4_yoy": "&#9650;13.8% YoY",
- "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Hong Kong&rsquo;s GA4 bookings are up <b>13.8% YoY</b> and covers are up <b>49.4% YoY</b>, so the two measures agree on direction, and covers show the fuller picture. GA4 only fires on our own website, which is <b>22 percent</b> of Hong Kong covers. It never sees <b>OpenRice</b> (<b>20 percent</b>), and it never sees walk-ins and the reception and reservations desks, which together are <b>45 percent</b>. Covers came in at <b>10,138</b>, <b>up 10.5 percent</b> week on week. Reception and reservations-desk covers rose sharply at <b>Aqua HK</b> (167 from 28) and <b>Hutong HK</b> (281 from 98), which accounts for much of those two venues&rsquo; weekly gain. One caveat on the venue rows: the <b>Shiro</b> line combines Shiro Hong Kong and Shiro Tai Kwun, and Tai Kwun has no 2025 records at all, so its +83.5 percent year-on-year figure is two sites measured against one and is not like for like.",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Hong Kong&rsquo;s GA4 bookings are up <b>13.8% YoY</b> and covers are up <b>49.4% YoY</b>, so the two measures agree on direction, and covers show the fuller picture. GA4 only fires on our own website, which is <b>22 percent</b> of Hong Kong covers. It never sees <b>OpenRice</b> (<b>20 percent</b>), and it never sees walk-ins and the reception and reservations desks, which together are <b>45 percent</b>. Covers came in at <b>10,138</b>, <b>up 10.5 percent</b> week on week. Reception and reservations-desk covers rose sharply at <b>Aqua HK</b> (167 from 28) and <b>Hutong HK</b> (281 from 98), which accounts for much of those two venues&rsquo; weekly gain. Shiro is now shown as its two sites. <b>Shiro Pacific Place</b> is like for like at <b>1,802</b> covers against 1,712 last year (+5.3 percent), while <b>Shiro Tai Kwun</b> (1,339 covers) has no 2025 records, so its year-on-year reads n/a. <b>Vesu</b> (632 covers) and <b>The Canton Library</b> (481) sit below the portfolio line and are not in these totals.",
  "week": "14–20 Sep 2026",
  "wow": "7–13 Sep 2026",
  "yoy": "15–21 Sep 2025",
@@ -218,32 +218,32 @@
    }
   },
   {
-   "name": "Shiro",
-   "ga4": 145,
+   "name": "Shiro Pacific Place",
+   "ga4": 66,
    "ch": {
     "web": {
-     "c": 334,
-     "p": 360,
+     "c": 163,
+     "p": 185,
      "y": 167
     },
     "gr": {
-     "c": 168,
-     "p": 94,
+     "c": 89,
+     "p": 84,
      "y": 51
     },
     "ot": {
-     "c": 506,
-     "p": 511,
+     "c": 346,
+     "p": 361,
      "y": 288
     },
     "walk": {
-     "c": 1598,
-     "p": 1629,
+     "c": 904,
+     "p": 722,
      "y": 928
     },
     "recep": {
-     "c": 535,
-     "p": 590,
+     "c": 300,
+     "p": 338,
      "y": 273
     },
     "ota": {
@@ -257,6 +257,48 @@
      "y": 5
     }
    }
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "ga4": 79,
+   "ch": {
+    "web": {
+     "c": 171,
+     "p": 175,
+     "y": 0
+    },
+    "gr": {
+     "c": 79,
+     "p": 10,
+     "y": 0
+    },
+    "ot": {
+     "c": 160,
+     "p": 150,
+     "y": 0
+    },
+    "walk": {
+     "c": 694,
+     "p": 907,
+     "y": 0
+    },
+    "recep": {
+     "c": 235,
+     "p": 252,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "pill": "new in 2026"
   }
  ],
  "trend": {
@@ -290,5 +332,92 @@
    1956,
    2006
   ]
- }
+ },
+ "outside": [
+  {
+   "name": "Vesu",
+   "ga4": 105,
+   "ch": {
+    "web": {
+     "c": 223,
+     "p": 165,
+     "y": 79
+    },
+    "gr": {
+     "c": 60,
+     "p": 12,
+     "y": 43
+    },
+    "ot": {
+     "c": 232,
+     "p": 96,
+     "y": 190
+    },
+    "walk": {
+     "c": 65,
+     "p": 37,
+     "y": 94
+    },
+    "recep": {
+     "c": 52,
+     "p": 29,
+     "y": 44
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 9
+    }
+   },
+   "pill": "reopened 8 Sep"
+  },
+  {
+   "name": "The Canton Library",
+   "ga4": 31,
+   "ch": {
+    "web": {
+     "c": 69,
+     "p": 54,
+     "y": 0
+    },
+    "gr": {
+     "c": 21,
+     "p": 24,
+     "y": 0
+    },
+    "ot": {
+     "c": 55,
+     "p": 16,
+     "y": 0
+    },
+    "walk": {
+     "c": 19,
+     "p": 14,
+     "y": 0
+    },
+    "recep": {
+     "c": 313,
+     "p": 37,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 4,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "pill": "opened 8 Sep"
+  }
+ ],
+ "outside_label": "Outside the portfolio: not in the totals above or in the 8-week trend"
 }
