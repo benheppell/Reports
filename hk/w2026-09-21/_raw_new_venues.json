@@ -1,0 +1,564 @@
+{
+ "meta": {
+  "note": "Vesu, The Canton Library and the Shiro split, kept separately as in previous weeks",
+  "vesu": {
+   "ga4": "439152333",
+   "meta": "act_721409993160810",
+   "google": "4311541411 (mgr 7441169950)",
+   "reopened": "2026-09-08"
+  },
+  "canton": {
+   "ga4": "548638742",
+   "meta": "act_2401548436678795 Canton campaigns only",
+   "google": "5594089398 (no booking conversion)",
+   "opened": "2026-09-08"
+  },
+  "shiro": {
+   "ga4": "359394354 split by pagePath",
+   "meta": "act_283603334535394 shared",
+   "google": "4093767407 shared"
+  }
+ },
+ "vesu_ga4": {
+  "series": {
+   "W27": {
+    "b": 8,
+    "u": 226
+   },
+   "W28": {
+    "b": 10,
+    "u": 258
+   },
+   "W29": {
+    "b": 7,
+    "u": 654
+   },
+   "W30": {
+    "b": 25,
+    "u": 352
+   },
+   "W31": {
+    "b": 53,
+    "u": 848
+   },
+   "W32": {
+    "b": 100,
+    "u": 1572
+   },
+   "W33": {
+    "b": 105,
+    "u": 1380
+   },
+   "W34": {
+    "b": 73,
+    "u": 1239
+   }
+  },
+  "ly": {
+   "L31": {
+    "b": 67,
+    "u": 905
+   },
+   "L32": {
+    "b": 58,
+    "u": 881
+   },
+   "L33": {
+    "b": 65,
+    "u": 861
+   },
+   "L34": {
+    "b": 59,
+    "u": 926
+   }
+  },
+  "site": {
+   "cur": {
+    "sessions": 1572,
+    "users": 1239,
+    "pageviews": 3901,
+    "asd": 122.976,
+    "bounce": 0.45547,
+    "engrate": 0.54453,
+    "newusers": 1093
+   },
+   "prior": {
+    "sessions": 1765,
+    "users": 1380,
+    "pageviews": 4234,
+    "asd": 114.362,
+    "bounce": 0.47762,
+    "engrate": 0.52238,
+    "newusers": 1234
+   },
+   "yoy": {
+    "sessions": 1803,
+    "users": 926,
+    "pageviews": 2247,
+    "asd": 121.965,
+    "bounce": 0.29895,
+    "engrate": 0.70105,
+    "newusers": 290
+   }
+  },
+  "ytd": 1298
+ },
+ "canton_ga4": {
+  "series": {
+   "W27": {
+    "b": 0,
+    "u": 169
+   },
+   "W28": {
+    "b": 0,
+    "u": 224
+   },
+   "W29": {
+    "b": 0,
+    "u": 262
+   },
+   "W30": {
+    "b": 0,
+    "u": 446
+   },
+   "W31": {
+    "b": 0,
+    "u": 585
+   },
+   "W32": {
+    "b": 13,
+    "u": 1452
+   },
+   "W33": {
+    "b": 31,
+    "u": 3767
+   },
+   "W34": {
+    "b": 46,
+    "u": 3959
+   }
+  },
+  "site": {
+   "cur": {
+    "sessions": 4487,
+    "users": 3959,
+    "pageviews": 8623,
+    "asd": 91.673,
+    "bounce": 0.45688,
+    "engrate": 0.54312,
+    "newusers": 3762
+   },
+   "prior": {
+    "sessions": 4218,
+    "users": 3767,
+    "pageviews": 8070,
+    "asd": 82.678,
+    "bounce": 0.46041,
+    "engrate": 0.53959,
+    "newusers": 3673
+   }
+  },
+  "ytd": 90,
+  "note": "pre-opening weeks W27 to W31 carry site traffic but no bookings; shown as gaps in trends"
+ },
+ "vesu_ads": {
+  "meta_total_spend": {
+   "W27": 2348.67,
+   "W28": 2322.78,
+   "W29": 2368.53,
+   "W30": 2299.08,
+   "W31": 2930.22,
+   "W32": 3871.48,
+   "W33": 3436.21,
+   "W34": 3476.56
+  },
+  "meta_conversion_campaign": {
+   "W27": {
+    "spend": null,
+    "sch": null
+   },
+   "W28": {
+    "spend": null,
+    "sch": null
+   },
+   "W29": {
+    "spend": null,
+    "sch": null
+   },
+   "W30": {
+    "spend": null,
+    "sch": null
+   },
+   "W31": {
+    "spend": 793.84,
+    "sch": 12
+   },
+   "W32": {
+    "spend": 3871.48,
+    "sch": 30
+   },
+   "W33": {
+    "spend": 3436.21,
+    "sch": 35
+   },
+   "W34": {
+    "spend": 3476.56,
+    "sch": 15
+   }
+  },
+  "meta_ly": {
+   "L31": {
+    "total_spend": 2367.25,
+    "conv_spend": 2121.46,
+    "sch": 16
+   },
+   "L32": {
+    "total_spend": 2339.79,
+    "conv_spend": 2116.68,
+    "sch": 15
+   },
+   "L33": {
+    "total_spend": 2427.6,
+    "conv_spend": 2106.6,
+    "sch": 16
+   },
+   "L34": {
+    "total_spend": 2407.44,
+    "conv_spend": 2105.89,
+    "sch": 16
+   }
+  },
+  "google": {
+   "W27": {
+    "spend": null,
+    "conv": null
+   },
+   "W28": {
+    "spend": null,
+    "conv": null
+   },
+   "W29": {
+    "spend": null,
+    "conv": null
+   },
+   "W30": {
+    "spend": null,
+    "conv": null
+   },
+   "W31": {
+    "spend": 1635.58,
+    "conv": 12
+   },
+   "W32": {
+    "spend": 2563.34,
+    "conv": 31
+   },
+   "W33": {
+    "spend": 2481.13,
+    "conv": 33
+   },
+   "W34": {
+    "spend": 2268.12,
+    "conv": 26
+   }
+  }
+ },
+ "canton_ads": {
+  "meta": {
+   "W27": {
+    "total_spend": 3816.2,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W28": {
+    "total_spend": 5157.18,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W29": {
+    "total_spend": 5257.09,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W30": {
+    "total_spend": 12269.15,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W31": {
+    "total_spend": 9085.88,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W32": {
+    "total_spend": 8062.38,
+    "conv_campaign_spend": 5092.45,
+    "sch": 3
+   },
+   "W33": {
+    "total_spend": 15549.17,
+    "conv_campaign_spend": 12469.61,
+    "sch": 8
+   },
+   "W34": {
+    "total_spend": 14949.82,
+    "conv_campaign_spend": 11960.32,
+    "sch": 11
+   }
+  },
+  "google": {
+   "W27": {
+    "spend": null,
+    "conv": null
+   },
+   "W28": {
+    "spend": 498.07,
+    "conv": null
+   },
+   "W29": {
+    "spend": 1420.69,
+    "conv": null
+   },
+   "W30": {
+    "spend": 3532.23,
+    "conv": null
+   },
+   "W31": {
+    "spend": 5336.03,
+    "conv": null
+   },
+   "W32": {
+    "spend": 6767.1,
+    "conv": null
+   },
+   "W33": {
+    "spend": 10893.89,
+    "conv": null
+   },
+   "W34": {
+    "spend": 13915.67,
+    "conv": null
+   }
+  }
+ },
+ "shiro_tk": {
+  "series": {
+   "W27": {
+    "b": 71,
+    "u": 1970
+   },
+   "W28": {
+    "b": 61,
+    "u": 1560
+   },
+   "W29": {
+    "b": 67,
+    "u": 1650
+   },
+   "W30": {
+    "b": 68,
+    "u": 1467
+   },
+   "W31": {
+    "b": 68,
+    "u": 1101
+   },
+   "W32": {
+    "b": 81,
+    "u": 1328
+   },
+   "W33": {
+    "b": 79,
+    "u": 1441
+   },
+   "W34": {
+    "b": 68,
+    "u": 1226
+   }
+  }
+ },
+ "shiro_pp": {
+  "series": {
+   "W27": {
+    "b": 87,
+    "u": 818
+   },
+   "W28": {
+    "b": 99,
+    "u": 805
+   },
+   "W29": {
+    "b": 98,
+    "u": 755
+   },
+   "W30": {
+    "b": 91,
+    "u": 680
+   },
+   "W31": {
+    "b": 74,
+    "u": 1164
+   },
+   "W32": {
+    "b": 82,
+    "u": 684
+   },
+   "W33": {
+    "b": 66,
+    "u": 654
+   },
+   "W34": {
+    "b": 71,
+    "u": 670
+   }
+  },
+  "ly": {
+   "L31": {
+    "b": 96,
+    "u": 884
+   },
+   "L32": {
+    "b": 103,
+    "u": 936
+   },
+   "L33": {
+    "b": 108,
+    "u": 822
+   },
+   "L34": {
+    "b": 88,
+    "u": 748
+   }
+  }
+ },
+ "covers": {
+  "Vesu": {
+   "web": [
+    147,
+    215,
+    94
+   ],
+   "gr": [
+    33,
+    60,
+    42
+   ],
+   "ot": [
+    157,
+    216,
+    200
+   ],
+   "walk": [
+    100,
+    65,
+    80
+   ],
+   "recep": [
+    49,
+    48,
+    46
+   ],
+   "tp": [
+    0,
+    0,
+    0
+   ]
+  },
+  "The Canton Library": {
+   "web": [
+    113,
+    68,
+    0
+   ],
+   "gr": [
+    12,
+    15,
+    0
+   ],
+   "ot": [
+    69,
+    53,
+    0
+   ],
+   "walk": [
+    12,
+    19,
+    0
+   ],
+   "recep": [
+    81,
+    310,
+    0
+   ],
+   "tp": [
+    0,
+    0,
+    0
+   ]
+  },
+  "Shiro Pacific Place": {
+   "web": [
+    178,
+    152,
+    142
+   ],
+   "gr": [
+    113,
+    87,
+    37
+   ],
+   "ot": [
+    410,
+    338,
+    227
+   ],
+   "walk": [
+    1062,
+    904,
+    464
+   ],
+   "recep": [
+    269,
+    292,
+    264
+   ],
+   "tp": [
+    0,
+    0,
+    0
+   ]
+  },
+  "Shiro Tai Kwun": {
+   "web": [
+    144,
+    162,
+    0
+   ],
+   "gr": [
+    53,
+    71,
+    0
+   ],
+   "ot": [
+    121,
+    159,
+    0
+   ],
+   "walk": [
+    660,
+    694,
+    0
+   ],
+   "recep": [
+    137,
+    231,
+    0
+   ],
+   "tp": [
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OpenTable, OT Guestcenter, OT and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 419 &middot; YoY &#9660;61.7% like for like",
+ "ga4_yoy": "&#9660;61.7% YoY (two venues)",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> On the two venues with a usable last-year comparison, GA4 bookings are <b>down 61.7% YoY</b> while covers are <b>down only 1.0%</b>. Part of that difference is a routing change, not lost demand: both US Hutongs moved their Google Reserve provider to OpenTable in March, and at the two Hutongs <b>OpenTable and Resy</b> covers are <b>up 73 percent</b> year on year while Google Reserve covers are down 57 percent. That is a margin change to watch, not a demand collapse. Covers came in at <b>4,044</b>, <b>up 12.9 percent</b> week on week and <b>up 0.4 percent</b> year on year. <b>Two imports have been stripped out:</b> 76 OpenTable records (211 covers) loaded into Hutong New York in a single hour on the afternoon of 21 September, every one for a date in the week just gone, and a further 25 records (75 covers) on 23 September with service dates running back to March. Left in, the market would read 4,330 and Hutong New York's OpenTable line would be 937 rather than 651. A third, much smaller batch (5 records, 22 covers) is left in as ordinary late syncing. The 273-cover Aqua Roma backfill named last week stays out of the prior-week column and the W37 point, and a 1,907-cover Hutong New York OpenTable history load stays out of W35, as it did last week.",
+ "week": "21–27 Sep 2026",
+ "wow": "14–20 Sep 2026",
+ "yoy": "22–28 Sep 2025",
+ "generated": "28 September 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 214,
+   "ch": {
+    "web": {
+     "c": 403,
+     "p": 222,
+     "y": 486
+    },
+    "gr": {
+     "c": 197,
+     "p": 170,
+     "y": 119
+    },
+    "ot": {
+     "c": 210,
+     "p": 174,
+     "y": 218
+    },
+    "walk": {
+     "c": 720,
+     "p": 906,
+     "y": 934
+    },
+    "recep": {
+     "c": 224,
+     "p": 187,
+     "y": 57
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 57,
+     "p": 27,
+     "y": 6
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 150,
+   "ch": {
+    "web": {
+     "c": 369,
+     "p": 287,
+     "y": 419
+    },
+    "gr": {
+     "c": 131,
+     "p": 76,
+     "y": 274
+    },
+    "ot": {
+     "c": 651,
+     "p": 426,
+     "y": 364
+    },
+    "walk": {
+     "c": 404,
+     "p": 449,
+     "y": 492
+    },
+    "recep": {
+     "c": 15,
+     "p": 9,
+     "y": 2
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 39,
+     "p": 48,
+     "y": 16
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 55,
+   "ch": {
+    "web": {
+     "c": 129,
+     "p": 164,
+     "y": 133
+    },
+    "gr": {
+     "c": 8,
+     "p": 10,
+     "y": 48
+    },
+    "ot": {
+     "c": 246,
+     "p": 170,
+     "y": 155
+    },
+    "walk": {
+     "c": 231,
+     "p": 244,
+     "y": 304
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 10,
+     "p": 14,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38"
+  ],
+  "total": [
+   4005,
+   3781,
+   3488,
+   3271,
+   3269,
+   3655,
+   3583,
+   4044
+  ],
+  "ot": [
+   843,
+   921,
+   759,
+   788,
+   682,
+   877,
+   770,
+   1107
+  ]
+ }
+}

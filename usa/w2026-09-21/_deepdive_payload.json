@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "21–27 Sep 2026",
+ "wow": "14–20 Sep 2026",
+ "yoy": "22–28 Sep 2025",
+ "generated": "28 September 2026",
+ "badge": "HUTONG MIAMI PAID EFFICIENCY",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 214,
+   "tgt": 516,
+   "wow_b": 186,
+   "yoy_b": 578,
+   "users": 5860,
+   "sessions": 7268,
+   "asd": 151.5,
+   "bounce": 0.517,
+   "meta_s": 1905.57,
+   "meta_sch": 59,
+   "meta_sch_prior": 60,
+   "goog_s": 630.96,
+   "goog_c": 29.0,
+   "goog_c_prior": 18.5,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 150,
+   "tgt": 368,
+   "wow_b": 115,
+   "yoy_b": 0,
+   "users": 2946,
+   "sessions": 3844,
+   "asd": 198.1,
+   "bounce": 0.379,
+   "meta_s": 1054.6,
+   "meta_sch": 10,
+   "meta_sch_prior": 8,
+   "goog_s": 1012.33,
+   "goog_c": 24.0,
+   "goog_c_prior": 28.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 55,
+   "tgt": 112,
+   "wow_b": 79,
+   "yoy_b": 124,
+   "users": 1517,
+   "sessions": 1952,
+   "asd": 154.3,
+   "bounce": 0.406,
+   "meta_s": 1524.09,
+   "meta_sch": 28,
+   "meta_sch_prior": 27,
+   "goog_s": 524.17,
+   "goog_c": 9.0,
+   "goog_c_prior": 18.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua NYC spent $1,906 on Meta for 59 schedules, about $32 each, just above the $25 good threshold and flat on 60 the week before.",
+   "Hutong Miami held at 28 schedules on $1,524, about $54 each, still past the $50 poor threshold. Hutong NYC spent $1,055 for 10 schedules at about $105.",
+   "Hutong NYC added a new reach campaign, HT | Mahjong | Reach | New York, at $414 with no schedules. It is a reach objective, so that is expected, but it takes 39 percent of the account's Meta spend."
+  ],
+  "google": [
+   "Aqua NYC Google ran $631 for 29.0 booking conversions at about $22 CPA, inside the $30 poor threshold and the best Google CPA in the portfolio this week.",
+   "Hutong Miami delivered 9.0 conversions on $524 at about $58 CPA, its worst week in the eight shown. Hutong NYC delivered 24.0 on $1,012 at about $42.",
+   "The prior week has restated upward again: Aqua NYC W37 from 13.5 to 18.5 and Hutong NYC W37 from 19 to 28.0 as late conversions landed, so this week's figures are likely to rise too."
+  ],
+  "ga4": [
+   "Aqua NYC users are 21.2 percent below last year and bookings 63.0 percent below, with conversion at 3.7 percent against 7.8 percent. Traffic and conversion are both down.",
+   "Hutong NYC users are 6.0 percent above last year and bookings rose 30.4 percent week on week to 150. There is no last-year booking comparison: the site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October, so the portfolio year-on-year card sets three venues this year against two last year. Like for like, Aqua NYC and Hutong Miami booked 269 against 702, down 61.7 percent.",
+   "Hutong Miami users are 43.8 percent below last year and conversion slipped to 3.6 percent from 4.6, giving a 55.6 percent booking fall and a 30.4 percent fall week on week."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     295,
+     259,
+     207,
+     220,
+     237,
+     198,
+     186,
+     214
+    ],
+    "users": [
+     6974,
+     6158,
+     5778,
+     5966,
+     5366,
+     5498,
+     6266,
+     5860
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     180,
+     169,
+     141,
+     137,
+     142,
+     138,
+     115,
+     150
+    ],
+    "users": [
+     3226,
+     3347,
+     3395,
+     2937,
+     2570,
+     2641,
+     3007,
+     2946
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     93,
+     88,
+     112,
+     80,
+     74,
+     54,
+     79,
+     55
+    ],
+    "users": [
+     1705,
+     1934,
+     2154,
+     1841,
+     1674,
+     1624,
+     1435,
+     1517
+    ]
+   }
+  }
+ }
+}

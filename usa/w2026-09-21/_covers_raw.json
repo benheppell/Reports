@@ -1,0 +1,178 @@
+{
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ch": {
+    "web": {
+     "c": 403,
+     "p": 222,
+     "y": 486
+    },
+    "gr": {
+     "c": 197,
+     "p": 170,
+     "y": 119
+    },
+    "ot": {
+     "c": 210,
+     "p": 174,
+     "y": 218
+    },
+    "walk": {
+     "c": 720,
+     "p": 906,
+     "y": 934
+    },
+    "recep": {
+     "c": 224,
+     "p": 187,
+     "y": 57
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 57,
+     "p": 27,
+     "y": 6
+    },
+    "other": {
+     "c": 0,
+     "p": 0,
+     "y": 2
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ch": {
+    "web": {
+     "c": 369,
+     "p": 287,
+     "y": 419
+    },
+    "gr": {
+     "c": 131,
+     "p": 76,
+     "y": 274
+    },
+    "ot": {
+     "c": 651,
+     "p": 426,
+     "y": 364
+    },
+    "walk": {
+     "c": 404,
+     "p": 449,
+     "y": 492
+    },
+    "recep": {
+     "c": 15,
+     "p": 9,
+     "y": 2
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 39,
+     "p": 48,
+     "y": 16
+    },
+    "other": {
+     "c": 0,
+     "p": 0,
+     "y": 2
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ch": {
+    "web": {
+     "c": 129,
+     "p": 164,
+     "y": 133
+    },
+    "gr": {
+     "c": 8,
+     "p": 10,
+     "y": 48
+    },
+    "ot": {
+     "c": 246,
+     "p": 170,
+     "y": 155
+    },
+    "walk": {
+     "c": 231,
+     "p": 244,
+     "y": 304
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 10,
+     "p": 14,
+     "y": 0
+    },
+    "other": {
+     "c": 0,
+     "p": 0,
+     "y": 3
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38"
+  ],
+  "total": [
+   4005,
+   3781,
+   3488,
+   3271,
+   3269,
+   3655,
+   3583,
+   4044
+  ],
+  "ot": [
+   843,
+   921,
+   759,
+   788,
+   682,
+   877,
+   770,
+   1107
+  ]
+ },
+ "problems": [
+  "Channel logic reuses the CASE from public.london_daily_covers_base (read this run via pg_get_viewdef): 'web' = Booking Widget, any '%landing page%', Nav CTA, Hero CTA, Menu Page, Website, 'PPC%', popup, edm; 'gr' = Google Reserve Integration; 'walk' = Walk In; 'recep' = '%reception%' or DSL Host, plus 'Reservation Team' / 'Reservations Team' (the USA reservations desks). The 'ot' slot is the USA platform: Open Table, OpenTable, OTGC, OT Guestcenter, OT and Resy. Filters: is_deleted = false, status_simple <> 'Canceled', venue_seating_area_name NOT ILIKE '%bar%', date = (sr_created_at AT TIME ZONE 'America/New_York')::date.",
+  "Staff-name booking sources are EXCLUDED from the covers total entirely, as in prior weeks: the view's two-capitalised-words regex, plus the lower-case and single-name USA staff entries ('andrew sicklin', 'Luz', 'Lucilly', 'Tracey', 'Wendy') and 'Imported Reservations'. 'Flaming Duck Miami' matches the staff regex but is a partner source, so it stays in 'tp' with DoorDash and Bilt Integration.",
+  "VALIDATION: 14 to 20 Sep recomputed with this SQL returns Aqua NYC 1,686 (published 1,714, -1.6%), Hutong NYC 1,295 (1,325, -2.3%), Hutong Miami 602 (627, -4.0%), market 3,583 vs 3,666 published (-2.3%). All of the gap is cancellations booked in that week and cancelled since. Trend weeks W31 to W36 reproduce last week's published series within 0.7%. One classification difference: last week put Hutong Miami's 'Lucilly' bookings (14 covers) in 'recep'; this run treats that name as staff and excludes it, so Miami 'recep' is 0.",
+  "BULK IMPORTS EXCLUDED FROM THE CURRENT WEEK: Hutong New York took 76 'OT Guestcenter' records / 211 covers created 2026-09-21 21:00 UTC with service dates 12 to 20 Sep 2026, and 25 records / 75 covers created 2026-09-23 20:00 UTC with service dates 19 Mar to 22 Sep 2026. Both are 100 percent past-dated at creation, so they are data loads, not demand. Hutong NYC 'ot' reads 651 without them and 937 with them; the market total reads 4,044 without and 4,330 with. A third batch (5 records, 22 covers, 26 Sep) is left in as ordinary late syncing.",
+  "EARLIER IMPORTS ALSO EXCLUDED, as last week: Aqua Roma 105 records / 273 covers created 2026-09-15 02:00 UTC (W37 point and the prior-week column), and Hutong New York 685 records / 1,907 covers created 2026-09-04 22:00 UTC with service dates 28 Jul to 19 Oct (W35 point). In the year-ago week, Aqua Roma 972 records / 2,595 covers created 2025-09-23 16:00 UTC with service dates from 27 Feb 2025 are excluded; that is the original OpenTable history load at onboarding. Without it Aqua NYC's last-year 'ot' reads 218 rather than 2,813."
+ ]
+}

@@ -1,0 +1,340 @@
+{
+ "market": "Aqua Kyoto Paris",
+ "sym": "€",
+ "week": "21–27 Sep 2026",
+ "fy": "FY26 &middot; W34",
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "data": {
+  "Aqua Kyoto Paris": {
+   "web": {
+    "cur": {
+     "users": 4453,
+     "sessions": 5558,
+     "bookings": 267,
+     "pps": 3.11,
+     "avgsec": 190,
+     "engrate": 58.7,
+     "newpct": 87.1
+    },
+    "prior": {
+     "users": 5070,
+     "sessions": 6290,
+     "bookings": 314,
+     "pps": 3.06,
+     "avgsec": 163,
+     "engrate": 67.1,
+     "newpct": 88.2
+    },
+    "yoy": {
+     "users": 4896,
+     "sessions": 9623,
+     "bookings": 190,
+     "pps": 1.72,
+     "avgsec": 131,
+     "engrate": 61.1,
+     "newpct": 32.7
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1278.04,
+      "bookings": 40,
+      "impr": 244401,
+      "clicks": 6779
+     },
+     "prior": {
+      "spend": 1774.78,
+      "bookings": 48,
+      "impr": 344726,
+      "clicks": 10470
+     },
+     "yoy": {
+      "spend": 322.7,
+      "bookings": 2,
+      "impr": 138954,
+      "clicks": 5332
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1404.52,
+      "bookings": 44.0,
+      "impr": 36894,
+      "clicks": 1859
+     },
+     "prior": {
+      "spend": 1425.62,
+      "bookings": 51.0,
+      "impr": 72786,
+      "clicks": 2392
+     },
+     "yoy": {
+      "spend": 901.73,
+      "bookings": 55.33,
+      "impr": 124803,
+      "clicks": 1814
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1699,
+      2217,
+      2881
+     ],
+     "b": [
+      93,
+      149,
+      71
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1137,
+      1448,
+      1075
+     ],
+     "b": [
+      74,
+      86,
+      62
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      872,
+      944,
+      1177
+     ],
+     "b": [
+      31,
+      28,
+      21
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      657,
+      96,
+      105
+     ],
+     "b": [
+      43,
+      14,
+      2
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      578,
+      254,
+      894
+     ],
+     "b": [
+      6,
+      8,
+      18
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      521,
+      922,
+      1431
+     ],
+     "b": [
+      4,
+      14,
+      3
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      384,
+      320,
+      1711
+     ],
+     "b": [
+      8,
+      10,
+      11
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      126,
+      155,
+      0
+     ],
+     "b": [
+      7,
+      4,
+      0
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      64,
+      58,
+      198
+     ],
+     "b": [
+      0,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      7,
+      6,
+      61
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      6,
+      10,
+      6
+     ],
+     "b": [
+      0,
+      0,
+      1
+     ]
+    }
+   ],
+   "devices": {
+    "mobile": 82,
+    "desktop": 18,
+    "tablet": 0
+   },
+   "landing": [
+    {
+     "path": "/fr",
+     "s": 1051,
+     "b": 28
+    },
+    {
+     "path": "/",
+     "s": 973,
+     "b": 22
+    },
+    {
+     "path": "/explore/aquakyotoparis/reservations/create/search",
+     "s": 775,
+     "b": 72
+    },
+    {
+     "path": "/en",
+     "s": 574,
+     "b": 17
+    },
+    {
+     "path": "(blank)",
+     "s": 487,
+     "b": 13
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W27",
+     "W28",
+     "W29",
+     "W30",
+     "W31",
+     "W32",
+     "W33",
+     "W34"
+    ],
+    "spend": [
+     2998.03,
+     2808.3,
+     2461.18,
+     3057.62,
+     3355.89,
+     3297.04,
+     3200.4,
+     2682.56
+    ],
+    "bookings": [
+     92.95,
+     75,
+     63,
+     83,
+     88,
+     100,
+     99,
+     84
+    ]
+   },
+   "funnel": {
+    "impr": 281295,
+    "clicks": 8638,
+    "landing": 1393,
+    "bookings": 84.0
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting - Booking Complete",
+     "platform": "meta",
+     "spend": 689.95,
+     "bookings": 29,
+     "wow": "down"
+    },
+    {
+     "name": "CRKLR - Prospecting - Booking Complete – Brunch Focus",
+     "platform": "meta",
+     "spend": 410.88,
+     "bookings": 11,
+     "wow": "down"
+    },
+    {
+     "name": "Search | FR | Japonais & Champs-Elysees",
+     "platform": "google",
+     "spend": 327.86,
+     "bookings": 9.0,
+     "wow": "down"
+    },
+    {
+     "name": "Performance Max | Aqua Kyoto Paris",
+     "platform": "google",
+     "spend": 299.08,
+     "bookings": 6.0,
+     "wow": "down"
+    },
+    {
+     "name": "Search | FR | Rooftop, Vue & Soiree",
+     "platform": "google",
+     "spend": 250.29,
+     "bookings": 9.0,
+     "wow": "down"
+    }
+   ],
+   "budget": {
+    "meta": 1633.33,
+    "google": 1400.0
+   }
+  }
+ }
+}

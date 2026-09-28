@@ -1,0 +1,468 @@
+{
+ "meta": {
+  "tz": "Asia/Hong_Kong",
+  "source": "supabase vklgpzrhjvjqhlpfennn public.reservations joined to public.venues",
+  "date_basis": "(sr_created_at AT TIME ZONE 'Asia/Hong_Kong')::date, booking-created date",
+  "windows": {
+   "cur": "2026-09-21..2026-09-27",
+   "prior": "2026-09-14..2026-09-20",
+   "yoy": "2025-09-22..2025-09-28"
+  },
+  "filters": "is_deleted = false AND COALESCE(status_simple,'') <> 'Canceled' AND COALESCE(raw->>'venue_seating_area_name','') NOT ILIKE '%bar%'",
+  "channel_rules": [
+   "web: 'PPC%' or '%landing page%' or lower(src) in (booking widget, nav cta, hero cta, menu page, website, popup, edm, what's on)",
+   "gr: 'Google Reserve Integration'",
+   "ot (OpenRice, the HK third-party slot): '%openrice%'",
+   "tp: '%trip advisor%' or '%tripadvisor%'",
+   "walk: 'Walk In'",
+   "recep: '%reception%' or '%reservation%' or a venue-desk label (Chinese Library, Cantina, Pacific Place, Hutong, Vesu, Vista, Canton Library) or a comma-separated desk tag string",
+   "staff (EXCLUDED from covers): a capitalised name pattern, one or more words, not matching the London keyword exclusion list. HK needs the single-word form too (Janet, Panda, Polly, Sze, Prerana, HiuChing, Yannes, Ceci)",
+   "other: the residual, which is 0 for every venue and period this week"
+  ],
+  "derivation_note": "The London view's CASE puts the HK reservations desks ('Hutong Reservations Hutong Reservations', 'Cantina Reservations', 'canton Library Reservations', 'Chinese Library') into staff and its 2-word name regex leaves single-word staff names in covers. Neither matches the published HK weeks. The rules above were fitted to last week's published channel values and reproduce them within normal settling.",
+  "validation_prior_week": {
+   "method": "recomputed 14-20 Sep and compared with last week's published c values",
+   "Aqua HK": {
+    "published": 1431,
+    "recomputed": 1375,
+    "delta_pct": -3.9
+   },
+   "Hutong HK": {
+    "published": 1576,
+    "recomputed": 1522,
+    "delta_pct": -3.4
+   },
+   "The Chinese Library": {
+    "published": 976,
+    "recomputed": 917,
+    "delta_pct": -6.0
+   },
+   "Cantina": {
+    "published": 761,
+    "recomputed": 696,
+    "delta_pct": -8.5
+   },
+   "Dim Sum Library": {
+    "published": 2253,
+    "recomputed": 2209,
+    "delta_pct": -2.0
+   },
+   "Shiro Pacific Place": {
+    "published": 1802,
+    "recomputed": 1773,
+    "delta_pct": -1.6
+   },
+   "Shiro Tai Kwun": {
+    "published": 1339,
+    "recomputed": 1317,
+    "delta_pct": -1.6
+   },
+   "portfolio": {
+    "published": 10138,
+    "recomputed": 9809,
+    "delta_pct": -3.2
+   },
+   "verdict": "every channel moved down slightly or held, which is cancellations settling out after publication. No channel was reclassified.",
+   "trend_check": "the 8-week trend reproduces last week's published older weeks within 0.1 percent (W27 9089 -> 9088, W28 9539 -> 9534, W29 10978 -> 10972, W30 9757 -> 9749)"
+  },
+  "bulk_import_check": {
+   "method": "grouped the cur week by venue, created date, created hour and source, looking for bursts of past-dated covers loaded in one hour",
+   "result": "no bulk-import backfill found in 21-27 Sep. The largest single-hour entries are all FORWARD dated and therefore real demand: The Chinese Library 305 covers in one hour on 22 Sep for service dates 27 Sep 2026 to 28 Jan 2027 (staff-named source, excluded from covers anyway), Cantina Reservations 170 covers on 25 Sep for a single 9 Dec party, Aqua HK 135 covers on 22 Sep for 3 Nov to 11 Dec, Shiro Tai Kwun 100 covers on 22 Sep for 15 Oct.",
+   "nothing_excluded": true
+  }
+ },
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ch": {
+    "web": {
+     "c": 542,
+     "p": 548,
+     "y": 362
+    },
+    "widget": {
+     "c": 540,
+     "p": 548,
+     "y": 360
+    },
+    "gr": {
+     "c": 155,
+     "p": 217,
+     "y": 74
+    },
+    "ot": {
+     "c": 402,
+     "p": 331,
+     "y": 300
+    },
+    "walk": {
+     "c": 62,
+     "p": 108,
+     "y": 87
+    },
+    "recep": {
+     "c": 26,
+     "p": 171,
+     "y": 17
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ch": {
+    "web": {
+     "c": 592,
+     "p": 541,
+     "y": 546
+    },
+    "widget": {
+     "c": 578,
+     "p": 527,
+     "y": 546
+    },
+    "gr": {
+     "c": 207,
+     "p": 349,
+     "y": 117
+    },
+    "ot": {
+     "c": 356,
+     "p": 230,
+     "y": 189
+    },
+    "walk": {
+     "c": 128,
+     "p": 119,
+     "y": 64
+    },
+    "recep": {
+     "c": 136,
+     "p": 269,
+     "y": 273
+    },
+    "tp": {
+     "c": 2,
+     "p": 14,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ch": {
+    "web": {
+     "c": 283,
+     "p": 231,
+     "y": 143
+    },
+    "widget": {
+     "c": 279,
+     "p": 231,
+     "y": 143
+    },
+    "gr": {
+     "c": 95,
+     "p": 189,
+     "y": 99
+    },
+    "ot": {
+     "c": 233,
+     "p": 248,
+     "y": 194
+    },
+    "walk": {
+     "c": 73,
+     "p": 80,
+     "y": 63
+    },
+    "recep": {
+     "c": 217,
+     "p": 169,
+     "y": 147
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ch": {
+    "web": {
+     "c": 183,
+     "p": 149,
+     "y": 105
+    },
+    "widget": {
+     "c": 177,
+     "p": 143,
+     "y": 95
+    },
+    "gr": {
+     "c": 61,
+     "p": 66,
+     "y": 32
+    },
+    "ot": {
+     "c": 275,
+     "p": 212,
+     "y": 200
+    },
+    "walk": {
+     "c": 85,
+     "p": 73,
+     "y": 43
+    },
+    "recep": {
+     "c": 355,
+     "p": 196,
+     "y": 178
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ch": {
+    "web": {
+     "c": 363,
+     "p": 365,
+     "y": 264
+    },
+    "widget": {
+     "c": 363,
+     "p": 365,
+     "y": 264
+    },
+    "gr": {
+     "c": 302,
+     "p": 319,
+     "y": 196
+    },
+    "ot": {
+     "c": 388,
+     "p": 330,
+     "y": 273
+    },
+    "walk": {
+     "c": 1061,
+     "p": 1072,
+     "y": 857
+    },
+    "recep": {
+     "c": 124,
+     "p": 123,
+     "y": 198
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Pacific Place",
+   "ch": {
+    "web": {
+     "c": 178,
+     "p": 152,
+     "y": 142
+    },
+    "widget": {
+     "c": 178,
+     "p": 152,
+     "y": 142
+    },
+    "gr": {
+     "c": 113,
+     "p": 87,
+     "y": 37
+    },
+    "ot": {
+     "c": 410,
+     "p": 338,
+     "y": 227
+    },
+    "walk": {
+     "c": 1062,
+     "p": 904,
+     "y": 464
+    },
+    "recep": {
+     "c": 269,
+     "p": 292,
+     "y": 264
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "ch": {
+    "web": {
+     "c": 144,
+     "p": 162,
+     "y": 0
+    },
+    "widget": {
+     "c": 134,
+     "p": 160,
+     "y": 0
+    },
+    "gr": {
+     "c": 53,
+     "p": 71,
+     "y": 0
+    },
+    "ot": {
+     "c": 121,
+     "p": 159,
+     "y": 0
+    },
+    "walk": {
+     "c": 660,
+     "p": 694,
+     "y": 0
+    },
+    "recep": {
+     "c": 137,
+     "p": 231,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Vesu",
+   "ch": {
+    "web": {
+     "c": 147,
+     "p": 215,
+     "y": 94
+    },
+    "widget": {
+     "c": 147,
+     "p": 213,
+     "y": 92
+    },
+    "gr": {
+     "c": 33,
+     "p": 60,
+     "y": 42
+    },
+    "ot": {
+     "c": 157,
+     "p": 216,
+     "y": 200
+    },
+    "walk": {
+     "c": 100,
+     "p": 65,
+     "y": 80
+    },
+    "recep": {
+     "c": 49,
+     "p": 48,
+     "y": 46
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Canton Library",
+   "ch": {
+    "web": {
+     "c": 113,
+     "p": 68,
+     "y": 0
+    },
+    "widget": {
+     "c": 105,
+     "p": 68,
+     "y": 0
+    },
+    "gr": {
+     "c": 12,
+     "p": 15,
+     "y": 0
+    },
+    "ot": {
+     "c": 69,
+     "p": 53,
+     "y": 0
+    },
+    "walk": {
+     "c": 12,
+     "p": 19,
+     "y": 0
+    },
+    "recep": {
+     "c": 81,
+     "p": 310,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34"
+  ],
+  "total": [
+   9088,
+   9534,
+   10972,
+   9749,
+   9076,
+   9107,
+   9809,
+   9853
+  ],
+  "ot": [
+   1780,
+   1843,
+   1972,
+   1798,
+   1811,
+   1934,
+   1848,
+   2185
+  ]
+ }
+}

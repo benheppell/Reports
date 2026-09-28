@@ -1,0 +1,315 @@
+{
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ch": {
+    "web": {
+     "c": 2777,
+     "p": 2770,
+     "y": 2858
+    },
+    "gr": {
+     "c": 400,
+     "p": 397,
+     "y": 195
+    },
+    "ot": {
+     "c": 199,
+     "p": 243,
+     "y": 84
+    },
+    "walk": {
+     "c": 144,
+     "p": 136,
+     "y": 99
+    },
+    "recep": {
+     "c": 29,
+     "p": 25,
+     "y": 12
+    },
+    "ota": {
+     "c": 43,
+     "p": 40,
+     "y": 21
+    },
+    "tp": {
+     "c": 43,
+     "p": 27,
+     "y": 63
+    },
+    "other": {
+     "c": 259,
+     "p": 228,
+     "y": 195
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ch": {
+    "web": {
+     "c": 1719,
+     "p": 1791,
+     "y": 1629
+    },
+    "gr": {
+     "c": 402,
+     "p": 468,
+     "y": 198
+    },
+    "ot": {
+     "c": 148,
+     "p": 89,
+     "y": 80
+    },
+    "walk": {
+     "c": 168,
+     "p": 125,
+     "y": 157
+    },
+    "recep": {
+     "c": 42,
+     "p": 15,
+     "y": 42
+    },
+    "ota": {
+     "c": 25,
+     "p": 38,
+     "y": 16
+    },
+    "tp": {
+     "c": 81,
+     "p": 75,
+     "y": 19
+    },
+    "other": {
+     "c": 316,
+     "p": 253,
+     "y": 234
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ch": {
+    "web": {
+     "c": 555,
+     "p": 669,
+     "y": 532
+    },
+    "gr": {
+     "c": 59,
+     "p": 42,
+     "y": 100
+    },
+    "ot": {
+     "c": 182,
+     "p": 136,
+     "y": 74
+    },
+    "walk": {
+     "c": 145,
+     "p": 128,
+     "y": 180
+    },
+    "recep": {
+     "c": 9,
+     "p": 12,
+     "y": 22
+    },
+    "ota": {
+     "c": 93,
+     "p": 101,
+     "y": 173
+    },
+    "tp": {
+     "c": 6,
+     "p": 11,
+     "y": 25
+    },
+    "other": {
+     "c": 253,
+     "p": 252,
+     "y": 400
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ch": {
+    "web": {
+     "c": 232,
+     "p": 241,
+     "y": 185
+    },
+    "gr": {
+     "c": 77,
+     "p": 26,
+     "y": 101
+    },
+    "ot": {
+     "c": 175,
+     "p": 102,
+     "y": 79
+    },
+    "walk": {
+     "c": 168,
+     "p": 255,
+     "y": 303
+    },
+    "recep": {
+     "c": 5,
+     "p": 20,
+     "y": 38
+    },
+    "ota": {
+     "c": 33,
+     "p": 30,
+     "y": 88
+    },
+    "tp": {
+     "c": 2,
+     "p": 0,
+     "y": 2
+    },
+    "other": {
+     "c": 208,
+     "p": 305,
+     "y": 431
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ch": {
+    "web": {
+     "c": 272,
+     "p": 250,
+     "y": 260
+    },
+    "gr": {
+     "c": 74,
+     "p": 43,
+     "y": 95
+    },
+    "ot": {
+     "c": 77,
+     "p": 77,
+     "y": 12
+    },
+    "walk": {
+     "c": 299,
+     "p": 280,
+     "y": 193
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 71,
+     "p": 73,
+     "y": 34
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 17
+    },
+    "other": {
+     "c": 370,
+     "p": 353,
+     "y": 244
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ch": {
+    "web": {
+     "c": 1031,
+     "p": 1031,
+     "y": 253
+    },
+    "gr": {
+     "c": 199,
+     "p": 161,
+     "y": 103
+    },
+    "ot": {
+     "c": 520,
+     "p": 534,
+     "y": 43
+    },
+    "walk": {
+     "c": 989,
+     "p": 984,
+     "y": 336
+    },
+    "recep": {
+     "c": 201,
+     "p": 122,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 307
+    },
+    "tp": {
+     "c": 2,
+     "p": 0,
+     "y": 3
+    },
+    "other": {
+     "c": 1192,
+     "p": 1106,
+     "y": 646
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W27",
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34"
+  ],
+  "total": [
+   11152,
+   10353,
+   10582,
+   10724,
+   9901,
+   10175,
+   11567,
+   11696
+  ],
+  "ot": [
+   1552,
+   1079,
+   988,
+   1040,
+   900,
+   1110,
+   1181,
+   1301
+  ]
+ },
+ "problems": [
+  "Classification reuses public.london_daily_covers_base exactly (Website / Google Reserve / OpenTable / walk / reception CASE logic and its staff-name regex exclusion), with the 100-day window removed so the YoY week can be read. Its 'other' bucket is split for this report into ota = 'Thefork Integration' + 'First Table' and tp = everything else left in 'other'.",
+  "Metric = SUM(covers) by booking-created date (sr_created_at in Europe/London), is_deleted = false, status_simple <> 'Canceled', seating areas containing 'bar' excluded.",
+  "Validation: 14-20 Sep recomputed on this basis = 11,567 covers vs 11,869 published last week (-2.5%), with every venue and channel equal to or slightly below last week's 'c'. That is normal settling as cancellations land after publication.",
+  "'other' key is a convenience rollup of walk+recep+ota+tp. Do NOT add it to the other buckets - it double counts.",
+  "Trend last value (W34 = 11,696) verified equal to the sum of cur covers across all six venue rows; trend ot last value (1,301) verified equal to the sum of cur 'ot'. W27 to W32 were re-pulled live and all sit slightly below last week's published values, again settling.",
+  "No bulk-import backfill was found in the London reporting week. The one large burst is Regent St, 1,677 covers on the staff source 'Maisie Brind', 1,460 of them in two rows created 22 and 23 Sep for December and March service dates. Those are future-dated group bookings and the view's staff regex already excludes them from covers, so no adjustment was needed. Regent St staff covers were 143 in the prior week and 152 last year, so the jump is real but entirely outside the reported total.",
+  "Zeros in recep for Shiro Sushi (all windows) and DSL yoy, tp for DSL prior and Shiro cur/prior, and ota for DSL cur/prior are true zeros (no rows). DSL yoy ota (307) is TheFork and First Table volume from Sep 2025 that no longer exists."
+ ]
+}

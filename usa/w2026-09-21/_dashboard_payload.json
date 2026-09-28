@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 214,
+   "tgt": 516,
+   "wow": 186,
+   "yoy": 578,
+   "ytd": 9637,
+   "ytdt": 17527,
+   "meta_s": 1905.57,
+   "goog_s": 630.96,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 150,
+   "tgt": 368,
+   "wow": 115,
+   "yoy": 0,
+   "ytd": 6083,
+   "ytdt": 16507,
+   "meta_s": 1054.6,
+   "goog_s": 1012.33,
+   "nc": true
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 55,
+   "tgt": 112,
+   "wow": 79,
+   "yoy": 124,
+   "ytd": 3559,
+   "ytdt": 5187,
+   "meta_s": 1524.09,
+   "goog_s": 524.17,
+   "nc": false
+  }
+ ],
+ "note": "USA targets are strategic and deliberately aggressive, Hutong NYC explicitly so, and Hutong Miami's GA4 target is derived from its Meta plan (monthly &times; 6738/4756). Read variance to target with that in mind. The USA booked <b>419</b> GA4 bookings, <b>up 10.3 percent</b> week on week and <b>57.9 percent below target</b>, with all three venues below target. <b>Hutong NYC has no usable last-year comparison</b>: the site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October, so its last-year bookings, Meta schedules and Google booking conversions are all missing. The portfolio year-on-year figure therefore sets three venues this year against two last year. Like for like, <b>Aqua NYC and Hutong Miami booked 269 against 702, down 61.7 percent</b>. <b>Aqua NYC</b> recovered to 214 from 186 but conversion is <b>3.7 percent</b> against <b>7.8 percent</b> last year. <b>Hutong Miami</b> fell 30.4 percent week on week to 55 and is the efficiency question this week, with Google at <b>$58</b> per booking and Meta at <b>$54</b>. Year to date the portfolio sits <b>50.8 percent</b> behind a target that assumed growth. The Google Reserve to OpenTable shift at both US Hutongs is a routing and margin change, not lost demand. The covers report carries the fuller picture.",
+ "week": "21–27 Sep 2026",
+ "wow": "14–20 Sep 2026",
+ "yoy": "22–28 Sep 2025",
+ "generated": "28 September 2026"
+}
