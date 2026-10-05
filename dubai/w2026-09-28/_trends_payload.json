@@ -1,0 +1,183 @@
+{
+ "venues": [
+  "Hutong Dubai"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W36",
+  "W37",
+  "W38",
+  "W39"
+ ],
+ "dateTY": [
+  "7\u201313 Sep",
+  "14\u201320 Sep",
+  "21\u201327 Sep",
+  "28 Sep\u20134 Oct"
+ ],
+ "dateLY": [
+  "8\u201314 Sep",
+  "15\u201321 Sep",
+  "22\u201328 Sep",
+  "29 Sep\u20135 Oct"
+ ],
+ "fyrange": "FY26 weeks 36\u201339",
+ "sym": "AED ",
+ "gaps": true,
+ "data": {
+  "Hutong Dubai": [
+   [
+    "Website users",
+    [
+     1283,
+     1279,
+     1395,
+     1503
+    ],
+    [
+     1361,
+     1288,
+     2202,
+     2057
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     8.8,
+     8.1,
+     7.5,
+     6.4
+    ],
+    [
+     9.8,
+     9.4,
+     6.9,
+     7.5
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     113,
+     104,
+     104,
+     96
+    ],
+    [
+     133,
+     121,
+     152,
+     154
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     24,
+     29,
+     42,
+     33
+    ],
+    [
+     9,
+     11,
+     26,
+     44
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     25,
+     19,
+     19,
+     15
+    ],
+    [
+     18,
+     20,
+     31,
+     27
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     118.3,
+     144.1,
+     156.6,
+     299.8
+    ],
+    [
+     171.2,
+     182.6,
+     214.9,
+     206.6
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     153.8,
+     121.0,
+     86.7,
+     130.5
+    ],
+    [
+     194.1,
+     152.6,
+     379.5,
+     205.0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     326,
+     381,
+     568,
+     488
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Hutong Dubai": "W39 users 1,503 (-26.9% YoY) with 96 GA4 bookings (-37.7% YoY); conversion rate 6.4% vs 7.5% LY. The same week last year carried a Meta burst of AED 9,020 against AED 4,306 now, and paid social sessions were 1,039 then against 361 now, so the YoY fall is a spend comparison rather than a demand signal. Google spend went the other way, up to GBP 948 from GBP 597, which lifted Google CPA to AED 300 on 15 bookings; Meta took 33 at AED 131. Google walk-in signals have now returned no rows for eight consecutive weeks, so they are shown as a gap. That is a tracking gap on the account, not a real zero."
+ },
+ "alert": {
+  "Hutong Dubai": [
+   "red",
+   "Traffic drop",
+   "Users 1,503 vs 2,057 last year, down 26.9%"
+  ]
+ },
+ "sharednote": {}
+}

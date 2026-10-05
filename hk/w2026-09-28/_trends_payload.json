@@ -1,0 +1,1358 @@
+{
+ "venues": [
+  "Aqua HK",
+  "Hutong HK",
+  "The Chinese Library",
+  "Cantina",
+  "Dim Sum Library",
+  "Shiro Pacific Place",
+  "Shiro Tai Kwun",
+  "Vesu",
+  "The Canton Library"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W32",
+  "W33",
+  "W34",
+  "W35"
+ ],
+ "dateTY": [
+  "7–13 Sep",
+  "14–20 Sep",
+  "21–27 Sep",
+  "28 Sep–4 Oct"
+ ],
+ "dateLY": [
+  "8–14 Sep",
+  "15–21 Sep",
+  "22–28 Sep",
+  "29 Sep–5 Oct"
+ ],
+ "fyrange": "FY26 weeks 32–35",
+ "sym": "HK$",
+ "data": {
+  "Aqua HK": [
+   [
+    "Website users",
+    [
+     3409,
+     3936,
+     3638,
+     3924
+    ],
+    [
+     3985,
+     3898,
+     3696,
+     4419
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.4,
+     5.6,
+     6.3,
+     4.5
+    ],
+    [
+     4.8,
+     5.6,
+     4.4,
+     5.2
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     184,
+     220,
+     229,
+     178
+    ],
+    [
+     190,
+     218,
+     161,
+     229
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     11,
+     16,
+     28,
+     11
+    ],
+    [
+     9,
+     12,
+     8,
+     21
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     56,
+     87,
+     86,
+     43
+    ],
+    [
+     76,
+     75,
+     49,
+     72
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     149.8,
+     123.9,
+     137.5,
+     227.7
+    ],
+    [
+     150.6,
+     185.3,
+     242.9,
+     100.8
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     669.3,
+     408.0,
+     252.7,
+     698.5
+    ],
+    [
+     665.0,
+     493.3,
+     751.1,
+     311.3
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     1167,
+     1459,
+     1325,
+     702
+    ],
+    [
+     1672,
+     1773,
+     1103,
+     1662
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Hutong HK": [
+   [
+    "Website users",
+    [
+     3051,
+     4600,
+     4020,
+     3505
+    ],
+    [
+     2930,
+     3143,
+     3049,
+     3611
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     9.6,
+     6.8,
+     6.9,
+     6.1
+    ],
+    [
+     7.8,
+     8.0,
+     8.5,
+     7.9
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     292,
+     315,
+     277,
+     213
+    ],
+    [
+     229,
+     251,
+     258,
+     287
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     15,
+     9,
+     14,
+     6
+    ],
+    [
+     14,
+     10,
+     10,
+     10
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     32,
+     20,
+     18,
+     9
+    ],
+    [
+     18,
+     23,
+     28,
+     29
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     210.3,
+     314.0,
+     339.2,
+     606.5
+    ],
+    [
+     247.5,
+     130.1,
+     168.6,
+     142.4
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     295.1,
+     512.8,
+     450.3,
+     649.9
+    ],
+    [
+     464.8,
+     653.7,
+     643.6,
+     618.4
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     2215,
+     2501,
+     2366,
+     1844
+    ],
+    [
+     1171,
+     938,
+     855,
+     1303
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "The Chinese Library": [
+   [
+    "Website users",
+    [
+     1800,
+     1970,
+     1482,
+     1617
+    ],
+    [
+     1338,
+     1390,
+     1219,
+     1425
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     7.7,
+     7.1,
+     7.6,
+     8.0
+    ],
+    [
+     7.6,
+     8.7,
+     6.3,
+     8.7
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     138,
+     139,
+     113,
+     129
+    ],
+    [
+     102,
+     121,
+     77,
+     124
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     6,
+     5,
+     10,
+     10
+    ],
+    [
+     2,
+     null,
+     2,
+     2
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     39,
+     38,
+     43,
+     42
+    ],
+    [
+     36,
+     40,
+     29,
+     43
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     84.3,
+     82.7,
+     68.4,
+     78.5
+    ],
+    [
+     119.7,
+     100.1,
+     153.1,
+     110.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     1076.6,
+     730.2,
+     637.5,
+     662.6
+    ],
+    [
+     1556.9,
+     null,
+     1590.0,
+     1658.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     435,
+     405,
+     390,
+     229
+    ],
+    [
+     369,
+     363,
+     261,
+     378
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Cantina": [
+   [
+    "Website users",
+    [
+     1507,
+     1448,
+     1406,
+     1608
+    ],
+    [
+     1097,
+     1068,
+     992,
+     1144
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.5,
+     5.6,
+     5.6,
+     6.3
+    ],
+    [
+     4.3,
+     4.6,
+     5.7,
+     5.2
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     83,
+     81,
+     79,
+     101
+    ],
+    [
+     47,
+     49,
+     57,
+     59
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     7,
+     7,
+     11,
+     10
+    ],
+    [
+     3,
+     3,
+     1,
+     3
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     19,
+     9,
+     11,
+     17
+    ],
+    [
+     17,
+     25,
+     25,
+     19
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     168.0,
+     346.1,
+     261.9,
+     198.6
+    ],
+    [
+     286.5,
+     140.4,
+     164.7,
+     242.1
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     356.4,
+     326.8,
+     231.7,
+     258.6
+    ],
+    [
+     688.3,
+     637.2,
+     1909.8,
+     634.3
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     1069,
+     1144,
+     1090,
+     1142
+    ],
+    [
+     185,
+     200,
+     226,
+     272
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Dim Sum Library": [
+   [
+    "Website users",
+    [
+     997,
+     1292,
+     986,
+     987
+    ],
+    [
+     1054,
+     1062,
+     989,
+     1162
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     12.8,
+     12.0,
+     14.5,
+     13.8
+    ],
+    [
+     15.7,
+     16.9,
+     14.2,
+     14.9
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     128,
+     155,
+     143,
+     136
+    ],
+    [
+     165,
+     180,
+     140,
+     173
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     4,
+     6,
+     3,
+     4
+    ],
+    [
+     9,
+     8,
+     7,
+     6
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     41,
+     69,
+     64,
+     61
+    ],
+    [
+     56,
+     56,
+     50,
+     66
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     28.9,
+     18.7,
+     20.0,
+     21.6
+    ],
+    [
+     21.1,
+     19.6,
+     26.8,
+     14.4
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     276.4,
+     174.4,
+     376.6,
+     266.2
+    ],
+    [
+     206.0,
+     241.1,
+     278.8,
+     308.3
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "Shiro Pacific Place": [
+   [
+    "Website users",
+    [
+     684,
+     654,
+     670,
+     704
+    ],
+    [
+     936,
+     822,
+     748,
+     837
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     12.0,
+     10.1,
+     10.6,
+     11.2
+    ],
+    [
+     11.0,
+     13.1,
+     11.8,
+     10.3
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     82,
+     66,
+     71,
+     79
+    ],
+    [
+     103,
+     108,
+     88,
+     86
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     17,
+     19,
+     20,
+     26
+    ],
+    [
+     10,
+     6,
+     6,
+     1
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google bookings",
+    [
+     87,
+     64,
+     71,
+     66
+    ],
+    [
+     35,
+     31,
+     27,
+     35
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google CPA",
+    [
+     48.2,
+     62.8,
+     56.3,
+     59.3
+    ],
+    [
+     37.9,
+     34.3,
+     42.8,
+     33.6
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Meta CPA",
+    [
+     352.7,
+     270.4,
+     262.6,
+     200.5
+    ],
+    [
+     184.8,
+     324.8,
+     320.4,
+     1886.4
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     227,
+     226,
+     280,
+     138
+    ],
+    [
+     142,
+     174,
+     113,
+     169
+    ],
+    false,
+    "n",
+    "shared"
+   ]
+  ],
+  "Shiro Tai Kwun": [
+   [
+    "Website users",
+    [
+     1328,
+     1441,
+     1226,
+     1514
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     6.1,
+     5.5,
+     5.5,
+     5.1
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     81,
+     79,
+     68,
+     77
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     17,
+     19,
+     20,
+     26
+    ],
+    [
+     10,
+     6,
+     6,
+     1
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google bookings",
+    [
+     87,
+     64,
+     71,
+     66
+    ],
+    [
+     35,
+     31,
+     27,
+     35
+    ],
+    false,
+    "n",
+    "shared"
+   ],
+   [
+    "Google CPA",
+    [
+     48.2,
+     62.8,
+     56.3,
+     59.3
+    ],
+    [
+     37.9,
+     34.3,
+     42.8,
+     33.6
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Meta CPA",
+    [
+     352.7,
+     270.4,
+     262.6,
+     200.5
+    ],
+    [
+     184.8,
+     324.8,
+     320.4,
+     1886.4
+    ],
+    true,
+    "$",
+    "shared"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     227,
+     226,
+     280,
+     138
+    ],
+    [
+     142,
+     174,
+     113,
+     169
+    ],
+    false,
+    "n",
+    "shared"
+   ]
+  ],
+  "Vesu": [
+   [
+    "Website users",
+    [
+     1572,
+     1380,
+     1239,
+     1283
+    ],
+    [
+     881,
+     861,
+     926,
+     1046
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     6.4,
+     7.6,
+     5.9,
+     6.5
+    ],
+    [
+     6.6,
+     7.5,
+     6.4,
+     6.7
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     100,
+     105,
+     73,
+     83
+    ],
+    [
+     58,
+     65,
+     59,
+     70
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     30,
+     35,
+     15,
+     17
+    ],
+    [
+     15,
+     16,
+     16,
+     13
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     31,
+     33,
+     27,
+     34
+    ],
+    [
+     19,
+     28,
+     17,
+     21
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     82.7,
+     75.2,
+     84.0,
+     64.9
+    ],
+    [
+     121.6,
+     76.8,
+     148.0,
+     101.7
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     129.0,
+     98.2,
+     231.8,
+     207.6
+    ],
+    [
+     141.1,
+     131.7,
+     131.6,
+     167.4
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ]
+  ],
+  "The Canton Library": [
+   [
+    "Website users",
+    [
+     1452,
+     3767,
+     3959,
+     3367
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     0.9,
+     0.8,
+     1.2,
+     0.8
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     13,
+     31,
+     46,
+     27
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     3,
+     8,
+     11,
+     10
+    ],
+    [
+     0,
+     0,
+     0,
+     0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     1697.5,
+     1558.7,
+     1087.4,
+     1134.4
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua HK": "W35 users 3,924 (-11.2% YoY) with 178 GA4 bookings (-22.3% YoY); conversion rate 4.5% vs 5.2% LY and 6.3% the week before. Traffic rose 7.9% week on week while bookings fell 22.3%, so this is a conversion week, not a traffic week. Google delivered 43 bookings at HK$228 CPA, up from HK$124; Meta 11 at HK$698, its worst Meta week of the eight. The year-ago week carried the 1 October National Day holiday and Golden Week inbound travel. Google had not fully published modelled store visits for this week when the data was pulled, so the latest point on the walk-in panel understates the true figure.",
+  "Hutong HK": "W35 users 3,505 (-2.9% YoY) with 213 GA4 bookings (-25.8% YoY); conversion rate 6.1% vs 7.9% LY. Google delivered only 9 bookings at HK$607 CPA against 18 at HK$339 the week before, the weakest Google week of the eight here; Meta 6 at HK$650. The National Day firework dinner page drew 469 sessions and produced one website booking. Google had not fully published modelled store visits for this week when the data was pulled, so the latest point on the walk-in panel understates the true figure.",
+  "The Chinese Library": "W35 users 1,617 (+13.5% YoY) with 129 GA4 bookings (+4.0% YoY); conversion rate 8.0% vs 8.7% LY. Google delivered 42 bookings at HK$79 CPA, inside the good band and the best of the four weeks; Meta 10 at HK$663 on HK$6,626 of spend, which is the largest Meta budget in the portfolio against a small schedule count. Google had not fully published modelled store visits for this week when the data was pulled, so the latest point on the walk-in panel understates the true figure.",
+  "Cantina": "W35 users 1,608 (+40.6% YoY) with 101 GA4 bookings (+71.2% YoY); conversion rate 6.3% vs 5.2% LY. Bookings are up 27.8% week on week and this is the strongest week of the four. Google delivered 17 bookings at HK$199 CPA; Meta 10 at HK$259, inside the good band. Google had not fully published modelled store visits for this week when the data was pulled, so the latest point on the walk-in panel understates the true figure.",
+  "Dim Sum Library": "W35 users 987 (-15.1% YoY) with 136 GA4 bookings (-21.4% YoY); conversion rate 13.8% vs 14.9% LY. Users were flat week on week, so the gap here is traffic volume rather than conversion. Google delivered 61 bookings at HK$22 CPA, still the cheapest acquisition in the portfolio; Meta 4 at HK$266. Google walk-in signals are not tracked in this account at all, so that panel is empty rather than zero.",
+  "Shiro Pacific Place": "W35 users 704 (-15.9% YoY) with 79 GA4 bookings (-8.1% YoY); conversion rate 11.2% vs 10.3% LY, so conversion is holding while traffic is softer. Google delivered 66 bookings at HK$59 CPA; Meta 26 at HK$201, both on the shared Shiro account. Google had not fully published modelled store visits for this week when the data was pulled, so the latest point on the walk-in panel understates the true figure.",
+  "Shiro Tai Kwun": "W35 users 1,514 with 77 GA4 bookings; conversion rate 5.1%, up from 5.5% weeks earlier on a much larger traffic base. New in 2026, so there is no like-for-like last year. Google delivered 66 bookings at HK$59 CPA; Meta 26 at HK$201, both on the shared Shiro account. Google had not fully published modelled store visits for this week when the data was pulled, so the latest point on the walk-in panel understates the true figure.",
+  "Vesu": "W35 users 1,283 (+22.7% YoY) with 83 GA4 bookings (+18.6% YoY); conversion rate 6.5% vs 6.7% LY. Google delivered 34 bookings at HK$65 CPA, the best of the four weeks; Meta 17 at HK$208 from the conversion campaign, against 15 at HK$232 the week before. Vesu reopened on 8 September, so W32 had six trading days. Google walk-in signals are not tracked in this account, so that panel is empty.",
+  "The Canton Library": "The Canton Library opened on 8 September 2026, so there is no last-year line. W35 users 3,367 with 27 GA4 bookings; conversion rate 0.8%, down from 1.2%. Meta&rsquo;s conversions campaign delivered 10 bookings at HK$1,134 CPA, close to HK$1,087 the week before; the awareness campaign (HK$2,774 this week) optimises to landing page views and carries no cost per booking. Google spent HK$6,294 this week. A booking conversion action has now appeared in the Google account and recorded one conversion, but one against 27 GA4 bookings is not a working import, so Google bookings and CPA stay not available rather than zero. W32 had six trading days."
+ },
+ "alert": {
+  "Aqua HK": [
+   "red",
+   "Conversion drop",
+   "Conversion 4.5% against 6.3% the week before on higher traffic"
+  ],
+  "Hutong HK": [
+   "amber",
+   "Behind target",
+   "Bookings 23% under the blended weekly target"
+  ],
+  "The Chinese Library": [
+   "green",
+   "On track",
+   "Bookings 23% above the weekly target"
+  ],
+  "Cantina": [
+   "green",
+   "On track",
+   "Bookings 53% above the weekly target"
+  ],
+  "Dim Sum Library": [
+   "amber",
+   "Traffic soft",
+   "Users 15% below last year"
+  ],
+  "Shiro Pacific Place": [
+   "green",
+   "Conversion holding",
+   "Conversion 11.2% against 10.3% last year"
+  ],
+  "Shiro Tai Kwun": [
+   "blue",
+   "New venue",
+   "Launched 2026, this-year only, no YoY comparison"
+  ],
+  "Vesu": [
+   "blue",
+   "Reopened",
+   "Closed late April, reopened 8 Sep 2026"
+  ],
+  "The Canton Library": [
+   "blue",
+   "New venue",
+   "Opened 8 Sep 2026, this-year only, no YoY comparison"
+  ]
+ },
+ "sharednote": {
+  "Shiro Pacific Place": "Meta &amp; Google panels are the shared Shiro ad account (Pacific Place + Tai Kwun combined).",
+  "Shiro Tai Kwun": "Meta &amp; Google panels are the shared Shiro ad account (Pacific Place + Tai Kwun combined).",
+  "Vesu": "Meta panels use the conversion (leads) campaign only. Gaps = no booking campaign running or venue closed, not zero.",
+  "The Canton Library": "Meta panels = Canton campaigns in the Vista ad account (conversions campaign only for bookings and CPA). Google bookings, Google CPA and walk-in signals are not tracked, so those panels are empty."
+ },
+ "gaps": true
+}

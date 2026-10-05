@@ -1,0 +1,620 @@
+{
+ "venues": {
+  "Aqua NYC": {
+   "book": {
+    "cur": 195,
+    "prior": 217,
+    "yoy": 560,
+    "ytd": 9835
+   },
+   "site": {
+    "cur": {
+     "sessions": 7604,
+     "users": 6224,
+     "pageviews": 21046,
+     "asd": 164.34644016662284,
+     "bounce": 0.5005260389268806,
+     "engrate": 0.4994739610731194,
+     "newusers": 5713
+    },
+    "prior": {
+     "sessions": 7198,
+     "users": 5904,
+     "pageviews": 19249,
+     "asd": 145.5960847891081,
+     "bounce": 0.45095859961100304,
+     "engrate": 0.549041400388997,
+     "newusers": 5463
+    },
+    "yoy": {
+     "sessions": 9866,
+     "users": 7363,
+     "pageviews": 27479,
+     "asd": 197.95513795844315,
+     "bounce": 0.42844111088587067,
+     "engrate": 0.5715588891141293,
+     "newusers": 6564
+    }
+   },
+   "series": {
+    "W32": {
+     "b": 259,
+     "u": 6158
+    },
+    "W33": {
+     "b": 207,
+     "u": 5778
+    },
+    "W34": {
+     "b": 220,
+     "u": 5966
+    },
+    "W35": {
+     "b": 237,
+     "u": 5366
+    },
+    "W36": {
+     "b": 198,
+     "u": 5498
+    },
+    "W37": {
+     "b": 186,
+     "u": 6266
+    },
+    "W38": {
+     "b": 217,
+     "u": 5904
+    },
+    "W39": {
+     "b": 195,
+     "u": 6224
+    }
+   },
+   "ly": {
+    "L36": {
+     "b": 598,
+     "u": 7085
+    },
+    "L37": {
+     "b": 383,
+     "u": 6103
+    },
+    "L38": {
+     "b": 578,
+     "u": 7435
+    },
+    "L39": {
+     "b": 560,
+     "u": 7363
+    }
+   }
+  },
+  "Hutong NYC": {
+   "book": {
+    "cur": 127,
+    "prior": 153,
+    "yoy": 0,
+    "ytd": 6213
+   },
+   "site": {
+    "cur": {
+     "sessions": 3605,
+     "users": 2650,
+     "pageviews": 8828,
+     "asd": 173.84863883522885,
+     "bounce": 0.42413314840499305,
+     "engrate": 0.575866851595007,
+     "newusers": 2259
+    },
+    "prior": {
+     "sessions": 3854,
+     "users": 2949,
+     "pageviews": 9983,
+     "asd": 190.4698789893617,
+     "bounce": 0.29294239750908146,
+     "engrate": 0.7070576024909185,
+     "newusers": 2560
+    },
+    "yoy": {
+     "sessions": 4591,
+     "users": 3540,
+     "pageviews": 10335,
+     "asd": 178.95543205685036,
+     "bounce": 0.2748856458287955,
+     "engrate": 0.7251143541712045,
+     "newusers": 2948
+    }
+   },
+   "series": {
+    "W32": {
+     "b": 169,
+     "u": 3347
+    },
+    "W33": {
+     "b": 141,
+     "u": 3395
+    },
+    "W34": {
+     "b": 137,
+     "u": 2937
+    },
+    "W35": {
+     "b": 142,
+     "u": 2570
+    },
+    "W36": {
+     "b": 138,
+     "u": 2641
+    },
+    "W37": {
+     "b": 115,
+     "u": 3007
+    },
+    "W38": {
+     "b": 153,
+     "u": 2949
+    },
+    "W39": {
+     "b": 127,
+     "u": 2650
+    }
+   },
+   "ly": {
+    "L36": {
+     "b": 190,
+     "u": 4529
+    },
+    "L37": {
+     "b": 183,
+     "u": 4319
+    },
+    "L38": {
+     "b": 1,
+     "u": 2780
+    },
+    "L39": {
+     "b": 0,
+     "u": 3540
+    }
+   }
+  },
+  "Hutong Miami": {
+   "book": {
+    "cur": 69,
+    "prior": 55,
+    "yoy": 87,
+    "ytd": 3628
+   },
+   "site": {
+    "cur": {
+     "sessions": 1997,
+     "users": 1598,
+     "pageviews": 5366,
+     "asd": 165.37100327741612,
+     "bounce": 0.41812719078617927,
+     "engrate": 0.5818728092138208,
+     "newusers": 1345
+    },
+    "prior": {
+     "sessions": 1960,
+     "users": 1520,
+     "pageviews": 5343,
+     "asd": 146.61843444642858,
+     "bounce": 0.3295918367346939,
+     "engrate": 0.6704081632653062,
+     "newusers": 1329
+    },
+    "yoy": {
+     "sessions": 3578,
+     "users": 3251,
+     "pageviews": 5502,
+     "asd": 107.35764361486864,
+     "bounce": 0.4452207937395193,
+     "engrate": 0.5547792062604807,
+     "newusers": 2880
+    }
+   },
+   "series": {
+    "W32": {
+     "b": 88,
+     "u": 1934
+    },
+    "W33": {
+     "b": 112,
+     "u": 2154
+    },
+    "W34": {
+     "b": 80,
+     "u": 1841
+    },
+    "W35": {
+     "b": 74,
+     "u": 1674
+    },
+    "W36": {
+     "b": 54,
+     "u": 1624
+    },
+    "W37": {
+     "b": 79,
+     "u": 1435
+    },
+    "W38": {
+     "b": 55,
+     "u": 1520
+    },
+    "W39": {
+     "b": 69,
+     "u": 1598
+    }
+   },
+   "ly": {
+    "L36": {
+     "b": 100,
+     "u": 2737
+    },
+    "L37": {
+     "b": 108,
+     "u": 2748
+    },
+    "L38": {
+     "b": 124,
+     "u": 2699
+    },
+    "L39": {
+     "b": 87,
+     "u": 3251
+    }
+   }
+  }
+ },
+ "nyc_split": {
+  "Aqua Kyoto": {
+   "W36": {
+    "b": 23,
+    "u": 940
+   },
+   "W37": {
+    "b": 19,
+    "u": 975
+   },
+   "W38": {
+    "b": 33,
+    "u": 1057
+   },
+   "W39": {
+    "b": 24,
+    "u": 1069
+   }
+  }
+ },
+ "snapshot": {
+  "Aqua NYC": {
+   "channels": {
+    "s": {
+     "cur": {
+      "Paid Social": 2382,
+      "Organic Search": 2318,
+      "Direct": 1504,
+      "Unassigned": 605,
+      "Cross-network": 530,
+      "Paid Search": 372,
+      "Organic Social": 207,
+      "Referral": 93,
+      "AI Assistant": 28,
+      "Paid Other": 12
+     },
+     "prior": {
+      "Paid Social": 2540,
+      "Organic Search": 2247,
+      "Direct": 1504,
+      "Paid Search": 420,
+      "Organic Social": 198,
+      "Cross-network": 89,
+      "Referral": 89,
+      "Unassigned": 60,
+      "AI Assistant": 28,
+      "Paid Other": 14,
+      "Email": 2
+     },
+     "yoy": {
+      "Direct": 2664,
+      "Organic Search": 1759,
+      "Paid Social": 1515,
+      "Paid Search": 1052,
+      "Cross-network": 842,
+      "Referral": 735,
+      "Paid Other": 637,
+      "Organic Social": 382,
+      "Unassigned": 174,
+      "Email": 4
+     }
+    },
+    "b": {
+     "cur": {
+      "Organic Search": 79,
+      "Direct": 41,
+      "Paid Social": 28,
+      "Unassigned": 24,
+      "Organic Social": 9,
+      "Paid Search": 8,
+      "Cross-network": 5,
+      "Paid Other": 1
+     },
+     "prior": {
+      "Organic Search": 93,
+      "Direct": 59,
+      "Paid Social": 22,
+      "Paid Search": 18,
+      "Organic Social": 14,
+      "Unassigned": 7,
+      "Paid Other": 2,
+      "Cross-network": 1,
+      "Referral": 1
+     },
+     "yoy": {
+      "Direct": 165,
+      "Organic Search": 113,
+      "Referral": 105,
+      "Paid Search": 71,
+      "Cross-network": 41,
+      "Organic Social": 23,
+      "Paid Social": 16,
+      "Unassigned": 14,
+      "Paid Other": 12
+     }
+    }
+   },
+   "devices": {
+    "mobile": 6380,
+    "desktop": 1153,
+    "tablet": 56
+   },
+   "landing_sessions": {
+    "/aqua-roma": 3678,
+    "/": 1082,
+    "/aqua-kyoto": 546,
+    "": 431,
+    "/explore/aquanyc/reservations/create/search": 316,
+    "/explore/aquanyc/reservations/manage": 284,
+    "/menus/roma-a-la-carte": 239,
+    "(not set)": 237,
+    "/aqua-roma/dining-at-roma": 189,
+    "/menus/taste-of-roma": 133
+   },
+   "landing_bookings": {
+    "/aqua-roma": 64,
+    "/explore/aquanyc/reservations/create/search": 34,
+    "/explore/aquanyc/reservations/create/checkout": 30,
+    "/": 20,
+    "/explore/aquanyc/reservations/manage": 13,
+    "/aqua-kyoto": 12,
+    "": 4,
+    "/explore/aquanyc/reservations/manage/canceled": 4,
+    "/explore/aquakyotonyc/reservations/create/search": 3,
+    "/explore/aquanyc/reservations/create/details": 2,
+    "/explore/aquanyc/reservations/modify/search": 2,
+    "/menus/roma-experience-menu": 2,
+    "/reservations/aquanyc": 2,
+    "/aqua-roma/dining-at-roma": 1,
+    "/menus/brunch-on-broadway": 1
+   }
+  },
+  "Hutong NYC": {
+   "channels": {
+    "s": {
+     "cur": {
+      "Organic Search": 1147,
+      "Direct": 841,
+      "Cross-network": 482,
+      "Unassigned": 373,
+      "Referral": 306,
+      "Paid Search": 283,
+      "Paid Social": 249,
+      "Organic Social": 73,
+      "AI Assistant": 51,
+      "Email": 13,
+      "Paid Other": 7
+     },
+     "prior": {
+      "Organic Search": 1466,
+      "Direct": 1039,
+      "Referral": 344,
+      "Paid Search": 289,
+      "Cross-network": 266,
+      "Paid Social": 228,
+      "Organic Social": 108,
+      "AI Assistant": 69,
+      "Unassigned": 34,
+      "Email": 21,
+      "Paid Other": 5
+     },
+     "yoy": {
+      "Organic Search": 1623,
+      "Direct": 991,
+      "Paid Social": 789,
+      "Cross-network": 456,
+      "Organic Social": 226,
+      "Paid Search": 165,
+      "Referral": 152,
+      "Unassigned": 77,
+      "Paid Other": 37
+     }
+    },
+    "b": {
+     "cur": {
+      "Organic Search": 46,
+      "Referral": 24,
+      "Direct": 18,
+      "Unassigned": 14,
+      "Paid Search": 10,
+      "Cross-network": 6,
+      "Organic Social": 4,
+      "AI Assistant": 3,
+      "Email": 1,
+      "Paid Social": 1
+     },
+     "prior": {
+      "Organic Search": 49,
+      "Direct": 44,
+      "Referral": 32,
+      "Paid Search": 12,
+      "Cross-network": 6,
+      "Unassigned": 4,
+      "AI Assistant": 2,
+      "Paid Social": 2,
+      "Email": 1,
+      "Organic Social": 1
+     },
+     "yoy": {}
+    }
+   },
+   "devices": {
+    "mobile": 2415,
+    "desktop": 1075,
+    "tablet": 44
+   },
+   "landing_sessions": {
+    "/": 1660,
+    "/explore/hutongnewyork/reservations/create/search": 468,
+    "": 281,
+    "/menus": 248,
+    "/explore/hutongnewyork/reservations/manage": 195,
+    "/bubbles-bao-brunch-hutong": 190,
+    "(not set)": 168,
+    "/menus/dinner": 126,
+    "/the-shanghai-bar": 117,
+    "/private-events": 58
+   },
+   "landing_bookings": {
+    "/": 44,
+    "/explore/hutongnewyork/reservations/create/search": 38,
+    "/explore/hutongnewyork/reservations/create/upgrades": 14,
+    "/explore/hutongnewyork/reservations/manage": 10,
+    "": 4,
+    "/reservations": 4,
+    "/explore/hutongnewyork/reservations/create/checkout": 3,
+    "/menus": 2,
+    "/bubbles-bao-brunch-hutong": 1,
+    "/experiences/hutongnewyork/unlimited-dim-sum-brunch-4878471170473984": 1,
+    "/explore/hutongnewyork/reservations/modify/search": 1,
+    "/menus/brunch": 1,
+    "/menus/lunch": 1,
+    "/reservations/hutongnewyork": 1,
+    "/restaurant": 1
+   }
+  },
+  "Hutong Miami": {
+   "channels": {
+    "s": {
+     "cur": {
+      "Paid Social": 632,
+      "Organic Search": 427,
+      "Direct": 357,
+      "Unassigned": 192,
+      "Cross-network": 189,
+      "Paid Search": 167,
+      "Organic Social": 110,
+      "Referral": 37,
+      "AI Assistant": 12,
+      "Paid Other": 11
+     },
+     "prior": {
+      "Organic Search": 534,
+      "Paid Social": 527,
+      "Direct": 406,
+      "Paid Search": 168,
+      "Organic Social": 124,
+      "Cross-network": 106,
+      "Referral": 58,
+      "AI Assistant": 19,
+      "Unassigned": 15,
+      "Paid Other": 6
+     },
+     "yoy": {
+      "Organic Social": 2457,
+      "Organic Search": 340,
+      "Direct": 317,
+      "Paid Search": 235,
+      "Cross-network": 152,
+      "Referral": 48,
+      "Unassigned": 38,
+      "Paid Other": 7,
+      "Email": 3,
+      "Paid Social": 1
+     }
+    },
+    "b": {
+     "cur": {
+      "Organic Search": 22,
+      "Direct": 16,
+      "Paid Social": 9,
+      "Unassigned": 9,
+      "Paid Search": 6,
+      "Referral": 4,
+      "Cross-network": 1,
+      "Organic Social": 1,
+      "Paid Other": 1
+     },
+     "prior": {
+      "Organic Search": 17,
+      "Direct": 15,
+      "Paid Search": 8,
+      "Paid Social": 7,
+      "Organic Social": 5,
+      "Unassigned": 2,
+      "Referral": 1
+     },
+     "yoy": {
+      "Organic Social": 29,
+      "Organic Search": 19,
+      "Direct": 18,
+      "Paid Search": 12,
+      "Cross-network": 4,
+      "Referral": 4,
+      "Unassigned": 1
+     }
+    }
+   },
+   "devices": {
+    "mobile": 1747,
+    "desktop": 242,
+    "tablet": 10
+   },
+   "landing_sessions": {
+    "/": 709,
+    "/menus/bubbles-bao-brunch": 354,
+    "/menus": 315,
+    "/explore/hutongmiami/reservations/create/search": 142,
+    "": 138,
+    "/menus/brickell-nights-menu": 125,
+    "/explore/hutongmiami/reservations/manage": 87,
+    "(not set)": 72,
+    "/menus/miami-spice-dinner-menu": 58,
+    "/menus/a-la-carte": 40
+   },
+   "landing_bookings": {
+    "/explore/hutongmiami/reservations/create/search": 27,
+    "/": 16,
+    "/explore/hutongmiami/reservations/manage": 7,
+    "/menus/bubbles-bao-brunch": 5,
+    "/explore/hutongmiami/reservations/create/checkout": 4,
+    "/menus": 4,
+    "": 2,
+    "/explore/hutongmiami/reservations/create/upgrades": 1,
+    "/explore/hutongmiami/reservations/modify/checkout": 1,
+    "/menus/miami-spice-dinner-menu": 1,
+    "/menus/miami-spice-lunch-menu": 1
+   }
+  }
+ },
+ "notes": {
+  "weeks": "FY W32..W39 = ISO 2026-W33..W40 (Mon-Sun), Mondays 2026-08-10 to 2026-09-28; LY L36..L39 = Mondays 2025-09-08 to 2025-09-29 at -364 days",
+  "bookings": "eventCount, eventName EXACT 'sevenrooms_booking_complete'",
+  "ytd_window": "2026-01-01..2026-10-04",
+  "series_provenance": "W32..W37 users carried from the published w2026-09-21 raw file; W38 and W39 users re-pulled this run (W38 restated up: Aqua NYC 5,860 to 5,904, Hutong NYC 2,946 to 2,949, Hutong Miami 1,517 to 1,520). All bookings W32..W39 and L36..L39 re-pulled daily and summed this run; W38 bookings restated up: Aqua NYC 214 to 217, Hutong NYC 150 to 153, Hutong Miami 55 unchanged.",
+  "ga4_engagement_restatement": "Prior-week bounce and engagement rates restated materially: Aqua NYC bounce 0.517 to 0.451, Hutong NYC 0.379 to 0.293, Hutong Miami 0.406 to 0.330. Session-scoped engagement metrics are still settling when the weekly run happens, so read the current week's bounce and engagement as provisional.",
+  "hutong_nyc_ly_gap": "Hutong NYC GA4 sevenrooms_booking_complete returns 0 for the whole of 29 Sep to 5 Oct 2025 while sessions ran normally at 4,591 for the week. This is inside the SevenRooms widget tracking outage that began 22 Sep 2025 and did not resume until 15 Oct 2025. The Meta Schedule pixel reads 4 schedules and the Google 'Sevenrooms Booking Complete' action reads 5.0 for the same week, against 7.17 and 32.17 in the two weeks before. Last-year bookings for this venue are unusable for W39 as they were for W38.",
+  "aqua_nyc_split": "Aqua Roma = combined Aqua NYC minus Aqua Kyoto. Kyoto users pulled with a pagePath PARTIAL_REGEXP filter 'kyoto|aquakyotonyc' one week at a time with no date dimension; Kyoto bookings pulled with andGroup(eventName=sevenrooms_booking_complete, pagePath PARTIAL_REGEXP 'aquakyotonyc'). Kyoto W38 restated up from 31 to 33 bookings and 1,053 to 1,057 users."
+ }
+}

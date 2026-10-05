@@ -1,0 +1,19 @@
+{
+ "market": "Aqua Paris",
+ "sym": "€",
+ "ccy": "EUR",
+ "month_label": "September 2026",
+ "generated": "5 October 2026",
+ "venues": [
+  {
+   "name": "Aqua Kyoto Paris",
+   "act": 1298,
+   "tgt": 0,
+   "mom": 952,
+   "yoy": 814,
+   "nc": false
+  }
+ ],
+ "note": "Aqua Kyoto Paris has no agreed GA4 booking target, so this report shows volume, month on month and year on year only. September took <b>1,298 bookings</b> against 952 in August, trade returning after the Paris August lull. Year on year is shown for the first time. September 2025 recorded 814 bookings, the first full month after the GA4 property went live, so the figure is real but the base is a launch ramp rather than a settled trading month. On that base bookings are up 59 percent. September spend closed at €6,992 on Meta against a €7,000 plan and €6,032 on Google against €6,000, so €13,024 of digital against a €13,000 plan.",
+ "no_target": true
+}

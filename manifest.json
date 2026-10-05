@@ -1,11 +1,18 @@
 {
- "generated": "28 September 2026",
+ "generated": "5 October 2026",
  "markets": [
   {
    "name": "Hong Kong",
    "slug": "hk",
    "ccy": "HKD",
    "weekly": [
+    {
+     "dates": "W35 · 28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W34 · 21–27 Sep 2026",
      "folder": "w2026-09-21",
@@ -215,6 +222,10 @@
    ],
    "monthly": [
     {
+     "label": "September 2026",
+     "folder": "m2026-09"
+    },
+    {
      "label": "August 2026",
      "folder": "m2026-08"
     },
@@ -244,6 +255,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28"
+    },
     {
      "dates": "21–27 Sep 2026",
      "folder": "w2026-09-21"
@@ -346,6 +361,13 @@
    "ccy": "GBP",
    "weekly": [
     {
+     "dates": "W35 · 28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
+    {
      "dates": "W34 · 21–27 Sep 2026",
      "folder": "w2026-09-21",
      "deepdive": true,
@@ -555,6 +577,10 @@
    ],
    "monthly": [
     {
+     "label": "September 2026",
+     "folder": "m2026-09"
+    },
+    {
      "label": "August 2026",
      "folder": "m2026-08"
     },
@@ -584,6 +610,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28"
+    },
     {
      "dates": "21–27 Sep 2026",
      "folder": "w2026-09-21"
@@ -690,6 +720,13 @@
    "slug": "usa",
    "ccy": "USD",
    "weekly": [
+    {
+     "dates": "W39 · 28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28",
+     "deepdive": true,
+     "ads": true,
+     "covers": true
+    },
     {
      "dates": "W38 · 21–27 Sep 2026",
      "folder": "w2026-09-21",
@@ -922,6 +959,10 @@
    ],
    "monthly": [
     {
+     "label": "September 2026",
+     "folder": "m2026-09"
+    },
+    {
      "label": "August 2026",
      "folder": "m2026-08"
     },
@@ -955,6 +996,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28"
+    },
     {
      "dates": "21–27 Sep 2026",
      "folder": "w2026-09-21"
@@ -1068,6 +1113,12 @@
    "slug": "dubai",
    "ccy": "AED",
    "weekly": [
+    {
+     "dates": "W39 · 28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "W38 · 21–27 Sep 2026",
      "folder": "w2026-09-21",
@@ -1191,6 +1242,10 @@
    ],
    "monthly": [
     {
+     "label": "September 2026",
+     "folder": "m2026-09"
+    },
+    {
      "label": "August 2026",
      "folder": "m2026-08"
     },
@@ -1224,6 +1279,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28"
+    },
     {
      "dates": "21–27 Sep 2026",
      "folder": "w2026-09-21"
@@ -1311,6 +1370,12 @@
    "slug": "paris",
    "ccy": "EUR",
    "weekly": [
+    {
+     "dates": "W35 · 28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28",
+     "ads": true,
+     "dash": false
+    },
     {
      "dates": "W34 · 21–27 Sep 2026",
      "folder": "w2026-09-21",
@@ -1542,6 +1607,10 @@
    ],
    "monthly": [
     {
+     "label": "September 2026",
+     "folder": "m2026-09"
+    },
+    {
      "label": "August 2026",
      "folder": "m2026-08"
     },
@@ -1571,6 +1640,10 @@
     }
    ],
    "trends": [
+    {
+     "dates": "28 Sep–4 Oct 2026",
+     "folder": "w2026-09-28"
+    },
     {
      "dates": "21–27 Sep 2026",
      "folder": "w2026-09-21"

@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OpenTable, Open Table, OT Guestcenter, OT and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 391 &middot; YoY &#9660;59.2% like for like",
+ "ga4_yoy": "&#9660;59.2% YoY (two venues)",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> On the two venues with a usable last-year comparison, GA4 bookings are <b>down 59.2% YoY</b> while covers are <b>down 10.3%</b>. Part of that difference is a routing change, not lost demand: both US Hutongs moved their Google Reserve provider to OpenTable in March, and at the two Hutongs <b>OpenTable and Resy</b> covers are <b>up 59 percent</b> year on year while Google Reserve covers are <b>down 68 percent</b>. That is a margin change to watch, not a demand collapse. Covers came in at <b>3,715</b>, <b>down 6.3 percent</b> week on week and <b>down 11.3 percent</b> year on year. On the weekly email definition of Website plus OpenTable and Resy plus Google Reserve, covers were <b>2,048</b>, down 9.9 percent week on week but <b>up 9.6 percent</b> year on year. <b>One import has been stripped out of this week:</b> 40 OT Guestcenter records (124 covers) loaded into Hutong New York in a single hour on the evening of 28 September, every one of them past-dated at creation with service dates running from 19 March to 27 September. Left in, Hutong New York's OpenTable line would read 548 rather than 424 and the market would read 3,839 rather than 3,715. This is the fourth week in a row that this venue has taken an OpenTable history re-sync. The exclusions named last week stay out: the two Hutong New York loads of 21 and 23 September (76 records / 211 covers and 25 records / 75 covers) stay out of the prior-week column and the W38 point, the 273-cover Aqua Roma backfill stays out of W37, and the 1,907-cover Hutong New York history load stays out of W35. The year-ago week carries no bulk import, so nothing is excluded there; the Aqua Roma onboarding load of 23 September 2025 falls outside this year-ago window.",
+ "week": "28 Sep–4 Oct 2026",
+ "wow": "21–27 Sep 2026",
+ "yoy": "29 Sep–5 Oct 2025",
+ "generated": "5 October 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 195,
+   "ch": {
+    "web": {
+     "c": 471,
+     "p": 393,
+     "y": 426
+    },
+    "gr": {
+     "c": 133,
+     "p": 189,
+     "y": 142
+    },
+    "ot": {
+     "c": 204,
+     "p": 192,
+     "y": 143
+    },
+    "walk": {
+     "c": 759,
+     "p": 720,
+     "y": 823
+    },
+    "recep": {
+     "c": 206,
+     "p": 224,
+     "y": 721
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 63,
+     "p": 55,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 127,
+   "ch": {
+    "web": {
+     "c": 358,
+     "p": 364,
+     "y": 346
+    },
+    "gr": {
+     "c": 101,
+     "p": 126,
+     "y": 315
+    },
+    "ot": {
+     "c": 424,
+     "p": 630,
+     "y": 302
+    },
+    "walk": {
+     "c": 358,
+     "p": 404,
+     "y": 498
+    },
+    "recep": {
+     "c": 6,
+     "p": 9,
+     "y": 12
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 34,
+     "p": 39,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 69,
+   "ch": {
+    "web": {
+     "c": 163,
+     "p": 128,
+     "y": 85
+    },
+    "gr": {
+     "c": 10,
+     "p": 5,
+     "y": 28
+    },
+    "ot": {
+     "c": 184,
+     "p": 246,
+     "y": 81
+    },
+    "walk": {
+     "c": 233,
+     "p": 231,
+     "y": 266
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 8,
+     "p": 10,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39"
+  ],
+  "total": [
+   3773,
+   3476,
+   3246,
+   3247,
+   3638,
+   3540,
+   3965,
+   3715
+  ],
+  "ot": [
+   921,
+   759,
+   788,
+   684,
+   875,
+   772,
+   1068,
+   812
+  ]
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "28 Sep–4 Oct 2026",
+ "wow": "21–27 Sep 2026",
+ "yoy": "29 Sep–5 Oct 2025",
+ "generated": "5 October 2026",
+ "badge": "AQUA NYC CONVERSION RATE",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 195,
+   "tgt": 540,
+   "wow_b": 217,
+   "yoy_b": 560,
+   "users": 6224,
+   "sessions": 7604,
+   "asd": 164.3,
+   "bounce": 0.501,
+   "meta_s": 2043.92,
+   "meta_sch": 71,
+   "meta_sch_prior": 59,
+   "goog_s": 605.41,
+   "goog_c": 15.0,
+   "goog_c_prior": 30.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 127,
+   "tgt": 438,
+   "wow_b": 153,
+   "yoy_b": 0,
+   "users": 2650,
+   "sessions": 3605,
+   "asd": 173.8,
+   "bounce": 0.424,
+   "meta_s": 1268.16,
+   "meta_sch": 17,
+   "meta_sch_prior": 10,
+   "goog_s": 1138.74,
+   "goog_c": 16.0,
+   "goog_c_prior": 30.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 69,
+   "tgt": 119,
+   "wow_b": 55,
+   "yoy_b": 87,
+   "users": 1598,
+   "sessions": 1997,
+   "asd": 165.4,
+   "bounce": 0.418,
+   "meta_s": 1640.98,
+   "meta_sch": 45,
+   "meta_sch_prior": 28,
+   "goog_s": 542.52,
+   "goog_c": 11.0,
+   "goog_c_prior": 12.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua NYC lifted Meta spend to $2,044 and got 71 schedules, about $29 each, better than the $32 of last week and inside the $25 to $50 band. Prospecting took $1,279 for 39 schedules and remarketing $558 for 27.",
+   "Hutong Miami spent $1,641 for 45 schedules, about $36 each, its best efficiency in the eight weeks shown and down from $54 last week. The conversions campaign did 30 schedules on $1,076.",
+   "Hutong NYC spent $1,268 for 17 schedules, about $75 each. That is an improvement on $105 last week but still past the $50 poor threshold, and the Mahjong reach campaign plus the video viewers campaign took $637 of the $1,268 with no schedules, which is expected for those objectives."
+  ],
+  "google": [
+   "Aqua NYC ran $605 for 15.0 booking conversions, about $40 each on the figures available today. Last week's W38 reading has already restated from 28.95 to 29.95, and W37 from 18.5 to 19.5, so this week's count is provisional and the true cost per booking will come down.",
+   "Hutong NYC delivered 16.0 on $1,139 and Hutong Miami 11.0 on $543. On settled numbers Hutong NYC ran at about $34 last week and Hutong Miami at about $44, so treat $71 and $49 as ceilings rather than outcomes.",
+   "Modelled store visits and local actions also restated sharply upward on the prior week, Aqua NYC store visits from 11 to 67.5 and Hutong NYC from 28.3 to 83.5, so the latest point on every walk-in panel understates the true figure."
+  ],
+  "ga4": [
+   "Aqua NYC users are 15.5 percent below last year and bookings 65.2 percent below, with conversion at 3.1 percent against 7.6 percent. Traffic is part of it, conversion is most of it. Paid Social brought 2,382 sessions and 28 bookings while Organic Search brought 2,318 and 79.",
+   "Hutong NYC users are 25.1 percent below last year and bookings fell 17.0 percent week on week to 127. There is no last-year booking comparison: the site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October, so the portfolio year-on-year card sets three venues this year against two last year. Like for like, Aqua NYC and Hutong Miami booked 264 against 647, down 59.2 percent.",
+   "Hutong Miami is the one clear improvement. Users are 50.8 percent below last year, but last year's week carried 2,457 organic social sessions against 110 this year, so the base is not comparable on traffic. Conversion rose to 4.3 percent from 3.6 percent last week and 2.7 percent last year, and bookings rose 25.5 percent week on week to 69, recovering most of the fall from 79 two weeks ago."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     259,
+     207,
+     220,
+     237,
+     198,
+     186,
+     217,
+     195
+    ],
+    "users": [
+     6158,
+     5778,
+     5966,
+     5366,
+     5498,
+     6266,
+     5904,
+     6224
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     169,
+     141,
+     137,
+     142,
+     138,
+     115,
+     153,
+     127
+    ],
+    "users": [
+     3347,
+     3395,
+     2937,
+     2570,
+     2641,
+     3007,
+     2949,
+     2650
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     88,
+     112,
+     80,
+     74,
+     54,
+     79,
+     55,
+     69
+    ],
+    "users": [
+     1934,
+     2154,
+     1841,
+     1674,
+     1624,
+     1435,
+     1520,
+     1598
+    ]
+   }
+  }
+ }
+}

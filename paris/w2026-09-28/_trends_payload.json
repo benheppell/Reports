@@ -1,0 +1,183 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W32",
+  "W33",
+  "W34",
+  "W35"
+ ],
+ "dateTY": [
+  "7–13 Sep",
+  "14–20 Sep",
+  "21–27 Sep",
+  "28 Sep–4 Oct"
+ ],
+ "dateLY": [
+  "8–14 Sep",
+  "15–21 Sep",
+  "22–28 Sep",
+  "29 Sep–5 Oct"
+ ],
+ "fyrange": "FY26 weeks 32–35",
+ "sym": "€",
+ "gaps": true,
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     4800,
+     5070,
+     4467,
+     5387
+    ],
+    [
+     8178,
+     7567,
+     4896,
+     5433
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     6.9,
+     6.2,
+     6.1,
+     6.5
+    ],
+    [
+     2.4,
+     3.1,
+     3.9,
+     3.7
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     329,
+     314,
+     271,
+     352
+    ],
+    [
+     198,
+     236,
+     190,
+     203
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     66,
+     48,
+     40,
+     49
+    ],
+    [
+     0,
+     0,
+     2,
+     9
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     34.0,
+     51.0,
+     51.0,
+     42.0
+    ],
+    [
+     22.0,
+     56.0,
+     55.33,
+     31.67
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     43.1,
+     28.0,
+     27.5,
+     28.4
+    ],
+    [
+     61.0,
+     18.7,
+     16.3,
+     28.8
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     27.7,
+     37.0,
+     32.0,
+     30.2
+    ],
+    [
+     0,
+     0,
+     161.3,
+     84.4
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W35 users 5,387 with 352 GA4 bookings, both the highest of the last four weeks; conversion rate 6.5%. This is the first autumn week with a real year-ago reading: September 2025 sits after the GA4 property went live, so LY shows 5,433 users and 203 bookings. Users are flat on that base and GA4 bookings up 73%, but the LY traffic mix is not comparable: last year the same week ran 11,789 sessions off 5,433 users with 13% new users, against 6,817 sessions and 87% new users now. Google delivered 42 bookings at €28 CPA; Meta 49 at €30. Combined ad spend was €2,674, almost unchanged on €2,683, but the mix flipped: Meta recovered to €1,482 from €1,278 after the 1 October budget rise, while Google fell to €1,192 from €1,405 on a sharp taper over the last three days of September."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "blue",
+   "New venue",
+   "GA4 went live late 2025, so the year-ago week is a real reading from September 2026 but the traffic mix behind it is still the launch period"
+  ]
+ },
+ "sharednote": {}
+}

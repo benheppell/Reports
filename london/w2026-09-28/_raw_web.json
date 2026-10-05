@@ -1,0 +1,560 @@
+{
+ "meta": {
+  "bookings_metric": "eventCount where eventName = sevenrooms_booking_complete",
+  "windows": {
+   "cur": "2026-09-28..2026-10-04",
+   "prior": "2026-09-21..2026-09-27",
+   "yoy": "2025-09-29..2025-10-05",
+   "ytd": "2026-02-01..2026-10-04 (FY Feb-Jan)"
+  },
+  "week_buckets": "isoYearIsoWeek (Mon-start). W28=202633 .. W35=202640; L32=202537 .. L35=202540. Weekly users are per-week deduplicated totalUsers (one row per isoYearIsoWeek), never summed from days",
+  "bounce_engagement_units": "0-1 fractions (raw GA4 API values), NOT percentages",
+  "asd_units": "seconds",
+  "regent_st": "Aqua Kyoto 342430509 + Aqua Nueva 360337941 summed; sessions/users/pageviews/newusers/bookings are sums, asd/bounce/engrate are session-weighted averages; landing paths prefixed Kyoto/Nueva",
+  "all_aggregate": "sum of the 6 report venues (7 GA4 properties); All landing paths prefixed with venue name",
+  "verification": "series W35 equals cur for every venue; channel bookings sum exactly to the weekly total at every venue in both the current and prior week",
+  "settling": "bounce and engagement rate for the reporting week restate: the published W34 bounce was 0.436 at Aqua Shard and 0.459 at Hutong, and both now read 0.355 and 0.370. Read W35 bounce and engagement rate as provisional",
+  "restatements": "GA4 has restated W34 since last week's file: portfolio 3,055 -> 3,107 (Aqua Shard 1290 -> 1313, Hutong 869 -> 889, Regent St 248 -> 251, Azzurra 105 -> 105, Shiro Sushi 93 -> 93, DSL 450 -> 456). W34 users also moved at Aqua Shard 25,365 -> 25,351 and Hutong 16,324 -> 16,316. Prior-week values in this file are the current GA4 numbers",
+  "dsl_note": "DSL is trading far above a pre-rebrand target, so its YoY and variance-to-target figures are not comparable and should not be read as like-for-like growth",
+  "landing_note": "'(not set)' landing rows are excluded from the top-5 landing tables; the empty-path row is kept as GA4 returns it",
+  "targets_note": "Report W35 = xlsx 'Portfolio Weekly' row W36 (28 Sep - 04 Oct). The sheet's Actual rows are blank for every week of FY26/27, so no reconciliation against the sheet was possible",
+  "failures": "none - every requested call returned data"
+ },
+ "venues": {
+  "Aqua Shard": {
+   "book": {
+    "cur": 1244,
+    "prior": 1313,
+    "yoy": 1792,
+    "ytd": 44928
+   },
+   "site": {
+    "cur": {
+     "users": 26243,
+     "sessions": 36578,
+     "pageviews": 119661,
+     "asd": 210.54,
+     "bounce": 0.4555,
+     "engrate": 0.5445,
+     "newusers": 21086
+    },
+    "prior": {
+     "users": 25351,
+     "sessions": 36961,
+     "pageviews": 95317,
+     "asd": 174.78,
+     "bounce": 0.3554,
+     "engrate": 0.6446,
+     "newusers": 21015
+    },
+    "yoy": {
+     "users": 27343,
+     "sessions": 57676,
+     "pageviews": 125485,
+     "asd": 173.13,
+     "bounce": 0.3154,
+     "engrate": 0.6846,
+     "newusers": 6058
+    }
+   },
+   "series": {
+    "W28": {
+     "b": 1095,
+     "u": 21726
+    },
+    "W29": {
+     "b": 1133,
+     "u": 25933
+    },
+    "W30": {
+     "b": 1086,
+     "u": 23052
+    },
+    "W31": {
+     "b": 902,
+     "u": 19172
+    },
+    "W32": {
+     "b": 1048,
+     "u": 21475
+    },
+    "W33": {
+     "b": 1341,
+     "u": 25162
+    },
+    "W34": {
+     "b": 1313,
+     "u": 25351
+    },
+    "W35": {
+     "b": 1244,
+     "u": 26243
+    }
+   },
+   "ly": {
+    "L32": {
+     "b": 1742,
+     "u": 25614
+    },
+    "L33": {
+     "b": 1867,
+     "u": 27115
+    },
+    "L34": {
+     "b": 1765,
+     "u": 27911
+    },
+    "L35": {
+     "b": 1792,
+     "u": 27343
+    }
+   }
+  },
+  "Hutong": {
+   "book": {
+    "cur": 1004,
+    "prior": 889,
+    "yoy": 883,
+    "ytd": 27549
+   },
+   "site": {
+    "cur": {
+     "users": 17739,
+     "sessions": 25455,
+     "pageviews": 65641,
+     "asd": 189.19,
+     "bounce": 0.4566,
+     "engrate": 0.5434,
+     "newusers": 14257
+    },
+    "prior": {
+     "users": 16316,
+     "sessions": 23310,
+     "pageviews": 64569,
+     "asd": 182.24,
+     "bounce": 0.3696,
+     "engrate": 0.6304,
+     "newusers": 13313
+    },
+    "yoy": {
+     "users": 16465,
+     "sessions": 32285,
+     "pageviews": 66948,
+     "asd": 185.07,
+     "bounce": 0.3306,
+     "engrate": 0.6694,
+     "newusers": 5578
+    }
+   },
+   "series": {
+    "W28": {
+     "b": 877,
+     "u": 14047
+    },
+    "W29": {
+     "b": 980,
+     "u": 16439
+    },
+    "W30": {
+     "b": 1015,
+     "u": 16216
+    },
+    "W31": {
+     "b": 825,
+     "u": 13061
+    },
+    "W32": {
+     "b": 831,
+     "u": 14613
+    },
+    "W33": {
+     "b": 892,
+     "u": 15599
+    },
+    "W34": {
+     "b": 889,
+     "u": 16316
+    },
+    "W35": {
+     "b": 1004,
+     "u": 17739
+    }
+   },
+   "ly": {
+    "L32": {
+     "b": 841,
+     "u": 16681
+    },
+    "L33": {
+     "b": 772,
+     "u": 16574
+    },
+    "L34": {
+     "b": 855,
+     "u": 15954
+    },
+    "L35": {
+     "b": 883,
+     "u": 16465
+    }
+   }
+  },
+  "Regent St": {
+   "book": {
+    "cur": 201,
+    "prior": 251,
+    "yoy": 291,
+    "ytd": 10514
+   },
+   "site": {
+    "cur": {
+     "users": 3829,
+     "sessions": 4884,
+     "pageviews": 15213,
+     "asd": 182.7,
+     "bounce": 0.3927,
+     "engrate": 0.6073,
+     "newusers": 3366
+    },
+    "prior": {
+     "users": 3925,
+     "sessions": 5229,
+     "pageviews": 17800,
+     "asd": 224.44,
+     "bounce": 0.3081,
+     "engrate": 0.6919,
+     "newusers": 3442
+    },
+    "yoy": {
+     "users": 7045,
+     "sessions": 14640,
+     "pageviews": 24732,
+     "asd": 123.77,
+     "bounce": 0.3004,
+     "engrate": 0.6996,
+     "newusers": 1769
+    }
+   },
+   "series": {
+    "W28": {
+     "b": 344,
+     "u": 6265
+    },
+    "W29": {
+     "b": 256,
+     "u": 5776
+    },
+    "W30": {
+     "b": 269,
+     "u": 5768
+    },
+    "W31": {
+     "b": 241,
+     "u": 4539
+    },
+    "W32": {
+     "b": 238,
+     "u": 4441
+    },
+    "W33": {
+     "b": 277,
+     "u": 4075
+    },
+    "W34": {
+     "b": 251,
+     "u": 3925
+    },
+    "W35": {
+     "b": 201,
+     "u": 3829
+    }
+   },
+   "ly": {
+    "L32": {
+     "b": 218,
+     "u": 6214
+    },
+    "L33": {
+     "b": 261,
+     "u": 8172
+    },
+    "L34": {
+     "b": 296,
+     "u": 8000
+    },
+    "L35": {
+     "b": 291,
+     "u": 7045
+    }
+   }
+  },
+  "Azzurra": {
+   "book": {
+    "cur": 116,
+    "prior": 105,
+    "yoy": 101,
+    "ytd": 3780
+   },
+   "site": {
+    "cur": {
+     "users": 2580,
+     "sessions": 3163,
+     "pageviews": 8231,
+     "asd": 142.98,
+     "bounce": 0.3727,
+     "engrate": 0.6273,
+     "newusers": 2403
+    },
+    "prior": {
+     "users": 1559,
+     "sessions": 2120,
+     "pageviews": 5830,
+     "asd": 170.31,
+     "bounce": 0.3429,
+     "engrate": 0.6571,
+     "newusers": 1415
+    },
+    "yoy": {
+     "users": 2093,
+     "sessions": 2568,
+     "pageviews": 5482,
+     "asd": 177.4,
+     "bounce": 0.2901,
+     "engrate": 0.7099,
+     "newusers": 1789
+    }
+   },
+   "series": {
+    "W28": {
+     "b": 69,
+     "u": 1443
+    },
+    "W29": {
+     "b": 64,
+     "u": 1437
+    },
+    "W30": {
+     "b": 82,
+     "u": 1500
+    },
+    "W31": {
+     "b": 87,
+     "u": 1606
+    },
+    "W32": {
+     "b": 76,
+     "u": 1680
+    },
+    "W33": {
+     "b": 89,
+     "u": 1482
+    },
+    "W34": {
+     "b": 105,
+     "u": 1559
+    },
+    "W35": {
+     "b": 116,
+     "u": 2580
+    }
+   },
+   "ly": {
+    "L32": {
+     "b": 77,
+     "u": 1679
+    },
+    "L33": {
+     "b": 96,
+     "u": 2262
+    },
+    "L34": {
+     "b": 101,
+     "u": 2019
+    },
+    "L35": {
+     "b": 101,
+     "u": 2093
+    }
+   }
+  },
+  "Shiro Sushi": {
+   "book": {
+    "cur": 97,
+    "prior": 93,
+    "yoy": 108,
+    "ytd": 3624
+   },
+   "site": {
+    "cur": {
+     "users": 1347,
+     "sessions": 1751,
+     "pageviews": 4866,
+     "asd": 173.18,
+     "bounce": 0.3158,
+     "engrate": 0.6842,
+     "newusers": 1188
+    },
+    "prior": {
+     "users": 1150,
+     "sessions": 1501,
+     "pageviews": 3771,
+     "asd": 141.08,
+     "bounce": 0.3471,
+     "engrate": 0.6529,
+     "newusers": 1002
+    },
+    "yoy": {
+     "users": 1901,
+     "sessions": 2483,
+     "pageviews": 5353,
+     "asd": 139.87,
+     "bounce": 0.3814,
+     "engrate": 0.6186,
+     "newusers": 1660
+    }
+   },
+   "series": {
+    "W28": {
+     "b": 109,
+     "u": 1243
+    },
+    "W29": {
+     "b": 87,
+     "u": 1095
+    },
+    "W30": {
+     "b": 89,
+     "u": 1083
+    },
+    "W31": {
+     "b": 78,
+     "u": 1076
+    },
+    "W32": {
+     "b": 84,
+     "u": 1167
+    },
+    "W33": {
+     "b": 92,
+     "u": 1207
+    },
+    "W34": {
+     "b": 93,
+     "u": 1150
+    },
+    "W35": {
+     "b": 97,
+     "u": 1347
+    }
+   },
+   "ly": {
+    "L32": {
+     "b": 105,
+     "u": 1814
+    },
+    "L33": {
+     "b": 113,
+     "u": 1981
+    },
+    "L34": {
+     "b": 117,
+     "u": 1762
+    },
+    "L35": {
+     "b": 108,
+     "u": 1901
+    }
+   }
+  },
+  "DSL": {
+   "book": {
+    "cur": 478,
+    "prior": 456,
+    "yoy": 102,
+    "ytd": 18249
+   },
+   "site": {
+    "cur": {
+     "users": 5775,
+     "sessions": 7252,
+     "pageviews": 21825,
+     "asd": 170.07,
+     "bounce": 0.3828,
+     "engrate": 0.6172,
+     "newusers": 5063
+    },
+    "prior": {
+     "users": 5183,
+     "sessions": 6720,
+     "pageviews": 21285,
+     "asd": 177.16,
+     "bounce": 0.2887,
+     "engrate": 0.7113,
+     "newusers": 4503
+    },
+    "yoy": {
+     "users": 1451,
+     "sessions": 3211,
+     "pageviews": 5862,
+     "asd": 140.06,
+     "bounce": 0.2576,
+     "engrate": 0.7424,
+     "newusers": 315
+    }
+   },
+   "series": {
+    "W28": {
+     "b": 498,
+     "u": 5841
+    },
+    "W29": {
+     "b": 531,
+     "u": 5446
+    },
+    "W30": {
+     "b": 497,
+     "u": 5036
+    },
+    "W31": {
+     "b": 458,
+     "u": 4823
+    },
+    "W32": {
+     "b": 461,
+     "u": 4685
+    },
+    "W33": {
+     "b": 474,
+     "u": 4456
+    },
+    "W34": {
+     "b": 456,
+     "u": 5183
+    },
+    "W35": {
+     "b": 478,
+     "u": 5775
+    }
+   },
+   "ly": {
+    "L32": {
+     "b": 104,
+     "u": 2367
+    },
+    "L33": {
+     "b": 136,
+     "u": 1821
+    },
+    "L34": {
+     "b": 115,
+     "u": 1630
+    },
+    "L35": {
+     "b": 102,
+     "u": 1451
+    }
+   }
+  }
+ },
+ "snapshot": {}
+}

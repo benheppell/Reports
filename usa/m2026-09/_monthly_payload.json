@@ -1,0 +1,34 @@
+{
+ "market": "Aqua USA",
+ "sym": "$",
+ "ccy": "USD",
+ "month_label": "September 2026",
+ "generated": "5 October 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 898,
+   "tgt": 2210,
+   "mom": 1062,
+   "yoy": 2159,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 557,
+   "tgt": 1575,
+   "mom": 703,
+   "yoy": 524,
+   "nc": true
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 287,
+   "tgt": 479,
+   "mom": 395,
+   "yoy": 468,
+   "nc": false
+  }
+ ],
+ "note": "September closed at <b>1,742 bookings</b> against a 4,264 target. The targets are strategic and deliberately aggressive, so the variance is by design, and Hutong Miami's target of 479 is derived from its Meta plan (338 &times; 6738/4756). <b>Hutong NYC has no usable year-on-year figure for September</b>: the site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October, so eight of the month's days are missing from last year's base and the venue is marked not comparable rather than carrying a false 6.3 percent gain. On the two venues that do compare, <b>bookings fell from 2,627 to 1,185, down 54.9 percent</b>. <b>Aqua NYC is the month's problem</b>: 898 bookings against 1,062 in August and 2,159 in September last year, with the fall driven by conversion rather than traffic. <b>Hutong Miami</b> fell to 287 from 395 in August, its weakest month of the year, though the last week of the month turned up. Both Hutongs moved their Google Reserve booking provider to OpenTable in March, so part of the year-on-year fall is a routing change rather than lost demand. The covers reports carry that split."
+}

@@ -1,0 +1,897 @@
+{
+ "meta_notes": {
+  "currency": "USD",
+  "windows": {
+   "cur": "2026-09-28..2026-10-04",
+   "prior": "2026-09-21..2026-09-27",
+   "yoy": "2025-09-29..2025-10-05"
+  },
+  "meta_bookings_definition": "conversions schedule_total (= offsite_conversion.fb_pixel_custom, Schedule)",
+  "google_bookings_definition": "metrics.all_conversions for the named booking conversion action only (Aqua NYC 'Aqua NYC (web) sevenrooms_booking_complete'; both Hutongs 'Sevenrooms Booking Complete', the only booking action on those accounts)",
+  "google_walkin_definition": "Store visits + Local actions - Directions + Local actions - Menu views + Click Book Now + Clicks to call",
+  "warnings": [
+   "Google booking conversions restated upward again since last week: Aqua NYC W38 28.95 to 29.95, W37 18.5 to 19.5, W36 29.5 unchanged, W34 31.0 unchanged; Hutong NYC W38 23.96 to 29.96, W37 28.04 to 32.04, W36 29.5 to 34.5; Hutong Miami W38 8.99 to 11.99, W37 17.99 to 18.99, W36 14.01 to 15.01. W39 (Aqua NYC 15.0, Hutong NYC 16.0, Hutong Miami 11.0) is provisional and understated on the same pattern.",
+   "Google modelled store visits and local actions restated sharply upward on W38: Aqua NYC store visits 11 to 67.5, directions 33 to 84, menu views 71 to 114; Hutong NYC store visits 28.3 to 83.5, directions 74 to 146, menu views 51 to 104, Click Book Now 92 to 109; Hutong Miami store visits 7.5 to 29.2, directions 11 to 29, menu views 20 to 39, Click Book Now 39 to 50. W39 walk-in components are provisional and understated.",
+   "GAP, NOT ZERO: Aqua NYC has no Store visits, Local actions - Directions, Local actions - Menu views or Clicks to call rows at all for the year-ago week 29 Sep to 5 Oct 2025, while the booking action still reported 80.42 that week and the three weeks before carried 62 to 328 store visits. The local-action conversion actions stopped returning rows at the end of September 2025. The year-ago walk-in point for Aqua Roma and Aqua Kyoto is published as a gap, not as zero.",
+   "Hutong NYC Meta reports 4 schedule_total for 29 Sep to 5 Oct 2025 and its Google booking action reads 5.0, both inside the site tracking outage that started 22 Sep 2025. Last-year Hutong NYC booking figures are withheld for W39.",
+   "Legitimate zero-booking campaigns this week: Hutong NYC Meta 'HT | Mahjong | Reach | New York' (reach objective) and 'CRKLR | NEW Awareness Campaign | Video Viewers' (video-view objective), Hutong Miami Meta 'CRKLR | NEW Awareness Campaign - LPV Campaign', Aqua NYC Google 'Search > Brunch' and 'Search > Outdoor', Hutong Miami Google 'Search > Occasions' and 'Search > Special Events'.",
+   "USA Google walk-in conversion actions include no 'Click Book Now' at Aqua NYC; that component is zero there by configuration, not by failure.",
+   "Meta: explicit time_range used throughout, time_increment 7 anchored on Monday 2026-08-10 and Monday 2025-09-08. No response carried paging.next, so no page was aggregated partially. Campaign-level spend and schedules reconcile to the account totals exactly for all three accounts."
+  ]
+ },
+ "venues": {
+  "Aqua NYC": {
+   "meta": {
+    "series": {
+     "W32": [
+      1882.56,
+      84,
+      82253,
+      3981
+     ],
+     "W33": [
+      1905.46,
+      72,
+      84021,
+      3971
+     ],
+     "W34": [
+      1876.74,
+      74,
+      77766,
+      4076
+     ],
+     "W35": [
+      1890.37,
+      80,
+      72169,
+      3695
+     ],
+     "W36": [
+      1883.04,
+      62,
+      75097,
+      3755
+     ],
+     "W37": [
+      1873.23,
+      60,
+      76977,
+      3803
+     ],
+     "W38": [
+      1906.25,
+      59,
+      86526,
+      3775
+     ],
+     "W39": [
+      2043.92,
+      71,
+      86080,
+      3871
+     ]
+    },
+    "ly": {
+     "L36": [
+      1030.16,
+      153,
+      149085,
+      6895
+     ],
+     "L37": [
+      1031.39,
+      106,
+      151021,
+      4879
+     ],
+     "L38": [
+      1018.7,
+      43,
+      147064,
+      4463
+     ],
+     "L39": [
+      1240.85,
+      32,
+      239716,
+      6005
+     ]
+    },
+    "campaigns": [
+     [
+      "CRKLR - Prospecting",
+      1278.91,
+      39
+     ],
+     [
+      "CRKLR - Remarketing Campaign",
+      557.73,
+      27
+     ],
+     [
+      "CRKLR - Prospecting – Outdoor Dining Campaign",
+      207.28,
+      5
+     ]
+    ],
+    "fields": "spend, schedules, impressions, clicks"
+   },
+   "google": {
+    "series": {
+     "W32": [
+      569.97,
+      15588,
+      836,
+      48.0,
+      [
+       61,
+       100,
+       80,
+       0,
+       13
+      ]
+     ],
+     "W33": [
+      559.84,
+      11892,
+      707,
+      26.999508,
+      [
+       65,
+       84,
+       67,
+       0,
+       17
+      ]
+     ],
+     "W34": [
+      692.3,
+      16072,
+      846,
+      31.0,
+      [
+       89,
+       99,
+       132,
+       0,
+       23
+      ]
+     ],
+     "W35": [
+      761.6,
+      15670,
+      898,
+      32.045791,
+      [
+       92.5,
+       95,
+       90,
+       0,
+       23
+      ]
+     ],
+     "W36": [
+      693.43,
+      12780,
+      702,
+      29.5,
+      [
+       85,
+       66,
+       126,
+       0,
+       11
+      ]
+     ],
+     "W37": [
+      639.86,
+      13097,
+      675,
+      19.5,
+      [
+       74,
+       93,
+       58,
+       0,
+       17
+      ]
+     ],
+     "W38": [
+      630.96,
+      11234,
+      663,
+      29.954209,
+      [
+       67.5,
+       84,
+       114,
+       0,
+       7
+      ]
+     ],
+     "W39": [
+      605.41,
+      14147,
+      724,
+      15.0,
+      [
+       22,
+       33,
+       56,
+       0,
+       1
+      ]
+     ]
+    },
+    "ly": {
+     "L36": [
+      1340.29,
+      47476,
+      1987,
+      107.266173,
+      [
+       327.799366,
+       201,
+       170,
+       0,
+       30
+      ]
+     ],
+     "L37": [
+      1567.47,
+      68139,
+      2644,
+      78.454444,
+      [
+       257.574404,
+       255,
+       304,
+       0,
+       30
+      ]
+     ],
+     "L38": [
+      1419.39,
+      32456,
+      1810,
+      63.428768,
+      [
+       62.479166,
+       26,
+       57,
+       0,
+       2
+      ]
+     ],
+     "L39": [
+      1227.03,
+      11137,
+      1243,
+      80.422119,
+      null
+     ]
+    },
+    "campaigns": [
+     [
+      "PMax > Generic",
+      136.84,
+      5.0
+     ],
+     [
+      "Search > Italian Restaurant - Manhattan",
+      118.44,
+      4.0
+     ],
+     [
+      "Search > Japanese Restaurant - Manhattan",
+      101.26,
+      1.0
+     ],
+     [
+      "Search > Special Occasions",
+      70.58,
+      3.0
+     ],
+     [
+      "Search > Brunch",
+      60.16,
+      0.0
+     ],
+     [
+      "Search > Outdoor",
+      59.74,
+      0.0
+     ],
+     [
+      "Search > Brand",
+      58.38,
+      2.0
+     ]
+    ],
+    "fields": "spend, impressions, clicks, booking all_conversions, [store visits, directions, menu views, click book now, clicks to call]"
+   }
+  },
+  "Hutong NYC": {
+   "meta": {
+    "series": {
+     "W32": [
+      1031.29,
+      18,
+      130159,
+      3340
+     ],
+     "W33": [
+      1032.83,
+      22,
+      99956,
+      2465
+     ],
+     "W34": [
+      1018.91,
+      13,
+      86991,
+      2373
+     ],
+     "W35": [
+      809.2,
+      11,
+      80048,
+      1811
+     ],
+     "W36": [
+      957.39,
+      6,
+      83989,
+      2203
+     ],
+     "W37": [
+      967.52,
+      8,
+      81980,
+      2103
+     ],
+     "W38": [
+      1055.16,
+      10,
+      195629,
+      1618
+     ],
+     "W39": [
+      1268.16,
+      17,
+      228679,
+      1905
+     ]
+    },
+    "ly": {
+     "L36": [
+      811.88,
+      7,
+      177840,
+      3937
+     ],
+     "L37": [
+      808.14,
+      10,
+      157612,
+      3883
+     ],
+     "L38": [
+      797.87,
+      0,
+      165209,
+      3941
+     ],
+     "L39": [
+      935.77,
+      4,
+      102924,
+      5725
+     ]
+    },
+    "campaigns": [
+     [
+      "CRKLR | NEW Conversions Campaign",
+      631.1,
+      17
+     ],
+     [
+      "HT | Mahjong | Reach | New York",
+      424.45,
+      0
+     ],
+     [
+      "CRKLR | NEW Awareness Campaign | Video Viewers",
+      212.61,
+      0
+     ]
+    ],
+    "fields": "spend, schedules, impressions, clicks"
+   },
+   "google": {
+    "series": {
+     "W32": [
+      1261.71,
+      114192,
+      3208,
+      57.307347,
+      [
+       145.000002,
+       225,
+       157,
+       281.83213,
+       14
+      ]
+     ],
+     "W33": [
+      1352.8,
+      120338,
+      3362,
+      46.0,
+      [
+       125.891361,
+       172,
+       155,
+       211.71846,
+       11
+      ]
+     ],
+     "W34": [
+      1245.77,
+      102188,
+      2535,
+      34.663154,
+      [
+       98.721137,
+       195,
+       147,
+       157.149615,
+       24
+      ]
+     ],
+     "W35": [
+      1160.64,
+      109259,
+      2568,
+      24.286028,
+      [
+       88.554166,
+       164,
+       126,
+       125.224776,
+       17
+      ]
+     ],
+     "W36": [
+      1056.38,
+      113355,
+      2727,
+      34.5,
+      [
+       95.666667,
+       142,
+       188,
+       149.767232,
+       9
+      ]
+     ],
+     "W37": [
+      1122.97,
+      99525,
+      2937,
+      32.035042,
+      [
+       89.854167,
+       174,
+       208,
+       135,
+       28
+      ]
+     ],
+     "W38": [
+      1012.49,
+      84400,
+      2013,
+      29.964958,
+      [
+       83.458333,
+       146,
+       104,
+       109,
+       20
+      ]
+     ],
+     "W39": [
+      1138.74,
+      84186,
+      2174,
+      16.0,
+      [
+       35.833333,
+       80,
+       63,
+       141,
+       2
+      ]
+     ]
+    },
+    "ly": {
+     "L36": [
+      1091.08,
+      186371,
+      2387,
+      40.510921,
+      [
+       197.770646,
+       230,
+       202,
+       134.298966,
+       30
+      ]
+     ],
+     "L37": [
+      877.89,
+      162511,
+      2118,
+      32.166666,
+      [
+       179.512764,
+       218,
+       200,
+       114.083021,
+       28
+      ]
+     ],
+     "L38": [
+      880.0,
+      140814,
+      2208,
+      7.166666,
+      [
+       187.268519,
+       236,
+       199,
+       173.703189,
+       47
+      ]
+     ],
+     "L39": [
+      1079.8,
+      174801,
+      2989,
+      4.999999,
+      [
+       209.25139,
+       267,
+       201,
+       154.589905,
+       36
+      ]
+     ]
+    },
+    "campaigns": [
+     [
+      "Search > Midtown",
+      309.75,
+      1.0
+     ],
+     [
+      "P. Max > Generic",
+      286.15,
+      6.0
+     ],
+     [
+      "Demand Gen > Generic",
+      204.06,
+      1.0
+     ],
+     [
+      "Search >  Generic",
+      156.5,
+      2.0
+     ],
+     [
+      "Search > Brand",
+      137.08,
+      2.0
+     ],
+     [
+      "Search > Manhattan",
+      45.22,
+      4.0
+     ]
+    ],
+    "fields": "spend, impressions, clicks, booking all_conversions, [store visits, directions, menu views, click book now, clicks to call]"
+   }
+  },
+  "Hutong Miami": {
+   "meta": {
+    "series": {
+     "W32": [
+      1839.41,
+      19,
+      111170,
+      3364
+     ],
+     "W33": [
+      1847.32,
+      32,
+      194714,
+      5021
+     ],
+     "W34": [
+      1845.16,
+      23,
+      174382,
+      4152
+     ],
+     "W35": [
+      1598.46,
+      18,
+      114494,
+      3143
+     ],
+     "W36": [
+      1669.29,
+      16,
+      112088,
+      3997
+     ],
+     "W37": [
+      1495.51,
+      27,
+      75671,
+      3060
+     ],
+     "W38": [
+      1524.28,
+      28,
+      77945,
+      3055
+     ],
+     "W39": [
+      1640.98,
+      45,
+      95225,
+      3698
+     ]
+    },
+    "ly": {
+     "L36": [
+      1045.76,
+      24,
+      269553,
+      3857
+     ],
+     "L37": [
+      1013.43,
+      38,
+      218791,
+      3840
+     ],
+     "L38": [
+      1019.83,
+      44,
+      232671,
+      4245
+     ],
+     "L39": [
+      1137.6,
+      39,
+      331887,
+      6967
+     ]
+    },
+    "campaigns": [
+     [
+      "CRKLR | NEW Conversions Campaign",
+      1076.1,
+      30
+     ],
+     [
+      "CRKLR | NEW Retargeting Campaign",
+      426.13,
+      15
+     ],
+     [
+      "CRKLR | NEW Awareness Campaign – LPV Campaign",
+      138.75,
+      0
+     ]
+    ],
+    "fields": "spend, schedules, impressions, clicks"
+   },
+   "google": {
+    "series": {
+     "W32": [
+      638.1,
+      20901,
+      849,
+      24.0,
+      [
+       131.333333,
+       44,
+       65,
+       105.504342,
+       4
+      ]
+     ],
+     "W33": [
+      639.04,
+      18827,
+      785,
+      22.0,
+      [
+       70.52381,
+       57,
+       64,
+       68,
+       4
+      ]
+     ],
+     "W34": [
+      609.56,
+      17958,
+      673,
+      14.0,
+      [
+       46.166667,
+       31,
+       37,
+       50,
+       6
+      ]
+     ],
+     "W35": [
+      568.08,
+      12431,
+      606,
+      23.008771,
+      [
+       42.222222,
+       30,
+       21,
+       65,
+       0
+      ]
+     ],
+     "W36": [
+      593.22,
+      13008,
+      585,
+      15.005798,
+      [
+       48.944445,
+       29,
+       24,
+       52,
+       16
+      ]
+     ],
+     "W37": [
+      545.78,
+      12051,
+      541,
+      18.994202,
+      [
+       37.5,
+       20,
+       61,
+       49.476718,
+       0
+      ]
+     ],
+     "W38": [
+      524.17,
+      11463,
+      594,
+      11.991229,
+      [
+       29.166666,
+       29,
+       39,
+       50,
+       1
+      ]
+     ],
+     "W39": [
+      542.52,
+      10712,
+      532,
+      11.0,
+      [
+       8,
+       13,
+       21,
+       36.5,
+       2
+      ]
+     ]
+    },
+    "ly": {
+     "L36": [
+      822.64,
+      47871,
+      903,
+      21.0,
+      [
+       122.3125,
+       35,
+       93,
+       62.125,
+       11
+      ]
+     ],
+     "L37": [
+      890.51,
+      49989,
+      1150,
+      22.0,
+      [
+       84.245531,
+       48,
+       61,
+       99.401237,
+       7
+      ]
+     ],
+     "L38": [
+      1007.1,
+      44242,
+      994,
+      31.0,
+      [
+       123.5,
+       41,
+       100,
+       78.5,
+       10
+      ]
+     ],
+     "L39": [
+      885.71,
+      40724,
+      931,
+      21.0,
+      [
+       114.166665,
+       48,
+       44,
+       57.767857,
+       12
+      ]
+     ]
+    },
+    "campaigns": [
+     [
+      "Search > Chinese Cuisine",
+      225.19,
+      7.0
+     ],
+     [
+      "P. Max > Generic",
+      143.95,
+      1.0
+     ],
+     [
+      "Search > Brand",
+      86.61,
+      3.0
+     ],
+     [
+      "Search > Occasions",
+      62.97,
+      0.0
+     ],
+     [
+      "Search > Special Events",
+      23.8,
+      0.0
+     ]
+    ],
+    "fields": "spend, impressions, clicks, booking all_conversions, [store visits, directions, menu views, click book now, clicks to call]"
+   }
+  }
+ }
+}

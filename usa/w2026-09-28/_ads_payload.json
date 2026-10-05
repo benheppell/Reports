@@ -1,0 +1,1358 @@
+{
+ "market": "USA",
+ "sym": "$",
+ "week": "28 Sep–4 Oct 2026",
+ "fy": "W39 &middot; FY26",
+ "ext": true,
+ "foot_extra": "Hutong NYC last-year figures are withheld: the site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October 2025, so this week sits inside the outage window.",
+ "venues": [
+  "All",
+  "Aqua NYC",
+  "Hutong NYC",
+  "Hutong Miami"
+ ],
+ "data": {
+  "Aqua NYC": {
+   "web": {
+    "cur": {
+     "bookings": 195,
+     "users": 6224,
+     "sessions": 7604,
+     "avgsec": 164.3,
+     "engrate": 49.9,
+     "pps": 2.77,
+     "newpct": 91.8
+    },
+    "prior": {
+     "bookings": 217,
+     "users": 5904,
+     "sessions": 7198,
+     "avgsec": 145.6,
+     "engrate": 54.9,
+     "pps": 2.67,
+     "newpct": 92.5
+    },
+    "yoy": {
+     "bookings": 560,
+     "users": 7363,
+     "sessions": 9866,
+     "avgsec": 198.0,
+     "engrate": 57.2,
+     "pps": 2.79,
+     "newpct": 89.1
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 2044,
+      "bookings": 71,
+      "impr": 86080,
+      "clicks": 3871
+     },
+     "prior": {
+      "spend": 1906,
+      "bookings": 59,
+      "impr": 86526,
+      "clicks": 3775
+     },
+     "yoy": {
+      "spend": 1241,
+      "bookings": 32,
+      "impr": 239716,
+      "clicks": 6005
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 605,
+      "bookings": 15,
+      "impr": 14147,
+      "clicks": 724
+     },
+     "prior": {
+      "spend": 631,
+      "bookings": 30,
+      "impr": 11234,
+      "clicks": 663
+     },
+     "yoy": {
+      "spend": 1227,
+      "bookings": 80,
+      "impr": 11137,
+      "clicks": 1243
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      2382,
+      2540,
+      1515
+     ],
+     "b": [
+      28,
+      22,
+      16
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      2318,
+      2247,
+      1759
+     ],
+     "b": [
+      79,
+      93,
+      113
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1504,
+      1504,
+      2664
+     ],
+     "b": [
+      41,
+      59,
+      165
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      605,
+      60,
+      174
+     ],
+     "b": [
+      24,
+      7,
+      14
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      530,
+      89,
+      842
+     ],
+     "b": [
+      5,
+      1,
+      41
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      372,
+      420,
+      1052
+     ],
+     "b": [
+      8,
+      18,
+      71
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      207,
+      198,
+      382
+     ],
+     "b": [
+      9,
+      14,
+      23
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      93,
+      89,
+      735
+     ],
+     "b": [
+      0,
+      1,
+      105
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      28,
+      28,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      12,
+      14,
+      637
+     ],
+     "b": [
+      1,
+      2,
+      12
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      0,
+      2,
+      4
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 84.1,
+    "Desktop": 15.2,
+    "Tablet": 0.7
+   },
+   "landing": [
+    {
+     "path": "/aqua-roma",
+     "s": 3678,
+     "b": 64
+    },
+    {
+     "path": "/",
+     "s": 1082,
+     "b": 20
+    },
+    {
+     "path": "/aqua-kyoto",
+     "s": 546,
+     "b": 12
+    },
+    {
+     "path": "",
+     "s": 431,
+     "b": 4
+    },
+    {
+     "path": "/explore/aquanyc/reservations/create/search",
+     "s": 316,
+     "b": 34
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W32",
+     "W33",
+     "W34",
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39"
+    ],
+    "spend": [
+     2453,
+     2465,
+     2569,
+     2652,
+     2576,
+     2513,
+     2537,
+     2649
+    ],
+    "bookings": [
+     132,
+     99,
+     105,
+     112,
+     92,
+     80,
+     89,
+     86
+    ]
+   },
+   "funnel": {
+    "impr": 100227,
+    "clicks": 4595,
+    "bookings": 86,
+    "landing": 2754
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting",
+     "platform": "Meta",
+     "spend": 1278.91,
+     "bookings": 39,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR - Remarketing Campaign",
+     "platform": "Meta",
+     "spend": 557.73,
+     "bookings": 27,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR - Prospecting – Outdoor Dining Campaign",
+     "platform": "Meta",
+     "spend": 207.28,
+     "bookings": 5,
+     "wow": "flat"
+    },
+    {
+     "name": "PMax > Generic",
+     "platform": "Google",
+     "spend": 136.84,
+     "bookings": 5,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Italian Restaurant - Manhattan",
+     "platform": "Google",
+     "spend": 118.44,
+     "bookings": 4,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Japanese Restaurant - Manhattan",
+     "platform": "Google",
+     "spend": 101.26,
+     "bookings": 1,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "Aqua NYC has no 'Click Book Now' conversion action, so that walk-in component is zero there by configuration, not by failure. Separately, the account returned no Store visits or Local actions rows at all for the year-ago week, so the last-year walk-in signal is published as a gap in the trends report rather than as zero."
+   ]
+  },
+  "Hutong NYC": {
+   "web": {
+    "cur": {
+     "bookings": 127,
+     "users": 2650,
+     "sessions": 3605,
+     "avgsec": 173.8,
+     "engrate": 57.6,
+     "pps": 2.45,
+     "newpct": 85.2
+    },
+    "prior": {
+     "bookings": 153,
+     "users": 2949,
+     "sessions": 3854,
+     "avgsec": 190.5,
+     "engrate": 70.7,
+     "pps": 2.59,
+     "newpct": 86.8
+    },
+    "yoy": {
+     "bookings": 0,
+     "users": 3540,
+     "sessions": 4591,
+     "avgsec": 179.0,
+     "engrate": 72.5,
+     "pps": 2.25,
+     "newpct": 83.3
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1268,
+      "bookings": 17,
+      "impr": 228679,
+      "clicks": 1905
+     },
+     "prior": {
+      "spend": 1055,
+      "bookings": 10,
+      "impr": 195629,
+      "clicks": 1618
+     },
+     "yoy": {
+      "spend": 936,
+      "bookings": 4,
+      "impr": 102924,
+      "clicks": 5725
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1139,
+      "bookings": 16,
+      "impr": 84186,
+      "clicks": 2174
+     },
+     "prior": {
+      "spend": 1012,
+      "bookings": 30,
+      "impr": 84400,
+      "clicks": 2013
+     },
+     "yoy": {
+      "spend": 1080,
+      "bookings": 5,
+      "impr": 174801,
+      "clicks": 2989
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      1147,
+      1466,
+      1623
+     ],
+     "b": [
+      46,
+      49,
+      0
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      841,
+      1039,
+      991
+     ],
+     "b": [
+      18,
+      44,
+      0
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      482,
+      266,
+      456
+     ],
+     "b": [
+      6,
+      6,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      373,
+      34,
+      77
+     ],
+     "b": [
+      14,
+      4,
+      0
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      306,
+      344,
+      152
+     ],
+     "b": [
+      24,
+      32,
+      0
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      283,
+      289,
+      165
+     ],
+     "b": [
+      10,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      249,
+      228,
+      789
+     ],
+     "b": [
+      1,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      73,
+      108,
+      226
+     ],
+     "b": [
+      4,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      51,
+      69,
+      0
+     ],
+     "b": [
+      3,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      13,
+      21,
+      0
+     ],
+     "b": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      7,
+      5,
+      37
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 68.3,
+    "Desktop": 30.4,
+    "Tablet": 1.2
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 1660,
+     "b": 44
+    },
+    {
+     "path": "/explore/hutongnewyork/reservations/create/search",
+     "s": 468,
+     "b": 38
+    },
+    {
+     "path": "",
+     "s": 281,
+     "b": 4
+    },
+    {
+     "path": "/menus",
+     "s": 248,
+     "b": 2
+    },
+    {
+     "path": "/explore/hutongnewyork/reservations/manage",
+     "s": 195,
+     "b": 10
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W32",
+     "W33",
+     "W34",
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39"
+    ],
+    "spend": [
+     2293,
+     2386,
+     2265,
+     1970,
+     2014,
+     2090,
+     2068,
+     2407
+    ],
+    "bookings": [
+     75,
+     68,
+     48,
+     35,
+     40,
+     40,
+     40,
+     33
+    ]
+   },
+   "funnel": {
+    "impr": 312865,
+    "clicks": 4079,
+    "bookings": 33,
+    "landing": 532
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 631.1,
+     "bookings": 17,
+     "wow": "flat"
+    },
+    {
+     "name": "HT | Mahjong | Reach | New York",
+     "platform": "Meta",
+     "spend": 424.45,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Midtown",
+     "platform": "Google",
+     "spend": 309.75,
+     "bookings": 1,
+     "wow": "flat"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 286.15,
+     "bookings": 6,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR | NEW Awareness Campaign | Video Viewers",
+     "platform": "Meta",
+     "spend": 212.61,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "Demand Gen > Generic",
+     "platform": "Google",
+     "spend": 204.06,
+     "bookings": 1,
+     "wow": "flat"
+    }
+   ],
+   "noyoy": true,
+   "notes": [
+    "No last-year comparison is shown for this venue. The site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October, so last year's GA4 bookings, Meta schedules and Google booking conversions for this week are all missing. GA4 reports zero bookings on 4,591 sessions for 29 September to 5 October 2025, Meta reports 4 schedules and the Google booking action reads 5.0."
+   ]
+  },
+  "Hutong Miami": {
+   "web": {
+    "cur": {
+     "bookings": 69,
+     "users": 1598,
+     "sessions": 1997,
+     "avgsec": 165.4,
+     "engrate": 58.2,
+     "pps": 2.69,
+     "newpct": 84.2
+    },
+    "prior": {
+     "bookings": 55,
+     "users": 1520,
+     "sessions": 1960,
+     "avgsec": 146.6,
+     "engrate": 67.0,
+     "pps": 2.73,
+     "newpct": 87.4
+    },
+    "yoy": {
+     "bookings": 87,
+     "users": 3251,
+     "sessions": 3578,
+     "avgsec": 107.4,
+     "engrate": 55.5,
+     "pps": 1.54,
+     "newpct": 88.6
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1641,
+      "bookings": 45,
+      "impr": 95225,
+      "clicks": 3698
+     },
+     "prior": {
+      "spend": 1524,
+      "bookings": 28,
+      "impr": 77945,
+      "clicks": 3055
+     },
+     "yoy": {
+      "spend": 1138,
+      "bookings": 39,
+      "impr": 331887,
+      "clicks": 6967
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 543,
+      "bookings": 11,
+      "impr": 10712,
+      "clicks": 532
+     },
+     "prior": {
+      "spend": 524,
+      "bookings": 12,
+      "impr": 11463,
+      "clicks": 594
+     },
+     "yoy": {
+      "spend": 886,
+      "bookings": 21,
+      "impr": 40724,
+      "clicks": 931
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      632,
+      527,
+      1
+     ],
+     "b": [
+      9,
+      7,
+      0
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      427,
+      534,
+      340
+     ],
+     "b": [
+      22,
+      17,
+      19
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      357,
+      406,
+      317
+     ],
+     "b": [
+      16,
+      15,
+      18
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      192,
+      15,
+      38
+     ],
+     "b": [
+      9,
+      2,
+      1
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      189,
+      106,
+      152
+     ],
+     "b": [
+      1,
+      0,
+      4
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      167,
+      168,
+      235
+     ],
+     "b": [
+      6,
+      8,
+      12
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      110,
+      124,
+      2457
+     ],
+     "b": [
+      1,
+      5,
+      29
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      37,
+      58,
+      48
+     ],
+     "b": [
+      4,
+      1,
+      4
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      12,
+      19,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      11,
+      6,
+      7
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      0,
+      0,
+      3
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 87.4,
+    "Desktop": 12.1,
+    "Tablet": 0.5
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 709,
+     "b": 16
+    },
+    {
+     "path": "/menus/bubbles-bao-brunch",
+     "s": 354,
+     "b": 5
+    },
+    {
+     "path": "/menus",
+     "s": 315,
+     "b": 4
+    },
+    {
+     "path": "/explore/hutongmiami/reservations/create/search",
+     "s": 142,
+     "b": 27
+    },
+    {
+     "path": "",
+     "s": 138,
+     "b": 2
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W32",
+     "W33",
+     "W34",
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39"
+    ],
+    "spend": [
+     2478,
+     2486,
+     2455,
+     2167,
+     2263,
+     2041,
+     2048,
+     2184
+    ],
+    "bookings": [
+     43,
+     54,
+     37,
+     41,
+     31,
+     46,
+     40,
+     56
+    ]
+   },
+   "funnel": {
+    "impr": 105937,
+    "clicks": 4230,
+    "bookings": 56,
+    "landing": 799
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 1076.1,
+     "bookings": 30,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR | NEW Retargeting Campaign",
+     "platform": "Meta",
+     "spend": 426.13,
+     "bookings": 15,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Chinese Cuisine",
+     "platform": "Google",
+     "spend": 225.19,
+     "bookings": 7,
+     "wow": "flat"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 143.95,
+     "bookings": 1,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR | NEW Awareness Campaign – LPV Campaign",
+     "platform": "Meta",
+     "spend": 138.75,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 86.61,
+     "bookings": 3,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "Meta efficiency improved to about $36 a schedule from $54 last week, the best in the eight weeks shown. Google's 11.0 booking conversions are provisional and will settle upward."
+   ]
+  },
+  "All": {
+   "web": {
+    "cur": {
+     "bookings": 391,
+     "users": 10472,
+     "sessions": 13206,
+     "avgsec": 167.1,
+     "engrate": 53.3,
+     "pps": 2.67,
+     "newpct": 89.0
+    },
+    "prior": {
+     "bookings": 425,
+     "users": 10373,
+     "sessions": 13012,
+     "avgsec": 159.0,
+     "engrate": 61.4,
+     "pps": 2.66,
+     "newpct": 90.2
+    },
+    "yoy": {
+     "bookings": 647,
+     "users": 14154,
+     "sessions": 18035,
+     "avgsec": 175.1,
+     "engrate": 60.7,
+     "pps": 2.4,
+     "newpct": 87.6
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 4953,
+      "bookings": 133,
+      "impr": 409984,
+      "clicks": 9474
+     },
+     "prior": {
+      "spend": 4486,
+      "bookings": 97,
+      "impr": 360100,
+      "clicks": 8448
+     },
+     "yoy": {
+      "spend": 3314,
+      "bookings": 75,
+      "impr": 674527,
+      "clicks": 18697
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 2287,
+      "bookings": 42,
+      "impr": 109045,
+      "clicks": 3430
+     },
+     "prior": {
+      "spend": 2168,
+      "bookings": 72,
+      "impr": 107097,
+      "clicks": 3270
+     },
+     "yoy": {
+      "spend": 3193,
+      "bookings": 106,
+      "impr": 226662,
+      "clicks": 5163
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      3892,
+      4247,
+      3722
+     ],
+     "b": [
+      147,
+      159,
+      132
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      3263,
+      3295,
+      2305
+     ],
+     "b": [
+      38,
+      31,
+      16
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      2702,
+      2949,
+      3972
+     ],
+     "b": [
+      75,
+      118,
+      183
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      1201,
+      461,
+      1450
+     ],
+     "b": [
+      12,
+      7,
+      45
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      1170,
+      109,
+      289
+     ],
+     "b": [
+      47,
+      13,
+      15
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      822,
+      877,
+      1452
+     ],
+     "b": [
+      24,
+      38,
+      83
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      436,
+      491,
+      935
+     ],
+     "b": [
+      28,
+      34,
+      109
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      390,
+      430,
+      3065
+     ],
+     "b": [
+      14,
+      20,
+      52
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      91,
+      116,
+      0
+     ],
+     "b": [
+      3,
+      2,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      30,
+      25,
+      681
+     ],
+     "b": [
+      2,
+      2,
+      12
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      13,
+      23,
+      7
+     ],
+     "b": [
+      1,
+      1,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 80.3,
+    "Desktop": 18.8,
+    "Tablet": 0.8
+   },
+   "landing": [
+    {
+     "path": "/aqua-roma",
+     "s": 3678,
+     "b": 64
+    },
+    {
+     "path": "/",
+     "s": 3451,
+     "b": 80
+    },
+    {
+     "path": "",
+     "s": 850,
+     "b": 10
+    },
+    {
+     "path": "/menus",
+     "s": 563,
+     "b": 6
+    },
+    {
+     "path": "/aqua-kyoto",
+     "s": 546,
+     "b": 12
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W32",
+     "W33",
+     "W34",
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39"
+    ],
+    "spend": [
+     7223,
+     7337,
+     7288,
+     6788,
+     6853,
+     6645,
+     6653,
+     7240
+    ],
+    "bookings": [
+     250,
+     221,
+     190,
+     188,
+     163,
+     166,
+     169,
+     175
+    ]
+   },
+   "funnel": {
+    "impr": 519029,
+    "clicks": 12904,
+    "bookings": 175,
+    "landing": 4085
+   },
+   "campaigns": [
+    {
+     "name": "Aqua NYC &middot; CRKLR - Prospecting",
+     "platform": "Meta",
+     "spend": 1278.91,
+     "bookings": 39,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong Miami &middot; CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 1076.1,
+     "bookings": 30,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong NYC &middot; CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 631.1,
+     "bookings": 17,
+     "wow": "flat"
+    },
+    {
+     "name": "Aqua NYC &middot; CRKLR - Remarketing Campaign",
+     "platform": "Meta",
+     "spend": 557.73,
+     "bookings": 27,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong Miami &middot; CRKLR | NEW Retargeting Campaign",
+     "platform": "Meta",
+     "spend": 426.13,
+     "bookings": 15,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong NYC &middot; HT | Mahjong | Reach | New York",
+     "platform": "Meta",
+     "spend": 424.45,
+     "bookings": 0,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "Hutong NYC has no usable last-year base this week, so the year-on-year figures on this All view set three venues this year against two last year. Like for like, Aqua NYC and Hutong Miami booked 264 GA4 bookings against 647, down 59.2 percent.",
+    "Google booking conversions and modelled store visits for the current week are provisional and settle upward for two to three weeks, so the paid cost per booking shown here is a ceiling. Last week's Aqua NYC figure has already moved from 28.95 to 29.95 and Hutong NYC's from 23.96 to 29.96."
+   ]
+  }
+ }
+}

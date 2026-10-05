@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "28 Sep–4 Oct 2026",
+ "wow": "21–27 Sep 2026",
+ "yoy": "29 Sep–5 Oct 2025",
+ "generated": "5 October 2026",
+ "badge": "AQUA HK AND DSL BEHIND",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 178,
+   "tgt": 225,
+   "wow_b": 229,
+   "yoy_b": 229,
+   "users": 3924,
+   "sessions": 5225,
+   "asd": 227.2,
+   "bounce": 0.27789,
+   "meta_s": 7683.49,
+   "meta_sch": 11,
+   "meta_sch_prior": 28,
+   "goog_s": 9683.07,
+   "goog_c": 42.52,
+   "goog_c_prior": 85.55,
+   "shared": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 136,
+   "tgt": 178,
+   "wow_b": 143,
+   "yoy_b": 173,
+   "users": 987,
+   "sessions": 1343,
+   "asd": 255.5,
+   "bounce": 0.32167,
+   "meta_s": 1064.92,
+   "meta_sch": 4,
+   "meta_sch_prior": 3,
+   "goog_s": 1315.51,
+   "goog_c": 60.99,
+   "goog_c_prior": 64.45,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK spent HK$7,683 on Meta for 11 schedules, about HK$698 each. That is in the poor band and the worst Meta week of the eight on record here, against 28 schedules at HK$253 the week before on slightly lower spend.",
+   "Dim Sum Library spent HK$1,065 for 4 schedules, roughly HK$266 each. That is inside the good band and better than 3 schedules at HK$377 the week before, on a very small base.",
+   "Meta remains a thin last-click channel in Hong Kong: 15 combined schedules against 314 GA4 bookings across these two venues, so read the spend as awareness rather than acquisition."
+  ],
+  "google": [
+   "Aqua HK Google ran HK$9,683 for about 43 booking conversions at roughly HK$228 CPA, outside the good band, against 86 conversions on HK$11,761 the week before. Spend came down 17.7 percent and conversions halved.",
+   "Dim Sum Library Google delivered about 61 conversions on HK$1,316 at roughly HK$22 CPA, still the cheapest acquisition in the portfolio, against 64 conversions the week before on the same spend.",
+   "Brand search carried the volume at both venues, 22 of 43 conversions at Aqua HK and 43 of 61 at Dim Sum Library. Read these as existing name demand rather than new reach."
+  ],
+  "ga4": [
+   "Aqua HK users rose 7.9 percent week on week to 3,924 and are 11.2 percent below last year, but conversion fell to 4.5 percent from 6.3 percent, so bookings of 178 are 22.3 percent below last year and 20.9 percent under the weekly target. The gap here is conversion, not traffic.",
+   "Dim Sum Library users were flat week on week at 987 and are 15.1 percent below last year, while conversion improved to 13.8 percent from 14.9 percent last year. Bookings of 136 are 21.4 percent below last year and 23.6 percent below the weekly target, so the gap here is traffic volume rather than conversion.",
+   "These remain the only two Hong Kong venues behind on the FY-to-date line, Aqua HK by 5.8 percent and Dim Sum Library by 8.8 percent. The other four are all ahead."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W28",
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     215,
+     213,
+     175,
+     208,
+     184,
+     220,
+     229,
+     178
+    ],
+    "users": [
+     3242,
+     3170,
+     3078,
+     3561,
+     3409,
+     3936,
+     3638,
+     3924
+    ]
+   },
+   "Dim Sum Library": {
+    "bookings": [
+     148,
+     155,
+     146,
+     144,
+     128,
+     155,
+     143,
+     136
+    ],
+    "users": [
+     1270,
+     1280,
+     1201,
+     1078,
+     997,
+     1292,
+     986,
+     987
+    ]
+   }
+  }
+ }
+}

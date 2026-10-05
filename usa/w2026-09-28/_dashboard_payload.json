@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 195,
+   "tgt": 540,
+   "wow": 217,
+   "yoy": 560,
+   "ytd": 9835,
+   "ytdt": 18067,
+   "meta_s": 2043.92,
+   "goog_s": 605.41,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 127,
+   "tgt": 438,
+   "wow": 153,
+   "yoy": 0,
+   "ytd": 6213,
+   "ytdt": 16945,
+   "meta_s": 1268.16,
+   "goog_s": 1138.74,
+   "nc": true
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 69,
+   "tgt": 119,
+   "wow": 55,
+   "yoy": 87,
+   "ytd": 3628,
+   "ytdt": 5306,
+   "meta_s": 1640.98,
+   "goog_s": 542.52,
+   "nc": false
+  }
+ ],
+ "note": "USA targets are strategic and deliberately aggressive, Hutong NYC explicitly so, and Hutong Miami's GA4 target is derived from its Meta plan (monthly &times; 6738/4756). Read variance to target with that in mind. <b>This week straddles two months</b>, so the weekly target is pro-rata across both: three days on September and four on October, each month's GA4 target &times; days/30. That gives Aqua NYC 540 (2,210 &times; 3/30 plus 2,394 &times; 4/30), Hutong NYC 438 (1,575 and 2,100 on the same basis) and Hutong Miami 119 (479 and 530, both derived), <b>1,097 for the market</b> against 996 last week. The USA booked <b>391</b> GA4 bookings, <b>down 8.0 percent</b> week on week and <b>64.4 percent below target</b>. <b>Hutong NYC has no usable last-year comparison</b>: the site's SevenRooms tracking stopped on 22 September 2025 and did not resume until 15 October, so this week sits inside the outage window and its last-year bookings, Meta schedules and Google booking conversions are all missing. The portfolio year-on-year figure therefore sets three venues this year against two last year. Like for like, <b>Aqua NYC and Hutong Miami booked 264 against 647, down 59.2 percent</b>. <b>Aqua NYC is the conversion case</b>: users fell 15.5 percent year on year but bookings fell 65.2 percent, so conversion is <b>3.1 percent</b> against <b>7.6 percent</b> last year and 3.7 percent last week. <b>Hutong Miami recovered most of last week's fall</b>, up 25.5 percent to 69 against 79 two weeks ago with conversion at 4.3 percent against 3.6 percent last week, and Meta came down to about $36 a schedule from $54. <b>Hutong NYC</b> fell 17.0 percent week on week to 127 on 10.1 percent fewer users. Year to date the portfolio sits <b>51.2 percent</b> behind a target that assumed growth. Google booking conversions and modelled store visits for this week are provisional and will settle upward, so read this week's paid cost per booking as a ceiling. The Google Reserve to OpenTable shift at both US Hutongs is a routing and margin change, not lost demand. The covers report carries the fuller picture.",
+ "week": "28 Sep–4 Oct 2026",
+ "wow": "21–27 Sep 2026",
+ "yoy": "29 Sep–5 Oct 2025",
+ "generated": "5 October 2026"
+}
