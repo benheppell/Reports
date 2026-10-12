@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OpenTable, Open Table, OT Guestcenter, OT and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 420 &middot; YoY &#9660;55.2% like for like",
+ "ga4_yoy": "&#9660;55.2% YoY (two venues)",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> On the two venues with a usable last-year comparison, GA4 bookings are <b>down 55.2% YoY</b> while their covers are <b>up 14.9%</b>. Part of that difference is a routing change, not lost demand: both US Hutongs moved their Google Reserve provider to OpenTable in March, and at the two Hutongs <b>OpenTable and Resy</b> covers are <b>up 37 percent</b> year on year while Google Reserve covers are <b>down 68 percent</b>. That is a margin change to watch, not a demand collapse. Aqua NYC is still on the direct integration and its Google Reserve covers are up 7 percent year on year. Covers came in at <b>4,361</b>, <b>up 19.3 percent</b> week on week and <b>up 8.3 percent</b> year on year, the highest of the eight weeks shown. On the weekly email definition of Website plus OpenTable and Resy plus Google Reserve, covers were <b>2,366</b>, up 18.7 percent week on week and up 7.5 percent year on year. <b>No bulk import has been stripped out of this week.</b> Hutong New York had taken an OpenTable past-dated history re-sync in each of the four weeks to 28 September, so this was checked explicitly: the two largest OT Guestcenter bursts this week, 56 records on 5 October and 32 on 7 October, are 55 percent and 37 percent past-dated with service dates spanning only 30 September to 18 November, which is ordinary late and forward syncing. That four-week run has broken. The exclusions named in earlier weeks stay out of the comparison columns and the trend: the 40 records and 124 covers loaded into Hutong New York on 28 September stay out of the prior-week column and the W39 point, the two loads of 21 and 23 September stay out of W38, the 273-cover Aqua Roma backfill stays out of W37, and the 1,907-cover Hutong New York history load stays out of W35. The year-ago week carries no bulk import, so nothing is excluded there.",
+ "week": "5–11 Oct 2026",
+ "wow": "28 Sep–4 Oct 2026",
+ "yoy": "6–12 Oct 2025",
+ "generated": "12 October 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 205,
+   "ch": {
+    "web": {
+     "c": 401,
+     "p": 443,
+     "y": 419
+    },
+    "gr": {
+     "c": 250,
+     "p": 132,
+     "y": 234
+    },
+    "ot": {
+     "c": 297,
+     "p": 188,
+     "y": 289
+    },
+    "walk": {
+     "c": 831,
+     "p": 759,
+     "y": 824
+    },
+    "recep": {
+     "c": 329,
+     "p": 206,
+     "y": 254
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 59,
+     "p": 61,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 148,
+   "ch": {
+    "web": {
+     "c": 404,
+     "p": 357,
+     "y": 329
+    },
+    "gr": {
+     "c": 80,
+     "p": 101,
+     "y": 252
+    },
+    "ot": {
+     "c": 595,
+     "p": 423,
+     "y": 455
+    },
+    "walk": {
+     "c": 428,
+     "p": 358,
+     "y": 542
+    },
+    "recep": {
+     "c": 0,
+     "p": 6,
+     "y": 16
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 59,
+     "p": 32,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 67,
+   "ch": {
+    "web": {
+     "c": 162,
+     "p": 156,
+     "y": 80
+    },
+    "gr": {
+     "c": 13,
+     "p": 10,
+     "y": 42
+    },
+    "ot": {
+     "c": 164,
+     "p": 184,
+     "y": 101
+    },
+    "walk": {
+     "c": 246,
+     "p": 233,
+     "y": 189
+    },
+    "recep": {
+     "c": 13,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 30,
+     "p": 8,
+     "y": 1
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40"
+  ],
+  "total": [
+   3461,
+   3238,
+   3245,
+   3643,
+   3507,
+   3934,
+   3657,
+   4361
+  ],
+  "ot": [
+   751,
+   784,
+   672,
+   874,
+   749,
+   1055,
+   795,
+   1056
+  ]
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "5–11 Oct 2026",
+ "wow": "28 Sep–4 Oct 2026",
+ "yoy": "6–12 Oct 2025",
+ "generated": "12 October 2026",
+ "badge": "TRAFFIC UP, CONVERSION DOWN",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 205,
+   "tgt": 559,
+   "wow_b": 199,
+   "yoy_b": 506,
+   "users": 6680,
+   "sessions": 7907,
+   "asd": 147.8,
+   "bounce": 0.507,
+   "meta_s": 2166.77,
+   "meta_sch": 55,
+   "meta_sch_prior": 71,
+   "goog_s": 731.47,
+   "goog_c": 15.0,
+   "goog_c_prior": 20.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 148,
+   "tgt": 490,
+   "wow_b": 130,
+   "yoy_b": 0,
+   "users": 3864,
+   "sessions": 5095,
+   "asd": 199.5,
+   "bounce": 0.47,
+   "meta_s": 1393.71,
+   "meta_sch": 8,
+   "meta_sch_prior": 17,
+   "goog_s": 1063.49,
+   "goog_c": 21.96,
+   "goog_c_prior": 18.01,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 67,
+   "tgt": 124,
+   "wow_b": 70,
+   "yoy_b": 101,
+   "users": 2833,
+   "sessions": 3222,
+   "asd": 114.7,
+   "bounce": 0.605,
+   "meta_s": 1619.01,
+   "meta_sch": 27,
+   "meta_sch_prior": 45,
+   "goog_s": 631.59,
+   "goog_c": 13.0,
+   "goog_c_prior": 15.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Aqua NYC spent $2,167 on Meta for 55 schedules, about $39 each, up from $29 last week and now the weakest of the eight weeks shown, though still inside the $25 to $50 band. Prospecting took $1,397 for 35 schedules and remarketing $560 for 14.",
+   "Hutong Miami spent $1,619 for 27 schedules, about $60 each, back past the $50 poor threshold after $36 last week. The conversions campaign did 16 schedules on $1,065 and retargeting 11 on $412.",
+   "Hutong NYC spent $1,394 for 8 schedules, about $174 each, its worst reading of the eight weeks and more than double last week's $75. The Mahjong reach campaign and the video viewers campaign took $625 of the $1,394 with no schedules, which is expected for those objectives, but the conversions campaign alone ran at $96 a schedule on $769."
+  ],
+  "google": [
+   "Aqua NYC ran $731 for 15.0 booking conversions, about $49 each on the figures available today. Last week's W39 reading has already restated from 15.0 to 20.0, so this week's count is provisional and the true cost per booking will come down.",
+   "Hutong NYC delivered 22.0 on $1,063 and Hutong Miami 13.0 on $632. On settled numbers Hutong NYC ran at about $63 last week and Hutong Miami at about $36, so treat $48 and $49 as ceilings rather than outcomes.",
+   "Modelled store visits and local actions also restated sharply upward on the prior week, Aqua NYC store visits from 22 to 64 and Hutong NYC from 35.8 to 84.3, so the latest point on every walk-in panel understates the true figure. Brand search is held flat as a control: Hutong NYC Brand took $140 for 9 booking conversions and Hutong Miami Brand $113 for 8, the two cheapest booking sources in the market this week."
+  ],
+  "ga4": [
+   "Aqua NYC users rose 6.8 percent week on week to 6,680 but are still 16.3 percent below last year, and bookings are 59.5 percent below. Conversion is 3.1 percent against 6.3 percent last year and 3.2 percent last week. Organic Search brought 2,356 sessions and 84 bookings while Paid Social brought 2,459 and 19.",
+   "Hutong NYC took the largest traffic jump in the market, users up 45.6 percent week on week to 3,864 on broad gains across Direct, Organic Search, Referral and Unassigned. Bookings rose only 13.8 percent to 148, so conversion fell to 3.8 percent from 4.9 percent. There is no last-year booking comparison: tracking was down across the whole of 6 to 12 October 2025, so the portfolio year-on-year card sets three venues this year against two last year. Like for like, Aqua NYC and Hutong Miami booked 272 against 607, down 55.2 percent.",
+   "Hutong Miami is the week's clearest conversion problem. Users rose 77.2 percent week on week to 2,833, driven by Paid Social sessions more than doubling from 701 to 1,475, but bookings fell 4.3 percent to 67, so conversion halved to 2.4 percent from 4.4 percent. Bounce rate jumped to 60.5 percent from 32.4 percent and pages per session fell to 2.20 from 2.72, which points at traffic quality rather than the booking path. Read the current week's bounce and engagement as provisional, since they restate materially in the week after a run."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     207,
+     220,
+     237,
+     198,
+     186,
+     217,
+     199,
+     205
+    ],
+    "users": [
+     5778,
+     5966,
+     5366,
+     5498,
+     6266,
+     5904,
+     6254,
+     6680
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     141,
+     137,
+     142,
+     138,
+     115,
+     153,
+     130,
+     148
+    ],
+    "users": [
+     3395,
+     2937,
+     2570,
+     2641,
+     3007,
+     2949,
+     2653,
+     3864
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     112,
+     80,
+     74,
+     54,
+     79,
+     55,
+     70,
+     67
+    ],
+    "users": [
+     2154,
+     1841,
+     1674,
+     1624,
+     1435,
+     1520,
+     1599,
+     2833
+    ]
+   }
+  }
+ }
+}

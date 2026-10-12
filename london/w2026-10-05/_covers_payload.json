@@ -1,0 +1,324 @@
+{
+ "market": "London",
+ "platform": "OpenTable",
+ "tz": "Europe/London",
+ "platform_foot": "<b>OpenTable</b> = OpenTable and OT Guestcenter sources",
+ "combined_note": "<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. ",
+ "ga4_meta": "Portfolio 3,087 &middot; YoY &#9660;4.6%",
+ "ga4_yoy": "&#9660;4.6% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> London&rsquo;s GA4 bookings are <b>down 4.6% YoY</b> while covers are <b>up 37.4% YoY</b>, and both are right. GA4&rsquo;s <code>sevenrooms_booking_complete</code> only fires for website bookings, so <b>OpenTable</b> is invisible to it and Google Reserve is only partly captured. Website is <b>60 percent</b> of London covers; the other 40 percent, made up of OpenTable (<b>12 percent</b>), Google Reserve (<b>8 percent</b>), walk-ins (<b>15 percent</b>) and the rest, never reaches the GA4 number. Covers came in at <b>11,502</b>, <b>down 2.2 percent</b> week on week against a freshly recomputed prior week, and it is the second highest of the eight weeks on record. <b>Aqua Shard</b> is not like for like this week: Tuesday 6 October was taken as an exclusive hire of the whole day, which closed the restaurant to the public and is worth about 366 covers against the matched Tuesday last year. Read the GA4 dashboard as the website channel and this report as demand.",
+ "week": "5–11 Oct 2026",
+ "wow": "28 Sep–4 Oct 2026",
+ "yoy": "6–12 Oct 2025",
+ "generated": "12 October 2026",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ga4": 1315,
+   "ch": {
+    "web": {
+     "c": 2907,
+     "p": 2486,
+     "y": 3118
+    },
+    "gr": {
+     "c": 320,
+     "p": 327,
+     "y": 178
+    },
+    "ot": {
+     "c": 220,
+     "p": 276,
+     "y": 82
+    },
+    "walk": {
+     "c": 104,
+     "p": 95,
+     "y": 109
+    },
+    "recep": {
+     "c": 13,
+     "p": 41,
+     "y": 2
+    },
+    "ota": {
+     "c": 14,
+     "p": 32,
+     "y": 30
+    },
+    "tp": {
+     "c": 69,
+     "p": 50,
+     "y": 65
+    },
+    "other": {
+     "c": 200,
+     "p": 218,
+     "y": 206
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ga4": 870,
+   "ch": {
+    "web": {
+     "c": 2000,
+     "p": 2127,
+     "y": 1772
+    },
+    "gr": {
+     "c": 296,
+     "p": 388,
+     "y": 208
+    },
+    "ot": {
+     "c": 147,
+     "p": 176,
+     "y": 70
+    },
+    "walk": {
+     "c": 180,
+     "p": 178,
+     "y": 118
+    },
+    "recep": {
+     "c": 22,
+     "p": 23,
+     "y": 27
+    },
+    "ota": {
+     "c": 19,
+     "p": 43,
+     "y": 13
+    },
+    "tp": {
+     "c": 58,
+     "p": 86,
+     "y": 20
+    },
+    "other": {
+     "c": 279,
+     "p": 330,
+     "y": 178
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ga4": 207,
+   "ch": {
+    "web": {
+     "c": 446,
+     "p": 459,
+     "y": 589
+    },
+    "gr": {
+     "c": 46,
+     "p": 79,
+     "y": 144
+    },
+    "ot": {
+     "c": 151,
+     "p": 124,
+     "y": 56
+    },
+    "walk": {
+     "c": 154,
+     "p": 225,
+     "y": 160
+    },
+    "recep": {
+     "c": 19,
+     "p": 37,
+     "y": 11
+    },
+    "ota": {
+     "c": 117,
+     "p": 88,
+     "y": 150
+    },
+    "tp": {
+     "c": 11,
+     "p": 4,
+     "y": 16
+    },
+    "other": {
+     "c": 301,
+     "p": 354,
+     "y": 337
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ga4": 104,
+   "ch": {
+    "web": {
+     "c": 264,
+     "p": 304,
+     "y": 192
+    },
+    "gr": {
+     "c": 37,
+     "p": 45,
+     "y": 63
+    },
+    "ot": {
+     "c": 142,
+     "p": 115,
+     "y": 49
+    },
+    "walk": {
+     "c": 205,
+     "p": 163,
+     "y": 262
+    },
+    "recep": {
+     "c": 35,
+     "p": 4,
+     "y": 32
+    },
+    "ota": {
+     "c": 55,
+     "p": 41,
+     "y": 14
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 2
+    },
+    "other": {
+     "c": 295,
+     "p": 208,
+     "y": 310
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ga4": 116,
+   "ch": {
+    "web": {
+     "c": 246,
+     "p": 257,
+     "y": 256
+    },
+    "gr": {
+     "c": 44,
+     "p": 43,
+     "y": 83
+    },
+    "ot": {
+     "c": 71,
+     "p": 75,
+     "y": 23
+    },
+    "walk": {
+     "c": 159,
+     "p": 309,
+     "y": 201
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 118,
+     "p": 96,
+     "y": 40
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 5
+    },
+    "other": {
+     "c": 277,
+     "p": 405,
+     "y": 246
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ga4": 475,
+   "ch": {
+    "web": {
+     "c": 1048,
+     "p": 1070,
+     "y": 65
+    },
+    "gr": {
+     "c": 159,
+     "p": 247,
+     "y": 11
+    },
+    "ot": {
+     "c": 603,
+     "p": 552,
+     "y": 10
+    },
+    "walk": {
+     "c": 947,
+     "p": 917,
+     "y": 103
+    },
+    "recep": {
+     "c": 56,
+     "p": 169,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 20
+    },
+    "tp": {
+     "c": 0,
+     "p": 6,
+     "y": 0
+    },
+    "other": {
+     "c": 1003,
+     "p": 1092,
+     "y": 123
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36"
+  ],
+  "total": [
+   10562,
+   10655,
+   9819,
+   10060,
+   11316,
+   11300,
+   11757,
+   11502
+  ],
+  "ot": [
+   988,
+   1040,
+   897,
+   1091,
+   1167,
+   1293,
+   1318,
+   1334
+  ]
+ }
+}

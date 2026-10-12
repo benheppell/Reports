@@ -1,0 +1,249 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "week": "5–11 Oct 2026",
+ "wow": "28 Sep–4 Oct 2026",
+ "yoy": "6–12 Oct 2025",
+ "generated": "12 October 2026",
+ "badge": "SHARD IS THE WHOLE YOY GAP",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1315,
+   "tgt": 2007,
+   "wow_b": 1258,
+   "yoy_b": 1742,
+   "users": 27033,
+   "sessions": 38429,
+   "asd": 175.8,
+   "bounce": 0.3737,
+   "meta_s": 2803.06,
+   "meta_sch": 232.0,
+   "meta_sch_prior": 243.0,
+   "goog_s": 2160.25,
+   "goog_c": 252.95,
+   "goog_c_prior": 334.22,
+   "shared": false
+  },
+  {
+   "name": "Hutong",
+   "act": 870,
+   "tgt": 1015,
+   "wow_b": 1032,
+   "yoy_b": 927,
+   "users": 16588,
+   "sessions": 23594,
+   "asd": 184.1,
+   "bounce": 0.4613,
+   "meta_s": 2460.2,
+   "meta_sch": 200.0,
+   "meta_sch_prior": 188.0,
+   "goog_s": 1555.68,
+   "goog_c": 193.23,
+   "goog_c_prior": 312.12,
+   "shared": false
+  },
+  {
+   "name": "Regent St",
+   "act": 207,
+   "tgt": 364,
+   "wow_b": 207,
+   "yoy_b": 317,
+   "users": 4209,
+   "sessions": 5391,
+   "asd": 182.4,
+   "bounce": 0.3541,
+   "meta_s": 1156.91,
+   "meta_sch": 48.0,
+   "meta_sch_prior": 53.0,
+   "goog_s": 560.03,
+   "goog_c": 7,
+   "goog_c_prior": 10,
+   "shared": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 104,
+   "tgt": 182,
+   "wow_b": 116,
+   "yoy_b": 107,
+   "users": 2049,
+   "sessions": 2571,
+   "asd": 160.2,
+   "bounce": 0.3178,
+   "meta_s": 1327.18,
+   "meta_sch": 76.0,
+   "meta_sch_prior": 76.0,
+   "goog_s": 507.53,
+   "goog_c": 15,
+   "goog_c_prior": 13.99,
+   "shared": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 116,
+   "tgt": 140,
+   "wow_b": 97,
+   "yoy_b": 113,
+   "users": 1330,
+   "sessions": 1693,
+   "asd": 164.1,
+   "bounce": 0.3379,
+   "meta_s": 402.04,
+   "meta_sch": 26.0,
+   "meta_sch_prior": 40.0,
+   "goog_s": 696.79,
+   "goog_c": 27.39,
+   "goog_c_prior": 27.12,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 15,
+  "meta_poor": 25,
+  "goog_good": 18,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Meta CPAs sit inside the £25 poor threshold at all five deep-dive venues and inside the £15 good band at two: Aqua Shard £12 and Hutong £12. Shiro Sushi is £15, Azzurra £17 and Regent St £24. DSL is read as spend to traffic to bookings rather than a cost per booking.",
+   "Schedule volume rose week on week at Hutong (188 to 200) and held level at Azzurra (76 to 76); it fell at Aqua Shard (243 to 232), Regent St (53 to 48), Shiro Sushi (40 to 26) and DSL (116 to 107).",
+   "Regent St is the one to look at: spend rose from £772 to £1,157 while schedules fell from 53 to 48, so CPA moved from £15 to £24. The extra money went into the Nueva Tactical campaign, which took £386 for two schedules while the straight Nueva Prospecting campaign took £283 for 23."
+  ],
+  "google": [
+   "Aqua Shard Google delivered about 253 booking conversions on £2,160, roughly £9 CPA, comfortably inside the good band, and Search > Afternoon Tea alone accounts for 130 of them on £626 of spend. Spend is down again week on week, which is the agreed phase-down of uncontested brand search rather than a reset.",
+   "Hutong Google spend fell to £1,556 and booking conversions came in at about 193, a CPA of roughly £8. Search > Golden Sky carries 136 of those on £360. Conversions for the latest week settle upward, so read this as a ceiling on CPA rather than the final figure.",
+   "Regent St (£80 CPA on 7 conversions), Azzurra (£34 on 15) and Shiro Sushi (£25 on 27) are the weak end. Regent St and Azzurra are past the £30 poor threshold on small volumes in a week that has not finished settling, so read them as a direction rather than a verdict."
+  ],
+  "ga4": [
+   "Users against last year at the deep-dive venues: Aqua Shard −2.9 percent, Hutong −12.2 percent, Regent St −42.0 percent, Azzurra −6.4 percent, Shiro Sushi −38.8 percent. Azzurra gave back last week’s email spike, and the Regent St comparison is against a spell when the Kyoto site was running close to twice its current traffic.",
+   "Conversion is doing the opposite, in percent this year against last: Hutong 5.2 against 4.9, Regent St 4.9 against 4.4, Azzurra 5.1 against 4.9, Shiro Sushi 8.7 against 5.2. Shiro Sushi is well above last year and the other three are modestly ahead. Aqua Shard is the only fall, at 4.9 percent against 6.3 percent.",
+   "Aqua Shard is therefore still the single venue where both traffic and conversion are down, and at 427 bookings below last year it is almost three times the whole London year-on-year gap."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W29",
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36"
+  ],
+  "venues": {
+   "Aqua Shard": {
+    "bookings": [
+     1133,
+     1086,
+     902,
+     1048,
+     1341,
+     1313,
+     1258,
+     1315
+    ],
+    "users": [
+     25933,
+     23052,
+     19172,
+     21475,
+     25162,
+     25351,
+     26173,
+     27033
+    ]
+   },
+   "Hutong": {
+    "bookings": [
+     980,
+     1015,
+     825,
+     831,
+     892,
+     889,
+     1032,
+     870
+    ],
+    "users": [
+     16439,
+     16216,
+     13061,
+     14613,
+     15599,
+     16316,
+     17749,
+     16588
+    ]
+   },
+   "Regent St": {
+    "bookings": [
+     256,
+     269,
+     241,
+     238,
+     277,
+     251,
+     207,
+     207
+    ],
+    "users": [
+     5776,
+     5768,
+     4539,
+     4441,
+     4075,
+     3925,
+     3830,
+     4209
+    ]
+   },
+   "Azzurra": {
+    "bookings": [
+     64,
+     82,
+     87,
+     76,
+     89,
+     105,
+     116,
+     104
+    ],
+    "users": [
+     1437,
+     1500,
+     1606,
+     1680,
+     1482,
+     1559,
+     2580,
+     2049
+    ]
+   },
+   "Shiro Sushi": {
+    "bookings": [
+     87,
+     89,
+     78,
+     84,
+     92,
+     93,
+     97,
+     116
+    ],
+    "users": [
+     1095,
+     1083,
+     1076,
+     1167,
+     1207,
+     1150,
+     1347,
+     1330
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,603 @@
+{
+ "meta": {
+  "note": "Vesu, The Canton Library and the Shiro split, kept separately as in previous weeks.",
+  "vesu": {
+   "ga4": "439152333",
+   "meta": "act_721409993160810",
+   "google": "4311541411 (mgr 7441169950)",
+   "reopened": "2026-09-08"
+  },
+  "canton": {
+   "ga4": "548638742",
+   "meta": "act_2401548436678795 Canton campaigns only",
+   "google": "5594089398 (booking conversion action returned 6 conversions in W36, still not a verified import)",
+   "opened": "2026-09-08"
+  },
+  "shiro": {
+   "ga4": "359394354 split by pagePath",
+   "meta": "act_283603334535394 shared",
+   "google": "4093767407 shared"
+  }
+ },
+ "vesu_ga4": {
+  "series": {
+   "W29": {
+    "b": 7,
+    "u": 654
+   },
+   "W30": {
+    "b": 25,
+    "u": 352
+   },
+   "W31": {
+    "b": 53,
+    "u": 848
+   },
+   "W32": {
+    "b": 100,
+    "u": 1572
+   },
+   "W33": {
+    "b": 105,
+    "u": 1380
+   },
+   "W34": {
+    "b": 73,
+    "u": 1239
+   },
+   "W35": {
+    "b": 83,
+    "u": 1283
+   },
+   "W36": {
+    "b": 57,
+    "u": 1084
+   }
+  },
+  "ly": {
+   "L33": {
+    "b": 65,
+    "u": 861
+   },
+   "L34": {
+    "b": 59,
+    "u": 926
+   },
+   "L35": {
+    "b": 70,
+    "u": 1046
+   },
+   "L36": {
+    "b": 68,
+    "u": 921
+   }
+  },
+  "site": {
+   "cur": {
+    "sessions": 1305,
+    "users": 1084,
+    "pageviews": 2955,
+    "asd": 125.278,
+    "bounce": 0.50115,
+    "engrate": 0.49885,
+    "newusers": 947
+   },
+   "prior": {
+    "sessions": 1624,
+    "users": 1283,
+    "pageviews": 4256,
+    "asd": 144.193,
+    "bounce": 0.46244,
+    "engrate": 0.53756,
+    "newusers": 1159
+   },
+   "yoy": {
+    "sessions": 1862,
+    "users": 921,
+    "pageviews": 2255,
+    "asd": 118.723,
+    "bounce": 0.33298,
+    "engrate": 0.66702,
+    "newusers": 248
+   }
+  },
+  "ytd": 1438
+ },
+ "canton_ga4": {
+  "series": {
+   "W29": {
+    "b": 0,
+    "u": 262
+   },
+   "W30": {
+    "b": 0,
+    "u": 446
+   },
+   "W31": {
+    "b": 0,
+    "u": 585
+   },
+   "W32": {
+    "b": 13,
+    "u": 1452
+   },
+   "W33": {
+    "b": 31,
+    "u": 3767
+   },
+   "W34": {
+    "b": 46,
+    "u": 3959
+   },
+   "W35": {
+    "b": 27,
+    "u": 3391
+   },
+   "W36": {
+    "b": 37,
+    "u": 2544
+   }
+  },
+  "site": {
+   "cur": {
+    "sessions": 2961,
+    "users": 2544,
+    "pageviews": 5566,
+    "asd": 92.407,
+    "bounce": 0.56062,
+    "engrate": 0.43938,
+    "newusers": 2323
+   },
+   "prior": {
+    "sessions": 3971,
+    "users": 3391,
+    "pageviews": 7580,
+    "asd": 79.008,
+    "bounce": 0.48099,
+    "engrate": 0.51901,
+    "newusers": 3131
+   }
+  },
+  "ytd": 154,
+  "note": "pre-opening weeks W29 to W31 carry site traffic but no bookings; W32 was the opening week with six trading days."
+ },
+ "vesu_ads": {
+  "meta_total_spend": {
+   "W29": 2368.53,
+   "W30": 2299.08,
+   "W31": 2930.22,
+   "W32": 3871.48,
+   "W33": 3436.21,
+   "W34": 3476.59,
+   "W35": 3529.27,
+   "W36": 3460.71
+  },
+  "meta_conversion_campaign": {
+   "W29": {
+    "spend": null,
+    "sch": null
+   },
+   "W30": {
+    "spend": null,
+    "sch": null
+   },
+   "W31": {
+    "spend": 793.84,
+    "sch": 12
+   },
+   "W32": {
+    "spend": 3871.48,
+    "sch": 30
+   },
+   "W33": {
+    "spend": 3436.21,
+    "sch": 35
+   },
+   "W34": {
+    "spend": 3476.59,
+    "sch": 15
+   },
+   "W35": {
+    "spend": 3529.27,
+    "sch": 17
+   },
+   "W36": {
+    "spend": 3460.71,
+    "sch": 9
+   }
+  },
+  "meta_ly": {
+   "L33": {
+    "total_spend": 2427.6,
+    "conv_spend": 2106.6,
+    "sch": 16
+   },
+   "L34": {
+    "total_spend": 2407.44,
+    "conv_spend": 2105.89,
+    "sch": 16
+   },
+   "L35": {
+    "total_spend": 2378.13,
+    "conv_spend": 2175.56,
+    "sch": 13
+   },
+   "L36": {
+    "total_spend": 2989.74,
+    "conv_spend": 2389.62,
+    "sch": 20
+   }
+  },
+  "google": {
+   "W29": {
+    "spend": null,
+    "conv": null
+   },
+   "W30": {
+    "spend": null,
+    "conv": null
+   },
+   "W31": {
+    "spend": 1635.58,
+    "conv": 12
+   },
+   "W32": {
+    "spend": 2563.34,
+    "conv": 31
+   },
+   "W33": {
+    "spend": 2481.13,
+    "conv": 33
+   },
+   "W34": {
+    "spend": 2268.11,
+    "conv": 27
+   },
+   "W35": {
+    "spend": 2206.28,
+    "conv": 36
+   },
+   "W36": {
+    "spend": 2353.45,
+    "conv": 25
+   }
+  },
+  "google_ly": {
+   "L33": {
+    "spend": 2113.97,
+    "conv": 27.518455
+   },
+   "L34": {
+    "spend": 2515.77,
+    "conv": 17
+   },
+   "L35": {
+    "spend": 2135.01,
+    "conv": 21
+   },
+   "L36": {
+    "spend": 2430.99,
+    "conv": 24
+   }
+  }
+ },
+ "canton_ads": {
+  "meta": {
+   "W29": {
+    "total_spend": 5257.09,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W30": {
+    "total_spend": 12269.15,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W31": {
+    "total_spend": 9085.88,
+    "conv_campaign_spend": null,
+    "sch": null
+   },
+   "W32": {
+    "total_spend": 8062.38,
+    "conv_campaign_spend": 5092.45,
+    "sch": 3
+   },
+   "W33": {
+    "total_spend": 15549.17,
+    "conv_campaign_spend": 12469.61,
+    "sch": 8
+   },
+   "W34": {
+    "total_spend": 14951.21,
+    "conv_campaign_spend": 11961.57,
+    "sch": 11
+   },
+   "W35": {
+    "total_spend": 14118.07,
+    "conv_campaign_spend": 11343.82,
+    "sch": 10
+   },
+   "W36": {
+    "total_spend": 12266.55,
+    "conv_campaign_spend": 9221.57,
+    "sch": 11
+   }
+  },
+  "google": {
+   "W29": {
+    "spend": 1420.69,
+    "conv": null
+   },
+   "W30": {
+    "spend": 3532.23,
+    "conv": null
+   },
+   "W31": {
+    "spend": 5336.03,
+    "conv": null
+   },
+   "W32": {
+    "spend": 6767.1,
+    "conv": null
+   },
+   "W33": {
+    "spend": 10893.89,
+    "conv": null
+   },
+   "W34": {
+    "spend": 13905.04,
+    "conv": null
+   },
+   "W35": {
+    "spend": 6293.98,
+    "conv": null
+   },
+   "W36": {
+    "spend": 6893.51,
+    "conv": null
+   }
+  },
+  "google_conv_status": "SECOND WEEK OF ROWS: the booking conversion action 'Canton Library HK (web) sevenrooms_booking_complete' returned 6 conversions in W36 against 1 in W35 and no rows before. A separate action 'Canton Library HK (web) book_now_button_click' returned 91 in W36. Six conversions against 37 GA4 bookings and HK$6,894 of spend is not a working import, so bookings and CPA stay published as not available, and the change is flagged for review for the second week."
+ },
+ "shiro_tk": {
+  "series": {
+   "W29": {
+    "b": 67,
+    "u": 1650
+   },
+   "W30": {
+    "b": 68,
+    "u": 1467
+   },
+   "W31": {
+    "b": 68,
+    "u": 1101
+   },
+   "W32": {
+    "b": 81,
+    "u": 1328
+   },
+   "W33": {
+    "b": 79,
+    "u": 1441
+   },
+   "W34": {
+    "b": 68,
+    "u": 1226
+   },
+   "W35": {
+    "b": 77,
+    "u": 1514
+   },
+   "W36": {
+    "b": 65,
+    "u": 1342
+   }
+  }
+ },
+ "shiro_pp": {
+  "series": {
+   "W29": {
+    "b": 98,
+    "u": 755
+   },
+   "W30": {
+    "b": 91,
+    "u": 680
+   },
+   "W31": {
+    "b": 74,
+    "u": 1164
+   },
+   "W32": {
+    "b": 82,
+    "u": 684
+   },
+   "W33": {
+    "b": 66,
+    "u": 654
+   },
+   "W34": {
+    "b": 71,
+    "u": 670
+   },
+   "W35": {
+    "b": 79,
+    "u": 704
+   },
+   "W36": {
+    "b": 85,
+    "u": 693
+   }
+  },
+  "ly": {
+   "L33": {
+    "b": 108,
+    "u": 822
+   },
+   "L34": {
+    "b": 88,
+    "u": 748
+   },
+   "L35": {
+    "b": 86,
+    "u": 837
+   },
+   "L36": {
+    "b": 96,
+    "u": 952
+   }
+  }
+ },
+ "covers": {
+  "Vesu": {
+   "web": {
+    "c": 153,
+    "p": 225,
+    "y": 126
+   },
+   "widget": {
+    "c": 153,
+    "p": 225,
+    "y": 126
+   },
+   "gr": {
+    "c": 45,
+    "p": 26,
+    "y": 56
+   },
+   "ot": {
+    "c": 245,
+    "p": 221,
+    "y": 214
+   },
+   "walk": {
+    "c": 88,
+    "p": 61,
+    "y": 93
+   },
+   "recep": {
+    "c": 298,
+    "p": 57,
+    "y": 93
+   },
+   "tp": {
+    "c": 0,
+    "p": 0,
+    "y": 0
+   }
+  },
+  "The Canton Library": {
+   "web": {
+    "c": 109,
+    "p": 73,
+    "y": 0
+   },
+   "widget": {
+    "c": 107,
+    "p": 67,
+    "y": 0
+   },
+   "gr": {
+    "c": 26,
+    "p": 14,
+    "y": 0
+   },
+   "ot": {
+    "c": 92,
+    "p": 93,
+    "y": 0
+   },
+   "walk": {
+    "c": 48,
+    "p": 28,
+    "y": 0
+   },
+   "recep": {
+    "c": 407,
+    "p": 174,
+    "y": 0
+   },
+   "tp": {
+    "c": 0,
+    "p": 0,
+    "y": 0
+   }
+  },
+  "Shiro Pacific Place": {
+   "web": {
+    "c": 196,
+    "p": 174,
+    "y": 141
+   },
+   "widget": {
+    "c": 196,
+    "p": 174,
+    "y": 141
+   },
+   "gr": {
+    "c": 120,
+    "p": 144,
+    "y": 64
+   },
+   "ot": {
+    "c": 365,
+    "p": 354,
+    "y": 251
+   },
+   "walk": {
+    "c": 447,
+    "p": 946,
+    "y": 634
+   },
+   "recep": {
+    "c": 243,
+    "p": 272,
+    "y": 363
+   },
+   "tp": {
+    "c": 0,
+    "p": 0,
+    "y": 0
+   }
+  },
+  "Shiro Tai Kwun": {
+   "web": {
+    "c": 158,
+    "p": 183,
+    "y": 0
+   },
+   "widget": {
+    "c": 158,
+    "p": 177,
+    "y": 0
+   },
+   "gr": {
+    "c": 69,
+    "p": 45,
+    "y": 0
+   },
+   "ot": {
+    "c": 205,
+    "p": 160,
+    "y": 0
+   },
+   "walk": {
+    "c": 1023,
+    "p": 533,
+    "y": 0
+   },
+   "recep": {
+    "c": 233,
+    "p": 89,
+    "y": 0
+   },
+   "tp": {
+    "c": 0,
+    "p": 0,
+    "y": 0
+   }
+  }
+ }
+}

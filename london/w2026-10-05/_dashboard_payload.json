@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1315,
+   "tgt": 2007,
+   "wow": 1258,
+   "yoy": 1742,
+   "ytd": 46257,
+   "ytdt": 60089,
+   "meta_s": 2803.06,
+   "goog_s": 2160.25,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 870,
+   "tgt": 1015,
+   "wow": 1032,
+   "yoy": 927,
+   "ytd": 28447,
+   "ytdt": 30837,
+   "meta_s": 2460.2,
+   "goog_s": 1555.68,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 207,
+   "tgt": 364,
+   "wow": 207,
+   "yoy": 317,
+   "ytd": 10727,
+   "ytdt": 14030,
+   "meta_s": 1156.91,
+   "goog_s": 560.03,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 104,
+   "tgt": 182,
+   "wow": 116,
+   "yoy": 107,
+   "ytd": 3884,
+   "ytdt": 5655,
+   "meta_s": 1327.18,
+   "goog_s": 507.53,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 116,
+   "tgt": 140,
+   "wow": 97,
+   "yoy": 113,
+   "ytd": 3740,
+   "ytdt": 5313,
+   "meta_s": 402.04,
+   "goog_s": 696.79,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 475,
+   "tgt": 25,
+   "wow": 485,
+   "yoy": 29,
+   "ytd": 18731,
+   "ytdt": 6138,
+   "meta_s": 2091.55,
+   "goog_s": 406.34,
+   "nc": true
+  }
+ ],
+ "note": "London is framed week on week and year on year rather than against target: the FY26/27 weekly targets were set before the Shard’s traffic shift and the Dim Sum Library rebrand, so variance to them is not a clean read, and <b>DSL</b> is flagged not comparable for the same reason. London booked <b>3,087</b> GA4 bookings, <b>down 3.4 percent</b> week on week and <b>down 4.6 percent</b> year on year, against a weekly target of 3,733 carried here for reference only. The year-on-year gap is again <b>Aqua Shard</b>, which is <b>427</b> bookings below last year, almost three times the whole London shortfall of 148; the other five venues together are <b>up 18.7 percent</b> year on year. <b>Aqua Shard</b> itself rose <b>4.5 percent</b> week on week to 1,315, its second best week since early September, and it did that while Tuesday 6 October was closed to the public for an exclusive hire. <b>Hutong</b> is the week’s swing, down <b>15.7 percent</b> week on week from a restated 1,032 and <b>6.1 percent</b> below last year, on traffic 12.2 percent below last year. <b>Regent St</b> was level week on week at 207 but is <b>34.7 percent</b> below last year on traffic 42.0 percent below. <b>Shiro Sushi</b> is the only venue ahead on both measures, up 19.6 percent week on week and 2.7 percent year on year. Conversion still reads better than traffic: it is above last year at Hutong (5.2 against 4.9 percent), Regent St (4.9 against 4.4), Azzurra (5.1 against 4.9) and Shiro Sushi (8.7 against 5.2), and down only at Aqua Shard, 4.9 percent against 6.3 percent. Covers are reported alongside these figures because <code>total_payment</code> is unreliable in London and GA4 cannot see OpenTable.",
+ "week": "5–11 Oct 2026",
+ "wow": "28 Sep–4 Oct 2026",
+ "yoy": "6–12 Oct 2025",
+ "generated": "12 October 2026"
+}

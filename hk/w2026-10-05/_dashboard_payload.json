@@ -1,0 +1,146 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 206,
+   "tgt": 252,
+   "wow": 178,
+   "yoy": 231,
+   "ytd": 7076,
+   "ytdt": 7546,
+   "meta_s": 9477.44,
+   "goog_s": 8084.1,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 243,
+   "tgt": 289,
+   "wow": 213,
+   "yoy": 292,
+   "ytd": 10187,
+   "ytdt": 9190,
+   "meta_s": 3950.14,
+   "goog_s": 5617.95,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 109,
+   "tgt": 110,
+   "wow": 129,
+   "yoy": 118,
+   "ytd": 4286,
+   "ytdt": 3607,
+   "meta_s": 5610.51,
+   "goog_s": 3535.1,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 75,
+   "tgt": 67,
+   "wow": 101,
+   "yoy": 48,
+   "ytd": 2515,
+   "ytdt": 2020,
+   "meta_s": 2881.52,
+   "goog_s": 3711.7,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 168,
+   "tgt": 186,
+   "wow": 136,
+   "yoy": 184,
+   "ytd": 5638,
+   "ytdt": 6187,
+   "meta_s": 1058.04,
+   "goog_s": 1513.62,
+   "nc": false
+  },
+  {
+   "name": "Shiro Pacific Place",
+   "act": 85,
+   "tgt": null,
+   "wow": 79,
+   "yoy": 96,
+   "ytd": 2930,
+   "ytdt": null,
+   "meta_s": 0,
+   "goog_s": 0,
+   "nc": false,
+   "tgt_label": "combined",
+   "shared_ads": true
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "act": 65,
+   "tgt": null,
+   "wow": 77,
+   "yoy": 0,
+   "ytd": 2311,
+   "ytdt": null,
+   "meta_s": 0,
+   "goog_s": 0,
+   "nc": false,
+   "tgt_label": "combined",
+   "shared_ads": true,
+   "noyoy": true
+  }
+ ],
+ "note": "Weekly target = October monthly GA4 target &times; 7/30, because the week sits wholly inside October: 5 to 11 October are all October days, so there is no straddle to blend this time. That gives a weekly target of <b>1,036</b>. Hong Kong booked <b>951</b> GA4 bookings, <b>8.2 percent</b> behind, <b>up 4.2 percent</b> week on week and <b>down 1.9 percent</b> year on year. Two of six venues beat the weekly target. <b>Shiro</b> (+13.6 percent) and <b>Cantina</b> (+11.9 percent) led it, and <b>The Chinese Library</b> landed level with target at &minus;0.9 percent. The three behind are <b>Aqua HK</b> (&minus;18.3 percent), <b>Hutong HK</b> (&minus;15.9 percent) and <b>Dim Sum Library</b> (&minus;9.7 percent). Two things explain the week. First, the October target step up: the monthly target for the portfolio rose from 3,853 in September to 4,439 in October, so the weekly bar moved from 977 to 1,036 while bookings rose by only 38. Second, <b>Aqua HK</b> and <b>Hutong HK</b> both recovered in absolute terms, Aqua to <b>206</b> from 178 and Hutong to <b>243</b> from 213, and both did it on fewer users, so conversion improved at each: Aqua 5.6 percent from 4.5 percent and Hutong 7.3 percent from 6.1 percent. They are still the two largest shortfalls against the higher October bar. <b>Dim Sum Library</b> had its best week of the eight at <b>168</b>, up 23.5 percent, and is still 9.7 percent short of target. Year to date the portfolio is <b>6.1 percent</b> ahead of target, and <b>Aqua HK</b> (&minus;6.2 percent) and <b>Dim Sum Library</b> (&minus;8.9 percent) remain the only two venues behind on the financial year line. Shiro is shown as two sites: <b>Shiro Pacific Place</b> booked <b>85</b> and <b>Shiro Tai Kwun</b> <b>65</b>. Together that is the 150 measured against Shiro&rsquo;s combined target of 132. Tai Kwun opened in 2026, so it has no year-on-year comparison. Below the portfolio line, outside the target set: <b>Vesu</b> booked <b>57</b> against <b>83</b> the week before and <b>68</b> in the same week last year, and <b>The Canton Library</b>, open since 8 September, booked <b>37</b> against <b>27</b>. Neither is in the portfolio total or its variance.",
+ "week": "5–11 Oct 2026",
+ "wow": "28 Sep–4 Oct 2026",
+ "yoy": "6–12 Oct 2025",
+ "generated": "12 October 2026",
+ "groups": [
+  {
+   "name": "Shiro (both sites)",
+   "label": "Shiro, both sites (combined target)",
+   "members": [
+    "Shiro Pacific Place",
+    "Shiro Tai Kwun"
+   ],
+   "tgt": 132,
+   "ytdt": 4391,
+   "meta_s": 5241.06,
+   "goog_s": 4135.04
+  }
+ ],
+ "outside": [
+  {
+   "name": "Vesu",
+   "act": 57,
+   "tgt": null,
+   "wow": 83,
+   "yoy": 68,
+   "ytd": 1438,
+   "ytdt": null,
+   "meta_s": 3460.71,
+   "goog_s": 2353.45,
+   "pill": "reopened 8 Sep"
+  },
+  {
+   "name": "The Canton Library",
+   "act": 37,
+   "tgt": null,
+   "wow": 27,
+   "yoy": 0,
+   "noyoy": true,
+   "ytd": 154,
+   "ytdt": null,
+   "meta_s": 12266.55,
+   "goog_s": 6893.51,
+   "cpb_spend": 9221.57,
+   "pill": "opened 8 Sep"
+  }
+ ],
+ "outside_label": "Outside the target set: not in the portfolio total or its variance",
+ "foot_extra": " <br>Shiro&rsquo;s weekly target of 132 (YTD 4,391) covers both sites, so the two Shiro rows carry no individual target and are measured together on the &ldquo;Shiro, both sites&rdquo; row. Shiro&rsquo;s Meta and Google accounts are shared by both sites, so Shiro ad spend is shown once on that row and never split. The Canton Library&rsquo;s cost per booking leaves out its awareness campaign spend; its Google Ads account still has no verified booking conversion. Targets for Vesu and The Canton Library are not set yet."
+}
