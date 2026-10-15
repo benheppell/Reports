@@ -363,6 +363,10 @@
     {
      "label": "Covers Pace Tracker",
      "href": "/hk-pace-tracker"
+    },
+    {
+     "href": "/pipeline/hk/",
+     "label": "Booking Pipeline"
     }
    ]
   },
@@ -729,6 +733,10 @@
     {
      "label": "Covers Pace Tracker (live)",
      "href": "/london-pace-tracker"
+    },
+    {
+     "href": "/pipeline/london/",
+     "label": "Booking Pipeline"
     }
    ],
    "daily": true,
@@ -1138,6 +1146,10 @@
     {
      "label": "Covers Pace Tracker",
      "href": "/usa-pace-tracker"
+    },
+    {
+     "href": "/pipeline/usa/",
+     "label": "Booking Pipeline"
     }
    ]
   },
@@ -1405,6 +1417,12 @@
     {
      "dates": "W1 · 5–11 Jan 2026",
      "folder": "w2026-01-05"
+    }
+   ],
+   "live": [
+    {
+     "href": "/pipeline/dubai/",
+     "label": "Booking Pipeline"
     }
    ]
   },
@@ -1848,6 +1866,12 @@
     {
      "dates": "W31 · 1–7 Sep 2025",
      "folder": "w2025-09-01"
+    }
+   ],
+   "live": [
+    {
+     "href": "/pipeline/paris/",
+     "label": "Booking Pipeline"
     }
    ]
   }

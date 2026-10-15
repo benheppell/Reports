@@ -1,0 +1,337 @@
+{
+ "market": "London",
+ "slug": "london",
+ "ccy": "\u00a3",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 321,
+     "b_ly": 459,
+     "c_ty": 840,
+     "c_ly": 1174
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 179,
+     "b_ly": 194,
+     "c_ty": 514,
+     "c_ly": 490
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 609,
+     "b_ly": 555,
+     "c_ty": 1828,
+     "c_ly": 1632
+    }
+   ],
+   "total": {
+    "b_ty": 1109,
+    "b_ly": 1208,
+    "c_ty": 3182,
+    "c_ly": 3296
+   },
+   "spend": [
+    4963,
+    2412
+   ],
+   "sessions": [
+    38429,
+    56078
+   ],
+   "web_bookings": [
+    992,
+    1138
+   ],
+   "brand": [
+    7286,
+    9667
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 297,
+     "b_ly": 306,
+     "c_ty": 766,
+     "c_ly": 767
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 162,
+     "b_ly": 159,
+     "c_ty": 423,
+     "c_ly": 393
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 366,
+     "b_ly": 306,
+     "c_ty": 1045,
+     "c_ly": 820
+    }
+   ],
+   "total": {
+    "b_ty": 825,
+    "b_ly": 771,
+    "c_ty": 2234,
+    "c_ly": 1980
+   },
+   "spend": [
+    4016,
+    2759
+   ],
+   "sessions": [
+    23594,
+    36305
+   ],
+   "web_bookings": [
+    713,
+    697
+   ],
+   "brand": [
+    8575,
+    9447
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "DSL",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 213,
+     "b_ly": 29,
+     "c_ty": 557,
+     "c_ly": 76
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 75,
+     "b_ly": 0,
+     "c_ty": 213,
+     "c_ly": 0
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 146,
+     "b_ly": 0,
+     "c_ty": 417,
+     "c_ly": 0
+    }
+   ],
+   "total": {
+    "b_ty": 434,
+    "b_ly": 29,
+    "c_ty": 1187,
+    "c_ly": 76
+   },
+   "spend": [
+    2498,
+    null
+   ],
+   "sessions": [
+    7420,
+    2847
+   ],
+   "web_bookings": [
+    378,
+    25
+   ],
+   "brand": [
+    5812,
+    3181
+   ],
+   "not_comparable": true,
+   "tile_notes": {
+    "spend": "brand launched 2026, no comparable 2025 spend"
+   }
+  },
+  {
+   "name": "Regent St",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 100,
+     "b_ly": 166,
+     "c_ty": 251,
+     "c_ly": 433
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 27,
+     "b_ly": 45,
+     "c_ty": 76,
+     "c_ly": 138
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 48,
+     "b_ly": 54,
+     "c_ty": 149,
+     "c_ly": 162
+    }
+   ],
+   "total": {
+    "b_ty": 175,
+    "b_ly": 265,
+    "c_ty": 476,
+    "c_ly": 733
+   },
+   "spend": [
+    1717,
+    1864
+   ],
+   "sessions": [
+    5391,
+    14848
+   ],
+   "web_bookings": [
+    159,
+    213
+   ],
+   "brand": [
+    4269,
+    8418
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Shiro Sushi",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 68,
+     "b_ly": 82,
+     "c_ty": 169,
+     "c_ly": 221
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 28,
+     "b_ly": 26,
+     "c_ty": 83,
+     "c_ly": 74
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 12,
+     "b_ly": 17,
+     "c_ty": 38,
+     "c_ly": 44
+    }
+   ],
+   "total": {
+    "b_ty": 108,
+    "b_ly": 125,
+    "c_ty": 290,
+    "c_ly": 339
+   },
+   "spend": [
+    1099,
+    865
+   ],
+   "sessions": [
+    1693,
+    2649
+   ],
+   "web_bookings": [
+    94,
+    94
+   ],
+   "brand": [
+    1825,
+    2408
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Azzurra",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 64,
+     "b_ly": 68,
+     "c_ty": 169,
+     "c_ly": 166
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 20,
+     "b_ly": 21,
+     "c_ty": 56,
+     "c_ly": 68
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 21,
+     "b_ly": 6,
+     "c_ty": 66,
+     "c_ly": 21
+    }
+   ],
+   "total": {
+    "b_ty": 105,
+    "b_ly": 95,
+    "c_ty": 291,
+    "c_ly": 255
+   },
+   "spend": [
+    1835,
+    1415
+   ],
+   "sessions": [
+    2571,
+    2724
+   ],
+   "web_bookings": [
+    91,
+    68
+   ],
+   "brand": [
+    1561,
+    1756
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  }
+ ],
+ "week": {
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "15 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "market": "Dubai",
+ "slug": "dubai",
+ "ccy": "AED ",
+ "venues": [
+  {
+   "name": "Hutong Dubai",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 62,
+     "b_ly": 95,
+     "c_ty": 209,
+     "c_ly": 278
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 16,
+     "b_ly": 22,
+     "c_ty": 45,
+     "c_ly": 83
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 10,
+     "b_ly": 9,
+     "c_ty": 41,
+     "c_ly": 30
+    }
+   ],
+   "total": {
+    "b_ty": 88,
+    "b_ly": 126,
+    "c_ty": 295,
+    "c_ly": 391
+   },
+   "spend": [
+    7713.16,
+    11018.7
+   ],
+   "sessions": [
+    1596,
+    3168
+   ],
+   "web_bookings": [
+    75,
+    100
+   ],
+   "brand": [
+    1431,
+    2095
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  }
+ ],
+ "week": {
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "15 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "market": "Paris",
+ "slug": "paris",
+ "ccy": "\u20ac",
+ "venues": [
+  {
+   "name": "Aqua Kyoto Paris",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 218,
+     "b_ly": 145,
+     "c_ty": 531,
+     "c_ly": 352
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 31,
+     "b_ly": 60,
+     "c_ty": 74,
+     "c_ly": 158
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 34,
+     "b_ly": 30,
+     "c_ty": 90,
+     "c_ly": 83
+    }
+   ],
+   "total": {
+    "b_ty": 283,
+    "b_ly": 235,
+    "c_ty": 695,
+    "c_ly": 593
+   },
+   "spend": [
+    3223.01,
+    2318.43
+   ],
+   "sessions": [
+    5962,
+    29496
+   ],
+   "web_bookings": [
+    217,
+    190
+   ],
+   "brand": [
+    3657,
+    10134
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  }
+ ],
+ "week": {
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "15 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ]
+}

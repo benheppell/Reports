@@ -1,0 +1,187 @@
+{
+ "market": "USA",
+ "slug": "usa",
+ "ccy": "$",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 126,
+     "b_ly": 151,
+     "c_ty": 367,
+     "c_ly": 442
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 27,
+     "b_ly": 32,
+     "c_ty": 118,
+     "c_ly": 128
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 38,
+     "b_ly": 24,
+     "c_ty": 155,
+     "c_ly": 83
+    }
+   ],
+   "total": {
+    "b_ty": 191,
+    "b_ly": 207,
+    "c_ty": 640,
+    "c_ly": 653
+   },
+   "spend": [
+    2899.54,
+    2838.87
+   ],
+   "sessions": [
+    7959,
+    10492
+   ],
+   "web_bookings": [
+    123,
+    131
+   ],
+   "brand": [
+    9505,
+    8245
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong NYC",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 69,
+     "b_ly": 117,
+     "c_ty": 218,
+     "c_ly": 369
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 20,
+     "b_ly": 30,
+     "c_ty": 68,
+     "c_ly": 100
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 43,
+     "b_ly": 33,
+     "c_ty": 173,
+     "c_ly": 112
+    }
+   ],
+   "total": {
+    "b_ty": 132,
+    "b_ly": 180,
+    "c_ty": 459,
+    "c_ly": 581
+   },
+   "spend": [
+    2458.41,
+    2407.31
+   ],
+   "sessions": [
+    5239,
+    5712
+   ],
+   "web_bookings": [
+    113,
+    104
+   ],
+   "brand": [
+    4052,
+    6121
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong Miami",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 37,
+     "b_ly": 36,
+     "c_ty": 128,
+     "c_ly": 91
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 7,
+     "b_ly": 5,
+     "c_ty": 22,
+     "c_ly": 21
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 8,
+     "b_ly": 5,
+     "c_ty": 23,
+     "c_ly": 10
+    }
+   ],
+   "total": {
+    "b_ty": 52,
+    "b_ly": 46,
+    "c_ty": 173,
+    "c_ly": 122
+   },
+   "spend": [
+    2250.77,
+    2159.42
+   ],
+   "sessions": [
+    3248,
+    4660
+   ],
+   "web_bookings": [
+    49,
+    34
+   ],
+   "brand": [
+    null,
+    null
+   ],
+   "not_comparable": false,
+   "tile_notes": {
+    "brand": "Search Console property not verified"
+   }
+  }
+ ],
+ "week": {
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "15 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ]
+}

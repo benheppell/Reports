@@ -1,0 +1,498 @@
+{
+ "market": "Hong Kong",
+ "slug": "hk",
+ "ccy": "HK$",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 106,
+     "b_ly": 115,
+     "c_ty": 300,
+     "c_ly": 322
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 49,
+     "b_ly": 39,
+     "c_ty": 164,
+     "c_ly": 131
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 71,
+     "b_ly": 39,
+     "c_ty": 230,
+     "c_ly": 125
+    }
+   ],
+   "total": {
+    "b_ty": 226,
+    "b_ly": 193,
+    "c_ty": 694,
+    "c_ly": 578
+   },
+   "spend": [
+    17562.0,
+    16054.9
+   ],
+   "sessions": [
+    5050,
+    5510
+   ],
+   "web_bookings": [
+    182,
+    129
+   ],
+   "brand": [
+    6001,
+    6202
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong HK",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 95,
+     "b_ly": 109,
+     "c_ty": 271,
+     "c_ly": 317
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 34,
+     "b_ly": 53,
+     "c_ty": 122,
+     "c_ly": 145
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 100,
+     "b_ly": 74,
+     "c_ty": 318,
+     "c_ly": 231
+    }
+   ],
+   "total": {
+    "b_ty": 229,
+    "b_ly": 236,
+    "c_ty": 711,
+    "c_ly": 693
+   },
+   "spend": [
+    9568.15,
+    10311.24
+   ],
+   "sessions": [
+    4426,
+    4607
+   ],
+   "web_bookings": [
+    179,
+    187
+   ],
+   "brand": [
+    4548,
+    4750
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "The Chinese Library",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 70,
+     "b_ly": 67,
+     "c_ty": 216,
+     "c_ly": 196
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 33,
+     "b_ly": 26,
+     "c_ty": 104,
+     "c_ly": 96
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 11,
+     "b_ly": 12,
+     "c_ty": 36,
+     "c_ly": 36
+    }
+   ],
+   "total": {
+    "b_ty": 114,
+    "b_ly": 105,
+    "c_ty": 356,
+    "c_ly": 328
+   },
+   "spend": [
+    9145.89,
+    6721.44
+   ],
+   "sessions": [
+    2095,
+    2058
+   ],
+   "web_bookings": [
+    85,
+    69
+   ],
+   "brand": [
+    1347,
+    1390
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Cantina",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 44,
+     "b_ly": 31,
+     "c_ty": 139,
+     "c_ly": 86
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 18,
+     "b_ly": 11,
+     "c_ty": 66,
+     "c_ly": 26
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 7,
+     "b_ly": 5,
+     "c_ty": 35,
+     "c_ly": 16
+    }
+   ],
+   "total": {
+    "b_ty": 69,
+    "b_ly": 47,
+    "c_ty": 240,
+    "c_ly": 128
+   },
+   "spend": [
+    6593.49,
+    5874.55
+   ],
+   "sessions": [
+    1978,
+    1302
+   ],
+   "web_bookings": [
+    49,
+    38
+   ],
+   "brand": [
+    1460,
+    1013
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Dim Sum Library",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 161,
+     "b_ly": 151,
+     "c_ty": 478,
+     "c_ly": 436
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 36,
+     "b_ly": 55,
+     "c_ty": 107,
+     "c_ly": 169
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 27,
+     "b_ly": 17,
+     "c_ty": 99,
+     "c_ly": 58
+    }
+   ],
+   "total": {
+    "b_ty": 224,
+    "b_ly": 223,
+    "c_ty": 684,
+    "c_ly": 663
+   },
+   "spend": [
+    2571.67,
+    3058.96
+   ],
+   "sessions": [
+    1400,
+    1702
+   ],
+   "web_bookings": [
+    128,
+    133
+   ],
+   "brand": [
+    1732,
+    1313
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Shiro Pacific Place",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 81,
+     "b_ly": 59,
+     "c_ty": 209,
+     "c_ly": 147
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 34,
+     "b_ly": 20,
+     "c_ty": 79,
+     "c_ly": 51
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 8,
+     "b_ly": 2,
+     "c_ty": 20,
+     "c_ly": 7
+    }
+   ],
+   "total": {
+    "b_ty": 123,
+    "b_ly": 81,
+    "c_ty": 308,
+    "c_ly": 205
+   },
+   "spend": [
+    null,
+    null
+   ],
+   "sessions": [
+    987,
+    1155
+   ],
+   "web_bookings": [
+    75,
+    55
+   ],
+   "brand": [
+    null,
+    null
+   ],
+   "not_comparable": false,
+   "tile_notes": {
+    "spend": "one account for both Shiro sites: HK$9,376 against HK$3,239",
+    "cpa": "not split, shared account",
+    "brand": "one domain for both sites: 3,522 against 2,172"
+   }
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 54,
+     "b_ly": null,
+     "c_ty": 152,
+     "c_ly": null
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 10,
+     "b_ly": null,
+     "c_ty": 25,
+     "c_ly": null
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 15,
+     "b_ly": null,
+     "c_ty": 48,
+     "c_ly": null
+    }
+   ],
+   "total": {
+    "b_ty": 79,
+    "b_ly": null,
+    "c_ty": 225,
+    "c_ly": null
+   },
+   "spend": [
+    null,
+    null
+   ],
+   "sessions": [
+    1531,
+    null
+   ],
+   "web_bookings": [
+    55,
+    null
+   ],
+   "brand": [
+    null,
+    null
+   ],
+   "not_comparable": true,
+   "tile_notes": {
+    "spend": "shared with Pacific Place",
+    "cpa": "shared account",
+    "brand": "shared domain"
+   }
+  },
+  {
+   "name": "Vesu",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 52,
+     "b_ly": 48,
+     "c_ty": 136,
+     "c_ly": 143
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 10,
+     "b_ly": 7,
+     "c_ty": 34,
+     "c_ly": 26
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 8,
+     "b_ly": 6,
+     "c_ty": 19,
+     "c_ly": 13
+    }
+   ],
+   "total": {
+    "b_ty": 70,
+    "b_ly": 61,
+    "c_ty": 189,
+    "c_ly": 182
+   },
+   "spend": [
+    5810.64,
+    5420.73
+   ],
+   "sessions": [
+    1305,
+    1862
+   ],
+   "web_bookings": [
+    52,
+    43
+   ],
+   "brand": [
+    864,
+    1051
+   ],
+   "not_comparable": true,
+   "tile_notes": {
+    "spend": "reopened Sep 2026, 2025 is a different operating state"
+   }
+  },
+  {
+   "name": "The Canton Library",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 24,
+     "b_ly": null,
+     "c_ty": 61,
+     "c_ly": null
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 10,
+     "b_ly": null,
+     "c_ty": 30,
+     "c_ly": null
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 9,
+     "b_ly": null,
+     "c_ty": 39,
+     "c_ly": null
+    }
+   ],
+   "total": {
+    "b_ty": 43,
+    "b_ly": null,
+    "c_ty": 130,
+    "c_ly": null
+   },
+   "spend": [
+    12267.33,
+    null
+   ],
+   "sessions": [
+    2961,
+    null
+   ],
+   "web_bookings": [
+    34,
+    null
+   ],
+   "brand": [
+    984,
+    null
+   ],
+   "not_comparable": true,
+   "tile_notes": {
+    "spend": "Meta only, Google tracking still unverified",
+    "cpa": "Meta spend only"
+   }
+  }
+ ],
+ "week": {
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "15 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ]
+}
