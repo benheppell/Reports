@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
 """Booking pipeline report: bookings and covers created in a week, by the week they are for.
 Usage: pipeline_gen.py <payload.json> <out.html>
-Payload keys: market, slug, ccy, week{iso,ty_label,ly_label,snapshot}, nav[[slug,name]],
-venues[{name, windows[{label,b_ty,b_ly,c_ty,c_ly}], total{...}, spend[ty,ly], sessions[ty,ly],
+
+Payload keys: market, slug, ccy, week{key,iso,ty_label,ly_label,snapshot}, nav[[slug,name]],
+weeks[{key,file,label}], venues[{name, channels_label, windows[{label,b_ty,b_ly,c_ty,c_ly}],
+total{b_ty,b_ly,c_ty,c_ly}, wg_bookings[ty,ly], spend[ty,ly], sessions[ty,ly],
 web_bookings[ty,ly], brand[ty,ly], not_comparable, tile_notes{}}]
+
+Blended CPA divides spend by WEBSITE PLUS GOOGLE RESERVE bookings (`wg_bookings`), never by a
+total that includes a third-party platform, because our spend cannot drive an OpenTable or Resy
+booking. Where a venue's total is wider than that, the tile says which denominator it used.
 """
 import json, sys, html, statistics as st
 
@@ -15,26 +21,34 @@ body{margin:0;padding:30px 20px 48px;background:#fff;color:var(--ink);
 .kicker{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
 h1{font-size:26px;font-weight:700;margin:0 0 4px;letter-spacing:-.01em}
 .sub{color:var(--mute);font-size:13px;margin:0 0 16px}
-.nav{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:0 0 22px}
+.bar{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:0 0 22px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;flex:1 1 auto}
 .nav a{font-size:13px;font-weight:600;color:var(--mute);text-decoration:none;padding:9px 14px;
  border-bottom:2px solid transparent;margin-bottom:-1px}
 .nav a:hover{color:var(--ink)}
 .nav a.on{color:var(--ink);border-bottom-color:var(--blue)}
+.wk{display:flex;align-items:center;gap:8px;padding:0 0 8px}
+.wk label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.wk select{font-family:inherit;font-size:13px;font-weight:600;color:var(--ink);padding:7px 10px;
+ border:1px solid #cbd5e1;border-radius:8px;background:#fff;cursor:pointer}
+.wk select:hover{border-color:var(--blue)}
 .card{border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:0 0 18px}
 .card header{display:flex;flex-wrap:wrap;align-items:center;gap:16px;
  border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:14px}
-h2{font-size:17px;font-weight:650;margin:0;flex:1 1 180px}
+.vn{flex:1 1 180px}
+h2{font-size:17px;font-weight:650;margin:0}
+.ch{font-size:11px;color:var(--mute);margin:3px 0 0}
 .stats{display:flex;gap:22px;flex-wrap:wrap}
 .st{display:flex;align-items:baseline;gap:7px}
 .big{font:650 23px/1 'SF Mono',Menlo,Consolas,monospace;letter-spacing:-.02em}
 .lab{font-size:12px;color:var(--mute)}
 .chip{font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:99px;background:var(--bg);white-space:nowrap}
 .chip.g{color:var(--g);background:#f0fdf4} .chip.r{color:var(--r);background:#fef2f2} .chip.m{color:var(--mute)}
-table.wk{width:100%;border-collapse:collapse;margin:0 0 16px}
-table.wk th{text-align:left;font-weight:500;font-size:13px;padding:7px 8px 7px 0;border-bottom:1px solid var(--line)}
-table.wk tr:first-child th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+table.t{width:100%;border-collapse:collapse;margin:0 0 16px}
+table.t th{text-align:left;font-weight:500;font-size:13px;padding:7px 8px 7px 0;border-bottom:1px solid var(--line)}
+table.t tr:first-child th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
  color:var(--mute);border-bottom:none;padding-bottom:2px}
-table.wk tr.sh th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+table.t tr.sh th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
 td{padding:7px 0 7px 8px;border-bottom:1px solid var(--line);font-size:13.5px}
 .n{text-align:right;font-family:'SF Mono',Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
 th.n{font-family:inherit}
@@ -51,7 +65,7 @@ footer{margin-top:28px;color:var(--mute);font-size:11px;border-top:1px solid var
 footer a{color:var(--blue);text-decoration:none}
 @media(max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.tiles{grid-template-columns:1fr}body{padding:20px 14px 40px}
- table.wk{font-size:12px} .sep{padding-left:8px!important}}"""
+ table.t{font-size:12px} .sep{padding-left:8px!important}}"""
 
 
 def N(n):
@@ -74,8 +88,10 @@ def delta(ty, ly, inv=False, money=None, pp=False, nc=False, dp=0):
         return ("n/c", "n/c", "m")
     if nc:
         return (fmt(ly), "n/c", "m")
+    if ty is None:
+        return (fmt(ly), "n/a", "m")
     if ly == 0:
-        return (fmt(ly), "new", "g" if (ty or 0) > 0 else "m")
+        return (fmt(ly), "new", "g" if ty > 0 else "m")
     x = ty - ly
     good = (x < 0) if inv else (x > 0)
     if pp:
@@ -130,8 +146,9 @@ def venue_card(v, ccy, iso_labels):
     _, hc, kc = delta(t["c_ty"], t["c_ly"], nc=nc)
 
     sp_ty, sp_ly = v["spend"]
-    cpa_ty = sp_ty / t["b_ty"] if sp_ty is not None and t["b_ty"] else None
-    cpa_ly = sp_ly / t["b_ly"] if sp_ly is not None and t.get("b_ly") else None
+    wgb_ty, wgb_ly = v["wg_bookings"]
+    cpa_ty = sp_ty / wgb_ty if sp_ty is not None and wgb_ty else None
+    cpa_ly = sp_ly / wgb_ly if sp_ly is not None and wgb_ly else None
     se_ty, se_ly = v["sessions"]
     wb_ty, wb_ly = v["web_bookings"]
     cv_ty = 100 * wb_ty / se_ty if wb_ty is not None and se_ty else None
@@ -140,24 +157,28 @@ def venue_card(v, ccy, iso_labels):
 
     tiles = ""
     ly, chg, cls = delta(sp_ty, sp_ly, inv=True, money=ccy, nc=nc, dp=0)
-    tiles += tile("Digital spend", f"{ccy}{sp_ty:,.0f}" if sp_ty is not None else "n/a", ly, chg, cls, tn.get("spend", ""))
+    tiles += tile("Digital spend", f"{ccy}{sp_ty:,.0f}" if sp_ty is not None else "n/a",
+                  ly, chg, cls, tn.get("spend", ""))
     ly, chg, cls = delta(cpa_ty, cpa_ly, inv=True, money=ccy, nc=nc, dp=2)
-    tiles += tile("Blended CPA", f"{ccy}{cpa_ty:,.2f}" if cpa_ty is not None else "n/a", ly, chg, cls, tn.get("cpa", ""))
+    tiles += tile("Blended CPA", f"{ccy}{cpa_ty:,.2f}" if cpa_ty is not None else "n/a",
+                  ly, chg, cls, tn.get("cpa", ""))
     ly, chg, cls = delta(se_ty, se_ly, nc=nc)
     tiles += tile("Sessions", N(se_ty) if se_ty is not None else "n/a", ly, chg, cls, tn.get("sessions", ""))
     ly, chg, cls = delta(cv_ty, cv_ly, pp=True, nc=nc)
-    tiles += tile("Website conv rate", f"{cv_ty:.2f}%" if cv_ty is not None else "n/a", ly, chg, cls, tn.get("conv", ""))
+    tiles += tile("Website conv rate", f"{cv_ty:.2f}%" if cv_ty is not None else "n/a",
+                  ly, chg, cls, tn.get("conv", ""))
     ly, chg, cls = delta(br_ty, br_ly, nc=nc)
     sub = tn.get("brand", "") or iso_labels.get(v["name"], "")
     tiles += tile("Brand searches", N(br_ty) if br_ty is not None else "n/a", ly, chg, cls, sub)
 
     return f'''<section class="card">
-<header><h2>{html.escape(v["name"])}</h2>
+<header><div class="vn"><h2>{html.escape(v["name"])}</h2>
+<p class="ch">{html.escape(v["channels_label"])}</p></div>
 <div class="stats">
 <div class="st"><span class="big">{N(t["b_ty"])}</span><span class="lab">bookings</span><span class="chip {kb}">{hb}</span></div>
 <div class="st"><span class="big">{N(t["c_ty"])}</span><span class="lab">covers</span><span class="chip {kc}">{hc}</span></div>
 </div></header>
-<table class="wk">
+<table class="t">
 <tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
 <tr class="sh"><th>By the week they are for</th>
 <th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
@@ -172,30 +193,43 @@ def main(payload_path, out_path):
     w = p["week"]
     iso_labels = brand_labels(p["venues"])
     cards = "".join(venue_card(v, p["ccy"], iso_labels) for v in p["venues"])
+
     parts = []
     for s, n in p["nav"]:
         on = ' class="on"' if s == p["slug"] else ''
         parts.append('<a href="/pipeline/%s/"%s>%s</a>' % (s, on, html.escape(n)))
     nav = "".join(parts)
+
+    opts = []
+    for wk in p["weeks"]:
+        sel = ' selected' if wk["key"] == w["key"] else ''
+        opts.append('<option value="/pipeline/%s/%s"%s>%s</option>'
+                    % (p["slug"], wk["file"], sel, html.escape(wk["label"])))
+    picker = ('<div class="wk"><label for="wsel">Week</label>'
+              '<select id="wsel" onchange="if(this.value)location.href=this.value">%s</select></div>'
+              % "".join(opts))
+
     doc = f'''<!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aqua {html.escape(p["market"])} booking pipeline</title>
+<title>Aqua {html.escape(p["market"])} booking pipeline, {html.escape(w["key"])}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>{CSS}</style></head><body><div class="wrap">
 <p class="kicker">Booking pipeline &middot; ISO week {w["iso"]}</p>
 <h1>{html.escape(p["market"])}</h1>
 <p class="sub">Created {w["ty_label"]} against {w["ly_label"]} &middot; snapshot {w["snapshot"]}</p>
-<nav class="nav">{nav}</nav>
+<div class="bar"><nav class="nav">{nav}</nav>{picker}</div>
 {cards}
-<footer>Bookings created, website and Google Reserve, confirmed reservations. Last year is the 364 day offset so
-weekdays match. Generated {w["snapshot"]}. <a href="/pipeline/">All markets</a> &middot;
+<footer>Bookings created, confirmed reservations, counted by the date the booking was made. Each
+venue&rsquo;s channels are named under its name. Last year is the 364 day offset so weekdays match.
+Bookings for a date before the created week are left out and counted as late records. Snapshot
+{w["snapshot"]}. <a href="/pipeline/">All markets</a> &middot;
 <a href="/{p["slug"]}/">{html.escape(p["market"])} report suite</a></footer>
 </div></body></html>'''
     open(out_path, "w").write(doc)
-    print(f"wrote {out_path} ({len(doc)} bytes, {len(p['venues'])} venues)")
+    return len(doc)
 
 
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    print(f"wrote {sys.argv[2]} ({main(sys.argv[1], sys.argv[2])} bytes)")

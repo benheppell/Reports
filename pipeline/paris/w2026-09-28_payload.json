@@ -1,0 +1,118 @@
+{
+ "market": "Paris",
+ "slug": "paris",
+ "ccy": "\u20ac",
+ "week": {
+  "key": "W40",
+  "iso": 40,
+  "ty_label": "28 September to 4 October 2026",
+  "ly_label": "29 September to 5 October 2025",
+  "snapshot": "16 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ],
+ "weeks": [
+  {
+   "key": "W41",
+   "file": "index.html",
+   "label": "W41 \u00b7 5 to 11 Oct 2026 (latest)"
+  },
+  {
+   "key": "W40",
+   "file": "w2026-09-28.html",
+   "label": "W40 \u00b7 28 Sep to 4 Oct 2026"
+  },
+  {
+   "key": "W39",
+   "file": "w2026-09-21.html",
+   "label": "W39 \u00b7 21 to 27 Sep 2026"
+  },
+  {
+   "key": "W38",
+   "file": "w2026-09-14.html",
+   "label": "W38 \u00b7 14 to 20 Sep 2026"
+  },
+  {
+   "key": "W37",
+   "file": "w2026-09-07.html",
+   "label": "W37 \u00b7 7 to 13 Sep 2026"
+  }
+ ],
+ "venues": [
+  {
+   "name": "Aqua Kyoto Paris",
+   "channels_label": "Website and Google Reserve",
+   "windows": [
+    {
+     "label": "This week, 28 Sep to 4 Oct",
+     "b_ty": 278,
+     "c_ty": 678,
+     "b_ly": 73,
+     "c_ly": 175
+    },
+    {
+     "label": "Next week, 5 to 11 Oct",
+     "b_ty": 54,
+     "c_ty": 144,
+     "b_ly": 55,
+     "c_ly": 140
+    },
+    {
+     "label": "Beyond, 12 Oct onwards",
+     "b_ty": 29,
+     "c_ty": 89,
+     "b_ly": 33,
+     "c_ly": 103
+    }
+   ],
+   "total": {
+    "b_ty": 361,
+    "c_ty": 911,
+    "b_ly": 161,
+    "c_ly": 418
+   },
+   "wg_bookings": [
+    361,
+    161
+   ],
+   "spend": [
+    2673.66,
+    1671.21
+   ],
+   "sessions": [
+    6850,
+    11853
+   ],
+   "web_bookings": [
+    232,
+    114
+   ],
+   "brand": [
+    6629,
+    3397
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  }
+ ]
+}

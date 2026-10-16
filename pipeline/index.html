@@ -12,26 +12,34 @@ body{margin:0;padding:30px 20px 48px;background:#fff;color:var(--ink);
 .kicker{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
 h1{font-size:26px;font-weight:700;margin:0 0 4px;letter-spacing:-.01em}
 .sub{color:var(--mute);font-size:13px;margin:0 0 16px}
-.nav{display:flex;gap:6px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:0 0 22px}
+.bar{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:0 0 22px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;flex:1 1 auto}
 .nav a{font-size:13px;font-weight:600;color:var(--mute);text-decoration:none;padding:9px 14px;
  border-bottom:2px solid transparent;margin-bottom:-1px}
 .nav a:hover{color:var(--ink)}
 .nav a.on{color:var(--ink);border-bottom-color:var(--blue)}
+.wk{display:flex;align-items:center;gap:8px;padding:0 0 8px}
+.wk label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.wk select{font-family:inherit;font-size:13px;font-weight:600;color:var(--ink);padding:7px 10px;
+ border:1px solid #cbd5e1;border-radius:8px;background:#fff;cursor:pointer}
+.wk select:hover{border-color:var(--blue)}
 .card{border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:0 0 18px}
 .card header{display:flex;flex-wrap:wrap;align-items:center;gap:16px;
  border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:14px}
-h2{font-size:17px;font-weight:650;margin:0;flex:1 1 180px}
+.vn{flex:1 1 180px}
+h2{font-size:17px;font-weight:650;margin:0}
+.ch{font-size:11px;color:var(--mute);margin:3px 0 0}
 .stats{display:flex;gap:22px;flex-wrap:wrap}
 .st{display:flex;align-items:baseline;gap:7px}
 .big{font:650 23px/1 'SF Mono',Menlo,Consolas,monospace;letter-spacing:-.02em}
 .lab{font-size:12px;color:var(--mute)}
 .chip{font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:99px;background:var(--bg);white-space:nowrap}
 .chip.g{color:var(--g);background:#f0fdf4} .chip.r{color:var(--r);background:#fef2f2} .chip.m{color:var(--mute)}
-table.wk{width:100%;border-collapse:collapse;margin:0 0 16px}
-table.wk th{text-align:left;font-weight:500;font-size:13px;padding:7px 8px 7px 0;border-bottom:1px solid var(--line)}
-table.wk tr:first-child th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+table.t{width:100%;border-collapse:collapse;margin:0 0 16px}
+table.t th{text-align:left;font-weight:500;font-size:13px;padding:7px 8px 7px 0;border-bottom:1px solid var(--line)}
+table.t tr:first-child th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
  color:var(--mute);border-bottom:none;padding-bottom:2px}
-table.wk tr.sh th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+table.t tr.sh th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
 td{padding:7px 0 7px 8px;border-bottom:1px solid var(--line);font-size:13.5px}
 .n{text-align:right;font-family:'SF Mono',Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
 th.n{font-family:inherit}
@@ -48,7 +56,7 @@ footer{margin-top:28px;color:var(--mute);font-size:11px;border-top:1px solid var
 footer a{color:var(--blue);text-decoration:none}
 @media(max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.tiles{grid-template-columns:1fr}body{padding:20px 14px 40px}
- table.wk{font-size:12px} .sep{padding-left:8px!important}}
+ table.t{font-size:12px} .sep{padding-left:8px!important}}
 .row{display:flex;align-items:center;gap:16px;border:1px solid var(--line);border-radius:8px;
  padding:16px 18px;margin:0 0 10px;text-decoration:none;color:var(--ink)}
 .row:hover{border-color:var(--blue)}
@@ -57,8 +65,10 @@ footer a{color:var(--blue);text-decoration:none}
 .go{font-size:13px;font-weight:600;color:var(--blue)}</style></head><body><div class="wrap">
 <p class="kicker">Booking pipeline &middot; ISO week 41</p>
 <h1>Bookings created, by the week they are for</h1>
-<p class="sub">Created 5 to 11 October 2026 against 6 to 12 October 2025 &middot; snapshot 15 October 2026</p>
+<p class="sub">Latest week created 5 to 11 October 2026 &middot;
+5 weeks of history in each market &middot; snapshot 16 October 2026</p>
 <a class="row" href="/pipeline/london/"><span class="nm">London</span><span class="mt">6 venues &middot; £</span><span class="go">Open</span></a><a class="row" href="/pipeline/hk/"><span class="nm">Hong Kong</span><span class="mt">9 venues &middot; HK$</span><span class="go">Open</span></a><a class="row" href="/pipeline/usa/"><span class="nm">USA</span><span class="mt">3 venues &middot; $</span><span class="go">Open</span></a><a class="row" href="/pipeline/dubai/"><span class="nm">Dubai</span><span class="mt">1 venue &middot; AED</span><span class="go">Open</span></a><a class="row" href="/pipeline/paris/"><span class="nm">Paris</span><span class="mt">1 venue &middot; €</span><span class="go">Open</span></a>
-<footer>Per venue, bookings and covers created in the week, website and Google Reserve, confirmed reservations.
-Last year is the 364 day offset so weekdays match. <a href="/">Report suite</a></footer>
+<footer>Per venue, bookings and covers created in the week, confirmed reservations, with the
+channels counted named on each venue. Last year is the 364 day offset so weekdays match.
+<a href="/">Report suite</a></footer>
 </div></body></html>

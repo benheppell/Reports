@@ -1,0 +1,396 @@
+{
+ "market": "London",
+ "slug": "london",
+ "ccy": "\u00a3",
+ "week": {
+  "key": "W41",
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "16 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ],
+ "weeks": [
+  {
+   "key": "W41",
+   "file": "index.html",
+   "label": "W41 \u00b7 5 to 11 Oct 2026 (latest)"
+  },
+  {
+   "key": "W40",
+   "file": "w2026-09-28.html",
+   "label": "W40 \u00b7 28 Sep to 4 Oct 2026"
+  },
+  {
+   "key": "W39",
+   "file": "w2026-09-21.html",
+   "label": "W39 \u00b7 21 to 27 Sep 2026"
+  },
+  {
+   "key": "W38",
+   "file": "w2026-09-14.html",
+   "label": "W38 \u00b7 14 to 20 Sep 2026"
+  },
+  {
+   "key": "W37",
+   "file": "w2026-09-07.html",
+   "label": "W37 \u00b7 7 to 13 Sep 2026"
+  }
+ ],
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "channels_label": "Website and Google Reserve",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 321,
+     "c_ty": 840,
+     "b_ly": 459,
+     "c_ly": 1174
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 176,
+     "c_ty": 502,
+     "b_ly": 194,
+     "c_ly": 490
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 607,
+     "c_ty": 1824,
+     "b_ly": 555,
+     "c_ly": 1632
+    }
+   ],
+   "total": {
+    "b_ty": 1104,
+    "c_ty": 3166,
+    "b_ly": 1208,
+    "c_ly": 3296
+   },
+   "wg_bookings": [
+    1104,
+    1208
+   ],
+   "spend": [
+    4963.93,
+    2411.93
+   ],
+   "sessions": [
+    36257,
+    57845
+   ],
+   "web_bookings": [
+    987,
+    1138
+   ],
+   "brand": [
+    9949,
+    15441
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong",
+   "channels_label": "Website and Google Reserve",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 297,
+     "c_ty": 766,
+     "b_ly": 306,
+     "c_ly": 767
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 160,
+     "c_ty": 419,
+     "b_ly": 159,
+     "c_ly": 393
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 364,
+     "c_ty": 1036,
+     "b_ly": 306,
+     "c_ly": 820
+    }
+   ],
+   "total": {
+    "b_ty": 821,
+    "c_ty": 2221,
+    "b_ly": 771,
+    "c_ly": 1980
+   },
+   "wg_bookings": [
+    821,
+    771
+   ],
+   "spend": [
+    4017.44,
+    2758.54
+   ],
+   "sessions": [
+    24014,
+    36164
+   ],
+   "web_bookings": [
+    710,
+    697
+   ],
+   "brand": [
+    8575,
+    9447
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "DSL",
+   "channels_label": "Website, Google Reserve and OpenTable",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 367,
+     "c_ty": 959,
+     "b_ly": 34,
+     "c_ly": 86
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 112,
+     "c_ty": 334,
+     "b_ly": 0,
+     "c_ly": 0
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 172,
+     "c_ty": 493,
+     "b_ly": 0,
+     "c_ly": 0
+    }
+   ],
+   "total": {
+    "b_ty": 651,
+    "c_ty": 1786,
+    "b_ly": 34,
+    "c_ly": 86
+   },
+   "wg_bookings": [
+    432,
+    29
+   ],
+   "spend": [
+    2498.27,
+    null
+   ],
+   "sessions": [
+    7437,
+    2886
+   ],
+   "web_bookings": [
+    376,
+    25
+   ],
+   "brand": [
+    5812,
+    3181
+   ],
+   "not_comparable": true,
+   "tile_notes": {
+    "spend": "brand launched 2026, 2025 is the pre-rebrand site",
+    "brand": "2025 is the pre-rebrand Luci name, not this one"
+   }
+  },
+  {
+   "name": "Regent St",
+   "channels_label": "Website, Google Reserve and OpenTable",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 148,
+     "c_ty": 352,
+     "b_ly": 182,
+     "c_ly": 471
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 38,
+     "c_ty": 102,
+     "b_ly": 48,
+     "c_ly": 145
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 57,
+     "c_ty": 171,
+     "b_ly": 57,
+     "c_ly": 169
+    }
+   ],
+   "total": {
+    "b_ty": 243,
+    "c_ty": 625,
+    "b_ly": 287,
+    "c_ly": 785
+   },
+   "wg_bookings": [
+    175,
+    265
+   ],
+   "spend": [
+    1717.16,
+    1864.29
+   ],
+   "sessions": [
+    5429,
+    14965
+   ],
+   "web_bookings": [
+    159,
+    213
+   ],
+   "brand": [
+    8015,
+    13482
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Shiro Sushi",
+   "channels_label": "Website, Google Reserve and OpenTable",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 81,
+     "c_ty": 200,
+     "b_ly": 91,
+     "c_ly": 242
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 37,
+     "c_ty": 105,
+     "b_ly": 27,
+     "c_ly": 76
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 15,
+     "c_ty": 45,
+     "b_ly": 17,
+     "c_ly": 44
+    }
+   ],
+   "total": {
+    "b_ty": 133,
+    "c_ty": 350,
+    "b_ly": 135,
+    "c_ly": 362
+   },
+   "wg_bookings": [
+    108,
+    125
+   ],
+   "spend": [
+    1099.04,
+    864.5
+   ],
+   "sessions": [
+    1691,
+    2648
+   ],
+   "web_bookings": [
+    94,
+    94
+   ],
+   "brand": [
+    1825,
+    2408
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Azzurra",
+   "channels_label": "Website, Google Reserve and OpenTable",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 88,
+     "c_ty": 244,
+     "b_ly": 80,
+     "c_ly": 204
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 28,
+     "c_ty": 75,
+     "b_ly": 21,
+     "c_ly": 68
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 31,
+     "c_ty": 104,
+     "b_ly": 9,
+     "c_ly": 32
+    }
+   ],
+   "total": {
+    "b_ty": 147,
+    "c_ty": 423,
+    "b_ly": 110,
+    "c_ly": 304
+   },
+   "wg_bookings": [
+    104,
+    95
+   ],
+   "spend": [
+    1835.06,
+    1415.43
+   ],
+   "sessions": [
+    2571,
+    2719
+   ],
+   "web_bookings": [
+    90,
+    68
+   ],
+   "brand": [
+    1561,
+    1756
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  }
+ ]
+}

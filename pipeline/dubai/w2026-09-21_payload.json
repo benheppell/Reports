@@ -1,0 +1,120 @@
+{
+ "market": "Dubai",
+ "slug": "dubai",
+ "ccy": "AED ",
+ "week": {
+  "key": "W39",
+  "iso": 39,
+  "ty_label": "21 to 27 September 2026",
+  "ly_label": "22 to 28 September 2025",
+  "snapshot": "16 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ],
+ "weeks": [
+  {
+   "key": "W41",
+   "file": "index.html",
+   "label": "W41 \u00b7 5 to 11 Oct 2026 (latest)"
+  },
+  {
+   "key": "W40",
+   "file": "w2026-09-28.html",
+   "label": "W40 \u00b7 28 Sep to 4 Oct 2026"
+  },
+  {
+   "key": "W39",
+   "file": "w2026-09-21.html",
+   "label": "W39 \u00b7 21 to 27 Sep 2026"
+  },
+  {
+   "key": "W38",
+   "file": "w2026-09-14.html",
+   "label": "W38 \u00b7 14 to 20 Sep 2026"
+  },
+  {
+   "key": "W37",
+   "file": "w2026-09-07.html",
+   "label": "W37 \u00b7 7 to 13 Sep 2026"
+  }
+ ],
+ "venues": [
+  {
+   "name": "Hutong Dubai",
+   "channels_label": "Website and Google Reserve",
+   "windows": [
+    {
+     "label": "This week, 21 to 27 Sep",
+     "b_ty": 80,
+     "c_ty": 251,
+     "b_ly": 101,
+     "c_ly": 311
+    },
+    {
+     "label": "Next week, 28 Sep to 4 Oct",
+     "b_ty": 14,
+     "c_ty": 49,
+     "b_ly": 18,
+     "c_ly": 57
+    },
+    {
+     "label": "Beyond, 5 Oct onwards",
+     "b_ty": 5,
+     "c_ty": 19,
+     "b_ly": 9,
+     "c_ly": 32
+    }
+   ],
+   "total": {
+    "b_ty": 99,
+    "c_ty": 319,
+    "b_ly": 128,
+    "c_ly": 400
+   },
+   "wg_bookings": [
+    99,
+    128
+   ],
+   "spend": [
+    6567.57,
+    16471.02
+   ],
+   "sessions": [
+    1721,
+    4177
+   ],
+   "web_bookings": [
+    85,
+    107
+   ],
+   "brand": [
+    1485,
+    2754
+   ],
+   "not_comparable": false,
+   "tile_notes": {
+    "spend": "2025 carried a 24 Sep to 2 Oct Meta burst"
+   }
+  }
+ ]
+}

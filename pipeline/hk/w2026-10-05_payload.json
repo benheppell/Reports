@@ -2,48 +2,109 @@
  "market": "Hong Kong",
  "slug": "hk",
  "ccy": "HK$",
+ "week": {
+  "key": "W41",
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "16 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ],
+ "weeks": [
+  {
+   "key": "W41",
+   "file": "index.html",
+   "label": "W41 \u00b7 5 to 11 Oct 2026 (latest)"
+  },
+  {
+   "key": "W40",
+   "file": "w2026-09-28.html",
+   "label": "W40 \u00b7 28 Sep to 4 Oct 2026"
+  },
+  {
+   "key": "W39",
+   "file": "w2026-09-21.html",
+   "label": "W39 \u00b7 21 to 27 Sep 2026"
+  },
+  {
+   "key": "W38",
+   "file": "w2026-09-14.html",
+   "label": "W38 \u00b7 14 to 20 Sep 2026"
+  },
+  {
+   "key": "W37",
+   "file": "w2026-09-07.html",
+   "label": "W37 \u00b7 7 to 13 Sep 2026"
+  }
+ ],
  "venues": [
   {
    "name": "Aqua HK",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 106,
-     "b_ly": 115,
      "c_ty": 300,
+     "b_ly": 115,
      "c_ly": 322
     },
     {
      "label": "Next week, 12 to 18 Oct",
-     "b_ty": 49,
+     "b_ty": 48,
+     "c_ty": 163,
      "b_ly": 39,
-     "c_ty": 164,
      "c_ly": 131
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 71,
+     "c_ty": 234,
      "b_ly": 39,
-     "c_ty": 230,
      "c_ly": 125
     }
    ],
    "total": {
-    "b_ty": 226,
+    "b_ty": 225,
+    "c_ty": 697,
     "b_ly": 193,
-    "c_ty": 694,
     "c_ly": 578
    },
+   "wg_bookings": [
+    225,
+    193
+   ],
    "spend": [
-    17562.0,
-    16054.9
+    17562.01,
+    16054.89
    ],
    "sessions": [
-    5050,
-    5510
+    4969,
+    5627
    ],
    "web_bookings": [
-    182,
+    181,
     129
    ],
    "brand": [
@@ -55,92 +116,102 @@
   },
   {
    "name": "Hutong HK",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 95,
-     "b_ly": 109,
      "c_ty": 271,
+     "b_ly": 109,
      "c_ly": 317
     },
     {
      "label": "Next week, 12 to 18 Oct",
      "b_ty": 34,
-     "b_ly": 53,
      "c_ty": 122,
+     "b_ly": 53,
      "c_ly": 145
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 100,
-     "b_ly": 74,
      "c_ty": 318,
+     "b_ly": 74,
      "c_ly": 231
     }
    ],
    "total": {
     "b_ty": 229,
-    "b_ly": 236,
     "c_ty": 711,
+    "b_ly": 236,
     "c_ly": 693
    },
+   "wg_bookings": [
+    229,
+    236
+   ],
    "spend": [
     9568.15,
-    10311.24
+    10311.25
    ],
    "sessions": [
-    4426,
-    4607
+    4497,
+    4540
    ],
    "web_bookings": [
     179,
     187
    ],
    "brand": [
-    4548,
-    4750
+    5751,
+    6158
    ],
    "not_comparable": false,
    "tile_notes": {}
   },
   {
    "name": "The Chinese Library",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 70,
-     "b_ly": 67,
      "c_ty": 216,
+     "b_ly": 67,
      "c_ly": 196
     },
     {
      "label": "Next week, 12 to 18 Oct",
      "b_ty": 33,
+     "c_ty": 103,
      "b_ly": 26,
-     "c_ty": 104,
      "c_ly": 96
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 11,
-     "b_ly": 12,
      "c_ty": 36,
+     "b_ly": 12,
      "c_ly": 36
     }
    ],
    "total": {
     "b_ty": 114,
+    "c_ty": 355,
     "b_ly": 105,
-    "c_ty": 356,
     "c_ly": 328
    },
+   "wg_bookings": [
+    114,
+    105
+   ],
    "spend": [
-    9145.89,
-    6721.44
+    9145.88,
+    6721.43
    ],
    "sessions": [
-    2095,
-    2058
+    2091,
+    2060
    ],
    "web_bookings": [
     85,
@@ -155,45 +226,50 @@
   },
   {
    "name": "Cantina",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 44,
-     "b_ly": 31,
      "c_ty": 139,
+     "b_ly": 31,
      "c_ly": 86
     },
     {
      "label": "Next week, 12 to 18 Oct",
-     "b_ty": 18,
+     "b_ty": 15,
+     "c_ty": 57,
      "b_ly": 11,
-     "c_ty": 66,
      "c_ly": 26
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 7,
-     "b_ly": 5,
      "c_ty": 35,
+     "b_ly": 5,
      "c_ly": 16
     }
    ],
    "total": {
-    "b_ty": 69,
+    "b_ty": 66,
+    "c_ty": 231,
     "b_ly": 47,
-    "c_ty": 240,
     "c_ly": 128
    },
+   "wg_bookings": [
+    66,
+    47
+   ],
    "spend": [
-    6593.49,
+    6593.5,
     5874.55
    ],
    "sessions": [
-    1978,
-    1302
+    1975,
+    1306
    ],
    "web_bookings": [
-    49,
+    47,
     38
    ],
    "brand": [
@@ -205,92 +281,102 @@
   },
   {
    "name": "Dim Sum Library",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 161,
-     "b_ly": 151,
      "c_ty": 478,
+     "b_ly": 151,
      "c_ly": 436
     },
     {
      "label": "Next week, 12 to 18 Oct",
      "b_ty": 36,
-     "b_ly": 55,
      "c_ty": 107,
+     "b_ly": 55,
      "c_ly": 169
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 27,
-     "b_ly": 17,
      "c_ty": 99,
+     "b_ly": 17,
      "c_ly": 58
     }
    ],
    "total": {
     "b_ty": 224,
-    "b_ly": 223,
     "c_ty": 684,
+    "b_ly": 223,
     "c_ly": 663
    },
+   "wg_bookings": [
+    224,
+    223
+   ],
    "spend": [
-    2571.67,
-    3058.96
+    2571.66,
+    3058.97
    ],
    "sessions": [
-    1400,
-    1702
+    1402,
+    1700
    ],
    "web_bookings": [
     128,
     133
    ],
    "brand": [
-    1732,
-    1313
+    2036,
+    1810
    ],
    "not_comparable": false,
    "tile_notes": {}
   },
   {
    "name": "Shiro Pacific Place",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 81,
-     "b_ly": 59,
      "c_ty": 209,
+     "b_ly": 59,
      "c_ly": 147
     },
     {
      "label": "Next week, 12 to 18 Oct",
-     "b_ty": 34,
+     "b_ty": 33,
+     "c_ty": 77,
      "b_ly": 20,
-     "c_ty": 79,
      "c_ly": 51
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 8,
-     "b_ly": 2,
      "c_ty": 20,
+     "b_ly": 2,
      "c_ly": 7
     }
    ],
    "total": {
-    "b_ty": 123,
+    "b_ty": 122,
+    "c_ty": 306,
     "b_ly": 81,
-    "c_ty": 308,
     "c_ly": 205
    },
+   "wg_bookings": [
+    122,
+    81
+   ],
    "spend": [
     null,
     null
    ],
    "sessions": [
-    987,
-    1155
+    993,
+    1153
    ],
    "web_bookings": [
     75,
@@ -302,42 +388,47 @@
    ],
    "not_comparable": false,
    "tile_notes": {
-    "spend": "one account for both Shiro sites: HK$9,376 against HK$3,239",
+    "spend": "one account for both Shiro sites, not split",
     "cpa": "not split, shared account",
-    "brand": "one domain for both sites: 3,522 against 2,172"
+    "brand": "one Search Console domain for both sites"
    }
   },
   {
    "name": "Shiro Tai Kwun",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 54,
-     "b_ly": null,
      "c_ty": 152,
+     "b_ly": null,
      "c_ly": null
     },
     {
      "label": "Next week, 12 to 18 Oct",
      "b_ty": 10,
-     "b_ly": null,
      "c_ty": 25,
+     "b_ly": null,
      "c_ly": null
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 15,
-     "b_ly": null,
      "c_ty": 48,
+     "b_ly": null,
      "c_ly": null
     }
    ],
    "total": {
     "b_ty": 79,
-    "b_ly": null,
     "c_ty": 225,
+    "b_ly": null,
     "c_ly": null
    },
+   "wg_bookings": [
+    79,
+    null
+   ],
    "spend": [
     null,
     null
@@ -363,42 +454,47 @@
   },
   {
    "name": "Vesu",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 52,
-     "b_ly": 48,
      "c_ty": 136,
+     "b_ly": 48,
      "c_ly": 143
     },
     {
      "label": "Next week, 12 to 18 Oct",
      "b_ty": 10,
-     "b_ly": 7,
      "c_ty": 34,
+     "b_ly": 7,
      "c_ly": 26
     },
     {
      "label": "Beyond, 19 Oct onwards",
      "b_ty": 8,
-     "b_ly": 6,
      "c_ty": 19,
+     "b_ly": 6,
      "c_ly": 13
     }
    ],
    "total": {
     "b_ty": 70,
-    "b_ly": 61,
     "c_ty": 189,
+    "b_ly": 61,
     "c_ly": 182
    },
+   "wg_bookings": [
+    70,
+    61
+   ],
    "spend": [
-    5810.64,
+    5810.63,
     5420.73
    ],
    "sessions": [
-    1305,
-    1862
+    1311,
+    1864
    ],
    "web_bookings": [
     52,
@@ -415,45 +511,50 @@
   },
   {
    "name": "The Canton Library",
+   "channels_label": "Website and Google Reserve",
    "windows": [
     {
      "label": "This week, 5 to 11 Oct",
      "b_ty": 24,
-     "b_ly": null,
      "c_ty": 61,
+     "b_ly": null,
      "c_ly": null
     },
     {
      "label": "Next week, 12 to 18 Oct",
      "b_ty": 10,
-     "b_ly": null,
      "c_ty": 30,
+     "b_ly": null,
      "c_ly": null
     },
     {
      "label": "Beyond, 19 Oct onwards",
-     "b_ty": 9,
+     "b_ty": 8,
+     "c_ty": 34,
      "b_ly": null,
-     "c_ty": 39,
      "c_ly": null
     }
    ],
    "total": {
-    "b_ty": 43,
+    "b_ty": 42,
+    "c_ty": 125,
     "b_ly": null,
-    "c_ty": 130,
     "c_ly": null
    },
+   "wg_bookings": [
+    42,
+    null
+   ],
    "spend": [
     12267.33,
     null
    ],
    "sessions": [
-    2961,
+    2973,
     null
    ],
    "web_bookings": [
-    34,
+    33,
     null
    ],
    "brand": [
@@ -466,33 +567,5 @@
     "cpa": "Meta spend only"
    }
   }
- ],
- "week": {
-  "iso": 41,
-  "ty_label": "5 to 11 October 2026",
-  "ly_label": "6 to 12 October 2025",
-  "snapshot": "15 October 2026"
- },
- "nav": [
-  [
-   "london",
-   "London"
-  ],
-  [
-   "hk",
-   "Hong Kong"
-  ],
-  [
-   "usa",
-   "USA"
-  ],
-  [
-   "dubai",
-   "Dubai"
-  ],
-  [
-   "paris",
-   "Paris"
-  ]
  ]
 }

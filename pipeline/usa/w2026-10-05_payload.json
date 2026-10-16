@@ -1,0 +1,230 @@
+{
+ "market": "USA",
+ "slug": "usa",
+ "ccy": "$",
+ "week": {
+  "key": "W41",
+  "iso": 41,
+  "ty_label": "5 to 11 October 2026",
+  "ly_label": "6 to 12 October 2025",
+  "snapshot": "16 October 2026"
+ },
+ "nav": [
+  [
+   "london",
+   "London"
+  ],
+  [
+   "hk",
+   "Hong Kong"
+  ],
+  [
+   "usa",
+   "USA"
+  ],
+  [
+   "dubai",
+   "Dubai"
+  ],
+  [
+   "paris",
+   "Paris"
+  ]
+ ],
+ "weeks": [
+  {
+   "key": "W41",
+   "file": "index.html",
+   "label": "W41 \u00b7 5 to 11 Oct 2026 (latest)"
+  },
+  {
+   "key": "W40",
+   "file": "w2026-09-28.html",
+   "label": "W40 \u00b7 28 Sep to 4 Oct 2026"
+  },
+  {
+   "key": "W39",
+   "file": "w2026-09-21.html",
+   "label": "W39 \u00b7 21 to 27 Sep 2026"
+  },
+  {
+   "key": "W38",
+   "file": "w2026-09-14.html",
+   "label": "W38 \u00b7 14 to 20 Sep 2026"
+  },
+  {
+   "key": "W37",
+   "file": "w2026-09-07.html",
+   "label": "W37 \u00b7 7 to 13 Sep 2026"
+  }
+ ],
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "channels_label": "Website, Google Reserve, OpenTable and Resy",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 176,
+     "c_ty": 516,
+     "b_ly": 197,
+     "c_ly": 601
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 34,
+     "c_ty": 161,
+     "b_ly": 50,
+     "c_ly": 209
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 60,
+     "c_ty": 244,
+     "b_ly": 34,
+     "c_ly": 132
+    }
+   ],
+   "total": {
+    "b_ty": 270,
+    "c_ty": 921,
+    "b_ly": 281,
+    "c_ly": 942
+   },
+   "wg_bookings": [
+    188,
+    207
+   ],
+   "spend": [
+    2899.54,
+    2838.87
+   ],
+   "sessions": [
+    7973,
+    10534
+   ],
+   "web_bookings": [
+    122,
+    131
+   ],
+   "brand": [
+    9532,
+    8245
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong NYC",
+   "channels_label": "Website, Google Reserve, OpenTable and Resy",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 207,
+     "c_ty": 580,
+     "b_ly": 217,
+     "c_ly": 660
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 36,
+     "c_ty": 128,
+     "b_ly": 51,
+     "c_ly": 165
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 62,
+     "c_ty": 242,
+     "b_ly": 45,
+     "c_ly": 149
+    }
+   ],
+   "total": {
+    "b_ty": 305,
+    "c_ty": 950,
+    "b_ly": 313,
+    "c_ly": 974
+   },
+   "wg_bookings": [
+    132,
+    180
+   ],
+   "spend": [
+    2458.4,
+    2407.31
+   ],
+   "sessions": [
+    5163,
+    5691
+   ],
+   "web_bookings": [
+    113,
+    104
+   ],
+   "brand": [
+    4052,
+    6121
+   ],
+   "not_comparable": false,
+   "tile_notes": {}
+  },
+  {
+   "name": "Hutong Miami",
+   "channels_label": "Website, Google Reserve, OpenTable and Resy",
+   "windows": [
+    {
+     "label": "This week, 5 to 11 Oct",
+     "b_ty": 77,
+     "c_ty": 254,
+     "b_ly": 64,
+     "c_ly": 168
+    },
+    {
+     "label": "Next week, 12 to 18 Oct",
+     "b_ty": 10,
+     "c_ty": 38,
+     "b_ly": 6,
+     "c_ly": 23
+    },
+    {
+     "label": "Beyond, 19 Oct onwards",
+     "b_ty": 13,
+     "c_ty": 42,
+     "b_ly": 11,
+     "c_ly": 32
+    }
+   ],
+   "total": {
+    "b_ty": 100,
+    "c_ty": 334,
+    "b_ly": 81,
+    "c_ly": 223
+   },
+   "wg_bookings": [
+    51,
+    46
+   ],
+   "spend": [
+    2250.77,
+    2159.42
+   ],
+   "sessions": [
+    3269,
+    4749
+   ],
+   "web_bookings": [
+    48,
+    34
+   ],
+   "brand": [
+    null,
+    null
+   ],
+   "not_comparable": false,
+   "tile_notes": {
+    "brand": "Search Console property not verified"
+   }
+  }
+ ]
+}

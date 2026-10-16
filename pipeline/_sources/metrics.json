@@ -1,0 +1,1064 @@
+{
+ "london": {
+  "slug": "london",
+  "ccy": "GBP",
+  "venues": {
+   "Aqua Shard": {
+    "spend": {
+     "ty": {
+      "W37": 3738.07,
+      "W38": 5578.33,
+      "W39": 5755.36,
+      "W40": 5026.46,
+      "W41": 4963.93
+     },
+     "ly": {
+      "W37": 2724.81,
+      "W38": 3179.49,
+      "W39": 2763.72,
+      "W40": 2586.6,
+      "W41": 2411.93
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 30469,
+      "W38": 34997,
+      "W39": 36200,
+      "W40": 37101,
+      "W41": 36257
+     },
+     "ly": {
+      "W37": 52627,
+      "W38": 57038,
+      "W39": 57507,
+      "W40": 56916,
+      "W41": 57845
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 9123,
+      "W38": 10084,
+      "W39": 10602,
+      "W40": 10067,
+      "W41": 9949
+     },
+     "ly": {
+      "W37": 13975,
+      "W38": 13574,
+      "W39": 15792,
+      "W40": 15659,
+      "W41": 15441
+     }
+    },
+    "notes": "Meta act_1545415238841779 + Google Ads 4834414023. GA4 324811249 sessions. Brand = Search Console https://aquashard.co.uk/ impressions on queries matching regex 'aqua|shard'. Sessions and brand impressions are both sharply down year on year across all five weeks on a property and filter that did not change, so the fall sits in the site's search footprint, not in the measurement. Brand re-pulled 16 Oct 2026 on query regex 'aqua' only, the Brand Demand Index name-search basis; an earlier pull used 'aqua|shard' and included landmark queries for the building."
+   },
+   "Hutong": {
+    "spend": {
+     "ty": {
+      "W37": 3318.84,
+      "W38": 4039.74,
+      "W39": 5015.39,
+      "W40": 4231.27,
+      "W41": 4017.44
+     },
+     "ly": {
+      "W37": 3069.22,
+      "W38": 3053.18,
+      "W39": 2850.95,
+      "W40": 2545.09,
+      "W41": 2758.54
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 21092,
+      "W38": 22324,
+      "W39": 23410,
+      "W40": 25791,
+      "W41": 24014
+     },
+     "ly": {
+      "W37": 32565,
+      "W38": 32595,
+      "W39": 32158,
+      "W40": 32943,
+      "W41": 36164
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 7463,
+      "W38": 7977,
+      "W39": 7873,
+      "W40": 9522,
+      "W41": 8575
+     },
+     "ly": {
+      "W37": 8801,
+      "W38": 8482,
+      "W39": 8796,
+      "W40": 9176,
+      "W41": 9447
+     }
+    },
+    "notes": "Hutong London. Meta act_1545418222174814 + Google Ads 5073458733. GA4 324836278. Brand = Search Console https://hutong.co.uk/ impressions on queries matching 'hutong'."
+   },
+   "DSL": {
+    "spend": {
+     "ty": {
+      "W37": 2386.66,
+      "W38": 2322.79,
+      "W39": 2288.1,
+      "W40": 2618.5,
+      "W41": 2498.27
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 6137,
+      "W38": 5923,
+      "W39": 6746,
+      "W40": 7285,
+      "W41": 7437
+     },
+     "ly": {
+      "W37": 4753,
+      "W38": 3935,
+      "W39": 3599,
+      "W40": 3229,
+      "W41": 2886
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 4186,
+      "W38": 4385,
+      "W39": 3960,
+      "W40": 4569,
+      "W41": 5812
+     },
+     "ly": {
+      "W37": 3522,
+      "W38": 3722,
+      "W39": 4081,
+      "W40": 3551,
+      "W41": 3181
+     }
+    },
+    "notes": "Dim Sum Library London. Meta act_986571809129888, which still reports under the account name 'Luci'. Google Ads 3456575686 (reached via manager 7441169950). GA4 388006034. Brand 2026 = Search Console https://dimsumlibrary.co.uk/ on queries matching 'dim ?sum ?library|dimsumlibrary'. NOT LIKE FOR LIKE: the 2025 figures are the pre-rebrand site. dimsumlibrary.co.uk returns zero rows for every day of the 2025 window, so the 2025 brand series is the Luci property https://lucirestaurant.co.uk/ on queries matching 'luci', which is a different restaurant name at the same address rather than a weaker reading of the same name. 2025 Meta spend is a verified zero in W39, W40 and W41: the account returned rows only for the weeks beginning 8 and 15 September 2025 and the API's own range summary (GBP 693.17) equals the sum of those two rows, so the account was dark for the rest. 2025 Google spend is recorded as 0 because the account returned no rows for any date in September or October 2025, which reads as the account not yet running rather than a measured zero. Treat the whole 2025 DSL spend series as not comparable. 2025 spend is reported as not available, not zero: Meta returned GBP 578.70 and 114.47 in the first two weeks and a verified zero after, but the Google Ads account has no 2025 history at all, so the total cannot be stated."
+   },
+   "Regent St": {
+    "spend": {
+     "ty": {
+      "W37": 1944.08,
+      "W38": 1674.02,
+      "W39": 1347.03,
+      "W40": 1297.67,
+      "W41": 1717.16
+     },
+     "ly": {
+      "W37": 1542.33,
+      "W38": 2609.87,
+      "W39": 3128.01,
+      "W40": 2104.63,
+      "W41": 1864.29
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 5756,
+      "W38": 5321,
+      "W39": 5275,
+      "W40": 4970,
+      "W41": 5429
+     },
+     "ly": {
+      "W37": 12834,
+      "W38": 16365,
+      "W39": 16345,
+      "W40": 14558,
+      "W41": 14965
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 7858,
+      "W38": 8387,
+      "W39": 9161,
+      "W40": 8099,
+      "W41": 8015
+     },
+     "ly": {
+      "W37": 10823,
+      "W38": 10597,
+      "W39": 10830,
+      "W40": 10910,
+      "W41": 13482
+     }
+    },
+    "notes": "Aqua Kyoto plus Aqua Nueva combined, one row. Meta act_1545421758841127 (Kyoto) + act_1545420182174618 (Nueva), summed. Google Ads 3511646647 is a single shared account covering both venues and is counted once, not twice. GA4 342430509 (Kyoto) + 360337941 (Nueva) sessions summed. Brand = Search Console https://aquakyoto.co.uk/ plus https://aquanueva.co.uk/, each on queries matching 'aqua', summed. Google spend stepped down from about GBP 230 a day to about GBP 60 a day on 10 September 2026, inside W37, so W37 2026 is a part-week at the old level and W38 onward sit at the new one."
+   },
+   "Shiro Sushi": {
+    "spend": {
+     "ty": {
+      "W37": 948.92,
+      "W38": 995.85,
+      "W39": 1008.98,
+      "W40": 1047.75,
+      "W41": 1099.04
+     },
+     "ly": {
+      "W37": 661.43,
+      "W38": 846.17,
+      "W39": 797.86,
+      "W40": 871.05,
+      "W41": 864.5
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1486,
+      "W38": 1587,
+      "W39": 1502,
+      "W40": 1750,
+      "W41": 1691
+     },
+     "ly": {
+      "W37": 2291,
+      "W38": 2461,
+      "W39": 2223,
+      "W40": 2477,
+      "W41": 2648
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 1914,
+      "W38": 2438,
+      "W39": 1965,
+      "W40": 1966,
+      "W41": 1825
+     },
+     "ly": {
+      "W37": 2422,
+      "W38": 2343,
+      "W39": 2432,
+      "W40": 2389,
+      "W41": 2408
+     }
+    },
+    "notes": "Shiro London. Meta act_79870131 + Google Ads 1776253805. GA4 344061897. Brand = Search Console https://shirosushi.co.uk/ on queries matching 'shiro'. The Hong Kong domain shiro-sushi.com is a separate property and is excluded."
+   },
+   "Azzurra": {
+    "spend": {
+     "ty": {
+      "W37": 1443.56,
+      "W38": 1522.17,
+      "W39": 1559.44,
+      "W40": 1896.22,
+      "W41": 1835.06
+     },
+     "ly": {
+      "W37": 1029.07,
+      "W38": 859.08,
+      "W39": 1025.77,
+      "W40": 1244.93,
+      "W41": 1415.43
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 2097,
+      "W38": 1953,
+      "W39": 2126,
+      "W40": 3175,
+      "W41": 2571
+     },
+     "ly": {
+      "W37": 2064,
+      "W38": 2809,
+      "W39": 2522,
+      "W40": 2572,
+      "W41": 2719
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 1332,
+      "W38": 1392,
+      "W39": 1363,
+      "W40": 1441,
+      "W41": 1561
+     },
+     "ly": {
+      "W37": 1650,
+      "W38": 1891,
+      "W39": 1872,
+      "W40": 1831,
+      "W41": 1756
+     }
+    },
+    "notes": "Meta act_313000804748928 + Google Ads 4154355693. GA4 403007090. Brand = Search Console https://azzurrarestaurant.co.uk/ (the URL-prefix property, not the sc-domain one) on queries matching 'azzurra'. A single-day session spike to 933 on 30 September 2026 sits inside W40 and is carried as returned."
+   }
+  },
+  "failures": [
+   "DSL Google Ads 3456575686: no rows for any date 2025-09-08 to 2025-10-12. Retried once with manager 7441169950 across a widened 2025-09-01 to 2025-10-31 window and still empty. Carried as 0 so the 2025 DSL spend is Meta only. Read as the account not yet running, not as a measured zero.",
+   "DSL brand 2025: https://dimsumlibrary.co.uk/ returns zero rows for the whole 2025 window. The 2025 brand series substituted is the pre-rebrand Luci property and is not like for like."
+  ]
+ },
+ "hk": {
+  "slug": "hk",
+  "ccy": "HKD",
+  "venues": {
+   "Aqua HK": {
+    "spend": {
+     "ty": {
+      "W37": 15813.79,
+      "W38": 17342.59,
+      "W39": 18835.94,
+      "W40": 17366.8,
+      "W41": 17562.01
+     },
+     "ly": {
+      "W37": 17390.97,
+      "W38": 19772.49,
+      "W39": 17822.58,
+      "W40": 13787.94,
+      "W41": 16054.89
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 4544,
+      "W38": 5264,
+      "W39": 4957,
+      "W40": 5297,
+      "W41": 4969
+     },
+     "ly": {
+      "W37": 5259,
+      "W38": 5203,
+      "W39": 4840,
+      "W40": 5947,
+      "W41": 5627
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 5425,
+      "W38": 7388,
+      "W39": 6186,
+      "W40": 5972,
+      "W41": 6001
+     },
+     "ly": {
+      "W37": 6405,
+      "W38": 6037,
+      "W39": 5799,
+      "W40": 6393,
+      "W41": 6202
+     }
+    },
+    "notes": "Meta act_749760246599900 + Google 5310180360 (cost_micros/1e6), summed Mon-Sun from a single daily/weekly ranged pull per account per year. GA4 372981635 sessions, daily. Brand = Search Console https://aqua.com.hk/ impressions, query regex (?i)aqua, daily. Google spend LY is inflated relative to TY in W37-W39 by a spend spike around 19-25 Sep 2025 (single day 2025-09-24 HK$3,404.85) and then collapses to HK$455-620/day 26 Sep-1 Oct 2025, so LY weekly Google spend is genuinely volatile rather than mis-summed."
+   },
+   "Hutong HK": {
+    "spend": {
+     "ty": {
+      "W37": 11098.13,
+      "W38": 10768.27,
+      "W39": 12240.69,
+      "W40": 9191.31,
+      "W41": 9568.15
+     },
+     "ly": {
+      "W37": 10971.74,
+      "W38": 9503.16,
+      "W39": 11190.88,
+      "W40": 10365.44,
+      "W41": 10311.25
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 4187,
+      "W38": 5914,
+      "W39": 5177,
+      "W40": 4701,
+      "W41": 4497
+     },
+     "ly": {
+      "W37": 4095,
+      "W38": 4355,
+      "W39": 4204,
+      "W40": 4972,
+      "W41": 4540
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 5730,
+      "W38": 6623,
+      "W39": 6080,
+      "W40": 6041,
+      "W41": 5751
+     },
+     "ly": {
+      "W37": 10524,
+      "W38": 7754,
+      "W39": 5844,
+      "W40": 6432,
+      "W41": 6158
+     }
+    },
+    "notes": "Meta act_340024265595294 + Google 8264835394. GA4 375848050 sessions. Brand = Search Console https://hutong.com.hk/, query regex (?i)hutong|\u80e1\u540c. LY W37 brand (10,524) and W38 (7,754) are distorted upward by a three-day impression spike 13-15 Sep 2025 (2,212 / 3,254 / 2,406 impressions at average position 1.9-2.1 against a ~900 baseline). That is a Search Console serving anomaly, not demand: do not read the W37 and W38 brand YoY as a decline without stripping those three days."
+   },
+   "The Chinese Library": {
+    "spend": {
+     "ty": {
+      "W37": 9748.75,
+      "W38": 6796.57,
+      "W39": 9308.91,
+      "W40": 9922.53,
+      "W41": 9145.88
+     },
+     "ly": {
+      "W37": 7363.62,
+      "W38": 7217.0,
+      "W39": 7648.13,
+      "W40": 8053.63,
+      "W41": 6721.43
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 2254,
+      "W38": 2475,
+      "W39": 1900,
+      "W40": 2086,
+      "W41": 2091
+     },
+     "ly": {
+      "W37": 1721,
+      "W38": 1826,
+      "W39": 1583,
+      "W40": 1878,
+      "W41": 2060
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 1253,
+      "W38": 1391,
+      "W39": 1167,
+      "W40": 1165,
+      "W41": 1347
+     },
+     "ly": {
+      "W37": 1048,
+      "W38": 1236,
+      "W39": 1033,
+      "W40": 1094,
+      "W41": 1390
+     }
+    },
+    "notes": "Meta act_751101740229919 + Google 8142978935. GA4 356942576 sessions. Brand = Search Console https://www.chineselibrary.com.hk/, query regex (?i)chinese.?library|\u4e2d\u570b\u6703. TY W37 sessions carry a one-day spike (2026-09-17, 659 sessions against a ~310 baseline)."
+   },
+   "Cantina": {
+    "spend": {
+     "ty": {
+      "W37": 5686.31,
+      "W38": 5402.71,
+      "W39": 5429.74,
+      "W40": 5969.21,
+      "W41": 6593.5
+     },
+     "ly": {
+      "W37": 6935.84,
+      "W38": 5421.38,
+      "W39": 6040.52,
+      "W40": 6502.9,
+      "W41": 5874.55
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1882,
+      "W38": 1771,
+      "W39": 1689,
+      "W40": 1959,
+      "W41": 1975
+     },
+     "ly": {
+      "W37": 1360,
+      "W38": 1303,
+      "W39": 1220,
+      "W40": 1429,
+      "W41": 1306
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 1322,
+      "W38": 3005,
+      "W39": 1370,
+      "W40": 1439,
+      "W41": 1460
+     },
+     "ly": {
+      "W37": 998,
+      "W38": 1030,
+      "W39": 863,
+      "W40": 1075,
+      "W41": 1013
+     }
+    },
+    "notes": "Meta act_2431795346992652 + Google 5637997037. GA4 359148527 sessions. Brand = Search Console https://cantina.com.hk/, query regex (?i)cantina. TY W38 brand (3,005) is inflated by a three-day impression spike 15-17 Sep 2026 (581 / 737 / 879 against a ~200 baseline) at average position 7-10.5 with CTR collapsing to 1.3-2.7 per cent, so those are low-quality impressions, not name demand. Underlying W38 on the non-spike days runs in line with the other weeks."
+   },
+   "Dim Sum Library": {
+    "spend": {
+     "ty": {
+      "W37": 2289.9,
+      "W38": 2342.3,
+      "W39": 2420.03,
+      "W40": 2380.44,
+      "W41": 2571.66
+     },
+     "ly": {
+      "W37": 3029.98,
+      "W38": 3034.92,
+      "W39": 3290.04,
+      "W40": 2799.5,
+      "W41": 3058.97
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1299,
+      "W38": 1657,
+      "W39": 1329,
+      "W40": 1345,
+      "W41": 1402
+     },
+     "ly": {
+      "W37": 1395,
+      "W38": 1458,
+      "W39": 1312,
+      "W40": 1578,
+      "W41": 1700
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 1993,
+      "W38": 1918,
+      "W39": 1960,
+      "W40": 1711,
+      "W41": 2036
+     },
+     "ly": {
+      "W37": 1595,
+      "W38": 1748,
+      "W39": 1393,
+      "W40": 1818,
+      "W41": 1810
+     }
+    },
+    "notes": "Meta act_768848088611683 + Google 3754265652 (manager 7441169950). GA4 357228369 sessions. Brand = Search Console https://dimsumlibrary.com.hk/, query regex (?i)dim.?sum.?library|dimsum (the HK property only; the London dimsumlibrary.co.uk property is excluded). TY W37 sessions carry a one-day spike (2026-09-17, 437 against a ~190 baseline)."
+   },
+   "Shiro Pacific Place": {
+    "spend": {
+     "ty": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 962,
+      "W38": 928,
+      "W39": 891,
+      "W40": 1023,
+      "W41": 993
+     },
+     "ly": {
+      "W37": 1117,
+      "W38": 990,
+      "W39": 901,
+      "W40": 1045,
+      "W41": 1153
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "notes": "SPEND IS NULL BY RULE: Shiro is one Meta account (act_283603334535394) and one Google account (4093767407, manager 7441169950) across both sites and must never be divided. Combined Shiro spend, Meta plus Google, HKD: this year W37 10,184.72, W38 9,177.63, W39 9,248.69, W40 9,134.81, W41 9,376.31; last year W37 3,193.06, W38 3,027.78, W39 3,091.66, W40 3,051.92, W41 3,238.65. BRAND IS NULL BY RULE: Search Console serves one domain, shiro-sushi.com, for both sites. Combined Shiro brand impressions, query regex (?i)shiro: this year W37 3,447, W38 3,714, W39 3,289, W40 3,215, W41 3,522; last year W37 2,930, W38 2,203, W39 2,113, W40 2,069, W41 2,172. SESSIONS DO SPLIT: GA4 359394354 by pagePath with PARTIAL_REGEXP. Pacific Place = property total minus the Tai Kwun match (central|taikwun). Last year the Tai Kwun regex returns no rows at all, so Pacific Place last year equals the whole property and is a clean like-for-like."
+   },
+   "Shiro Tai Kwun": {
+    "spend": {
+     "ty": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1546,
+      "W38": 1693,
+      "W39": 1381,
+      "W40": 1715,
+      "W41": 1531
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "notes": "Spend null by rule (one shared Shiro Meta and Google account, never divided; combined figures are in the Shiro Pacific Place notes). Brand null by rule (one shared Search Console domain shiro-sushi.com; combined figures are in the Shiro Pacific Place notes). Sessions this year = GA4 359394354 filtered to pagePath PARTIAL_REGEXP central|taikwun. Every last-year figure is null, not 0: Tai Kwun did not trade in 2025, and the pagePath filter returned no rows for 8 Sep to 12 Oct 2025, which confirms it."
+   },
+   "Vesu": {
+    "spend": {
+     "ty": {
+      "W37": 6434.82,
+      "W38": 5917.34,
+      "W39": 5744.71,
+      "W40": 5735.56,
+      "W41": 5810.63
+     },
+     "ly": {
+      "W37": 4650.87,
+      "W38": 4541.57,
+      "W39": 4923.21,
+      "W40": 4513.16,
+      "W41": 5420.73
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1983,
+      "W38": 1762,
+      "W39": 1573,
+      "W40": 1626,
+      "W41": 1311
+     },
+     "ly": {
+      "W37": 1810,
+      "W38": 1650,
+      "W39": 1807,
+      "W40": 2054,
+      "W41": 1864
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 907,
+      "W38": 986,
+      "W39": 900,
+      "W40": 899,
+      "W41": 864
+     },
+     "ly": {
+      "W37": 1122,
+      "W38": 961,
+      "W39": 975,
+      "W40": 1115,
+      "W41": 1051
+     }
+    },
+    "notes": "Meta act_721409993160810 + Google 4311541411 (manager 7441169950). GA4 439152333 sessions. Brand = Search Console https://vesupizzabar.com.hk/, query regex (?i)vesu (this account is now a full user on that property; it was unverified in September). DIFFERENT OPERATING STATE: Vesu reopened 8 Sep 2026, so this year is an open restaurant and last year is the pre-closure trading state. The 2025 figures are real pulls, not a like-for-like comparison. Meta spend here includes awareness as well as OUTCOME_LEADS campaigns; the account-level figure is reported as instructed, so it is not a conversion-only spend number."
+   },
+   "The Canton Library": {
+    "spend": {
+     "ty": {
+      "W37": 9396.21,
+      "W38": 15549.17,
+      "W39": 14951.21,
+      "W40": 14118.07,
+      "W41": 12267.33
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1591,
+      "W38": 4188,
+      "W39": 4494,
+      "W40": 3910,
+      "W41": 2973
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": null,
+      "W38": null,
+      "W39": 860,
+      "W40": 1071,
+      "W41": 984
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "notes": "Opened 8 Sep 2026, so every last-year figure is null, not 0. SPEND IS META ONLY: Vista ad account act_2401548436678795, Canton campaigns only (CRKLR | Canton Library Conversions Campaign, Awareness Campaign, and Lead Gen Campaign in W37). No non-Canton campaign in that account recorded spend in this window. ITS GOOGLE SPEND IS HELD OUT OF THE SPEND FIGURE ENTIRELY, as instructed: Google account 5594089398 is still firing on the wrong event and is not a verified import. The excluded Google cost, for reference only and deliberately not added above, was HKD W37 6,767.10, W38 10,893.89, W39 13,905.05, W40 6,284.27, W41 6,899.31. Sessions = GA4 548638742; W37 covers the full calendar week 7 to 13 Sep including 7 Sep, the day before opening (142 sessions), and the site was ramping (41 sessions on 10 Sep). BRAND W37 AND W38 ARE NULL BECAUSE OF A DATA GAP, NOT BY RULE: Search Console https://thecantonlibrary.com.hk/ returns no rows before 20 Sep 2026, so W37 has no data at all and W38 has one day only (20 Sep, 132 impressions), which is not a week. The old domain https://cantonlibrary.com.hk/ carried the Canton brand queries until mid-September but this account has only unverified access to it, and the pull failed twice with a permission error, so those two weeks cannot be completed. W39 to W41 are complete weeks on the new domain, query regex (?i)canton."
+   }
+  },
+  "failures": [
+   "Search Console https://cantonlibrary.com.hk/ (The Canton Library's old domain): pull failed twice with 'User does not have sufficient permission for site'. This account holds only siteUnverifiedUser on that property. Consequence: The Canton Library brand W37 and W38 this year are null, because the new domain https://thecantonlibrary.com.hk/ returns no rows before 20 Sep 2026 and the old domain held the Canton brand queries for those weeks."
+  ]
+ },
+ "usa": {
+  "slug": "usa",
+  "ccy": "USD",
+  "venues": {
+   "Aqua NYC": {
+    "spend": {
+     "ty": {
+      "W37": 2576.47,
+      "W38": 2513.09,
+      "W39": 2537.21,
+      "W40": 2650.83,
+      "W41": 2899.54
+     },
+     "ly": {
+      "W37": 2370.45,
+      "W38": 2598.86,
+      "W39": 2438.09,
+      "W40": 2467.88,
+      "W41": 2838.87
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 6726,
+      "W38": 7614,
+      "W39": 7191,
+      "W40": 7628,
+      "W41": 7973
+     },
+     "ly": {
+      "W37": 8793,
+      "W38": 8014,
+      "W39": 9901,
+      "W40": 9773,
+      "W41": 10534
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 6170,
+      "W38": 7844,
+      "W39": 16454,
+      "W40": 12602,
+      "W41": 9532
+     },
+     "ly": {
+      "W37": 9092,
+      "W38": 8403,
+      "W39": 9479,
+      "W40": 8162,
+      "W41": 8245
+     }
+    },
+    "notes": "Aqua Roma plus Aqua Kyoto NYC as one row. GA4 property 451165443 (whole site, no pagePath split). Meta act_1057116046095292, Google Ads 4724837044, Search Console https://aqua-nyc.com/ (brand = queries containing 'aqua'). Meta and Google are shared across both rooms, so spend cannot be split by room. Google spend fell about 50% YoY: 2026 weeks run USD 605-731 against USD 1,144-1,567 in 2025, so the spend YoY is a budget change, not a reporting gap. Search Console impressions spike 17-29 Sep 2026 (peak 3,053 on 26 Sep) with average position moving from about 5 to about 8-30, which is a Google impression-reporting shift rather than a demand step change: read W39 and W40 brand with that caveat."
+   },
+   "Hutong NYC": {
+    "spend": {
+     "ty": {
+      "W37": 2013.77,
+      "W38": 2090.49,
+      "W39": 2067.65,
+      "W40": 2407.44,
+      "W41": 2458.4
+     },
+     "ly": {
+      "W37": 1902.96,
+      "W38": 1686.03,
+      "W39": 1677.87,
+      "W40": 2015.57,
+      "W41": 2407.31
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 3413,
+      "W38": 3849,
+      "W39": 3876,
+      "W40": 3553,
+      "W41": 5163
+     },
+     "ly": {
+      "W37": 5629,
+      "W38": 5415,
+      "W39": 3675,
+      "W40": 4515,
+      "W41": 5691
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 3603,
+      "W38": 4275,
+      "W39": 4202,
+      "W40": 3954,
+      "W41": 4052
+     },
+     "ly": {
+      "W37": 5731,
+      "W38": 5509,
+      "W39": 5885,
+      "W40": 5979,
+      "W41": 6121
+     }
+    },
+    "notes": "Hutong New York. GA4 370519903, Meta act_1320018325245807, Google Ads 8775967619, Search Console https://www.hutong-nyc.com/ (brand = queries containing 'hutong'). GA4 sessions jump on 8-11 Oct 2026 (554-925 a day against a 450-650 baseline), which lifts W41 this year. Brand impressions are down YoY across all five weeks while clicks are up, as average position improved from about 3.2 to about 2.9."
+   },
+   "Hutong Miami": {
+    "spend": {
+     "ty": {
+      "W37": 2262.51,
+      "W38": 2041.29,
+      "W39": 2048.45,
+      "W40": 2183.57,
+      "W41": 2250.77
+     },
+     "ly": {
+      "W37": 1868.4,
+      "W38": 1903.94,
+      "W39": 2026.93,
+      "W40": 2023.31,
+      "W41": 2159.42
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1994,
+      "W38": 1798,
+      "W39": 1961,
+      "W40": 2003,
+      "W41": 3269
+     },
+     "ly": {
+      "W37": 3181,
+      "W38": 3141,
+      "W39": 3099,
+      "W40": 3598,
+      "W41": 4749
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     },
+     "ly": {
+      "W37": null,
+      "W38": null,
+      "W39": null,
+      "W40": null,
+      "W41": null
+     }
+    },
+    "notes": "GA4 369179739, Meta act_756032299051731, Google Ads 8465732460. Brand is null for all ten weeks: the only Search Console property, https://hutong-miami.com/, lists this account as siteUnverifiedUser and both the filtered and unfiltered pulls returned 'User does not have sufficient permission for site'. Never read those nulls as zero. GA4 sessions jump on 8-11 Oct 2026 (554-650 a day against a 200-350 baseline), which lifts W41 this year."
+   }
+  },
+  "failures": [
+   "Hutong Miami brand (Search Console impressions): property https://hutong-miami.com/ returns 'User does not have sufficient permission for site' (permissionLevel siteUnverifiedUser). Pulled once with a query filter and retried once unfiltered; both failed. Reported as null for all five weeks in both years, never 0. No other Search Console property covers Hutong Miami."
+  ]
+ },
+ "dubai": {
+  "slug": "dubai",
+  "ccy": "AED",
+  "venues": {
+   "Hutong Dubai": {
+    "spend": {
+     "ty": {
+      "W37": 6626.14,
+      "W38": 6306.84,
+      "W39": 6567.57,
+      "W40": 8953.35,
+      "W41": 7713.11
+     },
+     "ly": {
+      "W37": 4893.13,
+      "W38": 5265.21,
+      "W39": 16471.02,
+      "W40": 14657.06,
+      "W41": 11018.65
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 1625,
+      "W38": 1579,
+      "W39": 1721,
+      "W40": 1807,
+      "W41": 1599
+     },
+     "ly": {
+      "W37": 2492,
+      "W38": 2368,
+      "W39": 4177,
+      "W40": 4023,
+      "W41": 3103
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 1400,
+      "W38": 1467,
+      "W39": 1485,
+      "W40": 1477,
+      "W41": 1452
+     },
+     "ly": {
+      "W37": 2562,
+      "W38": 2879,
+      "W39": 2754,
+      "W40": 2792,
+      "W41": 2135
+     }
+    },
+    "notes": "Accounts: GA4 property 359650118; Meta act_551167838895768; Google Ads customer 7344894846 (no manager_id needed). CURRENCY: Google Ads cost came back in GBP. cost_micros/1e6 then x4.90 to AED, applied exactly once and only to Google. Weekly Google GBP before conversion, TY W37-W41: 598.75, 570.84, 597.17, 948.35, 706.34; LY W37-W41: 642.16, 731.97, 1347.97, 1150.32, 805.29. Meta spend is native AED, not converted. Meta daily rows sum exactly to the API period summaries (TY 19401.90, LY 29384.30). GAPS: Meta returned no row for 2025-10-07 (no delivery that day), so LY W41 carries 34 of 35 days of Meta. That is a genuine no-spend day, not a failed pull. All other 69 account-days in both ranges returned a row. Google returned all 35 days in both years. LY SPEND IS NOT A LIKE-FOR-LIKE BASE: a Meta burst ran 24 Sep to 2 Oct 2025 at roughly AED 1,500 to 2,250 a day against a AED 220 to 280 baseline, which is most of LY W39 and W40 and part of W41. The year on year spend fall is that burst ending, not a budget cut. SESSIONS: GA4 metric 'sessions', one ranged call per year with a daily breakdown, summed into weeks as instructed. Note this departs from the weekly suite's standing Dubai convention of deduplicated totalUsers, so these figures are not comparable with the Dubai ads and trends reports' user numbers. BRAND: Search Console impressions on https://www.hutong-dubai.com/, Brand Demand Index method (name-search impressions), server-side query filter includingRegex 'hutong|hu tong|huton|\u80e1\u540c'. Queries Google anonymises or holds below its reporting threshold are excluded, so brand is a floor rather than a complete total; that applies equally to both years. Local action rows were not pulled, per the brief, so the gap in Dubai's local actions since 13 Aug 2026 has not been turned into a zero anywhere."
+   }
+  },
+  "failures": []
+ },
+ "paris": {
+  "slug": "paris",
+  "ccy": "EUR",
+  "venues": {
+   "Aqua Kyoto Paris": {
+    "spend": {
+     "ty": {
+      "W37": 3297.04,
+      "W38": 3200.38,
+      "W39": 2682.81,
+      "W40": 2673.66,
+      "W41": 3223.01
+     },
+     "ly": {
+      "W37": 1879.59,
+      "W38": 1465.8,
+      "W39": 1224.43,
+      "W40": 1671.21,
+      "W41": 2318.43
+     }
+    },
+    "sessions": {
+     "ty": {
+      "W37": 6091,
+      "W38": 6442,
+      "W39": 5615,
+      "W40": 6850,
+      "W41": 5983
+     },
+     "ly": {
+      "W37": 15693,
+      "W38": 13607,
+      "W39": 9541,
+      "W40": 11853,
+      "W41": 29974
+     }
+    },
+    "brand": {
+     "ty": {
+      "W37": 4261,
+      "W38": 4249,
+      "W39": 3818,
+      "W40": 6629,
+      "W41": 4238
+     },
+     "ly": {
+      "W37": 4860,
+      "W38": 4138,
+      "W39": 3077,
+      "W40": 3397,
+      "W41": 10999
+     }
+    },
+    "notes": "Accounts: GA4 property 478459011; Meta act_1090963963133236 (returns as 'Aqua Kyoto - Paris'); Google Ads customer 3987846746 (no manager_id needed). CURRENCY: Google Ads cost is native EUR, no conversion applied. Meta spend is native EUR. Meta daily rows sum exactly to the API period summaries (TY 8040.42, LY 3811.23). GAPS, all in last year and all verified as genuine no-delivery days rather than failed pulls: Meta returned no row for 2025-09-28 (affects LY W39); Google returned no row for 2025-10-05 (affects LY W40) or for 2025-10-06, 2025-10-07 and 2025-10-08 (affects LY W41). The Google gap was re-queried with impressions and clicks selected and still returned no rows for those dates, so the account did not serve. LY W41 therefore carries 4 of 7 days of Google spend; the figure is what the account actually spent, not an estimate. Both 2026 ranges returned all 35 days on both platforms. SESSIONS: GA4 metric 'sessions', one ranged call per year with a daily breakdown, summed into weeks. OCTOBER 2025 IS A LAUNCH BURST, NOT AN ERROR: 8 to 12 Oct 2025 carried 26,357 sessions, which is 88% of LY W41's 29,974, peaking at 9,102 on 9 Oct. The same days carried 2,653 and 3,004 brand impressions. The large year on year falls in LY W41 sessions and brand are that burst dropping out. The property launched in late 2025, so LY W37 to W40 are early-life figures on a rising base and are not a stable comparison either. BRAND: Search Console impressions on https://aquakyoto.fr/, Brand Demand Index method (name-search impressions), server-side query filter includingRegex 'aqua|acqua|asua|auqa|awua|aquq', which is the aqua root plus the misspellings that actually appear in the data (asua kyoto, acqua kyoto, auqa kyoto, awua kyoto, aquq kyoto) and which also picks up the 'aqua tokyo' mishearing. Bare 'kyoto ...' queries with no aqua root were excluded as generic rather than name searches. LONDON INTENT ON THE .fr PROPERTY: I kept the Brand Demand Index method and did NOT exclude it, because it is negligible and symmetric. Across the whole 35-day window the .fr property served 38 brand-matching London-intent impressions in 2026 (29 of them 'aqua kyoto london', 0 clicks) and 45 in 2025, under 0.2% of brand impressions in either year. Excluding it would not move any weekly figure. Queries Google anonymises or holds below threshold are excluded, so brand is a floor, equally in both years. TY W40 brand is genuinely spiky: 1,762 impressions on 2 Oct 2026 and 1,246 on 3 Oct against a ~600 baseline. Paris has no Google local action rows in either year; local actions were not pulled, per the brief, and no zero has been introduced for them."
+   }
+  },
+  "failures": []
+ }
+}

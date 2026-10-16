@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua London booking pipeline, W37</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--ink:#111827;--mute:#6b7280;--line:#e5e7eb;--g:#15803d;--r:#b91c1c;--bg:#f9fafb;--blue:#2563eb}
+*{box-sizing:border-box}
+body{margin:0;padding:30px 20px 48px;background:#fff;color:var(--ink);
+ font:15px/1.55 'DM Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1040px;margin:0 auto}
+.kicker{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+h1{font-size:26px;font-weight:700;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--mute);font-size:13px;margin:0 0 16px}
+.bar{display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:0 0 22px}
+.nav{display:flex;gap:6px;flex-wrap:wrap;flex:1 1 auto}
+.nav a{font-size:13px;font-weight:600;color:var(--mute);text-decoration:none;padding:9px 14px;
+ border-bottom:2px solid transparent;margin-bottom:-1px}
+.nav a:hover{color:var(--ink)}
+.nav a.on{color:var(--ink);border-bottom-color:var(--blue)}
+.wk{display:flex;align-items:center;gap:8px;padding:0 0 8px}
+.wk label{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+.wk select{font-family:inherit;font-size:13px;font-weight:600;color:var(--ink);padding:7px 10px;
+ border:1px solid #cbd5e1;border-radius:8px;background:#fff;cursor:pointer}
+.wk select:hover{border-color:var(--blue)}
+.card{border:1px solid var(--line);border-radius:8px;padding:18px 20px;margin:0 0 18px}
+.card header{display:flex;flex-wrap:wrap;align-items:center;gap:16px;
+ border-bottom:1px solid var(--line);padding-bottom:13px;margin-bottom:14px}
+.vn{flex:1 1 180px}
+h2{font-size:17px;font-weight:650;margin:0}
+.ch{font-size:11px;color:var(--mute);margin:3px 0 0}
+.stats{display:flex;gap:22px;flex-wrap:wrap}
+.st{display:flex;align-items:baseline;gap:7px}
+.big{font:650 23px/1 'SF Mono',Menlo,Consolas,monospace;letter-spacing:-.02em}
+.lab{font-size:12px;color:var(--mute)}
+.chip{font-size:11.5px;font-weight:600;padding:2px 7px;border-radius:99px;background:var(--bg);white-space:nowrap}
+.chip.g{color:var(--g);background:#f0fdf4} .chip.r{color:var(--r);background:#fef2f2} .chip.m{color:var(--mute)}
+table.t{width:100%;border-collapse:collapse;margin:0 0 16px}
+table.t th{text-align:left;font-weight:500;font-size:13px;padding:7px 8px 7px 0;border-bottom:1px solid var(--line)}
+table.t tr:first-child th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+ color:var(--mute);border-bottom:none;padding-bottom:2px}
+table.t tr.sh th{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--mute)}
+td{padding:7px 0 7px 8px;border-bottom:1px solid var(--line);font-size:13.5px}
+.n{text-align:right;font-family:'SF Mono',Menlo,Consolas,monospace;font-variant-numeric:tabular-nums}
+th.n{font-family:inherit}
+.sep{border-left:1px solid var(--line);padding-left:14px!important}
+.ly{color:var(--mute)} .m{color:var(--mute)} .g{color:var(--g)} .r{color:var(--r)}
+tr.tot th,tr.tot td{font-weight:650;background:var(--bg);border-bottom:none}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.tile{background:var(--bg);border-radius:6px;padding:10px 12px}
+.tl{font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--mute);margin:0 0 5px;line-height:1.3}
+.tv{font:650 18px/1 'SF Mono',Menlo,Consolas,monospace;margin:0 0 5px}
+.tf{margin:0;font-size:11.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.iso{margin:5px 0 0;font-size:10.5px;line-height:1.35;color:var(--mute)}
+footer{margin-top:28px;color:var(--mute);font-size:11px;border-top:1px solid var(--line);padding-top:12px}
+footer a{color:var(--blue);text-decoration:none}
+@media(max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.tiles{grid-template-columns:1fr}body{padding:20px 14px 40px}
+ table.t{font-size:12px} .sep{padding-left:8px!important}}</style></head><body><div class="wrap">
+<p class="kicker">Booking pipeline &middot; ISO week 37</p>
+<h1>London</h1>
+<p class="sub">Created 7 to 13 September 2026 against 8 to 14 September 2025 &middot; snapshot 16 October 2026</p>
+<div class="bar"><nav class="nav"><a href="/pipeline/london/" class="on">London</a><a href="/pipeline/hk/">Hong Kong</a><a href="/pipeline/usa/">USA</a><a href="/pipeline/dubai/">Dubai</a><a href="/pipeline/paris/">Paris</a></nav><div class="wk"><label for="wsel">Week</label><select id="wsel" onchange="if(this.value)location.href=this.value"><option value="/pipeline/london/index.html">W41 · 5 to 11 Oct 2026 (latest)</option><option value="/pipeline/london/w2026-09-28.html">W40 · 28 Sep to 4 Oct 2026</option><option value="/pipeline/london/w2026-09-21.html">W39 · 21 to 27 Sep 2026</option><option value="/pipeline/london/w2026-09-14.html">W38 · 14 to 20 Sep 2026</option><option value="/pipeline/london/w2026-09-07.html" selected>W37 · 7 to 13 Sep 2026</option></select></div></div>
+<section class="card">
+<header><div class="vn"><h2>Aqua Shard</h2>
+<p class="ch">Website and Google Reserve</p></div>
+<div class="stats">
+<div class="st"><span class="big">849</span><span class="lab">bookings</span><span class="chip r">&minus;241</span></div>
+<div class="st"><span class="big">2,359</span><span class="lab">covers</span><span class="chip r">&minus;550</span></div>
+</div></header>
+<table class="t">
+<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
+<tr class="sh"><th>By the week they are for</th>
+<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
+<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
+<tr><th>This week, 7 to 13 Sep</th><td class="n">274</td><td class="n ly">386</td><td class="n r">&minus;112</td><td class="n sep">698</td><td class="n ly">981</td><td class="n r">&minus;283</td></tr><tr><th>Next week, 14 to 20 Sep</th><td class="n">158</td><td class="n ly">187</td><td class="n r">&minus;29</td><td class="n sep">427</td><td class="n ly">502</td><td class="n r">&minus;75</td></tr><tr><th>Beyond, 21 Sep onwards</th><td class="n">417</td><td class="n ly">517</td><td class="n r">&minus;100</td><td class="n sep">1,234</td><td class="n ly">1,426</td><td class="n r">&minus;192</td></tr><tr class="tot"><th>Total created</th><td class="n">849</td><td class="n ly">1,090</td><td class="n r">&minus;241</td><td class="n sep">2,359</td><td class="n ly">2,909</td><td class="n r">&minus;550</td></tr></table>
+<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">£3,738</p><p class="tf"><span class="ly">£2,725</span> <span class="chip r">+£1,013</span></p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">£4.40</p><p class="tf"><span class="ly">£2.50</span> <span class="chip r">+£1.90</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">30,469</p><p class="tf"><span class="ly">52,627</span> <span class="chip r">&minus;22,158</span></p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">2.44%</p><p class="tf"><span class="ly">1.92%</span> <span class="chip g">+0.52pp</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">9,123</p><p class="tf"><span class="ly">13,975</span> <span class="chip r">&minus;4,852</span></p><p class="iso">15pp worse than the estate</p></div></div>
+</section><section class="card">
+<header><div class="vn"><h2>Hutong</h2>
+<p class="ch">Website and Google Reserve</p></div>
+<div class="stats">
+<div class="st"><span class="big">706</span><span class="lab">bookings</span><span class="chip g">+41</span></div>
+<div class="st"><span class="big">1,896</span><span class="lab">covers</span><span class="chip g">+129</span></div>
+</div></header>
+<table class="t">
+<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
+<tr class="sh"><th>By the week they are for</th>
+<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
+<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
+<tr><th>This week, 7 to 13 Sep</th><td class="n">306</td><td class="n ly">262</td><td class="n g">+44</td><td class="n sep">781</td><td class="n ly">670</td><td class="n g">+111</td></tr><tr><th>Next week, 14 to 20 Sep</th><td class="n">134</td><td class="n ly">143</td><td class="n r">&minus;9</td><td class="n sep">367</td><td class="n ly">363</td><td class="n g">+4</td></tr><tr><th>Beyond, 21 Sep onwards</th><td class="n">266</td><td class="n ly">260</td><td class="n g">+6</td><td class="n sep">748</td><td class="n ly">734</td><td class="n g">+14</td></tr><tr class="tot"><th>Total created</th><td class="n">706</td><td class="n ly">665</td><td class="n g">+41</td><td class="n sep">1,896</td><td class="n ly">1,767</td><td class="n g">+129</td></tr></table>
+<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">£3,319</p><p class="tf"><span class="ly">£3,069</span> <span class="chip r">+£250</span></p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">£4.70</p><p class="tf"><span class="ly">£4.62</span> <span class="chip r">+£0.09</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">21,092</p><p class="tf"><span class="ly">32,565</span> <span class="chip r">&minus;11,473</span></p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">2.75%</p><p class="tf"><span class="ly">1.86%</span> <span class="chip g">+0.89pp</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">7,463</p><p class="tf"><span class="ly">8,801</span> <span class="chip r">&minus;1,338</span></p><p class="iso">9pp better than the estate</p></div></div>
+</section><section class="card">
+<header><div class="vn"><h2>DSL</h2>
+<p class="ch">Website, Google Reserve and OpenTable</p></div>
+<div class="stats">
+<div class="st"><span class="big">572</span><span class="lab">bookings</span><span class="chip m">n/c</span></div>
+<div class="st"><span class="big">1,561</span><span class="lab">covers</span><span class="chip m">n/c</span></div>
+</div></header>
+<table class="t">
+<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
+<tr class="sh"><th>By the week they are for</th>
+<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
+<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
+<tr><th>This week, 7 to 13 Sep</th><td class="n">345</td><td class="n ly">53</td><td class="n m">n/c</td><td class="n sep">946</td><td class="n ly">169</td><td class="n m">n/c</td></tr><tr><th>Next week, 14 to 20 Sep</th><td class="n">95</td><td class="n ly">26</td><td class="n m">n/c</td><td class="n sep">278</td><td class="n ly">76</td><td class="n m">n/c</td></tr><tr><th>Beyond, 21 Sep onwards</th><td class="n">132</td><td class="n ly">5</td><td class="n m">n/c</td><td class="n sep">337</td><td class="n ly">19</td><td class="n m">n/c</td></tr><tr class="tot"><th>Total created</th><td class="n">572</td><td class="n ly">84</td><td class="n m">n/c</td><td class="n sep">1,561</td><td class="n ly">264</td><td class="n m">n/c</td></tr></table>
+<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">£2,387</p><p class="tf"><span class="ly">n/c</span> <span class="chip m">n/c</span></p><p class="iso">brand launched 2026, 2025 is the pre-rebrand site</p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">£5.72</p><p class="tf"><span class="ly">n/c</span> <span class="chip m">n/c</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">6,137</p><p class="tf"><span class="ly">4,753</span> <span class="chip m">n/c</span></p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">6.18%</p><p class="tf"><span class="ly">1.26%</span> <span class="chip m">n/c</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">4,186</p><p class="tf"><span class="ly">3,522</span> <span class="chip m">n/c</span></p><p class="iso">2025 is the pre-rebrand Luci name, not this one</p></div></div>
+</section><section class="card">
+<header><div class="vn"><h2>Regent St</h2>
+<p class="ch">Website, Google Reserve and OpenTable</p></div>
+<div class="stats">
+<div class="st"><span class="big">251</span><span class="lab">bookings</span><span class="chip g">+65</span></div>
+<div class="st"><span class="big">710</span><span class="lab">covers</span><span class="chip g">+226</span></div>
+</div></header>
+<table class="t">
+<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
+<tr class="sh"><th>By the week they are for</th>
+<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
+<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
+<tr><th>This week, 7 to 13 Sep</th><td class="n">166</td><td class="n ly">99</td><td class="n g">+67</td><td class="n sep">433</td><td class="n ly">242</td><td class="n g">+191</td></tr><tr><th>Next week, 14 to 20 Sep</th><td class="n">35</td><td class="n ly">49</td><td class="n r">&minus;14</td><td class="n sep">104</td><td class="n ly">121</td><td class="n r">&minus;17</td></tr><tr><th>Beyond, 21 Sep onwards</th><td class="n">50</td><td class="n ly">38</td><td class="n g">+12</td><td class="n sep">173</td><td class="n ly">121</td><td class="n g">+52</td></tr><tr class="tot"><th>Total created</th><td class="n">251</td><td class="n ly">186</td><td class="n g">+65</td><td class="n sep">710</td><td class="n ly">484</td><td class="n g">+226</td></tr></table>
+<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">£1,944</p><p class="tf"><span class="ly">£1,542</span> <span class="chip r">+£402</span></p><p class="iso">Google stepped down mid week, 10 Sep</p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">£9.53</p><p class="tf"><span class="ly">£9.13</span> <span class="chip r">+£0.40</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">5,756</p><p class="tf"><span class="ly">12,834</span> <span class="chip r">&minus;7,078</span></p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">3.32%</p><p class="tf"><span class="ly">1.09%</span> <span class="chip g">+2.23pp</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">7,858</p><p class="tf"><span class="ly">10,823</span> <span class="chip r">&minus;2,965</span></p><p class="iso">7pp worse than the estate</p></div></div>
+</section><section class="card">
+<header><div class="vn"><h2>Shiro Sushi</h2>
+<p class="ch">Website, Google Reserve and OpenTable</p></div>
+<div class="stats">
+<div class="st"><span class="big">127</span><span class="lab">bookings</span><span class="chip g">+14</span></div>
+<div class="st"><span class="big">355</span><span class="lab">covers</span><span class="chip g">+88</span></div>
+</div></header>
+<table class="t">
+<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
+<tr class="sh"><th>By the week they are for</th>
+<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
+<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
+<tr><th>This week, 7 to 13 Sep</th><td class="n">89</td><td class="n ly">65</td><td class="n g">+24</td><td class="n sep">229</td><td class="n ly">144</td><td class="n g">+85</td></tr><tr><th>Next week, 14 to 20 Sep</th><td class="n">22</td><td class="n ly">33</td><td class="n r">&minus;11</td><td class="n sep">70</td><td class="n ly">78</td><td class="n r">&minus;8</td></tr><tr><th>Beyond, 21 Sep onwards</th><td class="n">16</td><td class="n ly">15</td><td class="n g">+1</td><td class="n sep">56</td><td class="n ly">45</td><td class="n g">+11</td></tr><tr class="tot"><th>Total created</th><td class="n">127</td><td class="n ly">113</td><td class="n g">+14</td><td class="n sep">355</td><td class="n ly">267</td><td class="n g">+88</td></tr></table>
+<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">£949</p><p class="tf"><span class="ly">£661</span> <span class="chip r">+£287</span></p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">£9.99</p><p class="tf"><span class="ly">£6.18</span> <span class="chip r">+£3.81</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">1,486</p><p class="tf"><span class="ly">2,291</span> <span class="chip r">&minus;805</span></p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">4.85%</p><p class="tf"><span class="ly">3.19%</span> <span class="chip g">+1.66pp</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">1,914</p><p class="tf"><span class="ly">2,422</span> <span class="chip r">&minus;508</span></p><p class="iso">in line with the estate</p></div></div>
+</section><section class="card">
+<header><div class="vn"><h2>Azzurra</h2>
+<p class="ch">Website, Google Reserve and OpenTable</p></div>
+<div class="stats">
+<div class="st"><span class="big">107</span><span class="lab">bookings</span><span class="chip g">+28</span></div>
+<div class="st"><span class="big">300</span><span class="lab">covers</span><span class="chip g">+87</span></div>
+</div></header>
+<table class="t">
+<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
+<tr class="sh"><th>By the week they are for</th>
+<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
+<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
+<tr><th>This week, 7 to 13 Sep</th><td class="n">72</td><td class="n ly">60</td><td class="n g">+12</td><td class="n sep">196</td><td class="n ly">159</td><td class="n g">+37</td></tr><tr><th>Next week, 14 to 20 Sep</th><td class="n">20</td><td class="n ly">12</td><td class="n g">+8</td><td class="n sep">55</td><td class="n ly">36</td><td class="n g">+19</td></tr><tr><th>Beyond, 21 Sep onwards</th><td class="n">15</td><td class="n ly">7</td><td class="n g">+8</td><td class="n sep">49</td><td class="n ly">18</td><td class="n g">+31</td></tr><tr class="tot"><th>Total created</th><td class="n">107</td><td class="n ly">79</td><td class="n g">+28</td><td class="n sep">300</td><td class="n ly">213</td><td class="n g">+87</td></tr></table>
+<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">£1,444</p><p class="tf"><span class="ly">£1,029</span> <span class="chip r">+£414</span></p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">£18.99</p><p class="tf"><span class="ly">£14.49</span> <span class="chip r">+£4.50</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">2,097</p><p class="tf"><span class="ly">2,064</span> <span class="chip g">+33</span></p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">3.00%</p><p class="tf"><span class="ly">2.52%</span> <span class="chip g">+0.48pp</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">1,332</p><p class="tf"><span class="ly">1,650</span> <span class="chip r">&minus;318</span></p><p class="iso">in line with the estate</p></div></div>
+</section>
+<footer>Bookings created, confirmed reservations, counted by the date the booking was made. Each
+venue&rsquo;s channels are named under its name. Last year is the 364 day offset so weekdays match.
+Bookings for a date before the created week are left out and counted as late records. Snapshot
+16 October 2026. <a href="/pipeline/">All markets</a> &middot;
+<a href="/london/">London report suite</a></footer>
+</div></body></html>
