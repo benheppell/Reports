@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aqua Paris booking pipeline, W41</title>
+<title>Aqua Paris booking pipeline</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>:root{--ink:#111827;--mute:#6b7280;--line:#e5e7eb;--g:#15803d;--r:#b91c1c;--bg:#f9fafb;--blue:#2563eb}
@@ -52,33 +52,199 @@ tr.tot th,tr.tot td{font-weight:650;background:var(--bg);border-bottom:none}
 .tv{font:650 18px/1 'SF Mono',Menlo,Consolas,monospace;margin:0 0 5px}
 .tf{margin:0;font-size:11.5px;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
 .iso{margin:5px 0 0;font-size:10.5px;line-height:1.35;color:var(--mute)}
+.msg{border:1px solid var(--line);border-left:3px solid #d97706;background:#fffbeb;border-radius:0 6px 6px 0;
+ padding:14px 16px;font-size:13.5px;line-height:1.6}
 footer{margin-top:28px;color:var(--mute);font-size:11px;border-top:1px solid var(--line);padding-top:12px}
 footer a{color:var(--blue);text-decoration:none}
 @media(max-width:860px){.tiles{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.tiles{grid-template-columns:1fr}body{padding:20px 14px 40px}
  table.t{font-size:12px} .sep{padding-left:8px!important}}</style></head><body><div class="wrap">
-<p class="kicker">Booking pipeline &middot; ISO week 41</p>
+<p class="kicker" id="kicker">Booking pipeline</p>
 <h1>Paris</h1>
-<p class="sub">Created 5 to 11 October 2026 against 6 to 12 October 2025 &middot; snapshot 16 October 2026</p>
-<div class="bar"><nav class="nav"><a href="/pipeline/london/">London</a><a href="/pipeline/hk/">Hong Kong</a><a href="/pipeline/usa/">USA</a><a href="/pipeline/dubai/">Dubai</a><a href="/pipeline/paris/" class="on">Paris</a></nav><div class="wk"><label for="wsel">Week</label><select id="wsel" onchange="if(this.value)location.href=this.value"><option value="/pipeline/paris/index.html" selected>W41 · 5 to 11 Oct 2026 (latest)</option><option value="/pipeline/paris/w2026-09-28.html">W40 · 28 Sep to 4 Oct 2026</option><option value="/pipeline/paris/w2026-09-21.html">W39 · 21 to 27 Sep 2026</option><option value="/pipeline/paris/w2026-09-14.html">W38 · 14 to 20 Sep 2026</option><option value="/pipeline/paris/w2026-09-07.html">W37 · 7 to 13 Sep 2026</option></select></div></div>
-<section class="card">
-<header><div class="vn"><h2>Aqua Kyoto Paris</h2>
-<p class="ch">Website and Google Reserve</p></div>
-<div class="stats">
-<div class="st"><span class="big">282</span><span class="lab">bookings</span><span class="chip g">+47</span></div>
-<div class="st"><span class="big">693</span><span class="lab">covers</span><span class="chip g">+100</span></div>
-</div></header>
-<table class="t">
-<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>
-<tr class="sh"><th>By the week they are for</th>
-<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>
-<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>
-<tr><th>This week, 5 to 11 Oct</th><td class="n">218</td><td class="n ly">145</td><td class="n g">+73</td><td class="n sep">531</td><td class="n ly">352</td><td class="n g">+179</td></tr><tr><th>Next week, 12 to 18 Oct</th><td class="n">30</td><td class="n ly">60</td><td class="n r">&minus;30</td><td class="n sep">72</td><td class="n ly">158</td><td class="n r">&minus;86</td></tr><tr><th>Beyond, 19 Oct onwards</th><td class="n">34</td><td class="n ly">30</td><td class="n g">+4</td><td class="n sep">90</td><td class="n ly">83</td><td class="n g">+7</td></tr><tr class="tot"><th>Total created</th><td class="n">282</td><td class="n ly">235</td><td class="n g">+47</td><td class="n sep">693</td><td class="n ly">593</td><td class="n g">+100</td></tr></table>
-<div class="tiles"><div class="tile"><p class="tl">Digital spend</p><p class="tv">€3,223</p><p class="tf"><span class="ly">€2,318</span> <span class="chip r">+€905</span></p></div><div class="tile"><p class="tl">Blended CPA</p><p class="tv">€11.43</p><p class="tf"><span class="ly">€9.87</span> <span class="chip r">+€1.56</span></p></div><div class="tile"><p class="tl">Sessions</p><p class="tv">5,983</p><p class="tf"><span class="ly">29,974</span> <span class="chip r">&minus;23,991</span></p><p class="iso">2025 was the launch burst, 8 to 12 Oct</p></div><div class="tile"><p class="tl">Website conv rate</p><p class="tv">3.61%</p><p class="tf"><span class="ly">0.63%</span> <span class="chip g">+2.98pp</span></p></div><div class="tile"><p class="tl">Brand searches</p><p class="tv">4,238</p><p class="tf"><span class="ly">10,999</span> <span class="chip r">&minus;6,761</span></p><p class="iso">2025 was the launch burst</p></div></div>
-</section>
+<p class="sub" id="sub">Loading</p>
+<div class="bar"><nav class="nav"><a href="/pipeline/london/">London</a><a href="/pipeline/hk/">Hong Kong</a><a href="/pipeline/usa/">USA</a><a href="/pipeline/dubai/">Dubai</a><a href="/pipeline/paris/" class="on">Paris</a></nav>
+<div class="wk"><label for="wsel">Week</label><select id="wsel"></select></div></div>
+<div id="cards"><div class="msg">Loading the figures.</div></div>
 <footer>Bookings created, confirmed reservations, counted by the date the booking was made. Each
 venue&rsquo;s channels are named under its name. Last year is the 364 day offset so weekdays match.
-Bookings for a date before the created week are left out and counted as late records. Snapshot
-16 October 2026. <a href="/pipeline/">All markets</a> &middot;
-<a href="/paris/">Paris report suite</a></footer>
-</div></body></html>
+Bookings for a date before the created week are left out and counted as late records. This page
+reads the database directly, so it is current as at the morning run.
+<a href="/pipeline/">All markets</a> &middot; <a href="/paris/">Paris report suite</a></footer>
+</div>
+<script>
+const SLUG = "paris", MARKET = "Paris", CCY = "€";
+const CHLABEL = {"wg":"Website and Google Reserve",
+                 "wg+ot":"Website, Google Reserve and OpenTable",
+                 "wg+ot+rs":"Website, Google Reserve, OpenTable and Resy"};
+const MONTH = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const SHORT = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const N = n => Number(n).toLocaleString("en-GB");
+const D = s => { const [y,m,d] = s.split("-").map(Number); return new Date(Date.UTC(y, m-1, d)); };
+const plus = (dt,n) => new Date(dt.getTime() + n*86400000);
+const longRange = (a,b) => a.getUTCMonth()===b.getUTCMonth()
+  ? `${a.getUTCDate()} to ${b.getUTCDate()} ${MONTH[b.getUTCMonth()]} ${b.getUTCFullYear()}`
+  : `${a.getUTCDate()} ${MONTH[a.getUTCMonth()]} to ${b.getUTCDate()} ${MONTH[b.getUTCMonth()]} ${b.getUTCFullYear()}`;
+const shortRange = (a,b) => a.getUTCMonth()===b.getUTCMonth()
+  ? `${a.getUTCDate()} to ${b.getUTCDate()} ${SHORT[b.getUTCMonth()]}`
+  : `${a.getUTCDate()} ${SHORT[a.getUTCMonth()]} to ${b.getUTCDate()} ${SHORT[b.getUTCMonth()]}`;
+
+// Returns [lyText, chgText, cssClass]. Both sides missing gives two empty strings, so the tile
+// shows the value alone. Never renders a delta for a venue flagged not comparable.
+function delta(ty, ly, o) {
+  o = o || {};
+  const dp = o.dp === undefined ? 0 : o.dp;
+  const fmt = v => v === null || v === undefined ? "n/a"
+    : o.money ? CCY + Number(v).toLocaleString("en-GB",{minimumFractionDigits:dp,maximumFractionDigits:dp})
+    : o.pp ? Number(v).toFixed(2) + "%" : N(v);
+  if ((ty === null || ty === undefined) && (ly === null || ly === undefined)) return ["","","m"];
+  if (ly === null || ly === undefined) return ["n/c","n/c","m"];
+  if (o.nc) return [fmt(ly),"n/c","m"];
+  if (ty === null || ty === undefined) return [fmt(ly),"n/a","m"];
+  if (Number(ly) === 0) return [fmt(ly), Number(ty) > 0 ? "new" : "", Number(ty) > 0 ? "g" : "m"];
+  const x = Number(ty) - Number(ly);
+  const good = o.inv ? x < 0 : x > 0;
+  let s;
+  if (o.pp) s = (x >= 0 ? "+" : "−") + Math.abs(x).toFixed(2) + "pp";
+  else if (o.money) s = (x >= 0 ? "+" : "−") + CCY + Math.abs(x).toLocaleString("en-GB",{minimumFractionDigits:dp,maximumFractionDigits:dp});
+  else s = (x >= 0 ? "+" : "−") + N(Math.abs(x));
+  return [fmt(ly), s, x === 0 ? "m" : (good ? "g" : "r")];
+}
+
+function tile(label, value, ly, chg, cls, sub) {
+  const foot = (ly || chg)
+    ? `<p class="tf"><span class="ly">${esc(ly)}</span> <span class="chip ${cls}">${chg}</span></p>` : "";
+  return `<div class="tile"><p class="tl">${esc(label)}</p><p class="tv">${value}</p>${foot}`
+    + (sub ? `<p class="iso">${esc(sub)}</p>` : "") + `</div>`;
+}
+
+// Brand Demand Index isolation: each venue against the median of the OTHER venues.
+function brandLabels(rows) {
+  const ok = rows.filter(r => !r.not_comparable && r.brand_ty !== null && r.brand_ly);
+  if (ok.length < 3) return {};
+  const chg = {};
+  ok.forEach(r => { chg[r.venue] = (r.brand_ty - r.brand_ly) / r.brand_ly * 100; });
+  const med = a => { const s = a.slice().sort((x,y)=>x-y), h = s.length>>1;
+    return s.length % 2 ? s[h] : (s[h-1]+s[h])/2; };
+  const out = {};
+  Object.keys(chg).forEach(name => {
+    const others = Object.keys(chg).filter(n => n !== name).map(n => chg[n]);
+    const iso = chg[name] - med(others);
+    out[name] = Math.abs(iso) < 5 ? "in line with the estate"
+      : `${Math.abs(iso).toFixed(0)}pp ${iso > 0 ? "better" : "worse"} than the estate`;
+  });
+  return out;
+}
+
+function card(r, labels) {
+  const nc = !!r.not_comparable, nt = r.notes || {};
+  const mon = D(r.monday);
+  const wins = [
+    ["This week, " + shortRange(mon, plus(mon,6)), r.b1_ty, r.b1_ly, r.c1_ty, r.c1_ly],
+    ["Next week, " + shortRange(plus(mon,7), plus(mon,13)), r.b2_ty, r.b2_ly, r.c2_ty, r.c2_ly],
+    ["Beyond, " + plus(mon,14).getUTCDate() + " " + SHORT[plus(mon,14).getUTCMonth()] + " onwards",
+      r.b3_ty, r.b3_ly, r.c3_ty, r.c3_ly]];
+  const sum = (...v) => v.every(x => x === null || x === undefined) ? null
+    : v.reduce((a,b) => a + (b || 0), 0);
+  const anyNull = v => v.some(x => x === null || x === undefined);
+  const tB_ty = sum(r.b1_ty, r.b2_ty, r.b3_ty), tC_ty = sum(r.c1_ty, r.c2_ty, r.c3_ty);
+  const tB_ly = anyNull([r.b1_ly,r.b2_ly,r.b3_ly]) ? null : r.b1_ly + r.b2_ly + r.b3_ly;
+  const tC_ly = anyNull([r.c1_ly,r.c2_ly,r.c3_ly]) ? null : r.c1_ly + r.c2_ly + r.c3_ly;
+  wins.push(["Total created", tB_ty, tB_ly, tC_ty, tC_ly]);
+
+  let rows = "";
+  wins.forEach((w, i) => {
+    const [bl, bc, bk] = delta(w[1], w[2], {nc});
+    const [cl, cc, ck] = delta(w[3], w[4], {nc});
+    rows += `<tr${i===3 ? ' class="tot"' : ''}><th>${esc(w[0])}</th>`
+      + `<td class="n">${N(w[1])}</td><td class="n ly">${bl}</td><td class="n ${bk}">${bc}</td>`
+      + `<td class="n sep">${N(w[3])}</td><td class="n ly">${cl}</td><td class="n ${ck}">${cc}</td></tr>`;
+  });
+
+  const [, hb, kb] = delta(tB_ty, tB_ly, {nc});
+  const [, hc, kc] = delta(tC_ty, tC_ly, {nc});
+
+  const cpa_ty = r.spend_ty !== null && r.wgb_ty ? r.spend_ty / r.wgb_ty : null;
+  const cpa_ly = r.spend_ly !== null && r.wgb_ly ? r.spend_ly / r.wgb_ly : null;
+  const cv_ty = r.web_ty !== null && r.sess_ty ? 100 * r.web_ty / r.sess_ty : null;
+  const cv_ly = r.web_ly !== null && r.sess_ly ? 100 * r.web_ly / r.sess_ly : null;
+  const money = v => v === null ? "n/a"
+    : CCY + Number(v).toLocaleString("en-GB",{minimumFractionDigits:0,maximumFractionDigits:0});
+  const money2 = v => v === null ? "n/a"
+    : CCY + Number(v).toLocaleString("en-GB",{minimumFractionDigits:2,maximumFractionDigits:2});
+
+  let tiles = "";
+  let d = delta(r.spend_ty, r.spend_ly, {inv:true, money:true, nc, dp:0});
+  tiles += tile("Digital spend", money(r.spend_ty), d[0], d[1], d[2], nt.spend);
+  d = delta(cpa_ty, cpa_ly, {inv:true, money:true, nc, dp:2});
+  tiles += tile("Blended CPA", money2(cpa_ty), d[0], d[1], d[2], nt.cpa);
+  d = delta(r.sess_ty, r.sess_ly, {nc});
+  tiles += tile("Sessions", r.sess_ty === null ? "n/a" : N(r.sess_ty), d[0], d[1], d[2], nt.sessions);
+  d = delta(cv_ty, cv_ly, {pp:true, nc});
+  tiles += tile("Website conv rate", cv_ty === null ? "n/a" : cv_ty.toFixed(2) + "%", d[0], d[1], d[2], nt.conv);
+  d = delta(r.brand_ty, r.brand_ly, {nc});
+  tiles += tile("Brand searches", r.brand_ty === null ? "n/a" : N(r.brand_ty), d[0], d[1], d[2],
+                nt.brand || labels[r.venue]);
+
+  return `<section class="card"><header><div class="vn"><h2>${esc(r.venue)}</h2>`
+    + `<p class="ch">${esc(CHLABEL[r.channels] || r.channels)}</p></div><div class="stats">`
+    + `<div class="st"><span class="big">${N(tB_ty)}</span><span class="lab">bookings</span><span class="chip ${kb}">${hb}</span></div>`
+    + `<div class="st"><span class="big">${N(tC_ty)}</span><span class="lab">covers</span><span class="chip ${kc}">${hc}</span></div>`
+    + `</div></header><table class="t">`
+    + `<tr><th></th><th class="n" colspan="3">Bookings</th><th class="n sep" colspan="3">Covers</th></tr>`
+    + `<tr class="sh"><th>By the week they are for</th>`
+    + `<th class="n">2026</th><th class="n">2025</th><th class="n">Chg</th>`
+    + `<th class="n sep">2026</th><th class="n">2025</th><th class="n">Chg</th></tr>`
+    + rows + `</table><div class="tiles">${tiles}</div></section>`;
+}
+
+let PAYLOAD = null;
+
+function render(weekKey) {
+  const wk = PAYLOAD.weeks.find(w => w.key === weekKey) || PAYLOAD.weeks[0];
+  const rows = PAYLOAD.rows.filter(r => r.week_key === wk.key)
+                           .sort((a,b) => a.venue_order - b.venue_order);
+  const mon = D(wk.monday), lymon = D(wk.ly_monday);
+  document.getElementById("kicker").textContent = "Booking pipeline · ISO week " + wk.key.slice(1);
+  const asof = PAYLOAD.updated
+    ? new Date(PAYLOAD.updated).toLocaleDateString("en-GB", {day:"numeric", month:"long", year:"numeric"})
+    : "unknown";
+  document.getElementById("sub").textContent =
+    "Created " + longRange(mon, plus(mon,6)) + " against " + longRange(lymon, plus(lymon,6))
+    + " · data as at " + asof;
+  const sel = document.getElementById("wsel");
+  sel.innerHTML = PAYLOAD.weeks.map((w, i) => {
+    const m = D(w.monday);
+    return `<option value="${w.key}"${w.key===wk.key?" selected":""}>${w.key} · `
+      + `${shortRange(m, plus(m,6))} ${m.getUTCFullYear()}${i===0?" (latest)":""}</option>`;
+  }).join("");
+  const labels = brandLabels(rows);
+  document.getElementById("cards").innerHTML = rows.length
+    ? rows.map(r => card(r, labels)).join("")
+    : `<div class="msg">No venues for ${esc(wk.key)}.</div>`;
+}
+
+async function boot() {
+  const cards = document.getElementById("cards");
+  try {
+    const res = await fetch("/.netlify/functions/booking-pipeline?m=" + SLUG, {cache: "no-store"});
+    const p = await res.json();
+    if (!res.ok || p.error) throw new Error(p.error || ("HTTP " + res.status));
+    if (!p.rows.length) {
+      cards.innerHTML = `<div class="msg"><strong>No data yet.</strong> The morning run has not written
+        ${esc(MARKET)} figures to the database. Nothing is wrong with the page.</div>`;
+      document.getElementById("sub").textContent = "Waiting for the first data load";
+      return;
+    }
+    PAYLOAD = p;
+    render(p.weeks[0].key);
+    document.getElementById("wsel").addEventListener("change", e => render(e.target.value));
+  } catch (e) {
+    cards.innerHTML = `<div class="msg"><strong>Could not load the figures.</strong> `
+      + esc(String(e.message || e)) + `</div>`;
+    document.getElementById("sub").textContent = "Data unavailable";
+  }
+}
+boot();
+</script></body></html>
