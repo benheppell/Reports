@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua Hong Kong — Venue Deep Dive — 12–18 Oct 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;line-height:1.5;padding:28px;max-width:1240px;margin:0 auto}
+h1{font-size:24px;font-weight:700;letter-spacing:-.3px}
+.sub{color:#64748b;font-size:13px;margin-top:4px}
+.num{font-family:'JetBrains Mono',monospace;font-variant-numeric:tabular-nums}
+.badge{display:inline-block;padding:3px 10px;border-radius:999px;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;background:#fef2f2;color:#dc2626;margin-left:8px;vertical-align:middle}
+.tabs{display:flex;gap:4px;margin:20px 0 0;border-bottom:2px solid #e2e8f0}
+.tab{padding:9px 18px;font-size:13px;font-weight:600;color:#64748b;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-2px}
+.tab.on{color:#2563eb;border-bottom-color:#2563eb}
+.pane{display:none} .pane.on{display:block}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px;background:#fafafa}
+.card .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#64748b;font-weight:600}
+.card .big{font-size:26px;font-weight:700;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.card .meta{font-size:12px;color:#475569;margin-top:6px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th:nth-child(2),td:nth-child(2){text-align:left}
+thead th{font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:#64748b;border-bottom:2px solid #e2e8f0}
+tbody tr:hover{background:#f8fafc}
+tr.total{font-weight:700;background:#f1f5f9} tr.total td{border-top:2px solid #cbd5e1}
+.pos{color:#16a34a;font-weight:600} .neg{color:#dc2626;font-weight:600} .mut{color:#94a3b8;font-weight:400}
+.sec{margin-top:26px;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.sec h2{font-size:14px;padding:11px 14px;color:#fff;font-weight:600}
+.sec .body{padding:6px 14px 14px}
+.blue h2{background:#2563eb} .green h2{background:#16a34a} .amber h2{background:#d97706}
+.obs{background:#f8fafc;border-left:3px solid #94a3b8;padding:10px 14px;margin:12px 14px 2px;border-radius:0 8px 8px 0;font-size:13px}
+.obs b{display:block;margin-bottom:4px;font-size:12px;text-transform:uppercase;letter-spacing:.4px;color:#475569}
+.obs ul{margin-left:16px} .obs li{margin:3px 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+.chart{border:1px solid #e2e8f0;border-radius:12px;padding:14px;height:280px}
+.chart h3{font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:#64748b;margin-bottom:8px}
+footer{margin-top:30px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+@media(max-width:900px){.cards,.grid2{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<div><a class="back" href="../index.html">← All reports</a>
+<h1 style="margin-top:8px">Aqua Hong Kong — Venue Deep Dive<span class="badge">GA4 BOOKING TAG BROKE 16 OCT</span></h1>
+<div class="sub">12–18 Oct 2026 (Mon–Sun) · Currency HKD · Aqua HK, Cantina · WoW vs 5–11 Oct 2026 · YoY vs 13–19 Oct 2025</div></div>
+
+<div class="tabs"><div class="tab on" data-t="p">Performance</div><div class="tab" data-t="t">Weekly Trends</div></div>
+
+<div class="pane on" id="p">
+<div class="cards">
+<div class="card"><div class="lab">Combined Bookings</div><div class="big">176</div>
+<div class="meta">Target 319 · -44.8% · WoW <span class="neg num">▼ 31.5%</span></div></div>
+<div class="card"><div class="lab">Combined Ad Spend</div><div class="big">HK$22,693</div>
+<div class="meta">Cost per booking HK$128.94 · Meta HK$10,197 + Google HK$12,496</div></div>
+<div class="card"><div class="lab">Combined Users</div><div class="big">4,262</div>
+<div class="meta">Blended user CVR 4.13%</div></div>
+<div class="card"><div class="lab">YoY Bookings</div><div class="big">-36.2%</div>
+<div class="meta">176 vs 276 same week last year</div></div>
+</div>
+
+<div class="sec blue"><h2>Meta Ads</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Schedules</th><th>Cost/Sched</th><th>WoW Sched</th></tr></thead>
+<tbody><tr><td>Aqua HK</td><td class="num">HK$7,431</td><td class="num">6</td><td class="num neg">HK$1,238.50</td><td><span class="neg num">▼ 68.4%</span></td></tr><tr><td>Cantina</td><td class="num">HK$2,766</td><td class="num">1</td><td class="num neg">HK$2,766.03</td><td><span class="neg num">▼ 85.7%</span></td></tr><tr class="total"><td>Total</td><td class="num">HK$10,197</td><td class="num">7</td><td class="num">HK$1,456.72</td><td><span class="neg num">▼ 73.1%</span></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua HK spent HK$7,431 on Meta and Meta recorded 6 schedules, about HK$1,239 each, against 19 schedules on HK$9,478 the week before. Do not read that as a CPA move. The Meta Schedule conversion fires from the same website confirmation page as the GA4 booking event, and both stopped recording properly from 15 to 16 October.</li><li>Cantina spent HK$2,766 and Meta recorded 1 schedule, against 7 the week before. Cantina is the clearest case of the break: GA4 recorded zero bookings there on 16, 17 and 18 October while SevenRooms took seven website bookings a day.</li><li>Across the eight Hong Kong accounts Meta recorded 25 schedules this week against 91 the week before, and The Chinese Library, Shiro and Vesu returned no Schedule rows at all. The Canton Library, on the newer property, went the other way, 11 to 13. Treat Meta bookings and Meta CPA for this week as unusable.</li></ul></div></div>
+
+<div class="sec green"><h2>Google Ads</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Spend</th><th>Conversions</th><th>Cost/Conv</th><th>WoW Conv</th></tr></thead>
+<tbody><tr><td>Aqua HK</td><td class="num">HK$8,744</td><td class="num">48</td><td class="num ">HK$182.20</td><td><span class="neg num">▼ 6.1%</span></td></tr><tr><td>Cantina</td><td class="num">HK$3,752</td><td class="num">7</td><td class="num neg">HK$536.02</td><td><span class="neg num">▼ 12.5%</span></td></tr><tr class="total"><td>Total</td><td class="num">HK$12,496</td><td class="num">55</td><td class="num">HK$227.24</td><td><span class="neg num">▼ 7.0%</span></td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua HK Google ran HK$8,744 for about 48 booking conversions at roughly HK$182 CPA, against 51 conversions on HK$8,084 the week before. Google Ads records conversions against the click date and uses its own tag, so this is the one booking signal that held, and it says Aqua demand was flat.</li><li>Cantina Google delivered about 7 conversions on HK$3,752 at roughly HK$536 CPA, against 8 on HK$3,712. Volume held even though Cantina GA4 went to zero for three days, which is the same message.</li><li>Brand search carried the volume at both venues, 23 of 48 conversions at Aqua HK and 3 of 7 at Cantina. Read these as existing name demand rather than new reach.</li></ul></div></div>
+
+<div class="sec amber"><h2>GA4 Website</h2><div class="body">
+<table><thead><tr><th>Venue</th><th>Sessions</th><th>Users</th><th>Avg Sess Dur</th><th>Bounce Rate</th><th>Bookings</th><th>User CVR</th><th>Sess CVR</th></tr></thead>
+<tbody><tr><td>Aqua HK</td><td class="num">4,546</td><td class="num">3,360</td><td class="num">12:07</td><td class="num ">29.3%</td><td class="num neg">159</td><td class="num ">4.73%</td><td class="num">3.50%</td></tr><tr><td>Cantina</td><td class="num">1,144</td><td class="num">902</td><td class="num">10:48</td><td class="num ">32.3%</td><td class="num neg">17</td><td class="num neg">1.88%</td><td class="num">1.49%</td></tr><tr class="total"><td>Total</td><td class="num">5,690</td><td class="num">4,262</td><td class="num">—</td><td class="num">—</td><td class="num">176</td><td class="num">4.13%</td><td class="num">3.09%</td></tr></tbody></table></div>
+<div class="obs"><b>Observations</b><ul><li>Aqua HK users fell 8.2 percent week on week to 3,360 and are 23.1 percent below last year. Create-path bookings of 159 are 15.9 percent below last year on the same basis and 36.9 percent under the weekly target. Daily bookings ran 36, 31, 27 and 28 to 15 October and then 10, 19 and 14, while SevenRooms website bookings held at 113, 106 and 92 on those three days. The fall is in the measurement.</li><li>Cantina users fell 44.5 percent week on week to 902, the lowest of the eight weeks, and paid social sessions dropped from 596 to 69, so there is a real traffic fall here as well as a tag break. Bookings of 17 cannot be read at all: three of the seven days recorded nothing.</li><li>Average session duration is the giveaway. Aqua HK ran 205, 190, 219 and 357 seconds on 12 to 15 October and then 2,408, 513 and 1,748 seconds on 16 to 18 October. Every Hong Kong venue except The Canton Library shows the same jump, so the change is in the tagging, not in guest behaviour.</li></ul></div></div>
+</div>
+
+<div class="pane" id="t">
+<p class="sub" style="margin-top:18px">8-week trend (W30 to W37) across GA4 bookings, user conversion rate, and users.</p>
+<div class="grid2">
+<div class="chart"><h3>GA4 Bookings (weekly)</h3><canvas id="c1"></canvas></div>
+<div class="chart"><h3>User Conversion Rate (%)</h3><canvas id="c2"></canvas></div>
+<div class="chart"><h3>Users (weekly)</h3><canvas id="c3"></canvas></div>
+<div class="chart"><h3>Bookings vs Target (latest week)</h3><canvas id="c4"></canvas></div>
+</div>
+<table style="margin-top:24px"><thead><tr><th>Venue</th><th>Metric</th>
+<th>W30</th><th>W31</th><th>W32</th><th>W33</th><th>W34</th><th>W35</th><th>W36</th><th>W37</th><th>Trend</th></tr></thead><tbody><tr><td>Aqua HK</td><td>Bookings</td><td class="num">155</td><td class="num">182</td><td class="num">167</td><td class="num">199</td><td class="num">211</td><td class="num">164</td><td class="num">189</td><td class="num">159</td><td class="num pos">+2.6%</td></tr><tr><td></td><td>User CVR</td><td class="num">5.04%</td><td class="num">5.11%</td><td class="num">4.90%</td><td class="num">5.06%</td><td class="num">5.80%</td><td class="num">4.18%</td><td class="num">5.16%</td><td class="num">4.73%</td><td class="num neg">-0.31pp</td></tr><tr><td>Cantina</td><td>Bookings</td><td class="num">88</td><td class="num">84</td><td class="num">78</td><td class="num">74</td><td class="num">72</td><td class="num">92</td><td class="num">68</td><td class="num">17</td><td class="num neg">-80.7%</td></tr><tr><td></td><td>User CVR</td><td class="num">4.54%</td><td class="num">5.28%</td><td class="num">5.18%</td><td class="num">5.11%</td><td class="num">5.12%</td><td class="num">5.72%</td><td class="num">4.18%</td><td class="num">1.88%</td><td class="num neg">-2.66pp</td></tr></tbody></table>
+</div>
+
+<footer>Bookings = GA4 <code>sevenrooms_booking_complete</code>. Meta schedules = <code>offsite_conversion.fb_pixel_custom</code>. Google conversions filtered to the venue booking action. Generated 19 October 2026.</footer>
+<script>
+const D={"labels": ["W30", "W31", "W32", "W33", "W34", "W35", "W36", "W37"], "names": ["Aqua HK", "Cantina"], "bk": {"Aqua HK": [155, 182, 167, 199, 211, 164, 189, 159], "Cantina": [88, 84, 78, 74, 72, 92, 68, 17]}, "us": {"Aqua HK": [3078, 3561, 3409, 3936, 3638, 3924, 3662, 3360], "Cantina": [1940, 1591, 1507, 1448, 1406, 1608, 1625, 902]}, "cv": {"Aqua HK": [5.04, 5.11, 4.9, 5.06, 5.8, 4.18, 5.16, 4.73], "Cantina": [4.54, 5.28, 5.18, 5.11, 5.12, 5.72, 4.18, 1.88]}, "col": ["#EF4444", "#F59E0B"], "tgt": {"Aqua HK": 252, "Cantina": 67}};
+document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('on'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('on'));
+  t.classList.add('on');document.getElementById(t.dataset.t).classList.add('on');
+  if(t.dataset.t==='t'&&!window._drawn){window._drawn=1;draw();}
+});
+function line(id,get,suf){
+ new Chart(document.getElementById(id),{type:'line',
+  data:{labels:D.labels,datasets:D.names.map((n,i)=>({label:n,data:get(n),borderColor:D.col[i],backgroundColor:D.col[i],tension:.3,borderWidth:2,pointRadius:3}))},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}},
+   scales:{y:{beginAtZero:false,ticks:{callback:v=>v+(suf||'')}}}}});
+}
+function draw(){
+ line('c1',n=>D.bk[n]);line('c2',n=>D.cv[n],'%');line('c3',n=>D.us[n]);
+ new Chart(document.getElementById('c4'),{type:'bar',
+  data:{labels:D.names,datasets:[
+   {label:'Actual',data:D.names.map(n=>D.bk[n][D.bk[n].length-1]),backgroundColor:'#3B82F6'},
+   {label:'Target',data:D.names.map(n=>D.tgt[n]),backgroundColor:'#cbd5e1'}]},
+  options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{boxWidth:10,font:{size:10}}}}}});
+}
+</script></body></html>

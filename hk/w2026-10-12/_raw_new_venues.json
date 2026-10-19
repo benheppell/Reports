@@ -1,0 +1,622 @@
+{
+ "meta": {
+  "note": "Vesu, The Canton Library and the Shiro split, kept separately as in previous weeks.",
+  "vesu": {
+   "ga4": "439152333",
+   "meta": "act_721409993160810",
+   "google": "4311541411 (mgr 7441169950)",
+   "reopened": "2026-09-08"
+  },
+  "canton": {
+   "ga4": "548638742",
+   "meta": "act_2401548436678795 Canton campaigns only",
+   "google": "5594089398 (booking conversion action returned 12 conversions in W37 against 47 create-path GA4 bookings, still not a verified import)",
+   "opened": "2026-09-08"
+  },
+  "shiro": {
+   "ga4": "359394354 split by pagePath",
+   "meta": "act_283603334535394 shared",
+   "google": "4093767407 shared"
+  }
+ },
+ "vesu_ga4": {
+  "createpath": {
+   "W30": 21,
+   "W31": 42,
+   "W32": 76,
+   "W33": 83,
+   "W34": 67,
+   "W35": 82,
+   "W36": 57,
+   "W37": 49
+  },
+  "gross": {
+   "W30": 25,
+   "W31": 53,
+   "W32": 100,
+   "W33": 105,
+   "W34": 73,
+   "W35": 83,
+   "W36": 57,
+   "W37": 49
+  },
+  "ly_createpath": {
+   "L34": 59,
+   "L35": 70,
+   "L36": 68,
+   "L37": 78
+  },
+  "site": {
+   "cur": {
+    "sessions": 856,
+    "users": 630,
+    "pageviews": 2449,
+    "asd": 1485.508,
+    "bounce": 0.341121,
+    "engrate": 0.658879,
+    "newusers": 549
+   },
+   "prior": {
+    "sessions": 1305,
+    "users": 1084,
+    "pageviews": 2955,
+    "asd": 125.278,
+    "bounce": 0.501149,
+    "engrate": 0.498851,
+    "newusers": 947
+   },
+   "yoy": {
+    "sessions": 1959,
+    "users": 927,
+    "pageviews": 2231,
+    "asd": 116.553,
+    "bounce": 0.349668,
+    "engrate": 0.650332,
+    "newusers": 255
+   }
+  },
+  "ytd_gross": 1487
+ },
+ "canton_ga4": {
+  "createpath": {
+   "W30": 0,
+   "W31": 0,
+   "W32": 13,
+   "W33": 25,
+   "W34": 40,
+   "W35": 24,
+   "W36": 32,
+   "W37": 47
+  },
+  "gross": {
+   "W30": 0,
+   "W31": 0,
+   "W32": 13,
+   "W33": 31,
+   "W34": 46,
+   "W35": 27,
+   "W36": 37,
+   "W37": 50
+  },
+  "site": {
+   "cur": {
+    "sessions": 3065,
+    "users": 2626,
+    "pageviews": 6046,
+    "asd": 93.79,
+    "bounce": 0.536378,
+    "engrate": 0.463622,
+    "newusers": 2393
+   },
+   "prior": {
+    "sessions": 2961,
+    "users": 2544,
+    "pageviews": 5566,
+    "asd": 92.407,
+    "bounce": 0.560621,
+    "engrate": 0.439379,
+    "newusers": 2323
+   },
+   "yoy": null
+  },
+  "ytd_gross": 204,
+  "note": "No last-year line. Canton is the only HK property with no sign of the 15-16 October measurement break: session duration 93.8s against 92.4s the week before, create-path bookings up from 32 to 47, Meta schedules up from 11 to 13."
+ },
+ "vesu_ads": {
+  "meta": {
+   "cur": {
+    "spend": 3238.85,
+    "bookings": null,
+    "impr": 72388,
+    "clicks": 984,
+    "cpa_spend": 2926.67
+   },
+   "prior": {
+    "spend": 3460.77,
+    "bookings": 9,
+    "impr": 79338,
+    "clicks": 851,
+    "cpa_spend": 3460.77
+   },
+   "yoy": {
+    "spend": 3663.87,
+    "bookings": 15,
+    "impr": 117160,
+    "clicks": 3368,
+    "cpa_spend": 2274.12
+   }
+  },
+  "google": {
+   "cur": {
+    "spend": 2153.8,
+    "bookings": 34,
+    "impr": 7607,
+    "clicks": 457
+   },
+   "prior": {
+    "spend": 2349.87,
+    "bookings": 26,
+    "impr": 8270,
+    "clicks": 452
+   },
+   "yoy": {
+    "spend": 1995.35,
+    "bookings": 39,
+    "impr": 12597,
+    "clicks": 641
+   }
+  },
+  "walkin": {
+   "cur": null,
+   "prior": null,
+   "yoy": null
+  },
+  "meta_weekly": {
+   "W30": 2299.08,
+   "W31": 2930.22,
+   "W32": 3871.48,
+   "W33": 3436.21,
+   "W34": 3476.59,
+   "W35": 3529.27,
+   "W36": 3460.77,
+   "W37": 3238.85
+  },
+  "google_weekly": {
+   "W30": 0,
+   "W31": 1635.58,
+   "W32": 2563.34,
+   "W33": 2481.13,
+   "W34": 2268.11,
+   "W35": 2206.28,
+   "W36": 2349.87,
+   "W37": 2153.8
+  },
+  "meta_campaigns": [
+   [
+    "CRKLR - Prospecting Campaign - Daily Budget – V2",
+    2926.67,
+    null
+   ],
+   [
+    "CRKLR - Awareness Campaign - Daily Budget",
+    312.18,
+    null
+   ]
+  ],
+  "google_campaigns": [
+   [
+    "Search > Restaurant",
+    779.71,
+    9
+   ],
+   [
+    "P.Max > Generic",
+    757.47,
+    13
+   ],
+   [
+    "Search > Brand",
+    616.62,
+    12
+   ]
+  ]
+ },
+ "canton_ads": {
+  "meta": {
+   "cur": {
+    "spend": 12389.67,
+    "bookings": 13,
+    "impr": 209964,
+    "clicks": 4806,
+    "cpa_spend": 9733.3
+   },
+   "prior": {
+    "spend": 12267.33,
+    "bookings": 11,
+    "impr": 214207,
+    "clicks": 4532,
+    "cpa_spend": 9222.23
+   },
+   "yoy": {
+    "spend": 0,
+    "bookings": 0,
+    "impr": 0,
+    "clicks": 0
+   }
+  },
+  "google": {
+   "cur": {
+    "spend": 5981.57,
+    "bookings": 0,
+    "impr": 42700,
+    "clicks": 1848,
+    "na": true
+   },
+   "prior": {
+    "spend": 6899.22,
+    "bookings": 0,
+    "impr": 187512,
+    "clicks": 3182,
+    "na": true
+   },
+   "yoy": {
+    "spend": 0,
+    "bookings": 0,
+    "impr": 0,
+    "clicks": 0,
+    "na": true
+   }
+  },
+  "walkin": {
+   "cur": null,
+   "prior": null,
+   "yoy": null
+  },
+  "meta_weekly": {
+   "W30": 12269.15,
+   "W31": 9085.88,
+   "W32": 8062.38,
+   "W33": 15549.17,
+   "W34": 14951.21,
+   "W35": 14118.07,
+   "W36": 12267.33,
+   "W37": 12389.67
+  },
+  "google_weekly": {
+   "W30": 3532.23,
+   "W31": 5336.03,
+   "W32": 6767.1,
+   "W33": 10893.89,
+   "W34": 13905.04,
+   "W35": 6284.26,
+   "W36": 6899.22,
+   "W37": 5981.57
+  },
+  "meta_campaigns": [
+   [
+    "CRKLR | Canton Library Conversions Campaign",
+    9733.3,
+    13
+   ],
+   [
+    "CRKLR | Canton Library Awareness Campaign",
+    2656.37,
+    1
+   ]
+  ],
+  "google_campaigns": [
+   [
+    "PMax > Generic | EN",
+    2854.99,
+    null
+   ],
+   [
+    "Search > Open Now",
+    1952.39,
+    null
+   ],
+   [
+    "Search > Brand v2",
+    1174.19,
+    null
+   ]
+  ]
+ },
+ "shiro_tk": {
+  "createpath": {
+   "W30": 65,
+   "W31": 64,
+   "W32": 78,
+   "W33": 71,
+   "W34": 64,
+   "W35": 69,
+   "W36": 65,
+   "W37": 24
+  },
+  "gross": {
+   "W30": 68,
+   "W31": 68,
+   "W32": 81,
+   "W33": 79,
+   "W34": 68,
+   "W35": 77,
+   "W36": 65,
+   "W37": 24
+  },
+  "site": {
+   "cur": {
+    "sessions": 776,
+    "users": 673,
+    "pageviews": 1784,
+    "asd": 918.267,
+    "bounce": 0.216495,
+    "engrate": 0.783505,
+    "newusers": 405
+   },
+   "prior": {
+    "sessions": 1531,
+    "users": 1342,
+    "pageviews": 3349,
+    "asd": 127.773,
+    "bounce": 0.312867,
+    "engrate": 0.687133,
+    "newusers": 953
+   },
+   "yoy": null
+  },
+  "ytd_gross": 2335,
+  "ly": "no 2025 data, filter returns nothing"
+ },
+ "shiro_pp": {
+  "createpath": {
+   "W30": 78,
+   "W31": 67,
+   "W32": 69,
+   "W33": 61,
+   "W34": 65,
+   "W35": 65,
+   "W36": 77,
+   "W37": 35
+  },
+  "gross": {
+   "W30": 91,
+   "W31": 74,
+   "W32": 82,
+   "W33": 66,
+   "W34": 71,
+   "W35": 79,
+   "W36": 85,
+   "W37": 37
+  },
+  "ly_createpath": {
+   "L34": 88,
+   "L35": 86,
+   "L36": 96,
+   "L37": 94
+  },
+  "ytd_gross": 2967,
+  "site": "residual of combined minus Tai Kwun; engagement read directly with a NOT filter"
+ },
+ "shiro_ads_shared": {
+  "meta": {
+   "cur": {
+    "spend": 5086.02,
+    "bookings": null,
+    "impr": 89334,
+    "clicks": 3003
+   },
+   "prior": {
+    "spend": 5241.27,
+    "bookings": 20,
+    "impr": 109089,
+    "clicks": 3549
+   },
+   "yoy": {
+    "spend": 2082.44,
+    "bookings": 5,
+    "impr": 48797,
+    "clicks": 1328
+   }
+  },
+  "google": {
+   "cur": {
+    "spend": 3945.15,
+    "bookings": 37,
+    "impr": 44340,
+    "clicks": 1552
+   },
+   "prior": {
+    "spend": 4135.04,
+    "bookings": 61,
+    "impr": 48825,
+    "clicks": 1524
+   },
+   "yoy": {
+    "spend": 1130.77,
+    "bookings": 54,
+    "impr": 34859,
+    "clicks": 691
+   }
+  },
+  "walkin": {
+   "cur": 126,
+   "prior": 208,
+   "yoy": 192
+  },
+  "meta_weekly": {
+   "W30": 6062.94,
+   "W31": 3603.13,
+   "W32": 5995.82,
+   "W33": 5136.8,
+   "W34": 5251.55,
+   "W35": 5213.57,
+   "W36": 5241.27,
+   "W37": 5086.02
+  },
+  "google_weekly": {
+   "W30": 5430.83,
+   "W31": 4468.73,
+   "W32": 4188.89,
+   "W33": 4040.83,
+   "W34": 3997.15,
+   "W35": 3921.23,
+   "W36": 4135.04,
+   "W37": 3945.15
+  },
+  "meta_campaigns": [
+   [
+    "CRKLR - Prospecting Campaign - NEW Shiro Central",
+    2890.57,
+    null
+   ],
+   [
+    "CRKLR - Prospecting Campaign - Daily Budgets",
+    1216.04,
+    null
+   ],
+   [
+    "CRKLR - Awareness Campaign - NEW Shiro Central - LPV Campaign",
+    489.39,
+    null
+   ],
+   [
+    "CRKLR - Private Event Awareness Campaign - Shiro TK",
+    348.03,
+    null
+   ],
+   [
+    "CRKLR - Engagement Campaign",
+    141.99,
+    null
+   ]
+  ],
+  "google_campaigns": [
+   [
+    "Search > Restaurant (Admiralty)",
+    877.54,
+    8.0
+   ],
+   [
+    "P.Max > Booking",
+    838.52,
+    5
+   ],
+   [
+    "Search > Restaurant (Central)",
+    750.13,
+    13.0
+   ],
+   [
+    "Search > Private Dining & Events",
+    737.21,
+    2
+   ],
+   [
+    "Search > Brand",
+    479.46,
+    9.0
+   ],
+   [
+    "Demand Gen > Maps Only",
+    262.3,
+    0
+   ]
+  ]
+ },
+ "covers": {
+  "vesu": {
+   "cur": {
+    "web": 188,
+    "widget": 188,
+    "gr": 80,
+    "ot": 302,
+    "walk": 118,
+    "recep": 63,
+    "tp": 0
+   },
+   "prior": {
+    "web": 142,
+    "gr": 45,
+    "ot": 213,
+    "walk": 88,
+    "recep": 296,
+    "tp": 0
+   },
+   "yoy": {
+    "web": 102,
+    "gr": 70,
+    "ot": 217,
+    "walk": 106,
+    "recep": 73,
+    "tp": 0
+   }
+  },
+  "canton": {
+   "cur": {
+    "web": 138,
+    "widget": 138,
+    "gr": 33,
+    "ot": 96,
+    "walk": 24,
+    "recep": 315,
+    "tp": 0
+   },
+   "prior": {
+    "web": 100,
+    "gr": 23,
+    "ot": 89,
+    "walk": 48,
+    "recep": 405,
+    "tp": 0
+   },
+   "yoy": "n/a, opened 8 Sep 2026"
+  },
+  "shiro_tai_kwun": {
+   "cur": {
+    "web": 135,
+    "widget": 135,
+    "gr": 78,
+    "ot": 146,
+    "walk": 847,
+    "recep": 255,
+    "tp": 0
+   },
+   "prior": {
+    "web": 149,
+    "gr": 69,
+    "ot": 196,
+    "walk": 1023,
+    "recep": 251,
+    "tp": 0
+   },
+   "yoy": "no 2025 records"
+  },
+  "shiro_pacific_place": {
+   "cur": {
+    "web": 156,
+    "widget": 156,
+    "gr": 94,
+    "ot": 310,
+    "walk": 733,
+    "recep": 304,
+    "tp": 0
+   },
+   "prior": {
+    "web": 192,
+    "gr": 112,
+    "ot": 348,
+    "walk": 447,
+    "recep": 242,
+    "tp": 0
+   },
+   "yoy": {
+    "web": 136,
+    "gr": 48,
+    "ot": 389,
+    "walk": 523,
+    "recep": 256,
+    "tp": 0
+   }
+  }
+ }
+}

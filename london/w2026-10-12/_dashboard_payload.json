@@ -1,0 +1,85 @@
+{
+ "market": "London",
+ "ccy": "GBP",
+ "sym": "£",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "act": 1290,
+   "tgt": 2007,
+   "wow": 1282,
+   "yoy": 1437,
+   "ytd": 43997,
+   "ytdt": 62096,
+   "meta_s": 2805.7,
+   "goog_s": 2372.92,
+   "nc": false
+  },
+  {
+   "name": "Hutong",
+   "act": 799,
+   "tgt": 1015,
+   "wow": 845,
+   "yoy": 756,
+   "ytd": 26503,
+   "ytdt": 31852,
+   "meta_s": 2110.53,
+   "goog_s": 1604.32,
+   "nc": false
+  },
+  {
+   "name": "Regent St",
+   "act": 159,
+   "tgt": 364,
+   "wow": 207,
+   "yoy": 261,
+   "ytd": 10021,
+   "ytdt": 14394,
+   "meta_s": 1217.25,
+   "goog_s": 532.0,
+   "nc": false
+  },
+  {
+   "name": "Azzurra",
+   "act": 67,
+   "tgt": 182,
+   "wow": 104,
+   "yoy": 145,
+   "ytd": 3896,
+   "ytdt": 5837,
+   "meta_s": 1271.42,
+   "goog_s": 554.21,
+   "nc": false
+  },
+  {
+   "name": "Shiro Sushi",
+   "act": 79,
+   "tgt": 140,
+   "wow": 115,
+   "yoy": 83,
+   "ytd": 3498,
+   "ytdt": 5453,
+   "meta_s": 746.91,
+   "goog_s": 914.27,
+   "nc": false
+  },
+  {
+   "name": "DSL",
+   "act": 321,
+   "tgt": 25,
+   "wow": 466,
+   "yoy": 1,
+   "ytd": 17394,
+   "ytdt": 6163,
+   "meta_s": 2311.71,
+   "goog_s": 605.62,
+   "nc": true
+  }
+ ],
+ "week": "12–18 Oct 2026",
+ "wow": "5–11 Oct 2026",
+ "yoy": "13–19 Oct 2025",
+ "generated": "19 October 2026",
+ "note": "London is framed week on week and year on year rather than against target: the target columns are carried for reference only, and <b>DSL</b> stays flagged not comparable because it trades far above a pre-rebrand base. <b>GA4 bookings change basis this week.</b> From W37 they are the create path only, so <code>/modify/</code>, <code>/manage/</code> and <code>/prearrival/</code> events are excluded. The week, the prior week and last year in this table have all been rebuilt on that basis, so they compare cleanly with each other but not with any week published before 12 October 2026. Amendments were <b>6.4 percent</b> of London volume this week against <b>10.1 percent</b> in the matched 2025 week, so the old basis would have read 2,901 against 2,983. On the create path London booked <b>2,715</b> GA4 bookings, <b>up 1.2 percent</b> year on year and <b>down 10.1 percent</b> week on week; ex DSL the year-on-year figure is <b>down 10.7 percent</b>. <b>Read the week-on-week fall as collection rather than trading.</b> Sunday 18 October is under-collected in GA4 at Aqua Shard, Hutong, Aqua Kyoto and Shiro Sushi, with Hutong recording 48 bookings that day against 113 to 135 on the other six, and <b>DSL</b> has had a booking widget tagging fault since 15 October that understates its count. Every GA4 figure for this week is provisional and will restate upward. Covers are reported alongside because <code>total_payment</code> is unreliable in London and GA4 cannot see OpenTable."
+}

@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "12–18 Oct 2026",
+ "wow": "5–11 Oct 2026",
+ "yoy": "13–19 Oct 2025",
+ "generated": "19 October 2026",
+ "badge": "GA4 BOOKING TAG BROKE 16 OCT",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 159,
+   "tgt": 252,
+   "wow_b": 189,
+   "yoy_b": 220,
+   "users": 3360,
+   "sessions": 4546,
+   "asd": 727.9,
+   "bounce": 0.293005,
+   "meta_s": 7431.0,
+   "meta_sch": 6,
+   "meta_sch_prior": 19,
+   "goog_s": 8744.01,
+   "goog_c": 47.99,
+   "goog_c_prior": 51.11,
+   "shared": false
+  },
+  {
+   "name": "Cantina",
+   "act": 17,
+   "tgt": 67,
+   "wow_b": 68,
+   "yoy_b": 56,
+   "users": 902,
+   "sessions": 1144,
+   "asd": 648.5,
+   "bounce": 0.323427,
+   "meta_s": 2766.03,
+   "meta_sch": 1,
+   "meta_sch_prior": 7,
+   "goog_s": 3752.16,
+   "goog_c": 7,
+   "goog_c_prior": 8,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK spent HK$7,431 on Meta and Meta recorded 6 schedules, about HK$1,239 each, against 19 schedules on HK$9,478 the week before. Do not read that as a CPA move. The Meta Schedule conversion fires from the same website confirmation page as the GA4 booking event, and both stopped recording properly from 15 to 16 October.",
+   "Cantina spent HK$2,766 and Meta recorded 1 schedule, against 7 the week before. Cantina is the clearest case of the break: GA4 recorded zero bookings there on 16, 17 and 18 October while SevenRooms took seven website bookings a day.",
+   "Across the eight Hong Kong accounts Meta recorded 25 schedules this week against 91 the week before, and The Chinese Library, Shiro and Vesu returned no Schedule rows at all. The Canton Library, on the newer property, went the other way, 11 to 13. Treat Meta bookings and Meta CPA for this week as unusable."
+  ],
+  "google": [
+   "Aqua HK Google ran HK$8,744 for about 48 booking conversions at roughly HK$182 CPA, against 51 conversions on HK$8,084 the week before. Google Ads records conversions against the click date and uses its own tag, so this is the one booking signal that held, and it says Aqua demand was flat.",
+   "Cantina Google delivered about 7 conversions on HK$3,752 at roughly HK$536 CPA, against 8 on HK$3,712. Volume held even though Cantina GA4 went to zero for three days, which is the same message.",
+   "Brand search carried the volume at both venues, 23 of 48 conversions at Aqua HK and 3 of 7 at Cantina. Read these as existing name demand rather than new reach."
+  ],
+  "ga4": [
+   "Aqua HK users fell 8.2 percent week on week to 3,360 and are 23.1 percent below last year. Create-path bookings of 159 are 15.9 percent below last year on the same basis and 36.9 percent under the weekly target. Daily bookings ran 36, 31, 27 and 28 to 15 October and then 10, 19 and 14, while SevenRooms website bookings held at 113, 106 and 92 on those three days. The fall is in the measurement.",
+   "Cantina users fell 44.5 percent week on week to 902, the lowest of the eight weeks, and paid social sessions dropped from 596 to 69, so there is a real traffic fall here as well as a tag break. Bookings of 17 cannot be read at all: three of the seven days recorded nothing.",
+   "Average session duration is the giveaway. Aqua HK ran 205, 190, 219 and 357 seconds on 12 to 15 October and then 2,408, 513 and 1,748 seconds on 16 to 18 October. Every Hong Kong venue except The Canton Library shows the same jump, so the change is in the tagging, not in guest behaviour."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W30",
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     155,
+     182,
+     167,
+     199,
+     211,
+     164,
+     189,
+     159
+    ],
+    "users": [
+     3078,
+     3561,
+     3409,
+     3936,
+     3638,
+     3924,
+     3662,
+     3360
+    ]
+   },
+   "Cantina": {
+    "bookings": [
+     88,
+     84,
+     78,
+     74,
+     72,
+     92,
+     68,
+     17
+    ],
+    "users": [
+     1940,
+     1591,
+     1507,
+     1448,
+     1406,
+     1608,
+     1625,
+     902
+    ]
+   }
+  }
+ }
+}

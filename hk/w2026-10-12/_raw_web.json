@@ -1,0 +1,1467 @@
+{
+ "meta": {
+  "generated_for": "Aqua HK weekly report wk2026-10-12",
+  "windows": {
+   "cur": "2026-10-12..2026-10-18",
+   "prior": "2026-10-05..2026-10-11",
+   "yoy": "2025-10-13..2025-10-19",
+   "ytd": "2026-02-01..2026-10-18"
+  },
+  "week_map": {
+   "W30": "202635",
+   "W31": "202636",
+   "W32": "202637",
+   "W33": "202638",
+   "W34": "202639",
+   "W35": "202640",
+   "W36": "202641",
+   "W37": "202642",
+   "L34": "202539",
+   "L35": "202540",
+   "L36": "202541",
+   "L37": "202542"
+  },
+  "notes": [
+   "BOUNDARY WEEK. GA4 bookings are the CREATE PATH only from this week: eventName EXACT sevenrooms_booking_complete AND pagePath NOT PARTIAL_REGEXP modify|manage|prearrival. Boundary date 12 October 2026.",
+   "Amendment share measured per venue for both years. 2026: 4.1 percent of gross in W37 and 7.6 percent in W36. 2025: zero. The 2025 property fired the event only on /reservations/<venue> routes; there were no modify, manage or prearrival page paths in the 2025 data at any Hong Kong venue, so the create-path rule leaves every 2025 figure unchanged and the two years are on the same basis.",
+   "VERIFIED: the gross reconstruction reproduces every published week exactly for all nine venues (Aqua W30-W36 175/208/184/220/229/178/206 against published; Hutong, TCL, Cantina, DSL, Shiro PP, Shiro TK, Vesu and Canton all match).",
+   "MEASUREMENT BREAK, THE HEADLINE OF THE WEEK. sevenrooms_booking_complete stopped recording properly across the Hong Kong estate from 15 to 16 October 2026. Cantina recorded ZERO booking events on 16, 17 and 18 October while page_view (283/303/322) and book_now_button_click (9/7/3) kept firing and SevenRooms recorded seven website bookings a day. Aqua daily create-path bookings ran 36/31/27/28 to 15 Oct then 10/19/14. averageSessionDuration at Aqua ran 205/190/219/357 seconds to 15 Oct then 2408/513/1748 seconds. The same session-duration jump appears at every venue except The Canton Library (93.8s against 92.4s prior), which is on the newest property.",
+   "CROSS-CHECK: SevenRooms website-channel booking ROWS for the portfolio seven venues were 746 in 5-11 Oct and 780 in 12-18 Oct, up 4.6 percent, while GA4 create-path bookings fell from 879 to 588, down 33.1 percent. Aqua GA4 create-path 12-15 Oct = 116 against SevenRooms website 116 (ratio 1.00); 16-18 Oct GA4 43 against SevenRooms 75.",
+   "bounce and engrate are RAW 0-1 FRACTIONS from the GA4 API (not percentages). asd = averageSessionDuration in seconds. Current-week engagement metrics are provisional and this week they are also distorted by the tag break.",
+   "weekly buckets built with GA4 isoYearIsoWeek (Mon-Sun); users pulled with isoYearIsoWeek as a dimension, never summed from daily. Prior-week site metrics re-pulled and reproduce last week published figures exactly (Aqua 5050 sessions / 3662 users / 13349 pageviews / asd 239.392 / bounce 0.30752).",
+   "YTD is a single un-dimensioned eventCount call over 2026-02-01..2026-10-18 on the OLD GROSS basis, so the YTD line stays continuous with every published week. VERIFIED: for all nine venues YTD equals last week published YTD plus this week GROSS bookings exactly (Aqua 7076+165=7241, Hutong 10187+203=10390, TCL 4286+67=4353, Cantina 2515+20=2535, DSL 5638+97=5735, Shiro PP 2930+37=2967, Shiro TK 2311+24=2335, Vesu 1438+49=1487, Canton 154+50=204).",
+   "The Chinese Library (356942576) and Cantina (359148527) time out on 7-metric calls; pulled in a 4-metric and a 3-metric group.",
+   "Shiro Pacific Place = combined Shiro minus Shiro Tai Kwun (users, sessions, pageviews and newUsers are residuals, not a direct pull). Tai Kwun users use pagePath PARTIAL_REGEXP central|taikwun; Tai Kwun bookings use eventName + pagePath PARTIAL_REGEXP shirotaikwun. Pacific Place engagement metrics are read directly with a NOT filter on that page path. The 2025 Tai Kwun filter returns no data (re-verified this week).",
+   "Shiro split sums: create path Tai Kwun 24 + Pacific Place 35 = combined 59; the channel splits sum to 59 as well. YTD 2335 + 2967 = 5302 (direct combined pull).",
+   "All landing pages aggregate each venue top-5 landing pages by path, so the list is indicative not exhaustive. (not set) and empty-string rows are excluded."
+  ],
+  "failures": [
+   "none"
+  ]
+ },
+ "createpath_ty": {
+  "Aqua HK": {
+   "W30": 155,
+   "W31": 182,
+   "W32": 167,
+   "W33": 199,
+   "W34": 211,
+   "W35": 164,
+   "W36": 189,
+   "W37": 159
+  },
+  "Hutong HK": {
+   "W30": 275,
+   "W31": 276,
+   "W32": 267,
+   "W33": 282,
+   "W34": 257,
+   "W35": 202,
+   "W36": 233,
+   "W37": 195
+  },
+  "The Chinese Library": {
+   "W30": 129,
+   "W31": 110,
+   "W32": 126,
+   "W33": 125,
+   "W34": 105,
+   "W35": 123,
+   "W36": 103,
+   "W37": 65
+  },
+  "Cantina": {
+   "W30": 88,
+   "W31": 84,
+   "W32": 78,
+   "W33": 74,
+   "W34": 72,
+   "W35": 92,
+   "W36": 68,
+   "W37": 17
+  },
+  "Dim Sum Library": {
+   "W30": 132,
+   "W31": 122,
+   "W32": 113,
+   "W33": 146,
+   "W34": 127,
+   "W35": 124,
+   "W36": 144,
+   "W37": 93
+  },
+  "Shiro Pacific Place": {
+   "W30": 78,
+   "W31": 67,
+   "W32": 69,
+   "W33": 61,
+   "W34": 65,
+   "W35": 65,
+   "W36": 77,
+   "W37": 35
+  },
+  "Shiro Tai Kwun": {
+   "W30": 65,
+   "W31": 64,
+   "W32": 78,
+   "W33": 71,
+   "W34": 64,
+   "W35": 69,
+   "W36": 65,
+   "W37": 24
+  },
+  "Vesu": {
+   "W30": 21,
+   "W31": 42,
+   "W32": 76,
+   "W33": 83,
+   "W34": 67,
+   "W35": 82,
+   "W36": 57,
+   "W37": 49
+  },
+  "The Canton Library": {
+   "W30": 0,
+   "W31": 0,
+   "W32": 13,
+   "W33": 25,
+   "W34": 40,
+   "W35": 24,
+   "W36": 32,
+   "W37": 47
+  }
+ },
+ "gross_ty": {
+  "Aqua HK": {
+   "W30": 175,
+   "W31": 208,
+   "W32": 184,
+   "W33": 220,
+   "W34": 229,
+   "W35": 178,
+   "W36": 206,
+   "W37": 165
+  },
+  "Hutong HK": {
+   "W30": 303,
+   "W31": 293,
+   "W32": 292,
+   "W33": 315,
+   "W34": 277,
+   "W35": 213,
+   "W36": 243,
+   "W37": 203
+  },
+  "The Chinese Library": {
+   "W30": 135,
+   "W31": 123,
+   "W32": 138,
+   "W33": 139,
+   "W34": 113,
+   "W35": 129,
+   "W36": 109,
+   "W37": 67
+  },
+  "Cantina": {
+   "W30": 94,
+   "W31": 91,
+   "W32": 83,
+   "W33": 81,
+   "W34": 79,
+   "W35": 101,
+   "W36": 75,
+   "W37": 20
+  },
+  "Dim Sum Library": {
+   "W30": 146,
+   "W31": 144,
+   "W32": 128,
+   "W33": 155,
+   "W34": 143,
+   "W35": 136,
+   "W36": 168,
+   "W37": 97
+  },
+  "Shiro Pacific Place": {
+   "W30": 91,
+   "W31": 74,
+   "W32": 82,
+   "W33": 66,
+   "W34": 71,
+   "W35": 79,
+   "W36": 85,
+   "W37": 37
+  },
+  "Shiro Tai Kwun": {
+   "W30": 68,
+   "W31": 68,
+   "W32": 81,
+   "W33": 79,
+   "W34": 68,
+   "W35": 77,
+   "W36": 65,
+   "W37": 24
+  },
+  "Vesu": {
+   "W30": 25,
+   "W31": 53,
+   "W32": 100,
+   "W33": 105,
+   "W34": 73,
+   "W35": 83,
+   "W36": 57,
+   "W37": 49
+  },
+  "The Canton Library": {
+   "W30": 0,
+   "W31": 0,
+   "W32": 13,
+   "W33": 31,
+   "W34": 46,
+   "W35": 27,
+   "W36": 37,
+   "W37": 50
+  }
+ },
+ "createpath_ly": {
+  "Aqua HK": {
+   "L34": 161,
+   "L35": 229,
+   "L36": 231,
+   "L37": 220
+  },
+  "Hutong HK": {
+   "L34": 258,
+   "L35": 287,
+   "L36": 292,
+   "L37": 335
+  },
+  "The Chinese Library": {
+   "L34": 77,
+   "L35": 124,
+   "L36": 118,
+   "L37": 113
+  },
+  "Cantina": {
+   "L34": 57,
+   "L35": 59,
+   "L36": 48,
+   "L37": 56
+  },
+  "Dim Sum Library": {
+   "L34": 140,
+   "L35": 173,
+   "L36": 184,
+   "L37": 192
+  },
+  "Shiro Pacific Place": {
+   "L34": 88,
+   "L35": 86,
+   "L36": 96,
+   "L37": 94
+  },
+  "Shiro Tai Kwun": {
+   "L34": 0,
+   "L35": 0,
+   "L36": 0,
+   "L37": 0
+  },
+  "Vesu": {
+   "L34": 59,
+   "L35": 70,
+   "L36": 68,
+   "L37": 78
+  },
+  "The Canton Library": {
+   "L34": 0,
+   "L35": 0,
+   "L36": 0,
+   "L37": 0
+  }
+ },
+ "site": {
+  "Aqua HK": {
+   "cur": {
+    "sessions": 4546,
+    "users": 3360,
+    "pageviews": 11938,
+    "asd": 727.887,
+    "bounce": 0.293005,
+    "engrate": 0.706995,
+    "newusers": 2894
+   },
+   "prior": {
+    "sessions": 5050,
+    "users": 3662,
+    "pageviews": 13349,
+    "asd": 239.392,
+    "bounce": 0.30752,
+    "engrate": 0.692475,
+    "newusers": 3127
+   },
+   "yoy": {
+    "sessions": 5647,
+    "users": 4369,
+    "pageviews": 12318,
+    "asd": 241.393,
+    "bounce": 0.282274,
+    "engrate": 0.717726,
+    "newusers": 3743
+   }
+  },
+  "Hutong HK": {
+   "cur": {
+    "sessions": 3909,
+    "users": 2954,
+    "pageviews": 11437,
+    "asd": 751.606,
+    "bounce": 0.303147,
+    "engrate": 0.696853,
+    "newusers": 2504
+   },
+   "prior": {
+    "sessions": 4426,
+    "users": 3333,
+    "pageviews": 12612,
+    "asd": 228.882,
+    "bounce": 0.340714,
+    "engrate": 0.659286,
+    "newusers": 2821
+   },
+   "yoy": {
+    "sessions": 5044,
+    "users": 3648,
+    "pageviews": 11304,
+    "asd": 255.407,
+    "bounce": 0.290841,
+    "engrate": 0.709159,
+    "newusers": 3119
+   }
+  },
+  "The Chinese Library": {
+   "cur": {
+    "sessions": 1646,
+    "users": 1276,
+    "pageviews": 4320,
+    "asd": 1156.677,
+    "bounce": 0.283111,
+    "engrate": 0.716889,
+    "newusers": 1123
+   },
+   "prior": {
+    "sessions": 2095,
+    "users": 1556,
+    "pageviews": 5315,
+    "asd": 192.64,
+    "bounce": 0.32506,
+    "engrate": 0.67494,
+    "newusers": 1360
+   },
+   "yoy": {
+    "sessions": 2247,
+    "users": 1759,
+    "pageviews": 4396,
+    "asd": 173.439,
+    "bounce": 0.327103,
+    "engrate": 0.672897,
+    "newusers": 1542
+   }
+  },
+  "Cantina": {
+   "cur": {
+    "sessions": 1144,
+    "users": 902,
+    "pageviews": 2450,
+    "asd": 648.539,
+    "bounce": 0.323427,
+    "engrate": 0.676573,
+    "newusers": 800
+   },
+   "prior": {
+    "sessions": 1978,
+    "users": 1625,
+    "pageviews": 3885,
+    "asd": 151.826,
+    "bounce": 0.464105,
+    "engrate": 0.535895,
+    "newusers": 1472
+   },
+   "yoy": {
+    "sessions": 1518,
+    "users": 1209,
+    "pageviews": 3173,
+    "asd": 166.369,
+    "bounce": 0.326087,
+    "engrate": 0.673913,
+    "newusers": 1078
+   }
+  },
+  "Dim Sum Library": {
+   "cur": {
+    "sessions": 1059,
+    "users": 838,
+    "pageviews": 3070,
+    "asd": 1383.104,
+    "bounce": 0.238905,
+    "engrate": 0.761095,
+    "newusers": 753
+   },
+   "prior": {
+    "sessions": 1400,
+    "users": 1035,
+    "pageviews": 3875,
+    "asd": 212.021,
+    "bounce": 0.304286,
+    "engrate": 0.695714,
+    "newusers": 893
+   },
+   "yoy": {
+    "sessions": 1691,
+    "users": 1269,
+    "pageviews": 3654,
+    "asd": 166.923,
+    "bounce": 0.331165,
+    "engrate": 0.668835,
+    "newusers": 1107
+   }
+  },
+  "Shiro combined": {
+   "cur": {
+    "sessions": 1656,
+    "users": 1334,
+    "pageviews": 4601,
+    "asd": 753.348,
+    "bounce": 0.325483,
+    "engrate": 0.674517,
+    "newusers": 1160
+   },
+   "prior": {
+    "sessions": 2518,
+    "users": 2035,
+    "pageviews": 6923,
+    "asd": 177.29,
+    "bounce": 0.358618,
+    "engrate": 0.641382,
+    "newusers": 1767
+   },
+   "yoy": {
+    "sessions": 1123,
+    "users": 919,
+    "pageviews": 1925,
+    "asd": 155.629,
+    "bounce": 0.41496,
+    "engrate": 0.58504,
+    "newusers": 697
+   }
+  },
+  "Shiro Tai Kwun": {
+   "cur": {
+    "sessions": 776,
+    "users": 673,
+    "pageviews": 1784,
+    "asd": 918.267,
+    "bounce": 0.216495,
+    "engrate": 0.783505,
+    "newusers": 405
+   },
+   "prior": {
+    "sessions": 1531,
+    "users": 1342,
+    "pageviews": 3349,
+    "asd": 127.773,
+    "bounce": 0.312867,
+    "engrate": 0.687133,
+    "newusers": 953
+   },
+   "yoy": null
+  },
+  "Shiro Pacific Place direct_eng": {
+   "cur": {
+    "asd": 416.319,
+    "bounce": 0.293385,
+    "engrate": 0.706615
+   },
+   "prior": {
+    "asd": 167.4,
+    "engrate": 0.713,
+    "note": "carried from published w2026-10-05 payload"
+   }
+  },
+  "Vesu": {
+   "cur": {
+    "sessions": 856,
+    "users": 630,
+    "pageviews": 2449,
+    "asd": 1485.508,
+    "bounce": 0.341121,
+    "engrate": 0.658879,
+    "newusers": 549
+   },
+   "prior": {
+    "sessions": 1305,
+    "users": 1084,
+    "pageviews": 2955,
+    "asd": 125.278,
+    "bounce": 0.501149,
+    "engrate": 0.498851,
+    "newusers": 947
+   },
+   "yoy": {
+    "sessions": 1959,
+    "users": 927,
+    "pageviews": 2231,
+    "asd": 116.553,
+    "bounce": 0.349668,
+    "engrate": 0.650332,
+    "newusers": 255
+   }
+  },
+  "The Canton Library": {
+   "cur": {
+    "sessions": 3065,
+    "users": 2626,
+    "pageviews": 6046,
+    "asd": 93.79,
+    "bounce": 0.536378,
+    "engrate": 0.463622,
+    "newusers": 2393
+   },
+   "prior": {
+    "sessions": 2961,
+    "users": 2544,
+    "pageviews": 5566,
+    "asd": 92.407,
+    "bounce": 0.560621,
+    "engrate": 0.439379,
+    "newusers": 2323
+   },
+   "yoy": null
+  }
+ },
+ "ytd_gross": {
+  "Aqua HK": 7241,
+  "Hutong HK": 10390,
+  "The Chinese Library": 4353,
+  "Cantina": 2535,
+  "Dim Sum Library": 5735,
+  "Shiro Pacific Place": 2967,
+  "Shiro Tai Kwun": 2335,
+  "Vesu": 1487,
+  "The Canton Library": 204
+ },
+ "channels": {
+  "Aqua HK": {
+   "cur": {
+    "Organic Search": 1370,
+    "Paid Search": 1236,
+    "Direct": 1179,
+    "Paid Social": 226,
+    "Cross-network": 190,
+    "Unassigned": 126,
+    "AI Assistant": 119,
+    "Referral": 87,
+    "Organic Social": 78,
+    "Email": 2
+   },
+   "prior": {
+    "Paid Search": 1397,
+    "Organic Search": 1302,
+    "Direct": 1275,
+    "Paid Social": 337,
+    "Cross-network": 172,
+    "Referral": 152,
+    "Unassigned": 111,
+    "Organic Social": 106,
+    "AI Assistant": 97
+   },
+   "yoy": {
+    "Organic Search": 1359,
+    "Direct": 1192,
+    "Paid Search": 1054,
+    "Organic Social": 779,
+    "Paid Social": 577,
+    "Cross-network": 515,
+    "Referral": 201,
+    "Unassigned": 67,
+    "Paid Other": 34,
+    "Email": 1
+   },
+   "bcur": {
+    "Organic Search": 52,
+    "Direct": 45,
+    "Paid Search": 44,
+    "Unassigned": 12,
+    "Cross-network": 3,
+    "AI Assistant": 2,
+    "Organic Social": 1
+   },
+   "bprior": {
+    "Direct": 59,
+    "Organic Search": 54,
+    "Paid Search": 48,
+    "Unassigned": 13,
+    "Referral": 6,
+    "AI Assistant": 3,
+    "Organic Social": 3,
+    "Cross-network": 2,
+    "Paid Social": 1
+   },
+   "byoy": {
+    "Organic Search": 75,
+    "Direct": 58,
+    "Paid Search": 58,
+    "Cross-network": 11,
+    "Paid Social": 6,
+    "Referral": 6,
+    "Organic Social": 3,
+    "Unassigned": 3
+   }
+  },
+  "Hutong HK": {
+   "cur": {
+    "Organic Search": 1624,
+    "Direct": 1105,
+    "Paid Search": 509,
+    "Cross-network": 201,
+    "Referral": 144,
+    "Paid Social": 97,
+    "Unassigned": 92,
+    "AI Assistant": 78,
+    "Organic Social": 57,
+    "Paid Other": 36
+   },
+   "prior": {
+    "Organic Search": 1687,
+    "Direct": 1571,
+    "Paid Search": 477,
+    "Cross-network": 154,
+    "Referral": 141,
+    "Paid Social": 139,
+    "AI Assistant": 108,
+    "Unassigned": 105,
+    "Organic Social": 69,
+    "Paid Other": 44
+   },
+   "yoy": {
+    "Organic Search": 1333,
+    "Direct": 1240,
+    "Paid Search": 749,
+    "Cross-network": 726,
+    "Paid Social": 346,
+    "Referral": 214,
+    "Organic Social": 201,
+    "Paid Other": 72,
+    "Unassigned": 61,
+    "Email": 45
+   },
+   "bcur": {
+    "Organic Search": 77,
+    "Direct": 63,
+    "Paid Search": 26,
+    "Unassigned": 12,
+    "AI Assistant": 5,
+    "Cross-network": 5,
+    "Referral": 5,
+    "Organic Social": 2
+   },
+   "bprior": {
+    "Organic Search": 96,
+    "Direct": 71,
+    "Paid Search": 31,
+    "Unassigned": 15,
+    "Referral": 7,
+    "AI Assistant": 5,
+    "Organic Social": 4,
+    "Cross-network": 3,
+    "Paid Other": 1
+   },
+   "byoy": {
+    "Direct": 114,
+    "Organic Search": 96,
+    "Paid Search": 57,
+    "Cross-network": 35,
+    "Organic Social": 14,
+    "Referral": 9,
+    "Unassigned": 6,
+    "Paid Social": 4
+   }
+  },
+  "The Chinese Library": {
+   "cur": {
+    "Paid Search": 501,
+    "Organic Search": 394,
+    "Direct": 269,
+    "Paid Social": 173,
+    "Cross-network": 143,
+    "Referral": 62,
+    "Organic Social": 54,
+    "Unassigned": 36,
+    "AI Assistant": 19
+   },
+   "prior": {
+    "Paid Search": 625,
+    "Organic Search": 455,
+    "Direct": 454,
+    "Paid Social": 225,
+    "Cross-network": 175,
+    "Organic Social": 61,
+    "Referral": 56,
+    "Unassigned": 33,
+    "AI Assistant": 8,
+    "Paid Other": 1
+   },
+   "yoy": {
+    "Paid Search": 634,
+    "Organic Search": 541,
+    "Direct": 486,
+    "Cross-network": 246,
+    "Paid Social": 210,
+    "Referral": 61,
+    "Organic Social": 49,
+    "Unassigned": 18,
+    "Paid Other": 7
+   },
+   "bcur": {
+    "Organic Search": 18,
+    "Paid Search": 18,
+    "Direct": 12,
+    "Unassigned": 10,
+    "AI Assistant": 3,
+    "Cross-network": 2,
+    "Organic Social": 2
+   },
+   "bprior": {
+    "Paid Search": 37,
+    "Direct": 26,
+    "Organic Search": 25,
+    "Unassigned": 6,
+    "Cross-network": 4,
+    "Paid Social": 3,
+    "AI Assistant": 1,
+    "Organic Social": 1
+   },
+   "byoy": {
+    "Organic Search": 37,
+    "Direct": 34,
+    "Paid Search": 31,
+    "Cross-network": 9,
+    "Paid Social": 1,
+    "Unassigned": 1
+   }
+  },
+  "Cantina": {
+   "cur": {
+    "Organic Search": 367,
+    "Paid Search": 305,
+    "Direct": 167,
+    "Cross-network": 102,
+    "Paid Social": 69,
+    "Organic Social": 50,
+    "Referral": 46,
+    "Unassigned": 17,
+    "Paid Other": 12,
+    "AI Assistant": 10
+   },
+   "prior": {
+    "Paid Social": 596,
+    "Direct": 403,
+    "Organic Search": 372,
+    "Paid Search": 314,
+    "Cross-network": 90,
+    "Referral": 65,
+    "Organic Social": 64,
+    "Paid Other": 29,
+    "Unassigned": 28,
+    "AI Assistant": 12
+   },
+   "yoy": {
+    "Paid Search": 409,
+    "Direct": 286,
+    "Organic Search": 241,
+    "Paid Social": 218,
+    "Cross-network": 196,
+    "Referral": 91,
+    "Organic Social": 64,
+    "Unassigned": 10,
+    "Paid Other": 3
+   },
+   "bcur": {
+    "Paid Search": 6,
+    "Direct": 3,
+    "Organic Search": 3,
+    "AI Assistant": 2,
+    "Cross-network": 1,
+    "Organic Social": 1,
+    "Paid Social": 1
+   },
+   "bprior": {
+    "Direct": 36,
+    "Organic Search": 12,
+    "Paid Social": 7,
+    "Paid Search": 5,
+    "Referral": 4,
+    "Organic Social": 2,
+    "Unassigned": 2
+   },
+   "byoy": {
+    "Direct": 18,
+    "Paid Search": 17,
+    "Organic Search": 11,
+    "Cross-network": 3,
+    "Referral": 3,
+    "Organic Social": 2,
+    "Paid Social": 1,
+    "Unassigned": 1
+   }
+  },
+  "Dim Sum Library": {
+   "cur": {
+    "Paid Search": 372,
+    "Organic Search": 252,
+    "Direct": 219,
+    "Cross-network": 90,
+    "Paid Social": 45,
+    "Organic Social": 30,
+    "Unassigned": 21,
+    "Referral": 16,
+    "Paid Other": 8,
+    "AI Assistant": 6
+   },
+   "prior": {
+    "Paid Search": 430,
+    "Direct": 393,
+    "Organic Search": 327,
+    "Cross-network": 76,
+    "Paid Social": 66,
+    "Organic Social": 36,
+    "Referral": 30,
+    "Unassigned": 23,
+    "AI Assistant": 13,
+    "Paid Other": 8
+   },
+   "yoy": {
+    "Paid Search": 503,
+    "Direct": 453,
+    "Organic Search": 380,
+    "Organic Social": 147,
+    "Paid Social": 105,
+    "Cross-network": 54,
+    "Referral": 37,
+    "Unassigned": 12,
+    "Paid Other": 2
+   },
+   "bcur": {
+    "Paid Search": 40,
+    "Organic Search": 18,
+    "Direct": 15,
+    "Cross-network": 8,
+    "Unassigned": 7,
+    "AI Assistant": 2,
+    "Paid Other": 1,
+    "Paid Social": 1,
+    "Referral": 1
+   },
+   "bprior": {
+    "Paid Search": 60,
+    "Direct": 39,
+    "Organic Search": 20,
+    "Cross-network": 12,
+    "Unassigned": 7,
+    "Organic Social": 4,
+    "AI Assistant": 1,
+    "Paid Social": 1
+   },
+   "byoy": {
+    "Paid Search": 85,
+    "Direct": 52,
+    "Organic Search": 36,
+    "Cross-network": 11,
+    "Organic Social": 6,
+    "Paid Social": 2
+   }
+  },
+  "Shiro Pacific Place": {
+   "cur": {
+    "Paid Search": 407,
+    "Paid Social": 218,
+    "Organic Search": 200,
+    "Cross-network": 178,
+    "Direct": 177,
+    "Referral": 60,
+    "Organic Social": 24,
+    "Unassigned": 16,
+    "AI Assistant": 5
+   },
+   "prior": {
+    "Paid Search": 438,
+    "Organic Search": 288,
+    "Direct": 272,
+    "Paid Social": 263,
+    "Cross-network": 120,
+    "Referral": 72,
+    "Organic Social": 29,
+    "Unassigned": 12,
+    "AI Assistant": 3
+   },
+   "yoy": {
+    "Paid Social": 363,
+    "Paid Search": 234,
+    "Organic Search": 195,
+    "Direct": 135,
+    "Cross-network": 80,
+    "Referral": 71,
+    "Unassigned": 27,
+    "Organic Social": 16,
+    "Paid Other": 5
+   },
+   "bcur": {
+    "Paid Search": 19,
+    "Organic Search": 7,
+    "Referral": 3,
+    "Unassigned": 3,
+    "Direct": 2,
+    "AI Assistant": 1
+   },
+   "bprior": {
+    "Paid Search": 31,
+    "Organic Search": 23,
+    "Direct": 12,
+    "Cross-network": 5,
+    "Referral": 3,
+    "Unassigned": 3
+   },
+   "byoy": {
+    "Paid Search": 41,
+    "Organic Search": 28,
+    "Direct": 18,
+    "Cross-network": 5,
+    "Paid Social": 2
+   }
+  },
+  "Shiro Tai Kwun": {
+   "cur": {
+    "Paid Social": 296,
+    "Paid Search": 147,
+    "Direct": 85,
+    "Organic Social": 77,
+    "Organic Search": 75,
+    "Cross-network": 49,
+    "Referral": 27,
+    "Unassigned": 17,
+    "AI Assistant": 2
+   },
+   "prior": {
+    "Paid Social": 596,
+    "Organic Social": 242,
+    "Direct": 221,
+    "Paid Search": 202,
+    "Organic Search": 150,
+    "Referral": 51,
+    "Cross-network": 38,
+    "Unassigned": 28,
+    "AI Assistant": 2
+   },
+   "yoy": {},
+   "bcur": {
+    "Paid Search": 11,
+    "Paid Social": 4,
+    "Cross-network": 3,
+    "Organic Search": 3,
+    "Direct": 2,
+    "Unassigned": 1
+   },
+   "bprior": {
+    "Paid Search": 27,
+    "Direct": 9,
+    "Paid Social": 9,
+    "Organic Search": 8,
+    "Cross-network": 7,
+    "Unassigned": 3,
+    "Organic Social": 1,
+    "Referral": 1
+   },
+   "byoy": {}
+  },
+  "Vesu": {
+   "cur": {
+    "Paid Search": 287,
+    "Organic Search": 145,
+    "Direct": 123,
+    "Cross-network": 115,
+    "Paid Social": 73,
+    "Organic Social": 51,
+    "Referral": 33,
+    "Unassigned": 28
+   },
+   "prior": {
+    "Paid Social": 483,
+    "Paid Search": 295,
+    "Direct": 126,
+    "Organic Search": 121,
+    "Cross-network": 105,
+    "Referral": 85,
+    "Organic Social": 75,
+    "Unassigned": 14,
+    "AI Assistant": 4
+   },
+   "yoy": {
+    "Paid Search": 629,
+    "Organic Search": 390,
+    "Paid Social": 261,
+    "Cross-network": 238,
+    "Direct": 156,
+    "Referral": 135,
+    "Organic Social": 120,
+    "Paid Other": 17,
+    "Unassigned": 9
+   },
+   "bcur": {
+    "Paid Search": 21,
+    "Cross-network": 9,
+    "Direct": 6,
+    "Organic Search": 5,
+    "Unassigned": 5,
+    "Organic Social": 2,
+    "Paid Social": 1
+   },
+   "bprior": {
+    "Paid Search": 18,
+    "Organic Search": 9,
+    "Cross-network": 8,
+    "Organic Social": 7,
+    "Referral": 7,
+    "Direct": 4,
+    "Unassigned": 3,
+    "Paid Social": 1
+   },
+   "byoy": {
+    "Paid Search": 28,
+    "Organic Search": 19,
+    "Direct": 12,
+    "Referral": 8,
+    "Cross-network": 4,
+    "Organic Social": 3,
+    "Paid Social": 2,
+    "Unassigned": 2
+   }
+  },
+  "The Canton Library": {
+   "cur": {
+    "Paid Social": 1722,
+    "Paid Search": 330,
+    "Organic Search": 276,
+    "Direct": 255,
+    "Cross-network": 203,
+    "Organic Social": 145,
+    "Referral": 54,
+    "Paid Other": 29,
+    "Unassigned": 23,
+    "AI Assistant": 9
+   },
+   "prior": {
+    "Paid Social": 1609,
+    "Paid Search": 448,
+    "Direct": 299,
+    "Organic Search": 216,
+    "Cross-network": 161,
+    "Organic Social": 125,
+    "Referral": 51,
+    "Paid Other": 35,
+    "Unassigned": 20,
+    "AI Assistant": 6
+   },
+   "yoy": {},
+   "bcur": {
+    "Direct": 18,
+    "Paid Social": 9,
+    "Organic Search": 6,
+    "Cross-network": 5,
+    "Organic Social": 4,
+    "Paid Search": 2,
+    "Unassigned": 2,
+    "Referral": 1
+   },
+   "bprior": {
+    "Direct": 15,
+    "Organic Search": 5,
+    "Paid Search": 5,
+    "Paid Social": 4,
+    "AI Assistant": 1,
+    "Organic Social": 1,
+    "Unassigned": 1
+   },
+   "byoy": {}
+  }
+ },
+ "devices": {
+  "Aqua HK": {
+   "mobile": 3123,
+   "desktop": 1407,
+   "tablet": 34
+  },
+  "Hutong HK": {
+   "mobile": 2572,
+   "desktop": 1322,
+   "tablet": 43
+  },
+  "The Chinese Library": {
+   "mobile": 1151,
+   "desktop": 479,
+   "tablet": 19
+  },
+  "Cantina": {
+   "mobile": 800,
+   "desktop": 335,
+   "tablet": 8
+  },
+  "Dim Sum Library": {
+   "mobile": 753,
+   "desktop": 299,
+   "tablet": 10
+  },
+  "Shiro Pacific Place": {
+   "mobile": 1001,
+   "desktop": 268,
+   "tablet": 15
+  },
+  "Shiro Tai Kwun": {
+   "mobile": 652,
+   "desktop": 116,
+   "tablet": 9
+  },
+  "Vesu": {
+   "mobile": 652,
+   "desktop": 199,
+   "tablet": 6
+  },
+  "The Canton Library": {
+   "mobile": 2593,
+   "desktop": 410,
+   "tablet": 40
+  }
+ },
+ "landing": {
+  "Aqua HK": {
+   "s": [
+    [
+     "/",
+     2202
+    ],
+    [
+     "/menus",
+     364
+    ],
+    [
+     "/menus/brunch",
+     305
+    ],
+    [
+     "/explore/aquahk/reservations/create/search",
+     298
+    ],
+    [
+     "/reservations",
+     215
+    ]
+   ],
+   "b": {
+    "/": 81,
+    "/explore/aquahk/reservations/create/search": 44,
+    "/reservations": 11,
+    "/menus": 4,
+    "/bar": 3,
+    "/menus/brunch": 3
+   }
+  },
+  "Hutong HK": {
+   "s": [
+    [
+     "/",
+     2007
+    ],
+    [
+     "/menus",
+     352
+    ],
+    [
+     "/explore/hutonghongkong/reservations/create/search",
+     322
+    ],
+    [
+     "/explore/hutonghongkong/reservations/manage",
+     152
+    ],
+    [
+     "/reservations",
+     144
+    ]
+   ],
+   "b": {
+    "/": 101,
+    "/explore/hutonghongkong/reservations/create/search": 39,
+    "/reservations": 12,
+    "/explore/hutonghongkong/reservations/manage": 2,
+    "/menus": 1
+   }
+  },
+  "The Chinese Library": {
+   "s": [
+    [
+     "/",
+     864
+    ],
+    [
+     "/menus",
+     345
+    ],
+    [
+     "/reservations",
+     80
+    ],
+    [
+     "/menus/brunch",
+     71
+    ],
+    [
+     "/menus/dinner",
+     49
+    ]
+   ],
+   "b": {
+    "/": 31,
+    "/reservations": 8,
+    "/menus": 5,
+    "/menus/brunch": 4,
+    "/menus/dinner": 0
+   }
+  },
+  "Cantina": {
+   "s": [
+    [
+     "/",
+     515
+    ],
+    [
+     "/menus",
+     128
+    ],
+    [
+     "/explore/cantinahk/reservations/create/search",
+     85
+    ],
+    [
+     "/menus/brunch",
+     61
+    ],
+    [
+     "/restaurant",
+     57
+    ]
+   ],
+   "b": {
+    "/": 8,
+    "/explore/cantinahk/reservations/create/search": 3,
+    "/menus": 2,
+    "/menus/brunch": 1,
+    "/restaurant": 0
+   }
+  },
+  "Dim Sum Library": {
+   "s": [
+    [
+     "/",
+     577
+    ],
+    [
+     "/menus",
+     160
+    ],
+    [
+     "/reservations",
+     65
+    ],
+    [
+     "/menus/dinner",
+     36
+    ],
+    [
+     "/menus/lunch",
+     32
+    ]
+   ],
+   "b": {
+    "/": 54,
+    "/reservations": 18,
+    "/menus": 3,
+    "/menus/dinner": 1,
+    "/menus/lunch": 0
+   }
+  },
+  "Shiro Pacific Place": {
+   "s": [
+    [
+     "/",
+     488
+    ],
+    [
+     "/shiro-central",
+     182
+    ],
+    [
+     "/menus",
+     97
+    ],
+    [
+     "/shiro-pacific-place",
+     94
+    ],
+    [
+     "/menus/dinner-tasting-menu",
+     66
+    ]
+   ],
+   "b": {
+    "/": 19,
+    "/shiro-pacific-place": 6,
+    "/shiro-central": 1,
+    "/menus": 1,
+    "/menus/dinner-tasting-menu": 0
+   }
+  },
+  "Shiro Tai Kwun": {
+   "s": [
+    [
+     "/shiro-central",
+     424
+    ],
+    [
+     "/",
+     156
+    ],
+    [
+     "/experiences/shirotaikwun/a-japanese-feast-for-every-occasion-at-shiro-6039637657829376",
+     43
+    ],
+    [
+     "/explore/shirotaikwun/reservations/create/search",
+     30
+    ],
+    [
+     "/shiro-central/dining-at-central",
+     30
+    ]
+   ],
+   "b": {
+    "/": 11,
+    "/shiro-central": 5,
+    "/explore/shirotaikwun/reservations/create/search": 2,
+    "/shiro-central/dining-at-central": 1,
+    "/experiences/shirotaikwun/a-japanese-feast-for-every-occasion-at-shiro-6039637657829376": 0
+   }
+  },
+  "Vesu": {
+   "s": [
+    [
+     "/",
+     540
+    ],
+    [
+     "/explore/vesu/reservations/create/search",
+     98
+    ],
+    [
+     "/menus/a-la-carte",
+     92
+    ],
+    [
+     "/menus",
+     56
+    ],
+    [
+     "/menus/bar-menu",
+     9
+    ]
+   ],
+   "b": {
+    "/": 40,
+    "/explore/vesu/reservations/create/search": 7,
+    "/menus/a-la-carte": 2,
+    "/menus": 0,
+    "/menus/bar-menu": 0
+   }
+  },
+  "The Canton Library": {
+   "s": [
+    [
+     "/explore/cantonlibraryhk/reservations/create/search",
+     1901
+    ],
+    [
+     "/",
+     862
+    ],
+    [
+     "/menus/a-la-carte",
+     59
+    ],
+    [
+     "/explore/cantonlibraryhk/reservations/manage",
+     32
+    ],
+    [
+     "/menus",
+     25
+    ]
+   ],
+   "b": {
+    "/explore/cantonlibraryhk/reservations/create/search": 26,
+    "/": 15,
+    "/explore/cantonlibraryhk/reservations/manage": 2,
+    "/menus/a-la-carte": 0,
+    "/menus": 0
+   }
+  }
+ },
+ "tracking_break": {
+  "finding": "GA4 measurement broke across the HK estate from 15-16 Oct 2026. sevenrooms_booking_complete stopped firing entirely at Cantina from 16 Oct (0 events on 16,17,18 Oct against 7 website bookings a day in SevenRooms) and under-fires elsewhere. averageSessionDuration inflated 3-6x in the same window (Aqua daily asd: 12th 205s, 13th 190s, 14th 219s, 15th 357s, 16th 2408s, 17th 513s, 18th 1748s).",
+  "proof": "SevenRooms website-channel bookings for the portfolio six/seven venues rose 4.6% week on week (746 in 5-11 Oct to 780 in 12-18 Oct) while GA4 create-path bookings fell 33% (879 to 588). Cantina page_view and book_now_button_click kept firing normally on 16-18 Oct while sevenrooms_booking_complete was zero, so this is a tag break, not a data-processing lag.",
+  "unaffected": "The Canton Library (property 548638742) shows no asd inflation (93.8s vs 92.4s prior) and its bookings rose, so the newest property is clean.",
+  "ga4_vs_sr_aqua": "Aqua GA4 create-path 12-15 Oct = 116 against SevenRooms website 116 (ratio 1.00); 16-18 Oct GA4 43 against SevenRooms 75."
+ },
+ "ga4_vs_sevenrooms_daily": {
+  "sevenrooms_website_bookings": {
+   "2026-10-05": 120,
+   "2026-10-06": 113,
+   "2026-10-07": 103,
+   "2026-10-08": 114,
+   "2026-10-09": 100,
+   "2026-10-10": 102,
+   "2026-10-11": 94,
+   "2026-10-12": 116,
+   "2026-10-13": 109,
+   "2026-10-14": 114,
+   "2026-10-15": 130,
+   "2026-10-16": 113,
+   "2026-10-17": 106,
+   "2026-10-18": 92
+  },
+  "cantina_ga4_booking_events": {
+   "2026-10-12": 9,
+   "2026-10-13": 4,
+   "2026-10-14": 2,
+   "2026-10-15": 5,
+   "2026-10-16": 0,
+   "2026-10-17": 0,
+   "2026-10-18": 0
+  },
+  "aqua_avg_session_duration_seconds": {
+   "2026-10-12": 204.7,
+   "2026-10-13": 189.5,
+   "2026-10-14": 218.8,
+   "2026-10-15": 357.4,
+   "2026-10-16": 2407.7,
+   "2026-10-17": 512.7,
+   "2026-10-18": 1748.1
+  }
+ }
+}

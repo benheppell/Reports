@@ -1,1879 +1,1932 @@
 {
- "generated": "12 October 2026",
- "markets": [
-  {
-   "name": "Hong Kong",
-   "slug": "hk",
-   "ccy": "HKD",
-   "weekly": [
+  "generated": "19 October 2026",
+  "markets": [
     {
-     "dates": "W36 · 5–11 Oct 2026",
-     "folder": "w2026-10-05",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
+      "name": "Hong Kong",
+      "slug": "hk",
+      "ccy": "HKD",
+      "weekly": [
+        {
+          "dates": "W37 · 12–18 Oct 2026",
+          "folder": "w2026-10-12",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W36 · 5–11 Oct 2026",
+          "folder": "w2026-10-05",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W35 · 28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W34 · 21–27 Sep 2026",
+          "folder": "w2026-09-21",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W33 · 14–20 Sep 2026",
+          "folder": "w2026-09-14",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W32 · 7–13 Sep 2026",
+          "folder": "w2026-09-07",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W31 · 31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W30 · 24–30 Aug 2026",
+          "folder": "w2026-08-24",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W29 · 17–23 Aug 2026",
+          "folder": "w2026-08-17",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W28 · 10–16 Aug 2026",
+          "folder": "w2026-08-10",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W27 · 3–9 Aug 2026",
+          "folder": "w2026-08-03",
+          "deepdive": true,
+          "covers": true,
+          "ads": true
+        },
+        {
+          "dates": "W26 · 27 Jul–2 Aug 2026",
+          "folder": "w2026-07-27",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W25 · 20–26 Jul 2026",
+          "folder": "w2026-07-20",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W24 · 13–19 Jul 2026",
+          "folder": "w2026-07-13",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W23 · 6–12 Jul 2026",
+          "folder": "w2026-07-06",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W22 · 29 Jun–5 Jul 2026",
+          "folder": "w2026-06-29",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W21 · 22–28 Jun 2026",
+          "folder": "w2026-06-22",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W20 · 15–21 Jun 2026",
+          "folder": "w2026-06-15",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "W19 · 8–14 Jun 2026",
+          "folder": "w2026-06-08",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "25–31 May 2026",
+          "folder": "w2026-05-25",
+          "deepdive": false
+        },
+        {
+          "dates": "18–24 May 2026",
+          "folder": "w2026-05-18",
+          "deepdive": false
+        },
+        {
+          "dates": "11–17 May 2026",
+          "folder": "w2026-05-11",
+          "deepdive": false
+        },
+        {
+          "dates": "4–10 May 2026",
+          "folder": "w2026-05-04",
+          "deepdive": false
+        },
+        {
+          "dates": "27 Apr–3 May 2026",
+          "folder": "w2026-04-27",
+          "deepdive": false
+        },
+        {
+          "dates": "20–26 Apr 2026",
+          "folder": "w2026-04-20",
+          "deepdive": false
+        },
+        {
+          "dates": "13–19 Apr 2026",
+          "folder": "w2026-04-13",
+          "deepdive": false
+        },
+        {
+          "dates": "6–12 Apr 2026",
+          "folder": "w2026-04-06",
+          "deepdive": false
+        },
+        {
+          "dates": "30 Mar–5 Apr 2026",
+          "folder": "w2026-03-30",
+          "deepdive": false
+        },
+        {
+          "dates": "23–29 Mar 2026",
+          "folder": "w2026-03-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Mar 2026",
+          "folder": "w2026-03-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Mar 2026",
+          "folder": "w2026-03-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "deepdive": true,
+          "ads": true
+        }
+      ],
+      "monthly": [
+        {
+          "label": "September 2026",
+          "folder": "m2026-09"
+        },
+        {
+          "label": "August 2026",
+          "folder": "m2026-08"
+        },
+        {
+          "label": "July 2026",
+          "folder": "m2026-07"
+        },
+        {
+          "label": "June 2026",
+          "folder": "m2026-06"
+        },
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "Apr 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "Mar 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "Feb 2026",
+          "folder": "m2026-02"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "12–18 Oct 2026",
+          "folder": "w2026-10-12"
+        },
+        {
+          "dates": "5–11 Oct 2026",
+          "folder": "w2026-10-05"
+        },
+        {
+          "dates": "28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28"
+        },
+        {
+          "dates": "21–27 Sep 2026",
+          "folder": "w2026-09-21"
+        },
+        {
+          "dates": "14–20 Sep 2026",
+          "folder": "w2026-09-14"
+        },
+        {
+          "dates": "7–13 Sep 2026",
+          "folder": "w2026-09-07"
+        },
+        {
+          "dates": "31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31"
+        },
+        {
+          "dates": "24–30 Aug 2026",
+          "folder": "w2026-08-24"
+        },
+        {
+          "dates": "17–23 Aug 2026",
+          "folder": "w2026-08-17"
+        },
+        {
+          "dates": "10–16 Aug 2026",
+          "folder": "w2026-08-10"
+        },
+        {
+          "dates": "3–9 Aug 2026",
+          "folder": "w2026-08-03"
+        },
+        {
+          "dates": "27 Jul–2 Aug 2026",
+          "folder": "w2026-07-27"
+        },
+        {
+          "dates": "20–26 Jul 2026",
+          "folder": "w2026-07-20"
+        },
+        {
+          "dates": "13–19 Jul 2026",
+          "folder": "w2026-07-13"
+        },
+        {
+          "dates": "6–12 Jul 2026",
+          "folder": "w2026-07-06"
+        },
+        {
+          "dates": "29 Jun–5 Jul 2026",
+          "folder": "w2026-06-29"
+        },
+        {
+          "dates": "22–28 Jun 2026",
+          "folder": "w2026-06-22"
+        },
+        {
+          "dates": "15–21 Jun 2026",
+          "folder": "w2026-06-15"
+        },
+        {
+          "dates": "8–14 Jun 2026",
+          "folder": "w2026-06-08"
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02"
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23"
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16"
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09"
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02"
+        }
+      ],
+      "live": [
+        {
+          "label": "Covers Pace Tracker",
+          "href": "/hk-pace-tracker"
+        },
+        {
+          "href": "/pipeline/hk/",
+          "label": "Booking Pipeline"
+        }
+      ]
     },
     {
-     "dates": "W35 · 28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
+      "name": "London",
+      "slug": "london",
+      "ccy": "GBP",
+      "weekly": [
+        {
+          "dates": "W37 · 12–18 Oct 2026",
+          "folder": "w2026-10-12",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W36 · 5–11 Oct 2026",
+          "folder": "w2026-10-05",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W35 · 28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W34 · 21–27 Sep 2026",
+          "folder": "w2026-09-21",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W33 · 14–20 Sep 2026",
+          "folder": "w2026-09-14",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W32 · 7–13 Sep 2026",
+          "folder": "w2026-09-07",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W31 · 31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W30 · 24–30 Aug 2026",
+          "folder": "w2026-08-24",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W29 · 17–23 Aug 2026",
+          "folder": "w2026-08-17",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W28 · 10–16 Aug 2026",
+          "folder": "w2026-08-10",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W27 · 3–9 Aug 2026",
+          "folder": "w2026-08-03",
+          "deepdive": true,
+          "covers": true,
+          "ads": true
+        },
+        {
+          "dates": "W26 · 27 Jul–2 Aug 2026",
+          "folder": "w2026-07-27",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W25 · 20–26 Jul 2026",
+          "folder": "w2026-07-20",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W24 · 13–19 Jul 2026",
+          "folder": "w2026-07-13",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W23 · 6–12 Jul 2026",
+          "folder": "w2026-07-06",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W22 · 29 Jun–5 Jul 2026",
+          "folder": "w2026-06-29",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W21 · 22–28 Jun 2026",
+          "folder": "w2026-06-22",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W20 · 15–21 Jun 2026",
+          "folder": "w2026-06-15",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W19 · 8–14 Jun 2026",
+          "folder": "w2026-06-08",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "25–31 May 2026",
+          "folder": "w2026-05-25",
+          "deepdive": false
+        },
+        {
+          "dates": "18–24 May 2026",
+          "folder": "w2026-05-18",
+          "deepdive": false
+        },
+        {
+          "dates": "11–17 May 2026",
+          "folder": "w2026-05-11",
+          "deepdive": false
+        },
+        {
+          "dates": "4–10 May 2026",
+          "folder": "w2026-05-04",
+          "deepdive": false
+        },
+        {
+          "dates": "27 Apr–3 May 2026",
+          "folder": "w2026-04-27",
+          "deepdive": false
+        },
+        {
+          "dates": "20–26 Apr 2026",
+          "folder": "w2026-04-20",
+          "deepdive": false
+        },
+        {
+          "dates": "13–19 Apr 2026",
+          "folder": "w2026-04-13",
+          "deepdive": false
+        },
+        {
+          "dates": "6–12 Apr 2026",
+          "folder": "w2026-04-06",
+          "deepdive": false
+        },
+        {
+          "dates": "30 Mar–5 Apr 2026",
+          "folder": "w2026-03-30",
+          "deepdive": false
+        },
+        {
+          "dates": "23–29 Mar 2026",
+          "folder": "w2026-03-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Mar 2026",
+          "folder": "w2026-03-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Mar 2026",
+          "folder": "w2026-03-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "deepdive": true,
+          "ads": true
+        }
+      ],
+      "monthly": [
+        {
+          "label": "September 2026",
+          "folder": "m2026-09"
+        },
+        {
+          "label": "August 2026",
+          "folder": "m2026-08"
+        },
+        {
+          "label": "July 2026",
+          "folder": "m2026-07"
+        },
+        {
+          "label": "June 2026",
+          "folder": "m2026-06"
+        },
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "Apr 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "Mar 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "Feb 2026",
+          "folder": "m2026-02"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "12–18 Oct 2026",
+          "folder": "w2026-10-12"
+        },
+        {
+          "dates": "5–11 Oct 2026",
+          "folder": "w2026-10-05"
+        },
+        {
+          "dates": "28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28"
+        },
+        {
+          "dates": "21–27 Sep 2026",
+          "folder": "w2026-09-21"
+        },
+        {
+          "dates": "14–20 Sep 2026",
+          "folder": "w2026-09-14"
+        },
+        {
+          "dates": "7–13 Sep 2026",
+          "folder": "w2026-09-07"
+        },
+        {
+          "dates": "31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31"
+        },
+        {
+          "dates": "24–30 Aug 2026",
+          "folder": "w2026-08-24"
+        },
+        {
+          "dates": "17–23 Aug 2026",
+          "folder": "w2026-08-17"
+        },
+        {
+          "dates": "10–16 Aug 2026",
+          "folder": "w2026-08-10"
+        },
+        {
+          "dates": "3–9 Aug 2026",
+          "folder": "w2026-08-03"
+        },
+        {
+          "dates": "27 Jul–2 Aug 2026",
+          "folder": "w2026-07-27"
+        },
+        {
+          "dates": "20–26 Jul 2026",
+          "folder": "w2026-07-20"
+        },
+        {
+          "dates": "13–19 Jul 2026",
+          "folder": "w2026-07-13"
+        },
+        {
+          "dates": "6–12 Jul 2026",
+          "folder": "w2026-07-06"
+        },
+        {
+          "dates": "29 Jun–5 Jul 2026",
+          "folder": "w2026-06-29"
+        },
+        {
+          "dates": "22–28 Jun 2026",
+          "folder": "w2026-06-22"
+        },
+        {
+          "dates": "15–21 Jun 2026",
+          "folder": "w2026-06-15"
+        },
+        {
+          "dates": "8–14 Jun 2026",
+          "folder": "w2026-06-08"
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23"
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16"
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09"
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02"
+        }
+      ],
+      "live": [
+        {
+          "label": "Daily Covers & Bookings",
+          "href": "/london/daily/"
+        },
+        {
+          "label": "Covers Pace Tracker (live)",
+          "href": "/london-pace-tracker"
+        },
+        {
+          "href": "/pipeline/london/",
+          "label": "Booking Pipeline"
+        }
+      ],
+      "daily": true,
+      "daily_history": [
+        "2026-09-07",
+        "2026-09-14"
+      ]
     },
     {
-     "dates": "W34 · 21–27 Sep 2026",
-     "folder": "w2026-09-21",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
+      "name": "USA",
+      "slug": "usa",
+      "ccy": "USD",
+      "weekly": [
+        {
+          "dates": "W41 · 12–18 Oct 2026",
+          "folder": "w2026-10-12",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W40 · 5–11 Oct 2026",
+          "folder": "w2026-10-05",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W39 · 28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W38 · 21–27 Sep 2026",
+          "folder": "w2026-09-21",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W37 · 14–20 Sep 2026",
+          "folder": "w2026-09-14",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W36 · 7–13 Sep 2026",
+          "folder": "w2026-09-07",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W35 · 31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W34 · 24–30 Aug 2026",
+          "folder": "w2026-08-24",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W33 · 17–23 Aug 2026",
+          "folder": "w2026-08-17",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W32 · 10–16 Aug 2026",
+          "folder": "w2026-08-10",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W31 · 3–9 Aug 2026",
+          "folder": "w2026-08-03",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W30 · 27 Jul–2 Aug 2026",
+          "folder": "w2026-07-27",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W29 · 20–26 Jul 2026",
+          "folder": "w2026-07-20",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W28 · 13–19 Jul 2026",
+          "folder": "w2026-07-13",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W27 · 6–12 Jul 2026",
+          "folder": "w2026-07-06",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W26 · 29 Jun–5 Jul 2026",
+          "folder": "w2026-06-29",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W25 · 22–28 Jun 2026",
+          "folder": "w2026-06-22",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
+          "dates": "W24 · 15–21 Jun 2026",
+          "folder": "w2026-06-15",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "W23 · 8–14 Jun 2026",
+          "folder": "w2026-06-08",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "25–31 May 2026",
+          "folder": "w2026-05-25",
+          "deepdive": false
+        },
+        {
+          "dates": "18–24 May 2026",
+          "folder": "w2026-05-18",
+          "deepdive": false
+        },
+        {
+          "dates": "11–17 May 2026",
+          "folder": "w2026-05-11",
+          "deepdive": false
+        },
+        {
+          "dates": "4–10 May 2026",
+          "folder": "w2026-05-04",
+          "deepdive": false
+        },
+        {
+          "dates": "27 Apr–3 May 2026",
+          "folder": "w2026-04-27",
+          "deepdive": false
+        },
+        {
+          "dates": "20–26 Apr 2026",
+          "folder": "w2026-04-20",
+          "deepdive": false
+        },
+        {
+          "dates": "13–19 Apr 2026",
+          "folder": "w2026-04-13",
+          "deepdive": false
+        },
+        {
+          "dates": "6–12 Apr 2026",
+          "folder": "w2026-04-06",
+          "deepdive": false
+        },
+        {
+          "dates": "30 Mar–5 Apr 2026",
+          "folder": "w2026-03-30",
+          "deepdive": false
+        },
+        {
+          "dates": "23–29 Mar 2026",
+          "folder": "w2026-03-23",
+          "deepdive": false
+        },
+        {
+          "dates": "16–22 Mar 2026",
+          "folder": "w2026-03-16",
+          "deepdive": false
+        },
+        {
+          "dates": "9–15 Mar 2026",
+          "folder": "w2026-03-09",
+          "deepdive": false
+        },
+        {
+          "dates": "2–8 Mar 2026",
+          "folder": "w2026-03-02",
+          "deepdive": false
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "19–25 Jan 2026",
+          "folder": "w2026-01-19",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "12–18 Jan 2026",
+          "folder": "w2026-01-12",
+          "deepdive": true,
+          "ads": true
+        },
+        {
+          "dates": "5–11 Jan 2026",
+          "folder": "w2026-01-05",
+          "deepdive": true,
+          "ads": true
+        }
+      ],
+      "monthly": [
+        {
+          "label": "September 2026",
+          "folder": "m2026-09"
+        },
+        {
+          "label": "August 2026",
+          "folder": "m2026-08"
+        },
+        {
+          "label": "July 2026",
+          "folder": "m2026-07"
+        },
+        {
+          "label": "June 2026",
+          "folder": "m2026-06"
+        },
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "Apr 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "Mar 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "Feb 2026",
+          "folder": "m2026-02"
+        },
+        {
+          "label": "Jan 2026",
+          "folder": "m2026-01"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "12–18 Oct 2026",
+          "folder": "w2026-10-12"
+        },
+        {
+          "dates": "5–11 Oct 2026",
+          "folder": "w2026-10-05"
+        },
+        {
+          "dates": "28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28"
+        },
+        {
+          "dates": "21–27 Sep 2026",
+          "folder": "w2026-09-21"
+        },
+        {
+          "dates": "14–20 Sep 2026",
+          "folder": "w2026-09-14"
+        },
+        {
+          "dates": "7–13 Sep 2026",
+          "folder": "w2026-09-07"
+        },
+        {
+          "dates": "31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31"
+        },
+        {
+          "dates": "24–30 Aug 2026",
+          "folder": "w2026-08-24"
+        },
+        {
+          "dates": "17–23 Aug 2026",
+          "folder": "w2026-08-17"
+        },
+        {
+          "dates": "10–16 Aug 2026",
+          "folder": "w2026-08-10"
+        },
+        {
+          "dates": "3–9 Aug 2026",
+          "folder": "w2026-08-03"
+        },
+        {
+          "dates": "27 Jul–2 Aug 2026",
+          "folder": "w2026-07-27"
+        },
+        {
+          "dates": "20–26 Jul 2026",
+          "folder": "w2026-07-20"
+        },
+        {
+          "dates": "13–19 Jul 2026",
+          "folder": "w2026-07-13"
+        },
+        {
+          "dates": "6–12 Jul 2026",
+          "folder": "w2026-07-06"
+        },
+        {
+          "dates": "29 Jun–5 Jul 2026",
+          "folder": "w2026-06-29"
+        },
+        {
+          "dates": "22–28 Jun 2026",
+          "folder": "w2026-06-22"
+        },
+        {
+          "dates": "15–21 Jun 2026",
+          "folder": "w2026-06-15"
+        },
+        {
+          "dates": "8–14 Jun 2026",
+          "folder": "w2026-06-08"
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23"
+        },
+        {
+          "dates": "16–22 Feb 2026",
+          "folder": "w2026-02-16"
+        },
+        {
+          "dates": "9–15 Feb 2026",
+          "folder": "w2026-02-09"
+        },
+        {
+          "dates": "2–8 Feb 2026",
+          "folder": "w2026-02-02"
+        },
+        {
+          "dates": "26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26"
+        },
+        {
+          "dates": "19–25 Jan 2026",
+          "folder": "w2026-01-19"
+        },
+        {
+          "dates": "12–18 Jan 2026",
+          "folder": "w2026-01-12"
+        },
+        {
+          "dates": "5–11 Jan 2026",
+          "folder": "w2026-01-05"
+        }
+      ],
+      "live": [
+        {
+          "label": "Covers Pace Tracker",
+          "href": "/usa-pace-tracker"
+        },
+        {
+          "href": "/pipeline/usa/",
+          "label": "Booking Pipeline"
+        }
+      ]
     },
     {
-     "dates": "W33 · 14–20 Sep 2026",
-     "folder": "w2026-09-14",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
+      "name": "Dubai",
+      "slug": "dubai",
+      "ccy": "AED",
+      "weekly": [
+        {
+          "dates": "W41 · 12–18 Oct 2026",
+          "folder": "w2026-10-12",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W40 · 5–11 Oct 2026",
+          "folder": "w2026-10-05",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W39 · 28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W38 · 21–27 Sep 2026",
+          "folder": "w2026-09-21",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W37 · 14–20 Sep 2026",
+          "folder": "w2026-09-14",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W36 · 7–13 Sep 2026",
+          "folder": "w2026-09-07",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W35 · 31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W34 · 24–30 Aug 2026",
+          "folder": "w2026-08-24",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W33 · 17–23 Aug 2026",
+          "folder": "w2026-08-17",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W32 · 10–16 Aug 2026",
+          "folder": "w2026-08-10",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W31 · 3–9 Aug 2026",
+          "folder": "w2026-08-03",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W25 · 22–28 Jun 2026",
+          "folder": "w2026-06-22",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W24 · 15–21 Jun 2026",
+          "folder": "w2026-06-15",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W23 · 8–14 Jun 2026",
+          "folder": "w2026-06-08",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W8 · 23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W7 · 16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W6 · 9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W5 · 2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W4 · 26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W3 · 19–25 Jan 2026",
+          "folder": "w2026-01-19",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W2 · 12–18 Jan 2026",
+          "folder": "w2026-01-12",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W1 · 5–11 Jan 2026",
+          "folder": "w2026-01-05",
+          "ads": true,
+          "dash": false
+        }
+      ],
+      "monthly": [
+        {
+          "label": "September 2026",
+          "folder": "m2026-09"
+        },
+        {
+          "label": "August 2026",
+          "folder": "m2026-08"
+        },
+        {
+          "label": "July 2026",
+          "folder": "m2026-07"
+        },
+        {
+          "label": "June 2026",
+          "folder": "m2026-06"
+        },
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "April 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "March 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "February 2026",
+          "folder": "m2026-02"
+        },
+        {
+          "label": "January 2026",
+          "folder": "m2026-01"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "12–18 Oct 2026",
+          "folder": "w2026-10-12"
+        },
+        {
+          "dates": "5–11 Oct 2026",
+          "folder": "w2026-10-05"
+        },
+        {
+          "dates": "28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28"
+        },
+        {
+          "dates": "21–27 Sep 2026",
+          "folder": "w2026-09-21"
+        },
+        {
+          "dates": "14–20 Sep 2026",
+          "folder": "w2026-09-14"
+        },
+        {
+          "dates": "7–13 Sep 2026",
+          "folder": "w2026-09-07"
+        },
+        {
+          "dates": "31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31"
+        },
+        {
+          "dates": "24–30 Aug 2026",
+          "folder": "w2026-08-24"
+        },
+        {
+          "dates": "17–23 Aug 2026",
+          "folder": "w2026-08-17"
+        },
+        {
+          "dates": "10–16 Aug 2026",
+          "folder": "w2026-08-10"
+        },
+        {
+          "dates": "3–9 Aug 2026",
+          "folder": "w2026-08-03"
+        },
+        {
+          "dates": "22–28 Jun 2026",
+          "folder": "w2026-06-22"
+        },
+        {
+          "dates": "15–21 Jun 2026",
+          "folder": "w2026-06-15"
+        },
+        {
+          "dates": "8–14 Jun 2026",
+          "folder": "w2026-06-08"
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "W8 · 23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23"
+        },
+        {
+          "dates": "W7 · 16–22 Feb 2026",
+          "folder": "w2026-02-16"
+        },
+        {
+          "dates": "W6 · 9–15 Feb 2026",
+          "folder": "w2026-02-09"
+        },
+        {
+          "dates": "W5 · 2–8 Feb 2026",
+          "folder": "w2026-02-02"
+        },
+        {
+          "dates": "W4 · 26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26"
+        },
+        {
+          "dates": "W3 · 19–25 Jan 2026",
+          "folder": "w2026-01-19"
+        },
+        {
+          "dates": "W2 · 12–18 Jan 2026",
+          "folder": "w2026-01-12"
+        },
+        {
+          "dates": "W1 · 5–11 Jan 2026",
+          "folder": "w2026-01-05"
+        }
+      ],
+      "live": [
+        {
+          "href": "/pipeline/dubai/",
+          "label": "Booking Pipeline"
+        }
+      ]
     },
     {
-     "dates": "W32 · 7–13 Sep 2026",
-     "folder": "w2026-09-07",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W31 · 31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W30 · 24–30 Aug 2026",
-     "folder": "w2026-08-24",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W29 · 17–23 Aug 2026",
-     "folder": "w2026-08-17",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W28 · 10–16 Aug 2026",
-     "folder": "w2026-08-10",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W27 · 3–9 Aug 2026",
-     "folder": "w2026-08-03",
-     "deepdive": true,
-     "covers": true,
-     "ads": true
-    },
-    {
-     "dates": "W26 · 27 Jul–2 Aug 2026",
-     "folder": "w2026-07-27",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W25 · 20–26 Jul 2026",
-     "folder": "w2026-07-20",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W24 · 13–19 Jul 2026",
-     "folder": "w2026-07-13",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W23 · 6–12 Jul 2026",
-     "folder": "w2026-07-06",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W22 · 29 Jun–5 Jul 2026",
-     "folder": "w2026-06-29",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W21 · 22–28 Jun 2026",
-     "folder": "w2026-06-22",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W20 · 15–21 Jun 2026",
-     "folder": "w2026-06-15",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "W19 · 8–14 Jun 2026",
-     "folder": "w2026-06-08",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "25–31 May 2026",
-     "folder": "w2026-05-25",
-     "deepdive": false
-    },
-    {
-     "dates": "18–24 May 2026",
-     "folder": "w2026-05-18",
-     "deepdive": false
-    },
-    {
-     "dates": "11–17 May 2026",
-     "folder": "w2026-05-11",
-     "deepdive": false
-    },
-    {
-     "dates": "4–10 May 2026",
-     "folder": "w2026-05-04",
-     "deepdive": false
-    },
-    {
-     "dates": "27 Apr–3 May 2026",
-     "folder": "w2026-04-27",
-     "deepdive": false
-    },
-    {
-     "dates": "20–26 Apr 2026",
-     "folder": "w2026-04-20",
-     "deepdive": false
-    },
-    {
-     "dates": "13–19 Apr 2026",
-     "folder": "w2026-04-13",
-     "deepdive": false
-    },
-    {
-     "dates": "6–12 Apr 2026",
-     "folder": "w2026-04-06",
-     "deepdive": false
-    },
-    {
-     "dates": "30 Mar–5 Apr 2026",
-     "folder": "w2026-03-30",
-     "deepdive": false
-    },
-    {
-     "dates": "23–29 Mar 2026",
-     "folder": "w2026-03-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Mar 2026",
-     "folder": "w2026-03-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Mar 2026",
-     "folder": "w2026-03-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "deepdive": true,
-     "ads": true
+      "name": "Paris",
+      "slug": "paris",
+      "ccy": "EUR",
+      "weekly": [
+        {
+          "dates": "W37 · 12–18 Oct 2026",
+          "folder": "w2026-10-12",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W36 · 5–11 Oct 2026",
+          "folder": "w2026-10-05",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W35 · 28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W34 · 21–27 Sep 2026",
+          "folder": "w2026-09-21",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W33 · 14–20 Sep 2026",
+          "folder": "w2026-09-14",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W32 · 7–13 Sep 2026",
+          "folder": "w2026-09-07",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W31 · 31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W30 · 24–30 Aug 2026",
+          "folder": "w2026-08-24",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W29 · 17–23 Aug 2026",
+          "folder": "w2026-08-17",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W28 · 10–16 Aug 2026",
+          "folder": "w2026-08-10",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W27 · 3–9 Aug 2026",
+          "folder": "w2026-08-03",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W21 · 22–28 Jun 2026",
+          "folder": "w2026-06-22",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W20 · 15–21 Jun 2026",
+          "folder": "w2026-06-15",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W19 · 8–14 Jun 2026",
+          "folder": "w2026-06-08",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W4 · 23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W3 · 16–22 Feb 2026",
+          "folder": "w2026-02-16",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W2 · 9–15 Feb 2026",
+          "folder": "w2026-02-09",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W1 · 2–8 Feb 2026",
+          "folder": "w2026-02-02",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W52 · 26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W51 · 19–25 Jan 2026",
+          "folder": "w2026-01-19",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W50 · 12–18 Jan 2026",
+          "folder": "w2026-01-12",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W49 · 5–11 Jan 2026",
+          "folder": "w2026-01-05",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W48 · 29 Dec 2025–4 Jan 2026",
+          "folder": "w2025-12-29",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W47 · 22–28 Dec 2025",
+          "folder": "w2025-12-22",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W46 · 15–21 Dec 2025",
+          "folder": "w2025-12-15",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W45 · 8–14 Dec 2025",
+          "folder": "w2025-12-08",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W44 · 1–7 Dec 2025",
+          "folder": "w2025-12-01",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W43 · 24–30 Nov 2025",
+          "folder": "w2025-11-24",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W42 · 17–23 Nov 2025",
+          "folder": "w2025-11-17",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W41 · 10–16 Nov 2025",
+          "folder": "w2025-11-10",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W40 · 3–9 Nov 2025",
+          "folder": "w2025-11-03",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W39 · 27 Oct–2 Nov 2025",
+          "folder": "w2025-10-27",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W38 · 20–26 Oct 2025",
+          "folder": "w2025-10-20",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W37 · 13–19 Oct 2025",
+          "folder": "w2025-10-13",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W36 · 6–12 Oct 2025",
+          "folder": "w2025-10-06",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W35 · 29 Sep–5 Oct 2025",
+          "folder": "w2025-09-29",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W34 · 22–28 Sep 2025",
+          "folder": "w2025-09-22",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W33 · 15–21 Sep 2025",
+          "folder": "w2025-09-15",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W32 · 8–14 Sep 2025",
+          "folder": "w2025-09-08",
+          "ads": true,
+          "dash": false
+        },
+        {
+          "dates": "W31 · 1–7 Sep 2025",
+          "folder": "w2025-09-01",
+          "ads": true,
+          "dash": false
+        }
+      ],
+      "monthly": [
+        {
+          "label": "September 2026",
+          "folder": "m2026-09"
+        },
+        {
+          "label": "August 2026",
+          "folder": "m2026-08"
+        },
+        {
+          "label": "July 2026",
+          "folder": "m2026-07"
+        },
+        {
+          "label": "June 2026",
+          "folder": "m2026-06"
+        },
+        {
+          "label": "May 2026",
+          "folder": "m2026-05"
+        },
+        {
+          "label": "April 2026",
+          "folder": "m2026-04"
+        },
+        {
+          "label": "March 2026",
+          "folder": "m2026-03"
+        },
+        {
+          "label": "February 2026",
+          "folder": "m2026-02"
+        }
+      ],
+      "trends": [
+        {
+          "dates": "12–18 Oct 2026",
+          "folder": "w2026-10-12"
+        },
+        {
+          "dates": "5–11 Oct 2026",
+          "folder": "w2026-10-05"
+        },
+        {
+          "dates": "28 Sep–4 Oct 2026",
+          "folder": "w2026-09-28"
+        },
+        {
+          "dates": "21–27 Sep 2026",
+          "folder": "w2026-09-21"
+        },
+        {
+          "dates": "14–20 Sep 2026",
+          "folder": "w2026-09-14"
+        },
+        {
+          "dates": "7–13 Sep 2026",
+          "folder": "w2026-09-07"
+        },
+        {
+          "dates": "31 Aug–6 Sep 2026",
+          "folder": "w2026-08-31"
+        },
+        {
+          "dates": "24–30 Aug 2026",
+          "folder": "w2026-08-24"
+        },
+        {
+          "dates": "17–23 Aug 2026",
+          "folder": "w2026-08-17"
+        },
+        {
+          "dates": "10–16 Aug 2026",
+          "folder": "w2026-08-10"
+        },
+        {
+          "dates": "3–9 Aug 2026",
+          "folder": "w2026-08-03"
+        },
+        {
+          "dates": "22–28 Jun 2026",
+          "folder": "w2026-06-22"
+        },
+        {
+          "dates": "15–21 Jun 2026",
+          "folder": "w2026-06-15"
+        },
+        {
+          "dates": "8–14 Jun 2026",
+          "folder": "w2026-06-08"
+        },
+        {
+          "dates": "1–7 Jun 2026",
+          "folder": "w2026-06-01"
+        },
+        {
+          "dates": "W4 · 23 Feb–1 Mar 2026",
+          "folder": "w2026-02-23"
+        },
+        {
+          "dates": "W3 · 16–22 Feb 2026",
+          "folder": "w2026-02-16"
+        },
+        {
+          "dates": "W2 · 9–15 Feb 2026",
+          "folder": "w2026-02-09"
+        },
+        {
+          "dates": "W1 · 2–8 Feb 2026",
+          "folder": "w2026-02-02"
+        },
+        {
+          "dates": "W52 · 26 Jan–1 Feb 2026",
+          "folder": "w2026-01-26"
+        },
+        {
+          "dates": "W51 · 19–25 Jan 2026",
+          "folder": "w2026-01-19"
+        },
+        {
+          "dates": "W50 · 12–18 Jan 2026",
+          "folder": "w2026-01-12"
+        },
+        {
+          "dates": "W49 · 5–11 Jan 2026",
+          "folder": "w2026-01-05"
+        },
+        {
+          "dates": "W48 · 29 Dec 2025–4 Jan 2026",
+          "folder": "w2025-12-29"
+        },
+        {
+          "dates": "W47 · 22–28 Dec 2025",
+          "folder": "w2025-12-22"
+        },
+        {
+          "dates": "W46 · 15–21 Dec 2025",
+          "folder": "w2025-12-15"
+        },
+        {
+          "dates": "W45 · 8–14 Dec 2025",
+          "folder": "w2025-12-08"
+        },
+        {
+          "dates": "W44 · 1–7 Dec 2025",
+          "folder": "w2025-12-01"
+        },
+        {
+          "dates": "W43 · 24–30 Nov 2025",
+          "folder": "w2025-11-24"
+        },
+        {
+          "dates": "W42 · 17–23 Nov 2025",
+          "folder": "w2025-11-17"
+        },
+        {
+          "dates": "W41 · 10–16 Nov 2025",
+          "folder": "w2025-11-10"
+        },
+        {
+          "dates": "W40 · 3–9 Nov 2025",
+          "folder": "w2025-11-03"
+        },
+        {
+          "dates": "W39 · 27 Oct–2 Nov 2025",
+          "folder": "w2025-10-27"
+        },
+        {
+          "dates": "W38 · 20–26 Oct 2025",
+          "folder": "w2025-10-20"
+        },
+        {
+          "dates": "W37 · 13–19 Oct 2025",
+          "folder": "w2025-10-13"
+        },
+        {
+          "dates": "W36 · 6–12 Oct 2025",
+          "folder": "w2025-10-06"
+        },
+        {
+          "dates": "W35 · 29 Sep–5 Oct 2025",
+          "folder": "w2025-09-29"
+        },
+        {
+          "dates": "W34 · 22–28 Sep 2025",
+          "folder": "w2025-09-22"
+        },
+        {
+          "dates": "W33 · 15–21 Sep 2025",
+          "folder": "w2025-09-15"
+        },
+        {
+          "dates": "W32 · 8–14 Sep 2025",
+          "folder": "w2025-09-08"
+        },
+        {
+          "dates": "W31 · 1–7 Sep 2025",
+          "folder": "w2025-09-01"
+        }
+      ],
+      "live": [
+        {
+          "href": "/pipeline/paris/",
+          "label": "Booking Pipeline"
+        }
+      ]
     }
-   ],
-   "monthly": [
-    {
-     "label": "September 2026",
-     "folder": "m2026-09"
-    },
-    {
-     "label": "August 2026",
-     "folder": "m2026-08"
-    },
-    {
-     "label": "July 2026",
-     "folder": "m2026-07"
-    },
-    {
-     "label": "June 2026",
-     "folder": "m2026-06"
-    },
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "Apr 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "Mar 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "Feb 2026",
-     "folder": "m2026-02"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "5–11 Oct 2026",
-     "folder": "w2026-10-05"
-    },
-    {
-     "dates": "28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28"
-    },
-    {
-     "dates": "21–27 Sep 2026",
-     "folder": "w2026-09-21"
-    },
-    {
-     "dates": "14–20 Sep 2026",
-     "folder": "w2026-09-14"
-    },
-    {
-     "dates": "7–13 Sep 2026",
-     "folder": "w2026-09-07"
-    },
-    {
-     "dates": "31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31"
-    },
-    {
-     "dates": "24–30 Aug 2026",
-     "folder": "w2026-08-24"
-    },
-    {
-     "dates": "17–23 Aug 2026",
-     "folder": "w2026-08-17"
-    },
-    {
-     "dates": "10–16 Aug 2026",
-     "folder": "w2026-08-10"
-    },
-    {
-     "dates": "3–9 Aug 2026",
-     "folder": "w2026-08-03"
-    },
-    {
-     "dates": "27 Jul–2 Aug 2026",
-     "folder": "w2026-07-27"
-    },
-    {
-     "dates": "20–26 Jul 2026",
-     "folder": "w2026-07-20"
-    },
-    {
-     "dates": "13–19 Jul 2026",
-     "folder": "w2026-07-13"
-    },
-    {
-     "dates": "6–12 Jul 2026",
-     "folder": "w2026-07-06"
-    },
-    {
-     "dates": "29 Jun–5 Jul 2026",
-     "folder": "w2026-06-29"
-    },
-    {
-     "dates": "22–28 Jun 2026",
-     "folder": "w2026-06-22"
-    },
-    {
-     "dates": "15–21 Jun 2026",
-     "folder": "w2026-06-15"
-    },
-    {
-     "dates": "8–14 Jun 2026",
-     "folder": "w2026-06-08"
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02"
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23"
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16"
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09"
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02"
-    }
-   ],
-   "live": [
-    {
-     "label": "Covers Pace Tracker",
-     "href": "/hk-pace-tracker"
-    },
-    {
-     "href": "/pipeline/hk/",
-     "label": "Booking Pipeline"
-    }
-   ]
-  },
-  {
-   "name": "London",
-   "slug": "london",
-   "ccy": "GBP",
-   "weekly": [
-    {
-     "dates": "W36 · 5–11 Oct 2026",
-     "folder": "w2026-10-05",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W35 · 28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W34 · 21–27 Sep 2026",
-     "folder": "w2026-09-21",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W33 · 14–20 Sep 2026",
-     "folder": "w2026-09-14",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W32 · 7–13 Sep 2026",
-     "folder": "w2026-09-07",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W31 · 31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W30 · 24–30 Aug 2026",
-     "folder": "w2026-08-24",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W29 · 17–23 Aug 2026",
-     "folder": "w2026-08-17",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W28 · 10–16 Aug 2026",
-     "folder": "w2026-08-10",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W27 · 3–9 Aug 2026",
-     "folder": "w2026-08-03",
-     "deepdive": true,
-     "covers": true,
-     "ads": true
-    },
-    {
-     "dates": "W26 · 27 Jul–2 Aug 2026",
-     "folder": "w2026-07-27",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W25 · 20–26 Jul 2026",
-     "folder": "w2026-07-20",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W24 · 13–19 Jul 2026",
-     "folder": "w2026-07-13",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W23 · 6–12 Jul 2026",
-     "folder": "w2026-07-06",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W22 · 29 Jun–5 Jul 2026",
-     "folder": "w2026-06-29",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W21 · 22–28 Jun 2026",
-     "folder": "w2026-06-22",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W20 · 15–21 Jun 2026",
-     "folder": "w2026-06-15",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W19 · 8–14 Jun 2026",
-     "folder": "w2026-06-08",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "25–31 May 2026",
-     "folder": "w2026-05-25",
-     "deepdive": false
-    },
-    {
-     "dates": "18–24 May 2026",
-     "folder": "w2026-05-18",
-     "deepdive": false
-    },
-    {
-     "dates": "11–17 May 2026",
-     "folder": "w2026-05-11",
-     "deepdive": false
-    },
-    {
-     "dates": "4–10 May 2026",
-     "folder": "w2026-05-04",
-     "deepdive": false
-    },
-    {
-     "dates": "27 Apr–3 May 2026",
-     "folder": "w2026-04-27",
-     "deepdive": false
-    },
-    {
-     "dates": "20–26 Apr 2026",
-     "folder": "w2026-04-20",
-     "deepdive": false
-    },
-    {
-     "dates": "13–19 Apr 2026",
-     "folder": "w2026-04-13",
-     "deepdive": false
-    },
-    {
-     "dates": "6–12 Apr 2026",
-     "folder": "w2026-04-06",
-     "deepdive": false
-    },
-    {
-     "dates": "30 Mar–5 Apr 2026",
-     "folder": "w2026-03-30",
-     "deepdive": false
-    },
-    {
-     "dates": "23–29 Mar 2026",
-     "folder": "w2026-03-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Mar 2026",
-     "folder": "w2026-03-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Mar 2026",
-     "folder": "w2026-03-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "deepdive": true,
-     "ads": true
-    }
-   ],
-   "monthly": [
-    {
-     "label": "September 2026",
-     "folder": "m2026-09"
-    },
-    {
-     "label": "August 2026",
-     "folder": "m2026-08"
-    },
-    {
-     "label": "July 2026",
-     "folder": "m2026-07"
-    },
-    {
-     "label": "June 2026",
-     "folder": "m2026-06"
-    },
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "Apr 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "Mar 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "Feb 2026",
-     "folder": "m2026-02"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "5–11 Oct 2026",
-     "folder": "w2026-10-05"
-    },
-    {
-     "dates": "28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28"
-    },
-    {
-     "dates": "21–27 Sep 2026",
-     "folder": "w2026-09-21"
-    },
-    {
-     "dates": "14–20 Sep 2026",
-     "folder": "w2026-09-14"
-    },
-    {
-     "dates": "7–13 Sep 2026",
-     "folder": "w2026-09-07"
-    },
-    {
-     "dates": "31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31"
-    },
-    {
-     "dates": "24–30 Aug 2026",
-     "folder": "w2026-08-24"
-    },
-    {
-     "dates": "17–23 Aug 2026",
-     "folder": "w2026-08-17"
-    },
-    {
-     "dates": "10–16 Aug 2026",
-     "folder": "w2026-08-10"
-    },
-    {
-     "dates": "3–9 Aug 2026",
-     "folder": "w2026-08-03"
-    },
-    {
-     "dates": "27 Jul–2 Aug 2026",
-     "folder": "w2026-07-27"
-    },
-    {
-     "dates": "20–26 Jul 2026",
-     "folder": "w2026-07-20"
-    },
-    {
-     "dates": "13–19 Jul 2026",
-     "folder": "w2026-07-13"
-    },
-    {
-     "dates": "6–12 Jul 2026",
-     "folder": "w2026-07-06"
-    },
-    {
-     "dates": "29 Jun–5 Jul 2026",
-     "folder": "w2026-06-29"
-    },
-    {
-     "dates": "22–28 Jun 2026",
-     "folder": "w2026-06-22"
-    },
-    {
-     "dates": "15–21 Jun 2026",
-     "folder": "w2026-06-15"
-    },
-    {
-     "dates": "8–14 Jun 2026",
-     "folder": "w2026-06-08"
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23"
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16"
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09"
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02"
-    }
-   ],
-   "live": [
-    {
-     "label": "Daily Covers & Bookings",
-     "href": "/london/daily/"
-    },
-    {
-     "label": "Covers Pace Tracker (live)",
-     "href": "/london-pace-tracker"
-    },
-    {
-     "href": "/pipeline/london/",
-     "label": "Booking Pipeline"
-    }
-   ],
-   "daily": true,
-   "daily_history": [
-    "2026-09-07",
-    "2026-09-14"
-   ]
-  },
-  {
-   "name": "USA",
-   "slug": "usa",
-   "ccy": "USD",
-   "weekly": [
-    {
-     "dates": "W40 · 5–11 Oct 2026",
-     "folder": "w2026-10-05",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W39 · 28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W38 · 21–27 Sep 2026",
-     "folder": "w2026-09-21",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W37 · 14–20 Sep 2026",
-     "folder": "w2026-09-14",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W36 · 7–13 Sep 2026",
-     "folder": "w2026-09-07",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W35 · 31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W34 · 24–30 Aug 2026",
-     "folder": "w2026-08-24",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W33 · 17–23 Aug 2026",
-     "folder": "w2026-08-17",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W32 · 10–16 Aug 2026",
-     "folder": "w2026-08-10",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W31 · 3–9 Aug 2026",
-     "folder": "w2026-08-03",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W30 · 27 Jul–2 Aug 2026",
-     "folder": "w2026-07-27",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W29 · 20–26 Jul 2026",
-     "folder": "w2026-07-20",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W28 · 13–19 Jul 2026",
-     "folder": "w2026-07-13",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W27 · 6–12 Jul 2026",
-     "folder": "w2026-07-06",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W26 · 29 Jun–5 Jul 2026",
-     "folder": "w2026-06-29",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W25 · 22–28 Jun 2026",
-     "folder": "w2026-06-22",
-     "deepdive": true,
-     "ads": true,
-     "covers": true
-    },
-    {
-     "dates": "W24 · 15–21 Jun 2026",
-     "folder": "w2026-06-15",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "W23 · 8–14 Jun 2026",
-     "folder": "w2026-06-08",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "25–31 May 2026",
-     "folder": "w2026-05-25",
-     "deepdive": false
-    },
-    {
-     "dates": "18–24 May 2026",
-     "folder": "w2026-05-18",
-     "deepdive": false
-    },
-    {
-     "dates": "11–17 May 2026",
-     "folder": "w2026-05-11",
-     "deepdive": false
-    },
-    {
-     "dates": "4–10 May 2026",
-     "folder": "w2026-05-04",
-     "deepdive": false
-    },
-    {
-     "dates": "27 Apr–3 May 2026",
-     "folder": "w2026-04-27",
-     "deepdive": false
-    },
-    {
-     "dates": "20–26 Apr 2026",
-     "folder": "w2026-04-20",
-     "deepdive": false
-    },
-    {
-     "dates": "13–19 Apr 2026",
-     "folder": "w2026-04-13",
-     "deepdive": false
-    },
-    {
-     "dates": "6–12 Apr 2026",
-     "folder": "w2026-04-06",
-     "deepdive": false
-    },
-    {
-     "dates": "30 Mar–5 Apr 2026",
-     "folder": "w2026-03-30",
-     "deepdive": false
-    },
-    {
-     "dates": "23–29 Mar 2026",
-     "folder": "w2026-03-23",
-     "deepdive": false
-    },
-    {
-     "dates": "16–22 Mar 2026",
-     "folder": "w2026-03-16",
-     "deepdive": false
-    },
-    {
-     "dates": "9–15 Mar 2026",
-     "folder": "w2026-03-09",
-     "deepdive": false
-    },
-    {
-     "dates": "2–8 Mar 2026",
-     "folder": "w2026-03-02",
-     "deepdive": false
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "19–25 Jan 2026",
-     "folder": "w2026-01-19",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "12–18 Jan 2026",
-     "folder": "w2026-01-12",
-     "deepdive": true,
-     "ads": true
-    },
-    {
-     "dates": "5–11 Jan 2026",
-     "folder": "w2026-01-05",
-     "deepdive": true,
-     "ads": true
-    }
-   ],
-   "monthly": [
-    {
-     "label": "September 2026",
-     "folder": "m2026-09"
-    },
-    {
-     "label": "August 2026",
-     "folder": "m2026-08"
-    },
-    {
-     "label": "July 2026",
-     "folder": "m2026-07"
-    },
-    {
-     "label": "June 2026",
-     "folder": "m2026-06"
-    },
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "Apr 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "Mar 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "Feb 2026",
-     "folder": "m2026-02"
-    },
-    {
-     "label": "Jan 2026",
-     "folder": "m2026-01"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "5–11 Oct 2026",
-     "folder": "w2026-10-05"
-    },
-    {
-     "dates": "28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28"
-    },
-    {
-     "dates": "21–27 Sep 2026",
-     "folder": "w2026-09-21"
-    },
-    {
-     "dates": "14–20 Sep 2026",
-     "folder": "w2026-09-14"
-    },
-    {
-     "dates": "7–13 Sep 2026",
-     "folder": "w2026-09-07"
-    },
-    {
-     "dates": "31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31"
-    },
-    {
-     "dates": "24–30 Aug 2026",
-     "folder": "w2026-08-24"
-    },
-    {
-     "dates": "17–23 Aug 2026",
-     "folder": "w2026-08-17"
-    },
-    {
-     "dates": "10–16 Aug 2026",
-     "folder": "w2026-08-10"
-    },
-    {
-     "dates": "3–9 Aug 2026",
-     "folder": "w2026-08-03"
-    },
-    {
-     "dates": "27 Jul–2 Aug 2026",
-     "folder": "w2026-07-27"
-    },
-    {
-     "dates": "20–26 Jul 2026",
-     "folder": "w2026-07-20"
-    },
-    {
-     "dates": "13–19 Jul 2026",
-     "folder": "w2026-07-13"
-    },
-    {
-     "dates": "6–12 Jul 2026",
-     "folder": "w2026-07-06"
-    },
-    {
-     "dates": "29 Jun–5 Jul 2026",
-     "folder": "w2026-06-29"
-    },
-    {
-     "dates": "22–28 Jun 2026",
-     "folder": "w2026-06-22"
-    },
-    {
-     "dates": "15–21 Jun 2026",
-     "folder": "w2026-06-15"
-    },
-    {
-     "dates": "8–14 Jun 2026",
-     "folder": "w2026-06-08"
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23"
-    },
-    {
-     "dates": "16–22 Feb 2026",
-     "folder": "w2026-02-16"
-    },
-    {
-     "dates": "9–15 Feb 2026",
-     "folder": "w2026-02-09"
-    },
-    {
-     "dates": "2–8 Feb 2026",
-     "folder": "w2026-02-02"
-    },
-    {
-     "dates": "26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26"
-    },
-    {
-     "dates": "19–25 Jan 2026",
-     "folder": "w2026-01-19"
-    },
-    {
-     "dates": "12–18 Jan 2026",
-     "folder": "w2026-01-12"
-    },
-    {
-     "dates": "5–11 Jan 2026",
-     "folder": "w2026-01-05"
-    }
-   ],
-   "live": [
-    {
-     "label": "Covers Pace Tracker",
-     "href": "/usa-pace-tracker"
-    },
-    {
-     "href": "/pipeline/usa/",
-     "label": "Booking Pipeline"
-    }
-   ]
-  },
-  {
-   "name": "Dubai",
-   "slug": "dubai",
-   "ccy": "AED",
-   "weekly": [
-    {
-     "dates": "W40 · 5–11 Oct 2026",
-     "folder": "w2026-10-05",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W39 · 28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W38 · 21–27 Sep 2026",
-     "folder": "w2026-09-21",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W37 · 14–20 Sep 2026",
-     "folder": "w2026-09-14",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W36 · 7–13 Sep 2026",
-     "folder": "w2026-09-07",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W35 · 31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W34 · 24–30 Aug 2026",
-     "folder": "w2026-08-24",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W33 · 17–23 Aug 2026",
-     "folder": "w2026-08-17",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W32 · 10–16 Aug 2026",
-     "folder": "w2026-08-10",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W31 · 3–9 Aug 2026",
-     "folder": "w2026-08-03",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W25 · 22–28 Jun 2026",
-     "folder": "w2026-06-22",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W24 · 15–21 Jun 2026",
-     "folder": "w2026-06-15",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W23 · 8–14 Jun 2026",
-     "folder": "w2026-06-08",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W8 · 23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W7 · 16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W6 · 9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W5 · 2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W4 · 26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W3 · 19–25 Jan 2026",
-     "folder": "w2026-01-19",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W2 · 12–18 Jan 2026",
-     "folder": "w2026-01-12",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W1 · 5–11 Jan 2026",
-     "folder": "w2026-01-05",
-     "ads": true,
-     "dash": false
-    }
-   ],
-   "monthly": [
-    {
-     "label": "September 2026",
-     "folder": "m2026-09"
-    },
-    {
-     "label": "August 2026",
-     "folder": "m2026-08"
-    },
-    {
-     "label": "July 2026",
-     "folder": "m2026-07"
-    },
-    {
-     "label": "June 2026",
-     "folder": "m2026-06"
-    },
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "April 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "March 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "February 2026",
-     "folder": "m2026-02"
-    },
-    {
-     "label": "January 2026",
-     "folder": "m2026-01"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "5–11 Oct 2026",
-     "folder": "w2026-10-05"
-    },
-    {
-     "dates": "28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28"
-    },
-    {
-     "dates": "21–27 Sep 2026",
-     "folder": "w2026-09-21"
-    },
-    {
-     "dates": "14–20 Sep 2026",
-     "folder": "w2026-09-14"
-    },
-    {
-     "dates": "7–13 Sep 2026",
-     "folder": "w2026-09-07"
-    },
-    {
-     "dates": "31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31"
-    },
-    {
-     "dates": "24–30 Aug 2026",
-     "folder": "w2026-08-24"
-    },
-    {
-     "dates": "17–23 Aug 2026",
-     "folder": "w2026-08-17"
-    },
-    {
-     "dates": "10–16 Aug 2026",
-     "folder": "w2026-08-10"
-    },
-    {
-     "dates": "3–9 Aug 2026",
-     "folder": "w2026-08-03"
-    },
-    {
-     "dates": "22–28 Jun 2026",
-     "folder": "w2026-06-22"
-    },
-    {
-     "dates": "15–21 Jun 2026",
-     "folder": "w2026-06-15"
-    },
-    {
-     "dates": "8–14 Jun 2026",
-     "folder": "w2026-06-08"
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "W8 · 23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23"
-    },
-    {
-     "dates": "W7 · 16–22 Feb 2026",
-     "folder": "w2026-02-16"
-    },
-    {
-     "dates": "W6 · 9–15 Feb 2026",
-     "folder": "w2026-02-09"
-    },
-    {
-     "dates": "W5 · 2–8 Feb 2026",
-     "folder": "w2026-02-02"
-    },
-    {
-     "dates": "W4 · 26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26"
-    },
-    {
-     "dates": "W3 · 19–25 Jan 2026",
-     "folder": "w2026-01-19"
-    },
-    {
-     "dates": "W2 · 12–18 Jan 2026",
-     "folder": "w2026-01-12"
-    },
-    {
-     "dates": "W1 · 5–11 Jan 2026",
-     "folder": "w2026-01-05"
-    }
-   ],
-   "live": [
-    {
-     "href": "/pipeline/dubai/",
-     "label": "Booking Pipeline"
-    }
-   ]
-  },
-  {
-   "name": "Paris",
-   "slug": "paris",
-   "ccy": "EUR",
-   "weekly": [
-    {
-     "dates": "W36 · 5–11 Oct 2026",
-     "folder": "w2026-10-05",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W35 · 28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W34 · 21–27 Sep 2026",
-     "folder": "w2026-09-21",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W33 · 14–20 Sep 2026",
-     "folder": "w2026-09-14",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W32 · 7–13 Sep 2026",
-     "folder": "w2026-09-07",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W31 · 31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W30 · 24–30 Aug 2026",
-     "folder": "w2026-08-24",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W29 · 17–23 Aug 2026",
-     "folder": "w2026-08-17",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W28 · 10–16 Aug 2026",
-     "folder": "w2026-08-10",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W27 · 3–9 Aug 2026",
-     "folder": "w2026-08-03",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W21 · 22–28 Jun 2026",
-     "folder": "w2026-06-22",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W20 · 15–21 Jun 2026",
-     "folder": "w2026-06-15",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W19 · 8–14 Jun 2026",
-     "folder": "w2026-06-08",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W4 · 23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W3 · 16–22 Feb 2026",
-     "folder": "w2026-02-16",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W2 · 9–15 Feb 2026",
-     "folder": "w2026-02-09",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W1 · 2–8 Feb 2026",
-     "folder": "w2026-02-02",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W52 · 26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W51 · 19–25 Jan 2026",
-     "folder": "w2026-01-19",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W50 · 12–18 Jan 2026",
-     "folder": "w2026-01-12",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W49 · 5–11 Jan 2026",
-     "folder": "w2026-01-05",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W48 · 29 Dec 2025–4 Jan 2026",
-     "folder": "w2025-12-29",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W47 · 22–28 Dec 2025",
-     "folder": "w2025-12-22",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W46 · 15–21 Dec 2025",
-     "folder": "w2025-12-15",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W45 · 8–14 Dec 2025",
-     "folder": "w2025-12-08",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W44 · 1–7 Dec 2025",
-     "folder": "w2025-12-01",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W43 · 24–30 Nov 2025",
-     "folder": "w2025-11-24",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W42 · 17–23 Nov 2025",
-     "folder": "w2025-11-17",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W41 · 10–16 Nov 2025",
-     "folder": "w2025-11-10",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W40 · 3–9 Nov 2025",
-     "folder": "w2025-11-03",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W39 · 27 Oct–2 Nov 2025",
-     "folder": "w2025-10-27",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W38 · 20–26 Oct 2025",
-     "folder": "w2025-10-20",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W37 · 13–19 Oct 2025",
-     "folder": "w2025-10-13",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W36 · 6–12 Oct 2025",
-     "folder": "w2025-10-06",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W35 · 29 Sep–5 Oct 2025",
-     "folder": "w2025-09-29",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W34 · 22–28 Sep 2025",
-     "folder": "w2025-09-22",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W33 · 15–21 Sep 2025",
-     "folder": "w2025-09-15",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W32 · 8–14 Sep 2025",
-     "folder": "w2025-09-08",
-     "ads": true,
-     "dash": false
-    },
-    {
-     "dates": "W31 · 1–7 Sep 2025",
-     "folder": "w2025-09-01",
-     "ads": true,
-     "dash": false
-    }
-   ],
-   "monthly": [
-    {
-     "label": "September 2026",
-     "folder": "m2026-09"
-    },
-    {
-     "label": "August 2026",
-     "folder": "m2026-08"
-    },
-    {
-     "label": "July 2026",
-     "folder": "m2026-07"
-    },
-    {
-     "label": "June 2026",
-     "folder": "m2026-06"
-    },
-    {
-     "label": "May 2026",
-     "folder": "m2026-05"
-    },
-    {
-     "label": "April 2026",
-     "folder": "m2026-04"
-    },
-    {
-     "label": "March 2026",
-     "folder": "m2026-03"
-    },
-    {
-     "label": "February 2026",
-     "folder": "m2026-02"
-    }
-   ],
-   "trends": [
-    {
-     "dates": "5–11 Oct 2026",
-     "folder": "w2026-10-05"
-    },
-    {
-     "dates": "28 Sep–4 Oct 2026",
-     "folder": "w2026-09-28"
-    },
-    {
-     "dates": "21–27 Sep 2026",
-     "folder": "w2026-09-21"
-    },
-    {
-     "dates": "14–20 Sep 2026",
-     "folder": "w2026-09-14"
-    },
-    {
-     "dates": "7–13 Sep 2026",
-     "folder": "w2026-09-07"
-    },
-    {
-     "dates": "31 Aug–6 Sep 2026",
-     "folder": "w2026-08-31"
-    },
-    {
-     "dates": "24–30 Aug 2026",
-     "folder": "w2026-08-24"
-    },
-    {
-     "dates": "17–23 Aug 2026",
-     "folder": "w2026-08-17"
-    },
-    {
-     "dates": "10–16 Aug 2026",
-     "folder": "w2026-08-10"
-    },
-    {
-     "dates": "3–9 Aug 2026",
-     "folder": "w2026-08-03"
-    },
-    {
-     "dates": "22–28 Jun 2026",
-     "folder": "w2026-06-22"
-    },
-    {
-     "dates": "15–21 Jun 2026",
-     "folder": "w2026-06-15"
-    },
-    {
-     "dates": "8–14 Jun 2026",
-     "folder": "w2026-06-08"
-    },
-    {
-     "dates": "1–7 Jun 2026",
-     "folder": "w2026-06-01"
-    },
-    {
-     "dates": "W4 · 23 Feb–1 Mar 2026",
-     "folder": "w2026-02-23"
-    },
-    {
-     "dates": "W3 · 16–22 Feb 2026",
-     "folder": "w2026-02-16"
-    },
-    {
-     "dates": "W2 · 9–15 Feb 2026",
-     "folder": "w2026-02-09"
-    },
-    {
-     "dates": "W1 · 2–8 Feb 2026",
-     "folder": "w2026-02-02"
-    },
-    {
-     "dates": "W52 · 26 Jan–1 Feb 2026",
-     "folder": "w2026-01-26"
-    },
-    {
-     "dates": "W51 · 19–25 Jan 2026",
-     "folder": "w2026-01-19"
-    },
-    {
-     "dates": "W50 · 12–18 Jan 2026",
-     "folder": "w2026-01-12"
-    },
-    {
-     "dates": "W49 · 5–11 Jan 2026",
-     "folder": "w2026-01-05"
-    },
-    {
-     "dates": "W48 · 29 Dec 2025–4 Jan 2026",
-     "folder": "w2025-12-29"
-    },
-    {
-     "dates": "W47 · 22–28 Dec 2025",
-     "folder": "w2025-12-22"
-    },
-    {
-     "dates": "W46 · 15–21 Dec 2025",
-     "folder": "w2025-12-15"
-    },
-    {
-     "dates": "W45 · 8–14 Dec 2025",
-     "folder": "w2025-12-08"
-    },
-    {
-     "dates": "W44 · 1–7 Dec 2025",
-     "folder": "w2025-12-01"
-    },
-    {
-     "dates": "W43 · 24–30 Nov 2025",
-     "folder": "w2025-11-24"
-    },
-    {
-     "dates": "W42 · 17–23 Nov 2025",
-     "folder": "w2025-11-17"
-    },
-    {
-     "dates": "W41 · 10–16 Nov 2025",
-     "folder": "w2025-11-10"
-    },
-    {
-     "dates": "W40 · 3–9 Nov 2025",
-     "folder": "w2025-11-03"
-    },
-    {
-     "dates": "W39 · 27 Oct–2 Nov 2025",
-     "folder": "w2025-10-27"
-    },
-    {
-     "dates": "W38 · 20–26 Oct 2025",
-     "folder": "w2025-10-20"
-    },
-    {
-     "dates": "W37 · 13–19 Oct 2025",
-     "folder": "w2025-10-13"
-    },
-    {
-     "dates": "W36 · 6–12 Oct 2025",
-     "folder": "w2025-10-06"
-    },
-    {
-     "dates": "W35 · 29 Sep–5 Oct 2025",
-     "folder": "w2025-09-29"
-    },
-    {
-     "dates": "W34 · 22–28 Sep 2025",
-     "folder": "w2025-09-22"
-    },
-    {
-     "dates": "W33 · 15–21 Sep 2025",
-     "folder": "w2025-09-15"
-    },
-    {
-     "dates": "W32 · 8–14 Sep 2025",
-     "folder": "w2025-09-08"
-    },
-    {
-     "dates": "W31 · 1–7 Sep 2025",
-     "folder": "w2025-09-01"
-    }
-   ],
-   "live": [
-    {
-     "href": "/pipeline/paris/",
-     "label": "Booking Pipeline"
-    }
-   ]
-  }
- ]
+  ]
 }

@@ -1,0 +1,184 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W34",
+  "W35",
+  "W36",
+  "W37"
+ ],
+ "dateTY": [
+  "21–27 Sep",
+  "28 Sep–4 Oct",
+  "5–11 Oct",
+  "12–18 Oct"
+ ],
+ "dateLY": [
+  "22–28 Sep",
+  "29 Sep–5 Oct",
+  "6–12 Oct",
+  "13–19 Oct"
+ ],
+ "fyrange": "FY26 weeks 34–37",
+ "sym": "€",
+ "gaps": true,
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     4467,
+     5395,
+     4632,
+     3829
+    ],
+    [
+     4896,
+     5433,
+     13524,
+     8166
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     5.7,
+     6.2,
+     6.0,
+     4.9
+    ],
+    [
+     3.7,
+     3.3,
+     2.0,
+     3.4
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     254,
+     334,
+     280,
+     189
+    ],
+    [
+     181,
+     182,
+     267,
+     281
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     40,
+     49,
+     39,
+     54
+    ],
+    [
+     2,
+     9,
+     9,
+     2
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     55.0,
+     47.0,
+     55.0,
+     43.0
+    ],
+    [
+     55.33,
+     31.67,
+     23.0,
+     64.0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     25.5,
+     25.4,
+     28.1,
+     37.5
+    ],
+    [
+     16.3,
+     28.8,
+     23.8,
+     15.5
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     32.0,
+     30.2,
+     43.0,
+     30.8
+    ],
+    [
+     161.3,
+     84.4,
+     196.9,
+     926.6
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W37 users 3,829 with 189 GA4 bookings on the create path, both down on W36 (4,632 users, 280 bookings) and the lowest of the last four weeks; conversion rate 4.94%. Bookings are down 32.5% on W36 and down 32.7% on the year-ago 281, and both sides of that comparison are rebuilt on the create path, so the two years sit on the same basis. The fall is concentrated in the last three days: create-path bookings ran 28, 34, 34 and 44 from Monday to Thursday, then 22, 16 and 10 on Friday, Saturday and Sunday, against 43, 42 and 42 on the same three days of W36. Conversion inside the booking flow held at 10 to 13% every single day, so the widget itself is working. What fell is entry into it: sessions reaching the reservation flow were about 40% of site sessions Monday to Thursday and 26%, 23% and 20% on Friday to Sunday. Unpaid traffic carried the drop, with Organic Search sessions 1,513 from 2,152 and Direct 858 from 1,442, while Paid Search rose to 956 from 872. Ad spend was close to flat at €3,273 from €3,223 and ad-driven bookings 97 from 94, so blended CPA improved slightly to €33.74 from €34.29. The two platforms moved in opposite directions. Meta took €1,662 for 54 bookings at €30.77 CPA, its best of the eight weeks shown, while Google took €1,611 for 43 bookings at €37.47, its worst. Google in the same week last year returned 64 bookings for €990, a €15.46 CPA, so Google is now paying 2.4 times as much per booking as it did a year ago."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "blue",
+   "New venue",
+   "GA4 went live late 2025, so the year-ago weeks are real readings but W37 last year still carries launch traffic: 17,496 sessions off 8,166 users with only 19.7% new users"
+  ]
+ },
+ "sharednote": {},
+ "generated": "19 October 2026"
+}

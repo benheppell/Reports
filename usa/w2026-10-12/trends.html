@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua USA — Venue Trends</title>
+<style>@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:32px;max-width:1120px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:24px;font-weight:700;margin-top:8px}
+.sub{color:#64748b;margin:6px 0 18px;font-size:13.5px;line-height:1.5}
+.bar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+select{font-family:inherit;font-size:15px;font-weight:600;color:#0f172a;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
+.fy{font-size:12px;font-weight:700;color:#475569;background:#f1f5f9;padding:7px 12px;border-radius:8px;font-family:'JetBrains Mono',monospace}
+.chip{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:7px 13px;border-radius:999px}
+.chip .dot{width:8px;height:8px;border-radius:50%}
+.chip.green{background:#ecfdf5;color:#047857}.chip.green .dot{background:#10b981}
+.chip.amber{background:#fffbeb;color:#b45309}.chip.amber .dot{background:#f59e0b}
+.chip.red{background:#fef2f2;color:#b91c1c}.chip.red .dot{background:#ef4444}
+.chip.blue{background:#eff6ff;color:#1d4ed8}.chip.blue .dot{background:#3b82f6}
+.narr{background:#f8fafc;border:1px solid #eef2f6;border-left:3px solid #2563eb;border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.55;color:#1e293b;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}}
+.card{border:1px solid #e7ecf2;border-radius:12px;padding:13px 14px 11px}
+.card .lab{font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#64748b}
+.card .lab .sh{font-weight:600;color:#b6c0cc;letter-spacing:0;text-transform:none}
+.snote{font-size:12px;color:#94a3b8;font-style:italic;margin:-8px 0 16px;line-height:1.45}
+.card .row{display:flex;align-items:baseline;justify-content:space-between;margin:5px 0 9px}
+.card .val{font-family:'JetBrains Mono',monospace;font-size:21px;font-weight:600;color:#0f172a}
+.badge{font-size:11.5px;font-weight:700;padding:3px 8px;border-radius:7px;white-space:nowrap}
+.badge.up{background:#ecfdf5;color:#047857}.badge.down{background:#fef2f2;color:#b91c1c}.badge.flat{background:#f1f5f9;color:#475569}
+.cv{position:relative}
+.cv svg{display:block;width:100%;height:60px}
+.ticks{position:relative;height:26px;margin-top:2px}
+.ticks span{position:absolute;text-align:center;line-height:1.15;font-family:'JetBrains Mono',monospace}
+.ticks b{font-size:9.5px;color:#475569;font-weight:600}
+.ticks i{font-size:8.5px;color:#aeb8c4;font-style:normal;display:block}
+.gl{display:flex;gap:8px;align-items:center;font-size:9px;color:#cbd5e1;font-family:'JetBrains Mono',monospace;justify-content:flex-end;margin-bottom:1px}
+.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;color:#475569;margin:18px 0 4px;align-items:center}
+.legend i{display:inline-block;width:22px;height:0;vertical-align:middle;margin-right:6px}
+.legend .a{border-top:3px solid #2563eb}.legend .b{border-top:3px dashed #94a3b8}
+footer{margin-top:24px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}
+</style></head><body>
+<a class="back" href="../index.html">&larr; All USA reports</a>
+<h1>USA &middot; Venue Trends</h1>
+<div class="sub">Direction of travel: the last 4 weeks (Mon&ndash;Sun) vs the same 4 weeks last year. Built to spot whether users and conversion rate are in line, so a site or tracking change shows up early. Solid blue = this year, dashed grey = last year. Weeks are numbered by financial year.</div>
+<div class="bar"><select id="vsel"></select><span class="fy" id="fy"></span><span id="alert"></span></div>
+<div class="narr" id="narr"></div>
+<div class="snote" id="snote"></div>
+<div class="grid" id="grid"></div>
+<div class="legend"><span><i class="a"></i>This year</span><span><i class="b"></i>Same FY weeks last year</span><span>CPA: lower is better (green badge = down)</span></div>
+<footer>GA4 bookings = sevenrooms_booking_complete &middot; Meta bookings = schedules (offsite pixel) &middot; Google bookings = Sevenrooms booking conversions &middot; Walk-in signals = Google local actions (store visits + directions + menu views + Book&nbsp;Now + calls). CPA = ad spend &divide; bookings on that platform. Badge compares the latest FY week to the same FY week last year. FY week 1 = first Monday of the year; users are summed daily users over each Mon&ndash;Sun week.</footer>
+<script>
+var PAY={"venues":["Aqua Roma","Aqua Kyoto","Hutong NYC","Hutong Miami"],"labels":["","","",""],"weekno":["W38","W39","W40","W41"],"gaps":true,"dateTY":["21\u201327 Sep","28 Sep\u20134 Oct","5\u201311 Oct","12\u201318 Oct"],"dateLY":["22\u201328 Sep","29 Sep\u20135 Oct","6\u201312 Oct","13\u201319 Oct"],"fyrange":"FY26 weeks 38\u201341","sym":"$","data":{"Aqua Roma":[["Website users",[4847,5179,5674,5083],[7435,7363,7978,6428],false,"n"],["Conversion rate",[3.4,3.2,3.2,2.5],[3.7,3.7,3.1,4.3],false,"%"],["GA4 bookings",[165,167,184,129],[273,276,246,277],false,"n"],["Meta bookings",[59,71,55,69],[43,32,36,69],false,"n","shared"],["Google bookings",[30,21,20,11],[63,80,54,68],false,"n","shared"],["Google CPA",[21.1,28.8,36.6,64.8],[22.4,15.3,21.0,20.1],true,"$","shared"],["Meta CPA",[32.3,28.8,39.4,28.4],[23.7,38.8,47.1,24.5],true,"$","shared"],["Google walk-in signals",[282,207,245,101],[147,null,null,null],false,"n","shared"]],"Aqua Kyoto":[["Website users",[1057,1075,1033,836],[null,null,null,null],false,"n"],["Conversion rate",[3.0,2.0,2.1,2.6],[null,null,null,null],false,"%"],["GA4 bookings",[32,21,22,22],[null,null,null,null],false,"n"],["Meta bookings",[59,71,55,69],[43,32,36,69],false,"n","shared"],["Google bookings",[30,21,20,11],[63,80,54,68],false,"n","shared"],["Google CPA",[21.1,28.8,36.6,64.8],[22.4,15.3,21.0,20.1],true,"$","shared"],["Meta CPA",[32.3,28.8,39.4,28.4],[23.7,38.8,47.1,24.5],true,"$","shared"],["Google walk-in signals",[282,207,245,101],[147,null,null,null],false,"n","shared"]],"Hutong NYC":[["Website users",[2949,2653,3892,4546],[2780,3540,4547,4155],false,"n"],["Conversion rate",[4.4,4.4,3.2,1.5],[null,null,null,null],false,"%"],["GA4 bookings",[130,117,126,67],[null,null,null,null],false,"n"],["Meta bookings",[10,17,8,20],[null,null,null,null],false,"n"],["Google bookings",[31,18,23,8],[null,null,null,null],false,"n"],["Google CPA",[32.7,63.2,46.3,140.3],[null,null,null,null],true,"$"],["Meta CPA",[105.5,74.6,174.4,71.7],[null,null,null,null],true,"$"],["Google walk-in signals",[466,520,485,285],[843,868,1061,1065],false,"n"]],"Hutong Miami":[["Website users",[1520,1599,2853,3949],[2699,3251,4302,3362],false,"n"],["Conversion rate",[3.0,3.8,2.0,1.0],[4.6,2.7,2.3,2.3],false,"%"],["GA4 bookings",[46,60,58,40],[124,87,101,76],false,"n"],["Meta bookings",[28,45,27,50],[44,39,65,29],false,"n"],["Google bookings",[12,20,18,9],[31,21,17,21],false,"n"],["Google CPA",[43.7,27.1,35.1,64.8],[32.5,42.2,48.0,43.0],true,"$"],["Meta CPA",[54.4,36.5,60.0,33.2],[23.2,29.2,20.7,38.3],true,"$"],["Google walk-in signals",[162,152,189,112],[353,276,257,250],false,"n"]]},"narr":{"Aqua Roma":"W41 users 5,083, down 10.4 percent on the week and 20.9 percent below last year, with 129 GA4 bookings against 277 last year. GA4's booking event stopped firing after 15 October, so the W41 booking and conversion points cover four days of the seven. SevenRooms took 125 website bookings across 16 to 18 October against 5 GA4 events, so read the fall as a measurement failure. Meta, Google and walk-in panels are unaffected. Meta delivered 69 bookings at $28, the best efficiency of the four weeks shown, and Google 11 at $65 on provisional figures that will settle upward. All booking points on this panel are rebuilt on the create path and the last-year line is restricted to Aqua's own venue paths, so they do not tie to the figures published before this week. The last-year walk-in points are gaps: the account returned no Store visits or Local actions rows from the end of September 2025.","Aqua Kyoto":"W41 users 836 with 22 GA4 bookings, flat on the 22 of the week before; conversion rate 2.6 percent. GA4's booking event stopped firing after 15 October, so the W41 booking and conversion points cover four days of the seven. SevenRooms took 125 website bookings across 16 to 18 October against 5 GA4 events, so read the fall as a measurement failure. Meta, Google and walk-in panels are unaffected. Shown this year only as a 2026 launch, which is the standing treatment. Worth knowing that the GA4 property does carry create-path booking events on aquakyotonyc pages in October 2025, 85 in the year-ago week, so the new-venue framing is worth a second look. Meta and Google panels are the shared Aqua NYC accounts.","Hutong NYC":"W41 users 4,546, up 16.8 percent on the week and 9.4 percent above last year, with 67 GA4 bookings. GA4's booking event stopped firing after 15 October, so the W41 booking and conversion points cover four days of the seven. SevenRooms took 125 website bookings across 16 to 18 October against 5 GA4 events, so read the fall as a measurement failure. Meta, Google and walk-in panels are unaffected. At this venue the event failed during 15 October, which is a day earlier than the other two. There is no last-year booking comparison on any of the four points: the site's SevenRooms tracking stopped on 22 September 2025 and resumed on 15 October, so the last-year GA4, Meta and Google booking points are shown as gaps. Walk-in signals are unaffected and are kept. Meta improved sharply, 20 bookings at $72 against 8 at $174 last week; Google shows 8 at $140, provisional and understated.","Hutong Miami":"W41 users 3,949, up 38.4 percent on the week and 17.5 percent above last year, with 40 GA4 bookings against 76 last year. GA4's booking event stopped firing after 15 October, so the W41 booking and conversion points cover four days of the seven. SevenRooms took 125 website bookings across 16 to 18 October against 5 GA4 events, so read the fall as a measurement failure. Meta, Google and walk-in panels are unaffected. Meta had its strongest week of the four, 50 bookings at $33, and Google 9 at $65 on provisional figures. Last week's Google reading has already restated from 13.0 to 18.0, so the latest CPA point is a ceiling."},"alert":{"Aqua Roma":["red","Tracking break","GA4 booking event stopped firing after 15 Oct 2026, so W41 covers four days"],"Aqua Kyoto":["blue","New venue","Launched 2026, this-year only, no YoY comparison"],"Hutong NYC":["red","Tracking break","GA4 booking event failed during 15 Oct 2026; last-year week also inside the 2025 outage"],"Hutong Miami":["red","Tracking break","GA4 booking event stopped firing after 15 Oct 2026, so W41 covers four days"]},"sharednote":{"Aqua Roma":"Meta & Google panels are the shared Aqua NYC ad account (Aqua Roma + Aqua Kyoto NYC combined).","Aqua Kyoto":"Meta & Google panels are the shared Aqua NYC ad account (Aqua Roma + Aqua Kyoto NYC combined)."}};
+var W=200,H=58,PADX=4,PADY=6,N=PAY.labels.length;
+function xpos(i){return PADX + i/(N-1)*(W-2*PADX);}      // svg units
+function xpct(i){return xpos(i)/W*100;}                  // percent for ticks
+var SYM=PAY.sym||'$';
+function fmt(v,f){if(v==null)return 'n/a';if(f=='%')return v.toFixed(2)+'%';if(f=='$')return SYM+v.toFixed(1);return Math.round(v).toLocaleString();}
+function badge(ty,ly,inv){var t=ty[ty.length-1],l=ly[ly.length-1];if(t===null||!l)return ['flat','n/a'];
+ var p=(t-l)/l*100;var good=inv? p<0 : p>0;var cls=Math.abs(p)<2?'flat':(good?'up':'down');
+ return [cls,(p>=0?'+':'')+p.toFixed(0)+'% YoY'];}
+function segs(a,mn,mx){var out=[],c=[];a.forEach(function(v,i){if(v===null){if(c.length)out.push(c);c=[];return;}
+ var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);c.push([xpos(i).toFixed(1),y.toFixed(1)]);});if(c.length)out.push(c);return out;}
+function pl(a,mn,mx,st,col){return segs(a,mn,mx).map(function(sg){if(sg.length==1)return '<circle cx="'+sg[0][0]+'" cy="'+sg[0][1]+'" r="2" fill="'+col+'"/>';
+ return '<polyline fill="none" '+st+' points="'+sg.map(function(q){return q.join(',');}).join(' ')+'"/>';}).join('');}
+function poly(a,mn,mx){return a.map(function(v,i){
+   var y=H-PADY-(v-mn)/(mx-mn)*(H-2*PADY);return xpos(i).toFixed(1)+','+y.toFixed(1);}).join(' ');}
+function spark(ty,ly){
+ var all=ty.concat(ly).filter(function(v){return v!==null;});if(!all.length)all=[0,1];var mn=Math.min.apply(null,all),mx=Math.max.apply(null,all);if(mx==mn)mx=mn+1;
+ var lx=xpos(ty.length-1),lyv=H-PADY-(ty[ty.length-1]-mn)/(mx-mn)*(H-2*PADY);
+ var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none">';
+ for(var i=0;i<N;i++){var x=xpos(i).toFixed(1);svg+='<line x1="'+x+'" y1="0" x2="'+x+'" y2="'+H+'" stroke="#f1f5f9" stroke-width="1"/>';}
+ svg+=pl(ly,mn,mx,'stroke="#94a3b8" stroke-width="2" stroke-dasharray="4 3" stroke-linejoin="round" stroke-linecap="round"','#94a3b8')
+   +pl(ty,mn,mx,'stroke="#2563eb" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"','#2563eb')
+   +(ty[ty.length-1]===null?'':'<circle cx="'+lx.toFixed(1)+'" cy="'+lyv.toFixed(1)+'" r="3.2" fill="#2563eb"/>')+'</svg>';
+ return svg;
+}
+function ticks(){
+ var h='<div class="ticks">';
+ for(var i=0;i<N;i++){
+   var p=xpct(i);var tf=(i==0?'translateX(0)':(i==N-1?'translateX(-100%)':'translateX(-50%)'));
+   h+='<span style="left:'+p.toFixed(1)+'%;transform:'+tf+'"><b>'+PAY.weekno[i]+'</b><i>'+PAY.dateTY[i]+'</i></span>';
+ }
+ return h+'</div>';
+}
+function render(v){
+ var d=PAY.data[v];
+ document.getElementById('fy').textContent=PAY.fyrange;
+ document.getElementById('narr').textContent=PAY.narr[v];
+ var sn=document.getElementById('snote'); if(sn){sn.textContent=(PAY.sharednote&&PAY.sharednote[v])?PAY.sharednote[v]:'';}
+ var a=PAY.alert[v];
+ document.getElementById('alert').innerHTML='<span class="chip '+a[0]+'" title="'+a[2]+'"><span class="dot"></span>'+a[1]+'</span>';
+ var g=document.getElementById('grid');g.innerHTML='';
+ d.forEach(function(p){
+   var lab=p[0],ty=p[1],ly=p[2],inv=p[3],f=p[4];var b=badge(ty,ly,inv);
+   var card=document.createElement('div');card.className='card';
+   card.innerHTML='<div class="lab">'+lab+(p[5]==='shared'?' <span class="sh">· shared</span>':'')+'</div>'
+     +'<div class="row"><span class="val">'+fmt(ty[ty.length-1],f)+'</span><span class="badge '+b[0]+'">'+b[1]+'</span></div>'
+     +'<div class="cv">'+spark(ty,ly)+'</div>'+ticks();
+   g.appendChild(card);
+ });
+}
+var sel=document.getElementById('vsel');
+PAY.venues.forEach(function(v){var o=document.createElement('option');o.value=v;o.textContent=v;sel.appendChild(o);});
+sel.onchange=function(){render(this.value);};
+render(PAY.venues[0]);
+</script>
+</body></html>

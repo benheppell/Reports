@@ -1,0 +1,910 @@
+{
+ "meta_info": {
+  "currency": "HKD",
+  "cur": "2026-10-12..2026-10-18",
+  "prior": "2026-10-05..2026-10-11",
+  "yoy": "2025-10-13..2025-10-19",
+  "weeks": {
+   "W30": "2026-08-24",
+   "W31": "2026-08-31",
+   "W32": "2026-09-07",
+   "W33": "2026-09-14",
+   "W34": "2026-09-21",
+   "W35": "2026-09-28",
+   "W36": "2026-10-05",
+   "W37": "2026-10-12"
+  },
+  "ly_weeks": {
+   "L34": "2025-09-22",
+   "L35": "2025-09-29",
+   "L36": "2025-10-06",
+   "L37": "2025-10-13"
+  },
+  "meta_bookings_definition": "conversions[].schedule_total from facebook_get_adaccount_insights at account level, explicit time_range, time_increment 7",
+  "google_bookings_definition": "metrics.all_conversions for conversion actions containing 'booking' AND 'complete', excluding names containing 'ga4' EXCEPT at Cantina and Shiro where the GA4-named action is the venue's only booking action",
+  "google_walkin_definition": "sum of all_conversions for 'Store visits','Local actions - Directions','Local actions - Menu views','Clicks to call' ('Click Book Now' is not present in any HK account)",
+  "google_spend": "GAQL FROM customer with segments.week; the connector returns cost already in HKD; no conversion applied",
+  "warnings": [
+   "THE META SCHEDULE CONVERSION BROKE WITH THE GA4 EVENT. Schedules fell Aqua 19 to 6, Hutong 11 to 4, Cantina 7 to 1, Dim Sum Library 4 to 1, and The Chinese Library, Shiro (shared) and Vesu returned no conversions field at all, which is published as NULL and not as zero, following the treatment used for The Chinese Library Meta L33. The Canton Library, on the newer property and pixel, rose from 11 to 13. Meta bookings and Meta CPA for W37 are not performance figures.",
+   "Google Ads booking conversions did NOT collapse at Aqua (51 to 48) or Hutong (19 to 17) because Google attributes conversions to the click date and Aqua and Hutong use their own Google Ads tag rather than a GA4 import. The Chinese Library (45 to 21) and Shiro (61 to 37) did fall. Treat Google as the least affected booking signal this week, not an unaffected one.",
+   "Store visits (modelled) are only partly published for the cur week at every HK account, so W37 walk-in totals are understated. W36 walk-in signals settled UP as expected since last week: Aqua 566 to 927, Hutong 1034-equivalent to 2166, Cantina 838 to 997, Shiro 130 to 208.",
+   "Google conversions settled UPWARD since last week as expected: Aqua W36 48.44 to 51.11, Shiro W36 57 to 60.71, DSL W36 57.96 to 61.98, Vesu W36 25 to 26.",
+   "Cantina booking action = 'Cantina HK - GA4 (web) sevenrooms_booking_complete' and Shiro = 'Shiro HK - GA4 (web) sevenrooms_booking_complete'. These are each venue's ONLY booking_complete action, so the 'not ga4' exclusion does not apply; they are published as the booking conversion, as in every published week.",
+   "Dim Sum Library Google has no walk-in conversion actions at all (only the booking action exists). Published as null, not zero. Vesu Google likewise has no walk-in actions.",
+   "Vesu Meta bookings and CPA use the conversion (leads) campaign only. This week the account returned no Schedule rows at all, so Vesu Meta bookings and CPA are null. Conversion-campaign spend was HK$2,926.67 of HK$3,238.85 total; the awareness campaign carries no cost per booking.",
+   "FLAGGED FOR REVIEW, THIRD WEEK: The Canton Library Google (5594089398) booking action Canton Library HK (web) sevenrooms_booking_complete recorded 12 conversions in W37 against 7.5 in W36, a book_now_button_click action recorded 101.8, and a Booking GTAG action recorded 10. Twelve conversions against 47 create-path GA4 bookings and HK$5,982 of spend is still not a verified working import, so Canton Google bookings and CPA stay published as not available, never zero, and the account Google spend is still kept out of ad-driven bookings, blended CPA and the paid funnel.",
+   "Canton Meta = the two Canton campaigns inside the Vista ad account only. Bookings and CPA use the conversions campaign (13 schedules on HK$9,733.30); the awareness campaign recorded 1 schedule on HK$2,656.37 and is excluded from bookings and CPA as in every published week.",
+   "Hutong Meta still carries the 'HT | Mahjong | Reach | Hong Kong' campaign, HK$1,481 this week with 1 schedule recorded. It is included in spend, as all Hutong awareness spend has been.",
+   "Ad-driven bookings in the 8-week trend carry last week published values for W30 to W36 and add the freshly pulled W37. Weekly spend is freshly pulled for all eight weeks."
+  ],
+  "cpa_thresholds": {
+   "meta_good": 350,
+   "meta_poor": 600,
+   "goog_good": 150,
+   "goog_poor": 300
+  }
+ },
+ "venues": {
+  "Aqua HK": {
+   "meta": {
+    "cur": {
+     "spend": 7431.0,
+     "bookings": 6,
+     "impr": 142083,
+     "clicks": 2497
+    },
+    "prior": {
+     "spend": 9477.91,
+     "bookings": 19,
+     "impr": 191304,
+     "clicks": 2649
+    },
+    "yoy": {
+     "spend": 9229.47,
+     "bookings": 17,
+     "impr": 422026,
+     "clicks": 4257
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 8744.01,
+     "bookings": 48,
+     "impr": 85191,
+     "clicks": 3299
+    },
+    "prior": {
+     "spend": 8084.09,
+     "bookings": 51,
+     "impr": 74078,
+     "clicks": 3147
+    },
+    "yoy": {
+     "spend": 4913.06,
+     "bookings": 66,
+     "impr": 160313,
+     "clicks": 3690
+    }
+   },
+   "walkin": {
+    "cur": 494,
+    "prior": 927,
+    "yoy": 1288
+   },
+   "meta_weekly": {
+    "W30": 5446.25,
+    "W31": 6730.84,
+    "W32": 7362.81,
+    "W33": 6527.3,
+    "W34": 7075.31,
+    "W35": 7683.74,
+    "W36": 9477.91,
+    "W37": 7431.0
+   },
+   "google_weekly": {
+    "W30": 8792.72,
+    "W31": 9826.07,
+    "W32": 8450.98,
+    "W33": 10815.29,
+    "W34": 11760.63,
+    "W35": 9683.07,
+    "W36": 8084.09,
+    "W37": 8744.01
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign - Adv+",
+     5783.39,
+     2
+    ],
+    [
+     "CRKLR - Halloween Prospecting Campaign - Daily Budgets",
+     1248.84,
+     4
+    ],
+    [
+     "CRKLR - Prospecting Campaign - Awareness",
+     398.77,
+     0
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "P.Max > Bookings",
+     1943.93,
+     4
+    ],
+    [
+     "Search > Weekend Brunch",
+     1444.25,
+     10
+    ],
+    [
+     "Search > Japanese Restaurant CH",
+     1203.87,
+     3
+    ],
+    [
+     "Search > Private Events",
+     1073.93,
+     6.5
+    ],
+    [
+     "Search > Japanese Restaurant",
+     1055.1,
+     2
+    ],
+    [
+     "Search > Brand",
+     1038.3,
+     22.5
+    ],
+    [
+     "P.Max > Local Visits",
+     708.42,
+     0
+    ],
+    [
+     "Search > Italian Restaurant",
+     276.21,
+     0
+    ]
+   ]
+  },
+  "Hutong HK": {
+   "meta": {
+    "cur": {
+     "spend": 4573.13,
+     "bookings": 4,
+     "impr": 217127,
+     "clicks": 1546
+    },
+    "prior": {
+     "spend": 3950.2,
+     "bookings": 11,
+     "impr": 211625,
+     "clicks": 1173
+    },
+    "yoy": {
+     "spend": 6871.54,
+     "bookings": 19,
+     "impr": 198773,
+     "clicks": 4431
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 6313.92,
+     "bookings": 17,
+     "impr": 165263,
+     "clicks": 5141
+    },
+    "prior": {
+     "spend": 5617.95,
+     "bookings": 19,
+     "impr": 173673,
+     "clicks": 4953
+    },
+    "yoy": {
+     "spend": 4301.11,
+     "bookings": 36,
+     "impr": 254662,
+     "clicks": 7104
+    }
+   },
+   "walkin": {
+    "cur": 1361,
+    "prior": 2166,
+    "yoy": 1627
+   },
+   "meta_weekly": {
+    "W30": 3307.67,
+    "W31": 3882.47,
+    "W32": 4426.86,
+    "W33": 4615.47,
+    "W34": 6303.68,
+    "W35": 3899.29,
+    "W36": 3950.2,
+    "W37": 4573.13
+   },
+   "google_weekly": {
+    "W30": 4874.35,
+    "W31": 5903.34,
+    "W32": 6671.28,
+    "W33": 6152.8,
+    "W34": 5937.02,
+    "W35": 5292.01,
+    "W36": 5617.95,
+    "W37": 6313.92
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign – Daily Budgets V2",
+     3092.36,
+     3
+    ],
+    [
+     "HT | Mahjong | Reach | Hong Kong",
+     1480.77,
+     1
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "P.Max - Generic Bookings",
+     1440.29,
+     2.7
+    ],
+    [
+     "Search > Brand",
+     1322.65,
+     10.4
+    ],
+    [
+     "Search > Restaurant",
+     1112.71,
+     2.2
+    ],
+    [
+     "P.Max - Local Visit",
+     1051.2,
+     0
+    ],
+    [
+     "Search > Brunch",
+     820.14,
+     0
+    ],
+    [
+     "Search > Private Events",
+     566.92,
+     2.0
+    ]
+   ]
+  },
+  "The Chinese Library": {
+   "meta": {
+    "cur": {
+     "spend": 5338.69,
+     "bookings": null,
+     "impr": 90944,
+     "clicks": 2752
+    },
+    "prior": {
+     "spend": 5610.79,
+     "bookings": 10,
+     "impr": 101379,
+     "clicks": 2829
+    },
+    "yoy": {
+     "spend": 4853.82,
+     "bookings": 9,
+     "impr": 114691,
+     "clicks": 5302
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 3527.78,
+     "bookings": 21,
+     "impr": 107079,
+     "clicks": 2426
+    },
+    "prior": {
+     "spend": 3535.1,
+     "bookings": 45,
+     "impr": 92998,
+     "clicks": 2368
+    },
+    "yoy": {
+     "spend": 4189.75,
+     "bookings": 38,
+     "impr": 144242,
+     "clicks": 2820
+    }
+   },
+   "walkin": {
+    "cur": 221,
+    "prior": 397,
+    "yoy": 490
+   },
+   "meta_weekly": {
+    "W30": 3827.04,
+    "W31": 5573.33,
+    "W32": 6459.38,
+    "W33": 3650.87,
+    "W34": 6374.83,
+    "W35": 6625.65,
+    "W36": 5610.79,
+    "W37": 5338.69
+   },
+   "google_weekly": {
+    "W30": 6491.47,
+    "W31": 4010.48,
+    "W32": 3289.36,
+    "W33": 3145.7,
+    "W34": 2934.07,
+    "W35": 3296.89,
+    "W36": 3535.1,
+    "W37": 3527.78
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign – Daily Budget",
+     5338.69,
+     null
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "Search > Restaurant",
+     1102.14,
+     5
+    ],
+    [
+     "P.Max > Generic EN",
+     1026.83,
+     1
+    ],
+    [
+     "P.Max > Generic CH",
+     687.33,
+     1
+    ],
+    [
+     "Search > Private Events",
+     421.98,
+     3
+    ],
+    [
+     "Search > Brand",
+     289.5,
+     11
+    ]
+   ]
+  },
+  "Cantina": {
+   "meta": {
+    "cur": {
+     "spend": 2766.03,
+     "bookings": 1,
+     "impr": 65772,
+     "clicks": 928
+    },
+    "prior": {
+     "spend": 2881.79,
+     "bookings": 7,
+     "impr": 55622,
+     "clicks": 1146
+    },
+    "yoy": {
+     "spend": 4305.21,
+     "bookings": 3,
+     "impr": 133827,
+     "clicks": 2665
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 3752.16,
+     "bookings": 7,
+     "impr": 82191,
+     "clicks": 2439
+    },
+    "prior": {
+     "spend": 3711.7,
+     "bookings": 8,
+     "impr": 87636,
+     "clicks": 2491
+    },
+    "yoy": {
+     "spend": 3837.3,
+     "bookings": 16,
+     "impr": 71110,
+     "clicks": 1451
+    }
+   },
+   "walkin": {
+    "cur": 621,
+    "prior": 997,
+    "yoy": 208
+   },
+   "meta_weekly": {
+    "W30": 4977.99,
+    "W31": 3090.6,
+    "W32": 2494.96,
+    "W33": 2287.93,
+    "W34": 2548.98,
+    "W35": 2586.59,
+    "W36": 2881.79,
+    "W37": 2766.03
+   },
+   "google_weekly": {
+    "W30": 6176.63,
+    "W31": 4007.33,
+    "W32": 3191.34,
+    "W33": 3114.78,
+    "W34": 2880.78,
+    "W35": 3382.62,
+    "W36": 3711.7,
+    "W37": 3752.16
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign – Early Week Supper Ads",
+     1508.94,
+     1
+    ],
+    [
+     "CRKLR - Prospecting Campaign – Daily Budget – V2",
+     1257.09,
+     0
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "Search > Restaurant",
+     1291.69,
+     3
+    ],
+    [
+     "P.Max > Generic Booking EN",
+     1048.95,
+     1
+    ],
+    [
+     "P.Max > Local Visits",
+     1032.38,
+     0
+    ],
+    [
+     "Search > Brand",
+     379.14,
+     3
+    ]
+   ]
+  },
+  "Dim Sum Library": {
+   "meta": {
+    "cur": {
+     "spend": 1022.61,
+     "bookings": 1,
+     "impr": 30558,
+     "clicks": 568
+    },
+    "prior": {
+     "spend": 1058.05,
+     "bookings": 4,
+     "impr": 45283,
+     "clicks": 699
+    },
+    "yoy": {
+     "spend": 2104.32,
+     "bookings": 14,
+     "impr": 49608,
+     "clicks": 1603
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 1675.03,
+     "bookings": 48,
+     "impr": 9199,
+     "clicks": 594
+    },
+    "prior": {
+     "spend": 1513.62,
+     "bookings": 62,
+     "impr": 9327,
+     "clicks": 514
+    },
+    "yoy": {
+     "spend": 1101.55,
+     "bookings": 84,
+     "impr": 6368,
+     "clicks": 581
+    }
+   },
+   "walkin": {
+    "cur": null,
+    "prior": null,
+    "yoy": null
+   },
+   "meta_weekly": {
+    "W30": 2232.22,
+    "W31": 1378.38,
+    "W32": 1105.5,
+    "W33": 1046.62,
+    "W34": 1129.66,
+    "W35": 1064.92,
+    "W36": 1058.05,
+    "W37": 1022.61
+   },
+   "google_weekly": {
+    "W30": 3062.44,
+    "W31": 2004.47,
+    "W32": 1184.39,
+    "W33": 1295.7,
+    "W34": 1290.37,
+    "W35": 1315.51,
+    "W36": 1513.62,
+    "W37": 1675.03
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign - Daily Budgets",
+     1022.61,
+     1
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "P.Max > Generic EN",
+     558.63,
+     6.0
+    ],
+    [
+     "Search > Afternoon Tea",
+     504.41,
+     5
+    ],
+    [
+     "Search > Restaurant",
+     440.08,
+     4.5
+    ],
+    [
+     "Search > Brand",
+     171.9,
+     32.5
+    ]
+   ]
+  },
+  "Shiro shared": {
+   "meta": {
+    "cur": {
+     "spend": 5086.02,
+     "bookings": null,
+     "impr": 89334,
+     "clicks": 3003
+    },
+    "prior": {
+     "spend": 5241.27,
+     "bookings": 20,
+     "impr": 109089,
+     "clicks": 3549
+    },
+    "yoy": {
+     "spend": 2082.44,
+     "bookings": 5,
+     "impr": 48797,
+     "clicks": 1328
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 3945.15,
+     "bookings": 37,
+     "impr": 44340,
+     "clicks": 1552
+    },
+    "prior": {
+     "spend": 4135.04,
+     "bookings": 61,
+     "impr": 48825,
+     "clicks": 1524
+    },
+    "yoy": {
+     "spend": 1130.77,
+     "bookings": 54,
+     "impr": 34859,
+     "clicks": 691
+    }
+   },
+   "walkin": {
+    "cur": 126,
+    "prior": 208,
+    "yoy": 192
+   },
+   "meta_weekly": {
+    "W30": 6062.94,
+    "W31": 3603.13,
+    "W32": 5995.82,
+    "W33": 5136.8,
+    "W34": 5251.55,
+    "W35": 5213.57,
+    "W36": 5241.27,
+    "W37": 5086.02
+   },
+   "google_weekly": {
+    "W30": 5430.83,
+    "W31": 4468.73,
+    "W32": 4188.89,
+    "W33": 4040.83,
+    "W34": 3997.15,
+    "W35": 3921.23,
+    "W36": 4135.04,
+    "W37": 3945.15
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign - NEW Shiro Central",
+     2890.57,
+     null
+    ],
+    [
+     "CRKLR - Prospecting Campaign - Daily Budgets",
+     1216.04,
+     null
+    ],
+    [
+     "CRKLR - Awareness Campaign - NEW Shiro Central - LPV Campaign",
+     489.39,
+     null
+    ],
+    [
+     "CRKLR - Private Event Awareness Campaign - Shiro TK",
+     348.03,
+     null
+    ],
+    [
+     "CRKLR - Engagement Campaign",
+     141.99,
+     null
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "Search > Restaurant (Admiralty)",
+     877.54,
+     8.0
+    ],
+    [
+     "P.Max > Booking",
+     838.52,
+     5
+    ],
+    [
+     "Search > Restaurant (Central)",
+     750.13,
+     13.0
+    ],
+    [
+     "Search > Private Dining & Events",
+     737.21,
+     2
+    ],
+    [
+     "Search > Brand",
+     479.46,
+     9.0
+    ],
+    [
+     "Demand Gen > Maps Only",
+     262.3,
+     0
+    ]
+   ]
+  },
+  "Vesu": {
+   "meta": {
+    "cur": {
+     "spend": 3238.85,
+     "bookings": null,
+     "impr": 72388,
+     "clicks": 984,
+     "cpa_spend": 2926.67
+    },
+    "prior": {
+     "spend": 3460.77,
+     "bookings": 9,
+     "impr": 79338,
+     "clicks": 851,
+     "cpa_spend": 3460.77
+    },
+    "yoy": {
+     "spend": 3663.87,
+     "bookings": 15,
+     "impr": 117160,
+     "clicks": 3368,
+     "cpa_spend": 2274.12
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 2153.8,
+     "bookings": 34,
+     "impr": 7607,
+     "clicks": 457
+    },
+    "prior": {
+     "spend": 2349.87,
+     "bookings": 26,
+     "impr": 8270,
+     "clicks": 452
+    },
+    "yoy": {
+     "spend": 1995.35,
+     "bookings": 39,
+     "impr": 12597,
+     "clicks": 641
+    }
+   },
+   "walkin": {
+    "cur": null,
+    "prior": null,
+    "yoy": null
+   },
+   "meta_weekly": {
+    "W30": 2299.08,
+    "W31": 2930.22,
+    "W32": 3871.48,
+    "W33": 3436.21,
+    "W34": 3476.59,
+    "W35": 3529.27,
+    "W36": 3460.77,
+    "W37": 3238.85
+   },
+   "google_weekly": {
+    "W30": 0,
+    "W31": 1635.58,
+    "W32": 2563.34,
+    "W33": 2481.13,
+    "W34": 2268.11,
+    "W35": 2206.28,
+    "W36": 2349.87,
+    "W37": 2153.8
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR - Prospecting Campaign - Daily Budget – V2",
+     2926.67,
+     null
+    ],
+    [
+     "CRKLR - Awareness Campaign - Daily Budget",
+     312.18,
+     null
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "Search > Restaurant",
+     779.71,
+     9
+    ],
+    [
+     "P.Max > Generic",
+     757.47,
+     13
+    ],
+    [
+     "Search > Brand",
+     616.62,
+     12
+    ]
+   ]
+  },
+  "The Canton Library": {
+   "meta": {
+    "cur": {
+     "spend": 12389.67,
+     "bookings": 13,
+     "impr": 209964,
+     "clicks": 4806,
+     "cpa_spend": 9733.3
+    },
+    "prior": {
+     "spend": 12267.33,
+     "bookings": 11,
+     "impr": 214207,
+     "clicks": 4532,
+     "cpa_spend": 9222.23
+    },
+    "yoy": {
+     "spend": 0,
+     "bookings": 0,
+     "impr": 0,
+     "clicks": 0
+    }
+   },
+   "google": {
+    "cur": {
+     "spend": 5981.57,
+     "bookings": 0,
+     "impr": 42700,
+     "clicks": 1848,
+     "na": true
+    },
+    "prior": {
+     "spend": 6899.22,
+     "bookings": 0,
+     "impr": 187512,
+     "clicks": 3182,
+     "na": true
+    },
+    "yoy": {
+     "spend": 0,
+     "bookings": 0,
+     "impr": 0,
+     "clicks": 0,
+     "na": true
+    }
+   },
+   "walkin": {
+    "cur": null,
+    "prior": null,
+    "yoy": null
+   },
+   "meta_weekly": {
+    "W30": 12269.15,
+    "W31": 9085.88,
+    "W32": 8062.38,
+    "W33": 15549.17,
+    "W34": 14951.21,
+    "W35": 14118.07,
+    "W36": 12267.33,
+    "W37": 12389.67
+   },
+   "google_weekly": {
+    "W30": 3532.23,
+    "W31": 5336.03,
+    "W32": 6767.1,
+    "W33": 10893.89,
+    "W34": 13905.04,
+    "W35": 6284.26,
+    "W36": 6899.22,
+    "W37": 5981.57
+   },
+   "meta_campaigns": [
+    [
+     "CRKLR | Canton Library Conversions Campaign",
+     9733.3,
+     13
+    ],
+    [
+     "CRKLR | Canton Library Awareness Campaign",
+     2656.37,
+     1
+    ]
+   ],
+   "google_campaigns": [
+    [
+     "PMax > Generic | EN",
+     2854.99,
+     null
+    ],
+    [
+     "Search > Open Now",
+     1952.39,
+     null
+    ],
+    [
+     "Search > Brand v2",
+     1174.19,
+     null
+    ]
+   ]
+  }
+ }
+}

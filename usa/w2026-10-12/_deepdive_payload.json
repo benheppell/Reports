@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "12–18 Oct 2026",
+ "wow": "5–11 Oct 2026",
+ "yoy": "13–19 Oct 2025",
+ "generated": "19 October 2026",
+ "badge": "GA4 BOOKING EVENT BROKE 16 OCT",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 151,
+   "tgt": 559,
+   "wow_b": 206,
+   "yoy_b": 277,
+   "users": 5919,
+   "sessions": 7070,
+   "asd": 185.6,
+   "bounce": 0.448,
+   "meta_s": 1961.16,
+   "meta_sch": 69,
+   "meta_sch_prior": 55,
+   "goog_s": 713.0,
+   "goog_c": 11.0,
+   "goog_c_prior": 20.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 67,
+   "tgt": 490,
+   "wow_b": 126,
+   "yoy_b": 0,
+   "users": 4546,
+   "sessions": 5529,
+   "asd": 147.3,
+   "bounce": 0.451,
+   "meta_s": 1434.13,
+   "meta_sch": 20,
+   "meta_sch_prior": 8,
+   "goog_s": 1122.7,
+   "goog_c": 8.0,
+   "goog_c_prior": 22.96,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 40,
+   "tgt": 124,
+   "wow_b": 58,
+   "yoy_b": 76,
+   "users": 3949,
+   "sessions": 4456,
+   "asd": 95.3,
+   "bounce": 0.641,
+   "meta_s": 1660.95,
+   "meta_sch": 50,
+   "meta_sch_prior": 27,
+   "goog_s": 583.42,
+   "goog_c": 9.0,
+   "goog_c_prior": 18.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Meta tells the opposite story to GA4 this week, which is the clearest evidence that the GA4 event broke rather than demand. Schedule conversions rose at every venue: Aqua NYC 55 to 69 on $1,961, about $28 each and the best reading of the eight weeks shown; Hutong Miami 27 to 50 on $1,661, about $33 each, back inside the good band from $60; Hutong NYC 8 to 20 on $1,434, about $72 each.",
+   "Aqua NYC spend split $1,143 prospecting for 42 schedules, $559 remarketing for 20 and $178 on the outdoor dining campaign for 7. A new Halloween LPV campaign took $81 with no schedules, which is expected for a landing-page-view objective.",
+   "Hutong NYC still parks $622 of its $1,434 in the Mahjong reach campaign and the video viewers campaign, neither of which is expected to book. Its conversions campaign alone ran at about $41 a schedule on $812, its best of the eight weeks."
+  ],
+  "google": [
+   "Aqua NYC ran $713 for 11.0 booking conversions on the figures available today. Last week's reading has already restated from 15.0 to 20.0 and the week before from 20.0 to 21.0, so treat 11.0 as a floor and the implied $65 cost per booking as a ceiling.",
+   "Hutong NYC delivered 8.0 on $1,123 and Hutong Miami 9.0 on $583. On settled numbers Hutong NYC ran at about $46 last week and Hutong Miami at about $35, so this week's $140 and $65 are provisional and will come down. Brand search stays flat as a control: Hutong NYC Brand took $122 for 4.5 booking conversions and Hutong Miami Brand $104 for 5, the two cheapest booking sources in the market.",
+   "Modelled store visits and local actions also restated upward on the prior week, Aqua NYC store visits from 24 to 30 and Hutong NYC from 38 to 86 at W39, so the latest point on every walk-in panel understates the true figure. Aqua NYC has no Click Book Now action, so that component is zero there by configuration, not by failure."
+  ],
+  "ga4": [
+   "Treat every GA4 booking figure for this week as incomplete. The event stopped firing part way through 15 October at Hutong NYC and after 15 October at Aqua NYC and Hutong Miami. Market create-path bookings by day were 74, 65, 64, 50, then 2, 2 and 1. SevenRooms recorded 125 website bookings on 16 to 18 October against 5 GA4 events, and sessions on those days were 80 to 90 percent of normal, so this is a measurement failure, not a demand collapse.",
+   "On the four tracked days the market booked 253, which annualises to a far better week than the 258 printed here. The figure is left as pulled rather than grossed up, because nothing in GA4 supports a filled-in number. Use the covers report for the week's demand and treat the conversion rates on this page as arithmetic on a broken numerator.",
+   "This is also the first USA week on the create-path definition, so the prior week, the year-ago week, the series and the year to date have all been rebuilt on the same basis and do not tie to earlier published figures. Aqua NYC is additionally restricted to its own venue paths, because in the year-ago week its property recorded 73 booking events on Hutong New York reservation pages that are already counted in the Hutong New York property. Read this week's bounce and engagement rates as provisional: they restate by 6 to 9 points in the week after a run."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40",
+   "W41"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     187,
+     199,
+     176,
+     153,
+     197,
+     188,
+     206,
+     151
+    ],
+    "users": [
+     5966,
+     5366,
+     5498,
+     6266,
+     5904,
+     6254,
+     6707,
+     5919
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     125,
+     125,
+     118,
+     99,
+     130,
+     117,
+     126,
+     67
+    ],
+    "users": [
+     2937,
+     2570,
+     2641,
+     3007,
+     2949,
+     2653,
+     3892,
+     4546
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     72,
+     60,
+     47,
+     69,
+     46,
+     60,
+     58,
+     40
+    ],
+    "users": [
+     1841,
+     1674,
+     1624,
+     1435,
+     1520,
+     1599,
+     2853,
+     3949
+    ]
+   }
+  }
+ }
+}

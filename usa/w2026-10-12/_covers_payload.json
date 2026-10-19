@@ -1,0 +1,171 @@
+{
+ "market": "USA",
+ "platform": "OpenTable + Resy",
+ "tz": "America/New_York",
+ "platform_foot": "<b>OpenTable + Resy</b> = OpenTable, Open Table, OT Guestcenter, OTGC - OpenTable Network, OT and Resy sources",
+ "combined_note": "<b>Aqua NYC</b> = Aqua Roma + Aqua Kyoto NYC combined. ",
+ "ga4_meta": "Portfolio 258 &middot; four tracked days only, event broke 16 Oct",
+ "ga4_yoy": "down 45.9% YoY like for like, on four days of tracking",
+ "callout": "<b>Why this sits alongside the GA4 dashboard, and why it is the only usable read of this week.</b> The GA4 event <code>sevenrooms_booking_complete</code> stopped firing across all three USA properties part way through 15 October, so the GA4 total of <b>258</b> covers four days, not seven. SevenRooms is unaffected. On 16, 17 and 18 October the market took <b>125 website bookings and 378 website covers</b> while GA4 recorded 5 booking events, which is the clearest measure of the gap. Covers created came in at <b>4,276</b>, <b>+2.7 percent</b> week on week and <b>+8.4 percent</b> year on year. On the weekly email definition of Website plus OpenTable and Resy plus Google Reserve, covers were <b>2,308</b>, +6.4 percent week on week and +10.9 percent year on year. Website covers alone were <b>1,098</b>, +17.4 percent year on year, so the website is growing while GA4 shows it shrinking. The Google Reserve to OpenTable routing change at the two US Hutongs is visible again and remains a margin question, not a demand one: at the Hutongs, OpenTable and Resy covers are <b>666</b> against 362 a year ago while Google Reserve covers are <b>100</b> against 334. Aqua NYC is still on the direct SevenRooms integration and its Google Reserve covers are 219 against 212. <b>The Hutong New York OpenTable past-dated re-sync is back.</b> After one clean week it reappeared as a single load of <b>109 records and 316 covers</b> created in the hour from 15 October 15:00 New York time, 63 of the 109 past-dated, with service dates spanning 7 October to 3 December 2026. The mechanical rule now used across the pipeline, which drops any booking whose service date falls before the Monday of the week it was created in, removed <b>39 records and 105 covers</b> from that load and left the rest in. The same rule removed 3 records and 7 covers from a Hutong Miami OpenTable load created on 12 October. Nothing was excluded at Aqua Roma or Aqua Kyoto NYC. The eight-week series and the prior-week and year-ago columns are all computed with the same mechanical rule, which is why W35 reads higher than the point published last week: the judgement-based exclusion removed the whole 1,907 cover history load, while the mechanical rule keeps the part of it that was forward dated.",
+ "week": "12–18 Oct 2026",
+ "wow": "5–11 Oct 2026",
+ "yoy": "13–19 Oct 2025",
+ "generated": "19 October 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ga4": 151,
+   "ch": {
+    "web": {
+     "c": 483,
+     "p": 386,
+     "y": 423
+    },
+    "gr": {
+     "c": 219,
+     "p": 241,
+     "y": 212
+    },
+    "ot": {
+     "c": 225,
+     "p": 279,
+     "y": 239
+    },
+    "walk": {
+     "c": 907,
+     "p": 831,
+     "y": 854
+    },
+    "recep": {
+     "c": 219,
+     "p": 327,
+     "y": 314
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 39,
+     "p": 59,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ga4": 67,
+   "ch": {
+    "web": {
+     "c": 418,
+     "p": 370,
+     "y": 429
+    },
+    "gr": {
+     "c": 64,
+     "p": 80,
+     "y": 297
+    },
+    "ot": {
+     "c": 525,
+     "p": 489,
+     "y": 286
+    },
+    "walk": {
+     "c": 488,
+     "p": 428,
+     "y": 483
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 2
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 44,
+     "p": 59,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ga4": 40,
+   "ch": {
+    "web": {
+     "c": 197,
+     "p": 158,
+     "y": 83
+    },
+    "gr": {
+     "c": 36,
+     "p": 13,
+     "y": 37
+    },
+    "ot": {
+     "c": 141,
+     "p": 154,
+     "y": 76
+    },
+    "walk": {
+     "c": 216,
+     "p": 246,
+     "y": 209
+    },
+    "recep": {
+     "c": 26,
+     "p": 13,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 29,
+     "p": 30,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40",
+   "W41"
+  ],
+  "total": [
+   3241,
+   3617,
+   3529,
+   3404,
+   3939,
+   3617,
+   4163,
+   4276
+  ],
+  "ot": [
+   784,
+   1053,
+   760,
+   658,
+   1089,
+   779,
+   922,
+   891
+  ]
+ }
+}
