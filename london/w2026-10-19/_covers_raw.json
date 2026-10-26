@@ -1,0 +1,286 @@
+{
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ch": {
+    "web": {
+     "c": 2802,
+     "p": 2895,
+     "y": 3141
+    },
+    "gr": {
+     "c": 368,
+     "p": 419,
+     "y": 176
+    },
+    "ot": {
+     "c": 165,
+     "p": 189,
+     "y": 64
+    },
+    "walk": {
+     "c": 154,
+     "p": 135,
+     "y": 104
+    },
+    "recep": {
+     "c": 4,
+     "p": 18,
+     "y": 5
+    },
+    "ota": {
+     "c": 26,
+     "p": 39,
+     "y": 20
+    },
+    "tp": {
+     "c": 71,
+     "p": 70,
+     "y": 48
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ch": {
+    "web": {
+     "c": 1822,
+     "p": 2008,
+     "y": 1542
+    },
+    "gr": {
+     "c": 361,
+     "p": 425,
+     "y": 210
+    },
+    "ot": {
+     "c": 147,
+     "p": 108,
+     "y": 86
+    },
+    "walk": {
+     "c": 180,
+     "p": 159,
+     "y": 121
+    },
+    "recep": {
+     "c": 20,
+     "p": 15,
+     "y": 32
+    },
+    "ota": {
+     "c": 7,
+     "p": 21,
+     "y": 26
+    },
+    "tp": {
+     "c": 79,
+     "p": 61,
+     "y": 41
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ch": {
+    "web": {
+     "c": 451,
+     "p": 488,
+     "y": 498
+    },
+    "gr": {
+     "c": 39,
+     "p": 56,
+     "y": 107
+    },
+    "ot": {
+     "c": 195,
+     "p": 225,
+     "y": 61
+    },
+    "walk": {
+     "c": 141,
+     "p": 156,
+     "y": 165
+    },
+    "recep": {
+     "c": 20,
+     "p": 29,
+     "y": 7
+    },
+    "ota": {
+     "c": 199,
+     "p": 169,
+     "y": 180
+    },
+    "tp": {
+     "c": 10,
+     "p": 8,
+     "y": 2
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ch": {
+    "web": {
+     "c": 165,
+     "p": 180,
+     "y": 197
+    },
+    "gr": {
+     "c": 51,
+     "p": 30,
+     "y": 78
+    },
+    "ot": {
+     "c": 98,
+     "p": 92,
+     "y": 56
+    },
+    "walk": {
+     "c": 204,
+     "p": 273,
+     "y": 229
+    },
+    "recep": {
+     "c": 23,
+     "p": 86,
+     "y": 48
+    },
+    "ota": {
+     "c": 50,
+     "p": 86,
+     "y": 32
+    },
+    "tp": {
+     "c": 2,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ch": {
+    "web": {
+     "c": 293,
+     "p": 285,
+     "y": 226
+    },
+    "gr": {
+     "c": 50,
+     "p": 27,
+     "y": 76
+    },
+    "ot": {
+     "c": 53,
+     "p": 70,
+     "y": 20
+    },
+    "walk": {
+     "c": 149,
+     "p": 193,
+     "y": 171
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 104,
+     "p": 132,
+     "y": 22
+    },
+    "tp": {
+     "c": 0,
+     "p": 2,
+     "y": 4
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ch": {
+    "web": {
+     "c": 1268,
+     "p": 1149,
+     "y": 0
+    },
+    "gr": {
+     "c": 307,
+     "p": 203,
+     "y": 0
+    },
+    "ot": {
+     "c": 583,
+     "p": 569,
+     "y": 0
+    },
+    "walk": {
+     "c": 947,
+     "p": 1021,
+     "y": 0
+    },
+    "recep": {
+     "c": 132,
+     "p": 146,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 2,
+     "p": 6,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38"
+  ],
+  "total": [
+   9778,
+   10005,
+   11211,
+   11164,
+   11418,
+   10975,
+   12243,
+   11742
+  ],
+  "ot": [
+   891,
+   1080,
+   1154,
+   1266,
+   1260,
+   1270,
+   1253,
+   1241
+  ]
+ },
+ "problems": [
+  "Classification reuses public.london_daily_covers_base exactly (Website / Google Reserve / OpenTable / walk / reception CASE logic and its staff-name regex exclusion), read from pg_get_viewdef on 26 October 2026, with the 100-day window removed so the YoY week can be read. Its other bucket is split for this report into ota = Thefork Integration + First Table and tp = everything else left in other, so ota + tp equals the view's other bucket exactly.",
+  "Metric = SUM(covers) by booking-created date (sr_created_at in Europe/London), is_deleted = false, status_simple <> Canceled, seating areas containing bar excluded. The date predicate is a plain sargable range on sr_created_at with both ends bounded, one window per query, and every query returned first time with no timeout. The eight-week trend is one contiguous range bucketed by date_trunc week.",
+  "Validation: 12 to 18 Oct recomputed on this basis = 12,243 covers against 12,612 published last week (-2.9 percent), with every venue at or slightly below last week c: Aqua Shard 3,884 to 3,765, Hutong 2,890 to 2,797, Regent St 1,171 to 1,131, Azzurra 765 to 747, Shiro Sushi 754 to 709, DSL 3,148 to 3,094. That is the same order of settling as last week's -2.8 percent.",
+  "Trend last value (W38 = 11,742) verified equal to the sum of cur covers across all six venue rows; trend ot last value (1,241) verified equal to the sum of cur ot. All-bookings and bookable-covers totals re-derived from the same query.",
+  "Bulk-import rule applied mechanically: any booking whose service date falls before the Monday of the week it was created in is dropped. It removed 14 covers from 7 bookings this week, all OpenTable: 8 covers from 4 bookings at Hutong and 6 covers from 3 bookings at Azzurra. In the matched 2025 week it removed 8 covers, 2 each at Aqua Kyoto, Aqua Shard, Azzurra and Hutong. No website or Google Reserve row was touched in either year.",
+  "NO EXCLUSIVE HIRE in the reporting week at Aqua Shard: service-date dinner covers run 103 to 261 on all seven days and the largest staff-named booking in the week is 35 covers. THE MATCHED 2025 WEEK LOSES TUESDAY 21 OCTOBER: dinner exactly 0, public covers 132, against a 120-cover staff booking under Maisie Brind, which matches the forecast log. Any Aqua Shard service-date comparison strips Tuesday from both years.",
+  "DSL has no 2025 comparison at all, so every DSL y value is a true zero (closed for the rebrand), not a fetch failure. Portfolio covers read +50.6 percent YoY because of it; ex DSL the figure is +9.1 percent.",
+  "Shiro Sushi recep is 0 in all three windows and Azzurra tp is 0 in the prior and year-ago windows: true zeros, not fetch failures."
+ ]
+}

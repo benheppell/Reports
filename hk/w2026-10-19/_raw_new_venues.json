@@ -1,0 +1,579 @@
+{
+ "meta": {
+  "note": "Vesu, The Canton Library and the Shiro split, kept separately as in previous weeks.",
+  "vesu": {
+   "ga4": "439152333",
+   "meta": "act_721409993160810",
+   "google": "4311541411 (mgr 7441169950)",
+   "reopened": "2026-09-08"
+  },
+  "canton": {
+   "ga4": "548638742",
+   "meta": "act_2401548436678795 Canton campaigns only",
+   "google": "5594089398 (booking action returned 22 conversions in W38 against 57 create-path GA4 bookings and a book_now_button_click action at 139; still not a verified import, fourth week flagged)",
+   "opened": "2026-09-08"
+  },
+  "shiro": {
+   "ga4": "359394354 split by pagePath",
+   "meta": "act_283603334535394 shared",
+   "google": "4093767407 shared"
+  }
+ },
+ "vesu_ga4": {
+  "createpath": {
+   "W31": 42,
+   "W32": 76,
+   "W33": 83,
+   "W34": 67,
+   "W35": 82,
+   "W36": 57,
+   "W37": 49,
+   "W38": 50
+  },
+  "gross": {
+   "W37": 49,
+   "W38": 51
+  },
+  "ly_createpath": {
+   "L35": 70,
+   "L36": 68,
+   "L37": 78,
+   "L38": 66
+  },
+  "site": {
+   "cur": {
+    "sessions": 685,
+    "users": 538,
+    "pv": 2128,
+    "asd": 1418.165,
+    "bounce": 0.290511,
+    "engrate": 0.709489,
+    "nu": 471
+   },
+   "prior": {
+    "sessions": 858,
+    "users": 634,
+    "pv": 2462,
+    "asd": 1648.132,
+    "bounce": 0.339161,
+    "engrate": 0.660839,
+    "nu": 553
+   },
+   "yoy": {
+    "sessions": 1828,
+    "users": 905,
+    "pv": 2059,
+    "asd": 112.102,
+    "bounce": 0.357768,
+    "engrate": 0.642232,
+    "nu": 261
+   }
+  },
+  "ytd_gross": 1538
+ },
+ "canton_ga4": {
+  "createpath": {
+   "W31": 0,
+   "W32": 13,
+   "W33": 25,
+   "W34": 40,
+   "W35": 24,
+   "W36": 32,
+   "W37": 47,
+   "W38": 57
+  },
+  "gross": {
+   "W37": 50,
+   "W38": 65
+  },
+  "site": {
+   "cur": {
+    "sessions": 3034,
+    "users": 2553,
+    "pv": 6615,
+    "asd": 107.897,
+    "bounce": 0.460778,
+    "engrate": 0.539222,
+    "nu": 2320
+   },
+   "prior": {
+    "sessions": 3089,
+    "users": 2626,
+    "pv": 6046,
+    "asd": 93.062,
+    "bounce": 0.540628,
+    "engrate": 0.459372,
+    "nu": 2393
+   },
+   "yoy": null
+  },
+  "ytd_gross": 269,
+  "note": "No last-year line. Canton is the only HK property with no sign of the measurement break: session duration 107.9s against 93.1s the week before, create-path bookings up from 47 to 57, Meta schedules up from 13 to 19, and a GA4-to-SevenRooms website ratio of 0.93."
+ },
+ "shiro_tk": {
+  "createpath": {
+   "W31": 64,
+   "W32": 78,
+   "W33": 71,
+   "W34": 64,
+   "W35": 69,
+   "W36": 65,
+   "W37": 24,
+   "W38": 40
+  },
+  "gross": {
+   "W37": 24,
+   "W38": 40
+  },
+  "site": {
+   "cur": {
+    "sessions": 749,
+    "users": 663,
+    "pv": 1726,
+    "asd": 897.746,
+    "bounce": 0.290571,
+    "engrate": 0.709429,
+    "nu": 397
+   },
+   "prior": {
+    "sessions": 776,
+    "users": 673,
+    "pv": 1784,
+    "asd": 753.348,
+    "bounce": 0.325483,
+    "engrate": 0.674517,
+    "nu": 405
+   }
+  },
+  "ytd_gross": 2375,
+  "ly": "the 2025 pagePath filter central|taikwun returns no data, re-verified twice this run"
+ },
+ "shiro_pp": {
+  "createpath": {
+   "W31": 67,
+   "W32": 69,
+   "W33": 61,
+   "W34": 65,
+   "W35": 65,
+   "W36": 77,
+   "W37": 35,
+   "W38": 41
+  },
+  "gross": {
+   "W37": 37,
+   "W38": 41
+  },
+  "ly_createpath": {
+   "L35": 86,
+   "L36": 96,
+   "L37": 94,
+   "L38": 98
+  },
+  "ytd_gross": 3008,
+  "site": {
+   "cur": {
+    "sessions": 810,
+    "users": 623,
+    "pv": 2787,
+    "asd": 205.99,
+    "bounce": 0.263158,
+    "engrate": 0.736842,
+    "nu": 732
+   },
+   "prior": {
+    "sessions": 880,
+    "users": 661,
+    "pv": 2817,
+    "asd": 416.319,
+    "bounce": 0.293385,
+    "engrate": 0.706615,
+    "nu": 755
+   },
+   "yoy": {
+    "sessions": 1253,
+    "users": 1022,
+    "pv": 2154,
+    "asd": 111.623,
+    "bounce": 0.434158,
+    "engrate": 0.565842,
+    "nu": 833
+   }
+  }
+ },
+ "vesu_ads": {
+  "meta": {
+   "spend": [
+    2930.22,
+    3871.48,
+    3436.21,
+    3476.59,
+    3529.27,
+    3460.77,
+    3238.97,
+    3215.05
+   ],
+   "sched_conv_campaign": [
+    17,
+    30,
+    35,
+    15,
+    17,
+    9,
+    null,
+    2
+   ],
+   "cpa_spend_W38": 2493.52,
+   "cpa_spend_W37": 2926.79,
+   "impr_W38": 90087,
+   "clicks_W38": 1509,
+   "impr_W37": 72395,
+   "clicks_W37": 984,
+   "ly_spend_L38": 3802.85,
+   "ly_sched_L38": 13,
+   "ly_cpa_spend_L38": 2271.12,
+   "ly_impr_L38": 139011,
+   "ly_clicks_L38": 3519,
+   "campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign - Daily Budget - V2",
+     2493.52,
+     2
+    ],
+    [
+     "CRKLR - Awareness Campaign - Daily Budget",
+     721.53,
+     null
+    ]
+   ]
+  },
+  "google": {
+   "cost": [
+    1635.58,
+    2563.34,
+    2481.13,
+    2268.11,
+    2206.28,
+    2349.87,
+    2153.8,
+    2236.94
+   ],
+   "book": [
+    12,
+    31,
+    33,
+    27,
+    36,
+    26,
+    37,
+    30
+   ],
+   "walkin": null,
+   "impr_W38": 8992,
+   "clicks_W38": 442,
+   "impr_W37": 7607,
+   "clicks_W37": 457,
+   "ly_cost": [
+    2135.01,
+    2430.99,
+    1995.35,
+    2437.32
+   ],
+   "ly_book": [
+    21,
+    24,
+    38.5,
+    18
+   ],
+   "ly_walkin": null,
+   "ly_impr_L38": 14106,
+   "ly_clicks_L38": 623,
+   "action": "Aqua Vesu (web) sevenrooms_booking_complete; no walk-in actions"
+  },
+  "walkin": {
+   "cur": null,
+   "prior": null,
+   "yoy": null
+  }
+ },
+ "canton_ads": {
+  "meta": {
+   "spend": [
+    9085.88,
+    8062.38,
+    15549.17,
+    14951.21,
+    14118.07,
+    12267.33,
+    12390.47,
+    11922.85
+   ],
+   "sched_conv_campaign": [
+    null,
+    3,
+    8,
+    11,
+    10,
+    11,
+    13,
+    19
+   ],
+   "cpa_spend_W38": 9358.02,
+   "cpa_spend_W37": 9734.1,
+   "impr_W38": 182138,
+   "clicks_W38": 4666,
+   "campaigns_W38": [
+    [
+     "CRKLR | Canton Library Conversions Campaign",
+     9358.02,
+     19
+    ],
+    [
+     "CRKLR | Canton Library Awareness Campaign",
+     2564.83,
+     null
+    ]
+   ],
+   "ly": "no 2025 line, opened 8 Sep 2026",
+   "impr_W37": 209972,
+   "clicks_W37": 4806
+  },
+  "google": {
+   "cost": [
+    5336.03,
+    6767.1,
+    10893.89,
+    13905.04,
+    6284.26,
+    6899.22,
+    5974.3,
+    13328.05
+   ],
+   "book": "NOT AVAILABLE - import not verified",
+   "impr_W38": 33391,
+   "clicks_W38": 1593,
+   "impr_W37": 42670,
+   "clicks_W37": 1841,
+   "raw_actions_W38": {
+    "Canton Library HK (web) sevenrooms_booking_complete": 22,
+    "Canton Library HK (web) book_now_button_click": 139,
+    "Booking GTAG": 21.95
+   },
+   "raw_actions_W37": {
+    "Canton Library HK (web) sevenrooms_booking_complete": 12,
+    "Canton Library HK (web) book_now_button_click": 108.84,
+    "Booking GTAG": 10.03
+   },
+   "ly": "no 2025 line"
+  },
+  "walkin": {
+   "cur": null,
+   "prior": null,
+   "yoy": null
+  }
+ },
+ "shiro_ads_shared": {
+  "meta": {
+   "spend": [
+    3603.13,
+    5995.82,
+    5136.8,
+    5251.55,
+    5213.57,
+    5241.27,
+    5086.11,
+    5080.91
+   ],
+   "sched": [
+    16,
+    17,
+    19,
+    20,
+    26,
+    20,
+    null,
+    7
+   ],
+   "impr_W38": 86053,
+   "clicks_W38": 2666,
+   "impr_W37": 89339,
+   "clicks_W37": 3004,
+   "ly_spend": [
+    1886.43,
+    2057.08,
+    2082.44,
+    2240.01
+   ],
+   "ly_sched": [
+    1,
+    4,
+    5,
+    6
+   ],
+   "ly_impr_L38": 52073,
+   "ly_clicks_L38": 1278
+  },
+  "google": {
+   "cost": [
+    4468.73,
+    4188.89,
+    4040.83,
+    3997.15,
+    3921.23,
+    4135.04,
+    3945.15,
+    4934.66
+   ],
+   "book": [
+    66.24,
+    86.9,
+    67.42,
+    72.1,
+    74.11,
+    61.19,
+    39.48,
+    61.9
+   ],
+   "walkin": [
+    246.67,
+    229.55,
+    237.51,
+    292.5,
+    203.5,
+    206.5,
+    205.0,
+    146.5
+   ],
+   "impr_W38": 48408,
+   "clicks_W38": 1643,
+   "impr_W37": 44334,
+   "clicks_W37": 1552,
+   "ly_cost": [
+    1165.49,
+    1181.57,
+    1130.77,
+    986.13
+   ],
+   "ly_book": [
+    34.67,
+    47.34,
+    54.13,
+    38.0
+   ],
+   "ly_walkin": [
+    169.0,
+    159.9,
+    192.1,
+    235.4
+   ],
+   "ly_impr_L38": 45471,
+   "ly_clicks_L38": 732,
+   "action": "Shiro HK - GA4 (web) sevenrooms_booking_complete (GA4-named, the only booking action, included per the HK exception)"
+  }
+ },
+ "covers": {
+  "vesu": {
+   "cur": {
+    "web": 232,
+    "widget": 232,
+    "gr": 115,
+    "ot": 250,
+    "walk": 164,
+    "recep": 63,
+    "tp": 0,
+    "covers": 824
+   },
+   "prior": {
+    "web": 180,
+    "gr": 76,
+    "ot": 285,
+    "walk": 118,
+    "recep": 61,
+    "tp": 0,
+    "covers": 720
+   },
+   "yoy": {
+    "web": 84,
+    "gr": 59,
+    "ot": 237,
+    "walk": 106,
+    "recep": 87,
+    "tp": 0,
+    "covers": 573
+   }
+  },
+  "canton": {
+   "cur": {
+    "web": 177,
+    "widget": 169,
+    "gr": 49,
+    "ot": 162,
+    "walk": 34,
+    "recep": 360,
+    "tp": 0,
+    "covers": 782
+   },
+   "prior": {
+    "web": 140,
+    "gr": 31,
+    "ot": 87,
+    "walk": 24,
+    "recep": 312,
+    "tp": 0,
+    "covers": 594
+   },
+   "yoy": "2025 Vista was a different restaurant, no YoY"
+  },
+  "shiro_tai_kwun": {
+   "cur": {
+    "web": 166,
+    "widget": 166,
+    "gr": 57,
+    "ot": 163,
+    "walk": 1041,
+    "recep": 190,
+    "tp": 0,
+    "covers": 1617
+   },
+   "prior": {
+    "web": 127,
+    "gr": 74,
+    "ot": 133,
+    "walk": 869,
+    "recep": 245,
+    "tp": 0,
+    "covers": 1448
+   },
+   "yoy": "no 2025 record"
+  },
+  "shiro_pacific_place": {
+   "cur": {
+    "web": 177,
+    "widget": 177,
+    "gr": 98,
+    "ot": 251,
+    "walk": 809,
+    "recep": 230,
+    "tp": 0,
+    "covers": 1565
+   },
+   "prior": {
+    "web": 154,
+    "gr": 93,
+    "ot": 296,
+    "walk": 733,
+    "recep": 284,
+    "tp": 0,
+    "covers": 1560
+   },
+   "yoy": {
+    "web": 124,
+    "gr": 83,
+    "ot": 320,
+    "walk": 728,
+    "recep": 293,
+    "tp": 0,
+    "covers": 1548
+   }
+  }
+ }
+}

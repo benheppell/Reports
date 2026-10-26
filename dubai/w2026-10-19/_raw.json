@@ -1,0 +1,572 @@
+{
+ "venue": "Hutong Dubai",
+ "currency": "AED",
+ "week": "2026-10-19",
+ "generated": "26 October 2026",
+ "web": {
+  "cur": {
+   "users": 931,
+   "sessions": 1167,
+   "bookings": 54,
+   "pps": 2.52,
+   "avgsec": 421,
+   "engrate": 71.0,
+   "newpct": 85.9
+  },
+  "prior": {
+   "users": 1126,
+   "sessions": 1434,
+   "bookings": 77,
+   "pps": 2.43,
+   "avgsec": 358,
+   "engrate": 66.8,
+   "newpct": 87.4
+  },
+  "yoy": {
+   "users": 1875,
+   "sessions": 3654,
+   "bookings": 170,
+   "pps": 1.33,
+   "avgsec": 150,
+   "engrate": 68.2,
+   "newpct": 32.8
+  }
+ },
+ "ads": {
+  "meta": {
+   "cur": {
+    "spend": 1707.22,
+    "bookings": 6,
+    "impr": 231108,
+    "clicks": 816
+   },
+   "prior": {
+    "spend": 2590.34,
+    "bookings": 30,
+    "impr": 452754,
+    "clicks": 1293
+   },
+   "yoy": {
+    "spend": 4153.46,
+    "bookings": 18,
+    "impr": 338951,
+    "clicks": 4692
+   }
+  },
+  "google": {
+   "cur": {
+    "spend": 2898.94,
+    "bookings": 19.93,
+    "impr": 18907,
+    "clicks": 786
+   },
+   "prior": {
+    "spend": 3245.52,
+    "bookings": 24.35,
+    "impr": 16607,
+    "clicks": 745
+   },
+   "yoy": {
+    "spend": 4943.12,
+    "bookings": 31.09,
+    "impr": 125810,
+    "clicks": 1893
+   }
+  }
+ },
+ "channels": [
+  {
+   "name": "Organic Search",
+   "s": [
+    372,
+    403,
+    930
+   ],
+   "b": [
+    13,
+    13,
+    43
+   ]
+  },
+  {
+   "name": "Paid Search",
+   "s": [
+    289,
+    314,
+    566
+   ],
+   "b": [
+    20,
+    35,
+    37
+   ]
+  },
+  {
+   "name": "Cross-network",
+   "s": [
+    179,
+    200,
+    856
+   ],
+   "b": [
+    5,
+    7,
+    32
+   ]
+  },
+  {
+   "name": "Direct",
+   "s": [
+    112,
+    209,
+    396
+   ],
+   "b": [
+    3,
+    6,
+    45
+   ]
+  },
+  {
+   "name": "Paid Social",
+   "s": [
+    75,
+    191,
+    590
+   ],
+   "b": [
+    1,
+    4,
+    6
+   ]
+  },
+  {
+   "name": "Unassigned",
+   "s": [
+    52,
+    45,
+    35
+   ],
+   "b": [
+    8,
+    11,
+    0
+   ]
+  },
+  {
+   "name": "Referral",
+   "s": [
+    51,
+    29,
+    86
+   ],
+   "b": [
+    3,
+    0,
+    4
+   ]
+  },
+  {
+   "name": "AI Assistant",
+   "s": [
+    31,
+    14,
+    0
+   ],
+   "b": [
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "name": "Organic Social",
+   "s": [
+    8,
+    25,
+    130
+   ],
+   "b": [
+    0,
+    0,
+    3
+   ]
+  },
+  {
+   "name": "Email",
+   "s": [
+    3,
+    1,
+    0
+   ],
+   "b": [
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Paid Other",
+   "s": [
+    0,
+    1,
+    24
+   ],
+   "b": [
+    0,
+    0,
+    0
+   ]
+  }
+ ],
+ "devices": {
+  "mobile": 73,
+  "desktop": 27,
+  "tablet": 1
+ },
+ "landing": [
+  {
+   "path": "/",
+   "s": 644,
+   "b": 36
+  },
+  {
+   "path": "/menus",
+   "s": 191,
+   "b": 4
+  },
+  {
+   "path": "/business-lunch",
+   "s": 88,
+   "b": 4
+  },
+  {
+   "path": "(not set)",
+   "s": 76,
+   "b": 0
+  },
+  {
+   "path": "/menus/brunch",
+   "s": 39,
+   "b": 0
+  }
+ ],
+ "trend8": {
+  "spend": [
+   6348.07,
+   6626.14,
+   6306.84,
+   6567.57,
+   8953.36,
+   7713.11,
+   5835.86,
+   4606.16
+  ],
+  "bookings": [
+   46.27,
+   48.79,
+   50.41,
+   61.68,
+   55.5,
+   70.89,
+   54.35,
+   25.93
+  ],
+  "labels": [
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40",
+   "W41",
+   "W42"
+  ]
+ },
+ "funnel": {
+  "impr": 250015,
+  "clicks": 1602,
+  "landing": 364,
+  "bookings": 25.93
+ },
+ "campaigns": [
+  {
+   "name": "P.Max > Generic",
+   "platform": "google",
+   "spend": 1662.67,
+   "bookings": 2.27,
+   "wow": "down"
+  },
+  {
+   "name": "CRKLR - Prospecting Campaign",
+   "platform": "meta",
+   "spend": 1047.07,
+   "bookings": 4,
+   "wow": "down"
+  },
+  {
+   "name": "Search > Brand",
+   "platform": "google",
+   "spend": 985.15,
+   "bookings": 17.67,
+   "wow": "up"
+  },
+  {
+   "name": "CRKLR - Remarketing Campaign",
+   "platform": "meta",
+   "spend": 296.07,
+   "bookings": 2,
+   "wow": "down"
+  },
+  {
+   "name": "HT | Mahjong | Reach | Dubai",
+   "platform": "meta",
+   "spend": 268.16,
+   "bookings": 0,
+   "wow": "down"
+  }
+ ],
+ "t4_users_ty": [
+  1503,
+  1296,
+  1126,
+  931
+ ],
+ "t4_users_ly": [
+  2057,
+  1623,
+  1636,
+  1875
+ ],
+ "t4_book_ty": [
+  94,
+  100,
+  77,
+  54
+ ],
+ "t4_book_ly": [
+  154,
+  137,
+  133,
+  170
+ ],
+ "t4_book_allpaths_ty": [
+  96,
+  101,
+  84,
+  54
+ ],
+ "t4_book_allpaths_ly": [
+  154,
+  137,
+  133,
+  170
+ ],
+ "t4_amend_ty": [
+  2,
+  1,
+  7,
+  0
+ ],
+ "t4_amend_ly": [
+  0,
+  0,
+  0,
+  0
+ ],
+ "t4_meta_bookings_ty": [
+  33,
+  48,
+  30,
+  6
+ ],
+ "t4_meta_bookings_ly": [
+  44,
+  20,
+  18,
+  18
+ ],
+ "t4_meta_spend_ty": [
+  4306.44,
+  4252.04,
+  2590.34,
+  1707.22
+ ],
+ "t4_meta_spend_ly": [
+  9020.49,
+  7072.73,
+  4189.75,
+  4153.46
+ ],
+ "t4_goog_bookings_ty": [
+  22.5,
+  22.89,
+  24.35,
+  19.93
+ ],
+ "t4_goog_bookings_ly": [
+  27.28,
+  27.77,
+  24.12,
+  31.09
+ ],
+ "t4_goog_spend_ty": [
+  4646.92,
+  3461.07,
+  3245.52,
+  2898.94
+ ],
+ "t4_goog_spend_ly": [
+  5636.57,
+  3945.92,
+  4477.18,
+  4943.12
+ ],
+ "t4_walkin_ty": [
+  null,
+  null,
+  null,
+  null
+ ],
+ "t4_walkin_ly": [
+  488.19,
+  473.78,
+  563.98,
+  548.73
+ ],
+ "google_daily_gbp_2026": {
+  "2026-08-31": 77.18,
+  "2026-09-01": 90.5,
+  "2026-09-02": 71.22,
+  "2026-09-03": 86.48,
+  "2026-09-04": 113.57,
+  "2026-09-05": 63.68,
+  "2026-09-06": 51.22,
+  "2026-09-07": 102.99,
+  "2026-09-08": 106.46,
+  "2026-09-09": 70.46,
+  "2026-09-10": 101.12,
+  "2026-09-11": 110.66,
+  "2026-09-12": 58.71,
+  "2026-09-13": 48.35,
+  "2026-09-14": 97.52,
+  "2026-09-15": 85.48,
+  "2026-09-16": 75.04,
+  "2026-09-17": 84.18,
+  "2026-09-18": 104.19,
+  "2026-09-19": 71.0,
+  "2026-09-20": 53.43,
+  "2026-09-21": 85.25,
+  "2026-09-22": 90.88,
+  "2026-09-23": 55.35,
+  "2026-09-24": 86.56,
+  "2026-09-25": 137.88,
+  "2026-09-26": 81.13,
+  "2026-09-27": 60.12,
+  "2026-09-28": 199.2,
+  "2026-09-29": 193.29,
+  "2026-09-30": 72.72,
+  "2026-10-01": 141.79,
+  "2026-10-02": 203.09,
+  "2026-10-03": 75.15,
+  "2026-10-04": 63.11,
+  "2026-10-05": 114.8,
+  "2026-10-06": 115.41,
+  "2026-10-07": 95.04,
+  "2026-10-08": 104.12,
+  "2026-10-09": 131.51,
+  "2026-10-10": 91.2,
+  "2026-10-11": 54.26,
+  "2026-10-12": 109.05,
+  "2026-10-13": 76.82,
+  "2026-10-14": 84.53,
+  "2026-10-15": 111.78,
+  "2026-10-16": 123.91,
+  "2026-10-17": 83.07,
+  "2026-10-18": 73.19,
+  "2026-10-19": 93.86,
+  "2026-10-20": 85.0,
+  "2026-10-21": 91.66,
+  "2026-10-22": 65.43,
+  "2026-10-23": 108.4,
+  "2026-10-24": 62.34,
+  "2026-10-25": 84.93
+ },
+ "google_daily_gbp_2025": {
+  "2025-09-29": 294.39,
+  "2025-09-30": 302.84,
+  "2025-10-01": 132.38,
+  "2025-10-02": 98.58,
+  "2025-10-03": 113.6,
+  "2025-10-04": 123.51,
+  "2025-10-05": 85.02,
+  "2025-10-06": 125.28,
+  "2025-10-07": 106.76,
+  "2025-10-08": 122.66,
+  "2025-10-09": 101.79,
+  "2025-10-10": 134.61,
+  "2025-10-11": 122.52,
+  "2025-10-12": 91.67,
+  "2025-10-13": 142.8,
+  "2025-10-14": 131.31,
+  "2025-10-15": 123.55,
+  "2025-10-16": 122.66,
+  "2025-10-17": 130.97,
+  "2025-10-18": 141.1,
+  "2025-10-19": 121.32,
+  "2025-10-20": 136.67,
+  "2025-10-21": 135.23,
+  "2025-10-22": 128.09,
+  "2025-10-23": 145.39,
+  "2025-10-24": 134.35,
+  "2025-10-25": 172.29,
+  "2025-10-26": 156.78
+ },
+ "meta": {
+  "fx": "Google Ads cost for 7344894846 is returned in GBP; converted to AED at a fixed 4.90 for ALL Google spend, CPA and campaign figures. The gomarble tool returns metrics.cost already divided by 1e6, so no further division is applied. Meta spend is native AED (no conversion). The bespoke dubai/m2026-08 monthly page states 4.84; the weekly suite uses 4.90 throughout and that discrepancy is unresolved.",
+  "windows": {
+   "cur": "2026-10-19..2026-10-25",
+   "prior": "2026-10-12..2026-10-18",
+   "yoy": "2025-10-20..2025-10-26 (364d offset)"
+  },
+  "fy_label": "FY26 \u00b7 W42 (Dubai FY = calendar year)",
+  "trend8_weeks": [
+   "2026-08-31",
+   "2026-09-07",
+   "2026-09-14",
+   "2026-09-21",
+   "2026-09-28",
+   "2026-10-05",
+   "2026-10-12",
+   "2026-10-19"
+  ],
+  "t4_weeks_ty": [
+   "2026-09-28",
+   "2026-10-05",
+   "2026-10-12",
+   "2026-10-19"
+  ],
+  "t4_weeks_ly": [
+   "2025-09-29",
+   "2025-10-06",
+   "2025-10-13",
+   "2025-10-20"
+  ],
+  "basis_change": "GA4 bookings are create path only (boundary 12 October 2026). Implemented as an andGroup of eventName EXACT 'sevenrooms_booking_complete' AND NOT pagePath PARTIAL_REGEXP 'modify|manage|prearrival'. The current, prior and year ago weeks were all rebuilt on that basis this run, so every WoW and YoY figure here is like for like. Published Dubai weeks up to and including w2026-10-05 are on the old all paths basis and are not restated.",
+  "method": "GA4 weekly users are deduplicated: one report call per Mon-Sun week with no date dimension, never summed from daily rows. Google bookings use metrics.all_conversions filtered to conversion action 'Hutong Dubai (web) sevenrooms_booking_complete' (the GA4 imported action) only, never raw metrics.conversions. Meta bookings = schedule_total, pulled with time_increment=7 from a Monday start, one call per account per year. trend8 and funnel spend and bookings = Meta + Google combined. funnel.landing = GA4 Paid Search + Paid Social sessions. Walk-in = Store visits + Local actions - Directions + Local actions - Menu views + Clicks to call (no 'Click Book Now' action exists on this account). Campaign spend and campaign booking conversions were pulled as two separate GAQL queries because segments.conversion_action_name cannot be selected alongside cost_micros.",
+  "failures": []
+ },
+ "problems": [
+  "META WAS DARK FOR FIVE OF THE SEVEN DAYS. The Meta ad account act_551167838895768 moved to account status 'Payment Needed' at 16/10/2026 05:18 account local and back to 'Active' at 24/10/2026 10:53, per the account activity log (actor Meta, object ACCOUNT, type status). Daily account spend confirms it: 16 Oct AED 72.74 (part day), 17 Oct 0, no rows at all for 18, 19, 21, 22 or 23 Oct, 20 Oct 0, then 24 Oct AED 983.16 and 25 Oct AED 724.06. The reporting week's entire Meta spend of AED 1,707.22 came from Saturday 24 and Sunday 25 only (983.16 + 724.06 = 1707.22). The week before, 12 to 15 Oct ran AED 583.45, 614.28, 647.96 and 671.91 a day. So the 39% cut reported at W41 was mostly this payment hold starting mid day on 16 October, not a planned reduction, and the further 34% fall at W42 is five dark days rather than a lower budget. On the two days that did deliver the run rate was at or above the pre hold level, so no evidence of a budget reduction in week. All four delivering campaigns remain ACTIVE (Prospecting, Remarketing, HT | Mahjong | Reach | Dubai, CRKLR - Awareness - Reach) and none has a campaign updated_time inside October.",
+  "ONE REAL BUDGET CUT, 7 OCTOBER, DELIBERATE. The activity log shows two 'Ad set budget updated' events on 07/10/2026 at 14:22 by actor Stacy Hopewell inside the Prospecting campaign: ad set 'LAL of customer database - 1%' AED 360.00 to AED 180.00 per day, and ad set 'Focus-Interests-MP' AED 360.00 to AED 180.00 per day. That is a genuine halving of AED 720 a day of prospecting budget and it bears on W41 and W42 in full. It is the only budget change in the window. Whether it was agreed is still a question for Ben; the payment hold was not.",
+  "GA4 BOOKING EVENT IS UNDER RECORDING FROM ABOUT 12 OCTOBER. Independent check against SevenRooms (Supabase vklgpzrhjvjqhlpfennn, public.reservations, venue Hutong Dubai, is_deleted false, website booking_source set per claude/context.md, grouped by Asia/Dubai created week, both ends of the window bounded): website bookings created W39 101, W40 98, W41 101, W42 80 against GA4 create path 94, 100, 77, 54. The two series match within 3% at W39 and W40 and then GA4 falls 24% below at W41 and 33% below at W42. GA4 is gross of cancellations and includes the bar, so it should sit above SevenRooms, and in 2025 it did: LY39 to LY42 SevenRooms 130, 118, 110, 158 against GA4 154, 137, 133, 170. Conclusion: the Dubai GA4 booking figure is a floor from 12 October, the same boundary as the estate wide tag break, and last week's published W41 figure of 77 and its YoY of -42.1% were too harsh. Cause unknown and not evidenced from the API.",
+  "GA4 BOOKING EVENT IS STILL FIRING, AND THE DAILY SHAPE IS NOT A CANTINA STYLE BREAK. sevenrooms_booking_complete fired on every one of the seven days: 19 Oct 3, 20 Oct 3, 21 Oct 14, 22 Oct 8, 23 Oct 5, 24 Oct 7, 25 Oct 14, total 54. page_view over the same days ran 289, 398, 523, 515, 352, 364, 503, total 2,944 against 3,485 the week before, so page collection fell 15.5% while bookings fell 29.9%. The bookings to page_view ratio went from 2.41% to 1.83%. Only one route carries the event this week, /explore/hutongdubai/reservations/create/checkout/, with no modify, manage or prearrival rows and no /reservations/hutongdubai landing rows (that route carried 1 event at W41 and was the only route in 2025). The Google Ads GA4 imported conversion action, which is fed from this property, recorded on every day of the week including 19 to 23 October, so the GA4 to Google pipe is intact. The event is recording, it is recording light.",
+  "GA4 averageSessionDuration IS INFLATED, published as returned. 421s this week, 358s for 12 to 18 Oct (restated from the 338s published last week), 145s for 5 to 11 Oct, and 150s in the matched 2025 week. That is the same secondary symptom seen at the HK and London properties in the 15 to 16 October tag break. Not substituted. engagementRate 71.0% and pages per session 2.52 are both normal, and the runbook treats the current week's bounce and engagement rate as provisional.",
+  "GOOGLE WEBPAGE TAG WENT DARK 16 TO 19 OCTOBER. The duplicate WEBPAGE action 'Sevenrooms Booking Complete' (id 6500432799) returned no rows on 16, 17, 18 or 19 October and resumed on 20 October at a lower level: 20 Oct 1.00, 21 Oct 1.00, 22 Oct 2.00, 23 Oct 4.00, 24 Oct 6.00, 25 Oct 9.99. The GA4 imported action (id 6651575240) kept recording throughout those dates. So Dubai was touched by the 15 to 16 October estate wide tag break, on the WEBPAGE route only. This does not affect any published figure, because the published convention uses the GA4 imported action alone.",
+  "DOUBLE COUNTING, STILL UNSETTLED. Both actions remain enabled and count the same event: 'Hutong Dubai (web) sevenrooms_booking_complete' (GOOGLE_ANALYTICS_4_CUSTOM, id 6651575240) reads 19.933543 this week, and 'Sevenrooms Booking Complete' (WEBPAGE, id 6500432799) reads 23.990914. They are NOT summed. The GA4 imported action is carried, as every published Dubai week does. NO DUBAI GOOGLE CPA IS QUOTED in the narrative; the Google CPA panel in trends.html is carried because every published Dubai week carries it, and the figure is provisional until the duplicate is settled. The prior week's WEBPAGE action also settled upward, 25.000 published last week to 26.000 now, a further reason not to lean on it.",
+  "Google local and offline conversion action rows (Store visits, Local actions - Directions, Local actions - Menu views, Local actions - Orders, Local actions - Other engagements, Local actions - Website visits, Clicks to call) still return NO rows. Re-verified this run: an unfiltered conversion action query over 2026-09-28..2026-10-25 returned 52 rows and every one is a booking action. The gap has run unbroken since 13 Aug 2026, which is ELEVEN consecutive reporting weeks counting from the week of 10 Aug. All four t4_walkin_ty values carried as null with payload gaps=true. Not a zero. The identical query shape returns the full 2025 local set, so the LY line is real.",
+  "Restatement, GA4. The prior week (12 to 18 Oct) restated on re-pull: sessions 1435 to 1434, screenPageViews 3487 to 3485, averageSessionDuration 338s to 358s. Create path bookings re-pulled to exactly 77, unchanged, so the booking series is stable. Google prior week impressions 16,606 to 16,607. Google booking conversions did NOT settle on any re-pulled week this run: W35 17.267, W36 24.786, W37 21.408, W38 19.675, W39 22.495, W40 22.891, W41 24.345, all identical to last week's figures.",
+  "RECONCILIATION. Google spend reconciled exactly to the published w2026-10-12 payload on all seven carried trend weeks (W35 to W41) and on all three carried LY weeks, confirming the 4.90 GBP to AED rate and that the gomarble tool returns metrics.cost already divided out of micros. Google booking conversions reconciled exactly on all seven carried weeks and all three carried LY weeks. Meta spend and schedules reconciled exactly on all seven carried weeks. Campaign level Google booking conversions sum to the account total (17.665374 + 2.268169 = 19.933543). Channel level bookings sum to the week total in all three columns (54, 77, 170).",
+  "No amendment events at all this week. In 2026 the modify route carried 7 events at W41, 1 at W40, 2 at W39 and ZERO at W42, so the create path and all paths bases are identical this week at 54. 2025 remains structurally zero on the modify route in all four weeks, because that route did not exist on the 2025 site. The create path rule is therefore a no-op on both sides of this week's YoY."
+ ]
+}

@@ -1,0 +1,1378 @@
+{
+ "market": "USA",
+ "sym": "$",
+ "week": "19–25 Oct 2026",
+ "fy": "W42 &middot; FY26",
+ "ext": true,
+ "foot_extra": "GA4 booking tracking recovered on Wednesday 21 October 2026 after being dead at all three USA properties from 16 to 20 October, so every GA4 booking figure for the week of 19 to 25 October covers five days of the seven and understates the market by roughly 110 bookings. Meta and Google figures are unaffected. GA4 bookings are the create path only, rebuilt on the same basis in all three columns and across the eight-week series.",
+ "venues": [
+  "All",
+  "Aqua NYC",
+  "Hutong NYC",
+  "Hutong Miami"
+ ],
+ "data": {
+  "Aqua NYC": {
+   "web": {
+    "cur": {
+     "bookings": 140,
+     "users": 6033,
+     "sessions": 7244,
+     "avgsec": 180.0,
+     "engrate": 53.3,
+     "pps": 2.6,
+     "newpct": 93.6
+    },
+    "prior": {
+     "bookings": 151,
+     "users": 6062,
+     "sessions": 7227,
+     "avgsec": 218.5,
+     "engrate": 55.4,
+     "pps": 2.81,
+     "newpct": 92.7
+    },
+    "yoy": {
+     "bookings": 334,
+     "users": 6554,
+     "sessions": 8712,
+     "avgsec": 189.0,
+     "engrate": 60.1,
+     "pps": 3.37,
+     "newpct": 88.0
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1810,
+      "bookings": 59,
+      "impr": 76356,
+      "clicks": 5321
+     },
+     "prior": {
+      "spend": 1962,
+      "bookings": 69,
+      "impr": 84433,
+      "clicks": 4392
+     },
+     "yoy": {
+      "spend": 1699,
+      "bookings": 51,
+      "impr": 324484,
+      "clicks": 5272
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 698,
+      "bookings": 16,
+      "impr": 19479,
+      "clicks": 854
+     },
+     "prior": {
+      "spend": 713,
+      "bookings": 11,
+      "impr": 18065,
+      "clicks": 805
+     },
+     "yoy": {
+      "spend": 1970,
+      "bookings": 110,
+      "impr": 17294,
+      "clicks": 1919
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      2429,
+      2429,
+      1729
+     ],
+     "b": [
+      54,
+      72,
+      86
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      1902,
+      2226,
+      1593
+     ],
+     "b": [
+      23,
+      13,
+      14
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1628,
+      1712,
+      2284
+     ],
+     "b": [
+      39,
+      28,
+      90
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      500,
+      451,
+      1152
+     ],
+     "b": [
+      16,
+      12,
+      50
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      233,
+      0,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      196,
+      225,
+      308
+     ],
+     "b": [
+      3,
+      12,
+      11
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      147,
+      104,
+      117
+     ],
+     "b": [
+      1,
+      2,
+      2
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      130,
+      125,
+      1274
+     ],
+     "b": [
+      1,
+      0,
+      61
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      67,
+      33,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      50,
+      68,
+      107
+     ],
+     "b": [
+      1,
+      11,
+      14
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      13,
+      26,
+      269
+     ],
+     "b": [
+      1,
+      1,
+      6
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 78.6,
+    "Desktop": 20.9,
+    "Tablet": 0.5
+   },
+   "landing": [
+    {
+     "path": "/aqua-roma",
+     "s": 3608,
+     "b": 52
+    },
+    {
+     "path": "/",
+     "s": 1243,
+     "b": 15
+    },
+    {
+     "path": "/aqua-kyoto",
+     "s": 479,
+     "b": 10
+    },
+    {
+     "path": "/menus/a-la-carte",
+     "s": 394,
+     "b": 0
+    },
+    {
+     "path": "",
+     "s": 262,
+     "b": 0
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39",
+     "W40",
+     "W41",
+     "W42"
+    ],
+    "spend": [
+     2652,
+     2576,
+     2513,
+     2537,
+     2651,
+     2900,
+     2675,
+     2509
+    ],
+    "bookings": [
+     112,
+     92,
+     80,
+     89,
+     92,
+     75,
+     80,
+     75
+    ]
+   },
+   "funnel": {
+    "impr": 95835,
+    "clicks": 6175,
+    "bookings": 75,
+    "landing": 2402
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting",
+     "platform": "Meta",
+     "spend": 976.08,
+     "bookings": 32,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR - Remarketing Campaign",
+     "platform": "Meta",
+     "spend": 559.2,
+     "bookings": 24,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Italian Restaurant - Manhattan",
+     "platform": "Google",
+     "spend": 138.66,
+     "bookings": 5.0,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR - Prospecting – Outdoor Dining Campaign",
+     "platform": "Meta",
+     "spend": 138.09,
+     "bookings": 3,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR - Halloween Campaign - LPV",
+     "platform": "Meta",
+     "spend": 137.11,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "PMax > Generic",
+     "platform": "Google",
+     "spend": 134.88,
+     "bookings": 2.0,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "GA4 booking tracking has recovered: <code>sevenrooms_booking_complete</code> was dead at all three USA properties from 16 to 20 October 2026 and came back on Wednesday 21 October. Market create-path bookings by day were 4 and 1 on 19 and 20 October, then 49, 54, 47, 60 and 46, so this week is a five-day reading and the GA4 booking, conversion-rate and landing-page figures on this page understate the market by roughly 110 bookings. SevenRooms took 86 website bookings on 19 and 20 October against 5 GA4 events. Meta and Google figures are unaffected in either week.",
+    "GA4 bookings are the create path only and exclude the <code>modify</code>, <code>manage</code> and <code>prearrival</code> pages. The current, prior and year-ago weeks and the eight-week series are all on that basis, so they do not tie to the figures published up to and including w2026-10-05. Aqua NYC is restricted to its own venue paths in both years; this year-ago week carries no Hutong New York rows, so the restriction changes nothing here.",
+    "Google booking conversions and modelled store visits settle upward for two to three weeks. Last week's Hutong NYC reading has already moved from 8.0 to 13.0 and the walk-in panels moved from 101 to 196 at Aqua NYC, 285 to 500 at Hutong NYC and 112 to 184 at Hutong Miami, so this week's counts are a floor and cost per booking a ceiling."
+   ]
+  },
+  "Hutong NYC": {
+   "web": {
+    "cur": {
+     "bookings": 90,
+     "users": 5574,
+     "sessions": 6653,
+     "avgsec": 238.6,
+     "engrate": 56.3,
+     "pps": 2.44,
+     "newpct": 93.3
+    },
+    "prior": {
+     "bookings": 68,
+     "users": 4994,
+     "sessions": 6101,
+     "avgsec": 145.2,
+     "engrate": 53.4,
+     "pps": 2.39,
+     "newpct": 93.3
+    },
+    "yoy": {
+     "bookings": 205,
+     "users": 4195,
+     "sessions": 5296,
+     "avgsec": 164.6,
+     "engrate": 69.5,
+     "pps": 2.11,
+     "newpct": 79.8
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1410,
+      "bookings": 14,
+      "impr": 219112,
+      "clicks": 2069
+     },
+     "prior": {
+      "spend": 1436,
+      "bookings": 20,
+      "impr": 245921,
+      "clicks": 2370
+     },
+     "yoy": {
+      "spend": 1119,
+      "bookings": 11,
+      "impr": 103358,
+      "clicks": 6393
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 1162,
+      "bookings": 16,
+      "impr": 53821,
+      "clicks": 2168
+     },
+     "prior": {
+      "spend": 1123,
+      "bookings": 13,
+      "impr": 77444,
+      "clicks": 1996
+     },
+     "yoy": {
+      "spend": 1114,
+      "bookings": 67,
+      "impr": 228068,
+      "clicks": 3412
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      2190,
+      2040,
+      1564
+     ],
+     "b": [
+      37,
+      20,
+      71
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      1642,
+      1392,
+      1292
+     ],
+     "b": [
+      24,
+      13,
+      66
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      1015,
+      503,
+      462
+     ],
+     "b": [
+      2,
+      1,
+      14
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      761,
+      756,
+      919
+     ],
+     "b": [
+      2,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      473,
+      421,
+      318
+     ],
+     "b": [
+      17,
+      6,
+      20
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      242,
+      310,
+      496
+     ],
+     "b": [
+      0,
+      24,
+      32
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      139,
+      114,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      108,
+      141,
+      212
+     ],
+     "b": [
+      2,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      101,
+      108,
+      54
+     ],
+     "b": [
+      4,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      15,
+      10,
+      24
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      1,
+      306,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 73.5,
+    "Desktop": 24.4,
+    "Tablet": 2.1
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 3803,
+     "b": 51
+    },
+    {
+     "path": "/events/bubbles-bao-brunch",
+     "s": 571,
+     "b": 4
+    },
+    {
+     "path": "/menus",
+     "s": 476,
+     "b": 3
+    },
+    {
+     "path": "",
+     "s": 277,
+     "b": 0
+    },
+    {
+     "path": "/menus/a-la-carte",
+     "s": 253,
+     "b": 1
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39",
+     "W40",
+     "W41",
+     "W42"
+    ],
+    "spend": [
+     1970,
+     2014,
+     2090,
+     2068,
+     2407,
+     2458,
+     2558,
+     2573
+    ],
+    "bookings": [
+     35,
+     41,
+     40,
+     41,
+     35,
+     31,
+     33,
+     30
+    ]
+   },
+   "funnel": {
+    "impr": 272933,
+    "clicks": 4237,
+    "bookings": 30,
+    "landing": 1234
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 777.81,
+     "bookings": 14,
+     "wow": "flat"
+    },
+    {
+     "name": "HT | Mahjong | Reach | New York",
+     "platform": "Meta",
+     "spend": 419.6,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Midtown",
+     "platform": "Google",
+     "spend": 355.03,
+     "bookings": 1.0,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Special Events",
+     "platform": "Google",
+     "spend": 247.98,
+     "bookings": 1.0,
+     "wow": "flat"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 231.13,
+     "bookings": 3.0,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR | NEW Awareness Campaign | Video Viewers",
+     "platform": "Meta",
+     "spend": 212.9,
+     "bookings": 0,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "GA4 booking tracking has recovered: <code>sevenrooms_booking_complete</code> was dead at all three USA properties from 16 to 20 October 2026 and came back on Wednesday 21 October. Market create-path bookings by day were 4 and 1 on 19 and 20 October, then 49, 54, 47, 60 and 46, so this week is a five-day reading and the GA4 booking, conversion-rate and landing-page figures on this page understate the market by roughly 110 bookings. SevenRooms took 86 website bookings on 19 and 20 October against 5 GA4 events. Meta and Google figures are unaffected in either week.",
+    "Hutong NYC now carries a year-on-year booking figure. It was withheld last week because the 2025 matched week held five of seven days; the week of 20 to 26 October 2025 is complete, so 205 is published.",
+    "Google booking conversions and modelled store visits settle upward for two to three weeks. Last week's Hutong NYC reading has already moved from 8.0 to 13.0 and the walk-in panels moved from 101 to 196 at Aqua NYC, 285 to 500 at Hutong NYC and 112 to 184 at Hutong Miami, so this week's counts are a floor and cost per booking a ceiling."
+   ]
+  },
+  "Hutong Miami": {
+   "web": {
+    "cur": {
+     "bookings": 31,
+     "users": 3835,
+     "sessions": 4236,
+     "avgsec": 85.1,
+     "engrate": 36.7,
+     "pps": 1.94,
+     "newpct": 96.9
+    },
+    "prior": {
+     "bookings": 40,
+     "users": 4073,
+     "sessions": 4600,
+     "avgsec": 104.3,
+     "engrate": 35.6,
+     "pps": 1.88,
+     "newpct": 97.4
+    },
+    "yoy": {
+     "bookings": 75,
+     "users": 3104,
+     "sessions": 3476,
+     "avgsec": 104.1,
+     "engrate": 67.5,
+     "pps": 2.21,
+     "newpct": 88.4
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 1653,
+      "bookings": 22,
+      "impr": 91045,
+      "clicks": 3539
+     },
+     "prior": {
+      "spend": 1661,
+      "bookings": 50,
+      "impr": 99455,
+      "clicks": 3791
+     },
+     "yoy": {
+      "spend": 1392,
+      "bookings": 32,
+      "impr": 337203,
+      "clicks": 6200
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 515,
+      "bookings": 5,
+      "impr": 11910,
+      "clicks": 559
+     },
+     "prior": {
+      "spend": 583,
+      "bookings": 9,
+      "impr": 13265,
+      "clicks": 627
+     },
+     "yoy": {
+      "spend": 1210,
+      "bookings": 19,
+      "impr": 56624,
+      "clicks": 1148
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      2477,
+      2590,
+      1
+     ],
+     "b": [
+      4,
+      8,
+      0
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      584,
+      632,
+      353
+     ],
+     "b": [
+      10,
+      13,
+      11
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      506,
+      480,
+      445
+     ],
+     "b": [
+      6,
+      4,
+      26
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      230,
+      253,
+      158
+     ],
+     "b": [
+      0,
+      0,
+      1
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      210,
+      278,
+      297
+     ],
+     "b": [
+      5,
+      9,
+      11
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      156,
+      164,
+      2097
+     ],
+     "b": [
+      3,
+      2,
+      25
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      42,
+      41,
+      55
+     ],
+     "b": [
+      2,
+      0,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      28,
+      19,
+      0
+     ],
+     "b": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      19,
+      15,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      15,
+      31,
+      73
+     ],
+     "b": [
+      0,
+      3,
+      0
+     ]
+    },
+    {
+     "name": "Mobile Push Notifications",
+     "s": [
+      0,
+      0,
+      5
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 90.5,
+    "Desktop": 8.1,
+    "Tablet": 1.4
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 1459,
+     "b": 18
+    },
+    {
+     "path": "/menus",
+     "s": 1318,
+     "b": 1
+    },
+    {
+     "path": "/menus/bubbles-bao-brunch",
+     "s": 825,
+     "b": 2
+    },
+    {
+     "path": "/menus/brickell-nights-menu",
+     "s": 247,
+     "b": 2
+    },
+    {
+     "path": "",
+     "s": 77,
+     "b": 0
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39",
+     "W40",
+     "W41",
+     "W42"
+    ],
+    "spend": [
+     2167,
+     2263,
+     2041,
+     2048,
+     2184,
+     2251,
+     2245,
+     2168
+    ],
+    "bookings": [
+     41,
+     33,
+     47,
+     40,
+     65,
+     45,
+     59,
+     27
+    ]
+   },
+   "funnel": {
+    "impr": 102955,
+    "clicks": 4098,
+    "bookings": 27,
+    "landing": 2687
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 1091.36,
+     "bookings": 10,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR | NEW Retargeting Campaign",
+     "platform": "Meta",
+     "spend": 420.16,
+     "bookings": 12,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Chinese Cuisine",
+     "platform": "Google",
+     "spend": 226.32,
+     "bookings": 3.0,
+     "wow": "flat"
+    },
+    {
+     "name": "CRKLR | NEW Awareness Campaign – LPV Campaign",
+     "platform": "Meta",
+     "spend": 141.58,
+     "bookings": 0,
+     "wow": "flat"
+    },
+    {
+     "name": "P. Max > Generic",
+     "platform": "Google",
+     "spend": 134.78,
+     "bookings": 0.0,
+     "wow": "flat"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "Google",
+     "spend": 88.45,
+     "bookings": 2.0,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "GA4 booking tracking has recovered: <code>sevenrooms_booking_complete</code> was dead at all three USA properties from 16 to 20 October 2026 and came back on Wednesday 21 October. Market create-path bookings by day were 4 and 1 on 19 and 20 October, then 49, 54, 47, 60 and 46, so this week is a five-day reading and the GA4 booking, conversion-rate and landing-page figures on this page understate the market by roughly 110 bookings. SevenRooms took 86 website bookings on 19 and 20 October against 5 GA4 events. Meta and Google figures are unaffected in either week.",
+    "GA4 bookings are the create path only and exclude the <code>modify</code>, <code>manage</code> and <code>prearrival</code> pages. The current, prior and year-ago weeks and the eight-week series are all on that basis, so they do not tie to the figures published up to and including w2026-10-05. Aqua NYC is restricted to its own venue paths in both years; this year-ago week carries no Hutong New York rows, so the restriction changes nothing here.",
+    "Google booking conversions and modelled store visits settle upward for two to three weeks. Last week's Hutong NYC reading has already moved from 8.0 to 13.0 and the walk-in panels moved from 101 to 196 at Aqua NYC, 285 to 500 at Hutong NYC and 112 to 184 at Hutong Miami, so this week's counts are a floor and cost per booking a ceiling."
+   ]
+  },
+  "All": {
+   "web": {
+    "cur": {
+     "bookings": 261,
+     "users": 15442,
+     "sessions": 18133,
+     "avgsec": 179.3,
+     "engrate": 50.5,
+     "pps": 2.39,
+     "newpct": 94.3
+    },
+    "prior": {
+     "bookings": 259,
+     "users": 15129,
+     "sessions": 17928,
+     "avgsec": 164.3,
+     "engrate": 49.6,
+     "pps": 2.43,
+     "newpct": 94.2
+    },
+    "yoy": {
+     "bookings": 614,
+     "users": 13853,
+     "sessions": 17484,
+     "avgsec": 164.7,
+     "engrate": 64.4,
+     "pps": 2.76,
+     "newpct": 85.6
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 4874,
+      "bookings": 95,
+      "impr": 386513,
+      "clicks": 10929
+     },
+     "prior": {
+      "spend": 5058,
+      "bookings": 139,
+      "impr": 429809,
+      "clicks": 10553
+     },
+     "yoy": {
+      "spend": 4211,
+      "bookings": 94,
+      "impr": 765045,
+      "clicks": 17865
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 2376,
+      "bookings": 37,
+      "impr": 85210,
+      "clicks": 3581
+     },
+     "prior": {
+      "spend": 2419,
+      "bookings": 33,
+      "impr": 108774,
+      "clicks": 3428
+     },
+     "yoy": {
+      "spend": 4294,
+      "bookings": 196,
+      "impr": 301986,
+      "clicks": 6479
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Organic Search",
+     "s": [
+      5203,
+      5101,
+      3646
+     ],
+     "b": [
+      101,
+      105,
+      168
+     ]
+    },
+    {
+     "name": "Paid Social",
+     "s": [
+      5140,
+      5572,
+      2513
+     ],
+     "b": [
+      29,
+      21,
+      14
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      3776,
+      3584,
+      4021
+     ],
+     "b": [
+      69,
+      45,
+      182
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      1375,
+      881,
+      1894
+     ],
+     "b": [
+      3,
+      1,
+      76
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      1183,
+      1150,
+      1767
+     ],
+     "b": [
+      38,
+      27,
+      81
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      460,
+      530,
+      2617
+     ],
+     "b": [
+      8,
+      15,
+      37
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      431,
+      455,
+      668
+     ],
+     "b": [
+      3,
+      26,
+      35
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      234,
+      306,
+      0
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      234,
+      166,
+      0
+     ],
+     "b": [
+      1,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      166,
+      207,
+      234
+     ],
+     "b": [
+      5,
+      17,
+      15
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      47,
+      51,
+      293
+     ],
+     "b": [
+      3,
+      1,
+      6
+     ]
+    },
+    {
+     "name": "Mobile Push Notifications",
+     "s": [
+      0,
+      0,
+      5
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "Mobile": 79.5,
+    "Desktop": 19.2,
+    "Tablet": 1.3
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 6505,
+     "b": 84
+    },
+    {
+     "path": "/aqua-roma",
+     "s": 3608,
+     "b": 52
+    },
+    {
+     "path": "/menus",
+     "s": 1794,
+     "b": 4
+    },
+    {
+     "path": "/menus/bubbles-bao-brunch",
+     "s": 825,
+     "b": 2
+    },
+    {
+     "path": "/menus/a-la-carte",
+     "s": 647,
+     "b": 1
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W35",
+     "W36",
+     "W37",
+     "W38",
+     "W39",
+     "W40",
+     "W41",
+     "W42"
+    ],
+    "spend": [
+     6788,
+     6853,
+     6645,
+     6653,
+     7242,
+     7609,
+     7478,
+     7249
+    ],
+    "bookings": [
+     188,
+     165,
+     167,
+     170,
+     192,
+     151,
+     172,
+     132
+    ]
+   },
+   "funnel": {
+    "impr": 471723,
+    "clicks": 14510,
+    "bookings": 132,
+    "landing": 6323
+   },
+   "campaigns": [
+    {
+     "name": "Hutong Miami &middot; CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 1091.36,
+     "bookings": 10,
+     "wow": "flat"
+    },
+    {
+     "name": "Aqua NYC &middot; CRKLR - Prospecting",
+     "platform": "Meta",
+     "spend": 976.08,
+     "bookings": 32,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong NYC &middot; CRKLR | NEW Conversions Campaign",
+     "platform": "Meta",
+     "spend": 777.81,
+     "bookings": 14,
+     "wow": "flat"
+    },
+    {
+     "name": "Aqua NYC &middot; CRKLR - Remarketing Campaign",
+     "platform": "Meta",
+     "spend": 559.2,
+     "bookings": 24,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong Miami &middot; CRKLR | NEW Retargeting Campaign",
+     "platform": "Meta",
+     "spend": 420.16,
+     "bookings": 12,
+     "wow": "flat"
+    },
+    {
+     "name": "Hutong NYC &middot; HT | Mahjong | Reach | New York",
+     "platform": "Meta",
+     "spend": 419.6,
+     "bookings": 0,
+     "wow": "flat"
+    }
+   ],
+   "notes": [
+    "GA4 booking tracking has recovered: <code>sevenrooms_booking_complete</code> was dead at all three USA properties from 16 to 20 October 2026 and came back on Wednesday 21 October. Market create-path bookings by day were 4 and 1 on 19 and 20 October, then 49, 54, 47, 60 and 46, so this week is a five-day reading and the GA4 booking, conversion-rate and landing-page figures on this page understate the market by roughly 110 bookings. SevenRooms took 86 website bookings on 19 and 20 October against 5 GA4 events. Meta and Google figures are unaffected in either week.",
+    "GA4 bookings are the create path only and exclude the <code>modify</code>, <code>manage</code> and <code>prearrival</code> pages. The current, prior and year-ago weeks and the eight-week series are all on that basis, so they do not tie to the figures published up to and including w2026-10-05. Aqua NYC is restricted to its own venue paths in both years; this year-ago week carries no Hutong New York rows, so the restriction changes nothing here.",
+    "Hutong NYC now carries a year-on-year booking figure. It was withheld last week because the 2025 matched week held five of seven days; the week of 20 to 26 October 2025 is complete, so 205 is published.",
+    "Google booking conversions and modelled store visits settle upward for two to three weeks. Last week's Hutong NYC reading has already moved from 8.0 to 13.0 and the walk-in panels moved from 101 to 196 at Aqua NYC, 285 to 500 at Hutong NYC and 112 to 184 at Hutong Miami, so this week's counts are a floor and cost per booking a ceiling."
+   ]
+  }
+ }
+}

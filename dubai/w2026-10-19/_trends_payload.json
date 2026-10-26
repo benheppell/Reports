@@ -1,0 +1,184 @@
+{
+ "venues": [
+  "Hutong Dubai"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W39",
+  "W40",
+  "W41",
+  "W42"
+ ],
+ "dateTY": [
+  "28 Sep\u20134 Oct",
+  "5\u201311 Oct",
+  "12\u201318 Oct",
+  "19\u201325 Oct"
+ ],
+ "dateLY": [
+  "29 Sep\u20135 Oct",
+  "6\u201312 Oct",
+  "13\u201319 Oct",
+  "20\u201326 Oct"
+ ],
+ "fyrange": "FY26 weeks 39\u201342",
+ "sym": "AED ",
+ "gaps": true,
+ "generated": "26 October 2026",
+ "data": {
+  "Hutong Dubai": [
+   [
+    "Website users",
+    [
+     1503,
+     1296,
+     1126,
+     931
+    ],
+    [
+     2057,
+     1623,
+     1636,
+     1875
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     6.3,
+     7.7,
+     6.8,
+     5.8
+    ],
+    [
+     7.5,
+     8.4,
+     8.1,
+     9.1
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     94,
+     100,
+     77,
+     54
+    ],
+    [
+     154,
+     137,
+     133,
+     170
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     33,
+     48,
+     30,
+     6
+    ],
+    [
+     44,
+     20,
+     18,
+     18
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     22,
+     23,
+     24,
+     20
+    ],
+    [
+     27,
+     28,
+     24,
+     31
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     206.6,
+     151.2,
+     133.3,
+     145.4
+    ],
+    [
+     206.7,
+     142.1,
+     185.6,
+     159.0
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     130.5,
+     88.6,
+     86.3,
+     284.5
+    ],
+    [
+     205.0,
+     353.6,
+     232.8,
+     230.7
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     488.19,
+     473.78,
+     563.98,
+     548.73
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Hutong Dubai": "W42 users 931 against 1,875 last year, down 50.3%, with 54 GA4 bookings against 170, down 68.2%. Both years are counted on the create path only. No amendment events fired at all this week, on either side, so the create path and the all paths basis give the same 54. Week on week users fell 17.3% from 1,126 and GA4 bookings fell from 77, so the conversion rate eased to 5.8% from 6.8% and sits well under last year's 9.1%. Two separate things sit behind that. First, GA4 is now under recording. SevenRooms shows 80 website bookings created in the week against GA4's 54, and 101 against 77 the week before, where the two series matched within 3% through late September and early October. Treat the Dubai GA4 booking figure from 12 October as a floor. Second, Meta was dark. The ad account went into a Payment Needed state at 05:18 on 16 October and stayed there until 10:53 on 24 October, so Meta delivered on only two of the seven days and spent AED 1,707 against AED 2,590. Impressions fell to 231,108 from 452,754 and schedules to 6 from 30. Google ran all week: spend AED 2,899 against AED 3,246 and booking conversions 19.93 against 24.35. On SevenRooms the underlying trade held better than GA4 suggests, with 306 bookings created across all channels against 294 the week before, though still well under the 444 of the same week last year. Google walk-in signals have now returned no rows for eleven consecutive weeks, so they are shown as a gap. That is a tracking gap on the account, not a real zero."
+ },
+ "alert": {
+  "Hutong Dubai": [
+   "red",
+   "Traffic drop",
+   "Users 931 vs 1,875 last year, down 50.3%"
+  ]
+ },
+ "sharednote": {}
+}

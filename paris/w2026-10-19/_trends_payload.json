@@ -1,0 +1,184 @@
+{
+ "venues": [
+  "Aqua Kyoto Paris"
+ ],
+ "labels": [
+  "",
+  "",
+  "",
+  ""
+ ],
+ "weekno": [
+  "W35",
+  "W36",
+  "W37",
+  "W38"
+ ],
+ "dateTY": [
+  "28 Sep–4 Oct",
+  "5–11 Oct",
+  "12–18 Oct",
+  "19–25 Oct"
+ ],
+ "dateLY": [
+  "29 Sep–5 Oct",
+  "6–12 Oct",
+  "13–19 Oct",
+  "20–26 Oct"
+ ],
+ "fyrange": "FY26 weeks 35–38",
+ "sym": "€",
+ "gaps": true,
+ "data": {
+  "Aqua Kyoto Paris": [
+   [
+    "Website users",
+    [
+     5395,
+     4632,
+     3831,
+     2334
+    ],
+    [
+     5433,
+     13524,
+     8166,
+     7406
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Conversion rate",
+    [
+     6.2,
+     6.0,
+     4.9,
+     1.8
+    ],
+    [
+     3.3,
+     2.0,
+     3.4,
+     3.2
+    ],
+    false,
+    "%"
+   ],
+   [
+    "GA4 bookings",
+    [
+     334,
+     280,
+     189,
+     42
+    ],
+    [
+     182,
+     267,
+     281,
+     239
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Meta bookings",
+    [
+     49,
+     39,
+     54,
+     25
+    ],
+    [
+     9,
+     9,
+     2,
+     7
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google bookings",
+    [
+     47.0,
+     55.0,
+     46.0,
+     8.0
+    ],
+    [
+     31.67,
+     23.0,
+     64.0,
+     54.0
+    ],
+    false,
+    "n"
+   ],
+   [
+    "Google CPA",
+    [
+     25.4,
+     28.1,
+     35.0,
+     54.8
+    ],
+    [
+     28.8,
+     23.8,
+     15.5,
+     17.5
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Meta CPA",
+    [
+     30.2,
+     43.0,
+     30.8,
+     68.7
+    ],
+    [
+     84.4,
+     196.9,
+     926.6,
+     255.9
+    ],
+    true,
+    "$"
+   ],
+   [
+    "Google walk-in signals",
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null,
+     null
+    ],
+    false,
+    "n"
+   ]
+  ]
+ },
+ "narr": {
+  "Aqua Kyoto Paris": "W38 users 2,334 with 42 GA4 bookings on the create path, the lowest of the series: users are down 39.1% on W37 and bookings down 77.8%, with the conversion rate at 1.80% of users from 4.93%. The year-ago week read 239 create-path bookings, so GA4 year on year is down 82.4%. That figure is a floor and should not be read as the trading result. SevenRooms recorded 110 website bookings created in the same seven days, against 198 in W37 and 227 a year ago, so the website fall on booking records is 44.4% week on week and 51.5% year on year. GA4 counted 1.13, 0.95 and 1.05 bookings for every SevenRooms website booking in W36, W37 and the year-ago week, and 0.38 this week, so GA4 is now seeing under 40% of what it used to. The break dates to Friday 16 October. The ratio of SevenRooms widget load events to reservation button clicks on site held between 1.85 and 2.78 every day from 5 to 15 October, fell to 1.39 on 16 October, and has run 0.74 to 0.90 every day since; the GA4 to SevenRooms booking ratio broke on the same two days. Those are the dates of the estate-wide booking tag break. A real fall sits underneath it. Walk-ins fell 23.6% and Google Reserve 19.2% week on week, and neither touches the website or its tagging, while all bookings of 306 are down 31.2% on W37 and 27.3% on the year-ago 422. Google Ads is the other half of the week: delivery ran on 19, 20 and 21 October only and stopped from 22 October with all six campaigns still enabled, so spend came in at €439 against €1,611 in W37 and Paid Search sessions fell to 216 from 957. Meta held at €1,718 for 25 pixel bookings, a €68.73 CPA against €30.77 in W37, though the Meta pixel sits on the same site as the broken GA4 tag and its 53.7% fall is closer to the 44.4% booking record fall than to GA4's. Google took €439 for 8 booking conversions, a €54.83 CPA on three days of delivery, so it is not comparable with the eight-week series. Spend pacing is 66.0% of the prorated October plan, Meta 98.2% and Google 28.9%."
+ },
+ "alert": {
+  "Aqua Kyoto Paris": [
+   "red",
+   "Tracking break",
+   "GA4 captured 0.38 bookings per SevenRooms website booking this week against 0.95 to 1.13 in the two prior weeks. The 42 is a floor; SevenRooms recorded 110 website bookings. Google Ads also stopped delivering after 21 October"
+  ]
+ },
+ "sharednote": {},
+ "generated": "26 October 2026"
+}

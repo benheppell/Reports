@@ -1,0 +1,146 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "ytd_label": "FY from Feb",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 154,
+   "tgt": 252,
+   "wow": 159,
+   "yoy": 272,
+   "ytd": 7397,
+   "ytdt": 8050,
+   "meta_s": 6609.28,
+   "goog_s": 9961.19,
+   "nc": false
+  },
+  {
+   "name": "Hutong HK",
+   "act": 149,
+   "tgt": 289,
+   "wow": 195,
+   "yoy": 378,
+   "ytd": 10539,
+   "ytdt": 9768,
+   "meta_s": 4722.25,
+   "goog_s": 7005.28,
+   "nc": false
+  },
+  {
+   "name": "The Chinese Library",
+   "act": 58,
+   "tgt": 110,
+   "wow": 65,
+   "yoy": 130,
+   "ytd": 4411,
+   "ytdt": 3827,
+   "meta_s": 5439.12,
+   "goog_s": 3972.22,
+   "nc": false
+  },
+  {
+   "name": "Cantina",
+   "act": 23,
+   "tgt": 67,
+   "wow": 17,
+   "yoy": 53,
+   "ytd": 2558,
+   "ytdt": 2154,
+   "meta_s": 2999.54,
+   "goog_s": 4335.2,
+   "nc": false
+  },
+  {
+   "name": "Dim Sum Library",
+   "act": 93,
+   "tgt": 186,
+   "wow": 93,
+   "yoy": 185,
+   "ytd": 5828,
+   "ytdt": 6559,
+   "meta_s": 1052.64,
+   "goog_s": 1706.77,
+   "nc": false
+  },
+  {
+   "name": "Shiro Pacific Place",
+   "act": 41,
+   "tgt": null,
+   "wow": 35,
+   "yoy": 98,
+   "ytd": 3008,
+   "ytdt": null,
+   "meta_s": 0,
+   "goog_s": 0,
+   "nc": false,
+   "tgt_label": "combined",
+   "shared_ads": true
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "act": 40,
+   "tgt": null,
+   "wow": 24,
+   "yoy": 0,
+   "ytd": 2375,
+   "ytdt": null,
+   "meta_s": 0,
+   "goog_s": 0,
+   "nc": false,
+   "tgt_label": "combined",
+   "shared_ads": true,
+   "noyoy": true
+  }
+ ],
+ "note": "<b>Read the GA4 bookings below as a floor, not a result. The <code>sevenrooms_booking_complete</code> event is still under-recording across the Hong Kong estate, eleven days after it broke on 15 to 16 October, and it has not been fixed.</b> The clean test is GA4 create-path bookings against SevenRooms website booking rows for the same dates. A healthy venue records at least one GA4 event per website booking, because GA4 counts the booking when it is made and keeps the ones that later cancel. <b>The Canton Library</b>, on the newest property, records <b>0.93</b> and is the only venue behaving normally. Every other venue sits between <b>0.43 and 0.74</b>: Dim Sum Library 0.74, Aqua HK 0.66, Shiro Tai Kwun 0.65, The Chinese Library 0.64, Vesu 0.59, Hutong HK 0.57, Shiro Pacific Place 0.55 and <b>Cantina 0.43</b>. Across the portfolio GA4 recorded <b>558</b> bookings against <b>897</b> SevenRooms website bookings, so the week is understated by roughly <b>a third</b>. Average session duration is still inflated three to six times at every venue except The Canton Library, which is the same secondary symptom as last week. <br><br><b>Demand went the other way.</b> SevenRooms website bookings rose from <b>757</b> to <b>897</b>, up <b>18.5 per cent</b> week on week, and portfolio covers reached <b>10,405</b>, the highest of the eight-week series. Read covers, not bookings, for this week. The covers page carries the detail. <br><br>On the numbers as GA4 reports them: the weekly target is the October monthly GA4 target &times; 7/30, because 19 to 25 October sits wholly inside October, giving <b>1,036</b>. Hong Kong recorded <b>558</b> create-path GA4 bookings, <b>46.1 per cent</b> behind, <b>down 5.1 per cent</b> week on week and <b>down 50.0 per cent</b> year on year. The year-ago week was a strong one in its own right, 1,116 against 1,010 the week before it, so the year-on-year gap is part base and part measurement. No venue beat the weekly target and none can be read as a trading result. <br><br>GA4 bookings are the <b>create path</b> only, the second Hong Kong week on that basis. The amendment share of gross was <b>0.4 per cent</b> this week and 4.1 per cent the week before. The 2025 side is unchanged because the amendment pages did not exist in the 2025 tracking, so all three columns are on the same basis. Year to date is shown on the old gross basis so the line stays continuous with every published week; it is <b>3.2 per cent</b> ahead of target and that figure is itself held down by two broken weeks.",
+ "week": "19–25 Oct 2026",
+ "wow": "12–18 Oct 2026",
+ "yoy": "20–26 Oct 2025",
+ "generated": "26 October 2026",
+ "groups": [
+  {
+   "name": "Shiro (both sites)",
+   "label": "Shiro, both sites (combined target)",
+   "members": [
+    "Shiro Pacific Place",
+    "Shiro Tai Kwun"
+   ],
+   "tgt": 132,
+   "ytdt": 4655,
+   "meta_s": 5080.91,
+   "goog_s": 4934.66
+  }
+ ],
+ "outside": [
+  {
+   "name": "Vesu",
+   "act": 50,
+   "tgt": null,
+   "wow": 49,
+   "yoy": 66,
+   "ytd": 1538,
+   "ytdt": null,
+   "meta_s": 3215.05,
+   "goog_s": 2236.94,
+   "pill": "reopened 8 Sep"
+  },
+  {
+   "name": "The Canton Library",
+   "act": 57,
+   "tgt": null,
+   "wow": 47,
+   "yoy": 0,
+   "noyoy": true,
+   "ytd": 269,
+   "ytdt": null,
+   "meta_s": 11922.85,
+   "goog_s": 13328.05,
+   "cpb_spend": 9358.02,
+   "pill": "opened 8 Sep"
+  }
+ ],
+ "outside_label": "Outside the target set: not in the portfolio total or its variance",
+ "foot_extra": " <br>GA4 bookings are on the <b>create-path</b> basis: event <code>sevenrooms_booking_complete</code> with the amendment, manage and pre-arrival page paths excluded. The boundary date is 12 October 2026. Week, prior week and year-ago week are all on this basis; year to date is left on the old gross basis for continuity. Shiro&rsquo;s weekly target of 132 (YTD 4,655) covers both sites, so the two Shiro rows carry no individual target and are measured together on the &ldquo;Shiro, both sites&rdquo; row. Shiro&rsquo;s Meta and Google accounts are shared by both sites, so Shiro ad spend is shown once on that row and never split. The Canton Library&rsquo;s cost per booking leaves out its awareness campaign spend; its Google Ads account still has no verified booking conversion. Targets for Vesu and The Canton Library are not set yet."
+}

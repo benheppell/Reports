@@ -1,0 +1,324 @@
+{
+ "market": "London",
+ "platform": "OpenTable",
+ "tz": "Europe/London",
+ "platform_foot": "<b>OpenTable</b> = OpenTable and OT Guestcenter sources",
+ "combined_note": "<b>Regent St</b> = Aqua Kyoto + Aqua Nueva combined. ",
+ "week": "19–25 Oct 2026",
+ "wow": "12–18 Oct 2026",
+ "yoy": "20–26 Oct 2025",
+ "generated": "26 October 2026",
+ "venues": [
+  {
+   "name": "Aqua Shard",
+   "ga4": 1220,
+   "ch": {
+    "web": {
+     "c": 2802,
+     "p": 2895,
+     "y": 3141
+    },
+    "gr": {
+     "c": 368,
+     "p": 419,
+     "y": 176
+    },
+    "ot": {
+     "c": 165,
+     "p": 189,
+     "y": 64
+    },
+    "walk": {
+     "c": 154,
+     "p": 135,
+     "y": 104
+    },
+    "recep": {
+     "c": 4,
+     "p": 18,
+     "y": 5
+    },
+    "ota": {
+     "c": 26,
+     "p": 39,
+     "y": 20
+    },
+    "tp": {
+     "c": 71,
+     "p": 70,
+     "y": 48
+    },
+    "other": {
+     "c": 97,
+     "p": 109,
+     "y": 68
+    }
+   }
+  },
+  {
+   "name": "Hutong",
+   "ga4": 803,
+   "ch": {
+    "web": {
+     "c": 1822,
+     "p": 2008,
+     "y": 1542
+    },
+    "gr": {
+     "c": 361,
+     "p": 425,
+     "y": 210
+    },
+    "ot": {
+     "c": 147,
+     "p": 108,
+     "y": 86
+    },
+    "walk": {
+     "c": 180,
+     "p": 159,
+     "y": 121
+    },
+    "recep": {
+     "c": 20,
+     "p": 15,
+     "y": 32
+    },
+    "ota": {
+     "c": 7,
+     "p": 21,
+     "y": 26
+    },
+    "tp": {
+     "c": 79,
+     "p": 61,
+     "y": 41
+    },
+    "other": {
+     "c": 86,
+     "p": 82,
+     "y": 67
+    }
+   }
+  },
+  {
+   "name": "Regent St",
+   "ga4": 106,
+   "ch": {
+    "web": {
+     "c": 451,
+     "p": 488,
+     "y": 498
+    },
+    "gr": {
+     "c": 39,
+     "p": 56,
+     "y": 107
+    },
+    "ot": {
+     "c": 195,
+     "p": 225,
+     "y": 61
+    },
+    "walk": {
+     "c": 141,
+     "p": 156,
+     "y": 165
+    },
+    "recep": {
+     "c": 20,
+     "p": 29,
+     "y": 7
+    },
+    "ota": {
+     "c": 199,
+     "p": 169,
+     "y": 180
+    },
+    "tp": {
+     "c": 10,
+     "p": 8,
+     "y": 2
+    },
+    "other": {
+     "c": 209,
+     "p": 177,
+     "y": 182
+    }
+   }
+  },
+  {
+   "name": "Azzurra",
+   "ga4": 38,
+   "ch": {
+    "web": {
+     "c": 165,
+     "p": 180,
+     "y": 197
+    },
+    "gr": {
+     "c": 51,
+     "p": 30,
+     "y": 78
+    },
+    "ot": {
+     "c": 98,
+     "p": 92,
+     "y": 56
+    },
+    "walk": {
+     "c": 204,
+     "p": 273,
+     "y": 229
+    },
+    "recep": {
+     "c": 23,
+     "p": 86,
+     "y": 48
+    },
+    "ota": {
+     "c": 50,
+     "p": 86,
+     "y": 32
+    },
+    "tp": {
+     "c": 2,
+     "p": 0,
+     "y": 0
+    },
+    "other": {
+     "c": 52,
+     "p": 86,
+     "y": 32
+    }
+   }
+  },
+  {
+   "name": "Shiro Sushi",
+   "ga4": 45,
+   "ch": {
+    "web": {
+     "c": 293,
+     "p": 285,
+     "y": 226
+    },
+    "gr": {
+     "c": 50,
+     "p": 27,
+     "y": 76
+    },
+    "ot": {
+     "c": 53,
+     "p": 70,
+     "y": 20
+    },
+    "walk": {
+     "c": 149,
+     "p": 193,
+     "y": 171
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "ota": {
+     "c": 104,
+     "p": 132,
+     "y": 22
+    },
+    "tp": {
+     "c": 0,
+     "p": 2,
+     "y": 4
+    },
+    "other": {
+     "c": 104,
+     "p": 134,
+     "y": 26
+    }
+   }
+  },
+  {
+   "name": "DSL",
+   "ga4": 245,
+   "ch": {
+    "web": {
+     "c": 1268,
+     "p": 1149,
+     "y": 0
+    },
+    "gr": {
+     "c": 307,
+     "p": 203,
+     "y": 0
+    },
+    "ot": {
+     "c": 583,
+     "p": 569,
+     "y": 0
+    },
+    "walk": {
+     "c": 947,
+     "p": 1021,
+     "y": 0
+    },
+    "recep": {
+     "c": 132,
+     "p": 146,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 2,
+     "p": 6,
+     "y": 0
+    },
+    "other": {
+     "c": 2,
+     "p": 6,
+     "y": 0
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38"
+  ],
+  "total": [
+   9778,
+   10005,
+   11211,
+   11164,
+   11418,
+   10975,
+   12243,
+   11742
+  ],
+  "ot": [
+   891,
+   1080,
+   1154,
+   1266,
+   1260,
+   1270,
+   1253,
+   1241
+  ]
+ },
+ "ga4_meta": "Portfolio 2,457 create-path &middot; YoY &#9660;9.8%",
+ "ga4_yoy": "&#9660;9.8% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Covers came in at <b>11,742</b>, <b>down 4.1 percent</b> week on week against a freshly recomputed prior week of 12,243, and the second highest of the eight weeks on record. Website is <b>58 percent</b> of London covers; OpenTable, Google Reserve, walk-ins and the rest never reach the GA4 number. Year on year the portfolio reads <b>up 51 percent</b>, but <b>DSL</b> was closed for its rebrand in the matched 2025 week and contributes 3,239 covers against nothing last year: <b>ex DSL the figure is up 9.1 percent</b>. The bulk-import rule removed 14 covers from 7 OpenTable bookings, 8 covers at Hutong and 6 at Azzurra. Read the GA4 dashboard as the website channel, and read this report as demand: four of the six GA4 properties under-recorded all week while covers held."
+}

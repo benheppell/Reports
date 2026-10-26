@@ -1,0 +1,49 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "ytd_label": "calendar year from Jan",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 140,
+   "tgt": 559,
+   "wow": 151,
+   "yoy": 334,
+   "ytd": 9162,
+   "ytdt": 19744,
+   "meta_s": 1810.48,
+   "goog_s": 698.03,
+   "nc": true
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 90,
+   "tgt": 490,
+   "wow": 68,
+   "yoy": 205,
+   "ytd": 6315,
+   "ytdt": 18415,
+   "meta_s": 1410.31,
+   "goog_s": 1162.38,
+   "nc": true
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 31,
+   "tgt": 124,
+   "wow": 40,
+   "yoy": 75,
+   "ytd": 3466,
+   "ytdt": 5678,
+   "meta_s": 1653.1,
+   "goog_s": 515.11,
+   "nc": true
+  }
+ ],
+ "note": "<b>The GA4 booking event is recording again, from Wednesday 21 October.</b> That is the most important thing on this page and it has changed since last week. <code>sevenrooms_booking_complete</code> was dead across all three USA properties from 16 to 20 October and came back on 21 October at every venue. Market create-path bookings by day were <b>4 and 1</b> on Monday 19 and Tuesday 20 October, then <b>49, 54, 47, 60 and 46</b> on 21 to 25 October. <b>So this week is a five-day reading, not a seven-day one.</b> Monday and Tuesday are missing. Over those two days SevenRooms recorded <b>86 website bookings and 298 website covers</b> against 5 GA4 events. Scaling each venue by its own pre-break ratio of GA4 events to SevenRooms website rows, the two lost days would have carried roughly <b>110 bookings</b>, so the true week is in the region of 370 rather than the 261 printed here. That is an estimate stated for context only: <b>the figures on this page are left exactly as GA4 returned them</b> and nothing has been scaled, substituted or filled in. <b>Every venue is understated and by about the same amount in proportion:</b> Aqua NYC 140 against roughly 200, Hutong NYC 90 against roughly 130, Hutong Miami 31 against roughly 44. <b>Read the covers report for the week's demand.</b> <b>How the recovery was checked.</b> <code>page_view</code> ran normally at all three properties on every day of both weeks, including the dead days, so collection itself never stopped. The USA properties carry no <code>book_now_button_click</code> event at all, so unlike Cantina in Hong Kong that cross-check is not available here and SevenRooms is the only independent daily measure. From 21 October, GA4 create-path bookings run at 1.48 times the SevenRooms website booking count at Aqua NYC against a pre-break norm of 1.59 to 1.70, at 1.00 times against 1.12 to 1.15 at Hutong NYC, and at 0.85 times against 1.22 to 1.29 at Hutong Miami. Aqua NYC and Hutong NYC are therefore recording properly. <b>Hutong Miami is recording but sits furthest below its own norm</b>, a gap of about 13 bookings over five days, which on counts this small is not enough to call partial under-collection either way. It should be rechecked next week. <b>Basis.</b> GA4 bookings are the create path only: the <code>modify</code>, <code>manage</code> and <code>prearrival</code> pages, where the same event fires when a guest amends a booking, are excluded. The amendment share this week was <b>10.0 per cent</b> of all booking events across the market, 4.8 per cent at Aqua NYC, 15.1 per cent at Hutong NYC and 16.2 per cent at Hutong Miami, against <b>6.3 per cent</b> in the year-ago week. That is the reverse of last week's reading and it means the create-path rule now costs 2026 more than it costs 2025 in this market. The year-ago week carries a modify route at Aqua NYC (10.2 per cent) and at Hutong Miami (3.8 per cent) but none at Hutong New York, where every 2025 event still fired on the <code>/reservations/hutongnewyork</code> landing route. Last week's note recorded both Hutongs as structurally zero in 2025; that holds for Hutong New York and is now corrected for Hutong Miami. The current, prior and year-ago weeks and the eight-week series are all built on the create path, so every comparison on this page is like for like. They do not tie to the figures published up to and including w2026-10-05. The year to date is also on the create path. <b>Aqua NYC is restricted to its own venue paths in both years</b>, because in the 13 to 19 October 2025 week its property also recorded 73 booking events on Hutong New York reservation pages that are counted again in the Hutong New York property. <b>This year-ago week carries no such rows</b>, so the restriction changes nothing in the figures shown, and it is kept for consistency. <b>Hutong NYC now has a year-on-year figure.</b> It was withheld last week because the 2025 matched week held only five of seven days. The 2025 outage ran to 14 October, so the week of 20 to 26 October 2025 is complete, with 37, 24, 30, 35, 27, 34 and 18 bookings on the seven days and an unbroken series into November. <b>205 is therefore published.</b> The portfolio year-on-year column now sets three venues against three. <b>USA targets are strategic and deliberately aggressive</b>, Hutong NYC explicitly so: its plan hinges on website conversion rising from 4.83 to 6.5 per cent and on a large Meta efficiency fix. Hutong Miami's GA4 target is <b>derived</b>, not given: the workbook plans Meta bookings only, so the monthly Meta figure is scaled by 6738/4756 to reach a GA4 equivalent. This week sits <b>wholly inside October</b>, so the weekly target is not pro-rated across two months: it is each venue's October GA4 target &times; 7/30, giving Aqua NYC 559 (2,394 monthly), Hutong NYC 490 (2,100) and Hutong Miami 124 (530, derived), <b>1,173 for the market</b>, the same basis and the same figure as last week. The USA year-to-date target is not reproducible from the workbook by any day-count rule tested, so it is extended from last week's published cumulative by this week's target, as in prior weeks. <b>Google booking conversions and modelled store visits settle upward for two to three weeks and have done so again.</b> Last week's readings moved from 11.0 to 16.0 at Hutong NYC and the walk-in panels moved far more: Aqua NYC from 101 to 196, Hutong NYC from 285 to 500 and Hutong Miami from 112 to 184. This week's counts are a floor and the paid cost per booking a ceiling. <b>Aqua Kyoto NYC is still shown as a 2026 launch</b>, which is the standing position and is followed here rather than reopened. For the record, the 2025 matched week does carry 119 create-path booking events and 246 website covers on Aqua Kyoto pages, so the position is worth a decision rather than another week of silence. <b>The Google Reserve to OpenTable shift at both US Hutongs remains a routing and margin change, not lost demand.</b>",
+ "week": "19–25 Oct 2026",
+ "wow": "12–18 Oct 2026",
+ "yoy": "20–26 Oct 2025",
+ "generated": "26 October 2026"
+}

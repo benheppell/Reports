@@ -1,0 +1,1123 @@
+{
+ "meta_info": {
+  "currency": "HKD",
+  "cur": "2026-10-19..2026-10-25",
+  "prior": "2026-10-12..2026-10-18",
+  "yoy": "2025-10-20..2025-10-26",
+  "weeks": {
+   "W31": "2026-08-31",
+   "W32": "2026-09-07",
+   "W33": "2026-09-14",
+   "W34": "2026-09-21",
+   "W35": "2026-09-28",
+   "W36": "2026-10-05",
+   "W37": "2026-10-12",
+   "W38": "2026-10-19"
+  },
+  "ly_weeks": {
+   "L35": "2025-09-29",
+   "L36": "2025-10-06",
+   "L37": "2025-10-13",
+   "L38": "2025-10-20"
+  },
+  "meta_bookings_definition": "conversions[].schedule_total from facebook_get_adaccount_insights at account level, explicit time_range, time_increment 7",
+  "google_bookings_definition": "metrics.all_conversions for conversion actions containing 'booking' AND 'complete', excluding names containing 'ga4' EXCEPT at Cantina and Shiro where the GA4-named action is the venue's only booking action",
+  "google_walkin_definition": "sum of all_conversions for 'Store visits','Local actions - Directions','Local actions - Menu views','Clicks to call'",
+  "google_spend": "GAQL FROM customer with segments.week; the connector returns cost already in HKD; no conversion applied",
+  "warnings": [
+   "THE META SCHEDULE CONVERSION IS STILL BROKEN, ELEVEN DAYS ON. W38 schedules: Aqua 10 (6 in W37, 19 in W36), Hutong 1 (4, 11), The Chinese Library 2 (null, 10), Cantina 2 (1, 7), Dim Sum Library 2 (1, 4), Shiro shared 7 (null, 20), Vesu 2 (null, 9). The Canton Library went 13 to 19 and is the only account behaving normally. Meta bookings and Meta CPA for W38 are not performance figures. Hutong recorded one Schedule against HK$4,722 of spend and 260 SevenRooms website bookings.",
+   "Google booking conversions are the least affected signal and they rose at six of seven published accounts: Aqua 49.0 to 69.0, Cantina 7 to 15, TCL 22 to 23, Shiro 39.5 to 61.9, DSL 48.0 to 59.9. Hutong fell 20.3 to 10.6 and Vesu 37 to 30. Google records conversions against the click date, so a fall there is not the same signal as the GA4 fall.",
+   "SETTLING RE-CHECKED, NOTHING CARRIED FORWARD. Prior and year-ago weeks were re-pulled this run. Google W37 booking conversions settled upward at every account since last week: Aqua 47.99 to 49.03, Hutong 17 to 20.29, TCL 21 to 22, Shiro 37 to 39.48, Vesu 34 to 37, DSL 47.98 (first pull on this basis). Walk-in signals also settled up: Aqua W37 494 to 844, Hutong 2166 to 2150, Cantina 997 to 1132, Shiro 130 to 205.",
+   "Store visits (modelled) are only partly published for the current week at every HK account, so W38 walk-in totals are understated and will settle upward.",
+   "Cantina booking action = 'Cantina HK - GA4 (web) sevenrooms_booking_complete' and Shiro = 'Shiro HK - GA4 (web) sevenrooms_booking_complete'. These are each venue's ONLY booking_complete action, so the 'not ga4' exclusion does not apply; they are published as the booking conversion, as in every published week.",
+   "Dim Sum Library Google has no walk-in conversion actions at all (only the booking action exists). Published as null, not zero. Vesu Google likewise has no walk-in actions.",
+   "Vesu Meta bookings and CPA use the conversion (leads) campaign only. W38 conversion-campaign spend HK$2,493.52 with 2 schedules; the awareness campaign HK$721.53 carries no cost per booking. W37 returned no Schedule rows at all, published as null.",
+   "FLAGGED FOR REVIEW, FOURTH WEEK: The Canton Library Google (5594089398). Spend more than doubled to HK$13,328.05 from HK$5,974.30, almost all of it in one campaign, Search > Open Now, which went from HK$1,952.39 to HK$8,140.12. The booking action 'Canton Library HK (web) sevenrooms_booking_complete' recorded 22 against 57 create-path GA4 bookings, a book_now_button_click action recorded 139, and a Booking GTAG action 21.95. Still not a verified working import, so Canton Google bookings and CPA stay published as not available, never zero, and the account Google spend is kept out of ad-driven bookings, blended CPA and the paid funnel.",
+   "Canton Meta = the two Canton campaigns inside the Vista ad account only. Bookings and CPA use the conversions campaign (19 schedules on HK$9,358.02); the awareness campaign spent HK$2,564.83 with no schedules and is excluded from bookings and CPA.",
+   "Hutong Meta still carries the 'HT | Mahjong | Reach | Hong Kong' campaign, HK$1,510 this week with no schedules recorded. It is included in spend, as all Hutong awareness spend has been.",
+   "Ad-driven bookings in the 8-week trend were FRESHLY RE-PULLED for all eight weeks this run rather than carried forward, so W31 to W37 read 393, 401, 431, 436, 387, 365 and 248 against last week's published 388, 398, 427, 432, 386, 341 and 237. Every week settled upward, which is the expected behaviour.",
+   "VERIFICATION: the account-level spend aggregation reproduces last week's published 8-week spend trend exactly for W31 to W36 (73466.88, 76085.87, 84190.49, 92084.98, 80102.97, 79794.70) and W37 to within HK$7."
+  ],
+  "cpa_thresholds": {
+   "meta_good": 350,
+   "meta_poor": 600,
+   "goog_good": 150,
+   "goog_poor": 300
+  }
+ },
+ "venues": {
+  "Aqua HK": {
+   "meta": {
+    "spend": [
+     6730.84,
+     7362.81,
+     6527.3,
+     7075.31,
+     7683.74,
+     9477.91,
+     7431.22,
+     6609.28
+    ],
+    "sched": [
+     21,
+     11,
+     16,
+     28,
+     11,
+     19,
+     6,
+     10
+    ],
+    "impr_W38": 127513,
+    "clicks_W38": 2675,
+    "impr_W37": 142087,
+    "clicks_W37": 2497,
+    "ly_spend": [
+     6538.31,
+     7352.92,
+     9229.47,
+     6534.1
+    ],
+    "ly_sched": [
+     21,
+     15,
+     17,
+     16
+    ],
+    "ly_impr_L38": 369151,
+    "ly_clicks_L38": 3089
+   },
+   "google": {
+    "cost": [
+     9826.07,
+     8450.98,
+     10815.29,
+     11760.63,
+     9683.07,
+     8084.09,
+     8744.01,
+     9961.19
+    ],
+    "book": [
+     80.86,
+     56.42,
+     87.26,
+     88.9,
+     43.55,
+     51.11,
+     49.03,
+     68.96
+    ],
+    "walkin": [
+     1257.4,
+     1174.8,
+     1489.5,
+     1390.0,
+     1143.5,
+     941.9,
+     844.3,
+     663.5
+    ],
+    "impr_W38": 97427,
+    "clicks_W38": 3853,
+    "impr_W37": 85176,
+    "clicks_W37": 3299,
+    "ly_cost": [
+     7249.62,
+     8701.98,
+     4913.06,
+     6926.67
+    ],
+    "ly_book": [
+     71.91,
+     68.86,
+     66.01,
+     76.88
+    ],
+    "ly_walkin": [
+     1661.8,
+     1585.8,
+     1287.8,
+     1616.7
+    ],
+    "ly_impr_L38": 196050,
+    "ly_clicks_L38": 4800,
+    "action": "Aqua HK (web) sevenrooms_booking_complete"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign - Adv+",
+     5213.94,
+     10
+    ],
+    [
+     "CRKLR - Prospecting Campaign - Awareness",
+     704.95,
+     null
+    ],
+    [
+     "CRKLR - Halloween Prospecting Campaign - Daily Budgets",
+     690.39,
+     null
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "P.Max > Bookings",
+     2401.22,
+     9
+    ],
+    [
+     "Search > Weekend Brunch",
+     1357.93,
+     4.96
+    ],
+    [
+     "Search > Japanese Restaurant CH",
+     1274.48,
+     1.5
+    ],
+    [
+     "Search > Brand",
+     1107.32,
+     49.5
+    ],
+    [
+     "Search > Japanese Restaurant",
+     1090.07,
+     2
+    ],
+    [
+     "Search > Private Events",
+     1009.25,
+     1
+    ],
+    [
+     "Search > Special Events",
+     821.37,
+     1
+    ],
+    [
+     "P.Max > Local Visits",
+     664.33,
+     0
+    ],
+    [
+     "Search > Italian Restaurant",
+     235.22,
+     0
+    ]
+   ]
+  },
+  "Hutong HK": {
+   "meta": {
+    "spend": [
+     3882.47,
+     4426.86,
+     4615.47,
+     6303.68,
+     3899.29,
+     3950.2,
+     4573.24,
+     4722.25
+    ],
+    "sched": [
+     5,
+     15,
+     9,
+     14,
+     6,
+     11,
+     4,
+     1
+    ],
+    "impr_W38": 216763,
+    "clicks_W38": 1345,
+    "impr_W37": 217131,
+    "clicks_W37": 1546,
+    "ly_spend": [
+     6183.84,
+     6586.24,
+     6871.54,
+     7239.89
+    ],
+    "ly_sched": [
+     10,
+     14,
+     19,
+     16
+    ],
+    "ly_impr_L38": 235000,
+    "ly_clicks_L38": 4217
+   },
+   "google": {
+    "cost": [
+     5903.34,
+     6671.28,
+     6152.8,
+     5937.02,
+     5292.01,
+     5617.95,
+     6313.92,
+     7005.28
+    ],
+    "book": [
+     26.59,
+     31.72,
+     20.6,
+     17.5,
+     10.73,
+     18.98,
+     20.29,
+     10.64
+    ],
+    "walkin": [
+     2577.2,
+     2208.4,
+     2582.4,
+     2405.7,
+     2385.7,
+     2241.0,
+     2149.6,
+     1788.5
+    ],
+    "impr_W38": 207057,
+    "clicks_W38": 5813,
+    "impr_W37": 165244,
+    "clicks_W37": 5141,
+    "ly_cost": [
+     4181.59,
+     3725.0,
+     4301.11,
+     4325.01
+    ],
+    "ly_book": [
+     29.36,
+     25.68,
+     35.68,
+     37.38
+    ],
+    "ly_walkin": [
+     1302.9,
+     1509.7,
+     1626.9,
+     1501.6
+    ],
+    "ly_impr_L38": 269558,
+    "ly_clicks_L38": 6812,
+    "action": "Hutong HK (web) sevenrooms_booking_complete"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign – Daily Budgets V2",
+     3212.25,
+     1
+    ],
+    [
+     "HT | Mahjong | Reach | Hong Kong",
+     1510.0,
+     null
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "P.Max - Generic Bookings",
+     1764.78,
+     1.98
+    ],
+    [
+     "Search > Brand",
+     1461.49,
+     5.17
+    ],
+    [
+     "Search > Restaurant",
+     1184.12,
+     1.48
+    ],
+    [
+     "Search > Brunch",
+     1043.93,
+     0.51
+    ],
+    [
+     "P.Max - Local Visit",
+     1027.82,
+     0
+    ],
+    [
+     "Search > Private Events",
+     445.75,
+     0.5
+    ],
+    [
+     "Search > Special Events",
+     77.39,
+     1
+    ]
+   ]
+  },
+  "The Chinese Library": {
+   "meta": {
+    "spend": [
+     5573.33,
+     6459.38,
+     3650.87,
+     6374.83,
+     6625.65,
+     5610.79,
+     5338.69,
+     5439.12
+    ],
+    "sched": [
+     10,
+     6,
+     5,
+     10,
+     10,
+     10,
+     null,
+     2
+    ],
+    "impr_W38": 92418,
+    "clicks_W38": 2570,
+    "impr_W37": 90944,
+    "clicks_W37": 2752,
+    "ly_spend": [
+     3316.21,
+     3056.24,
+     4853.82,
+     5709.89
+    ],
+    "ly_sched": [
+     2,
+     5,
+     9,
+     9
+    ],
+    "ly_impr_L38": 130202,
+    "ly_clicks_L38": 5523
+   },
+   "google": {
+    "cost": [
+     4010.48,
+     3289.36,
+     3145.7,
+     2934.07,
+     3296.89,
+     3535.1,
+     3527.76,
+     3972.22
+    ],
+    "book": [
+     41,
+     40,
+     38.05,
+     42.9,
+     47,
+     46,
+     22,
+     23
+    ],
+    "walkin": [
+     382.97,
+     452.71,
+     435.26,
+     419.37,
+     489.76,
+     407.09,
+     397.16,
+     303.67
+    ],
+    "impr_W38": 133566,
+    "clicks_W38": 2740,
+    "impr_W37": 107064,
+    "clicks_W37": 2426,
+    "ly_cost": [
+     4737.42,
+     3665.2,
+     4189.75,
+     5286.33
+    ],
+    "ly_book": [
+     43.04,
+     27.5,
+     38.14,
+     44
+    ],
+    "ly_walkin": [
+     377.7,
+     418.4,
+     489.9,
+     585.7
+    ],
+    "ly_impr_L38": 170538,
+    "ly_clicks_L38": 3445,
+    "action": "The Chinese Library HK (web) sevenrooms_booking_complete"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign – Daily Budget",
+     5439.12,
+     2
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "Search > Restaurant",
+     1127.93,
+     4
+    ],
+    [
+     "P.Max > Generic EN",
+     994.95,
+     4
+    ],
+    [
+     "P.Max > Generic CH",
+     682.49,
+     1
+    ],
+    [
+     "Search > Private Events",
+     397.13,
+     1.5
+    ],
+    [
+     "Search > Brand",
+     394.51,
+     10.5
+    ],
+    [
+     "Search > Special Events",
+     375.19,
+     2
+    ]
+   ]
+  },
+  "Cantina": {
+   "meta": {
+    "spend": [
+     3090.6,
+     2494.96,
+     2287.93,
+     2548.98,
+     2586.59,
+     2881.79,
+     2766.25,
+     2999.54
+    ],
+    "sched": [
+     11,
+     7,
+     7,
+     11,
+     10,
+     7,
+     1,
+     2
+    ],
+    "impr_W38": 99411,
+    "clicks_W38": 991,
+    "impr_W37": 65777,
+    "clicks_W37": 928,
+    "ly_spend": [
+     1902.9,
+     2423.32,
+     4305.21,
+     4267.64
+    ],
+    "ly_sched": [
+     3,
+     3,
+     3,
+     3
+    ],
+    "ly_impr_L38": 121972,
+    "ly_clicks_L38": 2361
+   },
+   "google": {
+    "cost": [
+     4007.33,
+     3191.34,
+     3114.78,
+     2880.78,
+     3382.62,
+     3711.7,
+     3750.58,
+     4335.2
+    ],
+    "book": [
+     8,
+     19,
+     9,
+     11,
+     19,
+     8,
+     7,
+     15
+    ],
+    "walkin": [
+     1239.3,
+     1078.0,
+     1208.5,
+     1143.6,
+     1545.0,
+     1024.0,
+     1132.0,
+     1104.4
+    ],
+    "impr_W38": 114857,
+    "clicks_W38": 3324,
+    "impr_W37": 82176,
+    "clicks_W37": 2438,
+    "ly_cost": [
+     4599.98,
+     3451.23,
+     3837.3,
+     4945.31
+    ],
+    "ly_book": [
+     19,
+     22,
+     16,
+     23
+    ],
+    "ly_walkin": [
+     271.9,
+     263.8,
+     207.6,
+     238.4
+    ],
+    "ly_impr_L38": 148773,
+    "ly_clicks_L38": 1639,
+    "action": "Cantina HK - GA4 (web) sevenrooms_booking_complete (GA4-named, the only booking action, included per the HK exception)"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign – Early Week Supper Ads",
+     1782.55,
+     2
+    ],
+    [
+     "CRKLR - Prospecting Campaign – Daily Budget – V2",
+     1216.99,
+     null
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "Search > Restaurant",
+     1825.13,
+     4
+    ],
+    [
+     "P.Max > Local Visits",
+     1045.82,
+     0
+    ],
+    [
+     "P.Max > Generic Booking EN",
+     1003.17,
+     1
+    ],
+    [
+     "Search > Brand",
+     461.09,
+     10
+    ]
+   ]
+  },
+  "Dim Sum Library": {
+   "meta": {
+    "spend": [
+     1378.38,
+     1105.5,
+     1046.62,
+     1129.66,
+     1064.92,
+     1058.05,
+     1022.67,
+     1052.64
+    ],
+    "sched": [
+     6,
+     4,
+     6,
+     3,
+     4,
+     4,
+     1,
+     2
+    ],
+    "impr_W38": 25929,
+    "clicks_W38": 614,
+    "impr_W37": 30560,
+    "clicks_W37": 568,
+    "ly_spend": [
+     1850.06,
+     1976.57,
+     2104.32,
+     2325.31
+    ],
+    "ly_sched": [
+     6,
+     12,
+     14,
+     7
+    ],
+    "ly_impr_L38": 51873,
+    "ly_clicks_L38": 1572
+   },
+   "google": {
+    "cost": [
+     2004.47,
+     1184.39,
+     1295.7,
+     1290.37,
+     1315.51,
+     1513.62,
+     1675.03,
+     1706.77
+    ],
+    "book": [
+     71.99,
+     42.54,
+     70.48,
+     64.96,
+     63.01,
+     62.98,
+     47.98,
+     59.95
+    ],
+    "walkin": null,
+    "impr_W38": 8834,
+    "clicks_W38": 607,
+    "impr_W37": 9198,
+    "clicks_W37": 594,
+    "ly_cost": [
+     949.44,
+     1082.39,
+     1101.55,
+     1241.65
+    ],
+    "ly_book": [
+     66.06,
+     88.39,
+     84.45,
+     86.41
+    ],
+    "ly_walkin": null,
+    "ly_impr_L38": 9079,
+    "ly_clicks_L38": 643,
+    "action": "Dim Sum Library HK (web) sevenrooms_booking_complete; no walk-in actions exist in this account"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign - Daily Budgets",
+     1052.64,
+     2
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "Search > Afternoon Tea",
+     495.85,
+     3.99
+    ],
+    [
+     "P.Max > Generic EN",
+     459.6,
+     9.51
+    ],
+    [
+     "Search > Restaurant",
+     438.99,
+     3.99
+    ],
+    [
+     "Search > Special Events",
+     171.7,
+     2.0
+    ],
+    [
+     "Search > Brand",
+     140.62,
+     40.46
+    ]
+   ]
+  },
+  "Shiro shared": {
+   "meta": {
+    "spend": [
+     3603.13,
+     5995.82,
+     5136.8,
+     5251.55,
+     5213.57,
+     5241.27,
+     5086.11,
+     5080.91
+    ],
+    "sched": [
+     16,
+     17,
+     19,
+     20,
+     26,
+     20,
+     null,
+     7
+    ],
+    "impr_W38": 86053,
+    "clicks_W38": 2666,
+    "impr_W37": 89339,
+    "clicks_W37": 3004,
+    "ly_spend": [
+     1886.43,
+     2057.08,
+     2082.44,
+     2240.01
+    ],
+    "ly_sched": [
+     1,
+     4,
+     5,
+     6
+    ],
+    "ly_impr_L38": 52073,
+    "ly_clicks_L38": 1278
+   },
+   "google": {
+    "cost": [
+     4468.73,
+     4188.89,
+     4040.83,
+     3997.15,
+     3921.23,
+     4135.04,
+     3945.15,
+     4934.66
+    ],
+    "book": [
+     66.24,
+     86.9,
+     67.42,
+     72.1,
+     74.11,
+     61.19,
+     39.48,
+     61.9
+    ],
+    "walkin": [
+     246.67,
+     229.55,
+     237.51,
+     292.5,
+     203.5,
+     206.5,
+     205.0,
+     146.5
+    ],
+    "impr_W38": 48408,
+    "clicks_W38": 1643,
+    "impr_W37": 44334,
+    "clicks_W37": 1552,
+    "ly_cost": [
+     1165.49,
+     1181.57,
+     1130.77,
+     986.13
+    ],
+    "ly_book": [
+     34.67,
+     47.34,
+     54.13,
+     38.0
+    ],
+    "ly_walkin": [
+     169.0,
+     159.9,
+     192.1,
+     235.4
+    ],
+    "ly_impr_L38": 45471,
+    "ly_clicks_L38": 732,
+    "action": "Shiro HK - GA4 (web) sevenrooms_booking_complete (GA4-named, the only booking action, included per the HK exception)"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign - NEW Shiro Central",
+     2960.76,
+     4
+    ],
+    [
+     "CRKLR - Prospecting Campaign - Daily Budgets",
+     1159.27,
+     3
+    ],
+    [
+     "CRKLR - Awareness Campaign - NEW Shiro Central - LPV Campaign",
+     473.97,
+     null
+    ],
+    [
+     "CRKLR - Private Event Awareness Campaign - Shiro TK",
+     347.7,
+     null
+    ],
+    [
+     "CRKLR - Engagement Campaign",
+     139.21,
+     null
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "Search > Restaurant (Central)",
+     1561.36,
+     13.99
+    ],
+    [
+     "Search > Restaurant (Admiralty)",
+     1033.81,
+     15.98
+    ],
+    [
+     "P.Max > Booking",
+     984.44,
+     6.99
+    ],
+    [
+     "Search > Private Dining & Events",
+     736.06,
+     0
+    ],
+    [
+     "Search > Brand",
+     619.0,
+     24.94
+    ]
+   ]
+  },
+  "Vesu": {
+   "meta": {
+    "spend": [
+     2930.22,
+     3871.48,
+     3436.21,
+     3476.59,
+     3529.27,
+     3460.77,
+     3238.97,
+     3215.05
+    ],
+    "sched_conv_campaign": [
+     17,
+     30,
+     35,
+     15,
+     17,
+     9,
+     null,
+     2
+    ],
+    "cpa_spend_W38": 2493.52,
+    "cpa_spend_W37": 2926.79,
+    "impr_W38": 90087,
+    "clicks_W38": 1509,
+    "impr_W37": 72395,
+    "clicks_W37": 984,
+    "ly_spend_L38": 3802.85,
+    "ly_sched_L38": 13,
+    "ly_cpa_spend_L38": 2271.12,
+    "ly_impr_L38": 139011,
+    "ly_clicks_L38": 3519,
+    "campaigns_W38": [
+     [
+      "CRKLR - Prospecting Campaign - Daily Budget - V2",
+      2493.52,
+      2
+     ],
+     [
+      "CRKLR - Awareness Campaign - Daily Budget",
+      721.53,
+      null
+     ]
+    ]
+   },
+   "google": {
+    "cost": [
+     1635.58,
+     2563.34,
+     2481.13,
+     2268.11,
+     2206.28,
+     2349.87,
+     2153.8,
+     2236.94
+    ],
+    "book": [
+     12,
+     31,
+     33,
+     27,
+     36,
+     26,
+     37,
+     30
+    ],
+    "walkin": null,
+    "impr_W38": 8992,
+    "clicks_W38": 442,
+    "impr_W37": 7607,
+    "clicks_W37": 457,
+    "ly_cost": [
+     2135.01,
+     2430.99,
+     1995.35,
+     2437.32
+    ],
+    "ly_book": [
+     21,
+     24,
+     38.5,
+     18
+    ],
+    "ly_walkin": null,
+    "ly_impr_L38": 14106,
+    "ly_clicks_L38": 623,
+    "action": "Aqua Vesu (web) sevenrooms_booking_complete; no walk-in actions"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR - Prospecting Campaign - Daily Budget – V2",
+     2493.52,
+     2
+    ],
+    [
+     "CRKLR - Awareness Campaign - Daily Budget",
+     721.53,
+     null
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "Search > Restaurant",
+     788.9,
+     4
+    ],
+    [
+     "P.Max > Generic",
+     788.11,
+     11
+    ],
+    [
+     "Search > Brand",
+     659.93,
+     15
+    ]
+   ]
+  },
+  "The Canton Library": {
+   "meta": {
+    "spend": [
+     9085.88,
+     8062.38,
+     15549.17,
+     14951.21,
+     14118.07,
+     12267.33,
+     12390.47,
+     11922.85
+    ],
+    "sched_conv_campaign": [
+     null,
+     3,
+     8,
+     11,
+     10,
+     11,
+     13,
+     19
+    ],
+    "cpa_spend_W38": 9358.02,
+    "cpa_spend_W37": 9734.1,
+    "impr_W38": 182138,
+    "clicks_W38": 4666,
+    "campaigns_W38": [
+     [
+      "CRKLR | Canton Library Conversions Campaign",
+      9358.02,
+      19
+     ],
+     [
+      "CRKLR | Canton Library Awareness Campaign",
+      2564.83,
+      null
+     ]
+    ],
+    "ly": "no 2025 line, opened 8 Sep 2026",
+    "impr_W37": 209972,
+    "clicks_W37": 4806
+   },
+   "google": {
+    "cost": [
+     5336.03,
+     6767.1,
+     10893.89,
+     13905.04,
+     6284.26,
+     6899.22,
+     5974.3,
+     13328.05
+    ],
+    "book": "NOT AVAILABLE - import not verified",
+    "impr_W38": 33391,
+    "clicks_W38": 1593,
+    "impr_W37": 42670,
+    "clicks_W37": 1841,
+    "raw_actions_W38": {
+     "Canton Library HK (web) sevenrooms_booking_complete": 22,
+     "Canton Library HK (web) book_now_button_click": 139,
+     "Booking GTAG": 21.95
+    },
+    "raw_actions_W37": {
+     "Canton Library HK (web) sevenrooms_booking_complete": 12,
+     "Canton Library HK (web) book_now_button_click": 108.84,
+     "Booking GTAG": 10.03
+    },
+    "ly": "no 2025 line"
+   },
+   "meta_campaigns_W38": [
+    [
+     "CRKLR | Canton Library Conversions Campaign",
+     9358.02,
+     19
+    ],
+    [
+     "CRKLR | Canton Library Awareness Campaign",
+     2564.83,
+     null
+    ]
+   ],
+   "google_campaigns_W38": [
+    [
+     "Search > Open Now",
+     8140.12,
+     null
+    ],
+    [
+     "PMax > Generic | EN",
+     3934.66,
+     null
+    ],
+    [
+     "Search > Brand v2",
+     1253.27,
+     null
+    ]
+   ]
+  }
+ }
+}

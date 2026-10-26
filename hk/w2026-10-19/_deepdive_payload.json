@@ -1,0 +1,129 @@
+{
+ "market": "Hong Kong",
+ "ccy": "HKD",
+ "sym": "HK$",
+ "week": "19–25 Oct 2026",
+ "wow": "12–18 Oct 2026",
+ "yoy": "20–26 Oct 2025",
+ "generated": "26 October 2026",
+ "badge": "GA4 BOOKING TAG STILL BROKEN",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "act": 154,
+   "tgt": 252,
+   "wow_b": 159,
+   "yoy_b": 272,
+   "users": 3365,
+   "sessions": 4559,
+   "asd": 1092.2,
+   "bounce": 0.283176,
+   "meta_s": 6609.28,
+   "meta_sch": 10,
+   "meta_sch_prior": 6,
+   "goog_s": 9961.19,
+   "goog_c": 68.96,
+   "goog_c_prior": 49.03,
+   "shared": false
+  },
+  {
+   "name": "Cantina",
+   "act": 23,
+   "tgt": 67,
+   "wow_b": 17,
+   "yoy_b": 53,
+   "users": 1055,
+   "sessions": 1373,
+   "asd": 372.4,
+   "bounce": 0.377276,
+   "meta_s": 2999.54,
+   "meta_sch": 2,
+   "meta_sch_prior": 1,
+   "goog_s": 4335.2,
+   "goog_c": 15,
+   "goog_c_prior": 7,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 350,
+  "meta_poor": 600,
+  "goog_good": 150,
+  "goog_poor": 300
+ },
+ "obs": {
+  "meta": [
+   "Aqua HK spent HK$6,609 on Meta and Meta recorded 10 schedules, about HK$661 each, against 6 schedules on HK$7,431 the week before. Do not read either number as a CPA. The Meta Schedule conversion fires from the same website confirmation page as the GA4 booking event and both have been under-recording since 15 to 16 October.",
+   "Cantina spent HK$3,000 and Meta recorded 2 schedules, against 1 the week before. Cantina is still the worst affected venue: GA4 recorded 23 bookings against 53 SevenRooms website bookings, a ratio of 0.43 where a healthy property reads 1.0 or better.",
+   "Across the eight Hong Kong accounts Meta recorded 45 schedules against 25 the week before, and the rise is almost all The Canton Library (13 to 19), which sits on the newer pixel. Hutong HK recorded a single schedule on HK$4,722 of spend. Treat Meta bookings and Meta CPA for this week as unusable."
+  ],
+  "google": [
+   "Aqua HK Google ran HK$9,961 for about 69 booking conversions at roughly HK$144 CPA, against 49 conversions on HK$8,744 the week before. Google records conversions against the click date and fires its own tag rather than a GA4 import, so this is the one booking signal that is not broken, and it says Aqua demand improved.",
+   "Cantina Google delivered about 15 conversions on HK$4,335 at roughly HK$289 CPA, against 7 on HK$3,751. Spend rose 16 per cent and conversions doubled, which is the opposite direction to the GA4 figure for the same venue.",
+   "Brand search carried the volume at both venues: 49.5 of Aqua&rsquo;s 69 conversions came from Search &gt; Brand on HK$1,107 of spend, and 10 of Cantina&rsquo;s 15 from its own brand campaign on HK$461. Read those as existing name demand being harvested, not as new reach."
+  ],
+  "ga4": [
+   "Aqua HK users were flat week on week at 3,365 and are 21.3 per cent below last year. Create-path bookings of 154 are 43.4 per cent below last year and 38.9 per cent under the weekly target, but SevenRooms recorded 233 website bookings over the same seven days against 182 the week before, so the fall is in the measurement and the demand rose.",
+   "Cantina users recovered to 1,055 from 902, helped by a new paid channel: GA4 Paid Other sessions went from 12 to 246 and the /thedispensarybar landing page took 265 sessions, where it took none in the prior week. Its book_now_button_click event tripled from 64 to 173. Bookings of 23 against 53 SevenRooms website bookings still cannot be read as a result.",
+   "Average session duration is still the giveaway. Aqua HK ran 2,694 and 2,830 seconds on 19 and 20 October against a normal 190 to 220, easing to 226 to 713 by the end of the week. Every Hong Kong venue except The Canton Library shows the same inflation, so the fault is in the tagging and it has not been fixed."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W31",
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38"
+  ],
+  "venues": {
+   "Aqua HK": {
+    "bookings": [
+     182,
+     167,
+     199,
+     211,
+     164,
+     189,
+     159,
+     154
+    ],
+    "users": [
+     3561,
+     3409,
+     3936,
+     3638,
+     3924,
+     3662,
+     3360,
+     3365
+    ]
+   },
+   "Cantina": {
+    "bookings": [
+     84,
+     78,
+     74,
+     72,
+     92,
+     68,
+     17,
+     23
+    ],
+    "users": [
+     1591,
+     1507,
+     1448,
+     1406,
+     1608,
+     1625,
+     902,
+     1055
+    ]
+   }
+  }
+ }
+}

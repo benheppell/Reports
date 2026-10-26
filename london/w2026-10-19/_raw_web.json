@@ -1,0 +1,1619 @@
+{
+ "meta": {
+  "bookings_metric": "eventCount where eventName = sevenrooms_booking_complete AND pagePath NOT PARTIAL_REGEXP 'modify|manage|prearrival' (create path only, andGroup)",
+  "windows": {
+   "cur": "2026-10-19..2026-10-25",
+   "prior": "2026-10-12..2026-10-18",
+   "yoy": "2025-10-20..2025-10-26",
+   "ytd": "2026-02-01..2026-10-25 (FY Feb-Jan)"
+  },
+  "week_buckets": "Mon-start weeks. W31=2026-08-31 .. W38=2026-10-19; L35=2025-09-29 .. L38=2025-10-20",
+  "bounce_engagement_units": "bounce is a 0-1 fraction (raw GA4 API value); engrate in the ads payload is a percentage",
+  "asd_units": "seconds",
+  "regent_st": "Aqua Kyoto 342430509 + Aqua Nueva 360337941 summed; users/sessions/pageviews/newUsers added, asd / bounce / engagement rate / conversion rate weighted by sessions",
+  "all_aggregate": "sum of the 6 report venues (7 GA4 properties); All landing paths are the top 5 by sessions across venues",
+  "basis_change": "GA4 bookings are the create path only. cur, prior and yoy all rebuilt on that basis this run and compare cleanly with each other but not with any week published before 12 October 2026",
+  "amendment_share": {
+   "cur_all_paths": 2644,
+   "cur_create": 2457,
+   "cur_pct": 7.1,
+   "yoy_all_paths": 3006,
+   "yoy_create": 2723,
+   "yoy_pct": 9.4,
+   "note": "Old basis would read 2,644 vs 3,006, -12.0% YoY. Create path reads 2,457 vs 2,723, -9.8% YoY, so the rebuild improves London's YoY by 2.2 points",
+   "per_venue_cur_all_create_yoy_all_create": {
+    "Aqua Shard": [
+     1327,
+     1220,
+     1714,
+     1557
+    ],
+    "Hutong": [
+     874,
+     803,
+     822,
+     732
+    ],
+    "Regent St": [
+     109,
+     106,
+     247,
+     227
+    ],
+    "Azzurra": [
+     38,
+     38,
+     113,
+     108
+    ],
+    "Shiro Sushi": [
+     45,
+     45,
+     110,
+     99
+    ],
+    "DSL": [
+     251,
+     245,
+     0,
+     0
+    ]
+   }
+  },
+  "collection_fault": "GA4 create-path bookings per day were compared with SevenRooms gross website bookings per day for 12 to 25 October at every property. Aqua Shard 0.99 and Hutong 1.07 for the reporting week, both healthy. Regent St 0.48, Azzurra 0.53, Shiro Sushi 0.46 and DSL 0.52 against a clean baseline of 0.96 to 0.99 measured over 28 September to 11 October. Break dates: Regent St 16 October, Azzurra 15 October, Shiro Sushi 15 October, DSL 15 October. Their booking counts are floors",
+  "collection_ratio_cur": {
+   "Aqua Shard": {
+    "ga4": 1220,
+    "sr_gross_web": 1234,
+    "ratio": 0.99
+   },
+   "Hutong": {
+    "ga4": 803,
+    "sr_gross_web": 747,
+    "ratio": 1.07
+   },
+   "Regent St": {
+    "ga4": 106,
+    "sr_gross_web": 220,
+    "ratio": 0.48
+   },
+   "Azzurra": {
+    "ga4": 38,
+    "sr_gross_web": 72,
+    "ratio": 0.53
+   },
+   "Shiro Sushi": {
+    "ga4": 45,
+    "sr_gross_web": 97,
+    "ratio": 0.46
+   },
+   "DSL": {
+    "ga4": 245,
+    "sr_gross_web": 475,
+    "ratio": 0.52
+   }
+  },
+  "collection_baseline_28sep_11oct": {
+   "Regent St": {
+    "ga4": 403,
+    "sr_gross_web": 408,
+    "ratio": 0.99
+   },
+   "Azzurra": {
+    "ga4": 219,
+    "sr_gross_web": 228,
+    "ratio": 0.96
+   },
+   "Shiro Sushi": {
+    "ga4": 204,
+    "sr_gross_web": 213,
+    "ratio": 0.96
+   }
+  },
+  "asd_fault": "averageSessionDuration is corrupted at every London property for a second week and is published as returned, not substituted. Aqua Shard 780.5s against a normal 189s, Shiro Sushi 1206.4s, Regent St 858.0s, DSL 943.4s. The matched 2025 week reads 149 to 225s everywhere. userEngagementDuration / sessions at Aqua Shard = 54.9s, which is ordinary, so the metric is the fault. Retried once, same values",
+  "dsl_note": "DSL GA4 bookings are still understated by the booking-widget tagging fault reported last week, unfixed since 15 October",
+  "landing_note": "(not set) landing rows are excluded from the top-5 landing tables",
+  "targets_note": "Report W38 = xlsx Portfolio Weekly row W39 (19 Oct - 25 Oct). Weekly targets unchanged from W37 because the week sits wholly inside October, so the standing month x 7/30 convention applies and no proration was needed"
+ },
+ "venues": {
+  "Aqua Shard": {
+   "book": {
+    "cur": 1220,
+    "prior": 1368,
+    "yoy": 1557,
+    "target": 2007
+   },
+   "site": {
+    "cur": {
+     "users": 26590,
+     "sessions": 39006,
+     "asd": 780.5,
+     "bounce": 0.3825,
+     "engrate_pct": 61.75,
+     "pageviews": 124053,
+     "newusers": 21883
+    },
+    "prior": {
+     "users": 26792,
+     "sessions": 36688,
+     "asd": 1139.6,
+     "bounce": 0.3549,
+     "engrate_pct": 64.51,
+     "pageviews": 123401,
+     "newusers": 22092
+    },
+    "yoy": {
+     "users": 28197,
+     "sessions": 59624,
+     "asd": 168.8,
+     "bounce": 0.3129,
+     "engrate_pct": 68.71,
+     "pageviews": 131850,
+     "newusers": 6234
+    }
+   },
+   "series_ty": {
+    "W31": {
+     "bookings": 873,
+     "users": 19172
+    },
+    "W32": {
+     "bookings": 1011,
+     "users": 21475
+    },
+    "W33": {
+     "bookings": 1267,
+     "users": 25162
+    },
+    "W34": {
+     "bookings": 1256,
+     "users": 25351
+    },
+    "W35": {
+     "bookings": 1204,
+     "users": 26173
+    },
+    "W36": {
+     "bookings": 1282,
+     "users": 25890
+    },
+    "W37": {
+     "bookings": 1368,
+     "users": 26792
+    },
+    "W38": {
+     "bookings": 1220,
+     "users": 26590
+    }
+   },
+   "channels": {
+    "cur": {
+     "Organic Search": {
+      "s": 10763,
+      "b": 360
+     },
+     "Paid Search": {
+      "s": 8746,
+      "b": 299
+     },
+     "Paid Social": {
+      "s": 8327,
+      "b": 194
+     },
+     "Referral": {
+      "s": 4421,
+      "b": 164
+     },
+     "Direct": {
+      "s": 3148,
+      "b": 79
+     },
+     "AI Assistant": {
+      "s": 1052,
+      "b": 40
+     },
+     "Unassigned": {
+      "s": 1031,
+      "b": 57
+     },
+     "Organic Social": {
+      "s": 466,
+      "b": 6
+     },
+     "Email": {
+      "s": 380,
+      "b": 11
+     },
+     "Cross-network": {
+      "s": 333,
+      "b": 8
+     },
+     "Paid Other": {
+      "s": 44,
+      "b": 2
+     }
+    },
+    "prior": {
+     "Organic Search": {
+      "s": 11128,
+      "b": 416
+     },
+     "Paid Search": {
+      "s": 7574,
+      "b": 297
+     },
+     "Paid Social": {
+      "s": 7266,
+      "b": 197
+     },
+     "Referral": {
+      "s": 4316,
+      "b": 156
+     },
+     "Direct": {
+      "s": 4240,
+      "b": 149
+     },
+     "AI Assistant": {
+      "s": 451,
+      "b": 29
+     },
+     "Unassigned": {
+      "s": 936,
+      "b": 88
+     },
+     "Organic Social": {
+      "s": 556,
+      "b": 14
+     },
+     "Email": {
+      "s": 76,
+      "b": 3
+     },
+     "Cross-network": {
+      "s": 227,
+      "b": 7
+     },
+     "Paid Other": {
+      "s": 290,
+      "b": 12
+     }
+    },
+    "yoy": {
+     "Organic Search": {
+      "s": 14166,
+      "b": 293
+     },
+     "Paid Search": {
+      "s": 16819,
+      "b": 481
+     },
+     "Paid Social": {
+      "s": 7460,
+      "b": 80
+     },
+     "Referral": {
+      "s": 8395,
+      "b": 182
+     },
+     "Direct": {
+      "s": 6055,
+      "b": 397
+     },
+     "AI Assistant": {
+      "s": 0,
+      "b": 0
+     },
+     "Unassigned": {
+      "s": 1560,
+      "b": 17
+     },
+     "Organic Social": {
+      "s": 377,
+      "b": 6
+     },
+     "Email": {
+      "s": 78,
+      "b": 0
+     },
+     "Cross-network": {
+      "s": 4187,
+      "b": 99
+     },
+     "Paid Other": {
+      "s": 89,
+      "b": 2
+     }
+    }
+   },
+   "devices": {
+    "Mobile": 79.2,
+    "Desktop": 19.1,
+    "Tablet": 1.2
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 10864,
+     "b": 268
+    },
+    {
+     "path": "/peter-pan-afternoon-tea",
+     "s": 4096,
+     "b": 73
+    },
+    {
+     "path": "/explore/aquashard/reservations/create/search",
+     "s": 3838,
+     "b": 446
+    },
+    {
+     "path": "/menus",
+     "s": 3335,
+     "b": 19
+    },
+    {
+     "path": "/menus/express-lunch-menu",
+     "s": 3137,
+     "b": 61
+    }
+   ]
+  },
+  "Hutong": {
+   "book": {
+    "cur": 803,
+    "prior": 866,
+    "yoy": 732,
+    "target": 1015
+   },
+   "site": {
+    "cur": {
+     "users": 16583,
+     "sessions": 23345,
+     "asd": 700.9,
+     "bounce": 0.3748,
+     "engrate_pct": 62.52,
+     "pageviews": 62467,
+     "newusers": 13422
+    },
+    "prior": {
+     "users": 16335,
+     "sessions": 22933,
+     "asd": 522.6,
+     "bounce": 0.3592,
+     "engrate_pct": 64.08,
+     "pageviews": 63103,
+     "newusers": 13429
+    },
+    "yoy": {
+     "users": 13339,
+     "sessions": 27825,
+     "asd": 173.0,
+     "bounce": 0.331,
+     "engrate_pct": 66.9,
+     "pageviews": 54382,
+     "newusers": 4039
+    }
+   },
+   "series_ty": {
+    "W31": {
+     "bookings": 764,
+     "users": 13061
+    },
+    "W32": {
+     "bookings": 764,
+     "users": 14613
+    },
+    "W33": {
+     "bookings": 819,
+     "users": 15599
+    },
+    "W34": {
+     "bookings": 805,
+     "users": 16316
+    },
+    "W35": {
+     "bookings": 981,
+     "users": 17749
+    },
+    "W36": {
+     "bookings": 845,
+     "users": 16589
+    },
+    "W37": {
+     "bookings": 866,
+     "users": 16335
+    },
+    "W38": {
+     "bookings": 803,
+     "users": 16583
+    }
+   },
+   "channels": {
+    "cur": {
+     "Organic Search": {
+      "s": 7171,
+      "b": 291
+     },
+     "Paid Social": {
+      "s": 5314,
+      "b": 122
+     },
+     "Paid Search": {
+      "s": 3603,
+      "b": 142
+     },
+     "Referral": {
+      "s": 2584,
+      "b": 84
+     },
+     "Direct": {
+      "s": 2553,
+      "b": 71
+     },
+     "Unassigned": {
+      "s": 731,
+      "b": 45
+     },
+     "Cross-network": {
+      "s": 577,
+      "b": 17
+     },
+     "AI Assistant": {
+      "s": 472,
+      "b": 12
+     },
+     "Organic Social": {
+      "s": 325,
+      "b": 12
+     },
+     "Email": {
+      "s": 71,
+      "b": 1
+     },
+     "Paid Other": {
+      "s": 56,
+      "b": 6
+     }
+    },
+    "prior": {
+     "Organic Search": {
+      "s": 7152,
+      "b": 333
+     },
+     "Paid Social": {
+      "s": 4297,
+      "b": 99
+     },
+     "Paid Search": {
+      "s": 4094,
+      "b": 146
+     },
+     "Referral": {
+      "s": 2011,
+      "b": 53
+     },
+     "Direct": {
+      "s": 3678,
+      "b": 156
+     },
+     "Unassigned": {
+      "s": 725,
+      "b": 39
+     },
+     "Cross-network": {
+      "s": 472,
+      "b": 13
+     },
+     "AI Assistant": {
+      "s": 186,
+      "b": 5
+     },
+     "Organic Social": {
+      "s": 247,
+      "b": 4
+     },
+     "Email": {
+      "s": 304,
+      "b": 15
+     },
+     "Paid Other": {
+      "s": 63,
+      "b": 3
+     }
+    },
+    "yoy": {
+     "Organic Search": {
+      "s": 7918,
+      "b": 187
+     },
+     "Paid Social": {
+      "s": 4042,
+      "b": 17
+     },
+     "Paid Search": {
+      "s": 1969,
+      "b": 48
+     },
+     "Referral": {
+      "s": 4693,
+      "b": 77
+     },
+     "Direct": {
+      "s": 3902,
+      "b": 300
+     },
+     "Unassigned": {
+      "s": 463,
+      "b": 4
+     },
+     "Cross-network": {
+      "s": 3997,
+      "b": 96
+     },
+     "AI Assistant": {
+      "s": 0,
+      "b": 0
+     },
+     "Organic Social": {
+      "s": 270,
+      "b": 0
+     },
+     "Email": {
+      "s": 64,
+      "b": 0
+     },
+     "Paid Other": {
+      "s": 123,
+      "b": 3
+     }
+    }
+   },
+   "devices": {
+    "Mobile": 82.0,
+    "Desktop": 17.5,
+    "Tablet": 0.9
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 6926,
+     "b": 208
+    },
+    {
+     "path": "/menus",
+     "s": 3809,
+     "b": 42
+    },
+    {
+     "path": "/menus/lunch-ppc",
+     "s": 2994,
+     "b": 35
+    },
+    {
+     "path": "/explore/hutonglondon/reservations/create/search",
+     "s": 2335,
+     "b": 291
+    },
+    {
+     "path": "/events/dynasty-brunch",
+     "s": 1784,
+     "b": 17
+    }
+   ]
+  },
+  "Regent St": {
+   "book": {
+    "cur": 106,
+    "prior": 167,
+    "yoy": 227,
+    "target": 364
+   },
+   "site": {
+    "cur": {
+     "users": 3679,
+     "sessions": 4681,
+     "asd": 858.0,
+     "bounce": 0.2899,
+     "engrate_pct": 71.01,
+     "pageviews": 15208,
+     "newusers": 3365
+    },
+    "prior": {
+     "users": 3878,
+     "sessions": 4975,
+     "asd": 728.3,
+     "bounce": 0.2973,
+     "engrate_pct": 70.27,
+     "pageviews": 16471,
+     "newusers": 3517
+    },
+    "yoy": {
+     "users": 6384,
+     "sessions": 13116,
+     "asd": 154.8,
+     "bounce": 0.2915,
+     "engrate_pct": 70.85,
+     "pageviews": 23300,
+     "newusers": 1699
+    }
+   },
+   "series_ty": {
+    "W31": {
+     "bookings": 226,
+     "users": 4539
+    },
+    "W32": {
+     "bookings": 228,
+     "users": 4441
+    },
+    "W33": {
+     "bookings": 256,
+     "users": 4075
+    },
+    "W34": {
+     "bookings": 230,
+     "users": 3925
+    },
+    "W35": {
+     "bookings": 196,
+     "users": 3830
+    },
+    "W36": {
+     "bookings": 207,
+     "users": 4213
+    },
+    "W37": {
+     "bookings": 167,
+     "users": 3878
+    },
+    "W38": {
+     "bookings": 106,
+     "users": 3679
+    }
+   },
+   "channels": {
+    "cur": {
+     "Organic Search": {
+      "s": 2188,
+      "b": 70
+     },
+     "Direct": {
+      "s": 640,
+      "b": 8
+     },
+     "Paid Social": {
+      "s": 484,
+      "b": 4
+     },
+     "Organic Social": {
+      "s": 461,
+      "b": 4
+     },
+     "Paid Search": {
+      "s": 452,
+      "b": 8
+     },
+     "Cross-network": {
+      "s": 87,
+      "b": 1
+     },
+     "Referral": {
+      "s": 124,
+      "b": 2
+     },
+     "Unassigned": {
+      "s": 96,
+      "b": 4
+     },
+     "AI Assistant": {
+      "s": 106,
+      "b": 5
+     },
+     "Email": {
+      "s": 9,
+      "b": 0
+     },
+     "Paid Other": {
+      "s": 2,
+      "b": 0
+     },
+     "Mobile Push Notifications": {
+      "s": 7,
+      "b": 0
+     }
+    },
+    "prior": {
+     "Organic Search": {
+      "s": 2475,
+      "b": 88
+     },
+     "Direct": {
+      "s": 981,
+      "b": 37
+     },
+     "Paid Social": {
+      "s": 347,
+      "b": 6
+     },
+     "Organic Social": {
+      "s": 478,
+      "b": 10
+     },
+     "Paid Search": {
+      "s": 251,
+      "b": 6
+     },
+     "Cross-network": {
+      "s": 90,
+      "b": 1
+     },
+     "Referral": {
+      "s": 158,
+      "b": 3
+     },
+     "Unassigned": {
+      "s": 86,
+      "b": 10
+     },
+     "AI Assistant": {
+      "s": 54,
+      "b": 3
+     },
+     "Email": {
+      "s": 54,
+      "b": 2
+     },
+     "Paid Other": {
+      "s": 7,
+      "b": 1
+     },
+     "Mobile Push Notifications": {
+      "s": 8,
+      "b": 0
+     }
+    },
+    "yoy": {
+     "Organic Search": {
+      "s": 6353,
+      "b": 95
+     },
+     "Direct": {
+      "s": 1586,
+      "b": 93
+     },
+     "Paid Social": {
+      "s": 1808,
+      "b": 5
+     },
+     "Organic Social": {
+      "s": 663,
+      "b": 3
+     },
+     "Paid Search": {
+      "s": 1768,
+      "b": 22
+     },
+     "Cross-network": {
+      "s": 329,
+      "b": 3
+     },
+     "Referral": {
+      "s": 289,
+      "b": 4
+     },
+     "Unassigned": {
+      "s": 236,
+      "b": 1
+     },
+     "AI Assistant": {
+      "s": 0,
+      "b": 0
+     },
+     "Email": {
+      "s": 7,
+      "b": 1
+     },
+     "Paid Other": {
+      "s": 66,
+      "b": 0
+     },
+     "Mobile Push Notifications": {
+      "s": 20,
+      "b": 0
+     }
+    }
+   },
+   "devices": {
+    "Mobile": 78.3,
+    "Desktop": 20.5,
+    "Tablet": 0.7
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 2264,
+     "b": 63
+    },
+    {
+     "path": "/events/halloween",
+     "s": 297,
+     "b": 1
+    },
+    {
+     "path": "/menus",
+     "s": 385,
+     "b": 9
+    },
+    {
+     "path": "/events/aqua-nueva-x-casamigos-tequila",
+     "s": 148,
+     "b": 3
+    },
+    {
+     "path": "/events/japanese-brunch",
+     "s": 230,
+     "b": 5
+    }
+   ]
+  },
+  "Azzurra": {
+   "book": {
+    "cur": 38,
+    "prior": 67,
+    "yoy": 108,
+    "target": 182
+   },
+   "site": {
+    "cur": {
+     "users": 1638,
+     "sessions": 1948,
+     "asd": 594.2,
+     "bounce": 0.2757,
+     "engrate_pct": 72.43,
+     "pageviews": 5403,
+     "newusers": 1505
+    },
+    "prior": {
+     "users": 1758,
+     "sessions": 2182,
+     "asd": 366.4,
+     "bounce": 0.2984,
+     "engrate_pct": 70.16,
+     "pageviews": 5856,
+     "newusers": 1602
+    },
+    "yoy": {
+     "users": 2394,
+     "sessions": 2953,
+     "asd": 224.9,
+     "bounce": 0.321,
+     "engrate_pct": 67.9,
+     "pageviews": 6141,
+     "newusers": 2024
+    }
+   },
+   "series_ty": {
+    "W31": {
+     "bookings": 85,
+     "users": 1606
+    },
+    "W32": {
+     "bookings": 75,
+     "users": 1680
+    },
+    "W33": {
+     "bookings": 88,
+     "users": 1482
+    },
+    "W34": {
+     "bookings": 105,
+     "users": 1559
+    },
+    "W35": {
+     "bookings": 115,
+     "users": 2580
+    },
+    "W36": {
+     "bookings": 104,
+     "users": 2049
+    },
+    "W37": {
+     "bookings": 67,
+     "users": 1758
+    },
+    "W38": {
+     "bookings": 38,
+     "users": 1638
+    }
+   },
+   "channels": {
+    "cur": {
+     "Organic Search": {
+      "s": 741,
+      "b": 24
+     },
+     "Paid Social": {
+      "s": 364,
+      "b": 1
+     },
+     "Direct": {
+      "s": 259,
+      "b": 1
+     },
+     "Cross-network": {
+      "s": 205,
+      "b": 3
+     },
+     "Paid Search": {
+      "s": 142,
+      "b": 0
+     },
+     "Referral": {
+      "s": 74,
+      "b": 3
+     },
+     "Email": {
+      "s": 65,
+      "b": 1
+     },
+     "Organic Social": {
+      "s": 40,
+      "b": 0
+     },
+     "Unassigned": {
+      "s": 32,
+      "b": 4
+     },
+     "AI Assistant": {
+      "s": 25,
+      "b": 1
+     },
+     "Paid Other": {
+      "s": 1,
+      "b": 0
+     }
+    },
+    "prior": {
+     "Organic Search": {
+      "s": 877,
+      "b": 34
+     },
+     "Paid Social": {
+      "s": 326,
+      "b": 1
+     },
+     "Direct": {
+      "s": 411,
+      "b": 17
+     },
+     "Cross-network": {
+      "s": 221,
+      "b": 1
+     },
+     "Paid Search": {
+      "s": 170,
+      "b": 5
+     },
+     "Referral": {
+      "s": 76,
+      "b": 2
+     },
+     "Email": {
+      "s": 19,
+      "b": 0
+     },
+     "Organic Social": {
+      "s": 44,
+      "b": 1
+     },
+     "Unassigned": {
+      "s": 27,
+      "b": 4
+     },
+     "AI Assistant": {
+      "s": 13,
+      "b": 2
+     },
+     "Paid Other": {
+      "s": 1,
+      "b": 0
+     }
+    },
+    "yoy": {
+     "Organic Search": {
+      "s": 868,
+      "b": 24
+     },
+     "Paid Social": {
+      "s": 196,
+      "b": 0
+     },
+     "Direct": {
+      "s": 865,
+      "b": 57
+     },
+     "Cross-network": {
+      "s": 473,
+      "b": 12
+     },
+     "Paid Search": {
+      "s": 387,
+      "b": 10
+     },
+     "Referral": {
+      "s": 72,
+      "b": 3
+     },
+     "Email": {
+      "s": 5,
+      "b": 0
+     },
+     "Organic Social": {
+      "s": 21,
+      "b": 1
+     },
+     "Unassigned": {
+      "s": 57,
+      "b": 1
+     },
+     "AI Assistant": {
+      "s": 0,
+      "b": 0
+     },
+     "Paid Other": {
+      "s": 46,
+      "b": 0
+     }
+    }
+   },
+   "devices": {
+    "Mobile": 77.4,
+    "Desktop": 21.0,
+    "Tablet": 1.5
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 1063,
+     "b": 31
+    },
+    {
+     "path": "/menus",
+     "s": 194,
+     "b": 1
+    },
+    {
+     "path": "/events/jazz-nights",
+     "s": 168,
+     "b": 0
+    },
+    {
+     "path": "/events/oyster-hour",
+     "s": 155,
+     "b": 1
+    },
+    {
+     "path": "/menus/a-la-carte",
+     "s": 74,
+     "b": 0
+    }
+   ]
+  },
+  "Shiro Sushi": {
+   "book": {
+    "cur": 45,
+    "prior": 79,
+    "yoy": 99,
+    "target": 140
+   },
+   "site": {
+    "cur": {
+     "users": 1443,
+     "sessions": 1821,
+     "asd": 1206.4,
+     "bounce": 0.2976,
+     "engrate_pct": 70.24,
+     "pageviews": 4867,
+     "newusers": 1285
+    },
+    "prior": {
+     "users": 1562,
+     "sessions": 1931,
+     "asd": 262.6,
+     "bounce": 0.3247,
+     "engrate_pct": 67.53,
+     "pageviews": 5205,
+     "newusers": 1391
+    },
+    "yoy": {
+     "users": 2146,
+     "sessions": 2549,
+     "asd": 160.5,
+     "bounce": 0.3962,
+     "engrate_pct": 60.38,
+     "pageviews": 5412,
+     "newusers": 1872
+    }
+   },
+   "series_ty": {
+    "W31": {
+     "bookings": 74,
+     "users": 1076
+    },
+    "W32": {
+     "bookings": 73,
+     "users": 1167
+    },
+    "W33": {
+     "bookings": 86,
+     "users": 1207
+    },
+    "W34": {
+     "bookings": 87,
+     "users": 1150
+    },
+    "W35": {
+     "bookings": 89,
+     "users": 1347
+    },
+    "W36": {
+     "bookings": 115,
+     "users": 1330
+    },
+    "W37": {
+     "bookings": 79,
+     "users": 1562
+    },
+    "W38": {
+     "bookings": 45,
+     "users": 1443
+    }
+   },
+   "channels": {
+    "cur": {
+     "Organic Search": {
+      "s": 590,
+      "b": 23
+     },
+     "Paid Social": {
+      "s": 585,
+      "b": 1
+     },
+     "Paid Search": {
+      "s": 257,
+      "b": 13
+     },
+     "Direct": {
+      "s": 215,
+      "b": 2
+     },
+     "Organic Social": {
+      "s": 57,
+      "b": 0
+     },
+     "Referral": {
+      "s": 49,
+      "b": 2
+     },
+     "Unassigned": {
+      "s": 31,
+      "b": 3
+     },
+     "Email": {
+      "s": 11,
+      "b": 0
+     },
+     "AI Assistant": {
+      "s": 9,
+      "b": 0
+     },
+     "Cross-network": {
+      "s": 9,
+      "b": 0
+     },
+     "Paid Other": {
+      "s": 2,
+      "b": 1
+     }
+    },
+    "prior": {
+     "Organic Search": {
+      "s": 636,
+      "b": 32
+     },
+     "Paid Social": {
+      "s": 465,
+      "b": 1
+     },
+     "Paid Search": {
+      "s": 357,
+      "b": 19
+     },
+     "Direct": {
+      "s": 259,
+      "b": 16
+     },
+     "Organic Social": {
+      "s": 54,
+      "b": 0
+     },
+     "Referral": {
+      "s": 79,
+      "b": 3
+     },
+     "Unassigned": {
+      "s": 38,
+      "b": 5
+     },
+     "Email": {
+      "s": 26,
+      "b": 1
+     },
+     "AI Assistant": {
+      "s": 10,
+      "b": 0
+     },
+     "Cross-network": {
+      "s": 8,
+      "b": 1
+     },
+     "Paid Other": {
+      "s": 4,
+      "b": 1
+     }
+    },
+    "yoy": {
+     "Organic Search": {
+      "s": 739,
+      "b": 40
+     },
+     "Paid Social": {
+      "s": 776,
+      "b": 2
+     },
+     "Paid Search": {
+      "s": 164,
+      "b": 19
+     },
+     "Direct": {
+      "s": 549,
+      "b": 25
+     },
+     "Organic Social": {
+      "s": 19,
+      "b": 0
+     },
+     "Referral": {
+      "s": 56,
+      "b": 1
+     },
+     "Unassigned": {
+      "s": 72,
+      "b": 7
+     },
+     "Email": {
+      "s": 19,
+      "b": 0
+     },
+     "AI Assistant": {
+      "s": 0,
+      "b": 0
+     },
+     "Cross-network": {
+      "s": 130,
+      "b": 5
+     },
+     "Paid Other": {
+      "s": 32,
+      "b": 0
+     }
+    }
+   },
+   "devices": {
+    "Mobile": 77.6,
+    "Desktop": 21.4,
+    "Tablet": 0.9
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 669,
+     "b": 36
+    },
+    {
+     "path": "/events/shiro-brunch",
+     "s": 385,
+     "b": 1
+    },
+    {
+     "path": "/menus",
+     "s": 249,
+     "b": 0
+    },
+    {
+     "path": "/menus/lunch-set-menu",
+     "s": 133,
+     "b": 2
+    },
+    {
+     "path": "/menus/sushi-brunch",
+     "s": 126,
+     "b": 1
+    }
+   ]
+  },
+  "DSL": {
+   "book": {
+    "cur": 245,
+    "prior": 322,
+    "yoy": 0,
+    "target": 25
+   },
+   "site": {
+    "cur": {
+     "users": 4577,
+     "sessions": 5743,
+     "asd": 943.4,
+     "bounce": 0.2831,
+     "engrate_pct": 71.69,
+     "pageviews": 20927,
+     "newusers": 4075
+    },
+    "prior": {
+     "users": 4779,
+     "sessions": 6132,
+     "asd": 628.3,
+     "bounce": 0.2991,
+     "engrate_pct": 70.09,
+     "pageviews": 20846,
+     "newusers": 4181
+    },
+    "yoy": {
+     "users": 14,
+     "sessions": 17,
+     "asd": 49.4,
+     "bounce": 0.3529,
+     "engrate_pct": 64.71,
+     "pageviews": 30,
+     "newusers": 11
+    }
+   },
+   "series_ty": {
+    "W31": {
+     "bookings": 320,
+     "users": 4201
+    },
+    "W32": {
+     "bookings": 380,
+     "users": 4588
+    },
+    "W33": {
+     "bookings": 412,
+     "users": 4870
+    },
+    "W34": {
+     "bookings": 430,
+     "users": 5183
+    },
+    "W35": {
+     "bookings": 463,
+     "users": 5784
+    },
+    "W36": {
+     "bookings": 466,
+     "users": 5765
+    },
+    "W37": {
+     "bookings": 322,
+     "users": 4779
+    },
+    "W38": {
+     "bookings": 245,
+     "users": 4577
+    }
+   },
+   "channels": {
+    "cur": {
+     "Organic Search": {
+      "s": 2552,
+      "b": 155
+     },
+     "Paid Social": {
+      "s": 1650,
+      "b": 27
+     },
+     "Direct": {
+      "s": 477,
+      "b": 16
+     },
+     "Referral": {
+      "s": 334,
+      "b": 11
+     },
+     "Cross-network": {
+      "s": 298,
+      "b": 10
+     },
+     "Organic Social": {
+      "s": 162,
+      "b": 3
+     },
+     "Paid Search": {
+      "s": 146,
+      "b": 7
+     },
+     "Unassigned": {
+      "s": 119,
+      "b": 15
+     },
+     "AI Assistant": {
+      "s": 35,
+      "b": 1
+     },
+     "Email": {
+      "s": 15,
+      "b": 0
+     },
+     "Paid Other": {
+      "s": 6,
+      "b": 0
+     }
+    },
+    "prior": {
+     "Organic Search": {
+      "s": 2723,
+      "b": 191
+     },
+     "Paid Social": {
+      "s": 1223,
+      "b": 15
+     },
+     "Direct": {
+      "s": 680,
+      "b": 36
+     },
+     "Referral": {
+      "s": 506,
+      "b": 40
+     },
+     "Cross-network": {
+      "s": 525,
+      "b": 9
+     },
+     "Organic Social": {
+      "s": 129,
+      "b": 1
+     },
+     "Paid Search": {
+      "s": 174,
+      "b": 9
+     },
+     "Unassigned": {
+      "s": 103,
+      "b": 15
+     },
+     "AI Assistant": {
+      "s": 16,
+      "b": 2
+     },
+     "Email": {
+      "s": 21,
+      "b": 4
+     },
+     "Paid Other": {
+      "s": 6,
+      "b": 0
+     }
+    },
+    "yoy": {
+     "Organic Search": {
+      "s": 7,
+      "b": 0
+     },
+     "Paid Social": {
+      "s": 0,
+      "b": 0
+     },
+     "Direct": {
+      "s": 9,
+      "b": 0
+     },
+     "Referral": {
+      "s": 1,
+      "b": 0
+     },
+     "Cross-network": {
+      "s": 0,
+      "b": 0
+     },
+     "Organic Social": {
+      "s": 0,
+      "b": 0
+     },
+     "Paid Search": {
+      "s": 0,
+      "b": 0
+     },
+     "Unassigned": {
+      "s": 0,
+      "b": 0
+     },
+     "AI Assistant": {
+      "s": 0,
+      "b": 0
+     },
+     "Email": {
+      "s": 0,
+      "b": 0
+     },
+     "Paid Other": {
+      "s": 0,
+      "b": 0
+     }
+    }
+   },
+   "devices": {
+    "Mobile": 84.8,
+    "Desktop": 13.4,
+    "Tablet": 1.6
+   },
+   "landing": [
+    {
+     "path": "/",
+     "s": 2571,
+     "b": 173
+    },
+    {
+     "path": "/menus",
+     "s": 1825,
+     "b": 37
+    },
+    {
+     "path": "/menus/a-la-carte",
+     "s": 308,
+     "b": 5
+    },
+    {
+     "path": "/menus/tea-tales-menu",
+     "s": 281,
+     "b": 3
+    },
+    {
+     "path": "/events/tea-tales",
+     "s": 131,
+     "b": 5
+    }
+   ]
+  }
+ },
+ "snapshot": {
+  "All": {
+   "book": {
+    "cur": 2457,
+    "prior": 2869,
+    "yoy": 2723
+   },
+   "ex_dsl": {
+    "cur": 2212,
+    "prior": 2547,
+    "yoy": 2723
+   },
+   "site": {
+    "cur": {
+     "users": 54510,
+     "sessions": 76544
+    },
+    "prior": {
+     "users": 55104,
+     "sessions": 74841
+    },
+    "yoy": {
+     "users": 52474,
+     "sessions": 106084
+    }
+   },
+   "ytd": 107766
+  }
+ }
+}

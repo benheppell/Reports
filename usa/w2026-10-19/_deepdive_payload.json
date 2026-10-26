@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "19–25 Oct 2026",
+ "wow": "12–18 Oct 2026",
+ "yoy": "20–26 Oct 2025",
+ "generated": "26 October 2026",
+ "badge": "GA4 BOOKING EVENT RECOVERED 21 OCT",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 140,
+   "tgt": 559,
+   "wow_b": 151,
+   "yoy_b": 334,
+   "users": 6033,
+   "sessions": 7244,
+   "asd": 180.0,
+   "bounce": 0.467,
+   "meta_s": 1810.48,
+   "meta_sch": 59,
+   "meta_sch_prior": 69,
+   "goog_s": 698.03,
+   "goog_c": 16.0,
+   "goog_c_prior": 11.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 90,
+   "tgt": 490,
+   "wow_b": 68,
+   "yoy_b": 205,
+   "users": 5574,
+   "sessions": 6653,
+   "asd": 238.6,
+   "bounce": 0.437,
+   "meta_s": 1410.31,
+   "meta_sch": 14,
+   "meta_sch_prior": 20,
+   "goog_s": 1162.38,
+   "goog_c": 16.0,
+   "goog_c_prior": 13.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 31,
+   "tgt": 124,
+   "wow_b": 40,
+   "yoy_b": 75,
+   "users": 3835,
+   "sessions": 4236,
+   "asd": 85.1,
+   "bounce": 0.633,
+   "meta_s": 1653.1,
+   "meta_sch": 22,
+   "meta_sch_prior": 50,
+   "goog_s": 515.11,
+   "goog_c": 5.0,
+   "goog_c_prior": 9.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Meta fell at every venue this week and that is a real move, not a tracking one: the Schedule conversion fires from the same confirmation page as the GA4 booking event, and it kept working through the dead days last week. Aqua NYC 69 to 59 schedules on $1,810, about $31 each; Hutong Miami 50 to 22 on $1,653, about $75 each and back outside the poor band after one good week; Hutong NYC 20 to 14 on $1,410, about $101 each and the worst of the eight weeks shown.",
+   "Aqua NYC spend split $976 prospecting for 32 schedules, $559 remarketing for 24 and $138 on the outdoor dining campaign for 3. The Halloween landing-page-view campaign took $137 and recorded no schedules, which is expected for that objective. Remarketing at about $23 a schedule is the cheapest line in the market.",
+   "Hutong NYC still parks $633 of its $1,410 in the Mahjong reach campaign and the video viewers campaign, neither of which is expected to book. Its conversions campaign alone ran at about $56 a schedule on $778, worse than the $41 it managed last week. Hutong Miami's retargeting campaign took $420 for 12 schedules at about $35 while its conversions campaign took $1,091 for 10 at about $109, so the whole deterioration there sits in prospecting."
+  ],
+  "google": [
+   "Google is the one platform that improved. Aqua NYC ran $698 for 16.0 booking conversions, up from 11.0, at about $44 each. Hutong NYC delivered 16.0 on $1,162 at about $73 and Hutong Miami 5.0 on $515 at about $103.",
+   "Those counts are a floor. Last week's Hutong NYC reading has already restated from 8.0 to 13.0 and Aqua NYC held at 11.0, so treat this week's cost per booking as a ceiling. Brand search stays flat as a control and remains the cheapest booking source in the market: Hutong NYC Brand took $118 for 3 booking conversions and Hutong Miami Brand $88 for 2.",
+   "Modelled store visits and local actions restated upward on the prior week again, Aqua NYC from 101 to 196, Hutong NYC from 285 to 500 and Hutong Miami from 112 to 184, so the latest point on every walk-in panel understates the true figure by a wide margin. Aqua NYC has no Click Book Now action, so that component is zero there by configuration, not by failure. Hutong NYC impressions fell from 77,444 to 53,821 on slightly higher spend, which is worth a look at the Midtown and PMax campaigns. Hutong Miami delivered nothing at all on 22 October, a one-day gap in an otherwise continuous series."
+  ],
+  "ga4": [
+   "The booking event is recording again. It was dead from 16 to 20 October at all three properties and came back on Wednesday 21 October. Market create-path bookings by day were 4 and 1 on 19 and 20 October, then 49, 54, 47, 60 and 46. So this week covers five days of the seven and the 261 printed here understates the market by roughly 110 bookings.",
+   "The recovery is evidenced three ways. SevenRooms took 86 website bookings on 19 and 20 October against 5 GA4 events, and from 21 October GA4 runs at or near its own pre-break ratio to SevenRooms website rows at every venue. page_view ran normally throughout, including the dead days, so collection never stopped. The USA properties carry no book_now_button_click event, so that cross-check is not available in this market. Hutong Miami is the one venue still sitting meaningfully below its own norm, 0.85 times against 1.22 to 1.29, a gap of about 13 bookings over five days, and it should be rechecked next week.",
+   "Bounce and engagement rates on this page are provisional and restate by 6 to 9 points in the week after a run. The prior week's session metrics have already restated: Aqua NYC sessions 7,070 to 7,227, average session duration 185.6 to 218.5 seconds and users 5,919 to 6,062; Hutong NYC sessions 5,529 to 6,101 and users 4,546 to 4,994; Hutong Miami sessions 4,456 to 4,600. Session duration is not inflated this week at any USA property, so the secondary symptom seen in Hong Kong and London has cleared here too."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40",
+   "W41",
+   "W42"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     199,
+     176,
+     153,
+     197,
+     188,
+     206,
+     151,
+     140
+    ],
+    "users": [
+     5366,
+     5498,
+     6266,
+     5904,
+     6254,
+     6707,
+     6062,
+     6033
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     125,
+     118,
+     99,
+     130,
+     117,
+     126,
+     68,
+     90
+    ],
+    "users": [
+     2570,
+     2641,
+     3007,
+     2949,
+     2653,
+     3892,
+     4994,
+     5574
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     60,
+     47,
+     69,
+     46,
+     60,
+     58,
+     40,
+     31
+    ],
+    "users": [
+     1674,
+     1624,
+     1435,
+     1520,
+     1599,
+     2853,
+     4073,
+     3835
+    ]
+   }
+  }
+ }
+}

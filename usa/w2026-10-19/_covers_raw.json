@@ -1,0 +1,194 @@
+{
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "ch": {
+    "web": {
+     "c": 402,
+     "p": 466,
+     "y": 601
+    },
+    "gr": {
+     "c": 229,
+     "p": 216,
+     "y": 202
+    },
+    "ot": {
+     "c": 263,
+     "p": 219,
+     "y": 273
+    },
+    "walk": {
+     "c": 962,
+     "p": 907,
+     "y": 812
+    },
+    "recep": {
+     "c": 217,
+     "p": 212,
+     "y": 486
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 62,
+     "p": 39,
+     "y": 0
+    },
+    "other": {
+     "c": 2,
+     "p": 3,
+     "y": 11
+    }
+   }
+  },
+  {
+   "name": "Hutong NYC",
+   "ch": {
+    "web": {
+     "c": 432,
+     "p": 398,
+     "y": 399
+    },
+    "gr": {
+     "c": 66,
+     "p": 63,
+     "y": 296
+    },
+    "ot": {
+     "c": 412,
+     "p": 524,
+     "y": 333
+    },
+    "walk": {
+     "c": 361,
+     "p": 488,
+     "y": 459
+    },
+    "recep": {
+     "c": 0,
+     "p": 0,
+     "y": 11
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 52,
+     "p": 40,
+     "y": 2
+    },
+    "other": {
+     "c": 0,
+     "p": 15,
+     "y": 28
+    }
+   }
+  },
+  {
+   "name": "Hutong Miami",
+   "ch": {
+    "web": {
+     "c": 140,
+     "p": 188,
+     "y": 81
+    },
+    "gr": {
+     "c": 16,
+     "p": 39,
+     "y": 46
+    },
+    "ot": {
+     "c": 196,
+     "p": 138,
+     "y": 70
+    },
+    "walk": {
+     "c": 216,
+     "p": 216,
+     "y": 222
+    },
+    "recep": {
+     "c": 27,
+     "p": 23,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 15,
+     "p": 29,
+     "y": 3
+    },
+    "other": {
+     "c": 5,
+     "p": 0,
+     "y": 22
+    }
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40",
+   "W41",
+   "W42"
+  ],
+  "total": [
+   3607,
+   3525,
+   3408,
+   3927,
+   3599,
+   4120,
+   4205,
+   4068
+  ],
+  "ot": [
+   1053,
+   754,
+   658,
+   1088,
+   775,
+   893,
+   881,
+   871
+  ],
+  "excluded_by_rule": [
+   1511,
+   114,
+   362,
+   244,
+   124,
+   82,
+   112,
+   166
+  ]
+ },
+ "problems": [
+  "Channel logic reuses the CASE from public.london_daily_covers_base (read this run via pg_get_viewdef) with the USA extensions: 'web' = booking widget case-insensitive, any '%landing page%', Nav CTA, Hero CTA, Menu Page, Website, 'PPC%', popup, edm; 'gr' = Google Reserve Integration; 'walk' = Walk In; 'recep' = '%reception%' or DSL Host, plus 'Reservation Team' / 'Reservations Team' tested ahead of the staff regex, which would otherwise swallow them. The 'ot' slot is the USA platform and is extended beyond the view: Open Table, OpenTable, Opentable, OTGC - OpenTable Network, OT Guestcenter, bare OT and Resy. 'tp' holds DoorDash, Bilt Integration, Flaming Duck Miami and Capital One, tested ahead of the staff regex. Filters: is_deleted = false, status_simple <> 'Canceled', venue_seating_area_name NOT ILIKE '%bar%', SUM(covers) by booking-created date in America/New_York, sargable range predicates on sr_created_at with both ends bounded and one date window per query.",
+  "FIX 1 APPLIED, MOVED NOTHING THIS WEEK. 'Booking widget' with a lower-case w is now matched case-insensitively into 'web'. No booking in the reporting week or the recomputed prior week carries that spelling. The 3 records / 7 covers recorded last week sit in the week created 28 Sep 2026 (the W39 series point) at Hutong New York, with status_simple 'Incomplete', not in the 12 to 18 Oct window as last week's note stated. Effect: +7 covers into web at W39 only.",
+  "FIX 2 APPLIED, MOVED NOTHING THIS WEEK OR LAST. 'Capital One' is now a partner in 'tp' ahead of the staff regex. It appears nowhere at any of the four venues between 28 Sep and 25 Oct 2026. It does appear in the year-ago week: 1 record / 2 covers at Hutong New York, now in 'tp' rather than excluded as staff. That is why last year's 'tp' is no longer zero everywhere, which last week's note recorded for its own year-ago week.",
+  "BULK IMPORT, MECHANICAL RULE. Any booking whose service date falls before the Monday of the week it was created in is dropped, with no threshold and no per-burst judgement. This week that removed 166 covers, all at Hutong New York: 59 records / 166 covers. Nothing was removed at Aqua Roma, Aqua Kyoto NYC or Hutong Miami.",
+  "HUTONG NEW YORK OPENTABLE RE-SYNC, SIXTH WEEK RUNNING. A single hour, 20 Oct 2026 16:00 America/New_York, carries 102 OT Guestcenter records and 287 covers, 59 of the 102 past dated, with service dates spanning 19 Mar 2026 to 21 Nov 2026. The mechanical rule dropped the 59 past-dated records / 166 covers and kept the 43 forward-dated rows. No other hour at any of the four venues had five or more rows dated before its creation week. The March service dates make this the deepest of the six loads.",
+  "VALIDATION: the prior week 12 to 18 Oct recomputed with this SQL returns Aqua NYC 2,059 (published 2,092, -1.6%), Hutong NYC 1,513 (1,539, -1.7%), Hutong Miami 633 (645, -1.9%), market 4,205 against 4,276 published (-1.7%). That is normal settling, cancellations since the week was published, and well inside the -4.5% seen last week when the mechanical rule was applied to a week published without it. The eight-week series reproduces last week's published W35 to W41 points to within 1.1% at every point.",
+  "YEAR-AGO WEEK checked the same way. The mechanical rule removed 452 covers / 154 records from the 20 to 26 Oct 2025 week: Aqua Roma 81 records / 249 covers, Aqua Kyoto NYC 43 / 108, Hutong New York 31 / 93 and Hutong Miami 1 / 2, all OpenTable sources. A further 1 record / 3 covers was removed from an excluded staff row.",
+  "OUTSIDE THE SEVEN CHANNELS this week ('other' in this file, excluded from the covers total): Aqua Roma 2 covers from 1 record sourced 'Mariana'; Hutong Miami 5 covers from 2 records sourced 'Gaby'; Hutong New York none. Prior week 'other' was Aqua Roma 3 ('Facebook'), Hutong New York 15 ('Damarys' 13 and 'Flaming Duck NYC' 2), Hutong Miami 0. Year-ago week 11 / 28 / 22.",
+  "GAP, NOT ZERO, carried from prior weeks: single first names and initials sit outside the seven channels rather than in a channel. 'Mariana', 'Gaby' and 'Damarys' are on that footing. 'Flaming Duck NYC' is a partner that falls to 'other' because the all-caps suffix fails the staff regex and it is not in the partner list; it is left there this run rather than changed alongside the two fixes that were asked for, and it should join the partner list. Hutong New York reception reads 0 again because the venue logged no reception-sourced bookings in the week.",
+  "EXCLUSIVE HIRES: none. No service at any of the four venues runs at or near zero from 15:00 in the reporting week or in the matched 2025 week. The 2025 week holds a 150-cover single booking at Hutong Miami on 22 Oct and a 200-cover single booking at Aqua Roma on 23 Oct, but dinner on both dates runs above the neighbouring same-weekday norm, so no service was closed and nothing is stripped from either side. Neither sits in a bookable channel, so the headline comparison is unaffected. Aqua NYC reception covers of 486 in the year-ago week against 217 this week is where the Aqua Roma event most likely sits; reception is not in bookable covers.",
+  "CROSS-CHECK USED IN THE NARRATIVE: SevenRooms website bookings and covers by created date, 19 to 25 Oct 2026, market: 39/135, 47/163, 45/138, 56/175, 32/107, 45/126, 38/130. Monday and Tuesday are normal while GA4 recorded 5 booking events across the two days, which is the evidence that the GA4 event was still dead on those days. From 21 Oct GA4 runs at or near its own pre-break ratio to these rows at every venue."
+ ]
+}

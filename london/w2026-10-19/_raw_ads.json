@@ -1,0 +1,926 @@
+{
+ "meta_notes": {
+  "currency": "GBP",
+  "windows": {
+   "cur": "2026-10-19..2026-10-25",
+   "prior": "2026-10-12..2026-10-18",
+   "yoy": "2025-10-20..2025-10-26"
+  },
+  "week_map_2026": {
+   "W31": "2026-08-31",
+   "W32": "2026-09-07",
+   "W33": "2026-09-14",
+   "W34": "2026-09-21",
+   "W35": "2026-09-28",
+   "W36": "2026-10-05",
+   "W37": "2026-10-12",
+   "W38": "2026-10-19"
+  },
+  "week_map_ly": {
+   "L35": "2025-09-29",
+   "L36": "2025-10-06",
+   "L37": "2025-10-13",
+   "L38": "2025-10-20"
+  },
+  "meta_bookings_definition": "conversions field, action_type schedule_total (Schedule). Never purchase",
+  "meta_week_verification": "time_increment=7 with since=2026-08-31 (Mon) landed exactly on Mon-Sun weeks W31 to W38; LY pulled as a single Mon-Sun window",
+  "dsl_account_name": "Meta act_986571809129888 returns account_name 'Luci' - verified as the DSL London account",
+  "google_booking_definition": "all_conversions of actions whose name contains 'booking' and 'complete' and not 'ga4'. Aqua Shard = Booking Complete Sevenrooms (6457441134). Hutong = Sevenrooms Booking Complete (1005966641). Regent St = Kyoto Booking Complete Sevenrooms + Nueva Booking Complete Sevenrooms. Azzurra = Azzurra UK (web) sevenrooms_booking_complete. Shiro Sushi = Aqua Shiro - SST (web) booking_complete + Aqua Shiro UK (web) sevenrooms_booking_complete + Booking Complete. DSL = Dim Sum Library UK (web) sevenrooms_booking_complete",
+  "google_cost_note": "metrics.cost_micros is returned pre-converted by the connector as cost in GBP; it is not divided again",
+  "walkin_definition": "sum of all_conversions for 'Store visits', 'Local actions - Directions', 'Local actions - Menu views', 'Clicks to call'. Same definition as last week; it reproduces last week's published LY values exactly at every venue",
+  "warnings": [
+   "AQUA SHARD GOOGLE: BOTH BOOKING ACTIONS ARE NOW RECORDING AND NEITHER COVERS THE WEEK. 'Booking Complete Sevenrooms' (6457441134, WEBPAGE, ENABLED) read 0.454, 0.071, 0.120 on 19 to 21 Oct and then 17.232, 40.414, 42.488 and 2.922 on 22 to 25 Oct, 103.70 for the week. 'Aqua Shard - GA4 (web) sevenrooms_booking_complete' (6656322472, GOOGLE_ANALYTICS_4_CUSTOM, ENABLED) read 15.384, 15.227, 10.443, 11.933, 11.537, 14.273 and 1.0, 79.80 for the week. The page tag therefore resumed on 22 October after stopping on 12 October, and from 22 October the two actions count the same event twice. The rule-based figure of 103.70 is recorded here but published as not available, excluded from ad-driven bookings, blended CPA and the paid funnel, and shown as a gap on the trends page. No Aqua Shard Google CPA is quoted. change_event does not cover CONVERSION_ACTION, so nobody can be named for any of this from the API",
+   "HUTONG GOOGLE: SAME FAULT, FOUND THIS RUN. 'Sevenrooms Booking Complete' read 1.0, 1.045, 1.044 and 1.0 on 19 to 22 Oct and then 8.038, 35.073 and 18.8 on 23 to 25 Oct, 66.00 for the week. The prior week shows the same shape: 29.352, 30.294 and 22.968 on 12 to 14 Oct then 1.0, 0, 3.0 and 0 on 15 to 18 Oct, 86.61 for the week. The W37 figure of 81.61 published last week is therefore withdrawn and W37 and W38 are both published as gaps. No Hutong Google CPA is quoted",
+   "Google conversions and walk-in signals settle upward for two to three weeks and were re-pulled for every week in the series. Against last week's file, W37 Google booking conversions moved Aqua Shard 8.0 to 19.16, Hutong 81.61 to 86.61, Regent St 4 to 5, Azzurra 6 to 7, Shiro Sushi 55.76 to 63.76 and DSL 19 to 19. W37 walk-in signals moved Aqua Shard 204 to 592, Hutong 351 to 959, Regent St 59 to 108, Azzurra 73 to 133 and Shiro Sushi 129 to 220. Treat W38 as a floor",
+   "Regent St Google account 3511646647 has a Store visits action but it records zero in every week of both years, and Azzurra has no Store visits rows in 2026 (its 2025 rows are Store visits only). Aqua Shiro's Store visits action stopped recording after the week of 5 October 2026. Those walk-in panels are partial and are labelled so",
+   "DSL Google account 3456575686 returns No results found for the whole 2025-09-29..2025-10-26 window and records no local actions or clicks-to-call in 2026. Its Google yoy, LY series and walk-in panel are zero by fact, not by fetch failure",
+   "DSL Meta returned an empty data array for 2025-10-20..2025-10-26, so Meta yoy spend and schedules at DSL are zero by fact (no delivery, pre-rebrand)",
+   "Hutong action 'Hutong UK - GA4 (web) sevenrooms_booking_complete' (45.20 this week) excluded per the no-ga4 rule. DSL action 'Purchase (Google Analytics event sevenrooms_finish_search_page)' (39 this week) is not a booking-complete action and is excluded",
+   "Campaign spend and campaign booking conversions were run as separate GAQL queries because segments.conversion_action_name cannot be selected alongside metrics.cost_micros. No pull failed and no retry was needed in Google, Meta or GA4"
+  ]
+ },
+ "venues": {
+  "Aqua Shard": {
+   "meta": {
+    "cur": {
+     "spend": 2846.55,
+     "impr": 441001,
+     "clicks": 19888,
+     "sch": 188.0
+    },
+    "prior": {
+     "spend": 2806.22,
+     "impr": 401549,
+     "clicks": 16421,
+     "sch": 193.0
+    },
+    "yoy": {
+     "spend": 1363.0,
+     "impr": 192168,
+     "clicks": 10214,
+     "sch": 194.0
+    },
+    "series": {
+     "W31": {
+      "spend": 1328.48,
+      "sch": 102.0
+     },
+     "W32": {
+      "spend": 1804.31,
+      "sch": 116.0
+     },
+     "W33": {
+      "spend": 2379.5,
+      "sch": 245.0
+     },
+     "W34": {
+      "spend": 2421.95,
+      "sch": 222.0
+     },
+     "W35": {
+      "spend": 2617.98,
+      "sch": 243.0
+     },
+     "W36": {
+      "spend": 2804.07,
+      "sch": 232.0
+     },
+     "W37": {
+      "spend": 2806.22,
+      "sch": 193.0
+     },
+     "W38": {
+      "spend": 2846.55,
+      "sch": 188.0
+     }
+    },
+    "ly": {
+     "L35": {},
+     "L36": {},
+     "L37": {},
+     "L38": {}
+    },
+    "account_note": ""
+   },
+   "google": {
+    "cur": {
+     "spend": 1950.26,
+     "impr": 52403,
+     "clicks": 6912,
+     "conv": 103.7,
+     "walkin": 522
+    },
+    "prior": {
+     "spend": 2374.09,
+     "impr": 35838,
+     "clicks": 6073,
+     "conv": 19.16,
+     "walkin": 592
+    },
+    "yoy": {
+     "spend": 1321.55,
+     "impr": 119065,
+     "clicks": 12035,
+     "conv": 1026.16,
+     "walkin": 937
+    },
+    "series": {
+     "W31": {
+      "spend": 1778.36,
+      "conv": 238.276918,
+      "walkin": 342
+     },
+     "W32": {
+      "spend": 1933.76,
+      "conv": 311.20529,
+      "walkin": 547
+     },
+     "W33": {
+      "spend": 3198.83,
+      "conv": 416.500414,
+      "walkin": 884
+     },
+     "W34": {
+      "spend": 3333.41,
+      "conv": 401.299354,
+      "walkin": 967
+     },
+     "W35": {
+      "spend": 2408.48,
+      "conv": 349.758758,
+      "walkin": 737
+     },
+     "W36": {
+      "spend": 2159.86,
+      "conv": 312.631138,
+      "walkin": 792
+     },
+     "W37": {
+      "spend": 2374.09,
+      "conv": 19.157595,
+      "walkin": 592
+     },
+     "W38": {
+      "spend": 1950.26,
+      "conv": 103.700655,
+      "walkin": 522
+     }
+    },
+    "ly": {
+     "L35": {
+      "conv": 1021.827199,
+      "walkin": 757
+     },
+     "L36": {
+      "conv": 926.217512,
+      "walkin": 782
+     },
+     "L37": {
+      "conv": 881.70681,
+      "walkin": 829
+     },
+     "L38": {
+      "conv": 1026.164522,
+      "walkin": 937
+     }
+    },
+    "published_as_gap": true
+   }
+  },
+  "Hutong": {
+   "meta": {
+    "cur": {
+     "spend": 2112.42,
+     "impr": 290926,
+     "clicks": 10217,
+     "sch": 133.0
+    },
+    "prior": {
+     "spend": 2110.81,
+     "impr": 404786,
+     "clicks": 10124,
+     "sch": 178.0
+    },
+    "yoy": {
+     "spend": 444.13,
+     "impr": 90375,
+     "clicks": 5327,
+     "sch": 64.0
+    },
+    "series": {
+     "W31": {
+      "spend": 1124.54,
+      "sch": 112.0
+     },
+     "W32": {
+      "spend": 1442.03,
+      "sch": 151.0
+     },
+     "W33": {
+      "spend": 1841.06,
+      "sch": 190.0
+     },
+     "W34": {
+      "spend": 2212.87,
+      "sch": 244.0
+     },
+     "W35": {
+      "spend": 2197.55,
+      "sch": 188.0
+     },
+     "W36": {
+      "spend": 2460.97,
+      "sch": 200.0
+     },
+     "W37": {
+      "spend": 2110.81,
+      "sch": 178.0
+     },
+     "W38": {
+      "spend": 2112.42,
+      "sch": 133.0
+     }
+    },
+    "ly": {
+     "L35": {},
+     "L36": {},
+     "L37": {},
+     "L38": {}
+    },
+    "account_note": ""
+   },
+   "google": {
+    "cur": {
+     "spend": 1241.69,
+     "impr": 66344,
+     "clicks": 4023,
+     "conv": 66.0,
+     "walkin": 547
+    },
+    "prior": {
+     "spend": 1604.31,
+     "impr": 73460,
+     "clicks": 4723,
+     "conv": 86.61,
+     "walkin": 959
+    },
+    "yoy": {
+     "spend": 432.42,
+     "impr": 24924,
+     "clicks": 3315,
+     "conv": 302.44,
+     "walkin": 516
+    },
+    "series": {
+     "W31": {
+      "spend": 1682.0,
+      "conv": 216.908777,
+      "walkin": 0
+     },
+     "W32": {
+      "spend": 1876.81,
+      "conv": 218.706387,
+      "walkin": 0
+     },
+     "W33": {
+      "spend": 2198.68,
+      "conv": 281.036827,
+      "walkin": 0
+     },
+     "W34": {
+      "spend": 2802.52,
+      "conv": 284.694956,
+      "walkin": 0
+     },
+     "W35": {
+      "spend": 2033.72,
+      "conv": 328.746355,
+      "walkin": 996
+     },
+     "W36": {
+      "spend": 1556.47,
+      "conv": 239.957068,
+      "walkin": 813
+     },
+     "W37": {
+      "spend": 1604.31,
+      "conv": 86.612944,
+      "walkin": 959
+     },
+     "W38": {
+      "spend": 1241.69,
+      "conv": 66.0,
+      "walkin": 547
+     }
+    },
+    "ly": {
+     "L35": {
+      "conv": 378.379331,
+      "walkin": 762
+     },
+     "L36": {
+      "conv": 378.463766,
+      "walkin": 796
+     },
+     "L37": {
+      "conv": 357.526644,
+      "walkin": 630
+     },
+     "L38": {
+      "conv": 302.444874,
+      "walkin": 516
+     }
+    },
+    "published_as_gap": true
+   }
+  },
+  "Regent St": {
+   "meta": {
+    "cur": {
+     "spend": 1214.12,
+     "impr": 185075,
+     "clicks": 9650,
+     "sch": 52.0
+    },
+    "prior": {
+     "spend": 1217.37,
+     "impr": 156200,
+     "clicks": 5102,
+     "sch": 72.0
+    },
+    "yoy": {
+     "spend": 943.77,
+     "impr": 148201,
+     "clicks": 4803,
+     "sch": 77.0
+    },
+    "series": {
+     "W31": {
+      "spend": 949.41,
+      "sch": 47.0
+     },
+     "W32": {
+      "spend": 1001.3,
+      "sch": 58.0
+     },
+     "W33": {
+      "spend": 1048.72,
+      "sch": 89.0
+     },
+     "W34": {
+      "spend": 765.71,
+      "sch": 59.0
+     },
+     "W35": {
+      "spend": 772.34,
+      "sch": 53.0
+     },
+     "W36": {
+      "spend": 1157.13,
+      "sch": 48.0
+     },
+     "W37": {
+      "spend": 1217.37,
+      "sch": 72.0
+     },
+     "W38": {
+      "spend": 1214.12,
+      "sch": 52.0
+     }
+    },
+    "ly": {
+     "L35": {},
+     "L36": {},
+     "L37": {},
+     "L38": {}
+    },
+    "account_note": ""
+   },
+   "google": {
+    "cur": {
+     "spend": 1097.87,
+     "impr": 57056,
+     "clicks": 1445,
+     "conv": 6.0,
+     "walkin": 135
+    },
+    "prior": {
+     "spend": 532.0,
+     "impr": 33013,
+     "clicks": 960,
+     "conv": 5.0,
+     "walkin": 108
+    },
+    "yoy": {
+     "spend": 865.42,
+     "impr": 66553,
+     "clicks": 1909,
+     "conv": 63.1,
+     "walkin": 314
+    },
+    "series": {
+     "W31": {
+      "spend": 1601.07,
+      "conv": 33,
+      "walkin": 0
+     },
+     "W32": {
+      "spend": 942.78,
+      "conv": 14,
+      "walkin": 0
+     },
+     "W33": {
+      "spend": 625.3,
+      "conv": 22,
+      "walkin": 0
+     },
+     "W34": {
+      "spend": 581.32,
+      "conv": 15,
+      "walkin": 0
+     },
+     "W35": {
+      "spend": 525.33,
+      "conv": 11,
+      "walkin": 135
+     },
+     "W36": {
+      "spend": 560.03,
+      "conv": 9,
+      "walkin": 151
+     },
+     "W37": {
+      "spend": 532.0,
+      "conv": 5,
+      "walkin": 108
+     },
+     "W38": {
+      "spend": 1097.87,
+      "conv": 6,
+      "walkin": 135
+     }
+    },
+    "ly": {
+     "L35": {
+      "conv": 65,
+      "walkin": 279
+     },
+     "L36": {
+      "conv": 53,
+      "walkin": 323
+     },
+     "L37": {
+      "conv": 50.5,
+      "walkin": 295
+     },
+     "L38": {
+      "conv": 63.099999,
+      "walkin": 314
+     }
+    },
+    "published_as_gap": false
+   }
+  },
+  "Azzurra": {
+   "meta": {
+    "cur": {
+     "spend": 1343.52,
+     "impr": 210817,
+     "clicks": 3795,
+     "sch": 57.0
+    },
+    "prior": {
+     "spend": 1271.89,
+     "impr": 174603,
+     "clicks": 3272,
+     "sch": 62.0
+    },
+    "yoy": {
+     "spend": 677.99,
+     "impr": 89062,
+     "clicks": 2213,
+     "sch": 48.0
+    },
+    "series": {
+     "W31": {
+      "spend": 920.72,
+      "sch": 46.0
+     },
+     "W32": {
+      "spend": 1022.89,
+      "sch": 44.0
+     },
+     "W33": {
+      "spend": 1114.8,
+      "sch": 54.0
+     },
+     "W34": {
+      "spend": 1066.74,
+      "sch": 46.0
+     },
+     "W35": {
+      "spend": 1382.34,
+      "sch": 76.0
+     },
+     "W36": {
+      "spend": 1327.52,
+      "sch": 76.0
+     },
+     "W37": {
+      "spend": 1271.89,
+      "sch": 62.0
+     },
+     "W38": {
+      "spend": 1343.52,
+      "sch": 57.0
+     }
+    },
+    "ly": {
+     "L35": {},
+     "L36": {},
+     "L37": {},
+     "L38": {}
+    },
+    "account_note": ""
+   },
+   "google": {
+    "cur": {
+     "spend": 528.05,
+     "impr": 18973,
+     "clicks": 757,
+     "conv": 3.0,
+     "walkin": 56
+    },
+    "prior": {
+     "spend": 554.21,
+     "impr": 20200,
+     "clicks": 853,
+     "conv": 7.0,
+     "walkin": 133
+    },
+    "yoy": {
+     "spend": 683.33,
+     "impr": 74461,
+     "clicks": 1167,
+     "conv": 27.0,
+     "walkin": 32
+    },
+    "series": {
+     "W31": {
+      "spend": 344.03,
+      "conv": 21,
+      "walkin": 0
+     },
+     "W32": {
+      "spend": 420.67,
+      "conv": 18,
+      "walkin": 0
+     },
+     "W33": {
+      "spend": 407.37,
+      "conv": 15,
+      "walkin": 0
+     },
+     "W34": {
+      "spend": 492.7,
+      "conv": 21,
+      "walkin": 0
+     },
+     "W35": {
+      "spend": 513.88,
+      "conv": 13.986259,
+      "walkin": 145
+     },
+     "W36": {
+      "spend": 507.54,
+      "conv": 17,
+      "walkin": 128
+     },
+     "W37": {
+      "spend": 554.21,
+      "conv": 7,
+      "walkin": 133
+     },
+     "W38": {
+      "spend": 528.05,
+      "conv": 3,
+      "walkin": 56
+     }
+    },
+    "ly": {
+     "L35": {
+      "conv": 32,
+      "walkin": 42
+     },
+     "L36": {
+      "conv": 25,
+      "walkin": 50
+     },
+     "L37": {
+      "conv": 46.522006,
+      "walkin": 45
+     },
+     "L38": {
+      "conv": 27,
+      "walkin": 32
+     }
+    },
+    "published_as_gap": false
+   }
+  },
+  "Shiro Sushi": {
+   "meta": {
+    "cur": {
+     "spend": 1113.88,
+     "impr": 206196,
+     "clicks": 3528,
+     "sch": 44.0
+    },
+    "prior": {
+     "spend": 747.09,
+     "impr": 131760,
+     "clicks": 2599,
+     "sch": 37.0
+    },
+    "yoy": {
+     "spend": 383.0,
+     "impr": 69112,
+     "clicks": 2979,
+     "sch": 26.0
+    },
+    "series": {
+     "W31": {
+      "spend": 408.17,
+      "sch": 16.0
+     },
+     "W32": {
+      "spend": 407.87,
+      "sch": 32.0
+     },
+     "W33": {
+      "spend": 393.2,
+      "sch": 20.0
+     },
+     "W34": {
+      "spend": 429.0,
+      "sch": 35.0
+     },
+     "W35": {
+      "spend": 500.15,
+      "sch": 40.0
+     },
+     "W36": {
+      "spend": 402.3,
+      "sch": 26.0
+     },
+     "W37": {
+      "spend": 747.09,
+      "sch": 37.0
+     },
+     "W38": {
+      "spend": 1113.88,
+      "sch": 44.0
+     }
+    },
+    "ly": {
+     "L35": {},
+     "L36": {},
+     "L37": {},
+     "L38": {}
+    },
+    "account_note": ""
+   },
+   "google": {
+    "cur": {
+     "spend": 634.38,
+     "impr": 40980,
+     "clicks": 710,
+     "conv": 32.48,
+     "walkin": 105
+    },
+    "prior": {
+     "spend": 912.04,
+     "impr": 54263,
+     "clicks": 891,
+     "conv": 63.76,
+     "walkin": 220
+    },
+    "yoy": {
+     "spend": 407.02,
+     "impr": 216610,
+     "clicks": 1177,
+     "conv": 89.54,
+     "walkin": 509
+    },
+    "series": {
+     "W31": {
+      "spend": 433.17,
+      "conv": 29.718092,
+      "walkin": 0
+     },
+     "W32": {
+      "spend": 541.05,
+      "conv": 24.441546,
+      "walkin": 0
+     },
+     "W33": {
+      "spend": 602.65,
+      "conv": 25.226904,
+      "walkin": 0
+     },
+     "W34": {
+      "spend": 579.98,
+      "conv": 41.083333,
+      "walkin": 0
+     },
+     "W35": {
+      "spend": 547.6,
+      "conv": 32.623409,
+      "walkin": 213
+     },
+     "W36": {
+      "spend": 696.74,
+      "conv": 38.894478,
+      "walkin": 146
+     },
+     "W37": {
+      "spend": 912.04,
+      "conv": 63.763243,
+      "walkin": 220
+     },
+     "W38": {
+      "spend": 634.38,
+      "conv": 32.481137,
+      "walkin": 105
+     }
+    },
+    "ly": {
+     "L35": {
+      "conv": 59.641401,
+      "walkin": 409
+     },
+     "L36": {
+      "conv": 80.657341,
+      "walkin": 417
+     },
+     "L37": {
+      "conv": 69.126667,
+      "walkin": 441
+     },
+     "L38": {
+      "conv": 89.540301,
+      "walkin": 509
+     }
+    },
+    "published_as_gap": false
+   }
+  },
+  "DSL": {
+   "meta": {
+    "cur": {
+     "spend": 3710.75,
+     "impr": 452974,
+     "clicks": 12964,
+     "sch": 162.0
+    },
+    "prior": {
+     "spend": 2312.46,
+     "impr": 289760,
+     "clicks": 8763,
+     "sch": 102.0
+    },
+    "yoy": {
+     "spend": 0.0,
+     "impr": 0,
+     "clicks": 0,
+     "sch": 0.0
+    },
+    "series": {
+     "W31": {
+      "spend": 2016.4,
+      "sch": 91.0
+     },
+     "W32": {
+      "spend": 2018.31,
+      "sch": 138.0
+     },
+     "W33": {
+      "spend": 2012.76,
+      "sch": 111.0
+     },
+     "W34": {
+      "spend": 1997.26,
+      "sch": 115.0
+     },
+     "W35": {
+      "spend": 2297.33,
+      "sch": 116.0
+     },
+     "W36": {
+      "spend": 2091.83,
+      "sch": 107.0
+     },
+     "W37": {
+      "spend": 2312.46,
+      "sch": 102.0
+     },
+     "W38": {
+      "spend": 3710.75,
+      "sch": 162.0
+     }
+    },
+    "ly": {
+     "L35": {},
+     "L36": {},
+     "L37": {},
+     "L38": {}
+    },
+    "account_note": ""
+   },
+   "google": {
+    "cur": {
+     "spend": 615.98,
+     "impr": 15836,
+     "clicks": 699,
+     "conv": 23.0,
+     "walkin": 0
+    },
+    "prior": {
+     "spend": 605.63,
+     "impr": 37780,
+     "clicks": 1372,
+     "conv": 19.0,
+     "walkin": 0
+    },
+    "yoy": {
+     "spend": 0.0,
+     "impr": 0,
+     "clicks": 0,
+     "conv": 0.0,
+     "walkin": 0
+    },
+    "series": {
+     "W31": {
+      "spend": 801.79,
+      "conv": 33,
+      "walkin": 0
+     },
+     "W32": {
+      "spend": 368.35,
+      "conv": 13.936432,
+      "walkin": 0
+     },
+     "W33": {
+      "spend": 310.03,
+      "conv": 19,
+      "walkin": 0
+     },
+     "W34": {
+      "spend": 290.84,
+      "conv": 9,
+      "walkin": 0
+     },
+     "W35": {
+      "spend": 321.17,
+      "conv": 12,
+      "walkin": 0
+     },
+     "W36": {
+      "spend": 406.44,
+      "conv": 7,
+      "walkin": 0
+     },
+     "W37": {
+      "spend": 605.63,
+      "conv": 19,
+      "walkin": 0
+     },
+     "W38": {
+      "spend": 615.98,
+      "conv": 23,
+      "walkin": 0
+     }
+    },
+    "ly": {
+     "L35": {
+      "conv": 0,
+      "walkin": 0
+     },
+     "L36": {
+      "conv": 0,
+      "walkin": 0
+     },
+     "L37": {
+      "conv": 0,
+      "walkin": 0
+     },
+     "L38": {
+      "conv": 0,
+      "walkin": 0
+     }
+    },
+    "published_as_gap": false
+   }
+  }
+ }
+}
