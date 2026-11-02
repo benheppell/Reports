@@ -1,0 +1,350 @@
+{
+ "market": "Hutong Dubai",
+ "sym": "AED ",
+ "week": "26 Oct–1 Nov 2026",
+ "fy": "FY26 &middot; W43",
+ "generated": "2 November 2026",
+ "venues": [
+  "Hutong Dubai"
+ ],
+ "data": {
+  "Hutong Dubai": {
+   "web": {
+    "cur": {
+     "users": 1388,
+     "sessions": 1725,
+     "bookings": 62,
+     "pps": 2.46,
+     "avgsec": 163,
+     "engrate": 69.3,
+     "newpct": 83.5
+    },
+    "prior": {
+     "users": 931,
+     "sessions": 1167,
+     "bookings": 54,
+     "pps": 2.52,
+     "avgsec": 421,
+     "engrate": 71.0,
+     "newpct": 85.9
+    },
+    "yoy": {
+     "users": 1655,
+     "sessions": 2714,
+     "bookings": 151,
+     "pps": 1.61,
+     "avgsec": 134,
+     "engrate": 67.6,
+     "newpct": 60.3
+    }
+   },
+   "ads": {
+    "meta": {
+     "cur": {
+      "spend": 7090.95,
+      "bookings": 32,
+      "impr": 760726,
+      "clicks": 3944
+     },
+     "prior": {
+      "spend": 1707.22,
+      "bookings": 6,
+      "impr": 231109,
+      "clicks": 816
+     },
+     "yoy": {
+      "spend": 1986.82,
+      "bookings": 12,
+      "impr": 149677,
+      "clicks": 2440
+     }
+    },
+    "google": {
+     "cur": {
+      "spend": 2816.67,
+      "bookings": 14.6,
+      "impr": 16724,
+      "clicks": 644
+     },
+     "prior": {
+      "spend": 2898.94,
+      "bookings": 19.93,
+      "impr": 18905,
+      "clicks": 786
+     },
+     "yoy": {
+      "spend": 3229.05,
+      "bookings": 24.63,
+      "impr": 85779,
+      "clicks": 1343
+     }
+    }
+   },
+   "channels": [
+    {
+     "name": "Paid Social",
+     "s": [
+      548,
+      75,
+      260
+     ],
+     "b": [
+      5,
+      1,
+      1
+     ]
+    },
+    {
+     "name": "Organic Search",
+     "s": [
+      413,
+      372,
+      791
+     ],
+     "b": [
+      17,
+      13,
+      46
+     ]
+    },
+    {
+     "name": "Paid Search",
+     "s": [
+      247,
+      289,
+      433
+     ],
+     "b": [
+      16,
+      20,
+      24
+     ]
+    },
+    {
+     "name": "Cross-network",
+     "s": [
+      190,
+      179,
+      469
+     ],
+     "b": [
+      9,
+      5,
+      22
+     ]
+    },
+    {
+     "name": "Direct",
+     "s": [
+      140,
+      112,
+      465
+     ],
+     "b": [
+      5,
+      3,
+      54
+     ]
+    },
+    {
+     "name": "Unassigned",
+     "s": [
+      73,
+      52,
+      23
+     ],
+     "b": [
+      7,
+      8,
+      0
+     ]
+    },
+    {
+     "name": "Referral",
+     "s": [
+      63,
+      51,
+      67
+     ],
+     "b": [
+      2,
+      3,
+      1
+     ]
+    },
+    {
+     "name": "AI Assistant",
+     "s": [
+      25,
+      31,
+      0
+     ],
+     "b": [
+      0,
+      1,
+      0
+     ]
+    },
+    {
+     "name": "Organic Social",
+     "s": [
+      18,
+      8,
+      157
+     ],
+     "b": [
+      0,
+      0,
+      3
+     ]
+    },
+    {
+     "name": "Paid Other",
+     "s": [
+      10,
+      0,
+      43
+     ],
+     "b": [
+      1,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Email",
+     "s": [
+      1,
+      3,
+      0
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "Mobile Push Notifications",
+     "s": [
+      0,
+      0,
+      1
+     ],
+     "b": [
+      0,
+      0,
+      0
+     ]
+    }
+   ],
+   "devices": {
+    "mobile": 82,
+    "desktop": 18,
+    "tablet": 0
+   },
+   "landing": [
+    {
+     "path": "/menus",
+     "s": 639,
+     "b": 5
+    },
+    {
+     "path": "/",
+     "s": 632,
+     "b": 38
+    },
+    {
+     "path": "/business-lunch",
+     "s": 129,
+     "b": 4
+    },
+    {
+     "path": "(not set)",
+     "s": 99,
+     "b": 0
+    },
+    {
+     "path": "/explore/hutongdubai/reservations/create/search",
+     "s": 51,
+     "b": 9
+    }
+   ],
+   "trend": {
+    "labels": [
+     "W36",
+     "W37",
+     "W38",
+     "W39",
+     "W40",
+     "W41",
+     "W42",
+     "W43"
+    ],
+    "spend": [
+     6626.14,
+     6306.84,
+     6567.57,
+     8953.36,
+     7713.11,
+     5835.85,
+     4606.16,
+     9907.62
+    ],
+    "bookings": [
+     48.79,
+     50.41,
+     61.68,
+     55.5,
+     70.89,
+     55.35,
+     25.93,
+     46.6
+    ]
+   },
+   "funnel": {
+    "impr": 777450,
+    "clicks": 4588,
+    "landing": 795,
+    "bookings": 46.6
+   },
+   "campaigns": [
+    {
+     "name": "CRKLR - Prospecting Campaign",
+     "platform": "meta",
+     "spend": 4444.39,
+     "bookings": 24,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Remarketing Campaign",
+     "platform": "meta",
+     "spend": 1635.36,
+     "bookings": 8,
+     "wow": "up"
+    },
+    {
+     "name": "P.Max > Generic",
+     "platform": "google",
+     "spend": 1542.42,
+     "bookings": 5.0,
+     "wow": "down"
+    },
+    {
+     "name": "Search > Brand",
+     "platform": "google",
+     "spend": 995.93,
+     "bookings": 9.1,
+     "wow": "up"
+    },
+    {
+     "name": "CRKLR - Awareness - Reach",
+     "platform": "meta",
+     "spend": 546.79,
+     "bookings": 0,
+     "wow": "up"
+    }
+   ]
+  }
+ }
+}

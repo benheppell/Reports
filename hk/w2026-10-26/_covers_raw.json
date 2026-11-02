@@ -1,0 +1,474 @@
+{
+ "meta": {
+  "tz": "Asia/Hong_Kong",
+  "source": "supabase vklgpzrhjvjqhlpfennn public.reservations joined to public.venues",
+  "date_basis": "(sr_created_at AT TIME ZONE 'Asia/Hong_Kong')::date, booking-created date",
+  "windows": {
+   "cur": "2026-10-26..2026-11-01",
+   "prior": "2026-10-19..2026-10-25",
+   "yoy": "2025-10-27..2025-11-02"
+  },
+  "filters": "is_deleted = false AND COALESCE(status_simple,'') <> 'Canceled' AND COALESCE(raw->>'venue_seating_area_name','') NOT ILIKE '%bar%'",
+  "range_predicate": "sargable sr_created_at >= timestamptz 'YYYY-MM-DD 00:00:00+08' AND sr_created_at < ..., never a cast on the column; one window per query",
+  "channel_rules": [
+   "ot (OpenRice, the HK third-party slot): '%openrice%'",
+   "tp: '%trip advisor%' or '%tripadvisor%'",
+   "gr: 'Google Reserve Integration'",
+   "walk: 'Walk In'",
+   "web: 'Booking Widget' or '%landing page%' or 'PPC%' or in (Nav CTA, Hero CTA, Menu Page, Website, Popup, EDM, What's On), case-insensitive",
+   "recep: '%reception%' or '%reservation%' or a venue-desk label (Chinese Library, Cantina, Pacific Place, Hutong, Vesu, Vista, Canton Library) or a comma-separated desk tag string",
+   "staff and everything else (EXCLUDED from covers): the ELSE branch, which keeps the residual at zero so the six channel columns sum exactly to the covers total"
+  ],
+  "derivation_note": "Rule set carried unchanged from hk/w2026-09-28/_covers_raw.json, which fitted it to the published HK channel values. The London view's CASE does not transfer.",
+  "excluded_non_staff_sources_this_week": [
+   {
+    "src": "Instagram",
+    "venue": "Dim Sum Library",
+    "covers": 7
+   },
+   {
+    "src": "Ten Group",
+    "venue": "Hutong HK and Shiro Pacific Place",
+    "covers": 4
+   },
+   {
+    "src": "7X EXCLUSIVE",
+    "venue": "Aqua HK",
+    "covers": 2
+   }
+  ],
+  "excluded_non_staff_note": "13 covers in total, 0.12 per cent of the portfolio. claude/context.md lists Instagram and 7X EXCLUSIVE as campaign tags that belong in Website covers, but the validated HK rule set excludes them and including them would break comparability with every published HK week. Left excluded and flagged for a ruling.",
+  "backfill_rule": {
+   "rule": "drop any booking whose service date falls before the Monday of the week it was created in",
+   "result": "removed NOTHING in any of the eight weeks W32 to W39, nor in the year-ago week"
+  },
+  "validation_prior_week": {
+   "method": "recomputed 19-25 Oct 2026 with this week's SQL and compared with the published c values in w2026-10-19/_covers_payload.json",
+   "portfolio": {
+    "published": 10405,
+    "recomputed": 10121,
+    "delta_pct": -2.7
+   },
+   "per_venue": {
+    "Aqua HK": {
+     "published": 1480,
+     "recomputed": 1384
+    },
+    "Hutong HK": {
+     "published": 1928,
+     "recomputed": 1884
+    },
+    "The Chinese Library": {
+     "published": 935,
+     "recomputed": 894
+    },
+    "Cantina": {
+     "published": 605,
+     "recomputed": 572
+    },
+    "Dim Sum Library": {
+     "published": 2275,
+     "recomputed": 2244
+    },
+    "Shiro Pacific Place": {
+     "published": 1565,
+     "recomputed": 1552
+    },
+    "Shiro Tai Kwun": {
+     "published": 1617,
+     "recomputed": 1591
+    }
+   },
+   "channel_deltas": {
+    "web": -68,
+    "gr": -44,
+    "ot": -120,
+    "walk": 1,
+    "recep": -53,
+    "tp": 0,
+    "sum": -284
+   },
+   "verdict": "Channel deltas sum to exactly -284, which equals the covers delta, so nothing was reclassified. All movement is downward and is cancellations settling after publication. OpenRice settles most."
+  },
+  "lost_services": {
+   "reporting_week": [
+    {
+     "venue": "The Chinese Library",
+     "date": "2026-10-28",
+     "detail": "public dinner displaced by a single 100-cover staff-named booking; all evening covers were that booking"
+    },
+    {
+     "venue": "The Chinese Library",
+     "date": "2026-10-29",
+     "detail": "NO evening covers at all and no large booking recorded against the date; same unexplained shape as its 23 and 24 October closures"
+    },
+    {
+     "venue": "Cantina",
+     "date": "2026-10-29",
+     "detail": "public dinner displaced by a single 350-cover staff-named booking, its largest of the series"
+    }
+   ],
+   "year_ago_week": [
+    {
+     "venue": "Aqua HK",
+     "date": "2025-10-28",
+     "detail": "single 110-cover staff-named PM booking took the whole dinner"
+    },
+    {
+     "venue": "Aqua HK",
+     "date": "2025-10-31",
+     "detail": "single 110-cover staff-named PM booking took the whole dinner"
+    },
+    {
+     "venue": "Hutong HK",
+     "date": "2025-10-27",
+     "detail": "single 260-cover reservations-desk PM booking took the whole dinner"
+    }
+   ],
+   "treatment": "HK covers are counted by booking-created date, so no service-date event moves this series. Nothing stripped from either side. Both years carry three displaced services, so the comparison is not distorted.",
+   "escalation": "The Chinese Library has now lost four evening services in nine days (23, 24, 28 and 29 October). The cause is not visible in the data."
+  }
+ },
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ch": {
+    "web": 629,
+    "gr": 146,
+    "ot": 342,
+    "walk": 89,
+    "recep": 116,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 702,
+    "gr": 180,
+    "ot": 262,
+    "walk": 98,
+    "recep": 142,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 317,
+    "gr": 102,
+    "ot": 301,
+    "walk": 89,
+    "recep": 18,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 226,
+    "prior": 228,
+    "yoy": 105
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ch": {
+    "web": 1031,
+    "gr": 212,
+    "ot": 356,
+    "walk": 147,
+    "recep": 101,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 832,
+    "gr": 212,
+    "ot": 327,
+    "walk": 146,
+    "recep": 365,
+    "tp": 2
+   },
+   "ch_yoy": {
+    "web": 578,
+    "gr": 185,
+    "ot": 181,
+    "walk": 95,
+    "recep": 48,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 311,
+    "prior": 253,
+    "yoy": 189
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ch": {
+    "web": 299,
+    "gr": 129,
+    "ot": 283,
+    "walk": 72,
+    "recep": 132,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 285,
+    "gr": 128,
+    "ot": 144,
+    "walk": 80,
+    "recep": 257,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 212,
+    "gr": 113,
+    "ot": 215,
+    "walk": 76,
+    "recep": 187,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 91,
+    "prior": 87,
+    "yoy": 71
+   }
+  },
+  {
+   "name": "Cantina",
+   "ch": {
+    "web": 168,
+    "gr": 54,
+    "ot": 221,
+    "walk": 60,
+    "recep": 108,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 146,
+    "gr": 38,
+    "ot": 178,
+    "walk": 36,
+    "recep": 174,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 127,
+    "gr": 31,
+    "ot": 326,
+    "walk": 112,
+    "recep": 50,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 51,
+    "prior": 53,
+    "yoy": 42
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ch": {
+    "web": 348,
+    "gr": 383,
+    "ot": 400,
+    "walk": 1095,
+    "recep": 223,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 346,
+    "gr": 284,
+    "ot": 375,
+    "walk": 1093,
+    "recep": 146,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 377,
+    "gr": 353,
+    "ot": 325,
+    "walk": 988,
+    "recep": 114,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 132,
+    "prior": 122,
+    "yoy": 133
+   }
+  },
+  {
+   "name": "Shiro Pacific Place",
+   "ch": {
+    "web": 164,
+    "gr": 121,
+    "ot": 346,
+    "walk": 842,
+    "recep": 252,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 175,
+    "gr": 94,
+    "ot": 244,
+    "walk": 809,
+    "recep": 230,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 170,
+    "gr": 65,
+    "ot": 305,
+    "walk": 597,
+    "recep": 260,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 65,
+    "prior": 73,
+    "yoy": 63
+   }
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "ch": {
+    "web": 191,
+    "gr": 94,
+    "ot": 174,
+    "walk": 1159,
+    "recep": 192,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 151,
+    "gr": 57,
+    "ot": 158,
+    "walk": 1041,
+    "recep": 184,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 0,
+    "gr": 0,
+    "ot": 0,
+    "walk": 0,
+    "recep": 0,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 70,
+    "prior": 58,
+    "yoy": 0
+   }
+  },
+  {
+   "name": "Vesu",
+   "ch": {
+    "web": 206,
+    "gr": 96,
+    "ot": 229,
+    "walk": 225,
+    "recep": 114,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 223,
+    "gr": 104,
+    "ot": 212,
+    "walk": 164,
+    "recep": 63,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 103,
+    "gr": 50,
+    "ot": 198,
+    "walk": 115,
+    "recep": 63,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 76,
+    "prior": 81,
+    "yoy": 41
+   }
+  },
+  {
+   "name": "The Canton Library",
+   "ch": {
+    "web": 198,
+    "gr": 30,
+    "ot": 134,
+    "walk": 23,
+    "recep": 257,
+    "tp": 0
+   },
+   "ch_prior": {
+    "web": 171,
+    "gr": 39,
+    "ot": 157,
+    "walk": 34,
+    "recep": 348,
+    "tp": 0
+   },
+   "ch_yoy": {
+    "web": 0,
+    "gr": 0,
+    "ot": 0,
+    "walk": 0,
+    "recep": 0,
+    "tp": 0
+   },
+   "sevenrooms_website_rows": {
+    "cur": 67,
+    "prior": 59,
+    "yoy": 0
+   }
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39"
+  ],
+  "total": [
+   9022,
+   9701,
+   9388,
+   9370,
+   9454,
+   9662,
+   10121,
+   10679
+  ],
+  "ot": [
+   1912,
+   1811,
+   2010,
+   2314,
+   2192,
+   1922,
+   1688,
+   2122
+  ],
+  "web": [
+   1991,
+   2110,
+   2171,
+   2184,
+   2234,
+   2305,
+   2637,
+   2830
+  ],
+  "gr": [
+   932,
+   1286,
+   924,
+   746,
+   894,
+   919,
+   993,
+   1139
+  ]
+ }
+}

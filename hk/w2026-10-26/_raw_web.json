@@ -1,0 +1,1064 @@
+{
+ "meta": {
+  "generated_for": "Aqua HK weekly report wk2026-10-26",
+  "windows": {
+   "cur": "2026-10-26..2026-11-01",
+   "prior": "2026-10-19..2026-10-25",
+   "yoy": "2025-10-27..2025-11-02",
+   "ytd": "2026-02-01..2026-11-01"
+  },
+  "fy_week": "W39",
+  "notes": [
+   "GA4 bookings are the CREATE PATH only: eventName EXACT sevenrooms_booking_complete AND pagePath NOT PARTIAL_REGEXP modify|manage|prearrival. Boundary date 12 October 2026.",
+   "Prior week was re-pulled this run and reproduced last week's published figures exactly for all nine venues, so GA4 event counts do not settle.",
+   "Shiro: Tai Kwun is the pagePath central|taikwun slice; Pacific Place is the combined property minus Tai Kwun for users and sessions, which reproduced last week's published 623 users and 810 sessions exactly. Bookings split directly on the booking paths shirotaikwun and shirohongkong and sum to the combined 92.",
+   "YTD is on the OLD GROSS basis for continuity with every published week; it accumulates as previous YTD plus this week's gross event count.",
+   "averageSessionDuration published as returned, never substituted."
+  ],
+  "properties": {
+   "Aqua HK": "372981635",
+   "Hutong HK": "375848050",
+   "The Chinese Library": "356942576",
+   "Cantina": "359148527",
+   "Dim Sum Library": "357228369",
+   "Shiro Pacific Place": "359394354 (pagePath remainder)",
+   "Shiro Tai Kwun": "359394354 (pagePath central|taikwun)",
+   "Vesu": "439152333",
+   "The Canton Library": "548638742"
+  }
+ },
+ "createpath": {
+  "cur": {
+   "Aqua HK": 165,
+   "Hutong HK": 208,
+   "The Chinese Library": 74,
+   "Cantina": 36,
+   "Dim Sum Library": 98,
+   "Shiro Pacific Place": 43,
+   "Shiro Tai Kwun": 49,
+   "Vesu": 44,
+   "The Canton Library": 56
+  },
+  "prior": {
+   "Aqua HK": 154,
+   "Hutong HK": 149,
+   "The Chinese Library": 58,
+   "Cantina": 23,
+   "Dim Sum Library": 93,
+   "Shiro Pacific Place": 41,
+   "Shiro Tai Kwun": 40,
+   "Vesu": 50,
+   "The Canton Library": 57
+  },
+  "yoy": {
+   "Aqua HK": 171,
+   "Hutong HK": 308,
+   "The Chinese Library": 128,
+   "Cantina": 67,
+   "Dim Sum Library": 197,
+   "Shiro Pacific Place": 103,
+   "Shiro Tai Kwun": 0,
+   "Vesu": 62,
+   "The Canton Library": 0
+  }
+ },
+ "gross_cur": {
+  "Aqua HK": 166,
+  "Hutong HK": 208,
+  "The Chinese Library": 77,
+  "Cantina": 37,
+  "Dim Sum Library": 100,
+  "Shiro Pacific Place": 43,
+  "Shiro Tai Kwun": 49,
+  "Vesu": 44,
+  "The Canton Library": 68
+ },
+ "web_metrics": {
+  "cur": {
+   "Aqua HK": {
+    "u": 3241,
+    "s": 4530,
+    "asd": 357.26,
+    "eng": 69.8,
+    "pv": 12404,
+    "nu": 2769,
+    "br": 0.301987
+   },
+   "Hutong HK": {
+    "u": 2917,
+    "s": 4002,
+    "asd": 273.04,
+    "eng": 68.7,
+    "pv": 12026,
+    "nu": 2385,
+    "br": 0.313343
+   },
+   "The Chinese Library": {
+    "u": 1406,
+    "s": 1881,
+    "asd": 401.4,
+    "eng": 68.6,
+    "pv": 4930,
+    "nu": 1232,
+    "br": 0.314195
+   },
+   "Cantina": {
+    "u": 1024,
+    "s": 1346,
+    "asd": 305.04,
+    "eng": 65.9,
+    "pv": 3153,
+    "nu": 876,
+    "br": 0.34101
+   },
+   "Dim Sum Library": {
+    "u": 874,
+    "s": 1108,
+    "asd": 347.68,
+    "eng": 75.5,
+    "pv": 3137,
+    "nu": 774,
+    "br": 0.245487
+   },
+   "Shiro Pacific Place": {
+    "u": 583,
+    "s": 807,
+    "asd": 133.83,
+    "eng": 74.0,
+    "pv": 3036,
+    "nu": 692,
+    "br": 0.259681
+   },
+   "Shiro Tai Kwun": {
+    "u": 764,
+    "s": 916,
+    "asd": 127.74,
+    "eng": 75.2,
+    "pv": 2298,
+    "nu": 457,
+    "br": 0.247817
+   },
+   "Vesu": {
+    "u": 518,
+    "s": 721,
+    "asd": 180.98,
+    "eng": 66.0,
+    "pv": 2045,
+    "nu": 447,
+    "br": 0.339806
+   },
+   "The Canton Library": {
+    "u": 2653,
+    "s": 3214,
+    "asd": 124.35,
+    "eng": 58.4,
+    "pv": 7626,
+    "nu": 2414,
+    "br": 0.416304
+   }
+  },
+  "yoy": {
+   "Aqua HK": {
+    "u": 4570,
+    "s": 5842,
+    "asd": 203.6,
+    "eng": 71.3,
+    "pv": 12506,
+    "nu": 3971,
+    "br": 0.287059
+   },
+   "Hutong HK": {
+    "u": 3535,
+    "s": 5026,
+    "asd": 231.66,
+    "eng": 71.4,
+    "pv": 11456,
+    "nu": 2877,
+    "br": 0.285515
+   },
+   "The Chinese Library": {
+    "u": 1741,
+    "s": 2197,
+    "asd": 179.05,
+    "eng": 68.9,
+    "pv": 4554,
+    "nu": 1541,
+    "br": 0.311334
+   },
+   "Cantina": {
+    "u": 1078,
+    "s": 1395,
+    "asd": 172.09,
+    "eng": 69.6,
+    "pv": 3021,
+    "nu": 959,
+    "br": 0.303943
+   },
+   "Dim Sum Library": {
+    "u": 1293,
+    "s": 1771,
+    "asd": 278.37,
+    "eng": 68.1,
+    "pv": 3816,
+    "nu": 1087,
+    "br": 0.319029
+   },
+   "Shiro Pacific Place": {
+    "u": 1051,
+    "s": 1256,
+    "asd": 232.41,
+    "eng": 57.2,
+    "pv": 2067,
+    "nu": 833,
+    "br": 0.428344
+   },
+   "Shiro Tai Kwun": {
+    "u": 0,
+    "s": 0,
+    "asd": 0,
+    "eng": 0,
+    "pv": 0,
+    "nu": 0,
+    "br": 0
+   },
+   "Vesu": {
+    "u": 961,
+    "s": 1949,
+    "asd": 115.64,
+    "eng": 66.6,
+    "pv": 2147,
+    "nu": 257,
+    "br": 0.333504
+   },
+   "The Canton Library": {
+    "u": 0,
+    "s": 0,
+    "asd": 0,
+    "eng": 0,
+    "pv": 0,
+    "nu": 0,
+    "br": 0
+   }
+  },
+  "shiro_combined_cur": {
+   "u": 1347,
+   "s": 1723,
+   "asd": 170.21,
+   "eng": 68.1,
+   "pv": 5334,
+   "nu": 1149,
+   "br": 0.319211
+  }
+ },
+ "channels": {
+  "cur": {
+   "Aqua HK": {
+    "Organic Search": 1490,
+    "Paid Search": 1204,
+    "Direct": 993,
+    "Cross-network": 153,
+    "Unassigned": 152,
+    "Paid Social": 138,
+    "AI Assistant": 137,
+    "Organic Social": 102,
+    "Referral": 100
+   },
+   "Hutong HK": {
+    "Organic Search": 1595,
+    "Direct": 851,
+    "Paid Search": 722,
+    "Cross-network": 287,
+    "Referral": 173,
+    "AI Assistant": 146,
+    "Unassigned": 132,
+    "Organic Social": 74,
+    "Paid Social": 57,
+    "Paid Other": 24
+   },
+   "The Chinese Library": {
+    "Paid Search": 607,
+    "Organic Search": 432,
+    "Direct": 269,
+    "Paid Social": 214,
+    "Cross-network": 162,
+    "Referral": 78,
+    "Organic Social": 51,
+    "Unassigned": 47,
+    "AI Assistant": 23
+   },
+   "Cantina": {
+    "Paid Search": 404,
+    "Organic Search": 349,
+    "Direct": 207,
+    "Paid Other": 110,
+    "Cross-network": 88,
+    "Paid Social": 52,
+    "Referral": 52,
+    "Organic Social": 44,
+    "Unassigned": 30,
+    "AI Assistant": 6
+   },
+   "Dim Sum Library": {
+    "Paid Search": 428,
+    "Organic Search": 235,
+    "Direct": 229,
+    "Paid Social": 60,
+    "Cross-network": 56,
+    "Referral": 39,
+    "Unassigned": 21,
+    "Organic Social": 16,
+    "AI Assistant": 13,
+    "Paid Other": 9
+   },
+   "Shiro Tai Kwun": {
+    "Paid Social": 354,
+    "Paid Search": 199,
+    "Direct": 117,
+    "Organic Search": 102,
+    "Unassigned": 49,
+    "Cross-network": 43,
+    "Referral": 29,
+    "Organic Social": 28,
+    "AI Assistant": 2
+   },
+   "Shiro Pacific Place": {
+    "Paid Search": 345,
+    "Organic Search": 155,
+    "Cross-network": 95,
+    "Direct": 86,
+    "Paid Social": 57,
+    "Referral": 39,
+    "Unassigned": 22,
+    "Organic Social": 15,
+    "AI Assistant": 4
+   },
+   "Vesu": {
+    "Paid Search": 262,
+    "Direct": 144,
+    "Organic Search": 131,
+    "Cross-network": 72,
+    "Organic Social": 52,
+    "Referral": 34,
+    "Unassigned": 31,
+    "AI Assistant": 4
+   },
+   "The Canton Library": {
+    "Paid Social": 1220,
+    "Cross-network": 585,
+    "Paid Search": 519,
+    "Direct": 319,
+    "Organic Search": 239,
+    "Organic Social": 173,
+    "Paid Other": 66,
+    "Referral": 36,
+    "Unassigned": 29,
+    "AI Assistant": 10
+   }
+  },
+  "yoy": {
+   "Aqua HK": {
+    "Organic Search": 1680,
+    "Direct": 1195,
+    "Paid Search": 1120,
+    "Organic Social": 883,
+    "Paid Social": 369,
+    "Cross-network": 259,
+    "Referral": 247,
+    "Unassigned": 75,
+    "Paid Other": 55
+   },
+   "Hutong HK": {
+    "Organic Search": 1821,
+    "Direct": 1407,
+    "Paid Search": 770,
+    "Cross-network": 318,
+    "Paid Social": 271,
+    "Referral": 195,
+    "Organic Social": 124,
+    "Unassigned": 58,
+    "Paid Other": 34,
+    "Email": 5
+   },
+   "The Chinese Library": {
+    "Paid Search": 615,
+    "Organic Search": 478,
+    "Direct": 415,
+    "Cross-network": 308,
+    "Paid Social": 239,
+    "Referral": 64,
+    "Organic Social": 45,
+    "Unassigned": 12,
+    "Email": 9,
+    "Paid Other": 7,
+    "Organic Shopping": 2
+   },
+   "Cantina": {
+    "Paid Search": 368,
+    "Organic Search": 292,
+    "Direct": 262,
+    "Cross-network": 162,
+    "Paid Social": 161,
+    "Organic Social": 86,
+    "Referral": 61,
+    "Unassigned": 8
+   },
+   "Dim Sum Library": {
+    "Direct": 492,
+    "Paid Search": 464,
+    "Organic Search": 441,
+    "Paid Social": 107,
+    "Organic Social": 103,
+    "Cross-network": 79,
+    "Referral": 54,
+    "Unassigned": 31,
+    "Paid Other": 3
+   },
+   "Shiro Pacific Place": {
+    "Paid Social": 452,
+    "Paid Search": 252,
+    "Organic Search": 240,
+    "Direct": 195,
+    "Referral": 50,
+    "Cross-network": 41,
+    "Organic Social": 18,
+    "Unassigned": 4,
+    "Paid Other": 1
+   },
+   "Vesu": {
+    "Paid Search": 600,
+    "Paid Social": 357,
+    "Organic Search": 333,
+    "Organic Social": 179,
+    "Direct": 172,
+    "Cross-network": 156,
+    "Referral": 119,
+    "Paid Other": 17,
+    "Unassigned": 16
+   }
+  },
+  "bookings_cur": {
+   "Aqua HK": {
+    "Organic Search": 63,
+    "Paid Search": 33,
+    "Direct": 25,
+    "Unassigned": 17,
+    "AI Assistant": 10,
+    "Organic Social": 8,
+    "Cross-network": 4,
+    "Referral": 4,
+    "Paid Social": 1
+   },
+   "Hutong HK": {
+    "Organic Search": 87,
+    "Direct": 41,
+    "Paid Search": 36,
+    "Unassigned": 20,
+    "Organic Social": 8,
+    "Cross-network": 7,
+    "Referral": 5,
+    "AI Assistant": 4
+   },
+   "The Chinese Library": {
+    "Paid Search": 33,
+    "Organic Search": 23,
+    "Unassigned": 7,
+    "Cross-network": 4,
+    "Direct": 3,
+    "Organic Social": 2,
+    "AI Assistant": 1,
+    "Paid Social": 1
+   },
+   "Cantina": {
+    "Paid Search": 13,
+    "Organic Search": 6,
+    "Cross-network": 5,
+    "Direct": 4,
+    "Unassigned": 4,
+    "Organic Social": 2,
+    "AI Assistant": 1,
+    "Referral": 1
+   },
+   "Dim Sum Library": {
+    "Paid Search": 45,
+    "Direct": 20,
+    "Organic Search": 14,
+    "Unassigned": 10,
+    "Cross-network": 8,
+    "AI Assistant": 1
+   },
+   "Shiro Tai Kwun": {
+    "Paid Search": 21,
+    "Organic Search": 9,
+    "Unassigned": 8,
+    "Paid Social": 5,
+    "Cross-network": 3,
+    "Direct": 1,
+    "Organic Social": 1,
+    "Referral": 1
+   },
+   "Shiro Pacific Place": {
+    "Paid Search": 22,
+    "Organic Search": 9,
+    "Cross-network": 4,
+    "Referral": 3,
+    "Unassigned": 3,
+    "Direct": 2
+   },
+   "Vesu": {
+    "Paid Search": 15,
+    "Organic Search": 9,
+    "Cross-network": 7,
+    "Unassigned": 6,
+    "Direct": 4,
+    "Organic Social": 2,
+    "Referral": 1
+   },
+   "The Canton Library": {
+    "Cross-network": 17,
+    "Direct": 12,
+    "Paid Search": 7,
+    "Paid Social": 7,
+    "Organic Social": 5,
+    "Unassigned": 4,
+    "Organic Search": 3,
+    "AI Assistant": 1
+   }
+  },
+  "bookings_yoy": {
+   "Aqua HK": {
+    "Organic Search": 65,
+    "Direct": 56,
+    "Paid Search": 30,
+    "Referral": 7,
+    "Cross-network": 3,
+    "Organic Social": 3,
+    "Paid Social": 3,
+    "Unassigned": 3,
+    "Paid Other": 1
+   },
+   "Hutong HK": {
+    "Organic Search": 116,
+    "Direct": 114,
+    "Paid Search": 51,
+    "Organic Social": 9,
+    "Unassigned": 7,
+    "Referral": 6,
+    "Paid Social": 4,
+    "Cross-network": 1
+   },
+   "The Chinese Library": {
+    "Organic Search": 47,
+    "Direct": 40,
+    "Paid Search": 33,
+    "Cross-network": 5,
+    "Referral": 2,
+    "Paid Social": 1
+   },
+   "Cantina": {
+    "Paid Search": 21,
+    "Direct": 17,
+    "Organic Search": 16,
+    "Cross-network": 8,
+    "Organic Social": 2,
+    "Paid Social": 2,
+    "Referral": 1
+   },
+   "Dim Sum Library": {
+    "Direct": 76,
+    "Paid Search": 71,
+    "Organic Search": 29,
+    "Cross-network": 9,
+    "Paid Social": 6,
+    "Referral": 4,
+    "Organic Social": 2
+   },
+   "Shiro Pacific Place": {
+    "Paid Search": 35,
+    "Organic Search": 33,
+    "Direct": 28,
+    "Cross-network": 3,
+    "Paid Social": 2,
+    "Organic Social": 1,
+    "Referral": 1
+   },
+   "Vesu": {
+    "Paid Search": 17,
+    "Direct": 15,
+    "Organic Search": 14,
+    "Referral": 6,
+    "Cross-network": 4,
+    "Paid Social": 4,
+    "Organic Social": 2
+   }
+  }
+ },
+ "devices_sessions_cur": {
+  "Aqua HK": {
+   "mobile": 3157,
+   "desktop": 1294,
+   "tablet": 33
+  },
+  "Hutong HK": {
+   "mobile": 2681,
+   "desktop": 1338,
+   "tablet": 42
+  },
+  "The Chinese Library": {
+   "mobile": 1395,
+   "desktop": 473,
+   "tablet": 13
+  },
+  "Cantina": {
+   "mobile": 932,
+   "desktop": 405,
+   "tablet": 5
+  },
+  "Dim Sum Library": {
+   "mobile": 763,
+   "desktop": 299,
+   "tablet": 20
+  },
+  "Shiro Pacific Place": {
+   "mobile": 1298,
+   "desktop": 412,
+   "tablet": 14
+  },
+  "Shiro Tai Kwun": {
+   "mobile": 1298,
+   "desktop": 412,
+   "tablet": 14
+  },
+  "Vesu": {
+   "mobile": 545,
+   "desktop": 168,
+   "tablet": 4
+  },
+  "The Canton Library": {
+   "mobile": 2615,
+   "desktop": 536,
+   "tablet": 49
+  }
+ },
+ "landing_cur": {
+  "Aqua HK": [
+   {
+    "path": "/",
+    "sessions": 2300,
+    "bookings": 97
+   },
+   {
+    "path": "/menus",
+    "sessions": 341,
+    "bookings": 8
+   },
+   {
+    "path": "(not set)",
+    "sessions": 275,
+    "bookings": 0
+   },
+   {
+    "path": "/bar",
+    "sessions": 229,
+    "bookings": 2
+   },
+   {
+    "path": "/explore/aquahk/reservations/create/search",
+    "sessions": 215,
+    "bookings": 22
+   }
+  ],
+  "Hutong HK": [
+   {
+    "path": "/",
+    "sessions": 2227,
+    "bookings": 127
+   },
+   {
+    "path": "(not set)",
+    "sessions": 317,
+    "bookings": 0
+   },
+   {
+    "path": "/menus",
+    "sessions": 312,
+    "bookings": 4
+   },
+   {
+    "path": "/reservations",
+    "sessions": 224,
+    "bookings": 18
+   },
+   {
+    "path": "/explore/hutonghongkong/reservations/create/search",
+    "sessions": 208,
+    "bookings": 38
+   }
+  ],
+  "The Chinese Library": [
+   {
+    "path": "/",
+    "sessions": 944,
+    "bookings": 43
+   },
+   {
+    "path": "/menus",
+    "sessions": 351,
+    "bookings": 5
+   },
+   {
+    "path": "(not set)",
+    "sessions": 134,
+    "bookings": 0
+   },
+   {
+    "path": "/explore/thechineselibraryhk/reservations/create/search",
+    "sessions": 71,
+    "bookings": 9
+   },
+   {
+    "path": "/reservations",
+    "sessions": 66,
+    "bookings": 11
+   }
+  ],
+  "Cantina": [
+   {
+    "path": "/",
+    "sessions": 572,
+    "bookings": 22
+   },
+   {
+    "path": "/thedispensarybar",
+    "sessions": 140,
+    "bookings": 0
+   },
+   {
+    "path": "/menus",
+    "sessions": 116,
+    "bookings": 2
+   },
+   {
+    "path": "/menus/brunch",
+    "sessions": 104,
+    "bookings": 4
+   },
+   {
+    "path": "(not set)",
+    "sessions": 76,
+    "bookings": 0
+   }
+  ],
+  "Dim Sum Library": [
+   {
+    "path": "/",
+    "sessions": 621,
+    "bookings": 61
+   },
+   {
+    "path": "/menus",
+    "sessions": 193,
+    "bookings": 3
+   },
+   {
+    "path": "(not set)",
+    "sessions": 75,
+    "bookings": 0
+   },
+   {
+    "path": "/reservations",
+    "sessions": 63,
+    "bookings": 19
+   },
+   {
+    "path": "/menus/lunch",
+    "sessions": 36,
+    "bookings": 2
+   }
+  ],
+  "Shiro Pacific Place": [
+   {
+    "path": "/",
+    "sessions": 449,
+    "bookings": 16
+   },
+   {
+    "path": "/shiro-pacific-place",
+    "sessions": 94,
+    "bookings": 13
+   },
+   {
+    "path": "/menus",
+    "sessions": 93,
+    "bookings": 3
+   },
+   {
+    "path": "(not set)",
+    "sessions": 101,
+    "bookings": 0
+   },
+   {
+    "path": "/menus/lunch-menu",
+    "sessions": 49,
+    "bookings": 2
+   }
+  ],
+  "Shiro Tai Kwun": [
+   {
+    "path": "/shiro-central",
+    "sessions": 554,
+    "bookings": 23
+   },
+   {
+    "path": "/",
+    "sessions": 449,
+    "bookings": 12
+   },
+   {
+    "path": "(not set)",
+    "sessions": 101,
+    "bookings": 0
+   },
+   {
+    "path": "/menus",
+    "sessions": 93,
+    "bookings": 1
+   },
+   {
+    "path": "/explore/shirotaikwun/reservations/create/search",
+    "sessions": 55,
+    "bookings": 7
+   }
+  ],
+  "Vesu": [
+   {
+    "path": "/",
+    "sessions": 483,
+    "bookings": 32
+   },
+   {
+    "path": "/menus/a-la-carte",
+    "sessions": 96,
+    "bookings": 0
+   },
+   {
+    "path": "(not set)",
+    "sessions": 46,
+    "bookings": 0
+   },
+   {
+    "path": "/explore/vesu/reservations/create/search",
+    "sessions": 44,
+    "bookings": 8
+   },
+   {
+    "path": "/menus",
+    "sessions": 33,
+    "bookings": 0
+   }
+  ],
+  "The Canton Library": [
+   {
+    "path": "/",
+    "sessions": 1286,
+    "bookings": 26
+   },
+   {
+    "path": "/explore/cantonlibraryhk/reservations/create/search",
+    "sessions": 1167,
+    "bookings": 16
+   },
+   {
+    "path": "/menus",
+    "sessions": 363,
+    "bookings": 3
+   },
+   {
+    "path": "(not set)",
+    "sessions": 112,
+    "bookings": 0
+   },
+   {
+    "path": "/menus/a-la-carte",
+    "sessions": 85,
+    "bookings": 4
+   }
+  ]
+ },
+ "tracking_break": {
+  "method": "GA4 create-path bookings divided by SevenRooms website booking ROWS for the same created-date window. SevenRooms cannot be affected by anything on our own site.",
+  "correction_this_run": "A healthy Hong Kong ratio is about 1.17, NOT 1.0. GA4 is gross (keeps later cancellations, includes the bar); the SevenRooms figure is net of cancellations and excludes the bar. Last week's note used 1.0 as the benchmark and so understated the damage and wrongly called The Canton Library clean.",
+  "portfolio_ratio_by_week": {
+   "W35": 1.143,
+   "W36": 1.199,
+   "W37": 0.78,
+   "W38": 0.638,
+   "W39": 0.711
+  },
+  "clean_baseline_weeks": [
+   "W35 (28 Sep-4 Oct 2026)",
+   "W36 (5-11 Oct 2026)"
+  ],
+  "per_venue": {
+   "Aqua HK": {
+    "ga4_createpath": 165,
+    "sevenrooms_website_rows": 226,
+    "ratio": 0.73,
+    "prebreak_baseline": 1.11,
+    "capture_pct": 65.8
+   },
+   "Hutong HK": {
+    "ga4_createpath": 208,
+    "sevenrooms_website_rows": 311,
+    "ratio": 0.669,
+    "prebreak_baseline": 1.27,
+    "capture_pct": 52.7
+   },
+   "The Chinese Library": {
+    "ga4_createpath": 74,
+    "sevenrooms_website_rows": 91,
+    "ratio": 0.813,
+    "prebreak_baseline": 1.23,
+    "capture_pct": 66.1
+   },
+   "Cantina": {
+    "ga4_createpath": 36,
+    "sevenrooms_website_rows": 51,
+    "ratio": 0.706,
+    "prebreak_baseline": 1.36,
+    "capture_pct": 51.9
+   },
+   "Dim Sum Library": {
+    "ga4_createpath": 98,
+    "sevenrooms_website_rows": 132,
+    "ratio": 0.742,
+    "prebreak_baseline": 1.08,
+    "capture_pct": 68.7
+   },
+   "Shiro Pacific Place": {
+    "ga4_createpath": 43,
+    "sevenrooms_website_rows": 65,
+    "ratio": 0.662,
+    "prebreak_baseline": 1.05,
+    "capture_pct": 63.0
+   },
+   "Shiro Tai Kwun": {
+    "ga4_createpath": 49,
+    "sevenrooms_website_rows": 70,
+    "ratio": 0.7,
+    "prebreak_baseline": 1.18,
+    "capture_pct": 59.3
+   },
+   "Vesu": {
+    "ga4_createpath": 44,
+    "sevenrooms_website_rows": 76,
+    "ratio": 0.579,
+    "prebreak_baseline": 1.12,
+    "capture_pct": 51.7
+   },
+   "The Canton Library": {
+    "ga4_createpath": 56,
+    "sevenrooms_website_rows": 67,
+    "ratio": 0.836,
+    "prebreak_baseline": 1.15,
+    "capture_pct": 72.7
+   }
+  },
+  "portfolio": {
+   "ga4": 673,
+   "sevenrooms": 946,
+   "ratio": 0.711,
+   "capture_pct": 60.8,
+   "implied_if_capturing_normally": 1107
+  },
+  "sevenrooms_website_rows_by_week_2026": {
+   "W32": 734,
+   "W33": 746,
+   "W34": 776,
+   "W35": 734,
+   "W36": 733,
+   "W37": 754,
+   "W38": 874,
+   "W39": 946
+  },
+  "session_duration_seconds_cur": {
+   "Aqua HK": 357.3,
+   "Hutong HK": 273.0,
+   "The Chinese Library": 401.4,
+   "Cantina": 305.0,
+   "Dim Sum Library": 347.7,
+   "Shiro Pacific Place": 133.8,
+   "Shiro Tai Kwun": 127.7,
+   "Vesu": 181.0,
+   "The Canton Library": 124.3
+  },
+  "verdict": "Improved at every venue week on week but recovered at none. Portfolio capture about 61 per cent of the pre-break rate. The Canton Library, the only clean property last week, has degraded to about 73 per cent. Three weeks unresolved."
+ },
+ "ytd_gross": {
+  "prev": {
+   "Aqua HK": 7397,
+   "Hutong HK": 10539,
+   "The Chinese Library": 4411,
+   "Cantina": 2558,
+   "Dim Sum Library": 5828,
+   "Shiro Pacific Place": 3008,
+   "Shiro Tai Kwun": 2375,
+   "Vesu": 1538,
+   "The Canton Library": 269
+  },
+  "this_week_gross": {
+   "Aqua HK": 166,
+   "Hutong HK": 208,
+   "The Chinese Library": 77,
+   "Cantina": 37,
+   "Dim Sum Library": 100,
+   "Shiro Pacific Place": 43,
+   "Shiro Tai Kwun": 49,
+   "Vesu": 44,
+   "The Canton Library": 68
+  },
+  "new": {
+   "Aqua HK": 7563,
+   "Hutong HK": 10747,
+   "The Chinese Library": 4488,
+   "Cantina": 2595,
+   "Dim Sum Library": 5928,
+   "Shiro Pacific Place": 3051,
+   "Shiro Tai Kwun": 2424,
+   "Vesu": 1582,
+   "The Canton Library": 337
+  }
+ },
+ "monthly_gross": {
+  "oct2026": {
+   "Aqua HK": 783,
+   "Hutong HK": 876,
+   "The Chinese Library": 378,
+   "Cantina": 195,
+   "Dim Sum Library": 504,
+   "Shiro": 458,
+   "Vesu": 253,
+   "The Canton Library": 220
+  },
+  "sep2026": {
+   "Aqua HK": 880,
+   "Hutong HK": 1229,
+   "The Chinese Library": 554,
+   "Cantina": 371,
+   "Dim Sum Library": 621,
+   "Shiro": 640
+  },
+  "oct2025": {
+   "Aqua HK": 1017,
+   "Hutong HK": 1412,
+   "The Chinese Library": 555,
+   "Cantina": 247,
+   "Dim Sum Library": 831,
+   "Shiro": 425
+  },
+  "basis": "gross, matching every published monthly dashboard; Sep 2026 reproduced the published m2026-09 figures exactly for all six venues",
+  "sevenrooms_website_rows": {
+   "sep2026": 3081,
+   "oct2026": 3575
+  }
+ }
+}

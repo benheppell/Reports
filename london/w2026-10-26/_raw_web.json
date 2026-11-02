@@ -1,0 +1,913 @@
+{
+ "basis": "GA4 bookings are the create path only: eventName EXACT sevenrooms_booking_complete AND pagePath NOT PARTIAL_REGEXP 'modify|manage|prearrival'. Regent St is Aqua Kyoto (342430509) plus Aqua Nueva (360337941) summed; rates and session duration are session-weighted across the two.",
+ "createpath": {
+  "cur": {
+   "Aqua Shard": 1219,
+   "Hutong": 797,
+   "Regent St": 119,
+   "Azzurra": 42,
+   "Shiro Sushi": 54,
+   "DSL": 243
+  },
+  "prior": {
+   "Aqua Shard": 1220,
+   "Hutong": 803,
+   "Regent St": 106,
+   "Azzurra": 38,
+   "Shiro Sushi": 45,
+   "DSL": 245
+  },
+  "yoy": {
+   "Aqua Shard": 1638,
+   "Hutong": 709,
+   "Regent St": 260,
+   "Azzurra": 114,
+   "Shiro Sushi": 81,
+   "DSL": 0
+  }
+ },
+ "unfiltered_all_routes": {
+  "cur": {
+   "Aqua Shard": 1313,
+   "Hutong": 876,
+   "Regent St": 126,
+   "Azzurra": 42,
+   "Shiro Sushi": 56,
+   "DSL": 253
+  },
+  "yoy": {
+   "Aqua Shard": 1808,
+   "Hutong": 781,
+   "Regent St": 282,
+   "Azzurra": 119,
+   "Shiro Sushi": 92,
+   "DSL": 0
+  }
+ },
+ "amendment_share": {
+  "cur_week": "192 of 2,666 events, 7.2 per cent",
+  "yoy_week": "328 of 3,130 events, 10.5 per cent",
+  "note": "On the old all-routes basis the week would read 2,666 against 3,130, a year-on-year fall of 14.8 per cent, against the create-path read of 11.7 per cent. Both sides of this comparison are rebuilt on the create path."
+ },
+ "web_metrics": {
+  "cur": {
+   "Aqua Shard": {
+    "users": 29278,
+    "sessions": 40511,
+    "spv": 121260,
+    "asd": 150.388,
+    "bounce": 0.385673,
+    "eng": 0.614327,
+    "new": 21613
+   },
+   "Hutong": {
+    "users": 15174,
+    "sessions": 21222,
+    "spv": 57942,
+    "asd": 165.089,
+    "bounce": 0.38135,
+    "eng": 0.61865,
+    "new": 11479
+   },
+   "Kyoto": {
+    "users": 2407,
+    "sessions": 3172,
+    "spv": 10680,
+    "asd": 261.281,
+    "bounce": 0.310214,
+    "eng": 0.689786,
+    "new": 2167
+   },
+   "Nueva": {
+    "users": 1687,
+    "sessions": 2193,
+    "spv": 6289,
+    "asd": 205.828,
+    "bounce": 0.30187,
+    "eng": 0.69813,
+    "new": 1555
+   },
+   "Azzurra": {
+    "users": 1457,
+    "sessions": 1744,
+    "spv": 4860,
+    "asd": 160.919,
+    "bounce": 0.290138,
+    "eng": 0.709862,
+    "new": 1330
+   },
+   "Shiro Sushi": {
+    "users": 1027,
+    "sessions": 1328,
+    "spv": 3734,
+    "asd": 302.684,
+    "bounce": 0.326807,
+    "eng": 0.673193,
+    "new": 897
+   },
+   "DSL": {
+    "users": 3248,
+    "sessions": 4276,
+    "spv": 15143,
+    "asd": 363.373,
+    "bounce": 0.326239,
+    "eng": 0.673761,
+    "new": 2832
+   }
+  },
+  "prior": {
+   "Aqua Shard": {
+    "users": 26590,
+    "sessions": 39006,
+    "spv": 124053,
+    "asd": 780.529,
+    "bounce": 0.382505,
+    "eng": 0.617495,
+    "new": 21883
+   },
+   "Hutong": {
+    "users": 16583,
+    "sessions": 23345,
+    "spv": 62467,
+    "asd": 700.926,
+    "bounce": 0.374813,
+    "eng": 0.625187,
+    "new": 13422
+   },
+   "Kyoto": {
+    "users": 2288,
+    "sessions": 3013,
+    "spv": 10405,
+    "asd": 949.116,
+    "bounce": 0.300697,
+    "eng": 0.699303,
+    "new": 2087
+   },
+   "Nueva": {
+    "users": 1391,
+    "sessions": 1668,
+    "spv": 4803,
+    "asd": 693.271,
+    "bounce": 0.270384,
+    "eng": 0.729616,
+    "new": 1278
+   },
+   "Azzurra": {
+    "users": 1638,
+    "sessions": 1948,
+    "spv": 5403,
+    "asd": 594.222,
+    "bounce": 0.275667,
+    "eng": 0.724333,
+    "new": 1505
+   },
+   "Shiro Sushi": {
+    "users": 1443,
+    "sessions": 1821,
+    "spv": 4867,
+    "asd": 1206.358,
+    "bounce": 0.297639,
+    "eng": 0.702361,
+    "new": 1285
+   },
+   "DSL": {
+    "users": 4577,
+    "sessions": 5743,
+    "spv": 20927,
+    "asd": 943.41,
+    "bounce": 0.283127,
+    "eng": 0.716873,
+    "new": 4075
+   }
+  },
+  "yoy": {
+   "Aqua Shard": {
+    "users": 31665,
+    "sessions": 48953,
+    "spv": 136898,
+    "asd": 206.219,
+    "bounce": 0.305293,
+    "eng": 0.694707,
+    "new": 18546
+   },
+   "Hutong": {
+    "users": 13048,
+    "sessions": 26759,
+    "spv": 53395,
+    "asd": 181.616,
+    "bounce": 0.337307,
+    "eng": 0.662693,
+    "new": 3867
+   },
+   "Kyoto": {
+    "users": 4157,
+    "sessions": 8329,
+    "spv": 15004,
+    "asd": 125.575,
+    "bounce": 0.285629,
+    "eng": 0.714371,
+    "new": 1295
+   },
+   "Nueva": {
+    "users": 2415,
+    "sessions": 3998,
+    "spv": 8791,
+    "asd": 135.296,
+    "bounce": 0.2999,
+    "eng": 0.7001,
+    "new": 1466
+   },
+   "Azzurra": {
+    "users": 2238,
+    "sessions": 2898,
+    "spv": 6227,
+    "asd": 171.483,
+    "bounce": 0.351967,
+    "eng": 0.648033,
+    "new": 1990
+   },
+   "Shiro Sushi": {
+    "users": 2177,
+    "sessions": 2596,
+    "spv": 5179,
+    "asd": 115.901,
+    "bounce": 0.405624,
+    "eng": 0.594376,
+    "new": 1950
+   },
+   "DSL": {
+    "users": 3,
+    "sessions": 3,
+    "spv": 8,
+    "asd": 69.721,
+    "bounce": 0.666667,
+    "eng": 0.333333,
+    "new": 0
+   }
+  }
+ },
+ "diagnostic": {
+  "method": "GA4 create-path bookings divided by SevenRooms website booking rows for the same created-date window, on a gross basis: is_deleted false only, all statuses including Canceled, bar included, because GA4 counts the booking when it is made. This reproduces last week's published ratios of 0.99, 1.07, 0.53 and 0.52.",
+  "gross_sevenrooms_website_rows": {
+   "cur": {
+    "Aqua Shard": 1203,
+    "Hutong": 732,
+    "Regent St": 194,
+    "Azzurra": 69,
+    "Shiro Sushi": 87,
+    "DSL": 442
+   },
+   "prior": {
+    "Aqua Shard": 1242,
+    "Hutong": 756,
+    "Regent St": 194,
+    "Azzurra": 72,
+    "Shiro Sushi": 118,
+    "DSL": 480
+   }
+  },
+  "ratios": {
+   "Aqua Shard": {
+    "cur": 1.013,
+    "prior": 0.982
+   },
+   "Hutong": {
+    "cur": 1.089,
+    "prior": 1.062
+   },
+   "Regent St": {
+    "cur": 0.613,
+    "prior": 0.546
+   },
+   "Azzurra": {
+    "cur": 0.609,
+    "prior": 0.528
+   },
+   "Shiro Sushi": {
+    "cur": 0.621,
+    "prior": 0.381
+   },
+   "DSL": {
+    "cur": 0.55,
+    "prior": 0.51
+   }
+  }
+ },
+ "channels_cur": {
+  "Aqua Shard": {
+   "Organic Search": 11152,
+   "Paid Search": 10150,
+   "Paid Social": 8052,
+   "Referral": 4350,
+   "Direct": 3470,
+   "Unassigned": 1548,
+   "AI Assistant": 991,
+   "Organic Social": 627,
+   "Cross-network": 585,
+   "Email": 82,
+   "Paid Other": 37,
+   "Organic Shopping": 1
+  },
+  "Hutong": {
+   "Organic Search": 7537,
+   "Paid Search": 3691,
+   "Paid Social": 3378,
+   "Referral": 2304,
+   "Direct": 2250,
+   "Unassigned": 944,
+   "Cross-network": 736,
+   "AI Assistant": 490,
+   "Organic Social": 185,
+   "Email": 83,
+   "Paid Other": 56
+  },
+  "Kyoto": {
+   "Organic Search": 1592,
+   "Direct": 500,
+   "Paid Search": 489,
+   "Organic Social": 202,
+   "Paid Social": 135,
+   "Unassigned": 109,
+   "AI Assistant": 69,
+   "Email": 59,
+   "Referral": 38,
+   "Cross-network": 9
+  },
+  "Nueva": {
+   "Organic Search": 992,
+   "Direct": 300,
+   "Paid Search": 259,
+   "Referral": 181,
+   "Organic Social": 132,
+   "Cross-network": 126,
+   "Paid Social": 106,
+   "Unassigned": 50,
+   "AI Assistant": 40,
+   "Email": 11,
+   "Mobile Push Notifications": 1
+  },
+  "Azzurra": {
+   "Organic Search": 796,
+   "Paid Social": 319,
+   "Direct": 209,
+   "Cross-network": 158,
+   "Referral": 77,
+   "Paid Search": 75,
+   "Unassigned": 68,
+   "Organic Social": 48,
+   "AI Assistant": 22,
+   "Email": 4
+  },
+  "Shiro Sushi": {
+   "Organic Search": 609,
+   "Paid Search": 229,
+   "Paid Social": 181,
+   "Direct": 161,
+   "Referral": 34,
+   "Unassigned": 33,
+   "Cross-network": 27,
+   "Organic Social": 20,
+   "AI Assistant": 18,
+   "Email": 17
+  },
+  "DSL": {
+   "Organic Search": 2113,
+   "Paid Social": 694,
+   "Direct": 418,
+   "Referral": 309,
+   "Cross-network": 301,
+   "Paid Search": 180,
+   "Unassigned": 151,
+   "Organic Social": 56,
+   "AI Assistant": 31,
+   "Paid Other": 3,
+   "Email": 2
+  }
+ },
+ "channels_cur_bookings": {
+  "Aqua Shard": {
+   "Organic Search": 352,
+   "Paid Search": 345,
+   "Paid Social": 182,
+   "Referral": 120,
+   "Direct": 100,
+   "Unassigned": 67,
+   "AI Assistant": 27,
+   "Cross-network": 17,
+   "Organic Social": 7,
+   "Paid Other": 2
+  },
+  "Hutong": {
+   "Organic Search": 318,
+   "Paid Search": 144,
+   "Referral": 78,
+   "Paid Social": 74,
+   "Direct": 69,
+   "Unassigned": 54,
+   "Cross-network": 27,
+   "AI Assistant": 20,
+   "Organic Social": 7,
+   "Paid Other": 4,
+   "Email": 2
+  },
+  "Kyoto": {
+   "Organic Search": 55,
+   "Direct": 8,
+   "Unassigned": 7,
+   "Paid Search": 6,
+   "Organic Social": 3,
+   "AI Assistant": 2,
+   "Paid Social": 2,
+   "Email": 1
+  },
+  "Nueva": {
+   "Organic Search": 22,
+   "Direct": 4,
+   "Paid Search": 4,
+   "Unassigned": 3,
+   "AI Assistant": 1,
+   "Cross-network": 1
+  },
+  "Azzurra": {
+   "Organic Search": 17,
+   "Cross-network": 7,
+   "Direct": 7,
+   "Unassigned": 4,
+   "Email": 2,
+   "Paid Search": 2,
+   "Paid Social": 2,
+   "Referral": 1
+  },
+  "Shiro Sushi": {
+   "Organic Search": 31,
+   "Paid Search": 14,
+   "Unassigned": 5,
+   "AI Assistant": 2,
+   "Direct": 1,
+   "Paid Social": 1
+  },
+  "DSL": {
+   "Organic Search": 149,
+   "Referral": 24,
+   "Unassigned": 23,
+   "Paid Social": 15,
+   "Paid Search": 11,
+   "Direct": 10,
+   "Cross-network": 8,
+   "AI Assistant": 1,
+   "Organic Social": 1,
+   "Paid Other": 1
+  }
+ },
+ "channels_yoy": {
+  "Aqua Shard": {
+   "Paid Search": 15507,
+   "Organic Search": 10897,
+   "Referral": 6767,
+   "Direct": 6015,
+   "Paid Social": 5674,
+   "Cross-network": 3954,
+   "Unassigned": 1471,
+   "Email": 695,
+   "Organic Social": 233,
+   "Paid Other": 75,
+   "Organic Video": 3
+  },
+  "Hutong": {
+   "Organic Search": 7486,
+   "Referral": 4710,
+   "Cross-network": 4291,
+   "Paid Social": 3763,
+   "Direct": 3740,
+   "Paid Search": 1855,
+   "Unassigned": 493,
+   "Email": 401,
+   "Organic Social": 231,
+   "Paid Other": 79
+  },
+  "Kyoto": {
+   "Organic Search": 3941,
+   "Paid Social": 1343,
+   "Paid Search": 1131,
+   "Direct": 1016,
+   "Organic Social": 389,
+   "Referral": 159,
+   "Unassigned": 158,
+   "Email": 65,
+   "Paid Other": 60,
+   "Cross-network": 32
+  },
+  "Nueva": {
+   "Organic Search": 1888,
+   "Direct": 756,
+   "Paid Search": 429,
+   "Organic Social": 352,
+   "Cross-network": 254,
+   "Paid Social": 108,
+   "Referral": 102,
+   "Unassigned": 98,
+   "Mobile Push Notifications": 7,
+   "Email": 5,
+   "Paid Other": 3
+  },
+  "Azzurra": {
+   "Organic Search": 870,
+   "Direct": 747,
+   "Cross-network": 511,
+   "Paid Search": 301,
+   "Paid Social": 236,
+   "Paid Other": 66,
+   "Referral": 63,
+   "Email": 38,
+   "Unassigned": 29,
+   "Organic Social": 10,
+   "Display": 2
+  },
+  "Shiro Sushi": {
+   "Paid Social": 880,
+   "Organic Search": 718,
+   "Direct": 574,
+   "Paid Search": 147,
+   "Cross-network": 127,
+   "Referral": 51,
+   "Unassigned": 40,
+   "Organic Social": 38,
+   "Paid Other": 12,
+   "Email": 10
+  },
+  "DSL": {}
+ },
+ "channels_yoy_bookings": {
+  "Aqua Shard": {
+   "Paid Search": 571,
+   "Direct": 346,
+   "Organic Search": 290,
+   "Referral": 196,
+   "Cross-network": 112,
+   "Paid Social": 57,
+   "Unassigned": 56,
+   "Email": 7,
+   "Organic Social": 3
+  },
+  "Hutong": {
+   "Direct": 258,
+   "Organic Search": 167,
+   "Cross-network": 94,
+   "Referral": 82,
+   "Paid Search": 75,
+   "Paid Social": 20,
+   "Unassigned": 6,
+   "Organic Social": 3,
+   "Email": 2,
+   "Paid Other": 2
+  },
+  "Kyoto": {
+   "Organic Search": 81,
+   "Direct": 60,
+   "Paid Search": 19,
+   "Paid Social": 6,
+   "Organic Social": 3,
+   "Referral": 3,
+   "Cross-network": 2,
+   "Unassigned": 1
+  },
+  "Nueva": {
+   "Direct": 37,
+   "Organic Search": 27,
+   "Paid Search": 8,
+   "Organic Social": 6,
+   "Unassigned": 4,
+   "Referral": 2,
+   "Cross-network": 1
+  },
+  "Azzurra": {
+   "Organic Search": 37,
+   "Direct": 26,
+   "Cross-network": 25,
+   "Paid Search": 22,
+   "Unassigned": 4
+  },
+  "Shiro Sushi": {
+   "Organic Search": 29,
+   "Direct": 21,
+   "Paid Search": 12,
+   "Cross-network": 10,
+   "Unassigned": 8,
+   "Referral": 1
+  },
+  "DSL": {}
+ },
+ "devices_cur": {
+  "Aqua Shard": {
+   "mobile": 31819,
+   "desktop": 7794,
+   "tablet": 378
+  },
+  "Hutong": {
+   "mobile": 16522,
+   "desktop": 4279,
+   "tablet": 191
+  },
+  "Kyoto": {
+   "mobile": 2510,
+   "desktop": 649,
+   "tablet": 7
+  },
+  "Nueva": {
+   "mobile": 1759,
+   "desktop": 425,
+   "tablet": 9
+  },
+  "Azzurra": {
+   "mobile": 1339,
+   "desktop": 385,
+   "tablet": 21
+  },
+  "Shiro Sushi": {
+   "mobile": 917,
+   "desktop": 400,
+   "tablet": 10
+  },
+  "DSL": {
+   "mobile": 3562,
+   "desktop": 615,
+   "tablet": 44
+  }
+ },
+ "landing_cur": {
+  "Aqua Shard": [
+   [
+    "/",
+    11278
+   ],
+   [
+    "/explore/aquashard/reservations/create/search",
+    5714
+   ],
+   [
+    "/menus",
+    5246
+   ],
+   [
+    "/peter-pan-afternoon-tea",
+    4070
+   ],
+   [
+    "/menus/express-lunch-menu",
+    2448
+   ],
+   [
+    "/explore/aquashard/reservations/manage",
+    1975
+   ]
+  ],
+  "Hutong": [
+   [
+    "/",
+    8586
+   ],
+   [
+    "/menus",
+    2853
+   ],
+   [
+    "/explore/hutonglondon/reservations/create/search",
+    2191
+   ],
+   [
+    "/menus/lunch-ppc",
+    1537
+   ],
+   [
+    "/explore/hutonglondon/reservations/manage",
+    1195
+   ],
+   [
+    "/events/dynasty-brunch",
+    905
+   ]
+  ],
+  "Kyoto": [
+   [
+    "/",
+    1558
+   ],
+   [
+    "/events/japanese-brunch",
+    207
+   ],
+   [
+    "/bar",
+    205
+   ],
+   [
+    "/menus",
+    200
+   ],
+   [
+    "/events/halloween",
+    185
+   ],
+   [
+    "(not set)",
+    132
+   ]
+  ],
+  "Nueva": [
+   [
+    "/",
+    875
+   ],
+   [
+    "/events/halloween",
+    486
+   ],
+   [
+    "/events/aqua-nueva-x-casamigos-tequila",
+    196
+   ],
+   [
+    "(not set)",
+    95
+   ],
+   [
+    "/menus",
+    72
+   ],
+   [
+    "/private-dining-events",
+    70
+   ]
+  ],
+  "Azzurra": [
+   [
+    "/",
+    923
+   ],
+   [
+    "/menus",
+    193
+   ],
+   [
+    "/events/oyster-hour",
+    191
+   ],
+   [
+    "/events/jazz-nights",
+    121
+   ],
+   [
+    "(not set)",
+    83
+   ],
+   [
+    "/menus/a-la-carte",
+    77
+   ]
+  ],
+  "Shiro Sushi": [
+   [
+    "/",
+    636
+   ],
+   [
+    "/menus",
+    148
+   ],
+   [
+    "/events/shiro-brunch",
+    116
+   ],
+   [
+    "(not set)",
+    93
+   ],
+   [
+    "/menus/sushi-brunch",
+    91
+   ],
+   [
+    "/menus/lunch-set-menu",
+    74
+   ]
+  ],
+  "DSL": [
+   [
+    "/",
+    2248
+   ],
+   [
+    "/menus",
+    872
+   ],
+   [
+    "/menus/a-la-carte",
+    208
+   ],
+   [
+    "(not set)",
+    185
+   ],
+   [
+    "/menus/tea-tales-menu",
+    128
+   ],
+   [
+    "/events/tea-tales",
+    122
+   ]
+  ]
+ },
+ "landing_cur_bookings": {
+  "Aqua Shard": {
+   "/explore/aquashard/reservations/create/search": 439,
+   "/": 257,
+   "/reservations/aquashard": 163,
+   "/peter-pan-afternoon-tea": 95,
+   "/explore/aquashard/reservations/create/checkout": 77,
+   "/menus": 44,
+   "/menus/express-lunch-menu": 41,
+   "/explore/aquashard/reservations/manage": 9
+  },
+  "Hutong": {
+   "/": 262,
+   "/explore/hutonglondon/reservations/create/search": 249,
+   "/explore/hutonglondon/reservations/create/upgrades": 147,
+   "/menus/lunch-ppc": 22,
+   "/reservations/hutonglondon": 22,
+   "/menus": 19,
+   "/events/dynasty-brunch": 8,
+   "/explore/hutonglondon/reservations/manage": 9
+  },
+  "Kyoto": {
+   "/": 48,
+   "/explore/aquakyoto/reservations/create/search": 11,
+   "/bar": 4,
+   "/events/japanese-brunch": 4,
+   "/menus/set-menu": 3,
+   "/events/halloween": 2,
+   "/menus": 2
+  },
+  "Nueva": {
+   "/": 22,
+   "/events/aqua-nueva-x-casamigos-tequila": 3,
+   "/explore/aquanueva/reservations/create/search": 3,
+   "/menus": 3,
+   "/events/halloween": 1
+  },
+  "Azzurra": {
+   "/": 28,
+   "/explore/azzurra/reservations/create/search": 4,
+   "/events/oyster-hour": 2,
+   "/menus": 1,
+   "/menus/a-la-carte": 1
+  },
+  "Shiro Sushi": {
+   "/": 37,
+   "/explore/shiro/reservations/create/search": 7,
+   "/menus/sushi-brunch": 3,
+   "/menus": 2,
+   "/events/shiro-brunch": 1,
+   "(not set)": 1
+  },
+  "DSL": {
+   "/": 167,
+   "/explore/dimsumlibrary/reservations/create/search": 29,
+   "/menus": 20,
+   "/events/tea-tales": 6,
+   "/menus/tea-tales-menu": 4,
+   "/menus/a-la-carte": 3
+  }
+ },
+ "monthly_createpath": {
+  "oct2026": {
+   "Aqua Shard": 5631,
+   "Hutong": 3768,
+   "Regent St": 708,
+   "Azzurra": 302,
+   "Shiro Sushi": 333,
+   "DSL": 1487
+  },
+  "sep2026": {
+   "Aqua Shard": 4772,
+   "Hutong": 3463,
+   "Regent St": 989,
+   "Azzurra": 405,
+   "Shiro Sushi": 363,
+   "DSL": 1882
+  },
+  "oct2025": {
+   "Aqua Shard": 6872,
+   "Hutong": 3403,
+   "Regent St": 1177,
+   "Azzurra": 500,
+   "Shiro Sushi": 427,
+   "DSL": 95
+  }
+ },
+ "notes": [
+  "averageSessionDuration is published exactly as returned. Aqua Shard reads 150.4 seconds this week against 780.5 in the prior week and 206.2 in the matched 2025 week. The prior week was re-pulled and is unchanged at 780.5, so the corruption flagged last week has not restated: it has ended, and this week's value is the plausible one.",
+  "bounceRate and engagementRate for the prior week also re-pulled and unchanged to four decimal places, so the 6 to 9 point restatement described in the runbook did not occur this week.",
+  "DSL's 2025 week returns 3 users, 3 sessions and no booking events at all. That is the pre-rebrand base and a real zero, not a gap."
+ ]
+}

@@ -1,11 +1,18 @@
 {
-  "generated": "26 October 2026",
+  "generated": "2 November 2026",
   "markets": [
     {
       "name": "Hong Kong",
       "slug": "hk",
       "ccy": "HKD",
       "weekly": [
+        {
+          "dates": "W39 · 26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
         {
           "dates": "W38 · 19–25 Oct 2026",
           "folder": "w2026-10-19",
@@ -243,6 +250,10 @@
       ],
       "monthly": [
         {
+          "label": "October 2026",
+          "folder": "m2026-10"
+        },
+        {
           "label": "September 2026",
           "folder": "m2026-09"
         },
@@ -276,6 +287,10 @@
         }
       ],
       "trends": [
+        {
+          "dates": "26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26"
+        },
         {
           "dates": "19–25 Oct 2026",
           "folder": "w2026-10-19"
@@ -398,6 +413,13 @@
       "ccy": "GBP",
       "weekly": [
         {
+          "dates": "W39 · 26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
+        {
           "dates": "W38 · 19–25 Oct 2026",
           "folder": "w2026-10-19",
           "deepdive": true,
@@ -635,6 +657,10 @@
       ],
       "monthly": [
         {
+          "label": "October 2026",
+          "folder": "m2026-10"
+        },
+        {
           "label": "September 2026",
           "folder": "m2026-09"
         },
@@ -668,6 +694,10 @@
         }
       ],
       "trends": [
+        {
+          "dates": "26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26"
+        },
         {
           "dates": "19–25 Oct 2026",
           "folder": "w2026-10-19"
@@ -794,6 +824,13 @@
       "slug": "usa",
       "ccy": "USD",
       "weekly": [
+        {
+          "dates": "W43 · 26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26",
+          "deepdive": true,
+          "ads": true,
+          "covers": true
+        },
         {
           "dates": "W42 · 19–25 Oct 2026",
           "folder": "w2026-10-19",
@@ -1054,6 +1091,10 @@
       ],
       "monthly": [
         {
+          "label": "October 2026",
+          "folder": "m2026-10"
+        },
+        {
           "label": "September 2026",
           "folder": "m2026-09"
         },
@@ -1091,6 +1132,10 @@
         }
       ],
       "trends": [
+        {
+          "dates": "26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26"
+        },
         {
           "dates": "19–25 Oct 2026",
           "folder": "w2026-10-19"
@@ -1224,6 +1269,12 @@
       "slug": "dubai",
       "ccy": "AED",
       "weekly": [
+        {
+          "dates": "W43 · 26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26",
+          "ads": true,
+          "dash": false
+        },
         {
           "dates": "W42 · 19–25 Oct 2026",
           "folder": "w2026-10-19",
@@ -1371,6 +1422,10 @@
       ],
       "monthly": [
         {
+          "label": "October 2026",
+          "folder": "m2026-10"
+        },
+        {
           "label": "September 2026",
           "folder": "m2026-09"
         },
@@ -1408,6 +1463,10 @@
         }
       ],
       "trends": [
+        {
+          "dates": "26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26"
+        },
         {
           "dates": "19–25 Oct 2026",
           "folder": "w2026-10-19"
@@ -1517,6 +1576,12 @@
       "slug": "paris",
       "ccy": "EUR",
       "weekly": [
+        {
+          "dates": "W39 · 26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26",
+          "ads": true,
+          "dash": false
+        },
         {
           "dates": "W38 · 19–25 Oct 2026",
           "folder": "w2026-10-19",
@@ -1772,6 +1837,10 @@
       ],
       "monthly": [
         {
+          "label": "October 2026",
+          "folder": "m2026-10"
+        },
+        {
           "label": "September 2026",
           "folder": "m2026-09"
         },
@@ -1805,6 +1874,10 @@
         }
       ],
       "trends": [
+        {
+          "dates": "26 Oct–1 Nov 2026",
+          "folder": "w2026-10-26"
+        },
         {
           "dates": "19–25 Oct 2026",
           "folder": "w2026-10-19"

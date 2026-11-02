@@ -1,0 +1,253 @@
+{
+ "window": {
+  "cur": "2026-10-26 to 2026-11-01",
+  "prior": "2026-10-19 to 2026-10-25",
+  "yoy": "2025-10-27 to 2025-11-02"
+ },
+ "ga4_definition": "create path only: eventName EXACT sevenrooms_booking_complete AND pagePath NOT PARTIAL_REGEXP 'modify|manage|prearrival'. Aqua NYC additionally restricted to pagePath PARTIAL_REGEXP 'aquanyc|aquakyotonyc' in both years.",
+ "properties": {
+  "Aqua NYC": "451165443",
+  "Hutong NYC": "370519903",
+  "Hutong Miami": "369179739"
+ },
+ "bookings": {
+  "cur": {
+   "Aqua NYC": 239,
+   "Hutong NYC": 148,
+   "Hutong Miami": 55
+  },
+  "prior": {
+   "Aqua NYC": 140,
+   "Hutong NYC": 90,
+   "Hutong Miami": 31
+  },
+  "yoy": {
+   "Aqua NYC": 296,
+   "Hutong NYC": 239,
+   "Hutong Miami": 135
+  },
+  "ytd_2026_to_1_Nov": {
+   "Aqua NYC": 9401,
+   "Hutong NYC": 6463,
+   "Hutong Miami": 3521
+  }
+ },
+ "daily_create_path_cur": {
+  "Aqua NYC": [
+   22,
+   57,
+   36,
+   40,
+   49,
+   14,
+   20
+  ],
+  "Hutong NYC": [
+   13,
+   20,
+   15,
+   25,
+   25,
+   20,
+   27
+  ],
+  "Hutong Miami": [
+   6,
+   9,
+   10,
+   8,
+   5,
+   6,
+   11
+  ]
+ },
+ "amendment_share": {
+  "cur": {
+   "Aqua NYC": "10.8%",
+   "Hutong NYC": "11.9%",
+   "Hutong Miami": "14.1%",
+   "market": "11.6%"
+  },
+  "yoy": {
+   "Aqua NYC": "16.6%",
+   "Hutong NYC": "0.0%",
+   "Hutong Miami": "4.3%",
+   "market": "8.8%"
+  }
+ },
+ "aqua_nyc_split": {
+  "basis": "pagePath; Roma = aquanyc paths, Kyoto = aquakyotonyc paths",
+  "cur": {
+   "Aqua Roma": 226,
+   "Aqua Kyoto NYC": 13
+  },
+  "prior": {
+   "Aqua Roma": 128,
+   "Aqua Kyoto NYC": 12
+  },
+  "yoy_combined": 296,
+  "yoy_kyoto_pages_only": 108,
+  "note": "Aqua Kyoto NYC is published as a 2026 launch with no year-on-year, following the standing position. The 2025 matched week carries 108 create-path booking events on its own pages, so the position is contradicted by data and wants a decision. While it stands, Aqua Roma's continuation line carries Kyoto's 2025."
+ },
+ "web_kpis": {
+  "Aqua NYC": {
+   "cur": {
+    "users": 6769,
+    "sessions": 8208,
+    "avg_session_seconds": 192.6,
+    "engagement_rate_pct": 56.8,
+    "pages_per_session": 2.74,
+    "new_pct": 93.4,
+    "bounce_rate": 0.432
+   },
+   "prior": {
+    "users": 6033,
+    "sessions": 7244,
+    "avg_session_seconds": 180.0,
+    "engagement_rate_pct": 53.3,
+    "pages_per_session": 2.6,
+    "new_pct": 93.6,
+    "bounce_rate": 0.467
+   },
+   "yoy": {
+    "users": 5893,
+    "sessions": 8030,
+    "avg_session_seconds": 254.2,
+    "engagement_rate_pct": 62.0,
+    "pages_per_session": 3.48,
+    "new_pct": 86.6,
+    "bounce_rate": 0.38
+   }
+  },
+  "Hutong NYC": {
+   "cur": {
+    "users": 5650,
+    "sessions": 7087,
+    "avg_session_seconds": 188.4,
+    "engagement_rate_pct": 54.7,
+    "pages_per_session": 2.51,
+    "new_pct": 91.9,
+    "bounce_rate": 0.453
+   },
+   "prior": {
+    "users": 5574,
+    "sessions": 6653,
+    "avg_session_seconds": 238.6,
+    "engagement_rate_pct": 56.3,
+    "pages_per_session": 2.44,
+    "new_pct": 93.3,
+    "bounce_rate": 0.437
+   },
+   "yoy": {
+    "users": 4120,
+    "sessions": 5360,
+    "avg_session_seconds": 167.3,
+    "engagement_rate_pct": 69.4,
+    "pages_per_session": 2.02,
+    "new_pct": 77.3,
+    "bounce_rate": 0.306
+   }
+  },
+  "Hutong Miami": {
+   "cur": {
+    "users": 4358,
+    "sessions": 4993,
+    "avg_session_seconds": 70.4,
+    "engagement_rate_pct": 32.9,
+    "pages_per_session": 1.8,
+    "new_pct": 96.9,
+    "bounce_rate": 0.671
+   },
+   "prior": {
+    "users": 3835,
+    "sessions": 4236,
+    "avg_session_seconds": 85.1,
+    "engagement_rate_pct": 36.7,
+    "pages_per_session": 1.94,
+    "new_pct": 96.9,
+    "bounce_rate": 0.633
+   },
+   "yoy": {
+    "users": 3345,
+    "sessions": 3665,
+    "avg_session_seconds": 92.0,
+    "engagement_rate_pct": 62.3,
+    "pages_per_session": 2.08,
+    "new_pct": 89.8,
+    "bounce_rate": 0.377
+   }
+  },
+  "All": {
+   "cur": {
+    "users": 16777,
+    "sessions": 20288,
+    "avg_session_seconds": 161.1,
+    "engagement_rate_pct": 50.2,
+    "pages_per_session": 2.43,
+    "new_pct": 93.8,
+    "bounce_rate": 0.498
+   },
+   "prior": {
+    "users": 15442,
+    "sessions": 18133,
+    "avg_session_seconds": 179.3,
+    "engagement_rate_pct": 50.5,
+    "pages_per_session": 2.43,
+    "new_pct": 94.3,
+    "bounce_rate": 0.495
+   },
+   "yoy": {
+    "users": 13358,
+    "sessions": 17055,
+    "avg_session_seconds": 192.1,
+    "engagement_rate_pct": 64.4,
+    "pages_per_session": 2.72,
+    "new_pct": 84.6,
+    "bounce_rate": 0.356
+   }
+  }
+ },
+ "weekly_users_dedup": {
+  "Aqua NYC": 6769,
+  "Aqua Kyoto NYC pages": 749,
+  "Aqua Roma (combined minus Kyoto)": 6020,
+  "Hutong NYC": 5650,
+  "Hutong Miami": 4358
+ },
+ "monthly_create_path": {
+  "Aqua NYC": {
+   "Oct 2026": 833,
+   "Sep 2026": 780,
+   "Oct 2025": 1251
+  },
+  "Hutong NYC": {
+   "Oct 2026": 486,
+   "Sep 2026": 477,
+   "Oct 2025": 543,
+   "note": "Oct 2025 covers only 15 to 31 Oct; the 2025 tracking outage ran to 14 October. Not comparable."
+  },
+  "Hutong Miami": {
+   "Oct 2026": 203,
+   "Sep 2026": 246,
+   "Oct 2025": 395
+  }
+ },
+ "channel_session_split_tolerance": {
+  "note": "GA4's sessionDefaultChannelGroup split does not sum exactly to the property session total. Deltas this week: Aqua NYC +0.10%, Hutong NYC -0.54%, Hutong Miami -2.84%. Booking splits DO sum exactly to the published venue totals in all three windows. Published as returned, not forced.",
+  "channel_sessions_sum": {
+   "Aqua NYC": 8216,
+   "Hutong NYC": 7049,
+   "Hutong Miami": 4851
+  },
+  "property_sessions": {
+   "Aqua NYC": 8208,
+   "Hutong NYC": 7087,
+   "Hutong Miami": 4993
+  }
+ },
+ "gaps": [
+  "Aqua NYC year-ago Google walk-in signals: a GAP, not a zero. The account returned only 3 conversion-action rows for 27 Oct to 2 Nov 2025 (booking, phone_click, Calls from ads); its local-action rows stopped at the end of September 2025. Published as null with gaps: true.",
+  "Aqua NYC has no Click Book Now conversion action in either year.",
+  "averageSessionDuration and engagementRate are published exactly as GA4 returned them and are provisional for the current week; they restate 6 to 9 points in the week after a run."
+ ]
+}

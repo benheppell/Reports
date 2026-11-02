@@ -1,0 +1,169 @@
+{
+ "market": "USA",
+ "ccy": "USD",
+ "sym": "$",
+ "week": "26 Oct\u20131 Nov 2026",
+ "wow": "19\u201325 Oct 2026",
+ "yoy": "27 Oct\u20132 Nov 2025",
+ "generated": "2 November 2026",
+ "badge": "GA4 BOOKING EVENT CLEAN FOR A FULL WEEK",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 239,
+   "tgt": 525,
+   "wow_b": 140,
+   "yoy_b": 296,
+   "users": 6769,
+   "sessions": 8208,
+   "asd": 192.6,
+   "bounce": 0.432,
+   "meta_s": 2868.94,
+   "meta_sch": 66,
+   "meta_sch_prior": 59,
+   "goog_s": 896.44,
+   "goog_c": 25.0,
+   "goog_c_prior": 16.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 148,
+   "tgt": 468,
+   "wow_b": 90,
+   "yoy_b": 239,
+   "users": 5650,
+   "sessions": 7087,
+   "asd": 188.4,
+   "bounce": 0.453,
+   "meta_s": 1298.06,
+   "meta_sch": 25,
+   "meta_sch_prior": 14,
+   "goog_s": 2149.92,
+   "goog_c": 32.3,
+   "goog_c_prior": 26.0,
+   "shared": false
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 55,
+   "tgt": 120,
+   "wow_b": 31,
+   "yoy_b": 135,
+   "users": 4358,
+   "sessions": 4993,
+   "asd": 70.4,
+   "bounce": 0.671,
+   "meta_s": 1632.33,
+   "meta_sch": 52,
+   "meta_sch_prior": 22,
+   "goog_s": 801.75,
+   "goog_c": 11.0,
+   "goog_c_prior": 6.0,
+   "shared": false
+  }
+ ],
+ "cpa": {
+  "meta_good": 25,
+  "meta_poor": 50,
+  "goog_good": 15,
+  "goog_poor": 30
+ },
+ "obs": {
+  "meta": [
+   "Meta spend rose from $4,874 to $5,799 across the market and schedules rose from 95 to 143, so the account-level picture improved. The detail is less even.",
+   "Aqua NYC is where the money moved. Spend went from $1,810 to $2,869 and $1,158 of the increase sits in CRKLR - Halloween Campaign - LPV, a landing-page-view objective that recorded no schedules at all. The two converting campaigns, Prospecting and Remarketing, delivered 42 and 24 schedules for $1,063 and $559. Account clicks went from 5,321 to 17,409 and reported landing page views from 3,174 to 12,453, while GA4 sessions rose only 7,244 to 8,208, so the Meta-reported traffic is not arriving as measured sessions.",
+   "Hutong Miami is the clean improvement: spend flat at $1,632 and schedules up from 22 to 52, a cost per schedule of $31.4 against $75.1. Hutong NYC also improved, $1,298 for 25 schedules against $1,410 for 14."
+  ],
+  "google": [
+   "Google spend across the market rose from $2,379 to $3,848, up 61.7 per cent, and booking conversions from 48.0 to 68.3.",
+   "Hutong NYC accounts for most of the increase: $1,166 to $2,150. Search > Midtown alone took $998 and returned 3 booking conversions, about $333 each, while Search > Brand returned 16 for $290 and Search > Special Events 4 for $586. The account cost per booking is $66.6 against a poor threshold of $30.",
+   "Aqua NYC ran $896 for 25.0 booking conversions, $35.9 each, improving on $43.6 last week. Hutong Miami ran $802 for 11.0, $72.9 each. Prior-week figures are re-pulled every run because Google conversions settle upward: Hutong NYC's W42 moved from 16.0 as published to 26.0."
+  ],
+  "ga4": [
+   "The booking event is clean for a full week. It fired on all seven days at all three properties and GA4 create-path bookings run at 1.44, 1.02 and 0.98 times SevenRooms website booking rows at Aqua NYC, Hutong NYC and Hutong Miami.",
+   "Those ratios sit on an unsettled denominator. SevenRooms website covers recomputed a week later came back 5 to 9 per cent lower, so the settled-equivalent ratios are about 1.53, 1.09 and 1.04 against pre-break norms of 1.59 to 1.70, 1.12 to 1.15 and 1.22 to 1.29.",
+   "Hutong Miami is the one to watch: below its own norm for a second week. Aqua NYC and Hutong NYC are recording normally."
+  ]
+ },
+ "series": {
+  "labels": [
+   "W36",
+   "W37",
+   "W38",
+   "W39",
+   "W40",
+   "W41",
+   "W42",
+   "W43"
+  ],
+  "venues": {
+   "Aqua NYC": {
+    "bookings": [
+     176,
+     153,
+     197,
+     188,
+     206,
+     151,
+     140,
+     239
+    ],
+    "users": [
+     5498,
+     6266,
+     5904,
+     6254,
+     6707,
+     6062,
+     6033,
+     6769
+    ]
+   },
+   "Hutong NYC": {
+    "bookings": [
+     118,
+     99,
+     130,
+     117,
+     126,
+     68,
+     90,
+     148
+    ],
+    "users": [
+     2641,
+     3007,
+     2949,
+     2653,
+     3892,
+     4994,
+     5574,
+     5650
+    ]
+   },
+   "Hutong Miami": {
+    "bookings": [
+     47,
+     69,
+     46,
+     60,
+     58,
+     40,
+     31,
+     55
+    ],
+    "users": [
+     1624,
+     1435,
+     1520,
+     1599,
+     2853,
+     4073,
+     3835,
+     4358
+    ]
+   }
+  }
+ }
+}

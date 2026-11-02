@@ -1,0 +1,423 @@
+{
+ "market": "Hong Kong",
+ "platform": "OpenRice",
+ "tz": "Asia/Hong_Kong",
+ "platform_foot": "<b>OpenRice</b> = OpenRice sources",
+ "combined_note": "<b>Shiro Pacific Place</b> = SevenRooms venue Shiro Hong Kong; <b>Shiro Tai Kwun</b> = SevenRooms venue Shiro Tai Kwun (new in 2026, no year on year). Covers are by booking-created date and exclude staff-named sources. Venue reception and reservations desks are counted together in the reception column. <b>Vesu</b> reopened on 8 September 2026. <b>The Canton Library</b> books under the Vista SevenRooms venue and is counted only from its opening on 8 September 2026. The 2025 Vista bookings were a different restaurant, so Canton has no year on year. Vesu and The Canton Library are outside the portfolio total and the trend. ",
+ "ga4_meta": "Portfolio 673 &middot; YoY &#9660;30.9%",
+ "ga4_yoy": "&#9660;30.9% YoY",
+ "callout": "<b>Why this sits alongside the GA4 dashboard.</b> Covers are the read again this week, and they say the business grew. Covers came in at <b>10,679</b>, <b>up 5.5 per cent</b> week on week and <b>up 54.4 per cent</b> year on year, or <b>up 28.2 per cent</b> like for like once Shiro Tai Kwun, which has no 2025 records, is taken out. It is the highest total of the eight-week series for the third week running. GA4 create-path bookings rose 20.6 per cent over the same two weeks but are still capturing only about 61 per cent of what they should: the website booking event broke on 15 to 16 October and three weeks on it has improved without being fixed. SevenRooms website booking rows for the portfolio rose from <b>874</b> to <b>946</b> over the same two weeks, up <b>8.2 per cent</b>. <br><br><b>Website covers are the headline.</b> They rose to <b>2,830</b> from 2,637, up <b>7.3 per cent</b> week on week and <b>58.9 per cent</b> year on year, the strongest week in the series. <b>OpenRice</b> rebounded hard to <b>2,122</b> from 1,688, up 25.7 per cent, reversing last week's dip. <b>Google Reserve</b> rose to <b>1,139</b> from 993, up 14.7 per cent, so for once all three bookable routes moved up together. Bookable covers, website plus OpenRice plus Google Reserve, came to <b>6,091</b>, up <b>14.5 per cent</b> week on week and <b>42.2 per cent</b> year on year. <br><br>GA4 only fires on our own website, which is <b>27 per cent</b> of Hong Kong covers. It never sees <b>OpenRice</b> (<b>20 per cent</b>) and it never sees walk-ins and the reception and reservations desks, which together are <b>43 per cent</b>. <br><br><b>Three services were closed to the public in the week, and two of them were paid for.</b> <b>The Chinese Library</b> lost dinner on Wednesday 28 October to a single 100-cover booking under a staff name, and on Thursday 29 October it took <b>no evening covers at all</b> with no large booking recorded against the date, which is the same unexplained shape as its 23 and 24 October closures last week. <b>Cantina</b> lost dinner on Thursday 29 October to a single 350-cover staff-named booking, its largest of the series. The matched week last year carried three displaced services of its own, Aqua HK on 28 and 31 October 2025 (110 covers each) and Hutong HK on 27 October 2025 (260 covers), so the two sides are comparable in number. Hong Kong covers are counted by booking-created date, so none of these service-date events moves this series and nothing has been stripped from either side. <b>The Chinese Library has now lost four evening services in nine days and the cause is not visible in the data.</b> <br><br>By venue, <b>Shiro Tai Kwun</b> is the week, 1,810 covers from 1,591, and <b>Dim Sum Library</b> rose to 2,449 from 2,244. <b>Aqua HK</b> is the only venue down, 1,322 from 1,384, and that is reception and party size rather than demand: its website booking count was flat at 226 against 228 while its website covers fell from 702 to 629, so the bookings came in smaller. <b>Hutong HK</b> eased to 1,847 from 1,884 on the same pattern, its reception column falling from 365 to 101 while website covers rose 24 per cent. <b>Vesu</b> (870 covers, its best week since reopening) and <b>The Canton Library</b> (642) sit below the portfolio line and are not in these totals.",
+ "week": "26 Oct–1 Nov 2026",
+ "wow": "19–25 Oct 2026",
+ "yoy": "27 Oct–2 Nov 2025",
+ "generated": "2 November 2026",
+ "venues": [
+  {
+   "name": "Aqua HK",
+   "ga4": 165,
+   "ch": {
+    "web": {
+     "c": 629,
+     "p": 702,
+     "y": 317
+    },
+    "gr": {
+     "c": 146,
+     "p": 180,
+     "y": 102
+    },
+    "ot": {
+     "c": 342,
+     "p": 262,
+     "y": 301
+    },
+    "walk": {
+     "c": 89,
+     "p": 98,
+     "y": 89
+    },
+    "recep": {
+     "c": 116,
+     "p": 142,
+     "y": 18
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Hutong HK",
+   "ga4": 208,
+   "ch": {
+    "web": {
+     "c": 1031,
+     "p": 832,
+     "y": 578
+    },
+    "gr": {
+     "c": 212,
+     "p": 212,
+     "y": 185
+    },
+    "ot": {
+     "c": 356,
+     "p": 327,
+     "y": 181
+    },
+    "walk": {
+     "c": 147,
+     "p": 146,
+     "y": 95
+    },
+    "recep": {
+     "c": 101,
+     "p": 365,
+     "y": 48
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 2,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "The Chinese Library",
+   "ga4": 74,
+   "ch": {
+    "web": {
+     "c": 299,
+     "p": 285,
+     "y": 212
+    },
+    "gr": {
+     "c": 129,
+     "p": 128,
+     "y": 113
+    },
+    "ot": {
+     "c": 283,
+     "p": 144,
+     "y": 215
+    },
+    "walk": {
+     "c": 72,
+     "p": 80,
+     "y": 76
+    },
+    "recep": {
+     "c": 132,
+     "p": 257,
+     "y": 187
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Cantina",
+   "ga4": 36,
+   "ch": {
+    "web": {
+     "c": 168,
+     "p": 146,
+     "y": 127
+    },
+    "gr": {
+     "c": 54,
+     "p": 38,
+     "y": 31
+    },
+    "ot": {
+     "c": 221,
+     "p": 178,
+     "y": 326
+    },
+    "walk": {
+     "c": 60,
+     "p": 36,
+     "y": 112
+    },
+    "recep": {
+     "c": 108,
+     "p": 174,
+     "y": 50
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Dim Sum Library",
+   "ga4": 98,
+   "ch": {
+    "web": {
+     "c": 348,
+     "p": 346,
+     "y": 377
+    },
+    "gr": {
+     "c": 383,
+     "p": 284,
+     "y": 353
+    },
+    "ot": {
+     "c": 400,
+     "p": 375,
+     "y": 325
+    },
+    "walk": {
+     "c": 1095,
+     "p": 1093,
+     "y": 988
+    },
+    "recep": {
+     "c": 223,
+     "p": 146,
+     "y": 114
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Pacific Place",
+   "ga4": 43,
+   "ch": {
+    "web": {
+     "c": 164,
+     "p": 175,
+     "y": 170
+    },
+    "gr": {
+     "c": 121,
+     "p": 94,
+     "y": 65
+    },
+    "ot": {
+     "c": 346,
+     "p": 244,
+     "y": 305
+    },
+    "walk": {
+     "c": 842,
+     "p": 809,
+     "y": 597
+    },
+    "recep": {
+     "c": 252,
+     "p": 230,
+     "y": 260
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   }
+  },
+  {
+   "name": "Shiro Tai Kwun",
+   "ga4": 49,
+   "ch": {
+    "web": {
+     "c": 191,
+     "p": 151,
+     "y": 0
+    },
+    "gr": {
+     "c": 94,
+     "p": 57,
+     "y": 0
+    },
+    "ot": {
+     "c": 174,
+     "p": 158,
+     "y": 0
+    },
+    "walk": {
+     "c": 1159,
+     "p": 1041,
+     "y": 0
+    },
+    "recep": {
+     "c": 192,
+     "p": 184,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "pill": "new in 2026"
+  }
+ ],
+ "trend": {
+  "labels": [
+   "W32",
+   "W33",
+   "W34",
+   "W35",
+   "W36",
+   "W37",
+   "W38",
+   "W39"
+  ],
+  "total": [
+   9022,
+   9701,
+   9388,
+   9370,
+   9454,
+   9662,
+   10121,
+   10679
+  ],
+  "ot": [
+   1912,
+   1811,
+   2010,
+   2314,
+   2192,
+   1922,
+   1688,
+   2122
+  ]
+ },
+ "outside": [
+  {
+   "name": "Vesu",
+   "ga4": 44,
+   "ch": {
+    "web": {
+     "c": 206,
+     "p": 223,
+     "y": 103
+    },
+    "gr": {
+     "c": 96,
+     "p": 104,
+     "y": 50
+    },
+    "ot": {
+     "c": 229,
+     "p": 212,
+     "y": 198
+    },
+    "walk": {
+     "c": 225,
+     "p": 164,
+     "y": 115
+    },
+    "recep": {
+     "c": 114,
+     "p": 63,
+     "y": 63
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "pill": "reopened 8 Sep"
+  },
+  {
+   "name": "The Canton Library",
+   "ga4": 56,
+   "ch": {
+    "web": {
+     "c": 198,
+     "p": 171,
+     "y": 0
+    },
+    "gr": {
+     "c": 30,
+     "p": 39,
+     "y": 0
+    },
+    "ot": {
+     "c": 134,
+     "p": 157,
+     "y": 0
+    },
+    "walk": {
+     "c": 23,
+     "p": 34,
+     "y": 0
+    },
+    "recep": {
+     "c": 257,
+     "p": 348,
+     "y": 0
+    },
+    "ota": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    },
+    "tp": {
+     "c": 0,
+     "p": 0,
+     "y": 0
+    }
+   },
+   "pill": "opened 8 Sep"
+  }
+ ],
+ "outside_label": "Outside the portfolio: not in the totals above or in the 8-week trend"
+}

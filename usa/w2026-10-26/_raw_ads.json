@@ -1,0 +1,173 @@
+{
+ "accounts": {
+  "Aqua NYC": {
+   "meta": "act_1057116046095292",
+   "google": "4724837044"
+  },
+  "Hutong NYC": {
+   "meta": "act_1320018325245807",
+   "google": "8775967619"
+  },
+  "Hutong Miami": {
+   "meta": "act_756032299051731",
+   "google": "8465732460"
+  }
+ },
+ "definitions": {
+  "meta_bookings": "conversions action_type schedule_total",
+  "google_bookings": "sum of conversion actions whose name contains 'booking' and 'complete' and not 'ga4'. Aqua NYC: 'Aqua NYC (web) sevenrooms_booking_complete'. Both Hutongs: 'Sevenrooms Booking Complete'. Raw metrics.conversions is never used.",
+  "google_cost": "metrics.cost_micros is returned already converted by the gomarble tool and is NOT divided by 1e6 again.",
+  "walkin": "Store visits + Local actions - Directions + Local actions - Menu views + Click Book Now + Clicks to call"
+ },
+ "meta": {
+  "Aqua NYC": {
+   "cur": {
+    "spend": 2868.94,
+    "schedule_total": 66,
+    "impressions": 162530,
+    "clicks": 17409
+   },
+   "prior": {
+    "spend": 1810.49,
+    "schedule_total": 59,
+    "impressions": 76357,
+    "clicks": 5321
+   },
+   "yoy": {
+    "spend": 1680.77,
+    "schedule_total": 26,
+    "impressions": 255966,
+    "clicks": 4088
+   }
+  },
+  "Hutong NYC": {
+   "cur": {
+    "spend": 1298.06,
+    "schedule_total": 25,
+    "impressions": 181013,
+    "clicks": 2668
+   },
+   "prior": {
+    "spend": 1410.31,
+    "schedule_total": 14,
+    "impressions": 219114,
+    "clicks": 2069
+   },
+   "yoy": {
+    "spend": 1084.52,
+    "schedule_total": 3,
+    "impressions": 142377,
+    "clicks": 5486
+   }
+  },
+  "Hutong Miami": {
+   "cur": {
+    "spend": 1632.33,
+    "schedule_total": 52,
+    "impressions": 93740,
+    "clicks": 3778
+   },
+   "prior": {
+    "spend": 1653.12,
+    "schedule_total": 22,
+    "impressions": 91048,
+    "clicks": 3539
+   },
+   "yoy": {
+    "spend": 1316.98,
+    "schedule_total": 79,
+    "impressions": 506229,
+    "clicks": 7771
+   }
+  }
+ },
+ "google": {
+  "Aqua NYC": {
+   "cur": {
+    "spend": 896.44,
+    "booking_conversions": 25.0,
+    "impressions": 32880,
+    "clicks": 1346
+   },
+   "prior": {
+    "spend": 698.03,
+    "booking_conversions": 16.0,
+    "impressions": 19479,
+    "clicks": 854
+   },
+   "yoy": {
+    "spend": 2552.96,
+    "booking_conversions": 106.3,
+    "impressions": 20983,
+    "clicks": 2200
+   }
+  },
+  "Hutong NYC": {
+   "cur": {
+    "spend": 2149.92,
+    "booking_conversions": 32.3,
+    "impressions": 49063,
+    "clicks": 1878
+   },
+   "prior": {
+    "spend": 1166.39,
+    "booking_conversions": 26.0,
+    "impressions": 53820,
+    "clicks": 2169
+   },
+   "yoy": {
+    "spend": 942.99,
+    "booking_conversions": 77.9,
+    "impressions": 219057,
+    "clicks": 3137
+   }
+  },
+  "Hutong Miami": {
+   "cur": {
+    "spend": 801.75,
+    "booking_conversions": 11.0,
+    "impressions": 15933,
+    "clicks": 692
+   },
+   "prior": {
+    "spend": 515.11,
+    "booking_conversions": 6.0,
+    "impressions": 11909,
+    "clicks": 559
+   },
+   "yoy": {
+    "spend": 1071.84,
+    "booking_conversions": 31.0,
+    "impressions": 51731,
+    "clicks": 1065
+   }
+  }
+ },
+ "walkin_signals": {
+  "Aqua NYC": {
+   "cur": 168,
+   "prior": 201,
+   "yoy": null
+  },
+  "Hutong NYC": {
+   "cur": 332.5,
+   "prior": 476.5,
+   "yoy": 873.0
+  },
+  "Hutong Miami": {
+   "cur": 110.5,
+   "prior": 111.3,
+   "yoy": 312.7
+  }
+ },
+ "settling_evidence": [
+  "Google conversions and store visits settle upward for two to three weeks, so prior and year-ago are re-pulled every run and never carried. Hutong NYC W42 booking conversions: 16.0 as published last week, 26.0 on re-pull. Hutong NYC W42 walk-in signals: 318 published, 476.5 on re-pull. Aqua NYC W42 walk-in signals: 126 published, 201 on re-pull. Hutong Miami W42 booking conversions 5 published, 6.0 on re-pull."
+ ],
+ "flags": [
+  "AQUA NYC META: CRKLR - Halloween Campaign - LPV spent $1,158.23 in the reporting week against $137.12 the week before and recorded ZERO schedule conversions. It is a landing-page-view objective, so no CPA is quoted and its campaign bookings are published as n/a, not 0. It is the entire reason account clicks went 5,321 to 17,409 and Meta-reported landing page views 3,174 to 12,453 while GA4 sessions rose only 7,244 to 8,208. The gap between 12,453 reported landing page views and roughly 1,000 extra GA4 sessions is not explained and should be checked.",
+  "HUTONG NYC GOOGLE: Search > Midtown (campaign 24075490034, new) spent $997.80 for 3.0 booking conversions, about $333 each, against Search > Brand at $290.15 for 16.0, about $18. Google spend at this account nearly doubled from $1,166 to $2,150 and the account CPA is $66.6 against a poor threshold of $30.",
+  "Campaign spend sums tie exactly to account totals in all three accounts ($896.44, $2,149.92, $801.75), so the delivering-campaign set is complete despite the GAQL LIMIT warnings, which concerned zero-cost campaigns only.",
+  "Hutong Miami Google had genuine zero delivery on 22 Oct 2026 (prior week), a real zero carried from last week's finding, and no missing day in the reporting week.",
+  "USA Google walk-in conversion actions are recorded in context as having stopped tracking in 2026; they are in fact returning rows (Store visits 3, 19.5 and 16.5 this week) and are published as returned."
+ ]
+}

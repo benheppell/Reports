@@ -1,0 +1,34 @@
+{
+ "market": "Aqua USA",
+ "sym": "$",
+ "ccy": "USD",
+ "month_label": "October 2026",
+ "generated": "2 November 2026",
+ "venues": [
+  {
+   "name": "Aqua NYC",
+   "act": 833,
+   "tgt": 2394,
+   "mom": 780,
+   "yoy": 1251,
+   "nc": false
+  },
+  {
+   "name": "Hutong NYC",
+   "act": 486,
+   "tgt": 2100,
+   "mom": 477,
+   "yoy": 543,
+   "nc": true
+  },
+  {
+   "name": "Hutong Miami",
+   "act": 203,
+   "tgt": 530,
+   "mom": 246,
+   "yoy": 395,
+   "nc": false
+  }
+ ],
+ "note": "October closed at <b>1,522 bookings</b> against a 5,024 target, <b>69.7 per cent below</b>. The targets are strategic and deliberately aggressive, so the variance is by design, and Hutong Miami's target of 530 is derived from its Meta plan (374 &times; 6738/4756). <b>This page is on the create-path basis</b>: the <code>modify</code>, <code>manage</code> and <code>prearrival</code> pages, where the booking event also fires when a guest amends a booking, are excluded from all three months shown. <b>It therefore does not tie to the published September 2026 monthly page</b>, which was built on the older gross basis and read 1,742 for September against the 1,503 shown here. <b>Hutong NYC has no usable year-on-year figure for October</b>: the site's SevenRooms tracking outage ran to 14 October 2025, so only 15 to 31 October exist in last year's base and the 543 it holds is a 17-day figure against a full month. It is marked not comparable rather than carrying a false gain, and its target variance, which is sound because the 2026 month is complete, is <b>486 against 2,100, down 76.9 per cent</b>. <b>The portfolio year-on-year column is not like for like</b> for the same reason. On the two venues that do compare, Aqua NYC and Hutong Miami, bookings fell from <b>1,646 to 1,036, down 37.1 per cent</b>. <b>Aqua NYC is the month's largest absolute shortfall</b> at 833 against a 2,394 target, though it improved on September's 780 and the last week of the month was its strongest of the series at 239. <b>Hutong Miami is the month's weakest line</b>, 203 against 246 in September and 395 a year ago. <b>Also note the measurement break inside the month</b>: the GA4 booking event was dead across all three properties from 16 to 20 October and recovered on the 21st, so October's actuals understate the month by roughly five days at every venue. The week of 26 October is the first clean full week. Both Hutongs moved their Google Reserve booking provider to OpenTable in March 2026, so part of the year-on-year fall is a routing change rather than lost demand. The covers reports carry that split."
+}
