@@ -12,8 +12,6 @@ on:
   schedule:
     - cron: "47 5 * * *"        # 05:47 UTC: after the day has closed in HK, before London's morning
   workflow_dispatch:
-  push:
-    branches: [rebuild/test-run]
 
 concurrency:
   group: daily-data
