@@ -466,10 +466,11 @@ def covers(c: Ctx) -> dict:
         n = v["name"]
         cell = lambda d, x: (d.get(n) or {}).get(x.folder) or {}
         ch = {k: {"c": cell(ty, w).get(k, 0), "p": cell(ty, w.prior).get(k, 0),
-                  "y": None if v.get("no_ly") else cell(ly, w.yoy).get(k, 0)} for k in COVERS_CH + ["other"]}
+                  # a venue that did not exist last year had no covers then: a true zero, tagged below
+                  "y": 0 if v.get("no_ly") else cell(ly, w.yoy).get(k, 0)} for k in COVERS_CH + ["other"]}
         r = {"name": n, "ga4": num(c.ga4(n, w)), "ch": ch}
-        if v.get("pill"):
-            r["pill"] = v["pill"]
+        if v.get("pill") or v.get("no_ly"):
+            r["pill"] = v.get("pill") or "new in 2026"
         return r
 
     port = [row(v) for v in c.portfolio()]
