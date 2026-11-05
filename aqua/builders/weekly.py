@@ -177,9 +177,12 @@ def deepdive(c: Ctx) -> dict:
                        "users": web.get("users"), "sessions": web.get("sessions"),
                        "asd": num(web.get("asd"), 1), "bounce": num(web.get("bounce"), 4),
                        "meta_s": 0 if shared else num(m.get("spend"), 2),
-                       "meta_sch": c.meta_bookings(n, w), "meta_sch_prior": c.meta_bookings(n, w.prior),
+                       # a second row on a shared account shows nothing, so nothing is counted twice
+                       "meta_sch": 0 if shared else c.meta_bookings(n, w),
+                       "meta_sch_prior": 0 if shared else c.meta_bookings(n, w.prior),
                        "goog_s": 0 if shared else num(g.get("spend"), 2),
-                       "goog_c": num(c.google_bookings(n, w), 2), "goog_c_prior": num(c.google_bookings(n, w.prior), 2),
+                       "goog_c": 0 if shared else num(c.google_bookings(n, w), 2),
+                       "goog_c_prior": 0 if shared else num(c.google_bookings(n, w.prior), 2),
                        "shared": shared or bool(c.venue(n).get("shared_ads"))})
         series[n] = {"bookings": [num(c.ga4(n, x)) for x in c.weeks8],
                      "users": [(c.web(n, x) or {}).get("users") for x in c.weeks8]}
@@ -367,7 +370,8 @@ def ads(c: Ctx) -> dict:
     if len(names) > 1:
         data["All"] = _ads_venue(c, [v["name"] for v in c.portfolio()])
         order = ["All", *names] if c.m.get("ads_all_position", "first") == "first" else [*names, "All"]
-    return {"market": c.m["name"], "sym": c.m["sym"], "week": c.w.label(),
+    label = names[0] if len(names) == 1 else c.m["name"]  # single-venue markets use the venue name
+    return {"market": label, "sym": c.m["sym"], "week": c.w.label(),
             "fy": f"W{c.wk_no(c.w)} &middot; {fy_label(c.w.monday, c.m['fy_start_month'])}",
             "ext": True, "venues": order, "data": data,
             "foot_extra": no_dashes(capture_sentence(c, capture(c)))}

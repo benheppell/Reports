@@ -53,7 +53,10 @@ def render(report: str, payload_path: Path, out: Path, market_name: str) -> None
     args += [market_name, str(payload_path), str(out)] if report == "trends" else [str(payload_path), str(out)]
     subprocess.run(args, check=True, cwd=ROOT)
     if report == "trends":  # house style: the template emits one em dash
-        out.write_text(out.read_text().replace("&mdash;", ":").replace("—", ":"))
+        html = out.read_text()
+        for dash in ("&mdash;", "—"):
+            html = html.replace(f" {dash} ", ": ").replace(dash, ":")
+        out.write_text(html)
 
 
 def run_market(market, defaults, week: Week, targets, overrides, gm, sr, from_facts: bool, today: date) -> dict:
@@ -79,7 +82,8 @@ def run_market(market, defaults, week: Week, targets, overrides, gm, sr, from_fa
             errors += [f"{report}: not a number at {b}, shown as n/a" for b in bad]
             pf, _, page = GENERATORS[report]
             (folder / pf).write_text(json.dumps(payload, indent=1, ensure_ascii=False, allow_nan=False))
-            render(report, folder / pf, folder / page, market["name"])
+            display = market["venue"][0]["name"] if len(market["venue"]) == 1 else market["name"]
+            render(report, folder / pf, folder / page, display)
             built.append(report)
         except Exception as e:
             errors.append(f"{report}: {e}")

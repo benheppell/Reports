@@ -35,10 +35,14 @@ def is_booking_action(name: str, rule: str | list[str] | None) -> bool:
     return rule == "ga4_named_ok" or "ga4" not in n
 
 
+LOCAL_ACTIONS = ("store visits", "local actions - directions", "local actions - menu views",
+                 "local actions - orders", "calls from ads", "clicks to call")
+
+
 def is_local_action(name: str) -> bool:
-    """Walk-in signals: store visits, directions, menu views, Book Now and calls."""
-    n = name.lower()
-    return name.startswith(LOCAL_PREFIX) or "store visit" in n
+    """Walk-in signals: store visits, directions, menu views, Book Now (Orders) and calls.
+    Google reports these under all_conversions only; their `conversions` column is 0."""
+    return name.strip().lower() in LOCAL_ACTIONS
 
 
 class GoogleAds:
@@ -92,11 +96,12 @@ class GoogleAds:
         """-> [{week, campaign_id, action, conversions}]"""
         if self._bq:
             return self._bq_rows("conversions", venue, start, end)
-        q = ("SELECT segments.week, campaign.id, segments.conversion_action_name, metrics.conversions "
-             f"FROM campaign WHERE segments.date BETWEEN '{start}' AND '{end}'")
+        q = ("SELECT segments.week, campaign.id, segments.conversion_action_name, metrics.conversions, "
+             f"metrics.all_conversions FROM campaign WHERE segments.date BETWEEN '{start}' AND '{end}'")
         return [{"week": r["segments"]["week"], "campaign_id": str(r["campaign"]["id"]),
                  "action": r["segments"]["conversionActionName"],
-                 "conversions": float(r["metrics"].get("conversions", 0) or 0)} for r in self._gaql(venue, q)]
+                 "conversions": float(r["metrics"].get("conversions", 0) or 0),
+                 "all_conversions": float(r["metrics"].get("allConversions", 0) or 0)} for r in self._gaql(venue, q)]
 
     # ---------------------------------------------------------------- shaped outputs
     def weekly(self, venue: dict, weeks: list[Week]) -> dict[str, dict]:
@@ -116,7 +121,7 @@ class GoogleAds:
             if is_booking_action(r["action"], rule):
                 a["bookings"] += r["conversions"]
             elif is_local_action(r["action"]):
-                a["local"] += r["conversions"]
+                a["local"] += r.get("all_conversions", 0)
         return {w.folder: dict(acc[w.monday.isoformat()]) for w in weeks}
 
     def campaigns(self, venue: dict, week: Week) -> list[dict]:
