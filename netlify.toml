@@ -1,6 +1,9 @@
-# Netlify config — static site + serverless functions (no build step).
+# Netlify config: static site + serverless functions.
+# The build step copies only the pages into dist/, so payloads, raw pulls and facts files in the
+# repo are never served. It needs nothing beyond the Python 3 in Netlify's build image.
 [build]
-  publish = "."
+  command = "python3 aqua/publish.py"
+  publish = "dist"
 
 [functions]
   directory = "netlify/functions"

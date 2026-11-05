@@ -1,0 +1,342 @@
+# Aqua Reports: the one place every market, venue, account and rule lives.
+#
+# Sources: claude/weekly-reports-runbook.md and claude/booking-pipeline-runbook.md
+# (as of 18 Oct and 12 Oct 2026) and the w2026-10-26 payloads. When a venue opens,
+# closes or changes account, change it here and nowhere else.
+#
+# Venue keys
+#   name            report row name, as shown on every page
+#   sr              SevenRooms venue record name(s) in public.venues; summed
+#   sr_from         only count SevenRooms rows created on or after this date
+#   ga4             GA4 property id(s); summed, rates session-weighted
+#   ga4_path        PARTIAL_REGEXP a pagePath must match (property split)
+#   ga4_path_not    PARTIAL_REGEXP a pagePath must not match (property split)
+#   meta            Meta ad account id(s)
+#   meta_campaigns  only these campaign ids count (shared account)
+#   meta_book_campaigns  only these campaign ids count toward Meta bookings
+#   meta_event      Meta action_type that counts as a booking
+#   google          Google Ads customer id
+#   google_mgr      manager (MCC) id to log in as, if managed
+#   google_actions  conversion action names that count, overriding the default rule
+#   google_excluded true: show spend as n/a, keep it out of CPA and paid funnel
+#   gsc_site / gsc_regex   Search Console property and brand query regex
+#   shared_ads      ad accounts shared with another row: never divide, show once
+#   outside         below the portfolio line, out of every total
+#   not_comparable  YoY shown as n/c
+#   no_ly           new venue, no last year
+#   pill            short tag shown beside the name
+
+[defaults]
+meta_event = "schedule_total"
+# Google bookings: actions whose name contains "booking" and "complete" and not "ga4".
+google_rule = "booking_complete_not_ga4"
+ga4_event = "sevenrooms_booking_complete"
+ga4_exclude_paths = "modify|manage|prearrival"     # create path only, from 12 Oct 2026
+late_record_rule = true                              # service date before created-week Monday is dropped, from 16 Oct 2026
+yoy_offset_days = 364
+flat_band_pct = 1.5
+
+# --------------------------------------------------------------------------- London
+[[market]]
+slug = "london"
+name = "London"
+ccy = "GBP"
+sym = "£"
+tz = "Europe/London"
+fy_start_month = 2
+reports = ["dashboard", "deepdive", "ads", "trends", "covers", "monthly"]
+covers_platform = "OpenTable"
+covers_rules = "london"
+ads_all_position = "first"
+top_campaigns = 6
+cpa = { meta_good = 15, meta_poor = 25, goog_good = 18, goog_poor = 30 }
+deepdive_exclude = ["DSL"]
+targets_mode = "reference"     # London is framed WoW and YoY, never against target
+live = [
+  { label = "Daily Covers & Bookings", href = "/london/daily/" },
+  { label = "Covers Pace Tracker", href = "/london-pace-tracker" },
+  { label = "Booking Pipeline", href = "/pipeline/london/" },
+]
+
+  [[market.venue]]
+  name = "Aqua Shard"
+  sr = ["Aqua Shard"]
+  ga4 = ["324811249"]
+  meta = ["act_1545415238841779"]
+  google = "4834414023"
+  gsc_site = "sc-domain:aquashard.co.uk"
+  gsc_regex = "aqua"
+
+  [[market.venue]]
+  name = "Hutong"
+  sr = ["Hutong London"]
+  ga4 = ["324836278"]
+  meta = ["act_1545418222174814"]
+  google = "5073458733"
+  gsc_site = "sc-domain:hutong.co.uk"
+  gsc_regex = "hutong"
+
+  [[market.venue]]
+  name = "Regent St"
+  sr = ["Aqua Kyoto", "Aqua Nueva"]
+  ga4 = ["342430509", "360337941"]
+  meta = ["act_1545421758841127", "act_1545420182174618"]
+  google = "3511646647"          # one shared account, counted once
+  gsc_site = ["sc-domain:aquakyoto.co.uk", "sc-domain:aquanueva.co.uk"]
+  gsc_regex = "aqua"
+
+  [[market.venue]]
+  name = "Azzurra"
+  sr = ["Azzurra"]
+  ga4 = ["403007090"]
+  meta = ["act_313000804748928"]
+  google = "4154355693"
+  gsc_site = "sc-domain:azzurrarestaurant.co.uk"
+  gsc_regex = "azzurra"
+
+  [[market.venue]]
+  name = "Shiro Sushi"
+  sr = ["Shiro"]
+  ga4 = ["344061897"]
+  meta = ["act_79870131"]
+  google = "1776253805"
+  gsc_site = "sc-domain:shirosushi.co.uk"
+  gsc_regex = "shiro"
+
+  [[market.venue]]
+  name = "DSL"
+  sr = ["Dim Sum Library"]
+  ga4 = ["388006034"]
+  meta = ["act_986571809129888"]
+  google = "3456575686"
+  google_mgr = "7441169950"
+  gsc_site = "sc-domain:dimsumlibrary.co.uk"
+  gsc_regex = "dim ?sum ?library|dimsumlibrary"
+  not_comparable = true          # pre-rebrand base of zero
+
+# --------------------------------------------------------------------------- Hong Kong
+[[market]]
+slug = "hk"
+name = "Hong Kong"
+ccy = "HKD"
+sym = "HK$"
+tz = "Asia/Hong_Kong"
+fy_start_month = 2
+reports = ["dashboard", "deepdive", "ads", "trends", "covers", "monthly"]
+covers_platform = "OpenRice"
+covers_rules = "hk"
+ads_all_position = "last"
+top_campaigns = 12
+cpa = { meta_good = 350, meta_poor = 600, goog_good = 150, goog_poor = 300 }
+targets_mode = "target"
+outside_label = "Outside the target set: not in the portfolio total or its variance"
+live = [
+  { label = "Covers Pace Tracker", href = "/hk-pace-tracker" },
+  { label = "Booking Pipeline", href = "/pipeline/hk/" },
+]
+
+  [[market.venue]]
+  name = "Aqua HK"
+  sr = ["Aqua Hong Kong"]
+  ga4 = ["372981635"]
+  meta = ["act_749760246599900"]
+  google = "5310180360"
+  gsc_site = "sc-domain:aqua.com.hk"
+  gsc_regex = "aqua"
+
+  [[market.venue]]
+  name = "Hutong HK"
+  sr = ["Hutong Hong Kong"]
+  ga4 = ["375848050"]
+  meta = ["act_340024265595294"]
+  google = "8264835394"
+  gsc_site = "sc-domain:hutong.com.hk"
+  gsc_regex = "hutong|胡同"
+
+  [[market.venue]]
+  name = "The Chinese Library"
+  sr = ["The Chinese Library"]
+  ga4 = ["356942576"]
+  meta = ["act_751101740229919"]
+  google = "8142978935"
+  gsc_site = "https://www.chineselibrary.com.hk/"
+  gsc_regex = "chinese.?library"
+
+  [[market.venue]]
+  name = "Cantina"
+  sr = ["Cantina"]
+  ga4 = ["359148527"]
+  meta = ["act_2431795346992652"]
+  google = "5637997037"
+  google_actions = "ga4_named_ok"   # its GA4-named action is its only booking action
+  gsc_site = "sc-domain:cantina.com.hk"
+  gsc_regex = "cantina"
+
+  [[market.venue]]
+  name = "Dim Sum Library"
+  sr = ["Dim Sum Library - Pacific Place"]
+  ga4 = ["357228369"]
+  meta = ["act_768848088611683"]
+  google = "3754265652"
+  google_mgr = "7441169950"
+  gsc_site = "sc-domain:dimsumlibrary.com.hk"
+  gsc_regex = "dim ?sum ?library|dimsumlibrary"
+
+  [[market.venue]]
+  name = "Shiro Pacific Place"
+  sr = ["Shiro Hong Kong"]
+  ga4 = ["359394354"]
+  ga4_path_not = "central|taikwun"
+  meta = ["act_283603334535394"]
+  google = "4093767407"
+  google_mgr = "7441169950"
+  google_actions = "ga4_named_ok"
+  shared_ads = "shiro"
+  tgt_label = "combined"
+
+  [[market.venue]]
+  name = "Shiro Tai Kwun"
+  sr = ["Shiro Tai Kwun"]
+  ga4 = ["359394354"]
+  ga4_path = "central|taikwun"
+  meta = ["act_283603334535394"]
+  google = "4093767407"
+  google_mgr = "7441169950"
+  google_actions = "ga4_named_ok"
+  shared_ads = "shiro"
+  tgt_label = "combined"
+  no_ly = true
+
+  [[market.venue]]
+  name = "Vesu"
+  sr = ["Vesu"]
+  ga4 = ["439152333"]
+  meta = ["act_721409993160810"]
+  meta_objective = "OUTCOME_LEADS"   # bookings from leads campaigns only
+  google = "4311541411"
+  google_mgr = "7441169950"
+  gsc_site = "sc-domain:vesupizzabar.com.hk"
+  gsc_regex = "vesu"
+  outside = true
+  not_comparable = true
+  pill = "reopened 8 Sep"
+
+  [[market.venue]]
+  name = "The Canton Library"
+  sr = ["Vista"]
+  sr_from = "2026-09-08"              # Vista rows before this are Vista the venue
+  ga4 = ["548638742"]
+  meta = ["act_2401548436678795"]
+  meta_campaigns = ["120252573180940246", "120251713227890246"]
+  meta_book_campaigns = ["120252573180940246"]
+  google = "5594089398"
+  google_excluded = true              # not a verified import; spend, bookings, CPA n/a
+  gsc_site = "sc-domain:thecantonlibrary.com.hk"
+  gsc_regex = "canton"
+  outside = true
+  no_ly = true
+  pill = "opened 8 Sep"
+
+  [[market.group]]
+  name = "Shiro (both sites)"
+  label = "Shiro, both sites (combined target)"
+  members = ["Shiro Pacific Place", "Shiro Tai Kwun"]
+  target_key = "Shiro"
+  gsc_site = "sc-domain:shiro-sushi.com"
+  gsc_regex = "shiro"
+
+# --------------------------------------------------------------------------- USA
+[[market]]
+slug = "usa"
+name = "USA"
+ccy = "USD"
+sym = "$"
+tz = "America/New_York"
+fy_start_month = 1
+reports = ["dashboard", "deepdive", "ads", "trends", "covers", "monthly"]
+covers_platform = "OpenTable + Resy"
+covers_rules = "usa"
+ads_all_position = "first"
+top_campaigns = 6
+cpa = { meta_good = 25, meta_poor = 50, goog_good = 15, goog_poor = 30 }
+targets_mode = "target"
+hub_note_extra = "Targets are aggressive FY26 strategic goals."
+live = [
+  { label = "Covers Pace Tracker", href = "/usa-pace-tracker" },
+  { label = "Booking Pipeline", href = "/pipeline/usa/" },
+]
+
+  [[market.venue]]
+  name = "Aqua NYC"
+  sr = ["Aqua Roma", "Aqua Kyoto NYC"]
+  ga4 = ["451165443"]
+  meta = ["act_1057116046095292"]
+  google = "4724837044"
+  gsc_site = "sc-domain:aqua-nyc.com"
+  gsc_regex = "aqua"
+
+  [[market.venue]]
+  name = "Hutong NYC"
+  sr = ["Hutong New York"]
+  ga4 = ["370519903"]
+  meta = ["act_1320018325245807"]
+  google = "8775967619"
+  gsc_site = "https://www.hutong-nyc.com/"
+  gsc_regex = "hutong"
+
+  [[market.venue]]
+  name = "Hutong Miami"
+  sr = ["Hutong Miami"]
+  ga4 = ["369179739"]
+  meta = ["act_756032299051731"]
+  google = "8465732460"
+  # Search Console unavailable: brand is a known gap, reported as null
+
+# --------------------------------------------------------------------------- Dubai
+[[market]]
+slug = "dubai"
+name = "Dubai"
+ccy = "AED"
+sym = "AED "
+tz = "Asia/Dubai"
+fy_start_month = 1
+reports = ["ads", "trends", "monthly"]
+no_target = true
+top_campaigns = 5
+live = [{ label = "Booking Pipeline", href = "/pipeline/dubai/" }]
+
+  [[market.venue]]
+  name = "Hutong Dubai"
+  sr = ["Hutong Dubai"]
+  ga4 = ["359650118"]
+  meta = ["act_551167838895768"]
+  google = "7344894846"
+  google_fx = 4.90                     # account reports GBP; x4.90 to AED, once
+  google_actions = ["Hutong Dubai (web) sevenrooms_booking_complete"]
+  google_cpa_unsafe = true             # two competing actions; quote no Google CPA
+  gsc_site = "https://www.hutong-dubai.com/"
+  gsc_regex = "hutong"
+
+# --------------------------------------------------------------------------- Paris
+[[market]]
+slug = "paris"
+name = "Paris"
+ccy = "EUR"
+sym = "€"
+tz = "Europe/Paris"
+fy_start_month = 2
+reports = ["ads", "trends", "monthly"]
+no_target = true
+top_campaigns = 3
+live = [{ label = "Booking Pipeline", href = "/pipeline/paris/" }]
+
+  [[market.venue]]
+  name = "Aqua Kyoto Paris"
+  sr = ["Aqua Kyoto Paris"]
+  ga4 = ["478459011"]
+  meta = ["act_1090963963133236"]
+  meta_event = "offsite_conversion.fb_pixel_custom"
+  google = "3987846746"
+  gsc_site = "sc-domain:aquakyoto.fr"
+  gsc_regex = "aqua|acqua|akua"
+  no_local_actions = true              # walk-in signals are a gap in both years

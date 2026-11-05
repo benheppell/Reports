@@ -1,0 +1,44 @@
+# Per-week judgement calls, editable on GitHub in the browser. Each run reads this file.
+#
+# withhold: publish a figure as a gap (n/a) rather than as read, with the reason in the notes.
+#   source is one of: google_bookings, meta_bookings, ga4_bookings, google_spend
+#   from / until are week folders (inclusive). Leave until out to keep withholding.
+#
+# note: free text added to the top of a market's notes for one week (dashboard note, ads
+#   insights, trends narrative and deep-dive observations all pick it up). Plain text; **bold**
+#   is allowed.
+#
+# capture_baseline: the healthy GA4 create-path / SevenRooms website rows ratio per venue.
+#   Below 90% of it the venue is flagged amber, below 80% red. GA4 counts gross (keeps
+#   cancellations and the bar) so a healthy ratio sits at or above 1.0 in most venues.
+
+[[withhold]]
+market = "london"
+venue = "Aqua Shard"
+source = "google_bookings"
+from = "w2026-10-12"
+reason = "Two Google booking actions overlap (WEBPAGE and GA4 import); summing them double counts."
+
+[[withhold]]
+market = "london"
+venue = "Hutong"
+source = "google_bookings"
+from = "w2026-10-12"
+reason = "The Google page tag is under recording, about 60 per cent of its normal range."
+
+[[withhold]]
+market = "hk"
+venue = "The Canton Library"
+source = "google_bookings"
+from = "w2026-09-07"
+reason = "The Google Ads booking action is not a verified import; it fires on the wrong event."
+
+[capture_baseline]
+london = { "Aqua Shard" = 0.98, "Hutong" = 1.05, "Regent St" = 0.97, "Azzurra" = 0.97, "Shiro Sushi" = 0.97, "DSL" = 0.97 }
+hk = { default = 1.17 }
+usa = { "Aqua NYC" = 1.6, "Hutong NYC" = 1.13, "Hutong Miami" = 1.25 }
+
+# [[note]]
+# market = "hk"
+# week = "w2026-11-02"
+# text = "**Tag fix deployed Wednesday.** Read Thursday onwards as clean."

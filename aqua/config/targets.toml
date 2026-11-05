@@ -1,0 +1,20 @@
+# Monthly GA4 booking targets per venue, from the FY26/27 portfolio workbook.
+#
+# Weekly targets are derived from these by aqua/dates.py week_target(): a week inside one month is
+# month x 7/30; a week that straddles two months takes each month / days in month x days in it.
+# YTD target = the sum of the derived weekly targets from W1 to the reporting week.
+#
+# Fill one table per market, keyed "YYYY-MM". A venue or month left out reads as "no target"
+# (a dash), never zero. Shiro HK holds one combined target under the group key "Shiro".
+# Dubai and Paris have no agreed GA4 target and need nothing here.
+#
+# Example (HK October 2026 portfolio was 4,439; enter it per venue):
+# [hk."Aqua HK"]
+# "2026-10" = 1234
+# "2026-11" = 1180
+
+[hk]
+
+[london]
+
+[usa]

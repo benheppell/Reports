@@ -33,7 +33,9 @@ tot = {k: 0 for k in ['act', 'tgt', 'ytd', 'ytdt', 'meta_s', 'goog_s', 'wowb', '
 # ---- optional extensions (HK Sep 2026). Absent keys => original behaviour, byte-identical output.
 GROUPS = P.get('groups', [])      # [{name,label,members:[...],tgt,ytdt,meta_s,goog_s}] combined target + shared ads
 OUTSIDE = P.get('outside', [])    # rows shown below the portfolio line, excluded from totals
-EXT = bool(GROUPS or OUTSIDE)
+# A row with no target or no YTD (targets not loaded, a failed pull) also takes the extended
+# path, which shows a dash rather than failing.
+EXT = bool(GROUPS or OUTSIDE or any(v.get('tgt') is None or v.get('ytd') is None for v in V))
 DASH = '<span class="num" style="color:#94a3b8">&ndash;</span>'
 
 
@@ -46,7 +48,9 @@ def ext_row(v, cls=''):
     varp = (v['act'] - tgt) / tgt * 100 if tgt else None
     wowp = (v['act'] - v['wow']) / v['wow'] * 100 if v.get('wow') else None
     yoyp = (v['act'] - v['yoy']) / v['yoy'] * 100 if v.get('yoy') else None
-    ytdvarp = (v['ytd'] - ytdt) / ytdt * 100 if ytdt else None
+    ytd = v.get('ytd')
+    ytdvarp = (ytd - ytdt) / ytdt * 100 if ytdt and ytd is not None else None
+    ytd_s = f'{ytd:,}' if ytd is not None else DASH
     if v.get('shared_ads'):
         adc = cpc = _pill('shared', '#f1f5f9', '#475569')
     else:
@@ -55,11 +59,13 @@ def ext_row(v, cls=''):
         adc = f'{money(ad)}'
         cpc = f'{money(base / v["act"])}' if v['act'] else DASH
     pill = _pill(v['pill']) if v.get('pill') else ''
+    if v.get('nc'):
+        pill += _pill('not comparable')
     return (f'<tr{cls}><td>{v["name"]}{pill}</td><td class="num">{v["act"]:,}</td>'
             f'<td class="num">{f"{tgt:,}" if tgt is not None else v.get("tgt_label", DASH)}</td>'
             f'<td>{pctspan(varp) if tgt else DASH}</td><td>{arrow(wowp)}</td>'
             f'<td>{_pill("new venue") if v.get("noyoy") else arrow(yoyp)}</td>'
-            f'<td class="num">{v["ytd"]:,}</td><td>{pctspan(ytdvarp) if ytdt else DASH}</td>'
+            f'<td class="num">{ytd_s}</td><td>{pctspan(ytdvarp) if ytdvarp is not None else DASH}</td>'
             f'<td class="num">{adc}</td><td class="num">{cpc}</td></tr>')
 
 
@@ -67,10 +73,10 @@ GROUP_OF = {m: g for g in GROUPS for m in g['members']}
 for v in V:
     if EXT and (v.get('tgt') is None or v.get('shared_ads') or v.get('noyoy') or v.get('pill')):
         rows += ext_row(v)
-        for k, s in [('act', v['act']), ('ytd', v['ytd']), ('wowb', v['wow']), ('yoyb', v.get('yoy') or 0)]:
+        for k, s in [('act', v['act']), ('ytd', v.get('ytd') or 0), ('wowb', v.get('wow') or 0), ('yoyb', v.get('yoy') or 0)]:
             tot[k] += s
         if v.get('tgt') is not None:
-            tot['tgt'] += v['tgt']; tot['ytdt'] += v['ytdt']
+            tot['tgt'] += v['tgt']; tot['ytdt'] += v.get('ytdt') or 0
         if not v.get('shared_ads'):
             tot['meta_s'] += v['meta_s']; tot['goog_s'] += v['goog_s']
         g = GROUP_OF.get(v['name'])
@@ -81,7 +87,7 @@ for v in V:
                   'ytd': sum(x['ytd'] for x in mem), 'meta_s': g['meta_s'], 'goog_s': g['goog_s']}
             g['_v'] = gv
             rows += ext_row(gv, ' class="grp"')
-            tot['tgt'] += g['tgt']; tot['ytdt'] += g['ytdt']
+            tot['tgt'] += g['tgt'] or 0; tot['ytdt'] += g['ytdt'] or 0
             tot['meta_s'] += g['meta_s']; tot['goog_s'] += g['goog_s']
         continue
     ad = v['meta_s'] + v['goog_s']
@@ -102,21 +108,24 @@ for v in V:
              f'<td class="num">{money(ad)}</td><td class="num">{money(cpb)}</td></tr>')
 
 ad_t = tot['meta_s'] + tot['goog_s']
-varp = (tot['act'] - tot['tgt']) / tot['tgt'] * 100
-wowp = (tot['act'] - tot['wowb']) / tot['wowb'] * 100
-yoyp = (tot['act'] - tot['yoyb']) / tot['yoyb'] * 100
-ytdvarp = (tot['ytd'] - tot['ytdt']) / tot['ytdt'] * 100
-rows += (f'<tr class="total"><td>Portfolio</td><td class="num">{tot["act"]:,}</td><td class="num">{tot["tgt"]:,}</td>'
-         f'<td>{pctspan(varp)}</td><td>{arrow(wowp)}</td><td>{arrow(yoyp)}</td>'
-         f'<td class="num">{tot["ytd"]:,}</td><td>{pctspan(ytdvarp)}</td>'
-         f'<td class="num">{money(ad_t)}</td><td class="num">{money(ad_t / tot["act"])}</td></tr>')
+varp = (tot['act'] - tot['tgt']) / tot['tgt'] * 100 if tot['tgt'] else None
+wowp = (tot['act'] - tot['wowb']) / tot['wowb'] * 100 if tot['wowb'] else None
+yoyp = (tot['act'] - tot['yoyb']) / tot['yoyb'] * 100 if tot['yoyb'] else None
+ytdvarp = (tot['ytd'] - tot['ytdt']) / tot['ytdt'] * 100 if tot['ytdt'] else None
+tgt_s = f'{tot["tgt"]:,}' if tot['tgt'] else DASH
+cpb_s = money(ad_t / tot['act']) if tot['act'] else DASH
+rows += (f'<tr class="total"><td>Portfolio</td><td class="num">{tot["act"]:,}</td><td class="num">{tgt_s}</td>'
+         f'<td>{pctspan(varp) if varp is not None else DASH}</td><td>{arrow(wowp)}</td><td>{arrow(yoyp)}</td>'
+         f'<td class="num">{tot["ytd"]:,}</td><td>{pctspan(ytdvarp) if ytdvarp is not None else DASH}</td>'
+         f'<td class="num">{money(ad_t)}</td><td class="num">{cpb_s}</td></tr>')
 if OUTSIDE:
     rows += f'<tr class="osep"><td colspan="10">{P.get("outside_label", "Outside the target set")}</td></tr>'
     rows += ''.join(ext_row(v) for v in OUTSIDE)
 
 UNITS = V
 if EXT:
-    UNITS = [v for v in V if v.get('tgt') is not None] + [dict(g['_v'], name=g['name']) for g in GROUPS if '_v' in g]
+    UNITS = ([v for v in V if v.get('tgt') is not None and v.get('ytdt') and v.get('ytd') is not None]
+             + [dict(g['_v'], name=g['name']) for g in GROUPS if '_v' in g and g['_v'].get('ytdt')])
 below = [v for v in UNITS if v['ytd'] < v['ytdt']]
 blist = ', '.join(f'{v["name"]} ({(v["ytd"] - v["ytdt"]) / v["ytdt"] * 100:.1f}%)' for v in below) or 'none'
 ontrack = len(UNITS) - len(below)
@@ -157,9 +166,9 @@ a.back{{font-size:12px;color:#2563eb;text-decoration:none}}
 <div class="sub">{P['week']} (Mon–Sun) · Currency {P['ccy']} · WoW vs {P['wow']} · YoY vs {P['yoy']}</div></div>
 <div class="cards">
 <div class="card"><div class="lab">Weekly Bookings</div><div class="big">{tot['act']:,}</div>
-<div class="meta">Target {tot['tgt']:,} · {pctspan(varp)} · WoW {arrow(wowp)} · YoY {arrow(yoyp)}</div></div>
+<div class="meta">{f"Target {tot['tgt']:,} · {pctspan(varp)}" if tot['tgt'] else 'No target loaded'} · WoW {arrow(wowp)} · YoY {arrow(yoyp)}</div></div>
 <div class="card"><div class="lab">YTD Bookings ({P['ytd_label']})</div><div class="big">{tot['ytd']:,}</div>
-<div class="meta">Target {tot['ytdt']:,} · {pctspan(ytdvarp)}</div></div>
+<div class="meta">{f"Target {tot['ytdt']:,} · {pctspan(ytdvarp)}" if tot['ytdt'] else 'No target loaded'}</div></div>
 <div class="card"><div class="lab">Total Ad Spend</div><div class="big">{money(ad_t)}</div>
 <div class="meta">Cost per booking {money(ad_t / tot['act'])} · Meta {money(tot['meta_s'])} + Google {money(tot['goog_s'])}</div></div>
 <div class="card"><div class="lab">Venues vs Target</div><div class="big">{ontrack} / {len(UNITS)}</div>

@@ -1,0 +1,90 @@
+# The Monday run. Pulls the week from GA4, Meta and Google Ads (GoMarble / BigQuery) and
+# SevenRooms (Supabase), builds every payload and page, updates the manifest and hub, checks
+# the pages render, and commits. Netlify deploys the commit as it always has.
+#
+# Repository secrets (Settings > Secrets and variables > Actions):
+#   GOMARBLE_API_KEY            from https://apps.gomarble.ai/settings/api-keys
+#   SUPABASE_DB_URL             Supabase > Project settings > Database > connection string
+#                               (session pooler, port 5432), with the password filled in
+#   GCP_SA_KEY                  JSON key for a service account with BigQuery Data Viewer and
+#                               Job User on the Google Ads project (only once BigQuery is on)
+# Repository variables:
+#   GOOGLE_ADS_SOURCE           "gomarble" (default) or "bigquery"
+#   GOOGLE_ADS_BQ_PROJECT, GOOGLE_ADS_BQ_DATASET   when GOOGLE_ADS_SOURCE is bigquery
+name: Weekly reports
+
+on:
+  schedule:
+    - cron: "17 7 * * 1"        # Mondays 07:17 UTC, after Sunday has closed in every market
+  workflow_dispatch:
+    inputs:
+      week:
+        description: "Monday of the week to build (YYYY-MM-DD). Blank = last completed week."
+        required: false
+      markets:
+        description: "Comma-separated slugs, or all"
+        default: "all"
+      monthly:
+        description: "Build last month's monthlies: auto (first Monday only), yes or no"
+        default: "auto"
+
+concurrency:
+  group: weekly-reports
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      GOMARBLE_API_KEY: ${{ secrets.GOMARBLE_API_KEY }}
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      GOOGLE_ADS_SOURCE: ${{ vars.GOOGLE_ADS_SOURCE || 'gomarble' }}
+      GOOGLE_ADS_BQ_PROJECT: ${{ vars.GOOGLE_ADS_BQ_PROJECT }}
+      GOOGLE_ADS_BQ_DATASET: ${{ vars.GOOGLE_ADS_BQ_DATASET }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt && python -m playwright install --with-deps chromium
+
+      - name: Google Cloud auth (BigQuery backend only)
+        if: ${{ vars.GOOGLE_ADS_SOURCE == 'bigquery' }}
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Build reports
+        id: build
+        continue-on-error: true
+        run: |
+          python -m aqua.run \
+            ${{ inputs.week && format('--week {0}', inputs.week) || '' }} \
+            --markets "${{ inputs.markets || 'all' }}" \
+            --monthly "${{ inputs.monthly || 'auto' }}"
+
+      - name: Check pages render
+        run: python -m aqua.check
+
+      - name: Commit
+        run: |
+          git config user.name "Aqua Auto"
+          git config user.email "auto@aqua.local"
+          git add -A
+          if git diff --cached --quiet; then echo "Nothing to commit"; exit 0; fi
+          WEEK=$(python -c "import json;print(json.load(open('run-log.json'))['week'])")
+          git commit -m "Reports ${WEEK} (automated run)"
+          for i in 1 2 3; do git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break; sleep $((i*5)); done
+
+      - name: Fail the job if a market failed
+        if: steps.build.outcome == 'failure'
+        run: |
+          echo "At least one market did not build cleanly. See the run summary and run-log.json." >&2
+          exit 1

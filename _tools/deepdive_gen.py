@@ -19,6 +19,8 @@ def arrow(p):
 
 
 def cpacell(v, good, poor):
+    if v is None:
+        return '<td class="num mut">n/a</td>'
     cls = 'pos' if v <= good else ('neg' if v >= poor else '')
     return f'<td class="num {cls}">{money(v, 2)}</td>'
 
@@ -28,7 +30,7 @@ def mmss(s):
 
 
 # ---------- cards ----------
-tot_b = sum(v['act'] for v in V); tot_t = sum(v['tgt'] for v in V)
+tot_b = sum(v['act'] for v in V); tot_t = sum(v['tgt'] or 0 for v in V)
 tot_bp = sum(v['wow_b'] for v in V); tot_by = sum(v['yoy_b'] for v in V)
 tot_ms = sum(v['meta_s'] for v in V); tot_gs = sum(v['goog_s'] for v in V)
 tot_u = sum(v['users'] for v in V); ad = tot_ms + tot_gs
@@ -38,14 +40,19 @@ varp = (tot_b - tot_t) / tot_t * 100 if tot_t else None
 cvr = tot_b / tot_u * 100 if tot_u else 0
 
 # ---------- Meta ----------
+# A withheld or failed figure arrives as None and shows as n/a, never as 0.
+def cnt(x, fmt=',.0f'):
+    return '<span class="mut">n/a</span>' if x is None else format(x, fmt)
+
+
 mrows = ''
 for v in V:
-    cps = v['meta_s'] / v['meta_sch'] if v['meta_sch'] else 0
-    w = (v['meta_sch'] - v['meta_sch_prior']) / v['meta_sch_prior'] * 100 if v['meta_sch_prior'] else None
+    cps = v['meta_s'] / v['meta_sch'] if v['meta_sch'] else None
+    w = (v['meta_sch'] - v['meta_sch_prior']) / v['meta_sch_prior'] * 100 if v['meta_sch'] is not None and v['meta_sch_prior'] else None
     mrows += (f'<tr><td>{v["name"]}</td><td class="num">{money(v["meta_s"])}</td>'
-              f'<td class="num">{v["meta_sch"]:,}</td>{cpacell(cps, TH["meta_good"], TH["meta_poor"])}'
+              f'<td class="num">{cnt(v["meta_sch"], ",")}</td>{cpacell(cps, TH["meta_good"], TH["meta_poor"])}'
               f'<td>{arrow(w)}</td></tr>')
-tms = sum(v['meta_sch'] for v in V); tmsp = sum(v['meta_sch_prior'] for v in V)
+tms = sum(v['meta_sch'] or 0 for v in V); tmsp = sum(v['meta_sch_prior'] or 0 for v in V)
 mrows += (f'<tr class="total"><td>Total</td><td class="num">{money(tot_ms)}</td><td class="num">{tms:,}</td>'
           f'<td class="num">{money(tot_ms / tms, 2) if tms else "—"}</td>'
           f'<td>{arrow((tms - tmsp) / tmsp * 100 if tmsp else None)}</td></tr>')
@@ -53,13 +60,13 @@ mrows += (f'<tr class="total"><td>Total</td><td class="num">{money(tot_ms)}</td>
 # ---------- Google ----------
 grows = ''
 for v in V:
-    cpc = v['goog_s'] / v['goog_c'] if v['goog_c'] else 0
-    w = (v['goog_c'] - v['goog_c_prior']) / v['goog_c_prior'] * 100 if v['goog_c_prior'] else None
+    cpc = v['goog_s'] / v['goog_c'] if v['goog_c'] else None
+    w = (v['goog_c'] - v['goog_c_prior']) / v['goog_c_prior'] * 100 if v['goog_c'] is not None and v['goog_c_prior'] else None
     sh = ' <span class="mut">(shared)</span>' if v.get('shared') else ''
     grows += (f'<tr><td>{v["name"]}{sh}</td><td class="num">{money(v["goog_s"])}</td>'
-              f'<td class="num">{v["goog_c"]:,.0f}</td>{cpacell(cpc, TH["goog_good"], TH["goog_poor"])}'
+              f'<td class="num">{cnt(v["goog_c"])}</td>{cpacell(cpc, TH["goog_good"], TH["goog_poor"])}'
               f'<td>{arrow(w)}</td></tr>')
-tgc = sum(v['goog_c'] for v in V); tgcp = sum(v['goog_c_prior'] for v in V)
+tgc = sum(v['goog_c'] or 0 for v in V); tgcp = sum(v['goog_c_prior'] or 0 for v in V)
 grows += (f'<tr class="total"><td>Total</td><td class="num">{money(tot_gs)}</td><td class="num">{tgc:,.0f}</td>'
           f'<td class="num">{money(tot_gs / tgc, 2) if tgc else "—"}</td>'
           f'<td>{arrow((tgc - tgcp) / tgcp * 100 if tgcp else None)}</td></tr>')
@@ -160,7 +167,7 @@ a.back{{font-size:12px;color:#2563eb;text-decoration:none}}
 <div class="pane on" id="p">
 <div class="cards">
 <div class="card"><div class="lab">Combined Bookings</div><div class="big">{tot_b:,}</div>
-<div class="meta">Target {tot_t:,} · {"+" if varp >= 0 else ""}{varp:.1f}% · WoW {arrow(wowp)}</div></div>
+<div class="meta">{f"Target {tot_t:,} · {varp:+.1f}%" if varp is not None else "No target loaded"} · WoW {arrow(wowp)}</div></div>
 <div class="card"><div class="lab">Combined Ad Spend</div><div class="big">{money(ad)}</div>
 <div class="meta">Cost per booking {money(ad / tot_b, 2)} · Meta {money(tot_ms)} + Google {money(tot_gs)}</div></div>
 <div class="card"><div class="lab">Combined Users</div><div class="big">{tot_u:,}</div>
