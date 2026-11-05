@@ -70,7 +70,7 @@ def _weeks_between(start: date, week: Week) -> list[Week]:
 
 
 def collect_market(market: dict, defaults: dict, week: Week, gm: GoMarble, sr=None,
-                   gads: GoogleAds | None = None, workers: int = 6) -> dict:
+                   gads: GoogleAds | None = None, workers: int = 3) -> dict:
     gads = gads or GoogleAds(gm)
     facts = {"market": market["slug"], "week": week.monday.isoformat(), "venues": {}, "covers": None,
              "web_rows": None, "errors": []}

@@ -6,6 +6,7 @@ committed until each new page loads with no console or page errors and has visib
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -43,9 +44,9 @@ def check(pages: list[Path]) -> list[str]:
             text = page.inner_text("body").strip()
             if len(text) < 200:
                 errs.append("page is nearly empty")
-            for sel in ("text=undefined", "text=NaN"):
-                if page.locator(sel).count():
-                    errs.append(f"shows '{sel[5:]}'")
+            for word in ("undefined", "NaN", "null"):  # whole word, case-sensitive ("financial" is fine)
+                if re.search(rf"\b{word}\b", text):
+                    errs.append(f"shows '{word}'")
             errs = [e for e in errs if "net::ERR_FAILED" not in e and "Failed to load resource" not in e]
             if errs:
                 problems.append(f"{path.relative_to(ROOT)}: " + "; ".join(errs[:5]))

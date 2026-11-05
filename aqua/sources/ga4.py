@@ -5,6 +5,8 @@ dimension (ISO weeks run Monday to Sunday, matching the reporting week) over a c
 """
 from __future__ import annotations
 
+import json
+import time
 from collections import defaultdict
 from datetime import date
 
@@ -43,7 +45,19 @@ def _run(gm: GoMarble, prop: str, start: date, end: date, metrics: list[str], di
         args["dimension_filter"] = flt
     if limit:
         args["limit"] = limit
-    res = gm.call(TOOL, args)
+    for attempt in range(3):
+        res = gm.call(TOOL, args, fresh=attempt > 0)
+        # A real report always carries its headers and metadata, even with zero rows. Anything
+        # else is an error or a rate limit dressed as a result: never read it as zero.
+        meta = res.get("metadata") or {}
+        ok = "metricHeaders" in res and "metadata" in res and not res.get("error")
+        if ok and meta.get("total_rows", 0) > meta.get("rows_returned", len(res.get("rows") or [])):
+            raise RuntimeError(f"GA4 {prop}: {meta['rows_returned']} of {meta['total_rows']} rows returned")
+        if ok:
+            break
+        time.sleep(10 * (attempt + 1))
+    else:
+        raise RuntimeError(f"GA4 {prop} {start}..{end}: no report in response: {json.dumps(res)[:200]}")
     out = []
     for r in res.get("rows", []) or []:
         row = {h["name"]: v["value"] for h, v in zip(res["dimensionHeaders"], r["dimensionValues"])} if dims else {}

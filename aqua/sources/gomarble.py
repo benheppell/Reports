@@ -94,10 +94,11 @@ class GoMarble:
         raw = json.dumps([tool, args], sort_keys=True, ensure_ascii=False)
         return hashlib.sha256(raw.encode()).hexdigest()[:24]
 
-    def call(self, tool: str, args: dict, retries: int = 1) -> dict:
-        """Call a GoMarble tool and return its JSON result. A failed call is retried once."""
+    def call(self, tool: str, args: dict, retries: int = 1, fresh: bool = False) -> dict:
+        """Call a GoMarble tool and return its JSON result. A failed call is retried once.
+        fresh=True skips a recorded response (used when a caller rejects what came back)."""
         path = self.cache / f"{tool}-{self._key(tool, args)}.json" if self.cache else None
-        if path and path.exists():
+        if path and path.exists() and not (fresh and not self.replay_only):
             return json.loads(path.read_text())["result"]
         if self.replay_only:
             raise GoMarbleError(f"Not in replay cache: {tool} {json.dumps(args)[:200]}")
