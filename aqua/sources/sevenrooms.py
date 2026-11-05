@@ -95,10 +95,34 @@ FROM k GROUP BY sr_venue, cw, ch ORDER BY sr_venue, cw, ch
     return sql, {"tz": tz, "venues": venue_names, "start": start.isoformat(), "end": end_excl.isoformat()}
 
 
+def dsn_parts(dsn: str) -> dict:
+    """Split a postgresql:// URL into keyword arguments ourselves. Pasted secrets often carry a
+    trailing newline or space, and passwords with @ # / ? confuse URL parsing; splitting on the
+    last @ and unquoting avoids both."""
+    import socket
+    from urllib.parse import unquote
+    s = dsn.strip()
+    scheme, _, rest = s.partition("://")
+    if scheme not in ("postgresql", "postgres"):
+        raise ValueError("SUPABASE_DB_URL must start with postgresql://")
+    userinfo, _, hostpart = rest.rpartition("@")
+    user, _, password = userinfo.partition(":")
+    hostport, _, dbname = hostpart.partition("/")
+    host, _, port = hostport.partition(":")
+    host = host.strip()
+    try:
+        socket.getaddrinfo(host, int(port or 5432), socket.AF_INET)
+    except OSError as e:
+        raise ConnectionError(f"cannot resolve {host!r} over IPv4: {e}") from None
+    return {"host": host, "port": int(port or 5432), "user": unquote(user), "password": unquote(password),
+            "dbname": (dbname.split("?")[0] or "postgres").strip(), "sslmode": "require"}
+
+
 class SevenRooms:
     def __init__(self, dsn: str | None = None):
         import psycopg  # only the live run needs a database driver
-        self.conn = psycopg.connect(dsn or os.environ["SUPABASE_DB_URL"], autocommit=True)
+        self.conn = psycopg.connect(autocommit=True, connect_timeout=30,
+                                    **dsn_parts(dsn or os.environ["SUPABASE_DB_URL"]))
 
     def query(self, sql: str, params) -> list[tuple]:
         with self.conn.cursor() as cur:
