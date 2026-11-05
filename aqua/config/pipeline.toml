@@ -1,0 +1,42 @@
+# Booking pipeline: per-venue settings on top of markets.toml (accounts come from there by name).
+# Method: claude/booking-pipeline-runbook.md (18 Oct 2026).
+#
+#   order        row order on the page
+#   channels     SevenRooms channels counted in the total: wg (website + Google Reserve),
+#                wg+ot (+ OpenTable), wg+ot+rs (+ Resy). wgb is always website + Google Reserve.
+#   brand_site   Search Console property, exactly as GoMarble lists it; brand_regex the venue's own
+#                name only (never a landmark or category). No brand_site = brand is a known gap.
+#   ly_null      last year is not comparable or does not exist: every _ly column is null
+#   spend_null   spend cannot be stated (shared account across rows)
+#   spend_ly_null / brand_ly_null   last year's spend / brand cannot be stated
+#   notes        short structural facts shown on the tiles, never interpretation
+
+[london]
+"Aqua Shard"  = { order = 1, channels = "wg", brand_site = "https://aquashard.co.uk/", brand_regex = "aqua", notes = { brand = "basis `aqua` on aquashard.co.uk, venue name only" } }
+"Hutong"      = { order = 2, channels = "wg", brand_site = "https://hutong.co.uk/", brand_regex = "hutong" }
+"DSL"         = { order = 3, channels = "wg+ot", brand_site = "https://dimsumlibrary.co.uk/", brand_regex = "dim ?sum ?library|dimsumlibrary", ly_null = true, notes = { cpa = "no 2025 CPA, no 2025 spend", spend = "Google account has no 2025 history, last year spend not available", brand = "dimsumlibrary.co.uk holds no 2025 data, last year brand not available" } }
+"Regent St"   = { order = 4, channels = "wg+ot", brand_site = ["sc-domain:aquakyoto.co.uk", "https://aquanueva.co.uk/"], brand_regex = "aqua", notes = { spend = "Google Ads account is shared across Aqua Kyoto and Aqua Nueva and is counted once", brand = "aquakyoto.co.uk and aquanueva.co.uk summed", sessions = "two GA4 properties summed" } }
+"Shiro Sushi" = { order = 5, channels = "wg+ot", brand_site = "sc-domain:shirosushi.co.uk", brand_regex = "shiro" }
+"Azzurra"     = { order = 6, channels = "wg+ot", brand_site = "sc-domain:azzurrarestaurant.co.uk", brand_regex = "azzurra" }
+
+[hk]
+"Aqua HK"             = { order = 1, channels = "wg", brand_site = "https://aqua.com.hk/", brand_regex = "aqua" }
+"Hutong HK"           = { order = 2, channels = "wg", brand_site = "https://hutong.com.hk/", brand_regex = "hutong|胡同", notes = { brand = "basis `hutong` or the Chinese name" } }
+"The Chinese Library" = { order = 3, channels = "wg", brand_site = "https://www.chineselibrary.com.hk/", brand_regex = "chinese.?library" }
+"Cantina"             = { order = 4, channels = "wg", brand_site = "https://cantina.com.hk/", brand_regex = "cantina" }
+"Dim Sum Library"     = { order = 5, channels = "wg", brand_site = "https://dimsumlibrary.com.hk/", brand_regex = "dim ?sum ?library|dimsumlibrary", notes = { brand = "name search basis, dim sum library and dimsumlibrary only" } }
+"Shiro Pacific Place" = { order = 6, channels = "wg", spend_null = true, notes = { cpa = "no CPA, spend is not divisible between the two Shiro sites", spend = "one Meta account and one Google account serve both Shiro sites, spend cannot be split", brand = "one Search Console domain serves both Shiro sites, brand cannot be split", sessions = "split from the shared GA4 property by pagePath, Pacific Place is the remainder after Tai Kwun" } }
+"Shiro Tai Kwun"      = { order = 7, channels = "wg", spend_null = true, ly_null = true, notes = { cpa = "no CPA, spend is not divisible between the two Shiro sites", spend = "one Meta account and one Google account serve both Shiro sites, spend cannot be split", brand = "one Search Console domain serves both Shiro sites, brand cannot be split", sessions = "split from the shared GA4 property by pagePath on central or taikwun, no 2025 history" } }
+"Vesu"                = { order = 8, channels = "wg", brand_site = "https://vesupizzabar.com.hk/", brand_regex = "vesu" }
+"The Canton Library"  = { order = 9, channels = "wg", brand_site = "https://thecantonlibrary.com.hk/", brand_regex = "canton", ly_null = true, notes = { cpa = "Meta only, Google spend is excluded", spend = "Meta only, the Google account is firing on the wrong event and is excluded", brand = "2025 not available, opened 8 Sep 2026", sessions = "2025 not available, opened 8 Sep 2026" } }
+
+[usa]
+"Aqua NYC"     = { order = 1, channels = "wg+ot+rs", brand_site = "https://aqua-nyc.com/", brand_regex = "aqua", notes = { spend = "Aqua Roma and Aqua Kyoto NYC share one account" } }
+"Hutong NYC"   = { order = 2, channels = "wg+ot+rs", brand_site = "https://www.hutong-nyc.com/", brand_regex = "hutong" }
+"Hutong Miami" = { order = 3, channels = "wg+ot+rs", notes = { brand = "Search Console is not verified for this account, brand not available" } }
+
+[dubai]
+"Hutong Dubai" = { order = 1, channels = "wg", brand_site = "https://www.hutong-dubai.com/", brand_regex = "hutong", notes = { cpa = "two competing Google booking actions, no Google CPA is quoted" } }
+
+[paris]
+"Aqua Kyoto Paris" = { order = 1, channels = "wg", brand_site = "https://aquakyoto.fr/", brand_regex = "aqua|acqua|akua" }

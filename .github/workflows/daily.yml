@@ -1,0 +1,50 @@
+# Each morning: refresh the data behind the live pages.
+#   London daily bookings   GA4 bookings and users per day      -> public.london_daily_ga4
+#   Booking pipeline        five most recent weeks, all markets -> public.booking_pipeline
+# The pace trackers need nothing here: Supabase refreshes their views itself (pg_cron).
+#
+# Secrets: GOMARBLE_API_KEY, SUPABASE_DB_URL.
+# Variable WRITE_LIVE: until it is "true" both jobs only compare their figures with the tables and
+# write nothing, so they can run alongside the old scheduled tasks. Set it once they agree.
+name: Daily data
+
+on:
+  schedule:
+    - cron: "47 5 * * *"        # 05:47 UTC: after the day has closed in HK, before London's morning
+  workflow_dispatch:
+  push:
+    branches: [rebuild/test-run]
+
+concurrency:
+  group: daily-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GOMARBLE_API_KEY: ${{ secrets.GOMARBLE_API_KEY }}
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      WRITE: ${{ vars.WRITE_LIVE == 'true' && '--write' || '' }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+
+      - name: London daily GA4
+        id: daily
+        continue-on-error: true
+        run: python -m aqua.jobs.london_daily $WRITE
+
+      - name: Booking pipeline
+        id: pipeline
+        continue-on-error: true
+        run: python -m aqua.jobs.booking_pipeline $WRITE
+
+      - name: Fail if either job failed
+        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure'
+        run: exit 1
