@@ -1,131 +1,68 @@
 #!/usr/bin/env python3
-# Regenerates index.html (global hub) and each market's landing page from manifest.json.
-# Weekly + monthly reports are presented as dropdown selectors. Naming is date-consistent across markets.
-import json,os
-HERE=os.path.dirname(os.path.abspath(__file__))
-M=json.load(open(os.path.join(HERE,"manifest.json")))
-CSS='''@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+"""Regenerates index.html (global hub) and each market's landing page from manifest.json.
+
+The site is three live pages, each read from Supabase when it opens:
+  Booking pipeline   /pipeline/<market>/      every market
+  Covers pace        /<market>-pace-tracker   London, Hong Kong, USA
+  Daily bookings     /london/daily/           London
+Never hand-edit the index pages; change manifest.json and run this.
+"""
+import html
+import json
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+M = json.load(open(os.path.join(HERE, "manifest.json")))
+
+CSS = """@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px;max-width:1040px;margin:0 auto}
-h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 24px;font-size:14px}
-.tabs{display:flex;gap:6px;border-bottom:1px solid #e2e8f0;margin-bottom:24px;flex-wrap:wrap}
-.tab{padding:10px 20px;cursor:pointer;font-weight:600;font-size:14px;color:#64748b;border-bottom:2px solid transparent;margin-bottom:-1px}
-.tab.active{color:#0f172a;border-bottom-color:#2563eb}
-.market{display:none}.market.active{display:block}
-.pick{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;max-width:1280px}
-.pick .col label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700;margin-bottom:7px}
-select{width:100%;font-family:inherit;font-size:14px;font-weight:500;color:#0f172a;padding:11px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff;cursor:pointer}
-select:hover{border-color:#2563eb}
-.note{font-size:12px;color:#94a3b8;margin-top:16px}
-.live{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-a.livelink{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:#2563eb;text-decoration:none;border:1px solid #bfdbfe;background:#eff6ff;padding:9px 14px;border-radius:10px}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px 16px;max-width:1040px;margin:0 auto}
+h1{font-size:26px;font-weight:700}.sub{color:#64748b;margin:6px 0 28px;font-size:14px;line-height:1.5}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{border:1px solid #e2e8f0;border-radius:12px;padding:16px 18px}
+.card h2{font-size:16px;font-weight:700;display:flex;justify-content:space-between;align-items:baseline}
+.card h2 a{color:inherit;text-decoration:none}.card h2 span{font-size:12px;color:#94a3b8;font-weight:500}
+.links{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+a.livelink{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:600;color:#2563eb;text-decoration:none;
+ border:1px solid #bfdbfe;background:#eff6ff;padding:10px 13px;border-radius:10px}
 a.livelink:hover{background:#dbeafe;border-color:#2563eb}
-a.livelink .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;display:inline-block}
+a.livelink .dot{width:7px;height:7px;border-radius:50%;background:#16a34a;flex:none}
+a.livelink b{font-weight:600;white-space:nowrap}
+a.livelink small{margin-left:auto;font-weight:500;color:#64748b;font-size:12px;text-align:right}
 a.back{font-size:12px;color:#2563eb;text-decoration:none}
-footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px}
-@media(max-width:1150px){.pick{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:760px){.pick{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.pick{grid-template-columns:1fr}}'''
+footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.5}"""
 
-def selects(mk, prefix):
-    wopts='<option value="" selected disabled>Select a week…</option>'
-    aopts='<option value="" selected disabled>Select a week…</option>'
-    has_ads=False; has_dash=False
-    for w in mk['weekly']:
-        if w.get("dash",True):
-            has_dash=True
-            wopts+=f'<option value="{prefix}{w["folder"]}/dashboard.html">{w["dates"]} — Dashboard</option>'
-        if w.get("deepdive"):
-            wopts+=f'<option value="{prefix}{w["folder"]}/deep-dive.html">{w["dates"]} — Deep dive</option>'
-        if w.get("covers"):
-            wopts+=f'<option value="{prefix}{w["folder"]}/covers.html">{w["dates"]} — Covers</option>'
-        if w.get("ads"):
-            has_ads=True
-            aopts+=f'<option value="{prefix}{w["folder"]}/ads.html">{w["dates"]}</option>'
-    wdis=''
-    if not has_dash:
-        wopts='<option value="" selected disabled>None yet</option>'
-        wdis=' disabled style="opacity:.5"'
-    mopts='<option value="" selected disabled>Select a month…</option>'
-    mdis=''
-    if mk.get('monthly',[]):
-        for m in mk['monthly']:
-            mopts+=f'<option value="{prefix}{m["folder"]}/dashboard.html">{m["label"]} — Dashboard</option>'
-    else:
-        mopts='<option value="" selected disabled>None yet</option>'
-        mdis=' disabled style="opacity:.5"'
-    adis=''
-    if not has_ads:
-        aopts='<option value="" selected disabled>None yet</option>'
-        adis=' disabled style="opacity:.5"'
-    topts='<option value="" selected disabled>Select a week…</option>'
-    tdis=''
-    trd=mk.get('trends',[])
-    if trd:
-        for t in trd:
-            topts+=f'<option value="{prefix}{t["folder"]}/trends.html">{t["dates"]}</option>'
-    else:
-        topts='<option value="" selected disabled>None yet</option>'
-        tdis=' disabled style="opacity:.5"'
-    # covers column (covers reports flagged per weekly entry)
-    copts='<option value="" selected disabled>Select a week…</option>'
-    has_cov=False
-    for w in mk['weekly']:
-        if w.get("covers"):
-            has_cov=True
-            copts+=f'<option value="{prefix}{w["folder"]}/covers.html">{w["dates"]}</option>'
-    cdis=''
-    if not has_cov:
-        copts='<option value="" selected disabled>None yet</option>'
-        cdis=' disabled style="opacity:.5"'
-    # daily column (live page first, then dated copies newest first)
-    dopts='<option value="" selected disabled>None yet</option>'; ddis=' disabled style="opacity:.5"'
-    if mk.get('daily'):
-        ddis=''
-        dopts=f'<option value="{prefix}daily/index.html" selected>Latest — updates each morning</option>'
-        for d in sorted(mk.get('daily_history',[]), reverse=True):
-            dopts+=f'<option value="{prefix}daily/d{d}.html">{d}</option>'
-    return f'''<div class="pick">
-<div class="col"><label>Weekly report</label><select onchange="if(this.value)location.href=this.value"{wdis}>{wopts}</select></div>
-<div class="col"><label>Monthly report</label><select onchange="if(this.value)location.href=this.value"{mdis}>{mopts}</select></div>
-<div class="col"><label>Ads report</label><select onchange="if(this.value)location.href=this.value"{adis}>{aopts}</select></div>
-<div class="col"><label>Trends report</label><select onchange="if(this.value)location.href=this.value"{tdis}>{topts}</select></div>
-<div class="col"><label>Covers report</label><select onchange="if(this.value)location.href=this.value"{cdis}>{copts}</select></div>
-<div class="col"><label>Daily covers</label><select onchange="if(this.value)location.href=this.value"{ddis}>{dopts}</select></div>
-</div>'''
+FOOT = ("All pages read live data when they open: SevenRooms reservations from Supabase, refreshed through the day, "
+        "and ad and website figures written each morning.")
 
-def livelinks(mk):
-    lv=mk.get('live',[])
-    if not lv: return ''
-    items=''.join(f'<a class="livelink" href="{x["href"]}"><span class="dot"></span>{x["label"]}</a>' for x in lv)
-    return f'<div class="live">{items}</div>'
 
-# ---- global hub ----
-tabs=''.join(f'<div class="tab{" active" if i==0 else ""}" onclick="sel({i})">{mk["name"]}</div>' for i,mk in enumerate(M['markets']))
-body=''
-for i,mk in enumerate(M['markets']):
-    body+=f'<div class="market{" active" if i==0 else ""}" id="m{i}">{selects(mk, mk["slug"]+"/")}'
-    body+=f'<div class="note">{mk["ccy"]} · weekly bookings vs target with WoW / YoY / YTD; monthly bookings vs target with MoM / YoY.'
-    if mk['slug']=='usa': body+=' USA targets are FY26 strategic goals (aggressive); see report footnotes.'
-    body+='</div>'+livelinks(mk)+'</div>'
-g=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aqua — Global Performance Reports</title><style>{CSS}</style></head><body>
-<h1>Aqua — Global Performance Reports</h1>
-<div class="sub">Weekly and monthly GA4 booking performance vs targets. Pick a market, then a report.</div>
-<div class="tabs">{tabs}</div>{body}
-<footer>Generated {M['generated']}. GA4 bookings = sevenrooms_booking_complete. New reports added automatically each Monday.</footer>
-<script>function sel(i){{document.querySelectorAll('.tab').forEach(function(t,j){{t.classList.toggle('active',j==i);}});document.querySelectorAll('.market').forEach(function(m,j){{m.classList.toggle('active',j==i);}});}}</script>
-</body></html>'''
-open(os.path.join(HERE,"index.html"),"w").write(g)
+def links(mk):
+    return "".join(
+        f'<a class="livelink" href="{html.escape(x["href"])}"><span class="dot"></span><b>{html.escape(x["label"])}</b>'
+        f'<small>{html.escape(x.get("note", ""))}</small></a>' for x in mk["live"])
 
-# ---- per-market landings ----
-for mk in M['markets']:
-    p=f'''<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Aqua {mk['name']} — Performance Reports</title><style>{CSS}</style></head><body>
-<h1>Aqua {mk['name']} — Performance Reports</h1>
-<div class="sub">GA4 booking performance vs targets · {mk['ccy']}. Pick a report.</div>
-{selects(mk,'')}
-{livelinks(mk)}
-<footer>Generated {M['generated']}. GA4 bookings = sevenrooms_booking_complete.</footer></body></html>'''
-    open(os.path.join(HERE,mk['slug'],"index.html"),"w").write(p)
-print("Rebuilt hub + landings with dropdowns.")
+
+def page(title, body):
+    return (f'<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+            f'<meta name="viewport" content="width=device-width,initial-scale=1"><title>{title}</title>'
+            f'<style>{CSS}</style></head><body>{body}<footer>{FOOT}</footer></body></html>\n')
+
+
+cards = "".join(
+    f'<div class="card"><h2><a href="/{mk["slug"]}/">{html.escape(mk["name"])}</a><span>{mk["ccy"]}</span></h2>'
+    f'<div class="links">{links(mk)}</div></div>' for mk in M["markets"])
+with open(os.path.join(HERE, "index.html"), "w") as f:
+    f.write(page("Aqua: Live Reports",
+                 '<h1>Aqua: Live Reports</h1><div class="sub">Bookings created and where they are for, covers '
+                 'on the books against last year, and yesterday\'s bookings, by market.</div>'
+                 f'<div class="grid">{cards}</div>'))
+
+for mk in M["markets"]:
+    d = os.path.join(HERE, mk["slug"])
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, "index.html"), "w") as f:
+        f.write(page(f'Aqua {html.escape(mk["name"])}: Live Reports',
+                     f'<a class="back" href="/">← All markets</a><h1 style="margin-top:8px">'
+                     f'Aqua {html.escape(mk["name"])}</h1><div class="sub">Live reports, currency {mk["ccy"]}.</div>'
+                     f'<div class="links" style="max-width:520px">{links(mk)}</div>'))
+print("hub and", len(M["markets"]), "market pages written")
