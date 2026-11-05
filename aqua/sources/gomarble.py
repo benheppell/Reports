@@ -10,8 +10,10 @@ builders be tested offline against a captured week.
 from __future__ import annotations
 
 import hashlib
+import itertools
 import json
 import os
+import threading
 import time
 from pathlib import Path
 
@@ -32,14 +34,30 @@ class GoMarble:
         self.cache = Path(cache_dir) if cache_dir else None
         self.replay_only = replay_only
         self.timeout = timeout
-        self.session_id: str | None = None
-        self._id = 0
+        # Collection runs venues in parallel threads. Each thread keeps its own MCP session, and
+        # request ids come from one locked counter, so a response can only ever be matched to
+        # the request that asked for it.
+        self._local = threading.local()
+        self._ids = itertools.count(1)
+        self._id_lock = threading.Lock()
         if self.cache:
             self.cache.mkdir(parents=True, exist_ok=True)
         if not self.key and not replay_only:
             raise GoMarbleError("GOMARBLE_API_KEY is not set.")
 
     # ------------------------------------------------------------------ transport
+    @property
+    def session_id(self) -> str | None:
+        return getattr(self._local, "session_id", None)
+
+    @session_id.setter
+    def session_id(self, v: str | None) -> None:
+        self._local.session_id = v
+
+    def _next_id(self) -> int:
+        with self._id_lock:
+            return next(self._ids)
+
     def _post(self, body: dict) -> tuple[dict | None, requests.Response]:
         headers = {
             "Authorization": f"Bearer {self.key}",
@@ -68,8 +86,7 @@ class GoMarble:
         return r.json(), r
 
     def _rpc(self, method: str, params: dict) -> dict:
-        self._id += 1
-        msg, _ = self._post({"jsonrpc": "2.0", "id": self._id, "method": method, "params": params})
+        msg, _ = self._post({"jsonrpc": "2.0", "id": self._next_id(), "method": method, "params": params})
         if "error" in msg:
             raise GoMarbleError(f"{method}: {msg['error']}")
         return msg["result"]
@@ -77,9 +94,8 @@ class GoMarble:
     def _ensure_session(self) -> None:
         if self.session_id is not None:
             return
-        self._id += 1
         msg, r = self._post({
-            "jsonrpc": "2.0", "id": self._id, "method": "initialize",
+            "jsonrpc": "2.0", "id": self._next_id(), "method": "initialize",
             "params": {"protocolVersion": PROTOCOL, "capabilities": {},
                        "clientInfo": {"name": "aqua-reports", "version": "1.0"}},
         })

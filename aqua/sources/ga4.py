@@ -50,8 +50,14 @@ def _run(gm: GoMarble, prop: str, start: date, end: date, metrics: list[str], di
         # A real report always carries its headers and metadata, even with zero rows. Anything
         # else is an error or a rate limit dressed as a result: never read it as zero.
         meta = res.get("metadata") or {}
+        if str(res.get("message", "")).startswith("No data found"):
+            return []  # GoMarble's answer for a range with no events at all: a real zero
         ok = "metricHeaders" in res and "metadata" in res and not res.get("error")
-        if ok and meta.get("total_rows", 0) > meta.get("rows_returned", len(res.get("rows") or [])):
+        if ok and (str(meta.get("property_id")) != str(prop) or meta.get("start_date") != start.isoformat()
+                   or meta.get("end_date") != end.isoformat()):
+            raise RuntimeError(f"GA4 answer was for {meta.get('property_id')} {meta.get('start_date')}..{meta.get('end_date')}, "
+                               f"not {prop} {start}..{end}")
+        if ok and not limit and meta.get("total_rows", 0) > meta.get("rows_returned", len(res.get("rows") or [])):
             raise RuntimeError(f"GA4 {prop}: {meta['rows_returned']} of {meta['total_rows']} rows returned")
         if ok:
             break
