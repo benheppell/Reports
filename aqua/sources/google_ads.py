@@ -124,6 +124,28 @@ class GoogleAds:
                 a["local"] += r.get("all_conversions", 0)
         return {w.folder: dict(acc[w.monday.isoformat()]) for w in weeks}
 
+    def weekly_spend(self, venue: dict, weeks: list[Week]) -> dict[str, float]:
+        """Spend only, one row per week at account level: the lightest query, for the pipeline."""
+        start, end = weeks[0].monday, weeks[-1].sunday
+        fx = venue.get("google_fx", 1.0)
+        out = {w.folder: 0.0 for w in weeks}
+        if self._bq:
+            rows = [{"week": r["week"], "cost": r["cost"]} for r in self._bq_rows("cost", venue, start, end)]
+        else:
+            q = ("SELECT segments.week, metrics.cost_micros FROM customer "
+                 f"WHERE segments.date BETWEEN '{start}' AND '{end}'")
+            rows = []
+            for r in self._gaql(venue, q):
+                m = r.get("metrics", {})
+                cost = float(m["cost"]) if "cost" in m else float(m.get("costMicros", 0) or 0) / 1e6
+                rows.append({"week": r["segments"]["week"], "cost": cost})
+        by = {w.monday.isoformat(): w.folder for w in weeks}
+        for r in rows:
+            f = by.get(str(r["week"]))
+            if f:
+                out[f] += r["cost"] * fx
+        return out
+
     def campaigns(self, venue: dict, week: Week) -> list[dict]:
         fx = venue.get("google_fx", 1.0)
         rule = venue.get("google_actions")

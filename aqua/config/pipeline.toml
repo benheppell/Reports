@@ -7,6 +7,7 @@
 #   brand_site   Search Console property, exactly as GoMarble lists it; brand_regex the venue's own
 #                name only (never a landmark or category). No brand_site = brand is a known gap.
 #   ly_null      last year is not comparable or does not exist: every _ly column is null
+#   ly_null_from as ly_null, but only for weeks whose matched 2025 Monday is on or after this date
 #   spend_null   spend cannot be stated (shared account across rows)
 #   spend_ly_null / brand_ly_null   last year's spend / brand cannot be stated
 #   notes        short structural facts shown on the tiles, never interpretation
@@ -14,7 +15,7 @@
 [london]
 "Aqua Shard"  = { order = 1, channels = "wg", brand_site = "https://aquashard.co.uk/", brand_regex = "aqua", notes = { brand = "basis `aqua` on aquashard.co.uk, venue name only" } }
 "Hutong"      = { order = 2, channels = "wg", brand_site = "https://hutong.co.uk/", brand_regex = "hutong" }
-"DSL"         = { order = 3, channels = "wg+ot", brand_site = "https://dimsumlibrary.co.uk/", brand_regex = "dim ?sum ?library|dimsumlibrary", ly_null = true, notes = { cpa = "no 2025 CPA, no 2025 spend", spend = "Google account has no 2025 history, last year spend not available", brand = "dimsumlibrary.co.uk holds no 2025 data, last year brand not available" } }
+"DSL"         = { order = 3, channels = "wg+ot", brand_site = "https://dimsumlibrary.co.uk/", brand_regex = "dim ?sum ?library|dimsumlibrary", ly_null_from = "2025-10-13", spend_ly_null = true, brand_ly_null = true, notes = { cpa = "no 2025 CPA, no 2025 spend", spend = "Google account has no 2025 history, last year spend not available", brand = "dimsumlibrary.co.uk holds no 2025 data, last year brand not available" } }
 "Regent St"   = { order = 4, channels = "wg+ot", brand_site = ["sc-domain:aquakyoto.co.uk", "https://aquanueva.co.uk/"], brand_regex = "aqua", notes = { spend = "Google Ads account is shared across Aqua Kyoto and Aqua Nueva and is counted once", brand = "aquakyoto.co.uk and aquanueva.co.uk summed", sessions = "two GA4 properties summed" } }
 "Shiro Sushi" = { order = 5, channels = "wg+ot", brand_site = "sc-domain:shirosushi.co.uk", brand_regex = "shiro" }
 "Azzurra"     = { order = 6, channels = "wg+ot", brand_site = "sc-domain:azzurrarestaurant.co.uk", brand_regex = "azzurra" }
@@ -39,4 +40,4 @@
 "Hutong Dubai" = { order = 1, channels = "wg", brand_site = "https://www.hutong-dubai.com/", brand_regex = "hutong", notes = { cpa = "two competing Google booking actions, no Google CPA is quoted" } }
 
 [paris]
-"Aqua Kyoto Paris" = { order = 1, channels = "wg", brand_site = "https://aquakyoto.fr/", brand_regex = "aqua|acqua|akua" }
+"Aqua Kyoto Paris" = { order = 1, channels = "wg", brand_site = "https://aquakyoto.fr/", brand_regex = "aqua" }

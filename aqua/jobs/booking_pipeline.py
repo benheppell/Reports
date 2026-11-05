@@ -111,13 +111,21 @@ def sr_fields(cells: dict, channels: str, suffix: str) -> dict:
 # ------------------------------------------------------------------ digital
 def sessions(gm: GoMarble, v: dict, weeks: list[Week]) -> dict[date, int]:
     """Sum of daily GA4 sessions per week, as the table has always held."""
-    out: dict[date, int] = defaultdict(int)
-    flt = _and(_path_filter(v.get("ga4_path"), v.get("ga4_path_not")))
-    for prop in v["ga4"]:
-        for r in _run(gm, prop, weeks[0].monday, weeks[-1].sunday, ["sessions"], ["date"], flt):
-            d = datetime.strptime(r["date"], "%Y%m%d").date()
-            out[d - timedelta(days=d.weekday())] += int(r["sessions"])
-    return out
+    def pull(flt) -> dict[date, int]:
+        acc: dict[date, int] = defaultdict(int)
+        for prop in v["ga4"]:
+            for r in _run(gm, prop, weeks[0].monday, weeks[-1].sunday, ["sessions"], ["date"], flt):
+                d = datetime.strptime(r["date"], "%Y%m%d").date()
+                acc[d - timedelta(days=d.weekday())] += int(r["sessions"])
+        return acc
+
+    if v.get("ga4_path_not"):
+        # The remainder site of a split property (Shiro Pacific Place) is the property's total
+        # minus the other site's sessions; a "not this path" filter would double count sessions
+        # that touch both.
+        total, other = pull(None), pull(_and(_path_filter(v["ga4_path_not"], None)))
+        return defaultdict(int, {k: total[k] - other.get(k, 0) for k in total})
+    return pull(_and(_path_filter(v.get("ga4_path"), None)))
 
 
 def brand(gm: GoMarble, sites, regex: str, weeks: list[Week]) -> dict[date, int]:
@@ -141,8 +149,8 @@ def spend(gm: GoMarble, gads: GoogleAds, v: dict, weeks: list[Week]) -> dict[dat
     for f, x in meta_src.weekly(gm, v, weeks, "schedule_total").items():
         out[date.fromisoformat(f[1:])] += x["spend"]
     if not v.get("google_excluded"):
-        for f, x in gads.weekly(v, weeks).items():
-            out[date.fromisoformat(f[1:])] += x["spend"]
+        for f, x in gads.weekly_spend(v, weeks).items():
+            out[date.fromisoformat(f[1:])] += x
     return out
 
 
@@ -174,7 +182,7 @@ def build_market(market: dict, pcfg: dict, weeks: list[Week], gm, gads, sr, toda
                 notes["brand"] = "; ".join(x for x in (notes.get("brand"), "the last days are inside the Search Console "
                                                        "reporting delay, may restate upward") if x)
             r = {"market": market["slug"], "venue": v["name"], "week_key": w.folder, "monday": w.monday,
-                 "ly_monday": lw.monday, "channels": p["channels"], "not_comparable": bool(p.get("ly_null") or v.get("not_comparable")),
+                 "ly_monday": lw.monday, "channels": p["channels"], "not_comparable": bool(p.get("ly_null") or p.get("ly_null_from") or v.get("not_comparable")),
                  "venue_order": p["order"],
                  **sr_fields(sr_ty.get(v["name"], {}).get(w.monday, {}), p["channels"], "ty"),
                  **sr_fields(sr_ly.get(v["name"], {}).get(lw.monday, {}), p["channels"], "ly"),
@@ -185,7 +193,7 @@ def build_market(market: dict, pcfg: dict, weeks: list[Week], gm, gads, sr, toda
                  "brand_ty": None if brd["ty"] is None else brd["ty"].get(w.monday, 0),
                  "brand_ly": None if brd["ly"] is None or p.get("brand_ly_null") else brd["ly"].get(lw.monday, 0),
                  "notes": json.dumps(notes)}
-            if p.get("ly_null"):
+            if p.get("ly_null") or (p.get("ly_null_from") and lw.monday >= date.fromisoformat(p["ly_null_from"])):
                 for k in list(r):
                     if k.endswith("_ly"):
                         r[k] = None
