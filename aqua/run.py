@@ -146,12 +146,17 @@ def main(argv=None) -> int:
     markets = [m for m in cfg["market"] if a.markets == "all" or m["slug"] in a.markets.split(",")]
 
     gm = sr = None
+    db_error = None
     if not a.from_facts:
         from .sources.gomarble import GoMarble
         gm = GoMarble(cache_dir=a.replay or a.record, replay_only=bool(a.replay))
         if not a.no_covers and any(m.get("covers_rules") for m in markets):
             from .sources.sevenrooms import SevenRooms
-            sr = SevenRooms()
+            try:
+                sr = SevenRooms()
+            except Exception as e:  # covers pages fail; everything else still builds
+                db_error = f"SevenRooms database: {e} (host {_db_host()})"
+                print(db_error, flush=True)
 
     results = {}
     for market in markets:
@@ -161,6 +166,10 @@ def main(argv=None) -> int:
                                                  a.from_facts, today)
         except Exception as e:
             results[market["slug"]] = {"market": market["slug"], "status": "failed", "errors": [repr(e)]}
+        if db_error and market.get("covers_rules"):
+            results[market["slug"]].setdefault("errors", []).insert(0, db_error)
+            if results[market["slug"]].get("status") == "ok":
+                results[market["slug"]]["status"] = "partial"
         print(json.dumps(results[market["slug"]], indent=1), flush=True)
 
     # Monthly: on the first Monday of a month, build the month just completed.
@@ -184,6 +193,15 @@ def main(argv=None) -> int:
     with open(os.environ.get("GITHUB_STEP_SUMMARY", os.devnull), "a") as fh:
         fh.write(summary_md(log))
     return 0 if all(r.get("status") == "ok" for r in results.values()) else 1
+
+
+def _db_host() -> str:
+    """The host part of SUPABASE_DB_URL, for error messages. Never the password."""
+    from urllib.parse import urlsplit
+    try:
+        return urlsplit(os.environ.get("SUPABASE_DB_URL", "")).hostname or "missing"
+    except ValueError:
+        return "unparseable (check the password for @ # / ? characters)"
 
 
 def summary_md(log) -> str:
