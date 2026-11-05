@@ -14,6 +14,8 @@
 name: Weekly reports
 
 on:
+  push:
+    branches: [rebuild/test-run]   # test runs: push this branch to build without touching main
   schedule:
     - cron: "17 7 * * 1"        # Mondays 07:17 UTC, after Sunday has closed in every market
   workflow_dispatch:
