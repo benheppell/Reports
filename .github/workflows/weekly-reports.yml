@@ -73,6 +73,9 @@ jobs:
             --monthly "${{ inputs.monthly || 'auto' }}"
 
       - name: Check pages render
+        id: check
+        # On the test branch a failed check still commits, so the output can be inspected.
+        continue-on-error: ${{ github.ref_name == 'rebuild/test-run' }}
         run: python -m aqua.check
 
       - name: Commit
@@ -85,8 +88,8 @@ jobs:
           git commit -m "Reports ${WEEK} (automated run)"
           for i in 1 2 3; do git pull --rebase origin "${GITHUB_REF_NAME}" && git push && break; sleep $((i*5)); done
 
-      - name: Fail the job if a market failed
-        if: steps.build.outcome == 'failure'
+      - name: Fail the job if a market failed or a page did not render
+        if: steps.build.outcome == 'failure' || steps.check.outcome == 'failure'
         run: |
           echo "At least one market did not build cleanly. See the run summary and run-log.json." >&2
           exit 1

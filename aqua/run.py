@@ -75,14 +75,37 @@ def run_market(market, defaults, week: Week, targets, overrides, gm, sr, from_fa
         if report == "monthly":
             continue
         try:
-            payload = BUILDERS[report](ctx)
+            payload, bad = clean(BUILDERS[report](ctx))
+            errors += [f"{report}: not a number at {b}, shown as n/a" for b in bad]
             pf, _, page = GENERATORS[report]
-            (folder / pf).write_text(json.dumps(payload, indent=1, ensure_ascii=False))
+            (folder / pf).write_text(json.dumps(payload, indent=1, ensure_ascii=False, allow_nan=False))
             render(report, folder / pf, folder / page, market["name"])
             built.append(report)
         except Exception as e:
             errors.append(f"{report}: {e}")
     return {"market": market["slug"], "status": "ok" if not errors else "partial", "built": built, "errors": errors}
+
+
+def clean(obj, path="$"):
+    """Replace NaN and infinity with None (shown as n/a) and report where they were."""
+    import math
+    bad = []
+    if isinstance(obj, float) and not math.isfinite(obj):
+        return None, [path]
+    if isinstance(obj, dict):
+        out = {}
+        for k, v in obj.items():
+            out[k], b = clean(v, f"{path}.{k}")
+            bad += b
+        return out, bad
+    if isinstance(obj, list):
+        out = []
+        for i, v in enumerate(obj):
+            x, b = clean(v, f"{path}[{i}]")
+            out.append(x)
+            bad += b
+        return out, bad
+    return obj, bad
 
 
 def run_monthly(market, defaults, targets, gm, y, m, today) -> dict:

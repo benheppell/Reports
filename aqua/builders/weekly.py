@@ -439,6 +439,8 @@ def trends(c: Ctx) -> dict:
             alert[n] = ["amber", "Google bookings withheld", c.withheld(n, "google_bookings", c.w)]
         elif x:
             alert[n] = ["green", "Collection sound", f"Captures {x['ratio']:.2f} of SevenRooms website bookings"]
+        else:  # the page needs a chip for every venue
+            alert[n] = ["blue", "Collection not checked", "No SevenRooms comparison was available this run"]
     sharednote = {n: "Meta and Google figures are the shared account across both sites, shown in full on each."
                   for n in venues if c.is_shared(n)}
     wk = [c.wk_no(x) for x in w4]
