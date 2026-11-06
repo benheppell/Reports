@@ -171,8 +171,8 @@ def google_series(gm, venue, weeks, this_year: bool):
         o[0], o[3], o[4] = round(o[0], 2), round(o[3], 1), round(o[4], 2)
         if elig[i]:
             o[6], o[7], o[8] = round(shown[i] / elig[i], 3), round(lb[i] / elig[i], 3), round(lr[i] / elig[i], 3)
-        if venue.get("google_excluded"):
-            o[3] = None  # not a verified booking action: spend shown, bookings and CPA n/a
+        if venue.get("google_excluded") or venue.get("google_cpa_unsafe"):
+            o[3] = None  # no single verified booking action: spend shown, bookings and CPA n/a
     return out
 
 
