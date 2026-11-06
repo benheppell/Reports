@@ -312,8 +312,9 @@ live = [{ label = "Booking Pipeline", href = "/pipeline/dubai/" }]
   meta = ["act_551167838895768"]
   google = "7344894846"
   google_fx = 4.90                     # account reports GBP; x4.90 to AED, once
-  google_actions = ["Hutong Dubai (web) sevenrooms_booking_complete"]
-  google_cpa_unsafe = true             # two competing actions; quote no Google CPA
+  # Two SevenRooms actions exist. "Sevenrooms Booking Complete" is the one Google counts in
+  # conversions (33 in W44); the "(web)" one now shows only in all_conversions. Agreed Nov 2026.
+  google_actions = ["Sevenrooms Booking Complete"]
   gsc_site = "https://www.hutong-dubai.com/"
   gsc_regex = "hutong"
 
