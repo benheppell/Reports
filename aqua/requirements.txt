@@ -1,0 +1,4 @@
+# The daily jobs (GitHub Actions). Kept out of the repo root so Netlify, which builds the
+# site with plain Python, does not try to install them.
+requests==2.32.3
+psycopg[binary]==3.2.3

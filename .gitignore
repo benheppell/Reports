@@ -4,3 +4,6 @@
 # stray sandbox test artifacts (safe to delete from disk)
 .autopush_test.txt
 .autopush_probe
+dist/
+__pycache__/
+.cache/
