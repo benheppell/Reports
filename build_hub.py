@@ -65,4 +65,11 @@ for mk in M["markets"]:
                      f'<a class="back" href="/">← All markets</a><h1 style="margin-top:8px">'
                      f'Aqua {html.escape(mk["name"])}</h1><div class="sub">Live reports, currency {mk["ccy"]}.</div>'
                      f'<div class="links" style="max-width:520px">{links(mk)}</div>'))
-print("hub and", len(M["markets"]), "market pages written")
+# Ads monitor: one page per market from a single template; each reads its own market's data.
+TPL = open(os.path.join(HERE, "aqua", "templates", "ads.html")).read()
+for mk in M["markets"]:
+    d = os.path.join(HERE, "ads", mk["slug"])
+    os.makedirs(d, exist_ok=True)
+    with open(os.path.join(d, "index.html"), "w") as f:
+        f.write(TPL.replace("__SLUG__", mk["slug"]).replace("__MARKET__", html.escape(mk["name"])))
+print("hub,", len(M["markets"]), "market pages and", len(M["markets"]), "ads monitor pages written")

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Aqua Dubai: Ads Monitor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+/* Layout: the reports site's look. Summary first (alerts, venue table), then one venue's trends and early warnings. */
+:root{
+  --bg:#ffffff; --panel:#f8fafc; --ink:#0f172a; --muted:#64748b; --faint:#94a3b8;
+  --line:#e2e8f0; --rule:#eef2f6; --accent:#2563eb; --accent-soft:#eff6ff;
+  --good:#15803d; --good-soft:#f0fdf4; --bad:#b91c1c; --bad-soft:#fef2f2; --warn:#b45309; --warn-soft:#fffbeb;
+  --ly:#94a3b8; --meta:#2563eb; --google:#0d9488;
+  --sans:'DM Sans',system-ui,-apple-system,'Segoe UI',sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b1120; --panel:#111a2e; --ink:#e2e8f0; --muted:#94a3b8; --faint:#64748b;
+  --line:#22304a; --rule:#1a2540; --accent:#60a5fa; --accent-soft:#132544;
+  --good:#4ade80; --good-soft:#0f2a1c; --bad:#f87171; --bad-soft:#2d1316; --warn:#fbbf24; --warn-soft:#2a2110;
+  --ly:#64748b; --meta:#60a5fa; --google:#2dd4bf; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b1120; --panel:#111a2e; --ink:#e2e8f0; --muted:#94a3b8; --faint:#64748b;
+  --line:#22304a; --rule:#1a2540; --accent:#60a5fa; --accent-soft:#132544;
+  --good:#4ade80; --good-soft:#0f2a1c; --bad:#f87171; --bad-soft:#2d1316; --warn:#fbbf24; --warn-soft:#2a2110;
+  --ly:#64748b; --meta:#60a5fa; --google:#2dd4bf; color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.5;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding-block:28px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
+h1{font-size:24px;font-weight:700;margin:0;text-wrap:balance}
+h2{font-size:15px;font-weight:700;margin:0;text-wrap:balance}
+.sub{color:var(--muted);font-size:13px;margin-top:4px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+select{font:inherit;font-weight:600;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:8px 10px}
+select:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a.back{font-size:12px;color:var(--accent);text-decoration:none}
+.err{color:var(--bad);background:var(--bad-soft);border-radius:10px;padding:12px 14px}
+.preview{font-size:12px;color:var(--muted);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.alerts{display:flex;flex-direction:column;gap:8px}
+.alert{display:flex;gap:10px;align-items:baseline;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--panel);font-size:13.5px}
+.alert b{white-space:nowrap}
+.alert.red{background:var(--bad-soft);border-color:color-mix(in srgb,var(--bad) 35%,transparent)}
+.alert.amber{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 35%,transparent)}
+.alert.green{background:var(--good-soft);border-color:color-mix(in srgb,var(--good) 30%,transparent)}
+.dot{width:8px;height:8px;border-radius:50%;flex:none;transform:translateY(-1px)}
+.red .dot{background:var(--bad)}.amber .dot{background:var(--warn)}.green .dot{background:var(--good)}.grey .dot{background:var(--faint)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13px;min-width:1320px}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:600;text-align:right;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--panel)}
+th.grp{text-align:center;border-bottom:none;padding-bottom:0}
+th.l,td.l{text-align:left}
+td{padding:9px 10px;border-bottom:1px solid var(--rule);text-align:right;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+tbody tr{cursor:pointer}
+tbody tr:hover td{background:var(--accent-soft)}
+tbody tr.sel td{background:var(--accent-soft)}
+tr.total td{font-weight:700;border-top:2px solid var(--line);cursor:default;background:var(--panel)}
+.chip{display:inline-block;font-size:11.5px;font-weight:600;padding:1px 7px;border-radius:999px;font-family:var(--mono)}
+.up{color:var(--bad);background:var(--bad-soft)}.down{color:var(--good);background:var(--good-soft)}.flat{color:var(--muted);background:var(--panel)}
+.na{color:var(--faint)}
+.status{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.4px;text-transform:uppercase;padding:2px 8px;border-radius:999px}
+.status.red{color:var(--bad);background:var(--bad-soft)}.status.amber{color:var(--warn);background:var(--warn-soft)}.status.green{color:var(--good);background:var(--good-soft)}.status.grey{color:var(--muted);background:var(--panel)}
+.sep{border-left:1px solid var(--line)}
+table.cmp{min-width:560px}
+table.cmp tbody tr{cursor:default}
+table.cmp tbody tr:hover td{background:none}
+tr.grp td{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:700;background:var(--panel)}
+.detail{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{border:1px solid var(--line);border-radius:12px;padding:12px 14px;min-width:0}
+.card h3{margin:0;font-size:12px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);font-weight:600;display:flex;justify-content:space-between;gap:8px}
+.card .v{font-family:var(--mono);font-size:20px;font-weight:600;margin-top:2px}
+.card .d{font-size:12px;color:var(--muted)}
+svg{display:block;width:100%;height:auto;overflow:visible}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);flex-wrap:wrap}
+.legend i{display:inline-block;width:16px;height:0;border-top:2px solid var(--meta);vertical-align:middle;margin-right:5px}
+.legend i.ly{border-top:2px dashed var(--ly)}
+.warns{display:flex;flex-direction:column;gap:8px}
+.warn{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 10px;padding:10px 12px;border-radius:10px;background:var(--panel);border:1px solid var(--line);font-size:13px}
+.warn .k{font-weight:700}
+.warn .why{grid-column:2;color:var(--muted);font-size:12.5px}
+.platform{font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:1px 7px;border-radius:6px;align-self:start}
+.platform.meta{color:var(--meta);background:var(--accent-soft)}.platform.google{color:var(--google);background:color-mix(in srgb,var(--google) 12%,transparent)}.platform.both{color:var(--ink);background:var(--rule)}
+.method{font-size:12px;color:var(--muted);border-top:1px solid var(--rule);padding-top:14px;line-height:1.6;max-width:90ch}
+.method p{margin:0 0 6px}
+.tip{position:fixed;pointer-events:none;background:var(--ink);color:var(--bg);font-size:12px;padding:6px 8px;border-radius:7px;font-family:var(--mono);white-space:nowrap;z-index:5}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="back" href="/dubai/">← Aqua Dubai</a>
+    <h1>Dubai ads monitor</h1>
+    <div class="sub" id="updated">Loading…</div>
+  </header>
+
+  <div class="bar">
+    <label for="week" class="sub" style="margin:0">ISO week</label>
+    <select id="week"></select>
+    <label for="venue" class="sub" style="margin:0">Venue</label>
+    <select id="venue"></select>
+    <span class="sub" style="margin:0" id="compare"></span>
+  </div>
+
+
+  <section>
+    <div class="tablewrap">
+      <table id="tbl">
+        <thead>
+          <tr><th class="l"></th><th class="grp sep" colspan="5">Meta booking campaigns</th><th class="grp sep" colspan="2">Meta other campaigns</th><th class="grp sep" colspan="5">Google Ads</th><th class="grp sep" colspan="3">All paid vs SevenRooms bookings</th><th class="sep"></th></tr>
+          <tr><th class="l">Venue</th>
+            <th class="sep">Spend</th><th>Bookings</th><th>CPA</th><th>vs prior 4 wks</th><th>vs last year</th>
+            <th class="sep">Spend</th><th>Link clicks</th>
+            <th class="sep">Spend</th><th>Bookings</th><th>CPA</th><th>vs prior 4 wks</th><th>Lost to budget</th>
+            <th class="sep">Bookings</th><th>Blended CPA</th><th>vs last year</th>
+            <th class="sep l">Status</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="detail" id="detail" aria-live="polite"></section>
+
+</div>
+<div class="tip" id="tip" hidden></div>
+<script>
+const SLUG = 'dubai';
+fetch('/.netlify/functions/ads-monitor?m=' + SLUG).then(r => r.json().then(j => ({ok: r.ok, j}))).then(({ok, j}) => {
+  if (!ok) throw new Error(j.error || 'The data could not be loaded.');
+  const u = new Date(j.updated_at || j.generated);
+  document.getElementById('updated').textContent = 'Updated ' + u.toLocaleString('en-GB', {day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit'});
+  boot(j);
+}).catch(e => {
+  document.getElementById('updated').textContent = '';
+  document.querySelectorAll('.wrap > .bar, .wrap > section').forEach(el => el.hidden = true);
+  document.querySelector('.wrap > header').insertAdjacentHTML('afterend', `<div class="err">${String(e.message || e).replace(/[<>&]/g, '')}</div>`);
+});
+function boot(D){
+const SYM = /^[A-Z]{2,}$/.test(D.sym) ? D.sym + ' ' : D.sym, W = D.weeks;
+const YT = +W[W.length - 1].slice(0, 4), YL = YT - 1;
+const T = {amber: 0.20, red: 0.40, yoy: 0.40, minBook: 15, warnPct: 0.15};
+
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const d0 = s => new Date(s + 'T00:00:00Z');
+const addDays = (d, n) => new Date(d.getTime() + n * 864e5);
+function isoWeek(d){ const t = new Date(d); t.setUTCDate(t.getUTCDate() + 3 - ((t.getUTCDay() + 6) % 7)); const y = new Date(Date.UTC(t.getUTCFullYear(),0,4)); return 1 + Math.round(((t - y) / 864e5 - 3 + ((y.getUTCDay() + 6) % 7)) / 7); }
+function range(mon){ const a = d0(mon), b = addDays(a, 6); return a.getUTCMonth() === b.getUTCMonth() ? `${a.getUTCDate()}–${b.getUTCDate()} ${MON[b.getUTCMonth()]}` : `${a.getUTCDate()} ${MON[a.getUTCMonth()]}–${b.getUTCDate()} ${MON[b.getUTCMonth()]}`; }
+const lyMon = mon => addDays(d0(mon), -364).toISOString().slice(0,10);
+
+const money = (x, dp) => x == null || !isFinite(x) ? '–' : SYM + x.toLocaleString('en-GB', {minimumFractionDigits: dp ?? 0, maximumFractionDigits: dp ?? 0});
+const int = x => x == null ? '–' : Math.round(x).toLocaleString('en-GB');
+const pct = (x, dp) => x == null || !isFinite(x) ? '–' : (x * 100).toFixed(dp ?? 1) + '%';
+const ch = (a, b) => a == null || b == null || !b ? null : a / b - 1;
+function chip(c, goodWhenDown){ if (c == null || !isFinite(c)) return '<span class="na">n/a</span>';
+  const s = (c >= 0 ? '+' : '') + Math.round(c * 100) + '%'; if (Math.abs(c) < 0.05) return `<span class="chip flat">${s}</span>`;
+  if (goodWhenDown === null) return `<span class="chip flat">${s}</span>`;
+  const bad = goodWhenDown ? c > 0 : c < 0; return `<span class="chip ${bad ? 'up' : 'down'}">${s}</span>`; }
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+// ---- per-venue weekly metrics ----
+function metaRow(r){ if (!r) return null; const [spend, impr, reach, freq, clicks, book] = r;
+  return {spend, impr, reach, freq, clicks, book, cpa: book ? spend / book : null, cpm: impr ? spend / impr * 1000 : null, ctr: impr ? clicks / impr : null, cvr: clicks ? book / clicks : null}; }
+function googleRow(r){ if (!r) return null; const [spend, impr, clicks, book, bspend, bclicks, is, lb, lr] = r;
+  return {spend, impr, clicks, book: book ?? null, cpa: book ? spend / book : null, cpc: clicks ? spend / clicks : null, ctr: impr ? clicks / impr : null, cvr: clicks && book != null ? book / clicks : null, brand: spend ? (bspend ?? 0) / spend : null, is, lb, lr}; }
+function sumRows(rows, keys){ const o = {}; keys.forEach(k => o[k] = rows.reduce((a, r) => a + (r ? r[k] ?? 0 : 0), 0)); return o; }
+
+function venueWeek(v, i){
+  const m = metaRow(v.meta.ty[i]), g = googleRow(v.google.ty[i]);
+  const mly = v.meta.ly ? metaRow(v.meta.ly[i]) : null, gly = v.google.ly ? googleRow([...v.google.ly[i]]) : null;
+  const prior = [i-4, i-3, i-2, i-1].filter(j => j >= 0);
+  const mb = sumRows(prior.map(j => metaRow(v.meta.ty[j])), ['spend','impr','clicks','book']);
+  const gb = sumRows(prior.map(j => googleRow(v.google.ty[j])), ['spend','impr','clicks','book']);
+  const mbase = {cpa: mb.book ? mb.spend / mb.book : null, cpm: mb.spend / mb.impr * 1000, ctr: mb.clicks / mb.impr, cvr: mb.book / mb.clicks, spend: mb.spend / prior.length, book: mb.book / prior.length, clicks: mb.clicks / prior.length,
+    freq: prior.reduce((a, j) => a + v.meta.ty[j][3], 0) / prior.length};
+  const gbase = {cpa: gb.book ? gb.spend / gb.book : null, cpc: gb.spend / gb.clicks, ctr: gb.clicks / gb.impr, cvr: gb.book / gb.clicks, spend: gb.spend / prior.length, book: gb.book / prior.length, clicks: gb.clicks / prior.length,
+    lr: prior.reduce((a, j) => a + googleRow(v.google.ty[j]).lr, 0) / prior.length, brand: prior.reduce((a, j) => a + googleRow(v.google.ty[j]).brand, 0) / prior.length};
+  const sr = v.sr.ty[i] ? v.sr.ty[i][0] + v.sr.ty[i][1] : null, srly = v.sr.ly ? v.sr.ly[i][0] + v.sr.ly[i][1] : null;
+  const oRow = r => r ? {spend: r[0], impr: r[1], clicks: r[2], ctr: r[1] ? r[2] / r[1] : null, cpc: r[2] ? r[0] / r[2] : null} : null;
+  const o = oRow(v.other.ty[i]), oly = v.other.ly ? oRow(v.other.ly[i]) : null;
+  const ob = sumRows(prior.map(j => oRow(v.other.ty[j])), ['spend','impr','clicks']);
+  const obase = {spend: ob.spend / prior.length, impr: ob.impr / prior.length, clicks: ob.clicks / prior.length, ctr: ob.impr ? ob.clicks / ob.impr : null, cpc: ob.clicks ? ob.spend / ob.clicks : null};
+  const paid = (m ? m.spend : 0) + (g ? g.spend : 0) + (o ? o.spend : 0);
+  const paidly = v.meta.ly && v.google.ly ? mly.spend + v.google.ly[i][0] + (oly ? oly.spend : 0) : null;
+  return {v, i, m, g, mly, gly, mbase, gbase, sr, srly, o, oly, obase, blended: sr ? paid / sr : null, blendedly: srly && paidly != null ? paidly / srly : null, paid, nPrior: prior.length};
+}
+
+function assess(x){
+  const out = {level: 'green', reasons: []};
+  const bump = (lvl, text) => { const rank = {green:0, grey:0, amber:1, red:2}; if (rank[lvl] > rank[out.level]) out.level = lvl; out.reasons.push({lvl, text}); };
+  if (x.nPrior < 4) { out.level = 'grey'; out.reasons.push({lvl:'grey', text:'Fewer than four prior weeks to compare'}); return out; }
+  [['Meta', x.m, x.mbase], ['Google', x.g, x.gbase]].forEach(([p, c, b]) => {
+    if (!c) return;
+    if (b.book >= T.minBook && c.book != null && c.book < b.book * 0.5 && c.clicks > b.clicks * 0.75)
+      return bump('red', `${p} bookings fell to ${int(c.book)} from about ${int(b.book)} a week while clicks held at ${int(c.clicks)}: check the tracking`);
+    if (c.book == null || c.book < T.minBook) return;
+    const r = ch(c.cpa, b.cpa);
+    if (r >= T.red) bump('red', `${p} CPA ${money(c.cpa, 2)}, ${Math.round(r * 100)}% above its prior four weeks (${money(b.cpa, 2)})`);
+    else if (r >= T.amber) bump('amber', `${p} CPA ${money(c.cpa, 2)}, ${Math.round(r * 100)}% above its prior four weeks (${money(b.cpa, 2)})`);
+  });
+  // Against the same ISO week last year: a lasting shift, so amber rather than red. Google is left out: its 2025 conversions are not comparable.
+  if (x.m && x.mly && x.m.book >= T.minBook && x.mly.book >= T.minBook) {
+    const y = ch(x.m.cpa, x.mly.cpa);
+    if (y >= T.yoy) bump('amber', `Meta CPA ${money(x.m.cpa, 2)} against ${money(x.mly.cpa, 2)} in the same ISO week last year, ${Math.round(y * 100)}% higher`);
+  }
+  const yb = ch(x.blended, x.blendedly);
+  if (yb >= T.yoy) bump('amber', `Blended CPA ${money(x.blended, 2)} against ${money(x.blendedly, 2)} in the same ISO week last year, ${Math.round(yb * 100)}% higher`);
+  return out;
+}
+
+// ---- rendering ----
+const sel = document.getElementById('week');
+W.forEach((mon, i) => { const o = document.createElement('option'); o.value = i; o.textContent = `W${isoWeek(d0(mon))} · ${range(mon)} ${d0(mon).getUTCFullYear()}`; sel.appendChild(o); });
+let wi = W.length - 1, vi = 0;
+sel.value = wi;
+try { const s = localStorage.getItem('adsmon.venue'); if (s != null && D.venues[+s]) vi = +s; } catch (e) {}
+
+function render(){
+  const mon = W[wi], ly = lyMon(mon);
+  document.getElementById('compare').textContent = `vs W${isoWeek(d0(W[Math.max(0, wi-4)]))}–W${isoWeek(d0(W[Math.max(0, wi-1)]))} avg · vs W${isoWeek(d0(ly))} ${d0(ly).getUTCFullYear()} (${range(ly)})`;
+  const X = D.venues.map(v => venueWeek(v, wi)), A = X.map(assess);
+
+  // table
+  const tb = document.querySelector('#tbl tbody'); tb.innerHTML = '';
+  X.forEach((x, k) => {
+    const m = x.m, g = x.g, a = A[k];
+    const low = c => c && c.book != null && c.book < T.minBook;
+    const tr = document.createElement('tr'); if (k === vi) tr.className = 'sel'; tr.tabIndex = 0;
+    tr.innerHTML = `<td class="l"><b>${esc(x.v.name)}</b></td>
+      <td class="sep num">${money(m?.spend)}</td><td class="num">${int(m?.book)}</td><td class="num">${low(m) ? '<span class="na">' + money(m.cpa, 2) + '</span>' : money(m?.cpa, 2)}</td><td>${chip(ch(m?.cpa, x.mbase.cpa), true)}</td><td>${x.mly ? chip(ch(m?.cpa, x.mly.cpa), true) : '<span class="na">n/c</span>'}</td>
+      <td class="sep num">${money(x.o.spend)}</td><td class="num">${int(x.o.clicks)}</td>
+      <td class="sep num">${money(g?.spend)}</td><td class="num">${int(g?.book)}</td><td class="num">${low(g) ? '<span class="na">' + money(g?.cpa, 2) + '</span>' : money(g?.cpa, 2)}</td><td>${chip(ch(g?.cpa, x.gbase.cpa), true)}</td><td class="num">${pct(g?.lb, 0)}</td>
+      <td class="sep num">${int(x.sr)}</td><td class="num">${money(x.blended, 2)}</td><td>${x.blendedly ? chip(ch(x.blended, x.blendedly), true) : '<span class="na">n/c</span>'}</td>
+      <td class="sep l"><span class="status ${a.level}">${{red:'Red', amber:'Amber', green:'OK', grey:'<15'}[a.level]}</span></td>`;
+    const pick = () => { vi = k; try { localStorage.setItem('adsmon.venue', k); } catch (e) {} render(); document.getElementById('detail').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); };
+    tr.addEventListener('click', pick); tr.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); pick(); } });
+    tb.appendChild(tr);
+  });
+  const tm = sumRows(X.map(x => x.m), ['spend','book']), tg = sumRows(X.map(x => x.g), ['spend','book']), to = sumRows(X.map(x => x.o), ['spend','clicks']);
+  const tsr = X.reduce((s, x) => s + (x.sr || 0), 0), tpaid = X.reduce((s, x) => s + x.paid, 0);
+  const cmp = X.filter(x => x.blendedly != null);
+  const lyPaid = cmp.reduce((s, x) => s + x.blendedly * x.srly, 0), lySr = cmp.reduce((s, x) => s + x.srly, 0), tyPaidC = cmp.reduce((s, x) => s + x.paid, 0), tySrC = cmp.reduce((s, x) => s + x.sr, 0);
+  tb.insertAdjacentHTML('beforeend', `<tr class="total"><td class="l">${esc(D.market)}</td><td class="sep num">${money(tm.spend)}</td><td class="num">${int(tm.book)}</td><td class="num">${money(tm.spend / tm.book, 2)}</td><td></td><td></td>
+    <td class="sep num">${money(to.spend)}</td><td class="num">${int(to.clicks)}</td>
+    <td class="sep num">${money(tg.spend)}</td><td class="num">${int(tg.book)}</td><td class="num">${money(tg.spend / tg.book, 2)}</td><td></td><td></td>
+    <td class="sep num">${int(tsr)}</td><td class="num">${money(tpaid / tsr, 2)}</td><td>${chip(ch(tyPaidC / tySrC, lyPaid / lySr), true)}</td><td class="sep"></td></tr>`);
+
+  if (document.getElementById('venue')) document.getElementById('venue').value = vi;
+  renderDetail(X[vi]);
+}
+
+function series(v, fn){ return v.meta.ty.map((_, i) => fn(i)); }
+
+function lineChart(title, ty, ly, fmt, opts = {}){
+  const w = 300, h = 120, pl = 6, pr = 6, pt = 10, pb = 18;
+  const all = [...ty, ...(ly || [])].filter(x => x != null && isFinite(x));
+  if (!all.length) return `<div class="card"><h3>${title}</h3><div class="d">No data</div></div>`;
+  let lo = Math.min(...all), hi = Math.max(...all); if (opts.zero) lo = Math.min(0, lo); if (hi === lo) hi = lo + 1; const pad = (hi - lo) * 0.08; lo -= opts.zero ? 0 : pad; hi += pad;
+  const n = ty.length, X = j => pl + j * (w - pl - pr) / (n - 1), Y = y => pt + (1 - (y - lo) / (hi - lo)) * (h - pt - pb);
+  const path = arr => { let d = '', on = false; arr.forEach((y, j) => { if (y == null || !isFinite(y)) { on = false; return; } d += (on ? 'L' : 'M') + X(j).toFixed(1) + ',' + Y(y).toFixed(1); on = true; }); return d; };
+  const last = ty[n - 1], prev = ty.slice(Math.max(0, n - 5), n - 1).filter(x => x != null), base = prev.length ? prev.reduce((a, b) => a + b, 0) / prev.length : null;
+  const c = ch(last, base), lyLast = ly ? ly[n - 1] : null;
+  const grid = [0.25, 0.5, 0.75].map(f => `<line x1="${pl}" x2="${w - pr}" y1="${(pt + f * (h - pt - pb)).toFixed(1)}" y2="${(pt + f * (h - pt - pb)).toFixed(1)}" stroke="var(--rule)"/>`).join('');
+  const ticks = [0, Math.floor((n - 1) / 2), n - 1].map(j => `<text x="${X(j)}" y="${h - 3}" font-size="9.5" fill="var(--faint)" text-anchor="${j === 0 ? 'start' : j === n - 1 ? 'end' : 'middle'}" font-family="var(--mono)">W${isoWeek(d0(W[j]))}</text>`).join('');
+  const col = opts.color || 'var(--meta)';
+  const id = 'c' + Math.random().toString(36).slice(2, 8);
+  const svg = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(title)}, ${n} weeks" data-chart="${id}">${grid}
+    ${ly ? `<path d="${path(ly)}" fill="none" stroke="var(--ly)" stroke-width="1.6" stroke-dasharray="4 3"/>` : ''}
+    <path d="${path(ty)}" fill="none" stroke="${col}" stroke-width="2.2" stroke-linejoin="round"/>
+    ${last != null ? `<circle cx="${X(n - 1)}" cy="${Y(last)}" r="3.2" fill="${col}"/>` : ''}${ticks}
+    <rect x="0" y="0" width="${w}" height="${h}" fill="transparent"/></svg>`;
+  CHARTS[id] = {ty, ly, fmt, n, w, pl, pr, title};
+  return `<div class="card"><h3><span>${title}</span>${chip(c, opts.goodWhenDown)}</h3><div class="v">${fmt(last)}</div>
+    <div class="d">${base != null ? '4 wk ' + fmt(base) : ''}${ly ? ` · ${YL} ${lyLast != null ? fmt(lyLast) : 'n/a'}` : ''}</div>${svg}</div>`;
+}
+let CHARTS = {};
+
+function avgOf(v, i, f){ const js = [i-4, i-3, i-2, i-1].filter(j => j >= 0); return js.length ? js.reduce((a, j) => a + f(j), 0) / js.length : null; }
+
+function compareTable(x){
+  const v = x.v, i = x.i, m = x.m, mb = x.mbase, ml = x.mly, g = x.g, gb = x.gbase;
+  const gl = v.google.ly ? googleRow([v.google.ly[i][0], v.google.ly[i][1], v.google.ly[i][2]]) : null;
+  const pts = (a, b) => a == null || b == null ? null : a - b;
+  const ptChip = (d, goodWhenDown) => {
+    if (d == null || !isFinite(d)) return '<span class="na">n/a</span>';
+    const s = (d >= 0 ? '+' : '') + (d * 100).toFixed(1) + ' pts';
+    if (Math.abs(d) < 0.005 || goodWhenDown === null) return `<span class="chip flat">${s}</span>`;
+    return `<span class="chip ${(goodWhenDown ? d > 0 : d < 0) ? 'up' : 'down'}">${s}</span>`;
+  };
+  const m2 = y => money(y, 2), m0 = y => money(y), p2 = y => pct(y, 2), p0 = y => pct(y, 0), f2 = y => y == null ? '–' : y.toFixed(2);
+  const G = j => googleRow(v.google.ty[j]);
+  const srw = j => v.sr.ty[j][0] + v.sr.ty[j][1];
+  const blendBase = (() => { const js = [i-4, i-3, i-2, i-1].filter(j => j >= 0); if (!js.length) return null;
+    return js.reduce((a, j) => a + v.meta.ty[j][0] + v.google.ty[j][0] + v.other.ty[j][0], 0) / js.reduce((a, j) => a + srw(j), 0); })();
+  // [label, this week, prior-4 average, same ISO week last year, format, lower is better, 'r' ratio change or 'p' point change]
+  const rows = [
+    ['Meta'],
+    ['Spend', m?.spend, mb.spend, ml?.spend, m0, null, 'r'],
+    ['Impressions', m?.impr, avgOf(v, i, j => v.meta.ty[j][1]), ml?.impr, int, null, 'r'],
+    ['CPM', m?.cpm, mb.cpm, ml?.cpm, m2, true, 'r'],
+    ['Frequency', m?.freq, mb.freq, ml?.freq, f2, true, 'r'],
+    ['Link clicks', m?.clicks, mb.clicks, ml?.clicks, int, null, 'r'],
+    ['Link CTR', m?.ctr, mb.ctr, ml?.ctr, p2, false, 'p'],
+    ['Bookings', m?.book, mb.book, ml?.book, int, false, 'r'],
+    ['Click to booking', m?.cvr, mb.cvr, ml?.cvr, p2, false, 'p'],
+    ['CPA', m?.cpa, mb.cpa, ml?.cpa, m2, true, 'r'],
+    ['Meta other campaigns'],
+    ['Spend', x.o?.spend, x.obase.spend, x.oly?.spend, m0, null, 'r'],
+    ['Impressions', x.o?.impr, x.obase.impr, x.oly?.impr, int, null, 'r'],
+    ['Link clicks', x.o?.clicks, x.obase.clicks, x.oly?.clicks, int, null, 'r'],
+    ['Link CTR', x.o?.ctr, x.obase.ctr, x.oly?.ctr, p2, false, 'p'],
+    ['Cost per link click', x.o?.cpc, x.obase.cpc, x.oly?.cpc, m2, true, 'r'],
+    ['Google'],
+    ['Spend', g?.spend, gb.spend, gl?.spend, m0, null, 'r'],
+    ['Impressions', g?.impr, avgOf(v, i, j => G(j).impr), gl?.impr, int, null, 'r'],
+    ['Clicks', g?.clicks, gb.clicks, gl?.clicks, int, null, 'r'],
+    ['CPC', g?.cpc, gb.cpc, gl?.cpc, m2, true, 'r'],
+    ['CTR', g?.ctr, gb.ctr, gl?.ctr, p2, false, 'p'],
+    ['Bookings', g?.book, gb.book, null, int, false, 'r'],
+    ['Click to booking', g?.cvr, gb.cvr, null, p2, false, 'p'],
+    ['CPA', g?.cpa, gb.cpa, null, m2, true, 'r'],
+    ['Impression share', g?.is, avgOf(v, i, j => G(j).is), null, p0, null, 'p'],
+    ['Lost to budget', g?.lb, avgOf(v, i, j => G(j).lb), null, p0, true, 'p'],
+    ['Lost to rank', g?.lr, gb.lr, null, p0, true, 'p'],
+    ['Brand share of spend', g?.brand, gb.brand, null, p0, null, 'p'],
+    ['All paid'],
+    ['Paid spend', x.paid, (mb.spend || 0) + (gb.spend || 0) + (x.obase.spend || 0), x.blendedly != null ? x.blendedly * x.srly : null, m0, null, 'r'],
+    ['SevenRooms bookings', x.sr, avgOf(v, i, srw), x.srly, int, false, 'r'],
+    ['Blended CPA', x.blended, blendBase, x.blendedly, m2, true, 'r'],
+  ];
+  const wk = `W${isoWeek(d0(W[i]))}`, lyl = `W${isoWeek(d0(lyMon(W[i])))} ${d0(lyMon(W[i])).getUTCFullYear()}`;
+  const body = rows.map(r => {
+    if (r.length === 1) return `<tr class="grp"><td class="l" colspan="6">${r[0]}</td></tr>`;
+    const [k, cur, base, last, f, gwd, kind] = r;
+    const d1 = kind === 'p' ? ptChip(pts(cur, base), gwd) : chip(ch(cur, base), gwd);
+    const d2 = last == null ? '<span class="na">n/c</span>' : kind === 'p' ? ptChip(pts(cur, last), gwd) : chip(ch(cur, last), gwd);
+    return `<tr><td class="l">${k}</td><td class="num">${f(cur)}</td><td class="num">${base == null ? '–' : f(base)}</td><td>${d1}</td><td class="num">${last == null ? '<span class="na">n/c</span>' : f(last)}</td><td>${d2}</td></tr>`;
+  }).join('');
+  return `<div class="tablewrap"><table class="cmp"><thead><tr><th class="l"></th><th>${wk}</th><th>Prior 4 wks</th><th>Δ</th><th>${lyl}</th><th>Δ</th></tr></thead><tbody>${body}</tbody></table></div>`;
+}
+
+function renderDetail(x){
+  CHARTS = {};
+  const v = x.v, n = wi + 1, cut = a => a ? a.slice(0, n) : null;
+  const M = j => metaRow(v.meta.ty[j]), ML = j => v.meta.ly ? metaRow(v.meta.ly[j]) : null, G = j => googleRow(v.google.ty[j]);
+  const GL = j => v.google.ly ? {cpc: v.google.ly[j][0] / v.google.ly[j][2], ctr: v.google.ly[j][2] / v.google.ly[j][1]} : null;
+  const idx = [...Array(n).keys()];
+  const S = (f) => idx.map(f);
+  const blend = j => { const sr = v.sr.ty[j][0] + v.sr.ty[j][1]; const sp = (M(j)?.spend || 0) + (G(j)?.spend || 0) + v.other.ty[j][0]; return sp && sr ? sp / sr : null; };
+  const blendLy = j => v.sr.ly && v.meta.ly && v.google.ly ? (v.meta.ly[j][0] + v.google.ly[j][0] + (v.other.ly ? v.other.ly[j][0] : 0)) / (v.sr.ly[j][0] + v.sr.ly[j][1]) : null;
+  const m2 = y => money(y, 2), p2 = y => pct(y, 2), p0 = y => pct(y, 0), f2 = y => y == null ? '–' : y.toFixed(2);
+  document.getElementById('detail').innerHTML = `
+    <div class="bar" style="justify-content:space-between"><h2>${esc(v.name)} · W${isoWeek(d0(W[wi]))}</h2>
+      <div class="legend"><span><i></i>${YT}</span><span><i class="ly"></i>Same ISO week ${YL}</span></div></div>
+    ${compareTable(x)}
+    <div><h2 style="margin-bottom:8px">Cost per booking</h2><div class="cards">
+      ${lineChart('Blended CPA', S(blend), v.sr.ly && v.meta.ly && v.google.ly ? S(blendLy) : null, m2, {goodWhenDown: true, color: 'var(--ink)'})}
+      ${lineChart('Meta CPA', S(j => M(j)?.cpa), v.meta.ly ? S(j => ML(j)?.cpa) : null, m2, {goodWhenDown: true})}
+      ${lineChart('Google CPA', S(j => G(j)?.cpa), null, m2, {goodWhenDown: true, color: 'var(--google)'})}
+      ${lineChart('SevenRooms bookings', S(j => v.sr.ty[j][0] + v.sr.ty[j][1]), v.sr.ly ? S(j => v.sr.ly[j][0] + v.sr.ly[j][1]) : null, int, {color: 'var(--ink)', zero: true})}
+    </div></div>
+    <div><h2 style="margin-bottom:8px">Meta</h2><div class="cards">
+      ${lineChart('CPM', S(j => M(j)?.cpm), v.meta.ly ? S(j => ML(j)?.cpm) : null, m2, {goodWhenDown: true})}
+      ${lineChart('Link CTR', S(j => M(j)?.ctr), v.meta.ly ? S(j => ML(j)?.ctr) : null, p2)}
+      ${lineChart('Click to booking', S(j => M(j)?.cvr), v.meta.ly ? S(j => ML(j)?.cvr) : null, p2)}
+      ${lineChart('Frequency', S(j => M(j)?.freq), v.meta.ly ? S(j => ML(j)?.freq) : null, f2, {goodWhenDown: true})}
+      ${lineChart('Other campaigns link clicks', S(j => v.other.ty[j][2]), v.other.ly ? S(j => v.other.ly[j][2]) : null, int, {zero: true, goodWhenDown: null})}
+      ${lineChart('Meta spend', S(j => M(j)?.spend), v.meta.ly ? S(j => ML(j)?.spend) : null, y => money(y), {zero: true, goodWhenDown: null})}
+    </div></div>
+    <div><h2 style="margin-bottom:8px">Google</h2><div class="cards">
+      ${lineChart('Cost per click', S(j => G(j)?.cpc), v.google.ly ? S(j => GL(j)?.cpc) : null, m2, {goodWhenDown: true, color: 'var(--google)'})}
+      ${lineChart('Click to booking', S(j => G(j)?.cvr), null, p2, {color: 'var(--google)'})}
+      ${lineChart('Impression share', S(j => G(j)?.is), null, p0, {color: 'var(--google)'})}
+      ${lineChart('Lost to budget', S(j => G(j)?.lb), null, p0, {goodWhenDown: true, color: 'var(--google)'})}
+      ${lineChart('Lost to rank', S(j => G(j)?.lr), null, p0, {goodWhenDown: true, color: 'var(--google)'})}
+      ${lineChart('Brand share of spend', S(j => G(j)?.brand), null, p0, {color: 'var(--google)', goodWhenDown: null})}
+    </div></div>`;
+  bindTips();
+}
+
+function bindTips(){
+  const tip = document.getElementById('tip');
+  document.querySelectorAll('svg[data-chart]').forEach(svg => {
+    const c = CHARTS[svg.dataset.chart];
+    svg.addEventListener('mousemove', e => {
+      const r = svg.getBoundingClientRect(), xv = (e.clientX - r.left) / r.width * c.w;
+      const j = Math.max(0, Math.min(c.n - 1, Math.round((xv - c.pl) / ((c.w - c.pl - c.pr) / (c.n - 1)))));
+      tip.textContent = `W${isoWeek(d0(W[j]))} ${c.fmt(c.ty[j])}${c.ly ? ' · ' + YL + ' ' + c.fmt(c.ly[j]) : ''}`;
+      tip.hidden = false;
+      const tw = tip.offsetWidth; let left = e.clientX + 12; if (left + tw > window.innerWidth - 8) left = e.clientX - tw - 12;
+      tip.style.left = left + 'px'; tip.style.top = (e.clientY - 34) + 'px';
+    });
+    svg.addEventListener('mouseleave', () => tip.hidden = true);
+  });
+}
+
+const vsel = document.getElementById('venue');
+D.venues.forEach((v, k) => { const o = document.createElement('option'); o.value = k; o.textContent = v.name; vsel.appendChild(o); });
+vsel.value = vi;
+vsel.addEventListener('change', () => { vi = +vsel.value; try { localStorage.setItem('adsmon.venue', vi); } catch (e) {} render(); });
+sel.addEventListener('change', () => { wi = +sel.value; render(); });
+render();
+}
+</script>
+
+</body>
+</html>

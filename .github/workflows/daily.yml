@@ -1,11 +1,13 @@
 # Each morning: refresh the data behind the live pages.
 #   London daily bookings   GA4 bookings and users per day      -> public.london_daily_ga4
 #   Booking pipeline        five most recent weeks, all markets -> public.booking_pipeline
+#   Ads monitor             Meta, Google and SevenRooms by ISO week, 13 weeks + last year -> public.ads_monitor
 # The pace trackers need nothing here: Supabase refreshes their views itself (pg_cron).
 #
 # Secrets: GOMARBLE_API_KEY, SUPABASE_DB_URL.
 # Variable WRITE_LIVE: until it is "true" both jobs only compare their figures with the tables and
 # write nothing, so they can run alongside the old scheduled tasks. Set it once they agree.
+# The ads monitor always writes: its table is new and nothing else fills it.
 name: Daily data
 
 on:
@@ -44,6 +46,11 @@ jobs:
         continue-on-error: true
         run: python -m aqua.jobs.booking_pipeline $WRITE
 
-      - name: Fail if either job failed
-        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure'
+      - name: Ads monitor
+        id: ads
+        continue-on-error: true
+        run: python -m aqua.jobs.ads_monitor --write
+
+      - name: Fail if any job failed
+        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.ads.outcome == 'failure'
         run: exit 1
