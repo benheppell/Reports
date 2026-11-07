@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import time
 import os
 import sys
 import tomllib
@@ -47,6 +48,11 @@ def _meta_rows(gm, act, weeks, flt, fields):
             "time_range": json.dumps({"since": weeks[0].monday.isoformat(), "until": weeks[-1].sunday.isoformat()}),
             "filtering": flt}
     res = gm.call(META_TOOL, args)
+    for wait in (20, 60):  # Meta's "temporarily unavailable" usually clears within a minute
+        if "data" in res or "temporarily" not in str(res.get("error", "")).lower():
+            break
+        time.sleep(wait)
+        res = gm.call(META_TOOL, args, fresh=True)
     if (res.get("_gomarble_meta_insights_data_quality") or {}).get("paging_next_present"):
         raise RuntimeError(f"Meta {act}: incomplete response")
     if "data" not in res:
