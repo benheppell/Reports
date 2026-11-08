@@ -9,8 +9,9 @@ split by the week they are for (this week, next week, beyond), against the match
     python -m aqua.jobs.booking_pipeline --markets london,hk
 
 Guardrails (runbook): never write a zero for a failed pull, write null; a market whose pull
-fails is left untouched; a settled week that moves more than 5% is reported, and with --write
-it blocks that market unless --allow-moves is given.
+fails is left untouched; in a settled week, a venue whose total bookings created (all three
+service windows, this year) moves more than 5% is written but named, and fails the run so
+GitHub emails. Moves in single windows or covers are ordinary cancellations: listed only.
 """
 from __future__ import annotations
 
@@ -209,7 +210,8 @@ NUM = [c for c in COLS[8:-1]]
 
 
 def compare(sr: SevenRooms, rows: list[dict], weeks: list[Week]) -> tuple[list[str], list[str]]:
-    """Differences against the table, and moves over 5% in settled weeks (all but the latest)."""
+    """Differences against the table, and venues whose total bookings moved over 5% in a settled
+    week (all but the latest)."""
     m = rows[0]["market"]
     cur = sr.query(f"select venue, week_key, {', '.join(NUM)} from booking_pipeline where market = %s "
                    "and week_key = any(%s)", (m, [w.folder for w in weeks]))
@@ -225,9 +227,12 @@ def compare(sr: SevenRooms, rows: list[dict], weeks: list[Week]) -> tuple[list[s
             a = float(a) if a is not None else None
             if a != (float(b) if b is not None else None):
                 diffs.append(f"{r['venue']} {r['week_key']} {c}: table {a} -> new {b}")
-                settled = r["week_key"] != weeks[-1].folder
-                if settled and a and b is not None and abs(b - a) / abs(a) > 0.05 and not c.startswith(("spend", "brand")):
-                    moves.append(f"{r['venue']} {r['week_key']} {c}: {a} -> {b}")
+        if r["week_key"] != weeks[-1].folder:
+            tb = ("b1_ty", "b2_ty", "b3_ty")
+            if all(o[c] is not None and r[c] is not None for c in tb):
+                a, b = sum(float(o[c]) for c in tb), sum(float(r[c]) for c in tb)
+                if a and abs(b - a) / a > 0.05:
+                    moves.append(f"{r['venue']} {r['week_key']} bookings: {a:g} -> {b:g}")
     return diffs, moves
 
 
@@ -243,7 +248,6 @@ def write(sr: SevenRooms, rows: list[dict]) -> None:
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--write", action="store_true")
-    ap.add_argument("--allow-moves", action="store_true")
     ap.add_argument("--markets", default="london,hk,usa,dubai,paris")
     ap.add_argument("--latest", help="Monday of the latest completed week (default: computed)")
     a = ap.parse_args(argv)
@@ -271,11 +275,11 @@ def main(argv=None) -> int:
         verdict = "checked"
         if errors:
             verdict, status = "skipped: a pull failed, table left as it was", 1
-        elif a.write and moves and not a.allow_moves:
-            verdict, status = "blocked: settled weeks moved more than 5%", 1
         elif a.write:
             write(sr, rows)
             verdict = "written"
+            if moves:
+                verdict, status = "written, but a settled week's bookings moved more than 5%", 1
         summary.append(f"{slug}: {verdict}; {len(diffs)} differences, {len(moves)} settled moves" +
                        "".join(f"\n    {m}" for m in moves[:10]) + "".join(f"\n    {e}" for e in errors[:10]))
     report = f"### Booking pipeline {weeks[0].folder}..{weeks[-1].folder}\n```\n" + "\n".join(summary) + "\n```\n"
