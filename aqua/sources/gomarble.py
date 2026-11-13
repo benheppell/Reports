@@ -27,6 +27,24 @@ class GoMarbleError(RuntimeError):
     pass
 
 
+# Errors GoMarble passes back inside an ordinary result when the platform behind it (Meta,
+# Google Ads, Search Console, GA4) timed out or throttled. They clear on a later try, so they are
+# retried rather than handed to the caller. Anything else, such as a lost permission, is returned
+# as before.
+TRANSIENT = ("timeout", "timed out", "temporarily", "network error", "resource has been exhausted",
+             "quota", "rate limit", "too many requests", "service unavailable", "internal error",
+             "503", "502", "429")
+RETRY_WAITS = (15, 45, 90)
+
+
+def transient_error(out) -> str | None:
+    """The error text of a result that failed for a passing reason, else None."""
+    if not isinstance(out, dict) or not out.get("error"):
+        return None
+    text = json.dumps(out, ensure_ascii=False)[:500]
+    return text if any(t in text.lower() for t in TRANSIENT) else None
+
+
 class GoMarble:
     def __init__(self, api_key: str | None = None, cache_dir: str | Path | None = None,
                  replay_only: bool = False, timeout: int = 180):
@@ -110,8 +128,9 @@ class GoMarble:
         raw = json.dumps([tool, args], sort_keys=True, ensure_ascii=False)
         return hashlib.sha256(raw.encode()).hexdigest()[:24]
 
-    def call(self, tool: str, args: dict, retries: int = 1, fresh: bool = False) -> dict:
-        """Call a GoMarble tool and return its JSON result. A failed call is retried once.
+    def call(self, tool: str, args: dict, retries: int = len(RETRY_WAITS), fresh: bool = False) -> dict:
+        """Call a GoMarble tool and return its JSON result. A failed call, or one whose result is a
+        timeout or rate limit, is retried with growing waits (RETRY_WAITS).
         fresh=True skips a recorded response (used when a caller rejects what came back)."""
         path = self.cache / f"{tool}-{self._key(tool, args)}.json" if self.cache else None
         if path and path.exists() and not (fresh and not self.replay_only):
@@ -126,13 +145,16 @@ class GoMarble:
                 if res.get("isError"):
                     raise GoMarbleError(f"{tool}: {_text(res)[:400]}")
                 out = json.loads(_text(res))
+                if (err := transient_error(out)) and attempt < retries:
+                    raise GoMarbleError(f"{tool}: {err}")
                 if path:
                     path.write_text(json.dumps({"tool": tool, "args": args, "result": out}, ensure_ascii=False))
                 return out
             except (GoMarbleError, requests.RequestException, json.JSONDecodeError) as e:
                 last = e
                 self.session_id = None
-                time.sleep(3 * (attempt + 1))
+                if attempt < retries:
+                    time.sleep(RETRY_WAITS[min(attempt, len(RETRY_WAITS) - 1)])
         raise GoMarbleError(f"{tool} failed after {retries + 1} tries: {last}")
 
 
