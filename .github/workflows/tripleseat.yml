@@ -1,4 +1,4 @@
-# Tripleseat, weekly full re-pull: every event created in the trailing 400 days, so last year's
+# Tripleseat, weekly full re-pull: every event created in the trailing 455 days (65 weeks), so last year's
 # comparison stays right as old prospects are lost or closed. Sunday night, after the week closes.
 # Run it by hand with mode "check" to repeat the discovery cross-checks without writing anything.
 name: Tripleseat weekly
@@ -21,7 +21,7 @@ concurrency:
 jobs:
   pull:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_CLIENT_ID }}

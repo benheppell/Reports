@@ -3,7 +3,7 @@
     python -m aqua.jobs.tripleseat --check            # structure + the discovery cross-checks, no writes
     python -m aqua.jobs.tripleseat --daily --write    # leads and events created in the last 14 days,
                                                       # plus events updated in the last 3 days
-    python -m aqua.jobs.tripleseat --weekly --write   # every event created in the trailing 400 days
+    python -m aqua.jobs.tripleseat --weekly --write   # every event created in the trailing 455 days
 
 Needs TRIPLESEAT_CLIENT_ID, TRIPLESEAT_CLIENT_SECRET and (with --write) SUPABASE_DB_URL.
 A run that fails part-way writes nothing: rows are collected first and upserted at the end.
