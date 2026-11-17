@@ -6,8 +6,6 @@ name: Tripleseat weekly
 on:
   schedule:
     - cron: "17 22 * * 0"
-  push:
-    branches: [tripleseat-feed]   # temporary: runs the check before merge; remove after
   workflow_dispatch:
     inputs:
       mode:
@@ -26,7 +24,7 @@ jobs:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_CLIENT_ID }}
       TRIPLESEAT_CLIENT_SECRET: ${{ secrets.TRIPLESEAT_CLIENT_SECRET }}
-      MODE: ${{ github.event.inputs.mode || (github.event_name == 'push' && 'weekly') || 'weekly' }}
+      MODE: ${{ github.event.inputs.mode || 'weekly' }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
