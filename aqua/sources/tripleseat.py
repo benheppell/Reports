@@ -193,6 +193,18 @@ def event_row(ev: dict, venues: dict[int, str], min_year: int = 2015) -> dict | 
     }
 
 
+def room_names(ev: dict) -> list[tuple[int, str]]:
+    """(room id, room name) pairs from an event's rooms list. Room names are venue spaces, not people."""
+    out = []
+    for r in ev.get("rooms") or []:
+        if isinstance(r, dict):
+            r = unwrap(r) if "id" not in r else r
+            rid, name = obj_id(r), obj_name(r)
+            if rid is not None and name:
+                out.append((rid, name))
+    return out
+
+
 def results_of(payload) -> tuple[list, int | None]:
     """Search responses: a list, or an object holding the rows plus a page count."""
     if isinstance(payload, list):

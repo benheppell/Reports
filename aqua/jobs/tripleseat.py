@@ -4,6 +4,9 @@
     python -m aqua.jobs.tripleseat --daily --write    # leads and events created in the last 14 days,
                                                       # plus events updated in the last 3 days
     python -m aqua.jobs.tripleseat --weekly --write   # every event created in the trailing 455 days
+    python -m aqua.jobs.tripleseat --backfill 2025-02-01 2027-02-01 --write
+                                                      # one-off: events by EVENT date in the range, plus
+                                                      # leads created in the range (for last year's figures)
 
 Needs TRIPLESEAT_CLIENT_ID, TRIPLESEAT_CLIENT_SECRET and (with --write) SUPABASE_DB_URL.
 A run that fails part-way writes nothing: rows are collected first and upserted at the end.
@@ -18,7 +21,7 @@ from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
-from ..sources.tripleseat import Tripleseat, event_row, lead_row
+from ..sources.tripleseat import Tripleseat, event_row, lead_row, room_names
 
 CFG = Path(__file__).resolve().parents[1] / "config" / "tripleseat.toml"
 
@@ -30,6 +33,8 @@ EVENT_COLS = ["event_id", "booking_id", "lead_id", "location_id", "venue", "room
               "first_tentative_at", "first_definite_at", "lost_at", "closed_at", "booking_definite_date",
               "booking_lost_date", "guest_count", "food_and_beverage_min", "grand_total", "actual_amount",
               "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id"]
+
+ROOM_COLS = ["room_id", "location_id", "venue", "name"]
 
 
 def load():
@@ -98,6 +103,7 @@ def main(argv=None) -> int:
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--daily", action="store_true")
     mode.add_argument("--weekly", action="store_true")
+    mode.add_argument("--backfill", nargs=2, metavar=("START", "END_EXCL"))
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args(argv)
 
@@ -110,17 +116,33 @@ def main(argv=None) -> int:
     tomorrow = today + timedelta(days=1)
     locs = sorted(venues)
     leads, events = [], {}
-    if a.daily:
+    rooms: dict[int, dict] = {}
+
+    def take(e):
+        r = event_row(e, venues, st["min_event_year"])
+        if r:
+            events[r["event_id"]] = r
+            for rid, name in room_names(e):
+                rooms.setdefault(rid, {"room_id": rid, "location_id": r["location_id"], "venue": r["venue"],
+                                       "name": name})
+
+    if a.backfill:
+        s, end = date.fromisoformat(a.backfill[0]), date.fromisoformat(a.backfill[1])
+        while s < end:
+            e_ = min(s + timedelta(days=31), end)
+            for e in ts.events_dated(s, e_, locs):
+                take(e)
+            if s < tomorrow:
+                leads += [r for r in (lead_row(x, venues) for x in ts.leads_created(s, min(e_, tomorrow))) if r]
+            print(f"{s} to {e_}: events {len(events)} leads {len(leads)}", flush=True)
+            s = e_
+    elif a.daily:
         start = today - timedelta(days=st["daily_created_days"])
         leads = [r for r in (lead_row(x, venues) for x in ts.leads_created(start, tomorrow)) if r]
         for e in ts.events_created(start, tomorrow, locs):
-            r = event_row(e, venues, st["min_event_year"])
-            if r:
-                events[r["event_id"]] = r
+            take(e)
         for e in ts.events_updated(today - timedelta(days=st["daily_updated_days"]), locs):
-            r = event_row(e, venues, st["min_event_year"])
-            if r:
-                events[r["event_id"]] = r
+            take(e)
     else:
         start = today - timedelta(days=st["weekly_created_days"])
         # Month-sized slices keep each search short and a failure easy to place.
@@ -128,16 +150,16 @@ def main(argv=None) -> int:
         while s < tomorrow:
             e_ = min(s + timedelta(days=31), tomorrow)
             for e in ts.events_created(s, e_, locs):
-                r = event_row(e, venues, st["min_event_year"])
-                if r:
-                    events[r["event_id"]] = r
+                take(e)
             leads += [r for r in (lead_row(x, venues) for x in ts.leads_created(s, e_)) if r]
             s = e_
     by_status = Counter(r["status"] for r in events.values())
     by_venue = Counter(r["venue"] for r in leads)
-    report = (f"### Tripleseat {'daily' if a.daily else 'weekly'}\n```\n"
+    kind = "daily" if a.daily else "backfill" if a.backfill else "weekly"
+    report = (f"### Tripleseat {kind}\n```\n"
               f"leads: {len(leads)} {dict(by_venue)}\nevents: {len(events)} {dict(by_status)}\n"
-              f"value basis: {dict(Counter(r['value_basis'] for r in events.values()))}\n```\n")
+              f"value basis: {dict(Counter(r['value_basis'] for r in events.values()))}\n"
+              f"rooms named: {len(rooms)}\n```\n")
     print(report)
     with open(os.environ.get("GITHUB_STEP_SUMMARY", os.devnull), "a") as fh:
         fh.write(report)
@@ -146,6 +168,7 @@ def main(argv=None) -> int:
         conn = SevenRooms().conn
         upsert(conn, "tripleseat_leads", "lead_id", LEAD_COLS, leads)
         upsert(conn, "tripleseat_events", "event_id", EVENT_COLS, list(events.values()))
+        upsert(conn, "tripleseat_rooms", "room_id", ROOM_COLS, list(rooms.values()))
         print("written")
     return 0
 

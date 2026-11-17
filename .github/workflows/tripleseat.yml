@@ -4,13 +4,19 @@
 name: Tripleseat weekly
 
 on:
+  push:
+    branches: [tripleseat-feed]
+    paths: [".github/workflows/tripleseat.yml"]
   schedule:
     - cron: "17 22 * * 0"
   workflow_dispatch:
     inputs:
       mode:
-        description: "check, daily or weekly"
+        description: "check, daily, weekly or backfill"
         default: check
+      range:
+        description: "backfill only: START END_EXCL, e.g. 2025-02-01 2027-02-01"
+        default: "2025-02-01 2027-02-01"
 
 concurrency:
   group: tripleseat
@@ -19,12 +25,13 @@ concurrency:
 jobs:
   pull:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 180
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_CLIENT_ID }}
       TRIPLESEAT_CLIENT_SECRET: ${{ secrets.TRIPLESEAT_CLIENT_SECRET }}
-      MODE: ${{ github.event.inputs.mode || 'weekly' }}
+      MODE: ${{ github.event.inputs.mode || (github.event_name == 'push' && 'backfill') || 'weekly' }}
+      RANGE: ${{ github.event.inputs.range || '2025-02-01 2027-02-01' }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -39,5 +46,6 @@ jobs:
             check)  python -m aqua.jobs.tripleseat --check ;;
             daily)  python -m aqua.jobs.tripleseat --daily --write ;;
             weekly) python -m aqua.jobs.tripleseat --weekly --write ;;
+            backfill) python -m aqua.jobs.tripleseat --backfill $RANGE --write ;;
             *) echo "unknown mode $MODE"; exit 1 ;;
           esac
