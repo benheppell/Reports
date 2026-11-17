@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Aqua London — Events Report</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:#fff;color:#0f172a;padding:40px 16px;max-width:1180px;margin:0 auto}
+a.back{font-size:12px;color:#2563eb;text-decoration:none}
+h1{font-size:26px;font-weight:700;margin-top:8px}
+h2{font-size:17px;font-weight:700;margin:34px 0 4px}
+.sub,.note{color:#64748b;font-size:14px;margin:6px 0 4px;line-height:1.5}
+.note{font-size:12px;margin:0 0 10px}
+.topbar{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+.stamp{font-size:12px;color:#94a3b8;margin-top:6px}
+select{font-family:inherit;font-size:14px;font-weight:600;padding:9px 12px;border:1px solid #cbd5e1;border-radius:10px;background:#fff}
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:6px}
+.kpi{border:1px solid #e2e8f0;border-radius:12px;padding:14px 16px}
+.kpi .lab{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:#94a3b8;font-weight:700}
+.kpi .val{font-size:22px;font-weight:700;margin-top:6px}
+.kpi .meta{font-size:12px;color:#64748b;margin-top:3px}
+.wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:8px;font-variant-numeric:tabular-nums}
+th,td{text-align:right;padding:8px 10px;border-bottom:1px solid #eef2f6;white-space:nowrap}
+th{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:#94a3b8;font-weight:700;border-bottom:1px solid #e2e8f0}
+th:first-child,td:first-child{text-align:left}
+tr.tot td{font-weight:700;background:#f8fafc}
+.up{color:#16a34a}.down{color:#dc2626}.flat{color:#64748b}
+.err{color:#dc2626;padding:20px 0}
+footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.6}
+button.copy{font-family:inherit;font-size:11px;font-weight:600;color:#2563eb;background:none;border:1px solid #bfdbfe;border-radius:8px;padding:3px 8px;cursor:pointer;margin-left:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+<a class="back" href="/london/">← London</a>
+<div class="topbar">
+  <div>
+    <h1>Events Report</h1>
+    <div class="sub">London events and private dining from Tripleseat, against the same period last year. All values are net of VAT (÷ 1.2).</div>
+    <div class="stamp" id="stamp">Loading…</div>
+  </div>
+  <label>Month&nbsp; <select id="month"></select></label>
+</div>
+<div id="out"></div>
+<footer>
+Enquiries: Tripleseat leads created in the period (London time). Conversion: share of those leads whose event has since been confirmed.
+Confirmed: events whose booking was marked Definite in the month, whatever has happened to them since. Held: Closed or Definite events dated in the period.
+Value: the actual amount, else the grand total, else the F&amp;B minimum, divided by 1.2. Financial year runs February to January.
+Forecast: confirmed upcoming events valued at their F&amp;B minimum times the venue's uplift last year (actual spend ÷ F&amp;B minimum on closed events), never below their current value.
+Booking type comes from the room map; events in rooms not yet mapped show as Unmapped.
+</footer>
+<script>
+const VENUES = ["Aqua Shard","Hutong","Aqua Nueva","Aqua Kyoto","Azzurra","Shiro","Dim Sum Library"];
+const GROUPS = ["Aqua Shard","Hutong","Regent Street","Azzurra","Shiro","Dim Sum Library"];
+const TYPES = ["Single PDR","Multiple PDR","Semi-exclusive & wings","Exclusive hire","Group booking","Unmapped"];
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const $ = s => document.querySelector(s);
+const n0 = v => v == null ? "–" : Math.round(v).toLocaleString("en-GB");
+const gbp = v => v == null ? "–" : "£" + Math.round(v).toLocaleString("en-GB");
+const gbpk = v => v == null ? "–" : Math.abs(v) >= 1e6 ? "£" + (v/1e6).toFixed(2) + "m" : "£" + Math.round(v/1e3).toLocaleString("en-GB") + "k";
+function chg(ty, ly) {
+  if (!ly || ty == null) return '<span class="flat">–</span>';
+  const p = (ty - ly) / ly * 100, c = p > 0.5 ? "up" : p < -0.5 ? "down" : "flat";
+  return `<span class="${c}">${p > 0 ? "+" : ""}${p.toFixed(1)}%</span>`;
+}
+const pct = (a, b) => b ? (a / b * 100).toFixed(1) + "%" : "–";
+const sum = (rows, f) => rows.reduce((t, r) => t + (Number(r[f]) || 0), 0);
+function table(title, note, head, rows, tot) {
+  const id = "t" + Math.random().toString(36).slice(2, 8);
+  return `<h2>${title}<button class="copy" data-t="${id}">Copy</button></h2>${note ? `<div class="note">${note}</div>` : ""}
+  <div class="wrap"><table id="${id}"><thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>
+  ${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}
+  ${tot ? `<tr class="tot">${tot.map(c => `<td>${c}</td>`).join("")}</tr>` : ""}</tbody></table></div>`;
+}
+function monthLabel(ym) { const [y, m] = ym.split("-").map(Number); return `${MON[m-1]} ${y}`; }
+
+// Month picker: Feb 2026 (first month with last year backfilled behind it) to this month.
+const now = new Date(), sel = $("#month");
+const opts = [];
+for (let d = new Date(2026, 1, 1); d <= now; d.setMonth(d.getMonth() + 1))
+  opts.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`);
+opts.reverse();
+sel.innerHTML = opts.map(o => `<option value="${o}">${monthLabel(o)}</option>`).join("");
+const qs = new URLSearchParams(location.search).get("month");
+// Default to last complete month.
+sel.value = qs && opts.includes(qs) ? qs : (opts[1] || opts[0]);
+sel.onchange = () => { history.replaceState(null, "", "?month=" + sel.value); load(); };
+
+async function load() {
+  $("#out").innerHTML = ""; $("#stamp").textContent = "Loading…";
+  try {
+    const r = await fetch(`/.netlify/functions/events-report?month=${sel.value}`);
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || r.status);
+    render(d);
+  } catch (e) { $("#out").innerHTML = `<div class="err">Could not load: ${e.message}</div>`; $("#stamp").textContent = ""; }
+}
+
+function render(d) {
+  const ml = monthLabel(d.month), ly = String(Number(d.month.slice(0, 4)) - 1), mlly = ml.replace(/\d{4}/, ly);
+  const asof = new Date(d.as_of + "T12:00:00").toLocaleDateString("en-GB", {day: "numeric", month: "short", year: "numeric"});
+  const fyN = Number(d.fy_label.slice(2)), FY = "FY" + fyN, FYL = "FY" + (fyN - 1);
+  $("#stamp").textContent = `${ml} · year to date to ${asof} · Tripleseat data pulled ${new Date(d.pulled_at).toLocaleString("en-GB", {dateStyle: "medium", timeStyle: "short"})}`;
+  const pick = (arr, y) => (arr || []).filter(r => r.y === y);
+  const by = (arr, k, v) => (arr || []).filter(r => r[k] === v);
+
+  // Enquiries
+  const E = d.enquiries || [];
+  const e = (y, v, f) => Number((E.find(r => r.y === y && r.v === v) || {})[f] || 0);
+  const eT = (y, f) => sum(pick(E, y), f);
+  // Confirmed
+  const C = d.confirmed || [];
+  const cT = (y, f, flt = () => true) => sum(pick(C, y).filter(flt), f);
+  // Held
+  const H = d.held || [], mon = d.month;
+  const hM = (y, f, flt = () => true) => sum(pick(H, y).filter(r => r.mon === mon).filter(flt), f);
+  const hY = (y, f, flt = () => true) => sum(pick(H, y).filter(flt), f);
+  // Full year
+  const F = d.full_year || [];
+  const fy = (f, flt = () => true) => sum(F.filter(flt), f);
+  const onBooks = fy("done_val") + fy("up_val"), lyFinal = fy("ly_val"), fc = fy("done_val") + fy("up_fc");
+  const target = sum(d.targets || [], "target");
+
+  let h = `<div class="kpis">
+    <div class="kpi"><div class="lab">Enquiries, ${ml}</div><div class="val">${n0(eT("ty","month_n"))}</div><div class="meta">${chg(eT("ty","month_n"), eT("ly","month_n"))} vs ${n0(eT("ly","month_n"))}</div></div>
+    <div class="kpi"><div class="lab">Confirmed in ${ml}</div><div class="val">${gbpk(cT("ty","val"))}</div><div class="meta">${chg(cT("ty","val"), cT("ly","val"))} vs ${gbpk(cT("ly","val"))} · ${n0(cT("ty","n"))} bookings</div></div>
+    <div class="kpi"><div class="lab">Events held in ${ml}</div><div class="val">${gbpk(hM("ty","val"))}</div><div class="meta">${chg(hM("ty","val"), hM("ly","val"))} vs ${gbpk(hM("ly","val"))} · ${n0(hM("ty","n"))} events</div></div>
+    <div class="kpi"><div class="lab">${FY} on the books</div><div class="val">${gbpk(onBooks)}</div><div class="meta">${chg(onBooks, lyFinal)} vs ${FYL} final ${gbpk(lyFinal)}</div></div>
+    <div class="kpi"><div class="lab">${FY} forecast</div><div class="val">${gbpk(fc)}</div><div class="meta">${pct(fc, target)} of ${gbpk(target)} target</div></div>
+  </div>`;
+
+  // 1. Enquiries by venue
+  h += table("Enquiries by venue", `${ml} and ${FY} to date (to ${asof}), against the same dates last year. Conversion is the share of enquiries confirmed so far.`,
+    ["Venue", ml, mlly, "Change", `${FY} to date`, `${FYL} same dates`, "Change", `Conv. ${FY}`, `Conv. ${FYL}`],
+    VENUES.map(v => [v, n0(e("ty",v,"month_n")), n0(e("ly",v,"month_n")), chg(e("ty",v,"month_n"), e("ly",v,"month_n")),
+      n0(e("ty",v,"fytd_n")), n0(e("ly",v,"fytd_n")), chg(e("ty",v,"fytd_n"), e("ly",v,"fytd_n")),
+      pct(e("ty",v,"fytd_conv"), e("ty",v,"fytd_n")), pct(e("ly",v,"fytd_conv"), e("ly",v,"fytd_n"))]),
+    ["Total", n0(eT("ty","month_n")), n0(eT("ly","month_n")), chg(eT("ty","month_n"), eT("ly","month_n")),
+      n0(eT("ty","fytd_n")), n0(eT("ly","fytd_n")), chg(eT("ty","fytd_n"), eT("ly","fytd_n")),
+      pct(eT("ty","fytd_conv"), eT("ty","fytd_n")), pct(eT("ly","fytd_conv"), eT("ly","fytd_n"))]);
+
+  // 1b. Enquiries by month
+  const EM = d.enquiries_by_month || [], months = [...new Set(EM.map(r => r.mon))].sort();
+  const em = (y, m) => Number((EM.find(r => r.y === y && r.mon === m) || {}).n || 0);
+  h += table("Enquiries by month", `${FY} to date. The last month is part-month if the year to date ends before month end.`,
+    ["Month", FY, FYL, "Change"],
+    months.map(m => [MON[Number(m.slice(5)) - 1], n0(em("ty", m)), n0(em("ly", m)), chg(em("ty", m), em("ly", m))]),
+    ["Total", n0(sum(pick(EM,"ty"),"n")), n0(sum(pick(EM,"ly"),"n")), chg(sum(pick(EM,"ty"),"n"), sum(pick(EM,"ly"),"n"))]);
+
+  // 2. Confirmed by week
+  const last = new Date(Number(mon.slice(0,4)), Number(mon.slice(5)), 0).getDate(), M3 = MON[Number(mon.slice(5)) - 1];
+  const wkLab = ["1–7", "8–14", "15–21", `22–${last}`].map(w => `${w} ${M3}`);
+  h += table(`Bookings confirmed in ${ml}, by week`, "Bookings moved to Definite in each week of the month, for any future date.",
+    ["Week", `Value ${ml}`, `Value ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`],
+    [1,2,3,4].map(w => { const f = r => r.wk === w;
+      return [wkLab[w-1], gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f))]; }),
+    ["Total", gbp(cT("ty","val")), gbp(cT("ly","val")), chg(cT("ty","val"), cT("ly","val")), n0(cT("ty","n")), n0(cT("ly","n"))]);
+
+  // 3. Confirmed by venue
+  h += table(`Bookings confirmed in ${ml}, by venue`, "",
+    ["Venue", `Value ${ml}`, `Value ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`],
+    VENUES.map(v => { const f = r => r.v === v;
+      return [v, gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f))]; }),
+    ["Total", gbp(cT("ty","val")), gbp(cT("ly","val")), chg(cT("ty","val"), cT("ly","val")), n0(cT("ty","n")), n0(cT("ly","n"))]);
+
+  // 4. Held in month by venue
+  h += table(`Events held in ${ml}, by venue`, "Net revenue from events taking place in the month.",
+    ["Venue", `Revenue ${ml}`, `Revenue ${mlly}`, "Change", `Events ${ml}`, `Events ${mlly}`],
+    VENUES.map(v => { const f = r => r.v === v;
+      return [v, gbp(hM("ty","val",f)), gbp(hM("ly","val",f)), chg(hM("ty","val",f), hM("ly","val",f)), n0(hM("ty","n",f)), n0(hM("ly","n",f))]; }),
+    ["Total", gbp(hM("ty","val")), gbp(hM("ly","val")), chg(hM("ty","val"), hM("ly","val")), n0(hM("ty","n")), n0(hM("ly","n"))]);
+
+  // 5. Revenue year to date by month
+  const hm = [...new Set(H.map(r => r.mon))].sort();
+  h += table(`Revenue year to date, by month`, `Net revenue from events held, ${FY} against ${FYL}, to ${asof}.`,
+    ["Month", `Revenue ${FY}`, `Revenue ${FYL}`, "Change", `Events ${FY}`, `Events ${FYL}`],
+    hm.map(m => { const f = r => r.mon === m;
+      return [MON[Number(m.slice(5)) - 1], gbp(hY("ty","val",f)), gbp(hY("ly","val",f)), chg(hY("ty","val",f), hY("ly","val",f)), n0(hY("ty","n",f)), n0(hY("ly","n",f))]; }),
+    ["Year to date", gbp(hY("ty","val")), gbp(hY("ly","val")), chg(hY("ty","val"), hY("ly","val")), n0(hY("ty","n")), n0(hY("ly","n"))]);
+
+  // 6. Full year by venue
+  h += table(`Full year: ${FYL} final against ${FY} on the books`, `${FY} on the books = completed to ${asof} plus confirmed events still to happen. Still to book = the gap to ${FYL} final.`,
+    ["Venue", `${FYL} final`, "Completed", "Confirmed upcoming", "On the books", "Change", "Still to book"],
+    VENUES.map(v => { const f = r => r.v === v, ob = fy("done_val",f) + fy("up_val",f), l = fy("ly_val",f);
+      return [v, gbp(l), gbp(fy("done_val",f)), gbp(fy("up_val",f)), gbp(ob), chg(ob, l), gbp(Math.max(0, l - ob))]; }),
+    ["Total", gbp(lyFinal), gbp(fy("done_val")), gbp(fy("up_val")), gbp(onBooks), chg(onBooks, lyFinal), gbp(Math.max(0, lyFinal - onBooks))]);
+
+  // 7. Forecast against target
+  const T = g => Number(((d.targets || []).find(t => t.venue_group === g) || {}).target || 0);
+  const U = g => Number(((d.uplift || []).find(u => u.vg === g) || {}).u || 0);
+  h += table(`${FY} forecast against target`, `Completed plus confirmed upcoming events at the venue's usual uplift on their F&amp;B minimum. Regent Street = Aqua Nueva + Aqua Kyoto.`,
+    ["Venue", `${FYL} actual`, "Uplift used", `${FY} forecast`, `${FY} target`, "Of target", `vs ${FYL}`, "Still to find"],
+    GROUPS.map(g => { const f = r => r.vg === g, l = fy("ly_val",f), x = fy("done_val",f) + fy("up_fc",f), t = T(g);
+      return [g, gbp(l), U(g) ? "×" + U(g).toFixed(2) : "–", gbp(x), t ? gbp(t) : "–", t ? pct(x, t) : "–", chg(x, l), t ? gbp(Math.max(0, t - x)) : "–"]; }),
+    ["Total", gbp(lyFinal), "", gbp(fc), gbp(target), pct(fc, target), chg(fc, lyFinal), gbp(Math.max(0, target - fc))]);
+
+  // 8. Booking type
+  const B = d.booking_type || [];
+  const b = (y, t, f) => Number((B.find(r => r.y === y && r.btype === t) || {})[f] || 0);
+  const bn = y => sum(pick(B, y), "n"), bv = y => sum(pick(B, y), "val");
+  const types = TYPES.filter(t => t !== "Unmapped" || b("ty", t, "n") || b("ly", t, "n"));
+  h += table(`Full year by booking type`, `${FYL} = completed events. ${FY} = completed so far plus confirmed upcoming events, so it grows as the year fills.`,
+    ["Booking type", `Events ${FYL}`, `Events ${FY}`, `% ${FYL}`, `% ${FY}`, `Value ${FYL}`, `Value ${FY}`, "Change", `Avg ${FYL}`, `Avg ${FY}`],
+    types.map(t => [t, n0(b("ly",t,"n")), n0(b("ty",t,"n")), pct(b("ly",t,"n"), bn("ly")), pct(b("ty",t,"n"), bn("ty")),
+      gbp(b("ly",t,"val")), gbp(b("ty",t,"val")), chg(b("ty",t,"val"), b("ly",t,"val")),
+      gbp(b("ly",t,"n") ? b("ly",t,"val") / b("ly",t,"n") : null), gbp(b("ty",t,"n") ? b("ty",t,"val") / b("ty",t,"n") : null)]),
+    ["Total", n0(bn("ly")), n0(bn("ty")), "100%", "100%", gbp(bv("ly")), gbp(bv("ty")), chg(bv("ty"), bv("ly")),
+      gbp(bn("ly") ? bv("ly") / bn("ly") : null), gbp(bn("ty") ? bv("ty") / bn("ty") : null)]);
+
+  const A = d.areas || [], areas = [...new Set(A.map(r => r.area))].sort();
+  const a = (y, ar, f) => Number((A.find(r => r.y === y && r.area === ar) || {})[f] || 0);
+  if (areas.length) h += table("Semi-exclusive & wings, area by area", "",
+    ["Area", `Events ${FYL}`, `Value ${FYL}`, `Events ${FY}`, `Value ${FY}`],
+    areas.map(ar => [ar, n0(a("ly",ar,"n")), gbp(a("ly",ar,"val")), n0(a("ty",ar,"n")), gbp(a("ty",ar,"val"))]),
+    ["Total", n0(sum(pick(A,"ly"),"n")), gbp(sum(pick(A,"ly"),"val")), n0(sum(pick(A,"ty"),"n")), gbp(sum(pick(A,"ty"),"val"))]);
+
+  $("#out").innerHTML = h;
+  document.querySelectorAll("button.copy").forEach(btn => btn.onclick = () => {
+    const t = document.getElementById(btn.dataset.t);
+    const tsv = [...t.rows].map(r => [...r.cells].map(c => c.innerText.trim()).join("\t")).join("\n");
+    navigator.clipboard.writeText(tsv).then(() => { btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy", 1500); });
+  });
+}
+load();
+</script>
+</body>
+</html>
