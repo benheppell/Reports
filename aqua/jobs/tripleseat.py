@@ -65,7 +65,7 @@ def check(ts: Tripleseat, venues: dict[int, str]) -> int:
     ok = True
     locs = ts.locations()
     ids = sorted(int(l.get("id")) for l in locs if isinstance(l, dict) and l.get("id"))
-    print("locations:", ids, "| expected:", sorted(venues))
+    print("locations:", ids, "| expected:", sorted(venues), "| raw shape:", shape(locs[:1]) if not ids else "")
     ok &= set(ids) >= set(venues)
 
     raw = list(ts.leads_created(date(2026, 11, 9), date(2026, 11, 16)))
@@ -76,7 +76,7 @@ def check(ts: Tripleseat, venues: dict[int, str]) -> int:
           "(expected 58029346 / 58268334)")
     ok &= len(hut) == 86 and hut[:1] == [58029346] and hut[-1:] == [58268334]
 
-    evs = list(ts.events_created(date(2026, 10, 1), date(2026, 10, 2), [17674]))
+    evs = list(ts.events_dated(date(2026, 10, 1), date(2026, 10, 2), [17674]))
     if evs:
         print("event fields:", shape(evs[0]))
     rows = {r["event_id"]: r for r in (event_row(e, venues) for e in evs) if r}

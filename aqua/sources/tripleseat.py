@@ -196,14 +196,24 @@ def event_row(ev: dict, venues: dict[int, str], min_year: int = 2015) -> dict | 
 def results_of(payload) -> tuple[list, int | None]:
     """Search responses: a list, or an object holding the rows plus a page count."""
     if isinstance(payload, list):
-        return payload, None
+        return [unwrap(r) for r in payload], None
     if not isinstance(payload, dict):
         return [], None
     pages = to_int(payload.get("total_pages") or (payload.get("meta") or {}).get("total_pages"))
-    for key in ("results", "events", "leads", "bookings", "data"):
+    for key in ("results", "events", "leads", "bookings", "locations", "data"):
         if isinstance(payload.get(key), list):
-            return payload[key], pages
-    return [], pages
+            return [unwrap(r) for r in payload[key]], pages
+    lists = [v for v in payload.values() if isinstance(v, list)]
+    return ([unwrap(r) for r in lists[0]] if len(lists) == 1 else []), pages
+
+
+def unwrap(row):
+    """Some endpoints wrap each row as {"location": {...}}; take the inner object."""
+    if isinstance(row, dict) and len(row) == 1:
+        (inner,) = row.values()
+        if isinstance(inner, dict):
+            return inner
+    return row
 
 
 # ------------------------------------------------------------------ client
@@ -267,6 +277,12 @@ class Tripleseat:
     def events_created(self, start: date, end_excl: date, location_ids: list[int]):
         return self.pages("/v1/events/search.json", {
             "event_created_start_date": start.isoformat(), "event_created_end_date": end_excl.isoformat(),
+            "location_ids": ",".join(str(i) for i in location_ids),
+            "show_financial": "true", "include_deleted": "true"})
+
+    def events_dated(self, start: date, end_excl: date, location_ids: list[int]):
+        return self.pages("/v1/events/search.json", {
+            "event_start_date": start.isoformat(), "event_end_date": end_excl.isoformat(),
             "location_ids": ",".join(str(i) for i in location_ids),
             "show_financial": "true", "include_deleted": "true"})
 
