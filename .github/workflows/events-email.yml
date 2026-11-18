@@ -1,6 +1,7 @@
 # Emails the London events report as a PDF (with the team conversion table) after the morning
-# Tripleseat pull: last week every Monday, last month on the 1st. Recipients and the Brevo key are
-# GitHub secrets. This repo is public: the PDF is never uploaded as an artifact.
+# Tripleseat pull: last week every Monday, last month on the 1st. Sent from the work Outlook mailbox
+# through Microsoft Graph (an Entra ID app with Mail.Send); sender, app keys and recipients are GitHub
+# secrets. This repo is public: the PDF is never uploaded as an artifact.
 name: Events report email
 
 on:
@@ -18,6 +19,9 @@ on:
       send:
         description: "send the email (false = render only)"
         default: "false"
+      test:
+        description: "true = send only to the sending mailbox (a test), false = the full recipient list"
+        default: "true"
 
 concurrency:
   group: events-email-${{ github.event.schedule || github.event.inputs.period }}
@@ -29,12 +33,15 @@ jobs:
     timeout-minutes: 20
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
-      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+      MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
+      MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
+      MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
       EVENTS_REPORT_FROM: ${{ secrets.EVENTS_REPORT_FROM }}
       EVENTS_REPORT_TO: ${{ secrets.EVENTS_REPORT_TO }}
       PERIOD: ${{ github.event.inputs.period || (github.event.schedule == '47 7 1 * *' && 'month') || 'week' }}
       ON_DATE: ${{ github.event.inputs.date }}
       SEND: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.send }}
+      TEST: ${{ github.event_name != 'schedule' && github.event.inputs.test || 'false' }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -49,4 +56,5 @@ jobs:
           args="--period $PERIOD"
           [ -n "$ON_DATE" ] && args="$args --date $ON_DATE"
           [ "$SEND" = "true" ] && args="$args --send"
+          [ "$TEST" = "true" ] && args="$args --test"
           python -m aqua.jobs.events_email $args

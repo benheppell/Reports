@@ -8,8 +8,10 @@ Without --send it renders the PDF to out/ and stops (a dry run). The emailed cop
 conversion table, which the public page never shows. This repo is public, so the PDF is never
 uploaded as a build artifact and no team figure is ever printed to the log.
 
-Needs: SUPABASE_DB_URL, and to send: BREVO_API_KEY, EVENTS_REPORT_FROM ("Name <email>" or email),
-EVENTS_REPORT_TO (comma-separated addresses). Addresses live in GitHub secrets, not in the repo.
+Needs SUPABASE_DB_URL, and to send: EVENTS_REPORT_FROM (the work mailbox it sends as) and EVENTS_REPORT_TO
+(comma-separated addresses), plus an Entra ID (Azure AD) app registration with the Mail.Send application
+permission: MS_TENANT_ID, MS_CLIENT_ID, MS_CLIENT_SECRET. Mail goes out through Microsoft Graph as that
+mailbox and lands in its Sent Items. All of these live in GitHub secrets, not in the repo.
 """
 from __future__ import annotations
 
@@ -112,12 +114,7 @@ def headline(p: dict) -> list[str]:
             f"{p['fy_label']} forecast: {k(fc)}" + (f", {fc / target * 100:.0f}% of the {k(target)} target" if target else "")]
 
 
-def send(p: dict, pdf: Path) -> None:
-    import requests
-    to = [a.strip() for a in os.environ["EVENTS_REPORT_TO"].split(",") if a.strip()]
-    frm = os.environ["EVENTS_REPORT_FROM"].strip()
-    name, _, addr = frm.rpartition("<")
-    sender = {"email": addr.rstrip(">").strip(), "name": name.strip() or "Aqua Reports"} if addr else {"email": frm, "name": "Aqua Reports"}
+def body(p: dict) -> tuple[str, str]:
     lab = label(p)
     link = SITE + (f"?week={p['start']}" if p["kind"] == "week" else f"?month={p['month']}")
     lines = "".join(f"<p style='margin:0 0 6px'>{x}</p>" for x in headline(p))
@@ -126,13 +123,33 @@ def send(p: dict, pdf: Path) -> None:
             f"{lines}<p style='margin-top:14px'>Live version (without the team table): <a href='{link}'>{link}</a></p>"
             f"<p style='color:#64748b;font-size:12px'>From Tripleseat, net of VAT. Lost reasons and actual spend "
             f"are only as good as what is entered in Tripleseat.</p></div>")
-    r = requests.post("https://api.brevo.com/v3/smtp/email", timeout=60,
-                      headers={"api-key": os.environ["BREVO_API_KEY"].strip(), "accept": "application/json"},
-                      json={"sender": sender, "to": [{"email": a} for a in to],
-                            "subject": f"Events report | {lab}", "htmlContent": html,
-                            "attachment": [{"name": pdf.name, "content": base64.b64encode(pdf.read_bytes()).decode()}]})
-    if r.status_code >= 300:
-        raise RuntimeError(f"Brevo send failed ({r.status_code}): {r.text[:300]}")
+    return f"Events report | {lab}", html
+
+
+def send(p: dict, pdf: Path) -> None:
+    """Send as the work mailbox through Microsoft Graph (app-only token, Mail.Send)."""
+    import requests
+    to = [a.strip() for a in os.environ["EVENTS_REPORT_TO"].split(",") if a.strip()]
+    sender = os.environ["EVENTS_REPORT_FROM"].strip()
+    tok = requests.post(
+        f"https://login.microsoftonline.com/{os.environ['MS_TENANT_ID'].strip()}/oauth2/v2.0/token", timeout=30,
+        data={"grant_type": "client_credentials", "client_id": os.environ["MS_CLIENT_ID"].strip(),
+              "client_secret": os.environ["MS_CLIENT_SECRET"].strip(), "scope": "https://graph.microsoft.com/.default"})
+    if tok.status_code != 200:
+        raise RuntimeError(f"Microsoft sign-in failed ({tok.status_code}): {tok.text[:300]}")
+    subject, html = body(p)
+    msg = {"message": {
+        "subject": subject,
+        "body": {"contentType": "HTML", "content": html},
+        "toRecipients": [{"emailAddress": {"address": a}} for a in to],
+        "attachments": [{"@odata.type": "#microsoft.graph.fileAttachment", "name": pdf.name,
+                         "contentType": "application/pdf",
+                         "contentBytes": base64.b64encode(pdf.read_bytes()).decode()}]},
+        "saveToSentItems": True}
+    r = requests.post(f"https://graph.microsoft.com/v1.0/users/{sender}/sendMail", json=msg, timeout=60,
+                      headers={"Authorization": f"Bearer {tok.json()['access_token']}"})
+    if r.status_code != 202:
+        raise RuntimeError(f"Outlook send failed ({r.status_code}): {r.text[:300]}")
     print(f"sent to {len(to)} recipient(s)")
 
 
@@ -141,6 +158,7 @@ def main() -> int:
     a.add_argument("--period", choices=["month", "week"], required=True)
     a.add_argument("--date", type=date.fromisoformat)
     a.add_argument("--send", action="store_true")
+    a.add_argument("--test", action="store_true", help="send only to the sending mailbox, not the recipient list")
     args = a.parse_args()
     start, end = period(args.period, args.date)
     p = payload(start, end, args.period)
@@ -154,10 +172,14 @@ def main() -> int:
         print(" ", line)
     if not args.send:
         return 0
-    missing = [k for k in ("BREVO_API_KEY", "EVENTS_REPORT_FROM", "EVENTS_REPORT_TO") if not os.environ.get(k, "").strip()]
+    missing = [k for k in ("MS_TENANT_ID", "MS_CLIENT_ID", "MS_CLIENT_SECRET", "EVENTS_REPORT_FROM", "EVENTS_REPORT_TO")
+               if not os.environ.get(k, "").strip()]
     if missing:
         print(f"not sent: set {', '.join(missing)} as GitHub secrets")
         return 1
+    if args.test:
+        os.environ["EVENTS_REPORT_TO"] = os.environ["EVENTS_REPORT_FROM"]
+        print("test: sending to the sending mailbox only")
     send(p, pdf)
     return 0
 
