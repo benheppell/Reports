@@ -18,6 +18,9 @@ on:
       send:
         description: "send the email (false = render only)"
         default: "false"
+      test:
+        description: "true = send only to the sending mailbox (a test), false = the full recipient list"
+        default: "true"
 
 concurrency:
   group: events-email-${{ github.event.schedule || github.event.inputs.period }}
@@ -35,6 +38,7 @@ jobs:
       PERIOD: ${{ github.event.inputs.period || (github.event.schedule == '47 7 1 * *' && 'month') || 'week' }}
       ON_DATE: ${{ github.event.inputs.date }}
       SEND: ${{ github.event_name == 'schedule' && 'true' || github.event.inputs.send }}
+      TEST: ${{ github.event_name != 'schedule' && github.event.inputs.test || 'false' }}
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
@@ -49,4 +53,5 @@ jobs:
           args="--period $PERIOD"
           [ -n "$ON_DATE" ] && args="$args --date $ON_DATE"
           [ "$SEND" = "true" ] && args="$args --send"
+          [ "$TEST" = "true" ] && args="$args --test"
           python -m aqua.jobs.events_email $args

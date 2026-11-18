@@ -141,6 +141,7 @@ def main() -> int:
     a.add_argument("--period", choices=["month", "week"], required=True)
     a.add_argument("--date", type=date.fromisoformat)
     a.add_argument("--send", action="store_true")
+    a.add_argument("--test", action="store_true", help="send only to the sending mailbox, not the recipient list")
     args = a.parse_args()
     start, end = period(args.period, args.date)
     p = payload(start, end, args.period)
@@ -158,6 +159,9 @@ def main() -> int:
     if missing:
         print(f"not sent: set {', '.join(missing)} as GitHub secrets")
         return 1
+    if args.test:
+        os.environ["EVENTS_REPORT_TO"] = os.environ["EVENTS_REPORT_FROM"]
+        print("test: sending to the sending mailbox only")
     send(p, pdf)
     return 0
 
