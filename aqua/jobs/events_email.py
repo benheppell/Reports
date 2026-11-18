@@ -8,8 +8,9 @@ Without --send it renders the PDF to out/ and stops (a dry run). The emailed cop
 conversion table, which the public page never shows. This repo is public, so the PDF is never
 uploaded as a build artifact and no team figure is ever printed to the log.
 
-Needs: SUPABASE_DB_URL, and to send: BREVO_API_KEY, EVENTS_REPORT_FROM ("Name <email>" or email),
-EVENTS_REPORT_TO (comma-separated addresses). Addresses live in GitHub secrets, not in the repo.
+Needs: SUPABASE_DB_URL, and to send through Gmail: GMAIL_USER (the sending address), GMAIL_APP_PASSWORD
+(a Google app password, not the account password) and EVENTS_REPORT_TO (comma-separated addresses).
+All three live in GitHub secrets, not in the repo.
 """
 from __future__ import annotations
 
@@ -113,11 +114,10 @@ def headline(p: dict) -> list[str]:
 
 
 def send(p: dict, pdf: Path) -> None:
-    import requests
+    import smtplib
+    from email.message import EmailMessage
     to = [a.strip() for a in os.environ["EVENTS_REPORT_TO"].split(",") if a.strip()]
-    frm = os.environ["EVENTS_REPORT_FROM"].strip()
-    name, _, addr = frm.rpartition("<")
-    sender = {"email": addr.rstrip(">").strip(), "name": name.strip() or "Aqua Reports"} if addr else {"email": frm, "name": "Aqua Reports"}
+    user = os.environ["GMAIL_USER"].strip()
     lab = label(p)
     link = SITE + (f"?week={p['start']}" if p["kind"] == "week" else f"?month={p['month']}")
     lines = "".join(f"<p style='margin:0 0 6px'>{x}</p>" for x in headline(p))
@@ -126,13 +126,17 @@ def send(p: dict, pdf: Path) -> None:
             f"{lines}<p style='margin-top:14px'>Live version (without the team table): <a href='{link}'>{link}</a></p>"
             f"<p style='color:#64748b;font-size:12px'>From Tripleseat, net of VAT. Lost reasons and actual spend "
             f"are only as good as what is entered in Tripleseat.</p></div>")
-    r = requests.post("https://api.brevo.com/v3/smtp/email", timeout=60,
-                      headers={"api-key": os.environ["BREVO_API_KEY"].strip(), "accept": "application/json"},
-                      json={"sender": sender, "to": [{"email": a} for a in to],
-                            "subject": f"Events report | {lab}", "htmlContent": html,
-                            "attachment": [{"name": pdf.name, "content": base64.b64encode(pdf.read_bytes()).decode()}]})
-    if r.status_code >= 300:
-        raise RuntimeError(f"Brevo send failed ({r.status_code}): {r.text[:300]}")
+    msg = EmailMessage()
+    msg["Subject"] = f"Events report | {lab}"
+    msg["From"] = f"Aqua Reports <{user}>"
+    msg["To"] = ", ".join(to)
+    msg.set_content("\n".join([f"London events report, {lab}. The full report is attached.", *headline(p), "", link]))
+    msg.add_alternative(html, subtype="html")
+    msg.add_attachment(pdf.read_bytes(), maintype="application", subtype="pdf", filename=pdf.name)
+    with smtplib.SMTP("smtp.gmail.com", 587, timeout=60) as smtp:
+        smtp.starttls()
+        smtp.login(user, os.environ["GMAIL_APP_PASSWORD"].replace(" ", "").strip())
+        smtp.send_message(msg)
     print(f"sent to {len(to)} recipient(s)")
 
 
@@ -154,7 +158,7 @@ def main() -> int:
         print(" ", line)
     if not args.send:
         return 0
-    missing = [k for k in ("BREVO_API_KEY", "EVENTS_REPORT_FROM", "EVENTS_REPORT_TO") if not os.environ.get(k, "").strip()]
+    missing = [k for k in ("GMAIL_USER", "GMAIL_APP_PASSWORD", "EVENTS_REPORT_TO") if not os.environ.get(k, "").strip()]
     if missing:
         print(f"not sent: set {', '.join(missing)} as GitHub secrets")
         return 1
