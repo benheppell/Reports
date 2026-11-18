@@ -9,8 +9,11 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "check, daily, weekly or backfill"
+        description: "check, discover, daily, weekly or backfill"
         default: check
+      account:
+        description: "london or paris"
+        default: london
       range:
         description: "backfill only: START END_EXCL, e.g. 2025-02-01 2027-02-01"
         default: "2025-02-01 2027-02-01"
@@ -25,8 +28,9 @@ jobs:
     timeout-minutes: 180
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
-      TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_CLIENT_ID }}
-      TRIPLESEAT_CLIENT_SECRET: ${{ secrets.TRIPLESEAT_CLIENT_SECRET }}
+      # Paris is a separate Tripleseat account with its own keys.
+      TRIPLESEAT_CLIENT_ID: ${{ github.event.inputs.account == 'paris' && secrets.TRIPLESEAT_PARIS_CLIENT_ID || secrets.TRIPLESEAT_CLIENT_ID }}
+      TRIPLESEAT_CLIENT_SECRET: ${{ github.event.inputs.account == 'paris' && secrets.TRIPLESEAT_PARIS_CLIENT_SECRET || secrets.TRIPLESEAT_CLIENT_SECRET }}
       MODE: ${{ github.event.inputs.mode || 'weekly' }}
       RANGE: ${{ github.event.inputs.range || '2025-02-01 2027-02-01' }}
     steps:
@@ -41,6 +45,7 @@ jobs:
         run: |
           case "$MODE" in
             check)  python -m aqua.jobs.tripleseat --check ;;
+            discover) python -m aqua.jobs.tripleseat --discover ;;
             daily)  python -m aqua.jobs.tripleseat --daily --write ;;
             weekly) python -m aqua.jobs.tripleseat --weekly --write ;;
             backfill) python -m aqua.jobs.tripleseat --backfill $RANGE --write ;;

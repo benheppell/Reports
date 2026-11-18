@@ -21,7 +21,8 @@ from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
-from ..sources.tripleseat import Tripleseat, event_row, lead_row, owner_of, room_names
+from ..sources.tripleseat import (Tripleseat, event_row, lead_row, obj_id, obj_name, owner_of, room_names,
+                                 to_int)
 
 CFG = Path(__file__).resolve().parents[1] / "config" / "tripleseat.toml"
 
@@ -98,12 +99,46 @@ def check(ts: Tripleseat, venues: dict[int, str]) -> int:
     return 0 if ok else 1
 
 
+def discover(ts: Tripleseat) -> int:
+    """First look at an account: its locations, and what the last 30 days hold for each. Prints names of
+    locations and rooms (venue spaces), counts and field shapes only; nothing about guests."""
+    locs = ts.locations()
+    names = {int(l["id"]): obj_name(l) for l in locs if isinstance(l, dict) and l.get("id")}
+    print("locations:", names or shape(locs[:1]))
+    if not names:
+        return 1
+    today = date.today()
+    start = today - timedelta(days=30)
+    leads = list(ts.leads_created(start, today + timedelta(days=1)))
+    print(f"leads created in the last 30 days: {len(leads)}",
+          dict(Counter(obj_id(x.get("location")) or to_int(x.get("location_id")) for x in leads)))
+    if leads:
+        print("lead fields:", shape(leads[0]))
+    evs = list(ts.events_created(start, today + timedelta(days=1), list(names)))
+    print(f"events created in the last 30 days: {len(evs)}",
+          dict(Counter(obj_id(e.get("location")) or to_int(e.get("location_id")) for e in evs)),
+          dict(Counter((e.get("status") or "").upper() for e in evs)))
+    if evs:
+        print("event fields:", shape(evs[0]))
+    venues = {k: v for k, v in names.items()}
+    rooms = {}
+    for e in evs:
+        for rid, rn in room_names(e):
+            rooms[rid] = rn
+    print("rooms seen:", rooms)
+    vals = [event_row(e, venues) for e in evs]
+    print("value basis:", dict(Counter(r["value_basis"] for r in vals if r)),
+          "lost reasons:", dict(Counter(r["lost_reason"] for r in vals if r and r["lost_reason"])))
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     mode = ap.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--daily", action="store_true")
     mode.add_argument("--weekly", action="store_true")
+    mode.add_argument("--discover", action="store_true")
     mode.add_argument("--backfill", nargs=2, metavar=("START", "END_EXCL"))
     ap.add_argument("--write", action="store_true")
     a = ap.parse_args(argv)
@@ -112,6 +147,8 @@ def main(argv=None) -> int:
     ts = Tripleseat(st["api"], st["requests_per_second"])
     if a.check:
         return check(ts, venues)
+    if a.discover:
+        return discover(ts)
 
     today = date.today()
     tomorrow = today + timedelta(days=1)
