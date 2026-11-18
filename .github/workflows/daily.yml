@@ -2,6 +2,8 @@
 #   London daily bookings   GA4 bookings and users per day      -> public.london_daily_ga4
 #   Booking pipeline        five most recent weeks, all markets -> public.booking_pipeline
 #   Ads monitor             Meta, Google and SevenRooms by ISO week, 13 weeks + last year -> public.ads_monitor
+#   Tripleseat              leads and events created in the last 14 days, events updated in the last 3
+#                           -> public.tripleseat_leads, public.tripleseat_events (skipped until the secrets exist)
 # The pace trackers need nothing here: Supabase refreshes their views itself (pg_cron).
 #
 # Secrets: GOMARBLE_API_KEY, SUPABASE_DB_URL.
@@ -26,6 +28,8 @@ jobs:
     env:
       GOMARBLE_API_KEY: ${{ secrets.GOMARBLE_API_KEY }}
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+      TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_CLIENT_ID }}
+      TRIPLESEAT_CLIENT_SECRET: ${{ secrets.TRIPLESEAT_CLIENT_SECRET }}
       WRITE: ${{ vars.WRITE_LIVE == 'true' && '--write' || '' }}
     steps:
       - uses: actions/checkout@v5
@@ -51,6 +55,12 @@ jobs:
         continue-on-error: true
         run: python -m aqua.jobs.ads_monitor --write
 
+      - name: Tripleseat
+        id: tripleseat
+        if: env.TRIPLESEAT_CLIENT_ID != ''
+        continue-on-error: true
+        run: python -m aqua.jobs.tripleseat --daily --write
+
       - name: Fail if any job failed
-        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.ads.outcome == 'failure'
+        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.ads.outcome == 'failure' || steps.tripleseat.outcome == 'failure'
         run: exit 1

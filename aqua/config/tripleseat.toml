@@ -1,0 +1,20 @@
+# Tripleseat (London). Site 9453, customer 8829. Re-confirmed with the OAuth token on 17 Nov 2026.
+# Each Tripleseat location is stored under its own name; the page groups Regent St
+# (Aqua Kyoto + Aqua Nueva) from the `group` key.
+
+[locations]
+17673 = { venue = "Aqua Shard" }
+17674 = { venue = "Hutong" }
+17676 = { venue = "Aqua Kyoto", group = "Regent St" }
+17677 = { venue = "Aqua Nueva", group = "Regent St" }
+22862 = { venue = "Shiro Sushi" }                      # named "Shiro" in Tripleseat
+25329 = { venue = "Dim Sum Library", no_ly = true }   # rows before Dec 2025 are Luci
+25438 = { venue = "Azzurra" }
+
+[settings]
+api = "https://api.tripleseat.com"
+requests_per_second = 5          # API limit is 10; events with show_financial run about 5 s a page
+min_event_year = 2015            # one prospect carries a dummy 2005 event date
+daily_created_days = 14          # daily: leads and events created in the last 14 days
+daily_updated_days = 3           # daily: plus events updated in the last 3 days
+weekly_created_days = 455          # weekly: 65 weeks, so last year is complete for the trailing 13 weeks
