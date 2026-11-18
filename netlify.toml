@@ -8,3 +8,9 @@
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Paris events report: the same page as London's, which reads the market from the path.
+[[redirects]]
+  from = "/paris/events/*"
+  to = "/london/events/index.html"
+  status = 200

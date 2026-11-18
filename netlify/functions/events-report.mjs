@@ -3,6 +3,7 @@
 // Requires Netlify env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY.
 // Endpoints: /.netlify/functions/events-report?month=2026-10
 //            /.netlify/functions/events-report?week=2026-11-09   (any date in the ISO week)
+//            add &m=paris for Aqua Kyoto Paris (default london)
 // Team-level figures are never served here; they only go in the emailed report.
 
 export default async (req) => {
@@ -17,11 +18,13 @@ export default async (req) => {
 
   const q = new URL(req.url).searchParams;
   const month = q.get("month") || "", week = q.get("week") || "";
+  const market = q.get("m") || "london";
+  if (!["london", "paris"].includes(market)) return json({ error: "Bad m. Use london or paris." }, 400);
   let rpc, body;
   if (/^20\d\d-(0[1-9]|1[0-2])$/.test(month)) {
-    rpc = "events_report_payload"; body = { p_month: `${month}-01` };
+    rpc = "events_report_payload"; body = { p_month: `${month}-01`, p_market: market };
   } else if (/^20\d\d-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(week)) {
-    rpc = "events_report_week_payload"; body = { p_week: week };
+    rpc = "events_report_week_payload"; body = { p_week: week, p_market: market };
   } else {
     return json({ error: "Use month=YYYY-MM or week=YYYY-MM-DD." }, 400);
   }
