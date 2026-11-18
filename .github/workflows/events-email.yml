@@ -1,7 +1,7 @@
 # Emails the London events report as a PDF (with the team conversion table) after the morning
-# Tripleseat pull: last week every Monday, last month on the 1st. Sent through Gmail (SMTP with an app
-# password); sender, password and recipients are GitHub secrets. This repo is public: the PDF is never
-# uploaded as an artifact.
+# Tripleseat pull: last week every Monday, last month on the 1st. Sent from the work Outlook mailbox
+# through Microsoft Graph (an Entra ID app with Mail.Send); sender, app keys and recipients are GitHub
+# secrets. This repo is public: the PDF is never uploaded as an artifact.
 name: Events report email
 
 on:
@@ -33,8 +33,10 @@ jobs:
     timeout-minutes: 20
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
-      GMAIL_USER: ${{ secrets.GMAIL_USER }}
-      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
+      MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
+      MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
+      EVENTS_REPORT_FROM: ${{ secrets.EVENTS_REPORT_FROM }}
       EVENTS_REPORT_TO: ${{ secrets.EVENTS_REPORT_TO }}
       PERIOD: ${{ github.event.inputs.period || (github.event.schedule == '47 7 1 * *' && 'month') || 'week' }}
       ON_DATE: ${{ github.event.inputs.date }}
