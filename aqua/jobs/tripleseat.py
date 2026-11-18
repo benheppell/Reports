@@ -5,6 +5,7 @@
                                                       # plus events updated in the last 3 days
     python -m aqua.jobs.tripleseat --weekly --write   # every event created in the trailing 455 days
     python -m aqua.jobs.tripleseat --backfill 2025-02-01 2027-02-01 --write
+    python -m aqua.jobs.tripleseat --account paris --daily --write   # Paris account (its own keys)
                                                       # one-off: events by EVENT date in the range, plus
                                                       # leads created in the range (for last year's figures)
 
@@ -21,25 +22,28 @@ from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
-from ..sources.tripleseat import Tripleseat, event_row, lead_row, room_names
+from ..sources.tripleseat import (Tripleseat, event_row, lead_row, obj_id, obj_name, owner_of, room_names,
+                                 to_int)
 
 CFG = Path(__file__).resolve().parents[1] / "config" / "tripleseat.toml"
 
 LEAD_COLS = ["lead_id", "location_id", "venue", "created_at", "converted_on", "turned_down_at", "event_id",
              "requested_event_date", "guest_count", "lead_source_id", "lead_source", "referral_source_id",
-             "lead_form_id", "utm_source", "utm_medium", "utm_campaign", "has_gclid", "deleted_at"]
+             "lead_form_id", "utm_source", "utm_medium", "utm_campaign", "has_gclid", "deleted_at", "market"]
 EVENT_COLS = ["event_id", "booking_id", "lead_id", "location_id", "venue", "room_ids", "room_class", "event_type",
               "market_segment", "status", "created_at", "updated_at", "deleted_at", "event_date",
               "first_tentative_at", "first_definite_at", "lost_at", "closed_at", "booking_definite_date",
               "booking_lost_date", "guest_count", "food_and_beverage_min", "grand_total", "actual_amount",
-              "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id"]
+              "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id", "owner_id", "market"]
 
-ROOM_COLS = ["room_id", "location_id", "venue", "name"]
+ROOM_COLS = ["room_id", "location_id", "venue", "name", "market"]
+USER_COLS = ["user_id", "name"]
 
 
-def load():
+def load(account: str = "london"):
     cfg = tomllib.loads(CFG.read_text())
-    venues = {int(k): v["venue"] for k, v in cfg["locations"].items()}
+    locs = cfg["locations"] if account == "london" else cfg[account]["locations"]
+    venues = {int(k): v["venue"] for k, v in locs.items()}
     return cfg["settings"], venues
 
 
@@ -97,31 +101,73 @@ def check(ts: Tripleseat, venues: dict[int, str]) -> int:
     return 0 if ok else 1
 
 
+def discover(ts: Tripleseat) -> int:
+    """First look at an account: its locations, and what the last 30 days hold for each. Prints names of
+    locations and rooms (venue spaces), counts and field shapes only; nothing about guests."""
+    locs = ts.locations()
+    names = {int(l["id"]): obj_name(l) for l in locs if isinstance(l, dict) and l.get("id")}
+    print("locations:", names or shape(locs[:1]))
+    if not names:
+        return 1
+    today = date.today()
+    start = today - timedelta(days=30)
+    leads = list(ts.leads_created(start, today + timedelta(days=1)))
+    print(f"leads created in the last 30 days: {len(leads)}",
+          dict(Counter(obj_id(x.get("location")) or to_int(x.get("location_id")) for x in leads)))
+    if leads:
+        print("lead fields:", shape(leads[0]))
+    evs = list(ts.events_created(start, today + timedelta(days=1), list(names)))
+    print(f"events created in the last 30 days: {len(evs)}",
+          dict(Counter(obj_id(e.get("location")) or to_int(e.get("location_id")) for e in evs)),
+          dict(Counter((e.get("status") or "").upper() for e in evs)))
+    if evs:
+        print("event fields:", shape(evs[0]))
+    venues = {k: v for k, v in names.items()}
+    rooms = {}
+    for e in evs:
+        for rid, rn in room_names(e):
+            rooms[rid] = rn
+    print("rooms seen:", rooms)
+    vals = [event_row(e, venues) for e in evs]
+    print("value basis:", dict(Counter(r["value_basis"] for r in vals if r)),
+          "lost reasons:", dict(Counter(r["lost_reason"] for r in vals if r and r["lost_reason"])))
+    return 0
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     mode = ap.add_mutually_exclusive_group(required=True)
     mode.add_argument("--check", action="store_true")
     mode.add_argument("--daily", action="store_true")
     mode.add_argument("--weekly", action="store_true")
+    mode.add_argument("--discover", action="store_true")
     mode.add_argument("--backfill", nargs=2, metavar=("START", "END_EXCL"))
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--account", choices=["london", "paris"], default="london",
+                    help="which Tripleseat account the keys in the environment belong to")
     a = ap.parse_args(argv)
 
-    st, venues = load()
+    st, venues = load(a.account)
     ts = Tripleseat(st["api"], st["requests_per_second"])
     if a.check:
         return check(ts, venues)
+    if a.discover:
+        return discover(ts)
 
     today = date.today()
     tomorrow = today + timedelta(days=1)
     locs = sorted(venues)
     leads, events = [], {}
     rooms: dict[int, dict] = {}
+    users: dict[int, dict] = {}
 
     def take(e):
         r = event_row(e, venues, st["min_event_year"])
         if r:
             events[r["event_id"]] = r
+            uid, uname = owner_of(e)
+            if uid and uname:
+                users[uid] = {"user_id": uid, "name": uname}
             for rid, name in room_names(e):
                 rooms.setdefault(rid, {"room_id": rid, "location_id": r["location_id"], "venue": r["venue"],
                                        "name": name})
@@ -159,16 +205,19 @@ def main(argv=None) -> int:
     report = (f"### Tripleseat {kind}\n```\n"
               f"leads: {len(leads)} {dict(by_venue)}\nevents: {len(events)} {dict(by_status)}\n"
               f"value basis: {dict(Counter(r['value_basis'] for r in events.values()))}\n"
-              f"rooms named: {len(rooms)}\n```\n")
+              f"rooms named: {len(rooms)}  owners named: {len(users)}\n```\n")
     print(report)
     with open(os.environ.get("GITHUB_STEP_SUMMARY", os.devnull), "a") as fh:
         fh.write(report)
     if a.write:
         from ..sources.sevenrooms import SevenRooms
         conn = SevenRooms().conn
+        for r in [*leads, *events.values(), *rooms.values()]:
+            r["market"] = a.account
         upsert(conn, "tripleseat_leads", "lead_id", LEAD_COLS, leads)
         upsert(conn, "tripleseat_events", "event_id", EVENT_COLS, list(events.values()))
         upsert(conn, "tripleseat_rooms", "room_id", ROOM_COLS, list(rooms.values()))
+        upsert(conn, "tripleseat_users", "user_id", USER_COLS, list(users.values()))
         print("written")
     return 0
 

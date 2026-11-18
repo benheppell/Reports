@@ -190,7 +190,16 @@ def event_row(ev: dict, venues: dict[int, str], min_year: int = 2015) -> dict | 
         "deposit_amount": num(ev.get("deposit_amount")),
         "value": value, "value_basis": basis,
         "lost_reason": clean(lost.get("name")), "lost_reason_id": to_int(lost.get("id")),
+        "owner_id": owner_of(ev)[0],
     }
+
+
+def owner_of(ev: dict) -> tuple[int | None, str | None]:
+    """The staff user who owns the event: (user id, "First Last"). Staff, never the guest; no email or phone."""
+    o = ev.get("owner") if isinstance(ev.get("owner"), dict) else {}
+    uid = to_int(o.get("id")) or to_int(ev.get("owned_by"))
+    name = " ".join(x for x in (clean(o.get("first_name")), clean(o.get("last_name"))) if x) or None
+    return uid, name
 
 
 def room_names(ev: dict) -> list[tuple[int, str]]:

@@ -18,3 +18,8 @@ min_event_year = 2015            # one prospect carries a dummy 2005 event date
 daily_created_days = 14          # daily: leads and events created in the last 14 days
 daily_updated_days = 3           # daily: plus events updated in the last 3 days
 weekly_created_days = 455          # weekly: 65 weeks, so last year is complete for the trailing 13 weeks
+
+# Tripleseat (Paris): a separate account with its own keys (TRIPLESEAT_PARIS_CLIENT_ID / _SECRET).
+# Confirmed by the discover run on 18 Nov 2026. Values are divided by 1.2 like London, for now.
+[paris.locations]
+33290 = { venue = "Aqua Kyoto Paris" }                # named "Aqua Kyoto" in Tripleseat
