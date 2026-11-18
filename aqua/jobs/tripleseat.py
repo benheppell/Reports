@@ -21,7 +21,7 @@ from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
-from ..sources.tripleseat import Tripleseat, event_row, lead_row, room_names
+from ..sources.tripleseat import Tripleseat, event_row, lead_row, owner_of, room_names
 
 CFG = Path(__file__).resolve().parents[1] / "config" / "tripleseat.toml"
 
@@ -32,9 +32,10 @@ EVENT_COLS = ["event_id", "booking_id", "lead_id", "location_id", "venue", "room
               "market_segment", "status", "created_at", "updated_at", "deleted_at", "event_date",
               "first_tentative_at", "first_definite_at", "lost_at", "closed_at", "booking_definite_date",
               "booking_lost_date", "guest_count", "food_and_beverage_min", "grand_total", "actual_amount",
-              "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id"]
+              "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id", "owner_id"]
 
 ROOM_COLS = ["room_id", "location_id", "venue", "name"]
+USER_COLS = ["user_id", "name"]
 
 
 def load():
@@ -117,11 +118,15 @@ def main(argv=None) -> int:
     locs = sorted(venues)
     leads, events = [], {}
     rooms: dict[int, dict] = {}
+    users: dict[int, dict] = {}
 
     def take(e):
         r = event_row(e, venues, st["min_event_year"])
         if r:
             events[r["event_id"]] = r
+            uid, uname = owner_of(e)
+            if uid and uname:
+                users[uid] = {"user_id": uid, "name": uname}
             for rid, name in room_names(e):
                 rooms.setdefault(rid, {"room_id": rid, "location_id": r["location_id"], "venue": r["venue"],
                                        "name": name})
@@ -159,7 +164,7 @@ def main(argv=None) -> int:
     report = (f"### Tripleseat {kind}\n```\n"
               f"leads: {len(leads)} {dict(by_venue)}\nevents: {len(events)} {dict(by_status)}\n"
               f"value basis: {dict(Counter(r['value_basis'] for r in events.values()))}\n"
-              f"rooms named: {len(rooms)}\n```\n")
+              f"rooms named: {len(rooms)}  owners named: {len(users)}\n```\n")
     print(report)
     with open(os.environ.get("GITHUB_STEP_SUMMARY", os.devnull), "a") as fh:
         fh.write(report)
@@ -169,6 +174,7 @@ def main(argv=None) -> int:
         upsert(conn, "tripleseat_leads", "lead_id", LEAD_COLS, leads)
         upsert(conn, "tripleseat_events", "event_id", EVENT_COLS, list(events.values()))
         upsert(conn, "tripleseat_rooms", "room_id", ROOM_COLS, list(rooms.values()))
+        upsert(conn, "tripleseat_users", "user_id", USER_COLS, list(users.values()))
         print("written")
     return 0
 
