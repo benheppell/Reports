@@ -109,12 +109,13 @@ begin
       count(*) filter (where r.room_class = 'PDR') p,
       count(*) filter (where r.room_class = 'Multiple PDR') mp,
       count(*) filter (where r.room_class = 'Restaurant') g,
-      min(coalesce(r.area, r.name)) filter (where r.room_class = 'Semi-exclusive & wings') area
+      min(coalesce(r.area, r.name)) filter (where r.room_class = 'Semi-exclusive & wings') area,
+      string_agg(distinct coalesce(r.name, 'Unnamed room'), ' + ' order by coalesce(r.name, 'Unnamed room')) room_names
     from ev e cross join lateral unnest(e.room_ids) rid left join tripleseat_rooms r on r.room_id = rid
     where e.event_date >= ly and e.event_date < fy1
     group by 1),
   bt as (
-    select e.event_id, e.net,
+    select e.event_id, e.net, e.v, coalesce(r.room_names, 'No room set') rooms,
       case when e.event_date >= fy0 then 'ty' else 'ly' end y,
       case when coalesce(r.x,0) > 0 then 'Exclusive hire'
            when coalesce(r.s,0) > 0 then 'Semi-exclusive & wings'
@@ -130,20 +131,20 @@ begin
         or e.event_id in (select event_id from up))),
   -- the months ahead: confirmed (as at the as-of date) and still under discussion (current status)
   fwd as (
-    select to_char(date_trunc('month', e.event_date), 'YYYY-MM') mon,
+    select to_char(date_trunc('month', e.event_date), 'YYYY-MM') mon, e.v,
       count(*) filter (where e.status in ('CLOSED','DEFINITE') and e.defd <= asof) conf_n,
       sum(e.net) filter (where e.status in ('CLOSED','DEFINITE') and e.defd <= asof) conf_val,
       count(*) filter (where e.status in ('TENTATIVE','PROSPECT')) disc_n,
       sum(e.net) filter (where e.status in ('TENTATIVE','PROSPECT')) disc_val
     from ev e where e.deleted_at is null and e.event_date > asof
       and e.event_date < date_trunc('month', asof) + interval '7 months'
-    group by 1),
+    group by 1,2),
   -- last year's held revenue by month, labelled with this year's month
   mly as (
-    select to_char(date_trunc('month', e.event_date + interval '1 year'), 'YYYY-MM') mon, count(*) n, sum(e.net) val
+    select to_char(date_trunc('month', e.event_date + interval '1 year'), 'YYYY-MM') mon, e.v, count(*) n, sum(e.net) val
     from ev e where e.deleted_at is null and e.status in ('CLOSED','DEFINITE') and e.event_date >= ly
       and e.event_date < date_trunc('month', asof) + interval '7 months' - interval '1 year'
-    group by 1)
+    group by 1,2)
   select jsonb_build_object(
     'market', p_market, 'kind', p_kind, 'start', p_start, 'end', p_end - 1,
     'month', to_char(p_start,'YYYY-MM'), 'as_of', asof, 'fy_start', fy0, 'fy_label', 'FY' || to_char(fy0,'YY'),
@@ -163,7 +164,13 @@ begin
     'forward', (select jsonb_agg(fwd order by mon) from fwd),
     'held_ly_by_month', (select jsonb_agg(mly order by mon) from mly),
     'booking_type', (select jsonb_agg(x) from (select y, btype, count(*) n, sum(net) val from bt group by 1,2) x),
-    'areas', (select jsonb_agg(x) from (select y, area, count(*) n, sum(net) val from bt where btype = 'Semi-exclusive & wings' group by 1,2) x)
+    'areas', (select jsonb_agg(x) from (select y, area, count(*) n, sum(net) val from bt where btype = 'Semi-exclusive & wings' group by 1,2) x),
+    -- by venue (and, for booking types, by room): the page filters and drills down on these
+    'enquiries_by_month_v', (select jsonb_agg(x) from (
+        select p.y, l.v, to_char(date_trunc('month', l.cd + p.sh), 'YYYY-MM') mon, count(*) n
+        from per p join ld l on l.cd >= fy0 - p.sh and l.cd <= asof - p.sh group by 1,2,3) x),
+    'booking_type_rooms', (select jsonb_agg(x) from (select y, v, btype, rooms, count(*) n, sum(net) val from bt group by 1,2,3,4) x),
+    'areas_v', (select jsonb_agg(x) from (select y, v, area, count(*) n, sum(net) val from bt where btype = 'Semi-exclusive & wings' group by 1,2,3) x)
   ) into res;
 
   if p_team then

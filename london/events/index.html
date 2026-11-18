@@ -31,7 +31,10 @@ tr.tot td{font-weight:700;background:#f8fafc}
 .up{color:#16a34a}.down{color:#dc2626}.flat{color:#64748b}
 .err{color:#dc2626;padding:20px 0}
 footer{margin-top:34px;color:#94a3b8;font-size:11px;border-top:1px solid #eef2f6;padding-top:12px;line-height:1.6}
-@media print{button.copy{display:none}.sec{break-inside:avoid}}
+@media print{button.copy,select.vsel{display:none}.sec{break-inside:avoid}}
+select.vsel{font-size:12px;font-weight:600;padding:3px 8px;border-radius:8px;margin-left:10px;vertical-align:middle}
+tr.drill{cursor:pointer}tr.drill:hover td{background:#f8fafc}.tog{display:inline-block;width:14px;color:#2563eb}
+tr.sub td{color:#475569;font-size:12px;background:#fcfdfe}tr.sub td:first-child{padding-left:34px;white-space:normal}tr.sub.hide{display:none}
 button.copy{font-family:inherit;font-size:11px;font-weight:600;color:#2563eb;background:none;border:1px solid #bfdbfe;border-radius:8px;padding:3px 8px;cursor:pointer;margin-left:8px;vertical-align:middle}
 </style>
 </head>
@@ -81,11 +84,22 @@ function chg(ty, ly) {
 }
 const pct = (a, b) => b ? (a / b * 100).toFixed(1) + "%" : "–";
 const sum = (rows, f) => rows.reduce((t, r) => t + (Number(r[f]) || 0), 0);
-function table(title, note, head, rows, tot) {
+// Per-table venue picker (tables that are not already split by venue) and expandable rows.
+const VSEL = {}, EXP = new Set();
+let LAST = null;
+const vf = key => r => !VSEL[key] || r.v === VSEL[key];
+function venuePick(key) {
+  if (VENUES.length < 2) return "";
+  return `<select class="vsel" data-k="${key}"><option value="">All venues</option>${VENUES.map(v =>
+    `<option${VSEL[key] === v ? " selected" : ""}>${v}</option>`).join("")}</select>`;
+}
+function table(title, note, head, rows, tot, vkey) {
   const id = "t" + Math.random().toString(36).slice(2, 8);
-  return `<section class="sec"><h2>${title}<button class="copy" data-t="${id}">Copy</button></h2>${note ? `<div class="note">${note}</div>` : ""}
+  const tr = r => Array.isArray(r) ? `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`
+    : `<tr class="${r.cls || ""}" ${r.attr || ""}>${r.cells.map(c => `<td>${c}</td>`).join("")}</tr>`;
+  return `<section class="sec"><h2>${title}${vkey ? venuePick(vkey) : ""}<button class="copy" data-t="${id}">Copy</button></h2>${note ? `<div class="note">${note}</div>` : ""}
   <div class="wrap"><table id="${id}"><thead><tr>${head.map(h => `<th>${h}</th>`).join("")}</tr></thead><tbody>
-  ${rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}
+  ${rows.map(tr).join("")}
   ${tot ? `<tr class="tot">${tot.map(c => `<td>${c}</td>`).join("")}</tr>` : ""}</tbody></table></div></section>`;
 }
 function monthLabel(ym) { const [y, m] = ym.split("-").map(Number); return `${MON[m-1]} ${y}`; }
@@ -118,7 +132,7 @@ async function load() {
     const r = await fetch(`/.netlify/functions/events-report?${kindSel.value}=${sel.value}&m=${MARKET}`);
     const d = await r.json();
     if (!r.ok) throw new Error(d.error || r.status);
-    render(d);
+    LAST = d; render(d);
   } catch (e) { $("#out").innerHTML = `<div class="err">Could not load: ${e.message}</div>`; $("#stamp").textContent = ""; }
 }
 
@@ -173,12 +187,12 @@ function render(d) {
       pct(eT("ty","fytd_conv"), eT("ty","fytd_n")), pct(eT("ly","fytd_conv"), eT("ly","fytd_n"))]);
 
   // 1b. Enquiries by month
-  const EM = d.enquiries_by_month || [], months = [...new Set(EM.map(r => r.mon))].sort();
-  const em = (y, m) => Number((EM.find(r => r.y === y && r.mon === m) || {}).n || 0);
+  const EM = (d.enquiries_by_month_v || d.enquiries_by_month || []).filter(vf("em")), months = [...new Set(EM.map(r => r.mon))].sort();
+  const em = (y, m) => sum(EM.filter(r => r.y === y && r.mon === m), "n");
   h += table("Enquiries by month", `${FY} to date. The last month is part-month if the year to date ends before month end.`,
     ["Month", FY, FYL, "Change"],
     months.map(m => [MON[Number(m.slice(5)) - 1], n0(em("ty", m)), n0(em("ly", m)), chg(em("ty", m), em("ly", m))]),
-    ["Total", n0(sum(pick(EM,"ty"),"n")), n0(sum(pick(EM,"ly"),"n")), chg(sum(pick(EM,"ty"),"n"), sum(pick(EM,"ly"),"n"))]);
+    ["Total", n0(sum(pick(EM,"ty"),"n")), n0(sum(pick(EM,"ly"),"n")), chg(sum(pick(EM,"ty"),"n"), sum(pick(EM,"ly"),"n"))], "em");
 
   // 2. Confirmed by week
   const last = new Date(Number(mon.slice(0,4)), Number(mon.slice(5)), 0).getDate(), M3 = MON[Number(mon.slice(5)) - 1];
@@ -187,24 +201,24 @@ function render(d) {
                    : ["1–7", "8–14", "15–21", `22–${last}`].map(w => `${w} ${M3}`);
   h += table(`Bookings confirmed ${wk ? "in the week" : "in " + ml}, by ${wk ? "day" : "week"}`,
     `Bookings moved to Definite on each ${wk ? "day of the week" : "week of the month"}, for any future date.`,
-    [wk ? "Day" : "Week", `Value ${ml}`, `Value ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`],
-    wkLab.map((_, i) => i + 1).map(w => { const f = r => r.wk === w;
-      return [wkLab[w-1], gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f))]; }),
-    ["Total", gbp(cT("ty","val")), gbp(cT("ly","val")), chg(cT("ty","val"), cT("ly","val")), n0(cT("ty","n")), n0(cT("ly","n"))]);
+    [wk ? "Day" : "Week", `Value ${ml}`, `Value ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`, "Change"],
+    wkLab.map((_, i) => i + 1).map(w => { const f = r => r.wk === w && vf("cw")(r);
+      return [wkLab[w-1], gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f)), chg(cT("ty","n",f), cT("ly","n",f))]; }),
+    (f => ["Total", gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f)), chg(cT("ty","n",f), cT("ly","n",f))])(vf("cw")), "cw");
 
   // 3. Confirmed by venue
   h += table(`Bookings confirmed in ${ml}, by venue`, "",
-    ["Venue", `Value ${ml}`, `Value ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`],
+    ["Venue", `Value ${ml}`, `Value ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`, "Change"],
     VENUES.map(v => { const f = r => r.v === v;
-      return [v, gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f))]; }),
-    ["Total", gbp(cT("ty","val")), gbp(cT("ly","val")), chg(cT("ty","val"), cT("ly","val")), n0(cT("ty","n")), n0(cT("ly","n"))]);
+      return [v, gbp(cT("ty","val",f)), gbp(cT("ly","val",f)), chg(cT("ty","val",f), cT("ly","val",f)), n0(cT("ty","n",f)), n0(cT("ly","n",f)), chg(cT("ty","n",f), cT("ly","n",f))]; }),
+    ["Total", gbp(cT("ty","val")), gbp(cT("ly","val")), chg(cT("ty","val"), cT("ly","val")), n0(cT("ty","n")), n0(cT("ly","n")), chg(cT("ty","n"), cT("ly","n"))]);
 
   // 4. Held in month by venue
   h += table(`Events held in ${ml}, by venue`, "Net revenue from events taking place in the month.",
-    ["Venue", `Revenue ${ml}`, `Revenue ${mlly}`, "Change", `Events ${ml}`, `Events ${mlly}`],
+    ["Venue", `Revenue ${ml}`, `Revenue ${mlly}`, "Change", `Events ${ml}`, `Events ${mlly}`, "Change"],
     VENUES.map(v => { const f = r => r.v === v;
-      return [v, gbp(hM("ty","val",f)), gbp(hM("ly","val",f)), chg(hM("ty","val",f), hM("ly","val",f)), n0(hM("ty","n",f)), n0(hM("ly","n",f))]; }),
-    ["Total", gbp(hM("ty","val")), gbp(hM("ly","val")), chg(hM("ty","val"), hM("ly","val")), n0(hM("ty","n")), n0(hM("ly","n"))]);
+      return [v, gbp(hM("ty","val",f)), gbp(hM("ly","val",f)), chg(hM("ty","val",f), hM("ly","val",f)), n0(hM("ty","n",f)), n0(hM("ly","n",f)), chg(hM("ty","n",f), hM("ly","n",f))]; }),
+    ["Total", gbp(hM("ty","val")), gbp(hM("ly","val")), chg(hM("ty","val"), hM("ly","val")), n0(hM("ty","n")), n0(hM("ly","n")), chg(hM("ty","n"), hM("ly","n"))]);
 
   // 4b. Lost enquiries and bookings
   const L = d.lost || [];
@@ -213,17 +227,20 @@ function render(d) {
     (lS("ty","enquiry",r=>r.reason===b) + lS("ty","booking",r=>r.reason===b)) - (lS("ty","enquiry",r=>r.reason===a) + lS("ty","booking",r=>r.reason===a)));
   h += table(`Lost ${wk ? "in the week" : "in " + ml}, by reason`,
     "Events marked Lost in the period, with the reason recorded in Tripleseat. A lost booking had been confirmed first; a lost enquiry never was.",
-    ["Reason", `Enquiries ${ml}`, `Enquiries ${mlly}`, `Bookings ${ml}`, `Bookings ${mlly}`, `Booking value ${ml}`],
-    reasons.map(rs => { const f = r => r.reason === rs;
-      return [rs, n0(lS("ty","enquiry",f)), n0(lS("ly","enquiry",f)), n0(lS("ty","booking",f)), n0(lS("ly","booking",f)), gbp(lS("ty","booking",f,"val"))]; }),
-    ["Total", n0(lS("ty","enquiry")), n0(lS("ly","enquiry")), n0(lS("ty","booking")), n0(lS("ly","booking")), gbp(lS("ty","booking",()=>true,"val"))]);
+    ["Reason", `Enquiries ${ml}`, `Enquiries ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`, "Change", `Booking value ${ml}`],
+    reasons.map(rs => { const f = r => r.reason === rs && vf("lr")(r);
+      return [rs, n0(lS("ty","enquiry",f)), n0(lS("ly","enquiry",f)), chg(lS("ty","enquiry",f), lS("ly","enquiry",f)),
+        n0(lS("ty","booking",f)), n0(lS("ly","booking",f)), chg(lS("ty","booking",f), lS("ly","booking",f)), gbp(lS("ty","booking",f,"val"))]; })
+      .filter((r, i) => r.slice(1, 3).some(x => x !== "0") || r.slice(4, 6).some(x => x !== "0")),
+    (f => ["Total", n0(lS("ty","enquiry",f)), n0(lS("ly","enquiry",f)), chg(lS("ty","enquiry",f), lS("ly","enquiry",f)),
+      n0(lS("ty","booking",f)), n0(lS("ly","booking",f)), chg(lS("ty","booking",f), lS("ly","booking",f)), gbp(lS("ty","booking",f,"val"))])(vf("lr")), "lr");
   h += table(`Lost ${wk ? "in the week" : "in " + ml}, by venue`, "",
-    ["Venue", `Enquiries ${ml}`, `Enquiries ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`, `Booking value ${ml}`, `Booking value ${mlly}`],
+    ["Venue", `Enquiries ${ml}`, `Enquiries ${mlly}`, "Change", `Bookings ${ml}`, `Bookings ${mlly}`, "Change", `Booking value ${ml}`, `Booking value ${mlly}`],
     VENUES.map(v => { const f = r => r.v === v;
       return [v, n0(lS("ty","enquiry",f)), n0(lS("ly","enquiry",f)), chg(lS("ty","enquiry",f), lS("ly","enquiry",f)),
-        n0(lS("ty","booking",f)), n0(lS("ly","booking",f)), gbp(lS("ty","booking",f,"val")), gbp(lS("ly","booking",f,"val"))]; }),
+        n0(lS("ty","booking",f)), n0(lS("ly","booking",f)), chg(lS("ty","booking",f), lS("ly","booking",f)), gbp(lS("ty","booking",f,"val")), gbp(lS("ly","booking",f,"val"))]; }),
     ["Total", n0(lS("ty","enquiry")), n0(lS("ly","enquiry")), chg(lS("ty","enquiry"), lS("ly","enquiry")),
-      n0(lS("ty","booking")), n0(lS("ly","booking")), gbp(lS("ty","booking",()=>true,"val")), gbp(lS("ly","booking",()=>true,"val"))]);
+      n0(lS("ty","booking")), n0(lS("ly","booking")), chg(lS("ty","booking"), lS("ly","booking")), gbp(lS("ty","booking",()=>true,"val")), gbp(lS("ly","booking",()=>true,"val"))]);
 
   // 4c. Team (emailed report only; the public page never receives it)
   if (d.team) {
@@ -242,29 +259,30 @@ function render(d) {
 
   // 4d. Month by month: held so far, then confirmed and under discussion ahead, against target and last year
   {
-    const FW = d.forward || [], LYM = d.held_ly_by_month || [];
-    const tgt = m => { const t = TM.find(x => x.mon === m); return t ? Number(t.target) : null; };
-    const heldM = m => sum(pick(H, "ty").filter(r => r.mon === m), "val");
-    const fw = (m, f) => Number((FW.find(r => r.mon === m) || {})[f] || 0);
-    const lyv = m => Number((LYM.find(r => r.mon === m) || {}).val || 0);
+    const FW = (d.forward || []).filter(vf("mm")), LYM = (d.held_ly_by_month || []).filter(vf("mm"));
+    // Targets are set for the whole market, so they only show with all venues selected.
+    const tgt = m => { const t = !VSEL.mm && TM.find(x => x.mon === m); return t ? Number(t.target) : null; };
+    const heldM = m => sum(pick(H, "ty").filter(r => r.mon === m).filter(vf("mm")), "val");
+    const fw = (m, f) => sum(FW.filter(r => r.mon === m), f);
+    const lyv = m => sum(LYM.filter(r => r.mon === m), "val");
     const asofM = d.as_of.slice(0, 7);
     const ms = [...new Set([...H.filter(r => r.y === "ty").map(r => r.mon), ...FW.map(r => r.mon), ...TM.map(r => r.mon)])]
-      .filter(m => m >= d.fy_start.slice(0, 7) && m <= (FW.length ? FW[FW.length - 1].mon : asofM)).sort();
+      .filter(m => m >= d.fy_start.slice(0, 7) && m <= (FW.length ? FW.map(r => r.mon).sort().pop() : asofM)).sort();
     const lab = m => `${MON[Number(m.slice(5)) - 1]} ${m.slice(2, 4)}`;
     const rows = ms.map(m => { const done = m <= asofM ? heldM(m) : 0, conf = fw(m, "conf_val"), disc = fw(m, "disc_val"), t = tgt(m);
       return [lab(m), gbp(done || null), gbp(conf || null), gbp(done + conf), gbp(disc || null), t ? gbp(t) : "–", t ? pct(done + conf, t) : "–", gbp(lyv(m) || null), chg(done + conf, lyv(m))]; });
     if (rows.length) h += table("Month by month against target",
       `Held = events that have taken place. Confirmed = booked and confirmed by ${asof}, still to happen. Under discussion = tentative and prospect events as they stand today. ${TM.length ? "Targets as set by the team, net of VAT." : ""}`,
-      ["Month", "Held", "Confirmed ahead", "Held + confirmed", "Under discussion", "Target", "Of target", "Last year", "vs last year"], rows);
+      ["Month", "Held", "Confirmed ahead", "Held + confirmed", "Under discussion", "Target", "Of target", "Last year", "vs last year"], rows, null, "mm");
   }
 
   // 5. Revenue year to date by month
   const hm = [...new Set(H.map(r => r.mon))].sort();
   h += table(`Revenue year to date, by month`, `Net revenue from events held, ${FY} against ${FYL}, to ${asof}.`,
-    ["Month", `Revenue ${FY}`, `Revenue ${FYL}`, "Change", `Events ${FY}`, `Events ${FYL}`],
-    hm.map(m => { const f = r => r.mon === m;
-      return [MON[Number(m.slice(5)) - 1], gbp(hY("ty","val",f)), gbp(hY("ly","val",f)), chg(hY("ty","val",f), hY("ly","val",f)), n0(hY("ty","n",f)), n0(hY("ly","n",f))]; }),
-    ["Year to date", gbp(hY("ty","val")), gbp(hY("ly","val")), chg(hY("ty","val"), hY("ly","val")), n0(hY("ty","n")), n0(hY("ly","n"))]);
+    ["Month", `Revenue ${FY}`, `Revenue ${FYL}`, "Change", `Events ${FY}`, `Events ${FYL}`, "Change"],
+    hm.map(m => { const f = r => r.mon === m && vf("ry")(r);
+      return [MON[Number(m.slice(5)) - 1], gbp(hY("ty","val",f)), gbp(hY("ly","val",f)), chg(hY("ty","val",f), hY("ly","val",f)), n0(hY("ty","n",f)), n0(hY("ly","n",f)), chg(hY("ty","n",f), hY("ly","n",f))]; }),
+    (f => ["Year to date", gbp(hY("ty","val",f)), gbp(hY("ly","val",f)), chg(hY("ty","val",f), hY("ly","val",f)), n0(hY("ty","n",f)), n0(hY("ly","n",f)), chg(hY("ty","n",f), hY("ly","n",f))])(vf("ry")), "ry");
 
   // 6. Full year by venue
   h += table(`Full year: ${FYL} final against ${FY} on the books`, `${FY} on the books = completed to ${asof} plus confirmed events still to happen. Still to book = the gap to ${FYL} final.`,
@@ -283,29 +301,53 @@ function render(d) {
     ["Total", gbp(lyFinal), "", gbp(fc), gbp(target), pct(fc, target), chg(fc, lyFinal), gbp(Math.max(0, target - fc))]);
 
   // 8. Booking type
-  const B = d.booking_type || [];
-  const b = (y, t, f) => Number((B.find(r => r.y === y && r.btype === t) || {})[f] || 0);
-  const bn = y => sum(pick(B, y), "n"), bv = y => sum(pick(B, y), "val");
-  const types = TYPES.filter(t => t !== "Unmapped" || b("ty", t, "n") || b("ly", t, "n"));
-  h += table(`Full year by booking type`, `${FYL} = completed events. ${FY} = completed so far plus confirmed upcoming events, so it grows as the year fills.`,
-    ["Booking type", `Events ${FYL}`, `Events ${FY}`, `% ${FYL}`, `% ${FY}`, `Value ${FYL}`, `Value ${FY}`, "Change", `Avg ${FYL}`, `Avg ${FY}`],
-    types.map(t => [t, n0(b("ly",t,"n")), n0(b("ty",t,"n")), pct(b("ly",t,"n"), bn("ly")), pct(b("ty",t,"n"), bn("ty")),
-      gbp(b("ly",t,"val")), gbp(b("ty",t,"val")), chg(b("ty",t,"val"), b("ly",t,"val")),
-      gbp(b("ly",t,"n") ? b("ly",t,"val") / b("ly",t,"n") : null), gbp(b("ty",t,"n") ? b("ty",t,"val") / b("ty",t,"n") : null)]),
-    ["Total", n0(bn("ly")), n0(bn("ty")), "100%", "100%", gbp(bv("ly")), gbp(bv("ty")), chg(bv("ty"), bv("ly")),
-      gbp(bn("ly") ? bv("ly") / bn("ly") : null), gbp(bn("ty") ? bv("ty") / bn("ty") : null)]);
+  const B = (d.booking_type_rooms || d.booking_type || []).filter(vf("bt"));
+  const bS = (y, f, flt = () => true) => sum(pick(B, y).filter(flt), f);
+  const bn = y => bS(y, "n"), bv = y => bS(y, "val");
+  const types = TYPES.filter(t => t !== "Unmapped" || bS("ty", "n", r => r.btype === t) || bS("ly", "n", r => r.btype === t));
+  const bline = (label, flt) => [label, n0(bS("ly","n",flt)), n0(bS("ty","n",flt)), chg(bS("ty","n",flt), bS("ly","n",flt)),
+    pct(bS("ly","n",flt), bn("ly")), pct(bS("ty","n",flt), bn("ty")),
+    gbp(bS("ly","val",flt)), gbp(bS("ty","val",flt)), chg(bS("ty","val",flt), bS("ly","val",flt)),
+    gbp(bS("ly","n",flt) ? bS("ly","val",flt) / bS("ly","n",flt) : null), gbp(bS("ty","n",flt) ? bS("ty","val",flt) / bS("ty","n",flt) : null)];
+  const btRows = [];
+  for (const t of types) {
+    const open = EXP.has(t), key = t.replace(/\W/g, "");
+    const lab = bline(`<span class="tog">${open ? "▾" : "▸"}</span>${t}`, r => r.btype === t);
+    btRows.push({cells: lab, cls: "drill", attr: `data-bt="${t}" data-k="${key}"`});
+    // One sub-row per room (or room combination) behind the type; venue named when all venues are shown.
+    const subs = new Map();
+    for (const r of B.filter(r => r.btype === t && r.rooms)) {
+      const sk = VSEL.bt ? r.rooms : `${r.rooms}|${r.v}`;
+      if (!subs.has(sk)) subs.set(sk, {rooms: r.rooms, v: r.v});
+    }
+    [...subs.values()].map(x => ({...x, f: r => r.btype === t && r.rooms === x.rooms && (VSEL.bt || r.v === x.v)}))
+      .sort((p, q) => (bS("ty","n",q.f) + bS("ly","n",q.f)) - (bS("ty","n",p.f) + bS("ly","n",p.f)))
+      .forEach(x => btRows.push({cells: bline(x.rooms + (VSEL.bt ? "" : ` <span class="ctx">· ${x.v}</span>`), x.f),
+                                 cls: "sub" + (open ? "" : " hide"), attr: `data-p="${key}"`}));
+  }
+  h += table(`Full year by booking type`, `${FYL} = completed events. ${FY} = completed so far plus confirmed upcoming events, so it grows as the year fills. Click a type to see the rooms behind it.`,
+    ["Booking type", `Events ${FYL}`, `Events ${FY}`, "Change", `% ${FYL}`, `% ${FY}`, `Value ${FYL}`, `Value ${FY}`, "Change", `Avg ${FYL}`, `Avg ${FY}`],
+    btRows, bline("Total", () => true).map((c, i) => i === 4 || i === 5 ? "100%" : c), "bt");
 
-  const A = d.areas || [], areas = [...new Set(A.map(r => r.area))].sort();
-  const a = (y, ar, f) => Number((A.find(r => r.y === y && r.area === ar) || {})[f] || 0);
+  const A = (d.areas_v || d.areas || []).filter(vf("ar")), areas = [...new Set((d.areas_v || d.areas || []).map(r => r.area))].sort();
+  const a = (y, ar, f) => sum(A.filter(r => r.y === y && (ar == null || r.area === ar)), f);
+  const aline = (lab, ar) => [lab, n0(a("ly",ar,"n")), n0(a("ty",ar,"n")), chg(a("ty",ar,"n"), a("ly",ar,"n")),
+    gbp(a("ly",ar,"val")), gbp(a("ty",ar,"val")), chg(a("ty",ar,"val"), a("ly",ar,"val"))];
   if (areas.length) h += table("Semi-exclusive & wings, area by area", "",
-    ["Area", `Events ${FYL}`, `Value ${FYL}`, `Events ${FY}`, `Value ${FY}`],
-    areas.map(ar => [ar, n0(a("ly",ar,"n")), gbp(a("ly",ar,"val")), n0(a("ty",ar,"n")), gbp(a("ty",ar,"val"))]),
-    ["Total", n0(sum(pick(A,"ly"),"n")), gbp(sum(pick(A,"ly"),"val")), n0(sum(pick(A,"ty"),"n")), gbp(sum(pick(A,"ty"),"val"))]);
+    ["Area", `Events ${FYL}`, `Events ${FY}`, "Change", `Value ${FYL}`, `Value ${FY}`, "Change"],
+    areas.map(ar => aline(ar, ar)), aline("Total", null), "ar");
 
   $("#out").innerHTML = h;
+  document.querySelectorAll("select.vsel").forEach(s => s.onchange = () => { VSEL[s.dataset.k] = s.value; render(LAST); });
+  document.querySelectorAll("tr.drill").forEach(tr => tr.onclick = () => {
+    const t = tr.dataset.bt, open = !EXP.has(t);
+    open ? EXP.add(t) : EXP.delete(t);
+    tr.querySelector(".tog").textContent = open ? "▾" : "▸";
+    document.querySelectorAll(`tr.sub[data-p="${tr.dataset.k}"]`).forEach(x => x.classList.toggle("hide", !open));
+  });
   document.querySelectorAll("button.copy").forEach(btn => btn.onclick = () => {
     const t = document.getElementById(btn.dataset.t);
-    const tsv = [...t.rows].map(r => [...r.cells].map(c => c.innerText.trim()).join("\t")).join("\n");
+    const tsv = [...t.rows].filter(r => !r.classList.contains("hide")).map(r => [...r.cells].map(c => c.innerText.trim()).join("\t")).join("\n");
     navigator.clipboard.writeText(tsv).then(() => { btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy", 1500); });
   });
 }
