@@ -30,6 +30,7 @@ jobs:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_CLIENT_ID }}
       TRIPLESEAT_CLIENT_SECRET: ${{ secrets.TRIPLESEAT_CLIENT_SECRET }}
+      TRIPLESEAT_PARIS_CLIENT_ID: ${{ secrets.TRIPLESEAT_PARIS_CLIENT_ID }}
       WRITE: ${{ vars.WRITE_LIVE == 'true' && '--write' || '' }}
     steps:
       - uses: actions/checkout@v5
@@ -61,6 +62,15 @@ jobs:
         continue-on-error: true
         run: python -m aqua.jobs.tripleseat --daily --write
 
+      - name: Tripleseat Paris (leads and events into Supabase)
+        id: tripleseat_paris
+        if: env.TRIPLESEAT_PARIS_CLIENT_ID != ''
+        continue-on-error: true
+        env:
+          TRIPLESEAT_CLIENT_ID: ${{ secrets.TRIPLESEAT_PARIS_CLIENT_ID }}
+          TRIPLESEAT_CLIENT_SECRET: ${{ secrets.TRIPLESEAT_PARIS_CLIENT_SECRET }}
+        run: python -m aqua.jobs.tripleseat --account paris --daily --write
+
       - name: Fail if any job failed
-        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.ads.outcome == 'failure' || steps.tripleseat.outcome == 'failure'
+        if: steps.daily.outcome == 'failure' || steps.pipeline.outcome == 'failure' || steps.ads.outcome == 'failure' || steps.tripleseat.outcome == 'failure' || steps.tripleseat_paris.outcome == 'failure'
         run: exit 1

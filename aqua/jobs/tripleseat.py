@@ -5,6 +5,7 @@
                                                       # plus events updated in the last 3 days
     python -m aqua.jobs.tripleseat --weekly --write   # every event created in the trailing 455 days
     python -m aqua.jobs.tripleseat --backfill 2025-02-01 2027-02-01 --write
+    python -m aqua.jobs.tripleseat --account paris --daily --write   # Paris account (its own keys)
                                                       # one-off: events by EVENT date in the range, plus
                                                       # leads created in the range (for last year's figures)
 
@@ -28,20 +29,21 @@ CFG = Path(__file__).resolve().parents[1] / "config" / "tripleseat.toml"
 
 LEAD_COLS = ["lead_id", "location_id", "venue", "created_at", "converted_on", "turned_down_at", "event_id",
              "requested_event_date", "guest_count", "lead_source_id", "lead_source", "referral_source_id",
-             "lead_form_id", "utm_source", "utm_medium", "utm_campaign", "has_gclid", "deleted_at"]
+             "lead_form_id", "utm_source", "utm_medium", "utm_campaign", "has_gclid", "deleted_at", "market"]
 EVENT_COLS = ["event_id", "booking_id", "lead_id", "location_id", "venue", "room_ids", "room_class", "event_type",
               "market_segment", "status", "created_at", "updated_at", "deleted_at", "event_date",
               "first_tentative_at", "first_definite_at", "lost_at", "closed_at", "booking_definite_date",
               "booking_lost_date", "guest_count", "food_and_beverage_min", "grand_total", "actual_amount",
-              "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id", "owner_id"]
+              "deposit_amount", "value", "value_basis", "lost_reason", "lost_reason_id", "owner_id", "market"]
 
-ROOM_COLS = ["room_id", "location_id", "venue", "name"]
+ROOM_COLS = ["room_id", "location_id", "venue", "name", "market"]
 USER_COLS = ["user_id", "name"]
 
 
-def load():
+def load(account: str = "london"):
     cfg = tomllib.loads(CFG.read_text())
-    venues = {int(k): v["venue"] for k, v in cfg["locations"].items()}
+    locs = cfg["locations"] if account == "london" else cfg[account]["locations"]
+    venues = {int(k): v["venue"] for k, v in locs.items()}
     return cfg["settings"], venues
 
 
@@ -141,9 +143,11 @@ def main(argv=None) -> int:
     mode.add_argument("--discover", action="store_true")
     mode.add_argument("--backfill", nargs=2, metavar=("START", "END_EXCL"))
     ap.add_argument("--write", action="store_true")
+    ap.add_argument("--account", choices=["london", "paris"], default="london",
+                    help="which Tripleseat account the keys in the environment belong to")
     a = ap.parse_args(argv)
 
-    st, venues = load()
+    st, venues = load(a.account)
     ts = Tripleseat(st["api"], st["requests_per_second"])
     if a.check:
         return check(ts, venues)
@@ -208,6 +212,8 @@ def main(argv=None) -> int:
     if a.write:
         from ..sources.sevenrooms import SevenRooms
         conn = SevenRooms().conn
+        for r in [*leads, *events.values(), *rooms.values()]:
+            r["market"] = a.account
         upsert(conn, "tripleseat_leads", "lead_id", LEAD_COLS, leads)
         upsert(conn, "tripleseat_events", "event_id", EVENT_COLS, list(events.values()))
         upsert(conn, "tripleseat_rooms", "room_id", ROOM_COLS, list(rooms.values()))

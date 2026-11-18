@@ -1,6 +1,7 @@
 # Tripleseat, weekly full re-pull: every event created in the trailing 455 days (65 weeks), so last year's
 # comparison stays right as old prospects are lost or closed. Sunday night, after the week closes.
 # Run it by hand with mode "check" to repeat the discovery cross-checks without writing anything.
+# Scheduled runs pull both accounts (London, Paris); a manual run pulls the one account chosen.
 name: Tripleseat weekly
 
 on:
@@ -18,36 +19,46 @@ on:
         description: "backfill only: START END_EXCL, e.g. 2025-02-01 2027-02-01"
         default: "2025-02-01 2027-02-01"
 
-concurrency:
-  group: tripleseat
-  cancel-in-progress: false
-
 jobs:
   pull:
     runs-on: ubuntu-latest
     timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        account: [london, paris]
+    concurrency:
+      group: tripleseat-${{ matrix.account }}
+      cancel-in-progress: false
     env:
       SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
       # Paris is a separate Tripleseat account with its own keys.
-      TRIPLESEAT_CLIENT_ID: ${{ github.event.inputs.account == 'paris' && secrets.TRIPLESEAT_PARIS_CLIENT_ID || secrets.TRIPLESEAT_CLIENT_ID }}
-      TRIPLESEAT_CLIENT_SECRET: ${{ github.event.inputs.account == 'paris' && secrets.TRIPLESEAT_PARIS_CLIENT_SECRET || secrets.TRIPLESEAT_CLIENT_SECRET }}
+      TRIPLESEAT_CLIENT_ID: ${{ matrix.account == 'paris' && secrets.TRIPLESEAT_PARIS_CLIENT_ID || secrets.TRIPLESEAT_CLIENT_ID }}
+      TRIPLESEAT_CLIENT_SECRET: ${{ matrix.account == 'paris' && secrets.TRIPLESEAT_PARIS_CLIENT_SECRET || secrets.TRIPLESEAT_CLIENT_SECRET }}
+      ACCOUNT: ${{ matrix.account }}
       MODE: ${{ github.event.inputs.mode || 'weekly' }}
       RANGE: ${{ github.event.inputs.range || '2025-02-01 2027-02-01' }}
+      RUN_THIS: ${{ github.event_name != 'workflow_dispatch' || github.event.inputs.account == matrix.account }}
     steps:
       - uses: actions/checkout@v5
+        if: env.RUN_THIS == 'true'
       - uses: actions/setup-python@v6
+        if: env.RUN_THIS == 'true'
         with:
           python-version: "3.12"
           cache: pip
           cache-dependency-path: aqua/requirements.txt
       - run: pip install -r aqua/requirements.txt
+        if: env.RUN_THIS == 'true'
       - name: Tripleseat
+        if: env.RUN_THIS == 'true'
         run: |
+          j="python -m aqua.jobs.tripleseat --account $ACCOUNT"
           case "$MODE" in
-            check)  python -m aqua.jobs.tripleseat --check ;;
-            discover) python -m aqua.jobs.tripleseat --discover ;;
-            daily)  python -m aqua.jobs.tripleseat --daily --write ;;
-            weekly) python -m aqua.jobs.tripleseat --weekly --write ;;
-            backfill) python -m aqua.jobs.tripleseat --backfill $RANGE --write ;;
+            check)    $j --check ;;
+            discover) $j --discover ;;
+            daily)    $j --daily --write ;;
+            weekly)   $j --weekly --write ;;
+            backfill) $j --backfill $RANGE --write ;;
             *) echo "unknown mode $MODE"; exit 1 ;;
           esac

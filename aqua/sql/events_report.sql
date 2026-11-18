@@ -1,4 +1,4 @@
--- London events report (Tripleseat), monthly or weekly. Source of truth for the function; apply with
+-- Events report (Tripleseat), London or Paris, monthly or weekly. Source of truth for the function; apply with
 -- the Supabase migration tool or psql. Reconciled to the FY25 vs FY26 events decks (Nov 2026).
 --
 -- Rules
@@ -13,8 +13,14 @@
 --   forecast    = upcoming at F&B min x the venue's uplift last year (actual / F&B min on closed events)
 --   last year   = month: same month a year earlier; week: the same ISO week, 364 days earlier
 --   team        = only when p_team is true (the emailed report). The public page never asks for it.
+--   market      = 'london' or 'paris' (separate Tripleseat accounts; every row carries its market)
 
-create or replace function public.events_report_period(p_start date, p_end date, p_kind text, p_team boolean default false)
+drop function if exists public.events_report_period(date, date, text, boolean);
+drop function if exists public.events_report_payload(date);
+drop function if exists public.events_report_week_payload(date);
+
+create or replace function public.events_report_period(p_start date, p_end date, p_kind text, p_team boolean default false,
+                                                       p_market text default 'london')
 returns jsonb language plpgsql stable security definer set search_path = public as $$
 declare
   shift interval := case when p_kind = 'week' then interval '364 days' else interval '1 year' end;
@@ -33,18 +39,18 @@ begin
            coalesce(e.value,0)/1.2 net,
            coalesce(e.booking_definite_date, (e.first_definite_at at time zone 'Europe/London')::date) defd,
            coalesce(e.booking_lost_date, (e.lost_at at time zone 'Europe/London')::date) lostd
-    from tripleseat_events e),
+    from tripleseat_events e where e.market = p_market),
   ld as (
     select l.*, case l.venue when 'Shiro Sushi' then 'Shiro' else l.venue end v,
            (l.created_at at time zone 'Europe/London')::date cd
-    from tripleseat_leads l where l.deleted_at is null),
+    from tripleseat_leads l where l.deleted_at is null and l.market = p_market),
   per as (select 'ty' y, interval '0' sh union all select 'ly', shift),
   enq as (
     select p.y, l.v,
       count(*) filter (where l.cd >= p_start - p.sh and l.cd < p_end - p.sh) month_n,
       count(*) filter (where l.cd >= fy0 - p.sh and l.cd <= asof - p.sh) fytd_n,
       count(*) filter (where l.cd >= fy0 - p.sh and l.cd <= asof - p.sh and e.booking_definite_date is not null) fytd_conv
-    from per p cross join ld l left join tripleseat_events e on e.event_id = l.event_id
+    from per p cross join ld l left join ev e on e.event_id = l.event_id
     group by 1,2),
   enq_m as (
     select p.y, to_char(date_trunc('month', l.cd + p.sh), 'YYYY-MM') mon, count(*) n
@@ -122,9 +128,9 @@ begin
         or (e.event_date >= fy0 and e.event_date <= asof and e.status in ('CLOSED','DEFINITE'))
         or e.event_id in (select event_id from up)))
   select jsonb_build_object(
-    'kind', p_kind, 'start', p_start, 'end', p_end - 1,
+    'market', p_market, 'kind', p_kind, 'start', p_start, 'end', p_end - 1,
     'month', to_char(p_start,'YYYY-MM'), 'as_of', asof, 'fy_start', fy0, 'fy_label', 'FY' || to_char(fy0,'YY'),
-    'pulled_at', (select max(pulled_at) from tripleseat_events),
+    'pulled_at', (select max(pulled_at) from tripleseat_events where market = p_market),
     'enquiries', (select jsonb_agg(enq) from enq),
     'enquiries_by_month', (select jsonb_agg(enq_m order by mon) from enq_m),
     'confirmed', (select jsonb_agg(conf) from conf),
@@ -133,7 +139,9 @@ begin
     'lost', (select jsonb_agg(lost) from lost),
     'full_year', (select jsonb_agg(fy) from fy),
     'uplift', (select jsonb_agg(uplift) from uplift),
-    'targets', (select jsonb_agg(t) from events_targets t where t.fy = extract(year from fy0)::int),
+    'targets', (select jsonb_agg(t) from events_targets t where t.fy = extract(year from fy0)::int and t.market = p_market),
+    'targets_monthly', (select jsonb_agg(jsonb_build_object('mon', to_char(t.month,'YYYY-MM'), 'target', t.target) order by t.month)
+                        from events_targets_monthly t where t.market = p_market and t.month >= fy0 and t.month < fy1),
     'booking_type', (select jsonb_agg(x) from (select y, btype, count(*) n, sum(net) val from bt group by 1,2) x),
     'areas', (select jsonb_agg(x) from (select y, area, count(*) n, sum(net) val from bt where btype = 'Semi-exclusive & wings' group by 1,2) x)
   ) into res;
@@ -145,10 +153,10 @@ begin
              coalesce(e.booking_lost_date, (e.lost_at at time zone 'Europe/London')::date) lostd,
              coalesce(u.name, 'Unassigned') who
       from tripleseat_events e left join tripleseat_users u on u.user_id = e.owner_id
-      where e.deleted_at is null),
+      where e.deleted_at is null and e.market = p_market),
     ld as (
       select (l.created_at at time zone 'Europe/London')::date cd, e.*
-      from tripleseat_leads l join ev e on e.event_id = l.event_id where l.deleted_at is null)
+      from tripleseat_leads l join ev e on e.event_id = l.event_id where l.deleted_at is null and l.market = p_market)
     select jsonb_agg(x) into team from (
       select coalesce(a.v, b.v) v, coalesce(a.who, b.who) who,
         coalesce(a.enq_p,0) enq_p, coalesce(a.fytd_n,0) fytd_n, coalesce(a.fytd_conv,0) fytd_conv,
@@ -173,17 +181,18 @@ begin
   end if;
   return res;
 end $$;
-revoke all on function public.events_report_period(date, date, text, boolean) from public, anon, authenticated;
+revoke all on function public.events_report_period(date, date, text, boolean, text) from public, anon, authenticated;
 
 -- Public page: month or ISO week, never the team view.
-create or replace function public.events_report_payload(p_month date)
+create or replace function public.events_report_payload(p_month date, p_market text default 'london')
 returns jsonb language sql stable security definer set search_path = public as $$
   select public.events_report_period(date_trunc('month', p_month)::date,
-                                     (date_trunc('month', p_month) + interval '1 month')::date, 'month', false)
+                                     (date_trunc('month', p_month) + interval '1 month')::date, 'month', false, p_market)
 $$;
-create or replace function public.events_report_week_payload(p_week date)
+create or replace function public.events_report_week_payload(p_week date, p_market text default 'london')
 returns jsonb language sql stable security definer set search_path = public as $$
-  select public.events_report_period(date_trunc('week', p_week)::date, (date_trunc('week', p_week) + interval '7 days')::date, 'week', false)
+  select public.events_report_period(date_trunc('week', p_week)::date, (date_trunc('week', p_week) + interval '7 days')::date,
+                                     'week', false, p_market)
 $$;
-revoke all on function public.events_report_payload(date) from public, anon, authenticated;
-revoke all on function public.events_report_week_payload(date) from public, anon, authenticated;
+revoke all on function public.events_report_payload(date, text) from public, anon, authenticated;
+revoke all on function public.events_report_week_payload(date, text) from public, anon, authenticated;
