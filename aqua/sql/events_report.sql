@@ -170,7 +170,29 @@ begin
       from ev e where e.deleted_at is null
         and e.event_date >= date_trunc('month', asof) + interval '1 month' - interval '1 year'
         and e.event_date < date_trunc('month', asof) + interval '4 months' - interval '1 year'
-      group by 1,2) b on a.mon = b.mon and a.v = b.v)
+      group by 1,2) b on a.mon = b.mon and a.v = b.v),
+  -- the selected period's own book (used when a future month is picked): confirmed for it as at the as-of date,
+  -- against the same point last year, last year's final, and under discussion now
+  books as (
+    select coalesce(a.v, b.v) v,
+      coalesce(a.conf_n, 0) conf_n, coalesce(a.conf, 0) conf, coalesce(a.disc_n, 0) disc_n, coalesce(a.disc, 0) disc,
+      coalesce(b.pace_n, 0) pace_n, coalesce(b.pace, 0) pace, coalesce(b.fin_n, 0) fin_n, coalesce(b.fin, 0) fin
+    from (
+      select e.v,
+        count(*) filter (where e.status in ('CLOSED','DEFINITE') and e.defd <= asof) conf_n,
+        sum(e.net) filter (where e.status in ('CLOSED','DEFINITE') and e.defd <= asof) conf,
+        count(*) filter (where e.status in ('TENTATIVE','PROSPECT')) disc_n,
+        sum(e.net) filter (where e.status in ('TENTATIVE','PROSPECT')) disc
+      from ev e where e.deleted_at is null and e.event_date >= p_start and e.event_date < p_end
+      group by 1) a
+    full join (
+      select e.v,
+        count(*) filter (where e.status in ('CLOSED','DEFINITE')) fin_n,
+        sum(e.net) filter (where e.status in ('CLOSED','DEFINITE')) fin,
+        count(*) filter (where e.defd <= asof - shift and (e.status in ('CLOSED','DEFINITE') or (e.status = 'LOST' and e.lostd > asof - shift))) pace_n,
+        sum(e.net) filter (where e.defd <= asof - shift and (e.status in ('CLOSED','DEFINITE') or (e.status = 'LOST' and e.lostd > asof - shift))) pace
+      from ev e where e.deleted_at is null and e.event_date >= p_start - shift and e.event_date < p_end - shift
+      group by 1) b on a.v = b.v)
   select jsonb_build_object(
     'market', p_market, 'kind', p_kind, 'start', p_start, 'end', p_end - 1,
     'month', to_char(p_start,'YYYY-MM'), 'as_of', asof, 'fy_start', fy0, 'fy_label', 'FY' || to_char(fy0,'YY'),
@@ -189,6 +211,7 @@ begin
                           and t.month < greatest(fy1, (date_trunc('month', asof) + interval '7 months')::date)),
     'forward', (select jsonb_agg(fwd order by mon) from fwd),
     'ahead', (select jsonb_agg(ahead order by mon) from ahead),
+    'books', (select jsonb_agg(books) from books),
     'held_ly_by_month', (select jsonb_agg(mly order by mon) from mly),
     'booking_type', (select jsonb_agg(x) from (select y, btype, count(*) n, sum(net) val from bt group by 1,2) x),
     'areas', (select jsonb_agg(x) from (select y, area, count(*) n, sum(net) val from bt where btype = 'Semi-exclusive & wings' group by 1,2) x),
