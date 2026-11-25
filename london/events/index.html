@@ -172,9 +172,23 @@ function render(d) {
     <div class="kpi"><div class="lab">Confirmed in ${ml}</div><div class="val">${gbpk(cT("ty","val"))}</div><div class="meta">${chg(cT("ty","val"), cT("ly","val"))} vs ${gbpk(cT("ly","val"))} · ${n0(cT("ty","n"))} bookings</div></div>
     <div class="kpi"><div class="lab">Events held in ${ml}</div><div class="val">${gbpk(hM("ty","val"))}</div><div class="meta">${chg(hM("ty","val"), hM("ly","val"))} vs ${gbpk(hM("ly","val"))} · ${n0(hM("ty","n"))} events</div></div>
     <div class="kpi"><div class="lab">Lost ${wk ? "in the week" : "in " + ml}</div><div class="val">${n0(sum(pick(d.lost,"ty").filter(r=>r.kind==="enquiry"),"n"))} enquiries</div><div class="meta">and ${n0(sum(pick(d.lost,"ty").filter(r=>r.kind==="booking"),"n"))} bookings worth ${gbpk(sum(pick(d.lost,"ty").filter(r=>r.kind==="booking"),"val"))}</div></div>
+    ${(d.ahead || []).length ? `<div class="kpi"><div class="lab">Confirmed, next three months</div><div class="val">${gbpk(sum(d.ahead,"conf"))}</div><div class="meta">${chg(sum(d.ahead,"conf"), sum(d.ahead,"pace"))} vs ${gbpk(sum(d.ahead,"pace"))} at this point last year</div></div>` : ""}
     <div class="kpi"><div class="lab">${FY} on the books</div><div class="val">${gbpk(onBooks)}</div><div class="meta">${chg(onBooks, lyFinal)} vs ${FYL} final ${gbpk(lyFinal)}</div></div>
     <div class="kpi"><div class="lab">${FY} forecast</div><div class="val">${gbpk(fc)}</div><div class="meta">${pct(fc, target)} of ${gbpk(target)} target</div></div>
   </div>`;
+
+  // 0. Next three months: what is confirmed for the months ahead, against the same point last year
+  {
+    const AH = (d.ahead || []).filter(vf("ah")), ams = [...new Set((d.ahead || []).map(r => r.mon))].sort();
+    const aS = (f, m) => sum(AH.filter(r => m == null || r.mon === m), f);
+    const small = n => ` <small class="ctx">(${n0(n)})</small>`;
+    const line = (lab, m) => [lab, gbp(aS("conf", m)) + small(aS("conf_n", m)), gbp(aS("pace", m)) + small(aS("pace_n", m)),
+      chg(aS("conf", m), aS("pace", m)), gbp(aS("fin", m)) + small(aS("fin_n", m)), gbp(aS("disc", m)) + small(aS("disc_n", m))];
+    if (ams.length) h += table("Next three months",
+      `Events confirmed for the months ahead as at ${asof}, against what was confirmed for the same months by the same date last year (including any lost since), last year's final, and what is under discussion now (tentative and prospect). Event counts in brackets.`,
+      ["Month", "Confirmed now", "Same point last year", "Change", "Last year final", "Under discussion"],
+      ams.map(m => line(monthLabel(m), m)), line("Three months", null), "ah");
+  }
 
   // 1. Enquiries by venue
   h += table("Enquiries by venue", `${ml} and ${FY} to date (to ${asof}), against the same dates last year. Conversion is the share of enquiries confirmed so far.`,
