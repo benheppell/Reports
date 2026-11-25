@@ -109,15 +109,19 @@ const now = new Date(), sel = $("#month"), kindSel = $("#kind");
 const iso = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
 const dayLabel = (s, opt = {day: "numeric", month: "short", year: "numeric"}) => new Date(s + "T12:00:00").toLocaleDateString("en-GB", opt);
 const months = [], weeks = [];
-for (let d = new Date(2026, 1, 1); d <= now; d.setMonth(d.getMonth() + 1))
+// Months run three ahead of today: a future month shows what is already booked for it.
+const lastMonth = new Date(now.getFullYear(), now.getMonth() + 3, 1);
+for (let d = new Date(2026, 1, 1); d <= lastMonth; d.setMonth(d.getMonth() + 1))
   months.push(`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`);
 for (let d = new Date(2026, 1, 2); d <= now; d.setDate(d.getDate() + 7)) weeks.push(iso(d));
 months.reverse(); weeks.reverse();
 function fillPicker(kind, want) {
   const opts = kind === "week" ? weeks : months;
-  sel.innerHTML = opts.map(o => `<option value="${o}">${kind === "week" ? "w/c " + dayLabel(o) : monthLabel(o)}</option>`).join("");
-  // Default to the last complete month or week.
-  sel.value = want && opts.includes(want) ? want : (opts[1] || opts[0]);
+  sel.innerHTML = opts.map(o => `<option value="${o}">${kind === "week" ? "w/c " + dayLabel(o) : monthLabel(o) + (o > `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}` ? " (booked so far)" : "")}</option>`).join("");
+  // Default to the last complete month or week (months list the next three ahead first).
+  const thisMonth = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+  const lastDone = kind === "week" ? (opts[1] || opts[0]) : (opts[opts.indexOf(thisMonth) + 1] || opts[0]);
+  sel.value = want && opts.includes(want) ? want : lastDone;
 }
 const qp = new URLSearchParams(location.search);
 kindSel.value = qp.get("week") ? "week" : "month";
@@ -167,7 +171,23 @@ function render(d) {
   const tmFY = TM.filter(t => t.mon >= d.fy_start.slice(0,7) && t.mon <= fyEnd);
   const target = sum(d.targets || [], "target") || sum(tmFY, "target");
 
-  let h = `<div class="kpis">
+  const future = d.start > d.as_of;
+  const BK = d.books || [];
+  const bk = (f, flt = () => true) => sum(BK.filter(flt), f);
+  let h = future ? `<div class="kpis">
+    <div class="kpi"><div class="lab">Confirmed for ${ml}</div><div class="val">${gbpk(bk("conf"))}</div><div class="meta">${chg(bk("conf"), bk("pace"))} vs ${gbpk(bk("pace"))} at this point last year · ${n0(bk("conf_n"))} events</div></div>
+    <div class="kpi"><div class="lab">${mlly} final</div><div class="val">${gbpk(bk("fin"))}</div><div class="meta">${n0(bk("fin_n"))} events · ${gbpk(Math.max(0, bk("fin") - bk("conf")))} still to match it</div></div>
+    <div class="kpi"><div class="lab">Under discussion</div><div class="val">${gbpk(bk("disc"))}</div><div class="meta">${n0(bk("disc_n"))} tentative and prospect events</div></div>
+    <div class="kpi"><div class="lab">${FY} on the books</div><div class="val">${gbpk(onBooks)}</div><div class="meta">${chg(onBooks, lyFinal)} vs ${FYL} final ${gbpk(lyFinal)}</div></div>
+    <div class="kpi"><div class="lab">${FY} forecast</div><div class="val">${gbpk(fc)}</div><div class="meta">${pct(fc, target)} of ${gbpk(target)} target</div></div>
+  </div>` + table(`Booked for ${ml}, by venue`,
+    `Events confirmed for ${ml} as at ${asof}, against what was confirmed for ${mlly} by the same date last year (including any lost since), ${mlly}'s final, and what is under discussion now. Event counts in brackets.`,
+    ["Venue", "Confirmed now", "Same point last year", "Change", "Last year final", "Under discussion"],
+    VENUES.map(v => { const f = r => r.v === v, sm = (x, y) => gbp(bk(x, f)) + ` <small class="ctx">(${n0(bk(y, f))})</small>`;
+      return [v, sm("conf","conf_n"), sm("pace","pace_n"), chg(bk("conf", f), bk("pace", f)), sm("fin","fin_n"), sm("disc","disc_n")]; }),
+    ["Total", gbp(bk("conf")) + ` <small class="ctx">(${n0(bk("conf_n"))})</small>`, gbp(bk("pace")) + ` <small class="ctx">(${n0(bk("pace_n"))})</small>`,
+      chg(bk("conf"), bk("pace")), gbp(bk("fin")) + ` <small class="ctx">(${n0(bk("fin_n"))})</small>`, gbp(bk("disc")) + ` <small class="ctx">(${n0(bk("disc_n"))})</small>`])
+  : `<div class="kpis">
     <div class="kpi"><div class="lab">Enquiries, ${ml}</div><div class="val">${n0(eT("ty","month_n"))}</div><div class="meta">${chg(eT("ty","month_n"), eT("ly","month_n"))} vs ${n0(eT("ly","month_n"))}</div></div>
     <div class="kpi"><div class="lab">Confirmed in ${ml}</div><div class="val">${gbpk(cT("ty","val"))}</div><div class="meta">${chg(cT("ty","val"), cT("ly","val"))} vs ${gbpk(cT("ly","val"))} · ${n0(cT("ty","n"))} bookings</div></div>
     <div class="kpi"><div class="lab">Events held in ${ml}</div><div class="val">${gbpk(hM("ty","val"))}</div><div class="meta">${chg(hM("ty","val"), hM("ly","val"))} vs ${gbpk(hM("ly","val"))} · ${n0(hM("ty","n"))} events</div></div>
@@ -176,6 +196,8 @@ function render(d) {
     <div class="kpi"><div class="lab">${FY} forecast</div><div class="val">${gbpk(fc)}</div><div class="meta">${pct(fc, target)} of ${gbpk(target)} target</div></div>
   </div>`;
 
+  // A future month has no enquiries, confirmations, events held or losses yet: those tables are for past months.
+  if (!future) {
   // 1. Enquiries by venue
   h += table("Enquiries by venue", `${ml} and ${FY} to date (to ${asof}), against the same dates last year. Conversion is the share of enquiries confirmed so far.`,
     ["Venue", ml, mlly, "Change", `${FY} to date`, `${FYL} same dates`, "Change", `Conv. ${FY}`, `Conv. ${FYL}`],
@@ -255,6 +277,8 @@ function render(d) {
     h += table("Team conversion, by site", `Owner as set in Tripleseat. ${ml} columns are the period; conversion is ${FY} to date: the share of each person's enquiries since ${dayLabel(d.fy_start)} confirmed so far.`,
       ["Site / owner", `Enquiries ${ml}`, `Confirmed ${ml}`, "Confirmed value", "Lost enquiries", "Lost bookings", `Enquiries ${FY}`, `Conversion ${FY}`],
       rows, line("Total", T));
+  }
+
   }
 
   // 4d. Month by month: held so far, then confirmed and under discussion ahead, against target and last year
