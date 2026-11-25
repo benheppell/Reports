@@ -33,10 +33,8 @@
 
 [usa]
 "Aqua NYC"     = { order = 1, channels = "wg+ot+rs", brand_site = "https://aqua-nyc.com/", brand_regex = "aqua", notes = { spend = "Aqua Roma and Aqua Kyoto NYC share one account" } }
-# Search Console access to hutong-nyc.com was lost in Nov 2026; brand is off until it is re-granted, so the
-# rest of the USA pipeline can run. To restore: put back brand_site = "https://www.hutong-nyc.com/", brand_regex = "hutong".
-"Hutong NYC"   = { order = 2, channels = "wg+ot+rs", notes = { brand = "Search Console access to hutong-nyc.com was lost in Nov 2026, brand not available until it is re-granted" } }
-"Hutong Miami" = { order = 3, channels = "wg+ot+rs", notes = { brand = "Search Console is not verified for this account, brand not available" } }
+"Hutong NYC"   = { order = 2, channels = "wg+ot+rs", brand_site = "https://www.hutong-nyc.com/", brand_regex = "hutong" }
+"Hutong Miami" = { order = 3, channels = "wg+ot+rs", brand_site = "https://hutong-miami.com/", brand_regex = "hutong" }
 
 [dubai]
 "Hutong Dubai" = { order = 1, channels = "wg", brand_site = "https://www.hutong-dubai.com/", brand_regex = "hutong", notes = { cpa = "two competing Google booking actions, no Google CPA is quoted" } }
