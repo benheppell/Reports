@@ -290,7 +290,8 @@ live = [
   ga4 = ["369179739"]
   meta = ["act_756032299051731"]
   google = "8465732460"
-  # Search Console unavailable: brand is a known gap, reported as null
+  gsc_site = "https://hutong-miami.com/"
+  gsc_regex = "hutong"
 
 # --------------------------------------------------------------------------- Dubai
 [[market]]
